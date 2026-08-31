@@ -125,8 +125,8 @@ export default async function FailurePage({ params }: FailurePageProps) {
               But “where?”
             </h2>
             <p>
-              Scored runs report preregistered sample counts and confidence intervals. Until they exist, the
-              atlas never turns an illustrative curve into a model claim.
+              Scored runs report frozen sample counts and confidence intervals. The current pilot measures
+              one fixed difficulty point; the curve remains illustrative until a precommitted sweep exists.
             </p>
           </div>
           <CapabilityCurve color={mode.accent === "cobalt" ? "#2356c7" : "#f04b32"} />

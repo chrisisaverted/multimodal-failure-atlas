@@ -37,7 +37,10 @@ export function ResultMatrix({
                 {percent(summary.lower95)}–{percent(summary.upper95)}
               </small>
             </span>
-            <span>{summary.n}</span>
+            <span>
+              {summary.n}
+              {summary.parseFailures ? <small>{summary.parseFailures} review</small> : null}
+            </span>
           </div>
         ))
       ) : (
@@ -52,7 +55,9 @@ export function ResultMatrix({
       )}
       <p className="affected-model-scope">
         <span>Affected-model scope</span>
-        {affectedModels ?? "No current cross-model affected set has been established."}
+        {summaries.length
+          ? `This pilot reports ${summaries.length} current model-input summaries for this family. ${affectedModels ? `Literature scope: ${affectedModels}` : "It does not establish universal model scope."}`
+          : (affectedModels ?? "No current cross-model affected set has been established.")}
       </p>
     </div>
   );

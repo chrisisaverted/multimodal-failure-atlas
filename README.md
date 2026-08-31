@@ -8,13 +8,14 @@ The atlas treats every failure as a falsifiable family rather than a spectacular
 
 - 32 mapped failure families across image, video, audiovisual, multi-image, and interleaved media
 - 8 deterministic interactive generators with construction-grounded answers
-- 28 primary research sources with retrieval dates and scope notes
+- 34 primary research sources with retrieval dates and scope notes
 - 44 statically prerendered routes
 - Evidence ladder separating behavior, interventions, representations, hypotheses, and speculation
 - Typed, provider-neutral evaluation contract
 - 640 genuine, provenance-complete responses from 10 pinned model/provider routes
 - $25 default campaign cap, $25 protected reserve, and a $200 prepaid evaluation ceiling
 - 53 explicit no-answer outcomes and 10 review-routed responses retained rather than discarded
+- A budgeted adaptive-discovery pipeline with disjoint confirmatory holdouts
 
 ## Quick start
 
@@ -44,7 +45,10 @@ preflight estimation, and evaluation interfaces. The fixture adapter is marked a
 in production. Paid adapters remain fail-closed unless evaluation is explicitly enabled and an exact
 protocol, route, media hash, and cost ceiling pass validation.
 
-See [docs/architecture.md](docs/architecture.md), [docs/methods.md](docs/methods.md), [docs/evaluation.md](docs/evaluation.md), [docs/bibliography.md](docs/bibliography.md), [docs/provider-landscape.md](docs/provider-landscape.md), and [docs/hosting.md](docs/hosting.md).
+See [docs/architecture.md](docs/architecture.md), [docs/methods.md](docs/methods.md),
+[docs/adaptive-discovery.md](docs/adaptive-discovery.md), [docs/evaluation.md](docs/evaluation.md),
+[docs/bibliography.md](docs/bibliography.md), [docs/provider-landscape.md](docs/provider-landscape.md),
+and [docs/hosting.md](docs/hosting.md).
 
 ## Evaluation smoke test
 

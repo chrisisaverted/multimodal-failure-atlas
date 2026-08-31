@@ -6,6 +6,7 @@ const links = [
   ["Live lab", "/lab"],
   ["Models", "/models"],
   ["Run ledger", "/runs"],
+  ["Discovery", "/discovery"],
   ["Compare", "/compare"],
   ["Methods", "/methods"],
   ["Library", "/research"],

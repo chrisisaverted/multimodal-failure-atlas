@@ -1,0 +1,27 @@
+{
+  "id": "lattice-counting-screen-replacement-v1-2026-08-30",
+  "parentProtocolId": "lattice-counting-screen-v1-2026-08-30",
+  "resolvedAt": "2026-08-30",
+  "gateway": "OpenRouter",
+  "evaluationPlanId": "lattice-counting-discovery-v1",
+  "evaluationPlanSha256": "a226a9268e98e44a1b50328c864143fd79bdd072b02b9c5fc042dee3be338f16",
+  "stage": "adaptive-discovery-screen-coverage-amendment",
+  "temperature": 0,
+  "maxOutputTokens": 2048,
+  "reasoning": { "effort": "minimal", "exclude": true },
+  "scorer": "terminal-option-v2",
+  "allowProviderFallbacks": false,
+  "dataCollection": "deny",
+  "campaignCostCeilingUsd": 5,
+  "amendment": {
+    "timing": "Frozen before parameter-cell ranking or holdout generation.",
+    "reason": "StepFun emitted no visible answer on every completed screening request. Gemma was added to restore substantive cross-family coverage; StepFun outcomes remain in the ledger and have zero selection weight."
+  },
+  "models": [
+    {
+      "modelId": "google/gemma-4-31b-it",
+      "modelRevision": "google/gemma-4-31b-it-20260402",
+      "upstreamProvider": "CoreWeave"
+    }
+  ]
+}

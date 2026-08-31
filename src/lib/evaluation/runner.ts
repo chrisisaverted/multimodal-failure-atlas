@@ -3,7 +3,7 @@ import type { EvaluationAdapter, MediaPayload } from "./adapters/types";
 import { AdapterUnavailableError } from "./adapters/types";
 import { assertWithinBudget } from "./cost";
 import { sha256 } from "./hash";
-import { scoreExactOption } from "./scorer";
+import { scoreExactOption, type ScoreResult } from "./scorer";
 import {
   evaluationRequestSchema,
   evaluationRunSchema,
@@ -32,6 +32,7 @@ export interface BatchOptions {
   minimumIntervalMs?: number;
   now?: () => Date;
   onProgress?: (event: { completed: number; total: number; cached: boolean; id: string }) => void;
+  scorer?: (rawResponse: string, expectedAnswer: string, options: string[]) => ScoreResult;
 }
 
 function mediaDigest(media: MediaPayload) {
@@ -148,7 +149,11 @@ export async function runEvaluationBatch(jobs: EvaluationJob[], options: BatchOp
     const response = await options.adapter.evaluate(item.request, item.media);
     const actualCost = response.reportedCostUsd ?? item.estimate;
     assertWithinBudget(actualCost, recordedSpend + (await options.store.spentUsd()), env);
-    const score = scoreExactOption(response.rawResponse, item.expectedAnswer, item.answerOptions);
+    const score = (options.scorer ?? scoreExactOption)(
+      response.rawResponse,
+      item.expectedAnswer,
+      item.answerOptions,
+    );
     const record = evaluationRunSchema.parse({
       id: item.id,
       failureModeId: item.request.failureModeId,

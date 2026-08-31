@@ -1,0 +1,38 @@
+{
+  "id": "lattice-counting-screen-v1-2026-08-30",
+  "resolvedAt": "2026-08-30",
+  "gateway": "OpenRouter",
+  "evaluationPlanId": "lattice-counting-discovery-v1",
+  "evaluationPlanSha256": "a226a9268e98e44a1b50328c864143fd79bdd072b02b9c5fc042dee3be338f16",
+  "stage": "adaptive-discovery-screen",
+  "temperature": 0,
+  "maxOutputTokens": 2048,
+  "reasoning": { "effort": "minimal", "exclude": true },
+  "scorer": "terminal-option-v2",
+  "allowProviderFallbacks": false,
+  "dataCollection": "deny",
+  "campaignCostCeilingUsd": 5,
+  "scientificGuardrails": {
+    "noAnswerReward": 0,
+    "humanSolvability": "unverified",
+    "confirmationIsUntouched": true,
+    "preflightAmendment": "The first endpoint rejected reasoning=none before emitting a generation. No result was recorded. The protocol was changed to the minimum accepted effort before screening began."
+  },
+  "models": [
+    {
+      "modelId": "z-ai/glm-5.3-flash",
+      "modelRevision": "z-ai/glm-5.3-flash-20260826",
+      "upstreamProvider": "Z.AI"
+    },
+    {
+      "modelId": "stepfun/step-3.7-flash",
+      "modelRevision": "stepfun/step-3.7-flash-20260528",
+      "upstreamProvider": "StepFun"
+    },
+    {
+      "modelId": "xiaomi/mimo-v2.5",
+      "modelRevision": "xiaomi/mimo-v2.5-20260422",
+      "upstreamProvider": "Xiaomi"
+    }
+  ]
+}

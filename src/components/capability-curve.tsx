@@ -52,7 +52,7 @@ export function CapabilityCurve({
       </svg>
       <figcaption>
         <span />
-        {label} · real curves require preregistered model runs
+        {label} · real curves require a precommitted parameter sweep
       </figcaption>
     </figure>
   );

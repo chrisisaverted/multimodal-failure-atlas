@@ -1,0 +1,1289 @@
+{
+  "id": "lattice-counting-discovery-v1",
+  "createdAt": "2026-08-30",
+  "generatorVersion": "lattice-counting-v1",
+  "status": "discovery-only",
+  "scientificGuardrails": {
+    "humanSolvability": "unverified-until-blinded-human-baseline",
+    "optimizerTarget": "substantive-incorrect-answers-only",
+    "noAnswerReward": 0,
+    "confirmatoryCountsReserved": [
+      4,
+      6,
+      8,
+      10
+    ],
+    "confirmatorySeedMinimum": 910000
+  },
+  "searchSpace": {
+    "flashDurationMs": [
+      100,
+      233
+    ],
+    "intervalMs": [
+      400,
+      700
+    ],
+    "phaseMs": [
+      125,
+      375,
+      625
+    ],
+    "discoveryCounts": [
+      3,
+      5,
+      7,
+      9
+    ]
+  },
+  "candidates": [
+    {
+      "id": "lc-ae8573bf15a86277",
+      "cellId": "cell-bf8481949b771c04",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410000,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "expectedAnswer": "3",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 3,
+        "flashDurationMs": 100,
+        "intervalMs": 400,
+        "phaseMs": 125,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 3
+      }
+    },
+    {
+      "id": "lc-ca0a804e593abe25",
+      "cellId": "cell-bf8481949b771c04",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410001,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "expectedAnswer": "5",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 5,
+        "flashDurationMs": 100,
+        "intervalMs": 400,
+        "phaseMs": 125,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 4
+      }
+    },
+    {
+      "id": "lc-3e72ac2b71fba66d",
+      "cellId": "cell-bf8481949b771c04",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410002,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "expectedAnswer": "7",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 7,
+        "flashDurationMs": 100,
+        "intervalMs": 400,
+        "phaseMs": 125,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 5
+      }
+    },
+    {
+      "id": "lc-24e1a21630634c33",
+      "cellId": "cell-bf8481949b771c04",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410003,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "expectedAnswer": "9",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 9,
+        "flashDurationMs": 100,
+        "intervalMs": 400,
+        "phaseMs": 125,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 6
+      }
+    },
+    {
+      "id": "lc-c662d953ead1d07b",
+      "cellId": "cell-1482e53054fc7af7",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410004,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "expectedAnswer": "3",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 3,
+        "flashDurationMs": 100,
+        "intervalMs": 400,
+        "phaseMs": 375,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 0
+      }
+    },
+    {
+      "id": "lc-5f24b38059559ab8",
+      "cellId": "cell-1482e53054fc7af7",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410005,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "expectedAnswer": "5",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 5,
+        "flashDurationMs": 100,
+        "intervalMs": 400,
+        "phaseMs": 375,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 1
+      }
+    },
+    {
+      "id": "lc-131248dc3bbf5e87",
+      "cellId": "cell-1482e53054fc7af7",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410006,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "expectedAnswer": "7",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 7,
+        "flashDurationMs": 100,
+        "intervalMs": 400,
+        "phaseMs": 375,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 2
+      }
+    },
+    {
+      "id": "lc-71e2a9a5f82e535e",
+      "cellId": "cell-1482e53054fc7af7",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410007,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "expectedAnswer": "9",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 9,
+        "flashDurationMs": 100,
+        "intervalMs": 400,
+        "phaseMs": 375,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 3
+      }
+    },
+    {
+      "id": "lc-cb9f9eaee8f7fe49",
+      "cellId": "cell-3ad2c8abc399ee62",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410008,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "expectedAnswer": "3",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 3,
+        "flashDurationMs": 100,
+        "intervalMs": 400,
+        "phaseMs": 625,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 4
+      }
+    },
+    {
+      "id": "lc-c5e9b3baf154157c",
+      "cellId": "cell-3ad2c8abc399ee62",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410009,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "expectedAnswer": "5",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 5,
+        "flashDurationMs": 100,
+        "intervalMs": 400,
+        "phaseMs": 625,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 5
+      }
+    },
+    {
+      "id": "lc-526d6ae30485e8bf",
+      "cellId": "cell-3ad2c8abc399ee62",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410010,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "expectedAnswer": "7",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 7,
+        "flashDurationMs": 100,
+        "intervalMs": 400,
+        "phaseMs": 625,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 6
+      }
+    },
+    {
+      "id": "lc-23752756adb7aace",
+      "cellId": "cell-3ad2c8abc399ee62",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410011,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "expectedAnswer": "9",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 9,
+        "flashDurationMs": 100,
+        "intervalMs": 400,
+        "phaseMs": 625,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 0
+      }
+    },
+    {
+      "id": "lc-c062c25292c5d4dd",
+      "cellId": "cell-cb25aba4dc21bb5e",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410012,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "expectedAnswer": "3",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 3,
+        "flashDurationMs": 100,
+        "intervalMs": 700,
+        "phaseMs": 125,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 1
+      }
+    },
+    {
+      "id": "lc-23dc1534dbc6528d",
+      "cellId": "cell-cb25aba4dc21bb5e",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410013,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "expectedAnswer": "5",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 5,
+        "flashDurationMs": 100,
+        "intervalMs": 700,
+        "phaseMs": 125,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 2
+      }
+    },
+    {
+      "id": "lc-066d5b25add32d02",
+      "cellId": "cell-cb25aba4dc21bb5e",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410014,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "expectedAnswer": "7",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 7,
+        "flashDurationMs": 100,
+        "intervalMs": 700,
+        "phaseMs": 125,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 3
+      }
+    },
+    {
+      "id": "lc-bf884a60550cfd40",
+      "cellId": "cell-cb25aba4dc21bb5e",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410015,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "expectedAnswer": "9",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 9,
+        "flashDurationMs": 100,
+        "intervalMs": 700,
+        "phaseMs": 125,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 4
+      }
+    },
+    {
+      "id": "lc-606bcc2a242371ce",
+      "cellId": "cell-81c71722a2496e4a",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410016,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "expectedAnswer": "3",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 3,
+        "flashDurationMs": 100,
+        "intervalMs": 700,
+        "phaseMs": 375,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 5
+      }
+    },
+    {
+      "id": "lc-a5cc02b7b8db1b5c",
+      "cellId": "cell-81c71722a2496e4a",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410017,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "expectedAnswer": "5",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 5,
+        "flashDurationMs": 100,
+        "intervalMs": 700,
+        "phaseMs": 375,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 6
+      }
+    },
+    {
+      "id": "lc-204fc517f0ddb32b",
+      "cellId": "cell-81c71722a2496e4a",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410018,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "expectedAnswer": "7",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 7,
+        "flashDurationMs": 100,
+        "intervalMs": 700,
+        "phaseMs": 375,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 0
+      }
+    },
+    {
+      "id": "lc-969c1f6652bbea20",
+      "cellId": "cell-81c71722a2496e4a",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410019,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "expectedAnswer": "9",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 9,
+        "flashDurationMs": 100,
+        "intervalMs": 700,
+        "phaseMs": 375,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 1
+      }
+    },
+    {
+      "id": "lc-8960aaac611216db",
+      "cellId": "cell-2a173811c727b09b",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410020,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "expectedAnswer": "3",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 3,
+        "flashDurationMs": 100,
+        "intervalMs": 700,
+        "phaseMs": 625,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 2
+      }
+    },
+    {
+      "id": "lc-5cca80de1363b979",
+      "cellId": "cell-2a173811c727b09b",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410021,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "expectedAnswer": "5",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 5,
+        "flashDurationMs": 100,
+        "intervalMs": 700,
+        "phaseMs": 625,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 3
+      }
+    },
+    {
+      "id": "lc-560d9d4d214d88fb",
+      "cellId": "cell-2a173811c727b09b",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410022,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "expectedAnswer": "7",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 7,
+        "flashDurationMs": 100,
+        "intervalMs": 700,
+        "phaseMs": 625,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 4
+      }
+    },
+    {
+      "id": "lc-43b8a6c60ef08d42",
+      "cellId": "cell-2a173811c727b09b",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410023,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "expectedAnswer": "9",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 9,
+        "flashDurationMs": 100,
+        "intervalMs": 700,
+        "phaseMs": 625,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 5
+      }
+    },
+    {
+      "id": "lc-5baeeab65de4013d",
+      "cellId": "cell-56128129df828e52",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410024,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "expectedAnswer": "3",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 3,
+        "flashDurationMs": 233,
+        "intervalMs": 400,
+        "phaseMs": 125,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 6
+      }
+    },
+    {
+      "id": "lc-a07f4d2929b556f1",
+      "cellId": "cell-56128129df828e52",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410025,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "expectedAnswer": "5",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 5,
+        "flashDurationMs": 233,
+        "intervalMs": 400,
+        "phaseMs": 125,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 0
+      }
+    },
+    {
+      "id": "lc-1f7ff226089026cf",
+      "cellId": "cell-56128129df828e52",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410026,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "expectedAnswer": "7",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 7,
+        "flashDurationMs": 233,
+        "intervalMs": 400,
+        "phaseMs": 125,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 1
+      }
+    },
+    {
+      "id": "lc-2e051e4cee63a329",
+      "cellId": "cell-56128129df828e52",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410027,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "expectedAnswer": "9",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 9,
+        "flashDurationMs": 233,
+        "intervalMs": 400,
+        "phaseMs": 125,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 2
+      }
+    },
+    {
+      "id": "lc-bd9a02fa388e3bdb",
+      "cellId": "cell-a9e24254bb197dc0",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410028,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "expectedAnswer": "3",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 3,
+        "flashDurationMs": 233,
+        "intervalMs": 400,
+        "phaseMs": 375,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 3
+      }
+    },
+    {
+      "id": "lc-122361956b810681",
+      "cellId": "cell-a9e24254bb197dc0",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410029,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "expectedAnswer": "5",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 5,
+        "flashDurationMs": 233,
+        "intervalMs": 400,
+        "phaseMs": 375,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 4
+      }
+    },
+    {
+      "id": "lc-22dd2f2b3bc70981",
+      "cellId": "cell-a9e24254bb197dc0",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410030,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "expectedAnswer": "7",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 7,
+        "flashDurationMs": 233,
+        "intervalMs": 400,
+        "phaseMs": 375,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 5
+      }
+    },
+    {
+      "id": "lc-5b55e70c39086033",
+      "cellId": "cell-a9e24254bb197dc0",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410031,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "expectedAnswer": "9",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 9,
+        "flashDurationMs": 233,
+        "intervalMs": 400,
+        "phaseMs": 375,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 6
+      }
+    },
+    {
+      "id": "lc-8db8cdb0ac4a740c",
+      "cellId": "cell-2425d6a3dea94aeb",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410032,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "expectedAnswer": "3",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 3,
+        "flashDurationMs": 233,
+        "intervalMs": 400,
+        "phaseMs": 625,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 0
+      }
+    },
+    {
+      "id": "lc-e660a1a6046d21cd",
+      "cellId": "cell-2425d6a3dea94aeb",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410033,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "expectedAnswer": "5",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 5,
+        "flashDurationMs": 233,
+        "intervalMs": 400,
+        "phaseMs": 625,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 1
+      }
+    },
+    {
+      "id": "lc-e3a6548a2f350682",
+      "cellId": "cell-2425d6a3dea94aeb",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410034,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "expectedAnswer": "7",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 7,
+        "flashDurationMs": 233,
+        "intervalMs": 400,
+        "phaseMs": 625,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 2
+      }
+    },
+    {
+      "id": "lc-ae3e5d1dc61f575d",
+      "cellId": "cell-2425d6a3dea94aeb",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410035,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "expectedAnswer": "9",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 9,
+        "flashDurationMs": 233,
+        "intervalMs": 400,
+        "phaseMs": 625,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 3
+      }
+    },
+    {
+      "id": "lc-c14be2e6d0c67fd6",
+      "cellId": "cell-9b8dd4be415b1bea",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410036,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "expectedAnswer": "3",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 3,
+        "flashDurationMs": 233,
+        "intervalMs": 700,
+        "phaseMs": 125,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 4
+      }
+    },
+    {
+      "id": "lc-2b1b0a3167087ed4",
+      "cellId": "cell-9b8dd4be415b1bea",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410037,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "expectedAnswer": "5",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 5,
+        "flashDurationMs": 233,
+        "intervalMs": 700,
+        "phaseMs": 125,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 5
+      }
+    },
+    {
+      "id": "lc-6601bb0457d440f5",
+      "cellId": "cell-9b8dd4be415b1bea",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410038,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "expectedAnswer": "7",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 7,
+        "flashDurationMs": 233,
+        "intervalMs": 700,
+        "phaseMs": 125,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 6
+      }
+    },
+    {
+      "id": "lc-550c98f8a7b0f193",
+      "cellId": "cell-9b8dd4be415b1bea",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410039,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "expectedAnswer": "9",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 9,
+        "flashDurationMs": 233,
+        "intervalMs": 700,
+        "phaseMs": 125,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 0
+      }
+    },
+    {
+      "id": "lc-739321181efa9d0f",
+      "cellId": "cell-d085e527d5f92cb8",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410040,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "expectedAnswer": "3",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 3,
+        "flashDurationMs": 233,
+        "intervalMs": 700,
+        "phaseMs": 375,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 1
+      }
+    },
+    {
+      "id": "lc-5c0006e5cb9aedb4",
+      "cellId": "cell-d085e527d5f92cb8",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410041,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "expectedAnswer": "5",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 5,
+        "flashDurationMs": 233,
+        "intervalMs": 700,
+        "phaseMs": 375,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 2
+      }
+    },
+    {
+      "id": "lc-ab578d82d63ad1e6",
+      "cellId": "cell-d085e527d5f92cb8",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410042,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "expectedAnswer": "7",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 7,
+        "flashDurationMs": 233,
+        "intervalMs": 700,
+        "phaseMs": 375,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 3
+      }
+    },
+    {
+      "id": "lc-dac5d70bf73b16b9",
+      "cellId": "cell-d085e527d5f92cb8",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410043,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "expectedAnswer": "9",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 9,
+        "flashDurationMs": 233,
+        "intervalMs": 700,
+        "phaseMs": 375,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 4
+      }
+    },
+    {
+      "id": "lc-80e24c51674927be",
+      "cellId": "cell-816bf324a372fe50",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410044,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "expectedAnswer": "3",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 3,
+        "flashDurationMs": 233,
+        "intervalMs": 700,
+        "phaseMs": 625,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 5
+      }
+    },
+    {
+      "id": "lc-9e47ff492b66d663",
+      "cellId": "cell-816bf324a372fe50",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410045,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "expectedAnswer": "5",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 5,
+        "flashDurationMs": 233,
+        "intervalMs": 700,
+        "phaseMs": 625,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 6
+      }
+    },
+    {
+      "id": "lc-141d13749faae085",
+      "cellId": "cell-816bf324a372fe50",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410046,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "expectedAnswer": "7",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 7,
+        "flashDurationMs": 233,
+        "intervalMs": 700,
+        "phaseMs": 625,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 0
+      }
+    },
+    {
+      "id": "lc-de4a1e06090ce813",
+      "cellId": "cell-816bf324a372fe50",
+      "mechanism": "temporal-sampling-lattice",
+      "split": "discovery",
+      "seed": 410047,
+      "failureModeId": "repeated-event-undercount",
+      "question": "How many times does the central light flash bright yellow?",
+      "answerOptions": [
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "expectedAnswer": "9",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "count": 9,
+        "flashDurationMs": 233,
+        "intervalMs": 700,
+        "phaseMs": 625,
+        "videoDurationMs": 7600,
+        "fps": 30,
+        "visualVariant": 1
+      }
+    }
+  ]
+}
