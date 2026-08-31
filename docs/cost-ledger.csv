@@ -1,4 +1,6 @@
-date,category,vendor,description,cost_usd,status
-2026-08-30,development,local,Local application development and generated assets,0.00,spent
-2026-08-30,hosting,none,No deployment or paid account created,0.00,spent
-2026-08-30,model-evaluation,none,No model API calls performed,0.00,spent
+date,category,vendor,description,cash_outlay_usd,credit_consumed_usd,status
+2026-08-30,development,local,Local application development and generated assets,0.00,0.00,spent
+2026-08-30,hosting,GitHub Pages,Public static deployment,0.00,0.00,active
+2026-08-30,prepaid-credit,OpenRouter,User-funded prepaid evaluation balance; no further deposits authorized,200.00,0.00,spent
+2026-08-30,model-evaluation,OpenRouter,Final 640-response frozen campaign,0.00,1.124820,consumed-from-prepaid
+2026-08-30,model-evaluation,OpenRouter,Screening and protocol diagnostics,0.00,0.036809,consumed-from-prepaid

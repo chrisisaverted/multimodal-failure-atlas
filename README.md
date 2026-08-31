@@ -9,12 +9,12 @@ The atlas treats every failure as a falsifiable family rather than a spectacular
 - 32 mapped failure families across image, video, audiovisual, multi-image, and interleaved media
 - 8 deterministic interactive generators with construction-grounded answers
 - 28 primary research sources with retrieval dates and scope notes
-- 43 statically prerendered routes
+- 44 statically prerendered routes
 - Evidence ladder separating behavior, interventions, representations, hypotheses, and speculation
 - Typed, provider-neutral evaluation contract
-- Evaluation disabled by default; paid adapters cannot run until conformance validation
-- $25 default per-run cap, $100 protected project reserve, $1,000 absolute project ceiling
-- No fabricated model outputs and no paid evaluations
+- 640 genuine, provenance-complete responses from 10 pinned model/provider routes
+- $25 default campaign cap, $25 protected reserve, and a $200 prepaid evaluation ceiling
+- 53 explicit no-answer outcomes and 10 review-routed responses retained rather than discarded
 
 ## Quick start
 
@@ -39,7 +39,10 @@ The gate runs type checking, linting, generator and safety tests, and a producti
 
 The public application is static-first. Catalogue and citation data are typed modules rendered through server components; only generators and filters cross the client boundary. This keeps the public research site fast and useful without credentials.
 
-Evaluation adapters are server-only and live under `src/lib/evaluation`. They expose availability, preflight estimation, and evaluation interfaces. The fixture adapter is marked as such and disabled in production. Paid adapters remain fail-closed until dated request/response conformance fixtures are added.
+Evaluation adapters are server-only and live under `src/lib/evaluation`. They expose availability,
+preflight estimation, and evaluation interfaces. The fixture adapter is marked as such and disabled
+in production. Paid adapters remain fail-closed unless evaluation is explicitly enabled and an exact
+protocol, route, media hash, and cost ceiling pass validation.
 
 See [docs/architecture.md](docs/architecture.md), [docs/methods.md](docs/methods.md), [docs/evaluation.md](docs/evaluation.md), [docs/bibliography.md](docs/bibliography.md), [docs/provider-landscape.md](docs/provider-landscape.md), and [docs/hosting.md](docs/hosting.md).
 
@@ -71,8 +74,14 @@ No external service is necessary to browse the atlas or generate public educatio
 
 ## Budget
 
-The project budget is capped at $1,000. Current spend is recorded in [docs/cost-ledger.csv](docs/cost-ledger.csv). No purchase, subscription, paid deployment, domain, or large API run is authorized without separate confirmation.
+The user funded a $200 prepaid OpenRouter balance and authorized no further deposits. Total project
+cash outlay must remain below $500; the code enforces a stricter $200 cumulative evaluation ceiling,
+a protected $25 reserve, and a $25 default campaign cap. Current usage is recorded in
+[docs/cost-ledger.csv](docs/cost-ledger.csv).
 
 ## Status
 
-This is a research preview. Public generator seeds are educational demonstrations, not leaderboard samples. Model comparison views remain intentionally empty until preregistered, sufficiently sized runs pass provenance checks.
+This is a research preview. The frozen pilot is diagnostic rather than a leaderboard: eight examples
+per family and one trial can reveal candidate failure patterns but cannot establish stable rankings.
+Public generator seeds are educational demonstrations; every scored pilot artifact and raw response
+is published with its provenance.

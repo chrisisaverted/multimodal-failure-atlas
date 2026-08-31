@@ -93,24 +93,26 @@ describe("OpenRouter adapter", () => {
     process.env.OPENROUTER_API_KEY = "test-only";
     vi.stubGlobal(
       "fetch",
-      vi.fn(async () =>
-        new Response(
-          JSON.stringify({
-            id: "generation-2",
-            model: "example/video-model-20260830",
-            provider: "provider-a",
-            system_fingerprint: null,
-            choices: [{ message: { content: "yes" } }],
-            usage: {
-              prompt_tokens: 42,
-              completion_tokens: 1,
-              total_tokens: 43,
-              completion_tokens_details: { reasoning_tokens: null },
-              cost: 0.0012,
-            },
-          }),
-          { status: 200 },
-        )),
+      vi.fn(
+        async () =>
+          new Response(
+            JSON.stringify({
+              id: "generation-2",
+              model: "example/video-model-20260830",
+              provider: "provider-a",
+              system_fingerprint: null,
+              choices: [{ message: { content: "yes" } }],
+              usage: {
+                prompt_tokens: 42,
+                completion_tokens: 1,
+                total_tokens: 43,
+                completion_tokens_details: { reasoning_tokens: null },
+                cost: 0.0012,
+              },
+            }),
+            { status: 200 },
+          ),
+      ),
     );
 
     await expect(
@@ -128,20 +130,20 @@ describe("OpenRouter adapter", () => {
     process.env.OPENROUTER_API_KEY = "test-only";
     vi.stubGlobal(
       "fetch",
-      vi.fn(async () =>
-        new Response(
-          JSON.stringify({
-            id: "generation-3",
-            choices: [
-              { finish_reason: "length", message: { content: "", reasoning: "internal trace" } },
-            ],
-            usage: {
-              completion_tokens: 128,
-              completion_tokens_details: { reasoning_tokens: 128 },
-            },
-          }),
-          { status: 200 },
-        )),
+      vi.fn(
+        async () =>
+          new Response(
+            JSON.stringify({
+              id: "generation-3",
+              choices: [{ finish_reason: "length", message: { content: "", reasoning: "internal trace" } }],
+              usage: {
+                completion_tokens: 128,
+                completion_tokens_details: { reasoning_tokens: 128 },
+              },
+            }),
+            { status: 200 },
+          ),
+      ),
     );
 
     await expect(

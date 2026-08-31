@@ -2,9 +2,12 @@
 
 ## Recommendation
 
-Deploy the public research preview to **Vercel’s free tier** initially, without a purchased domain. This is the lowest-friction match for the Next.js application and supports static pages plus small server routes if later needed.
+The public research preview is deployed to **GitHub Pages** at
+`https://chrisisaverted.github.io/multimodal-failure-atlas/`, without a purchased domain.
 
-As checked on 2026-08-30, Vercel lists Hobby at [$0/month](https://vercel.com/pricing), with 1 million edge requests and 100 GB transfer included per month; its terms describe Hobby as personal, non-commercial use. That fits an independent research preview. If the project becomes institutional or commercial, move to Pro only after explicit spending approval.
+The application exports to static files, so Pages provides zero-cost hosting without a server-side
+secret surface. If the project later needs authenticated contributions or queued evaluation jobs,
+add a separate service only after an explicit operational review.
 
 Keep paid model evaluation out of unrestricted public request handlers. Run controlled evaluation batches locally or in an explicitly budgeted job, append verified result artifacts, and let the public site read cached results.
 
@@ -18,13 +21,9 @@ Keep paid model evaluation out of unrestricted public request handlers. Run cont
 
 ## Deployment
 
-No deployment was performed because no external account or public-posting authorization was provided. A deploy can be created later by importing the repository into Vercel and using the default Next.js build settings:
-
-```text
-Install: npm install
-Build:   npm run build
-Output:  managed by Next.js adapter
-```
+GitHub Actions installs dependencies, runs the static production build with the repository base
+path, and deploys the exported artifact to Pages. Model credentials are never configured in the
+public deployment; evaluated records and media are committed immutable artifacts.
 
 Do not set model credentials for the public preview. If server-side evaluations are later deployed, require authentication, queues, per-user quotas, global daily spend limits, and an immutable append-only result store.
 

@@ -2,41 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Clock3, Database, ShieldCheck } from "lucide-react";
 import { groupRunSummaries, publishedRuns } from "@/lib/published-results";
+import protocol from "../../../evaluation/plans/openrouter-frontier-matrix-v2.json";
 
 export const metadata: Metadata = { title: "Models" };
-
-const slots = [
-  [
-    "Google Gemini",
-    "Official docs specify direct video, image, and extracted-frame inputs; adapter implemented",
-    "Ready",
-  ],
-  [
-    "OpenAI GPT",
-    "Official vision guide documents image inputs; no native video-analysis input is documented there",
-    "Research slot",
-  ],
-  [
-    "Anthropic Claude",
-    "Official vision guide documents image blocks and joint analysis of multiple images",
-    "Research slot",
-  ],
-  [
-    "Moonshot Kimi",
-    "Exact current video endpoint contract has not been established from official API docs",
-    "Unavailable",
-  ],
-  [
-    "Qwen3-VL open weights",
-    "Official model card reports video understanding; exact local serving runtime pending",
-    "Unavailable",
-  ],
-  [
-    "Z.AI GLM-4.5V",
-    "Official docs list video, image, text, and file input; request conformance pending",
-    "Unavailable",
-  ],
-] as const;
 
 const percent = (value: number) => `${Math.round(value * 100)}%`;
 
@@ -63,10 +31,13 @@ export default function ModelsPage() {
           <div className="integrity-banner verified-banner">
             <ShieldCheck size={24} />
             <div>
-              <b>{publishedRuns.length} genuine model responses are published.</b>
+              <b>
+                {publishedRuns.length} genuine responses across {protocol.models.length} model families are
+                published.
+              </b>
               <p>
-                These are labelled frontier-pilot observations, not a leaderboard. The small family samples
-                expose candidate failures and include Wilson uncertainty.
+                Frozen protocol {protocol.id}. These are diagnostic observations, not a leaderboard; every
+                summary includes its denominator and Wilson uncertainty.
               </p>
             </div>
           </div>
@@ -83,8 +54,8 @@ export default function ModelsPage() {
             ))}
           </div>
           <p className="observatory-cost">
-            Recorded estimated/reported API cost: <b>${totalCost.toFixed(4)}</b>. Individual family results
-            and sample counts appear on their exhibit pages.
+            Provider-reported final-run API cost: <b>${totalCost.toFixed(4)}</b>. Individual family results,
+            no-answer outcomes, and sample counts appear in the response ledger.
           </p>
           <Link className="text-link" href="/runs">
             Inspect every response and provenance record
@@ -104,16 +75,18 @@ export default function ModelsPage() {
       )}
 
       <div className="model-slot-grid">
-        {slots.map(([name, adapter, status]) => (
-          <article key={name}>
+        {protocol.models.map((entry) => (
+          <article key={entry.modelId}>
             <div>
-              <span className={`status-dot ${name === "Google Gemini" ? "" : "muted"}`} />
-              {status}
+              <span className="status-dot" />
+              Evaluated
             </div>
-            <h2>{name}</h2>
-            <p>{adapter}</p>
+            <h2>{entry.modelId}</h2>
+            <p>
+              {entry.modelRevision} via {entry.upstreamProvider}
+            </p>
             <small>
-              Requires a dated model ID, server-only credential, preflight estimate, and committed seed set.
+              Frozen route · {entry.quantization} precision label · no fallback · data collection denied
             </small>
           </article>
         ))}

@@ -9,9 +9,9 @@ describe("evaluation spending guard", () => {
     expect(() => assertWithinBudget(26, 0, {})).toThrow(BudgetError);
   });
   it("preserves the protected project reserve", () => {
-    expect(() => assertWithinBudget(20, 885, {})).toThrow(/reserve/);
+    expect(() => assertWithinBudget(20, 160, {})).toThrow(/reserve/);
   });
   it("returns remaining budget for approved runs", () => {
-    expect(assertWithinBudget(10, 50, {}).remainingAfterUsd).toBe(940);
+    expect(assertWithinBudget(10, 50, {}).remainingAfterUsd).toBe(140);
   });
 });

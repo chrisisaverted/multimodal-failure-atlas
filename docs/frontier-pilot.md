@@ -11,10 +11,12 @@ variant 0, and one deterministic seed. The plan was frozen in
 ## Evaluation condition
 
 Each exact artifact is sent through the provider's native image or native video input. The system
-instruction requests exactly one answer from an explicit answer set and no explanation. Decoding
-uses temperature 0 when the endpoint supports it and a maximum of 128 output tokens. There is one
-trial per item. Native-image and native-video results are always reported separately because the
-provider preprocessing paths differ.
+instruction requests exactly one answer from an explicit answer set and no explanation. The final
+versioned protocol uses temperature 0, minimal hidden reasoning, and a maximum of 1,024 output
+tokens. The larger ceiling was frozen after screening showed that 128 tokens could be consumed
+entirely by hidden reasoning before an answer was emitted. Screening records are excluded from the
+final campaign. There is one trial per item. Native-image and native-video results are always
+reported separately because provider preprocessing paths differ.
 
 The generated artifacts, prompts, expected answers, seeds, and latent construction states remain
 private until the remote run is complete. They are published together afterward. This protects the
@@ -26,9 +28,15 @@ out familiarity with the general task grammar.
 The exact media bytes and complete prompt are SHA-256 hashed before submission. The append-only run
 record retains those hashes, the frozen evaluation-plan hash, generator version, model ID requested,
 provider-returned model version,
-timestamp, raw response, exact-option parse, expected answer, latency, input condition, preprocessing
-notes, and estimated or provider-reported cost. An unambiguous exact-option parse is `verified`;
+timestamp, raw response, finish reason, no-answer flag, exact-option parse, expected answer, latency,
+input condition, preprocessing notes, and estimated or provider-reported cost. An unambiguous
+exact-option parse is `verified`;
 ambiguous or unparsable output is `pending-review` and excluded from accuracy.
+
+A successful provider response that emits no visible answer is a verified incorrect outcome, not a
+transport error. The ledger preserves its finish reason and hidden-reasoning token count. The frozen
+scorer is not changed after outputs are observed; verbose-but-clear terminal answers left ambiguous
+by version 1 remain `pending-review` in this campaign.
 
 Accuracy is reported with its denominator and a 95% Wilson interval. Eight examples per family and
 one trial are insufficient for stable model rankings or broad capability claims. The pilot can
@@ -38,7 +46,8 @@ are easy for people is made without a preregistered human baseline.
 ## Reproduction
 
 `npm run generate:pilot` deterministically materializes the precommitted plan. `npm run
-evaluate:pilot` performs budget preflight, submits the exact bytes, appends each response immediately,
-resumes completed deterministic run IDs, and publishes only schema-valid records. The server-only
+evaluate:pilot` performs budget preflight, verifies the frozen protocol/model route, submits the
+exact bytes, appends each response immediately, resumes completed deterministic run IDs, and
+publishes only schema-valid final-protocol records. The server-only
 credential lives in `.env.local`, which is ignored by version control. The repository's full check
 and static production build must pass before deployment.

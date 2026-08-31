@@ -10,7 +10,11 @@ Remote evaluation is fail-closed. A paid run requires all of the following:
 4. A declared per-case cost ceiling and project-wide recorded spend below the protected reserve.
 5. Seed-specific media bytes or frames with a checksum.
 
-The runner rejects batches above 1,000 jobs, unsupported input conditions, unknown media digests, duplicate immutable IDs, any individual call above its cap, and cumulative project spend that would enter the final $100 reserve. `ATLAS_RECORDED_SPEND_USD` carries spend outside the active result store into every preflight. The runner waits between calls, appends each completed record immediately, and resumes by deterministic run ID after interruption.
+The runner rejects batches above 1,000 jobs, unsupported input conditions, unknown media digests,
+duplicate immutable IDs, any individual call above its cap, and cumulative evaluation usage that
+would enter the final $25 prepaid reserve. `ATLAS_RECORDED_SPEND_USD` carries usage outside the active
+result store into every preflight. The runner waits between calls, appends each completed record
+immediately, and resumes by deterministic run ID after interruption.
 
 ## Fixture smoke plan
 
@@ -24,7 +28,18 @@ The Gemini adapter uses inline image/video bytes or standardized frame arrays. I
 
 Pricing is never compiled into the code. Before each dated run, copy the current official per-million-token rates into `ATLAS_GEMINI_INPUT_USD_PER_MILLION` and `ATLAS_GEMINI_OUTPUT_USD_PER_MILLION`. Video estimates use a deliberately conservative 320 visual/audio tokens per second plus the entire configured output allowance.
 
-Kimi, GLM, and local Qwen slots remain unavailable until an exact endpoint/runtime has a dated conformance fixture. GLM-4.5V’s [official documentation](https://docs.z.ai/guides/vlm/glm-4.5v) lists video input, and the [Qwen3-VL model card](https://huggingface.co/Qwen/Qwen3-VL-30B-A3B-Instruct) reports video understanding; these documentation claims set adapter capability declarations but are not evaluation evidence. The current Kimi API review did not establish a specific native-video request contract, so that slot remains entirely fail-closed.
+## OpenRouter cohort adapter
+
+The OpenRouter adapter sends exact PNG bytes as an image data URL and exact MP4 bytes as a video
+data URL. Every request pins one upstream provider, disables fallbacks, requests denied data
+collection, and records gateway/upstream identity and reported usage. The final protocol resolves a
+dated endpoint revision and quantization label before the campaign; generation responses may still
+return only a model alias, and the report does not mislabel that alias as a dated snapshot.
+
+A successful generation with an empty visible answer is retained as an incorrect no-answer outcome,
+including its finish reason and reasoning-token usage. Gateway/provider errors are never scored.
+The 2026-08-30 campaign encountered a new-account 20-RPM limit and therefore used a 3.3-second
+minimum cadence with resumable checkpoints.
 
 ## Reporting
 
