@@ -90,6 +90,14 @@ export const openRouterAdapter: EvaluationAdapter = {
         ...(!request.modelId.includes("gemini-3.6") && !request.modelId.includes("gemini-3.7")
           ? { temperature: request.temperature }
           : {}),
+        ...(request.reasoningEffort
+          ? {
+              reasoning: {
+                effort: request.reasoningEffort,
+                exclude: request.excludeReasoning ?? true,
+              },
+            }
+          : {}),
         provider: {
           only: [request.routingProvider],
           allow_fallbacks: request.allowProviderFallbacks ?? false,

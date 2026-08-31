@@ -134,6 +134,25 @@ export default function RunsPage() {
                         </dd>
                       </div>
                       <div>
+                        <dt>Evaluation protocol</dt>
+                        <dd>{run.evaluationProtocolId ?? "not recorded"}</dd>
+                      </div>
+                      <div>
+                        <dt>Protocol SHA-256</dt>
+                        <dd title={run.evaluationProtocolSha256}>
+                          {run.evaluationProtocolSha256
+                            ? shortHash(run.evaluationProtocolSha256)
+                            : "not recorded"}
+                        </dd>
+                      </div>
+                      <div>
+                        <dt>Reasoning policy</dt>
+                        <dd>
+                          {run.reasoningEffort ?? "provider default"}
+                          {run.excludeReasoning ? " · trace excluded" : ""}
+                        </dd>
+                      </div>
+                      <div>
                         <dt>Latency</dt>
                         <dd>{run.latencyMs.toLocaleString()} ms</dd>
                       </div>

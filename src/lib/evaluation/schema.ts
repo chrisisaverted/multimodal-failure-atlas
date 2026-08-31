@@ -24,6 +24,8 @@ export const evaluationRequestSchema = z.object({
   temperature: z.number().min(0).max(2).default(0),
   maxOutputTokens: z.number().int().min(1).max(4096).default(64),
   trial: z.number().int().positive().default(1),
+  reasoningEffort: z.enum(["none", "minimal", "low", "medium", "high"]).optional(),
+  excludeReasoning: z.boolean().optional(),
   routingProvider: z.string().min(1).max(120).optional(),
   allowProviderFallbacks: z.boolean().optional(),
   dataCollection: z.enum(["allow", "deny"]).optional(),
@@ -49,6 +51,8 @@ export const evaluationRunSchema = z.object({
   temperature: z.number(),
   maxOutputTokens: z.number().int().positive(),
   trial: z.number().int().positive(),
+  reasoningEffort: z.enum(["none", "minimal", "low", "medium", "high"]).optional(),
+  excludeReasoning: z.boolean().optional(),
   rawResponse: z.string(),
   parsedAnswer: z.string(),
   expectedAnswer: z.string(),
@@ -74,6 +78,11 @@ export const evaluationRunSchema = z.object({
   artifactPath: z.string().optional(),
   evaluationPlanId: z.string().optional(),
   evaluationPlanSha256: z
+    .string()
+    .regex(/^[a-f0-9]{64}$/)
+    .optional(),
+  evaluationProtocolId: z.string().optional(),
+  evaluationProtocolSha256: z
     .string()
     .regex(/^[a-f0-9]{64}$/)
     .optional(),

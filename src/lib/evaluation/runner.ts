@@ -21,6 +21,8 @@ export interface EvaluationJob {
   artifactPath?: string;
   evaluationPlanId?: string;
   evaluationPlanSha256?: string;
+  evaluationProtocolId?: string;
+  evaluationProtocolSha256?: string;
 }
 
 export interface BatchOptions {
@@ -73,6 +75,8 @@ function runId(job: EvaluationJob, digest: string) {
       answerOptions: job.answerOptions,
       generatorVersion: job.generatorVersion,
       mediaSha256: digest,
+      evaluationProtocolId: job.evaluationProtocolId,
+      evaluationProtocolSha256: job.evaluationProtocolSha256,
     }),
   );
 }
@@ -163,6 +167,8 @@ export async function runEvaluationBatch(jobs: EvaluationJob[], options: BatchOp
       temperature: item.request.temperature,
       maxOutputTokens: item.request.maxOutputTokens,
       trial: item.request.trial,
+      reasoningEffort: item.request.reasoningEffort,
+      excludeReasoning: item.request.excludeReasoning,
       rawResponse: response.rawResponse,
       parsedAnswer: score.parsedAnswer,
       expectedAnswer: item.expectedAnswer,
@@ -181,6 +187,8 @@ export async function runEvaluationBatch(jobs: EvaluationJob[], options: BatchOp
       artifactPath: item.artifactPath,
       evaluationPlanId: item.evaluationPlanId,
       evaluationPlanSha256: item.evaluationPlanSha256,
+      evaluationProtocolId: item.evaluationProtocolId,
+      evaluationProtocolSha256: item.evaluationProtocolSha256,
       preprocessingNotes: item.media.preprocessingNotes ?? [],
       status:
         item.request.provider === "fixture" ? "fixture" : score.needsReview ? "pending-review" : "verified",

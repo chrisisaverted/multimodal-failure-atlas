@@ -17,6 +17,8 @@ const request: EvaluationRequest = {
   temperature: 0,
   maxOutputTokens: 128,
   trial: 1,
+  reasoningEffort: "minimal",
+  excludeReasoning: true,
   routingProvider: "provider-a",
   allowProviderFallbacks: false,
   dataCollection: "deny",
@@ -37,6 +39,7 @@ describe("OpenRouter adapter", () => {
         allow_fallbacks: false,
         data_collection: "deny",
       });
+      expect(body.reasoning).toEqual({ effort: "minimal", exclude: true });
       expect(body.messages[1].content[0]).toEqual({
         type: "video_url",
         video_url: { url: "data:video/mp4;base64,AQID" },
