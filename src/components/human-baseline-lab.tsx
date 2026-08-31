@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 interface BaselineCase {
   candidateId: string;
@@ -28,6 +28,23 @@ export function HumanBaselineLab({ cases, basePath }: { cases: BaselineCase[]; b
   const [selected, setSelected] = useState<string>();
   const startedAt = useRef(0);
   const current = cases[index];
+
+  useEffect(() => {
+    const timeout = window.setTimeout(() => {
+      try {
+        const stored = localStorage.getItem(storageKey);
+        if (!stored) return;
+        const restored = JSON.parse(stored) as BaselineResponse[];
+        setResponses(restored);
+        const answered = new Set(restored.map((response) => response.candidateId));
+        const firstUnanswered = cases.findIndex((candidate) => !answered.has(candidate.candidateId));
+        setIndex(firstUnanswered === -1 ? cases.length : firstUnanswered);
+      } catch {
+        // Invalid or blocked storage starts a fresh local session.
+      }
+    }, 0);
+    return () => window.clearTimeout(timeout);
+  }, [cases]);
 
   const sessionAccuracy = useMemo(
     () => (responses.length ? responses.filter((response) => response.correct).length / responses.length : 0),

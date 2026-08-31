@@ -48,6 +48,17 @@ or above 910000 are reserved before screening. The search can reveal phase-sensi
 temporal compression, event individuation, or count aggregation failures, but behavior alone does not
 identify which mechanism caused a miss.
 
+There are useful implementation anchors, but not universal assumptions: Google documents one-frame-per-
+second default video sampling for Gemini, while Qwen3-VL's reference processor defaults to two FPS and
+permits caller control. Gateway routes may use different or undisclosed preprocessing. The phase sweep is
+therefore black-box system identification across complete deployed routes, not a claim that every model
+uses a one-second lattice.
+
+This experiment also does not, by itself, test whether language-token prediction is the ultimate training
+objective or whether hidden reasoning is represented textually. A miss can occur before the language model
+receives the evidence. The paired temporal intervention is intended to distinguish one upstream loss from
+downstream integration, not to establish a general theory of intelligence from final-answer behavior.
+
 ## Objective and promotion
 
 For each cell, let a substantive answer be a verified, non-empty answer. The primary quantity is the

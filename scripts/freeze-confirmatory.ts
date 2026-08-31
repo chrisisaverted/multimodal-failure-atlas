@@ -43,6 +43,8 @@ const body = `${JSON.stringify(
       unseenCounts: [4, 6, 8, 10],
       disjointSeedMinimum: 910000,
       humanSolvability: "unverified-until-blinded-human-baseline",
+      constructionAmendment:
+        "All holdout clips use an 8000ms canvas so the preregistered count of 10 retains a 300ms safety tail in every selected rhythm. No model saw a holdout before this validation change.",
     },
     interventions: [
       {

@@ -16,7 +16,7 @@ const resultPaths = explicitResultsPath
   : (await readdir(resolve("evaluation/results")))
       .filter((name) => name.startsWith("lattice-counting-discovery-v1") && name.endsWith(".jsonl"))
       .map((name) => resolve("evaluation/results", name));
-const records = (
+const parsedRecords = (
   await Promise.all(
     resultPaths.map(async (path) =>
       (await readFile(path, "utf8"))
@@ -26,6 +26,11 @@ const records = (
     ),
   )
 ).flat();
+const records = [...new Map(parsedRecords.map((record) => [record.id, record])).values()];
+const scientificKeys = records.map((record) => `${record.modelId}:${record.seed}`);
+if (new Set(scientificKeys).size !== scientificKeys.length) {
+  throw new Error("A model/candidate pair appears more than once; discovery ranking refuses duplicates.");
+}
 const candidateBySeed = new Map(plan.candidates.map((candidate) => [candidate.seed, candidate]));
 const observations = records.flatMap((record) => {
   const candidate = candidateBySeed.get(record.seed);

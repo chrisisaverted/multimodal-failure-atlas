@@ -19,6 +19,7 @@
     "evaluate:discovery": "tsx scripts/evaluate-discovery.ts",
     "rank:discovery": "tsx scripts/rank-discovery.ts",
     "freeze:confirmatory": "tsx scripts/freeze-confirmatory.ts",
+    "publish:adaptive": "tsx scripts/publish-adaptive-results.ts",
     "evaluate": "tsx scripts/evaluate.ts",
     "evaluate:fixture": "tsx scripts/evaluate.ts evaluation/plans/fixture-smoke.json",
     "evaluate:pilot": "tsx scripts/evaluate-pilot.ts",

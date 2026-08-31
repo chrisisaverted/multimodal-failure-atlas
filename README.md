@@ -8,7 +8,7 @@ The atlas treats every failure as a falsifiable family rather than a spectacular
 
 - 32 mapped failure families across image, video, audiovisual, multi-image, and interleaved media
 - 8 deterministic interactive generators with construction-grounded answers
-- 34 primary research sources with retrieval dates and scope notes
+- 37 primary or official technical sources with retrieval dates and scope notes
 - 44 statically prerendered routes
 - Evidence ladder separating behavior, interventions, representations, hypotheses, and speculation
 - Typed, provider-neutral evaluation contract

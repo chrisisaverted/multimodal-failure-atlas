@@ -71,8 +71,13 @@ export const openRouterAdapter: EvaluationAdapter = {
     }
 
     const started = performance.now();
+    const timeoutMs = Number(process.env.ATLAS_PROVIDER_TIMEOUT_MS ?? 180_000);
+    if (!Number.isFinite(timeoutMs) || timeoutMs < 1_000 || timeoutMs > 900_000) {
+      throw new Error("ATLAS_PROVIDER_TIMEOUT_MS must be between 1,000 and 900,000 milliseconds.");
+    }
     const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
       method: "POST",
+      signal: AbortSignal.timeout(timeoutMs),
       headers: {
         Authorization: `Bearer ${key}`,
         "Content-Type": "application/json",

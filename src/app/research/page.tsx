@@ -8,7 +8,7 @@ export default function ResearchPage() {
   return (
     <section className="section-shell page-section">
       <header className="page-header">
-        <p className="eyebrow">Research library · {citations.length} primary sources</p>
+        <p className="eyebrow">Research library · {citations.length} primary or official sources</p>
         <h1>
           The evidence
           <br />

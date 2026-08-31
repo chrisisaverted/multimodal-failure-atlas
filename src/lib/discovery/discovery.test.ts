@@ -41,6 +41,7 @@ describe("adaptive multimodal discovery", () => {
     );
     expect(confirmatory.every((candidate) => candidate.seed >= 910_000)).toBe(true);
     expect(confirmatory.every((candidate) => candidate.split === "confirmatory")).toBe(true);
+    expect(confirmatory.every((candidate) => candidate.parameters.videoDurationMs === 8000)).toBe(true);
   });
 
   it("ranks substantive wrong answers but never rewards silence", () => {

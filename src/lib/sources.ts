@@ -2,6 +2,33 @@ import type { Citation } from "./types";
 
 export const citations: Citation[] = [
   {
+    id: "gemini-video-docs",
+    title: "Gemini API: Video Understanding",
+    authors: "Google AI for Developers",
+    year: 2026,
+    url: "https://ai.google.dev/gemini-api/docs/video-understanding",
+    note: "Official interface documentation discloses default one-frame-per-second visual sampling, video token budgets, and the risk of losing fast changes.",
+    retrieved: "2026-08-30",
+  },
+  {
+    id: "qwen3-vl",
+    title: "Qwen3-VL Technical Report",
+    authors: "Bai et al.",
+    year: 2025,
+    url: "https://arxiv.org/abs/2511.21631",
+    note: "Documents the current Qwen visual architecture, interleaved multimodal position encoding, multi-level visual features, and long-video training.",
+    retrieved: "2026-08-30",
+  },
+  {
+    id: "kimi-k3",
+    title: "Kimi K3: Open Frontier Intelligence",
+    authors: "Moonshot AI et al.",
+    year: 2026,
+    url: "https://arxiv.org/abs/2607.24653",
+    note: "Technical report for a 2.8T-parameter open native-multimodal MoE using Kimi Delta Attention, Attention Residuals, and a million-token context.",
+    retrieved: "2026-08-30",
+  },
+  {
     id: "moment-video",
     title: "Moment-Video: Diagnosing Temporal Fidelity of Video MLLMs on Momentary Visual Events",
     authors: "Liu et al.",

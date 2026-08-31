@@ -11,6 +11,7 @@ export interface LatticeCountingInput {
   intervalMs: number;
   phaseMs: number;
   visualVariant?: number;
+  videoDurationMs?: number;
 }
 
 function stableId(prefix: string, value: unknown) {
@@ -18,7 +19,7 @@ function stableId(prefix: string, value: unknown) {
 }
 
 export function createLatticeCountingCandidate(input: LatticeCountingInput): DiscoveryCandidate {
-  const videoDurationMs = 7600;
+  const videoDurationMs = input.videoDurationMs ?? 7600;
   const fps = 30;
   const visualVariant = input.visualVariant ?? input.seed % 7;
   const firstFlashAtMs = 600 + input.phaseMs;
@@ -101,6 +102,7 @@ export function createConfirmatoryCandidates(
           intervalMs: entry.parameters.intervalMs,
           phaseMs: entry.parameters.phaseMs,
           visualVariant: 10 + (seed % 7),
+          videoDurationMs: 8000,
         }),
       );
       seed += 1;
