@@ -64,6 +64,8 @@ export const evaluationRunSchema = z.object({
   requestId: z.string().optional(),
   upstreamProvider: z.string().optional(),
   systemFingerprint: z.string().optional(),
+  finishReason: z.string().optional(),
+  emptyResponse: z.boolean().optional(),
   usage: z
     .object({
       promptTokens: z.number().int().nonnegative().optional(),

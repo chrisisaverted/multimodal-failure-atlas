@@ -114,14 +114,8 @@ export const openRouterAdapter: EvaluationAdapter = {
     }
     const rawResponse = responseText(body);
     const usage = body.usage;
-    if (!rawResponse) {
-      const finishReason = body.choices?.[0]?.finish_reason ?? "unspecified";
-      const reasoningCharacters = body.choices?.[0]?.message?.reasoning?.length ?? 0;
-      const reasoningTokens = usage?.completion_tokens_details?.reasoning_tokens ?? "unspecified";
-      throw new Error(
-        `OpenRouter returned no text candidate; the run was not recorded (finish_reason=${finishReason}, reasoning_characters=${reasoningCharacters}, reasoning_tokens=${reasoningTokens}).`,
-      );
-    }
+    if (!body.choices?.length) throw new Error("OpenRouter returned no candidate; the run was not recorded.");
+    const finishReason = body.choices[0]?.finish_reason ?? undefined;
     return {
       rawResponse,
       modelVersion: body.model ?? request.modelId,
@@ -129,6 +123,8 @@ export const openRouterAdapter: EvaluationAdapter = {
       requestId: body.id ?? undefined,
       upstreamProvider: body.provider ?? request.routingProvider,
       systemFingerprint: body.system_fingerprint ?? undefined,
+      finishReason,
+      emptyResponse: rawResponse.length === 0,
       reportedCostUsd: usage?.cost ?? undefined,
       usage: usage
         ? {

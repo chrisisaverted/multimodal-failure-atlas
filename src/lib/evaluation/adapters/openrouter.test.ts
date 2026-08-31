@@ -124,7 +124,7 @@ describe("OpenRouter adapter", () => {
     });
   });
 
-  it("reports sanitized termination diagnostics when a model emits no answer", async () => {
+  it("records termination diagnostics when a model emits no answer", async () => {
     process.env.OPENROUTER_API_KEY = "test-only";
     vi.stubGlobal(
       "fetch",
@@ -149,6 +149,11 @@ describe("OpenRouter adapter", () => {
         mimeType: "video/mp4",
         bytes: new Uint8Array([1, 2, 3]),
       }),
-    ).rejects.toThrow(/finish_reason=length, reasoning_characters=14, reasoning_tokens=128/);
+    ).resolves.toMatchObject({
+      rawResponse: "",
+      finishReason: "length",
+      emptyResponse: true,
+      usage: { reasoningTokens: 128 },
+    });
   });
 });

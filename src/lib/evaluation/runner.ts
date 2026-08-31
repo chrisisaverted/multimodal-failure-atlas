@@ -180,6 +180,8 @@ export async function runEvaluationBatch(jobs: EvaluationJob[], options: BatchOp
       requestId: response.requestId,
       upstreamProvider: response.upstreamProvider,
       systemFingerprint: response.systemFingerprint,
+      finishReason: response.finishReason,
+      emptyResponse: response.emptyResponse,
       usage: response.usage,
       routingProvider: item.request.routingProvider,
       allowProviderFallbacks: item.request.allowProviderFallbacks,
@@ -191,7 +193,11 @@ export async function runEvaluationBatch(jobs: EvaluationJob[], options: BatchOp
       evaluationProtocolSha256: item.evaluationProtocolSha256,
       preprocessingNotes: item.media.preprocessingNotes ?? [],
       status:
-        item.request.provider === "fixture" ? "fixture" : score.needsReview ? "pending-review" : "verified",
+        item.request.provider === "fixture"
+          ? "fixture"
+          : response.emptyResponse || !score.needsReview
+            ? "verified"
+            : "pending-review",
     });
     await options.store.append(record);
     results.push(record);

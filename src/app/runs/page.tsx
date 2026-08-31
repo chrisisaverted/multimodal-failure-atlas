@@ -172,6 +172,13 @@ export default function RunsPage() {
                         <dt>System fingerprint</dt>
                         <dd title={run.systemFingerprint}>{run.systemFingerprint ?? "not supplied"}</dd>
                       </div>
+                      <div>
+                        <dt>Finish reason</dt>
+                        <dd>
+                          {run.finishReason ?? "not supplied"}
+                          {run.emptyResponse ? " · no answer emitted" : ""}
+                        </dd>
+                      </div>
                     </dl>
 
                     <div className="run-answer-grid">

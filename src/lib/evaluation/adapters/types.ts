@@ -18,6 +18,8 @@ export interface AdapterResponse {
   requestId?: string;
   upstreamProvider?: string;
   systemFingerprint?: string;
+  finishReason?: string;
+  emptyResponse?: boolean;
   usage?: {
     promptTokens?: number;
     completionTokens?: number;
