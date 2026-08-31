@@ -8,6 +8,7 @@ export function SiteFooter() {
         <p className="footer-statement">New pixels are not new capabilities.</p>
       </div>
       <div className="footer-links">
+        <Link href="/runs">Evaluation run ledger</Link>
         <Link href="/methods">Methodology</Link>
         <Link href="/research">Primary sources</Link>
         <Link href="/about">Contribute a failure</Link>

@@ -1,6 +1,7 @@
 import { describe, expect, it, vi } from "vitest";
 import type { EvaluationAdapter } from "./adapters/types";
 import { BudgetError } from "./cost";
+import { sha256 } from "./hash";
 import { runEvaluationBatch, type EvaluationJob } from "./runner";
 import { MemoryEvaluationStore } from "./store";
 
@@ -50,7 +51,24 @@ describe("evaluation batch runner", () => {
     expect(second[0]).toEqual(first[0]);
     expect(first[0]).toMatchObject({ correct: true, status: "fixture", expectedAnswer: "yes" });
     expect(first[0]!.mediaSha256).toMatch(/^[a-f0-9]{64}$/);
+    expect(first[0]!.mediaSha256).toBe(sha256(job.media.bytes!));
     expect(first[0]!.promptSha256).toMatch(/^[a-f0-9]{64}$/);
+  });
+
+  it("rejects a declared digest that does not match supplied bytes", async () => {
+    const adapter: EvaluationAdapter = {
+      provider: "fixture",
+      supports: ["native-video"],
+      availability: () => ({ available: true }),
+      estimate: async () => 0,
+      evaluate: async () => ({ rawResponse: "yes", modelVersion: "x", latencyMs: 1 }),
+    };
+    await expect(
+      runEvaluationBatch([{ ...job, media: { ...job.media, sha256: "a".repeat(64) } }], {
+        adapter,
+        store: new MemoryEvaluationStore(),
+      }),
+    ).rejects.toThrow(/does not match/);
   });
 
   it("fails closed when paid evaluation is not explicitly enabled", async () => {

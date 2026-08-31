@@ -18,6 +18,9 @@ export interface EvaluationJob {
   expectedAnswer: string;
   answerOptions: string[];
   generatorVersion: string;
+  artifactPath?: string;
+  evaluationPlanId?: string;
+  evaluationPlanSha256?: string;
 }
 
 export interface BatchOptions {
@@ -30,19 +33,31 @@ export interface BatchOptions {
 }
 
 function mediaDigest(media: MediaPayload) {
+  const digestForBytes = media.bytes ? sha256(media.bytes) : undefined;
   if (media.sha256) {
     if (!/^[a-f0-9]{64}$/.test(media.sha256))
       throw new Error("media.sha256 must be a lowercase SHA-256 digest.");
+    if (digestForBytes && digestForBytes !== media.sha256) {
+      throw new Error("media.sha256 does not match the supplied media bytes.");
+    }
     return media.sha256;
   }
-  const hash = createHash("sha256");
-  if (media.bytes) {
-    hash.update(media.mimeType).update(media.bytes);
-    return hash.digest("hex");
-  }
+  if (digestForBytes) return digestForBytes;
   if (media.frames?.length) {
+    const hash = createHash("sha256");
     for (const frame of media.frames) {
-      hash.update(frame.mimeType).update(String(frame.timestampMs)).update(frame.bytes);
+      const header = Buffer.from(
+        JSON.stringify({
+          mimeType: frame.mimeType,
+          timestampMs: frame.timestampMs,
+          bytes: frame.bytes.length,
+        }),
+      );
+      hash
+        .update(Buffer.from(String(header.length)))
+        .update(Buffer.from([0]))
+        .update(header)
+        .update(frame.bytes);
     }
     return hash.digest("hex");
   }
@@ -50,9 +65,10 @@ function mediaDigest(media: MediaPayload) {
 }
 
 function runId(job: EvaluationJob, digest: string) {
+  const inferenceRequest = { ...job.request, estimatedCostUsd: undefined };
   return sha256(
     JSON.stringify({
-      request: job.request,
+      request: inferenceRequest,
       expectedAnswer: job.expectedAnswer,
       answerOptions: job.answerOptions,
       generatorVersion: job.generatorVersion,
@@ -154,7 +170,17 @@ export async function runEvaluationBatch(jobs: EvaluationJob[], options: BatchOp
       scorer: score.method,
       latencyMs: response.latencyMs,
       costUsd: actualCost,
+      costBasis: response.reportedCostUsd === undefined ? "estimated" : "reported",
       requestId: response.requestId,
+      upstreamProvider: response.upstreamProvider,
+      systemFingerprint: response.systemFingerprint,
+      usage: response.usage,
+      routingProvider: item.request.routingProvider,
+      allowProviderFallbacks: item.request.allowProviderFallbacks,
+      dataCollection: item.request.dataCollection,
+      artifactPath: item.artifactPath,
+      evaluationPlanId: item.evaluationPlanId,
+      evaluationPlanSha256: item.evaluationPlanSha256,
       preprocessingNotes: item.media.preprocessingNotes ?? [],
       status:
         item.request.provider === "fixture" ? "fixture" : score.needsReview ? "pending-review" : "verified",

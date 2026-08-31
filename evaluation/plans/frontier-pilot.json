@@ -1,0 +1,17 @@
+{
+  "id": "frontier-pilot-2026-08-30",
+  "generatorVersion": "1.2.0",
+  "difficulty": 90,
+  "variant": 0,
+  "samplesPerFamily": 8,
+  "families": [
+    { "generator": "small-object", "failureModeId": "small-object-erasure", "firstSeed": 115040 },
+    { "generator": "patch-phase", "failureModeId": "patch-phase-sensitivity", "firstSeed": 535248 },
+    { "generator": "attribute-binding", "failureModeId": "attribute-binding-swap", "firstSeed": 786248 },
+    { "generator": "numerosity-density", "failureModeId": "counting-density-confound", "firstSeed": 511536 },
+    { "generator": "brief-event", "failureModeId": "brief-event-blindness", "firstSeed": 703120 },
+    { "generator": "event-order", "failureModeId": "temporal-order-reversal", "firstSeed": 768312 },
+    { "generator": "identity-occlusion", "failureModeId": "identity-through-occlusion", "firstSeed": 942376 },
+    { "generator": "event-counting", "failureModeId": "repeated-event-undercount", "firstSeed": 345992 }
+  ]
+}

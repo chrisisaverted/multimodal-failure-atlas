@@ -102,7 +102,7 @@ await writeFile(
   join(output, "manifest.json"),
   JSON.stringify(
     {
-      generatorVersion: "1.1.0",
+      generatorVersion: "1.2.0",
       generatedAt: "2026-08-30T00:00:00.000Z",
       images: Object.keys(imageAssets),
       videos: Object.keys(videos),

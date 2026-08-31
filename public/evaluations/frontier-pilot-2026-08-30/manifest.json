@@ -1,0 +1,1713 @@
+{
+  "id": "frontier-pilot-2026-08-30",
+  "planSha256": "0c4c7fa481ee418413aa4a9a5046a6a71141159eecd3056b96fa6239a8c00726",
+  "generatorVersion": "1.2.0",
+  "renderer": "reference-svg-raster-v1",
+  "fps": 30,
+  "cases": [
+    {
+      "failureModeId": "small-object-erasure",
+      "generator": "small-object",
+      "seed": 115040,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/small-object-115040.png",
+      "mimeType": "image/png",
+      "question": "What shape is the tiny vermillion mark?",
+      "answerOptions": [
+        "triangle",
+        "circle",
+        "diamond",
+        "square"
+      ],
+      "expectedAnswer": "circle",
+      "sha256": "36b67ee18f8f0c47bb5ac435bd4c95cf85f9e19d6fa9782494c3b0ad8392bf4a",
+      "latent": {
+        "target": "circle",
+        "targetColor": "vermillion",
+        "size": 10,
+        "x": 85,
+        "y": 84,
+        "distractors": 18
+      }
+    },
+    {
+      "failureModeId": "small-object-erasure",
+      "generator": "small-object",
+      "seed": 115041,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/small-object-115041.png",
+      "mimeType": "image/png",
+      "question": "What shape is the tiny teal mark?",
+      "answerOptions": [
+        "diamond",
+        "circle",
+        "triangle",
+        "square"
+      ],
+      "expectedAnswer": "square",
+      "sha256": "1b459ee14ea94f395a5a742883fa060ba51939845bccefdaef630535d047e3c4",
+      "latent": {
+        "target": "square",
+        "targetColor": "teal",
+        "size": 10,
+        "x": 64,
+        "y": 35,
+        "distractors": 18
+      }
+    },
+    {
+      "failureModeId": "small-object-erasure",
+      "generator": "small-object",
+      "seed": 115042,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/small-object-115042.png",
+      "mimeType": "image/png",
+      "question": "What shape is the tiny teal mark?",
+      "answerOptions": [
+        "diamond",
+        "square",
+        "circle",
+        "triangle"
+      ],
+      "expectedAnswer": "triangle",
+      "sha256": "ce9145e865ce220b69cbfb872ebe85d5b4971a953901d4f947ecf0c7c8d9b50c",
+      "latent": {
+        "target": "triangle",
+        "targetColor": "teal",
+        "size": 10,
+        "x": 22,
+        "y": 86,
+        "distractors": 18
+      }
+    },
+    {
+      "failureModeId": "small-object-erasure",
+      "generator": "small-object",
+      "seed": 115043,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/small-object-115043.png",
+      "mimeType": "image/png",
+      "question": "What shape is the tiny teal mark?",
+      "answerOptions": [
+        "triangle",
+        "square",
+        "diamond",
+        "circle"
+      ],
+      "expectedAnswer": "diamond",
+      "sha256": "129dec88620383a0b87f43b8cb70f3f773467bbea74dc26ce562107f414bc71f",
+      "latent": {
+        "target": "diamond",
+        "targetColor": "teal",
+        "size": 10,
+        "x": 38,
+        "y": 46,
+        "distractors": 18
+      }
+    },
+    {
+      "failureModeId": "small-object-erasure",
+      "generator": "small-object",
+      "seed": 115044,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/small-object-115044.png",
+      "mimeType": "image/png",
+      "question": "What shape is the tiny teal mark?",
+      "answerOptions": [
+        "triangle",
+        "circle",
+        "square",
+        "diamond"
+      ],
+      "expectedAnswer": "circle",
+      "sha256": "3ea28e55602fcbc4ec76508d6931518da38cc360e35df5d001221a5d6dc27461",
+      "latent": {
+        "target": "circle",
+        "targetColor": "teal",
+        "size": 10,
+        "x": 74,
+        "y": 25,
+        "distractors": 18
+      }
+    },
+    {
+      "failureModeId": "small-object-erasure",
+      "generator": "small-object",
+      "seed": 115045,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/small-object-115045.png",
+      "mimeType": "image/png",
+      "question": "What shape is the tiny violet mark?",
+      "answerOptions": [
+        "diamond",
+        "circle",
+        "square",
+        "triangle"
+      ],
+      "expectedAnswer": "square",
+      "sha256": "d6d4523a575ec5aa9a95696066e947d4ef01d79f10b27044c843d5fd01951288",
+      "latent": {
+        "target": "square",
+        "targetColor": "violet",
+        "size": 10,
+        "x": 14,
+        "y": 38,
+        "distractors": 18
+      }
+    },
+    {
+      "failureModeId": "small-object-erasure",
+      "generator": "small-object",
+      "seed": 115046,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/small-object-115046.png",
+      "mimeType": "image/png",
+      "question": "What shape is the tiny teal mark?",
+      "answerOptions": [
+        "diamond",
+        "square",
+        "circle",
+        "triangle"
+      ],
+      "expectedAnswer": "triangle",
+      "sha256": "59becade2884c1bc32874b96337d6b29f8ecddbb7d4b9ed6baeddc8883a2eb6f",
+      "latent": {
+        "target": "triangle",
+        "targetColor": "teal",
+        "size": 10,
+        "x": 64,
+        "y": 81,
+        "distractors": 18
+      }
+    },
+    {
+      "failureModeId": "small-object-erasure",
+      "generator": "small-object",
+      "seed": 115047,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/small-object-115047.png",
+      "mimeType": "image/png",
+      "question": "What shape is the tiny violet mark?",
+      "answerOptions": [
+        "diamond",
+        "square",
+        "triangle",
+        "circle"
+      ],
+      "expectedAnswer": "diamond",
+      "sha256": "0f5119e4c3e9080c6d8b2dc1e491429841e6a6e6eeecb2f967bd6d946e3a7582",
+      "latent": {
+        "target": "diamond",
+        "targetColor": "violet",
+        "size": 10,
+        "x": 23,
+        "y": 62,
+        "distractors": 18
+      }
+    },
+    {
+      "failureModeId": "patch-phase-sensitivity",
+      "generator": "patch-phase",
+      "seed": 535248,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/patch-phase-535248.png",
+      "mimeType": "image/png",
+      "question": "Do the two outlined circles overlap?",
+      "answerOptions": [
+        "yes",
+        "no"
+      ],
+      "expectedAnswer": "yes",
+      "sha256": "769fe8387f82ac07b3fab78c0f216d0da35010eb553269676078ebdca9453f54",
+      "latent": {
+        "offset": 0,
+        "patchSize": 14,
+        "relation": "overlap",
+        "separation": 31,
+        "strokeWidth": 1.75
+      }
+    },
+    {
+      "failureModeId": "patch-phase-sensitivity",
+      "generator": "patch-phase",
+      "seed": 535249,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/patch-phase-535249.png",
+      "mimeType": "image/png",
+      "question": "Do the two outlined circles overlap?",
+      "answerOptions": [
+        "yes",
+        "no"
+      ],
+      "expectedAnswer": "no",
+      "sha256": "0ea39c687b59961afedc94a6629a2f6e1cc3ca60a4950e09bacb7ef39b5f8f7f",
+      "latent": {
+        "offset": 0,
+        "patchSize": 14,
+        "relation": "do not overlap",
+        "separation": 41,
+        "strokeWidth": 1.75
+      }
+    },
+    {
+      "failureModeId": "patch-phase-sensitivity",
+      "generator": "patch-phase",
+      "seed": 535250,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/patch-phase-535250.png",
+      "mimeType": "image/png",
+      "question": "Do the two outlined circles overlap?",
+      "answerOptions": [
+        "yes",
+        "no"
+      ],
+      "expectedAnswer": "yes",
+      "sha256": "769fe8387f82ac07b3fab78c0f216d0da35010eb553269676078ebdca9453f54",
+      "latent": {
+        "offset": 0,
+        "patchSize": 14,
+        "relation": "overlap",
+        "separation": 31,
+        "strokeWidth": 1.75
+      }
+    },
+    {
+      "failureModeId": "patch-phase-sensitivity",
+      "generator": "patch-phase",
+      "seed": 535251,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/patch-phase-535251.png",
+      "mimeType": "image/png",
+      "question": "Do the two outlined circles overlap?",
+      "answerOptions": [
+        "yes",
+        "no"
+      ],
+      "expectedAnswer": "no",
+      "sha256": "0ea39c687b59961afedc94a6629a2f6e1cc3ca60a4950e09bacb7ef39b5f8f7f",
+      "latent": {
+        "offset": 0,
+        "patchSize": 14,
+        "relation": "do not overlap",
+        "separation": 41,
+        "strokeWidth": 1.75
+      }
+    },
+    {
+      "failureModeId": "patch-phase-sensitivity",
+      "generator": "patch-phase",
+      "seed": 535252,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/patch-phase-535252.png",
+      "mimeType": "image/png",
+      "question": "Do the two outlined circles overlap?",
+      "answerOptions": [
+        "yes",
+        "no"
+      ],
+      "expectedAnswer": "yes",
+      "sha256": "769fe8387f82ac07b3fab78c0f216d0da35010eb553269676078ebdca9453f54",
+      "latent": {
+        "offset": 0,
+        "patchSize": 14,
+        "relation": "overlap",
+        "separation": 31,
+        "strokeWidth": 1.75
+      }
+    },
+    {
+      "failureModeId": "patch-phase-sensitivity",
+      "generator": "patch-phase",
+      "seed": 535253,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/patch-phase-535253.png",
+      "mimeType": "image/png",
+      "question": "Do the two outlined circles overlap?",
+      "answerOptions": [
+        "yes",
+        "no"
+      ],
+      "expectedAnswer": "no",
+      "sha256": "0ea39c687b59961afedc94a6629a2f6e1cc3ca60a4950e09bacb7ef39b5f8f7f",
+      "latent": {
+        "offset": 0,
+        "patchSize": 14,
+        "relation": "do not overlap",
+        "separation": 41,
+        "strokeWidth": 1.75
+      }
+    },
+    {
+      "failureModeId": "patch-phase-sensitivity",
+      "generator": "patch-phase",
+      "seed": 535254,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/patch-phase-535254.png",
+      "mimeType": "image/png",
+      "question": "Do the two outlined circles overlap?",
+      "answerOptions": [
+        "yes",
+        "no"
+      ],
+      "expectedAnswer": "yes",
+      "sha256": "769fe8387f82ac07b3fab78c0f216d0da35010eb553269676078ebdca9453f54",
+      "latent": {
+        "offset": 0,
+        "patchSize": 14,
+        "relation": "overlap",
+        "separation": 31,
+        "strokeWidth": 1.75
+      }
+    },
+    {
+      "failureModeId": "patch-phase-sensitivity",
+      "generator": "patch-phase",
+      "seed": 535255,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/patch-phase-535255.png",
+      "mimeType": "image/png",
+      "question": "Do the two outlined circles overlap?",
+      "answerOptions": [
+        "yes",
+        "no"
+      ],
+      "expectedAnswer": "no",
+      "sha256": "0ea39c687b59961afedc94a6629a2f6e1cc3ca60a4950e09bacb7ef39b5f8f7f",
+      "latent": {
+        "offset": 0,
+        "patchSize": 14,
+        "relation": "do not overlap",
+        "separation": 41,
+        "strokeWidth": 1.75
+      }
+    },
+    {
+      "failureModeId": "attribute-binding-swap",
+      "generator": "attribute-binding",
+      "seed": 786248,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/attribute-binding-786248.png",
+      "mimeType": "image/png",
+      "question": "What colour is the diamond?",
+      "answerOptions": [
+        "teal",
+        "violet",
+        "cobalt",
+        "vermillion"
+      ],
+      "expectedAnswer": "cobalt",
+      "sha256": "fdee6a0afa75f771a3d0e5aca4b7a29c01df414c79659b15dbfa27a121620521",
+      "latent": {
+        "shapes": [
+          "diamond",
+          "triangle",
+          "circle",
+          "square"
+        ],
+        "colors": [
+          "cobalt",
+          "violet",
+          "teal",
+          "vermillion"
+        ],
+        "target": "diamond",
+        "targetIndex": 0,
+        "itemSize": 15
+      }
+    },
+    {
+      "failureModeId": "attribute-binding-swap",
+      "generator": "attribute-binding",
+      "seed": 786249,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/attribute-binding-786249.png",
+      "mimeType": "image/png",
+      "question": "What colour is the triangle?",
+      "answerOptions": [
+        "teal",
+        "violet",
+        "cobalt",
+        "vermillion"
+      ],
+      "expectedAnswer": "vermillion",
+      "sha256": "36d8b2cce0885f99fa092b90d5bdc32e656246f16fce9f1148bf58b2eaf3a8f0",
+      "latent": {
+        "shapes": [
+          "diamond",
+          "triangle",
+          "circle",
+          "square"
+        ],
+        "colors": [
+          "violet",
+          "vermillion",
+          "cobalt",
+          "teal"
+        ],
+        "target": "triangle",
+        "targetIndex": 1,
+        "itemSize": 15
+      }
+    },
+    {
+      "failureModeId": "attribute-binding-swap",
+      "generator": "attribute-binding",
+      "seed": 786250,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/attribute-binding-786250.png",
+      "mimeType": "image/png",
+      "question": "What colour is the diamond?",
+      "answerOptions": [
+        "vermillion",
+        "cobalt",
+        "teal",
+        "violet"
+      ],
+      "expectedAnswer": "violet",
+      "sha256": "ae8d3588df8abbe2e87930d08f9f682e5f3286e5d7c81ef2a6e2c59a3a1d93ca",
+      "latent": {
+        "shapes": [
+          "square",
+          "circle",
+          "diamond",
+          "triangle"
+        ],
+        "colors": [
+          "cobalt",
+          "vermillion",
+          "violet",
+          "teal"
+        ],
+        "target": "diamond",
+        "targetIndex": 2,
+        "itemSize": 15
+      }
+    },
+    {
+      "failureModeId": "attribute-binding-swap",
+      "generator": "attribute-binding",
+      "seed": 786251,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/attribute-binding-786251.png",
+      "mimeType": "image/png",
+      "question": "What colour is the diamond?",
+      "answerOptions": [
+        "violet",
+        "cobalt",
+        "vermillion",
+        "teal"
+      ],
+      "expectedAnswer": "teal",
+      "sha256": "d5d7b141600ce851775c8165c90b6e0f4e7ce7c43319eb8372b87e1d252e10a2",
+      "latent": {
+        "shapes": [
+          "triangle",
+          "circle",
+          "square",
+          "diamond"
+        ],
+        "colors": [
+          "violet",
+          "cobalt",
+          "vermillion",
+          "teal"
+        ],
+        "target": "diamond",
+        "targetIndex": 3,
+        "itemSize": 15
+      }
+    },
+    {
+      "failureModeId": "attribute-binding-swap",
+      "generator": "attribute-binding",
+      "seed": 786252,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/attribute-binding-786252.png",
+      "mimeType": "image/png",
+      "question": "What colour is the diamond?",
+      "answerOptions": [
+        "teal",
+        "cobalt",
+        "violet",
+        "vermillion"
+      ],
+      "expectedAnswer": "cobalt",
+      "sha256": "659c16c84da207ca2723ab7820801b36d68f7ec394cda5673acdd37099662a7e",
+      "latent": {
+        "shapes": [
+          "diamond",
+          "circle",
+          "triangle",
+          "square"
+        ],
+        "colors": [
+          "cobalt",
+          "teal",
+          "vermillion",
+          "violet"
+        ],
+        "target": "diamond",
+        "targetIndex": 0,
+        "itemSize": 15
+      }
+    },
+    {
+      "failureModeId": "attribute-binding-swap",
+      "generator": "attribute-binding",
+      "seed": 786253,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/attribute-binding-786253.png",
+      "mimeType": "image/png",
+      "question": "What colour is the square?",
+      "answerOptions": [
+        "violet",
+        "vermillion",
+        "cobalt",
+        "teal"
+      ],
+      "expectedAnswer": "vermillion",
+      "sha256": "fa2aa8fb7823601ee367c7cb2683569c638445306bc5715fa9d8511e72e9d3f9",
+      "latent": {
+        "shapes": [
+          "triangle",
+          "square",
+          "circle",
+          "diamond"
+        ],
+        "colors": [
+          "violet",
+          "vermillion",
+          "cobalt",
+          "teal"
+        ],
+        "target": "square",
+        "targetIndex": 1,
+        "itemSize": 15
+      }
+    },
+    {
+      "failureModeId": "attribute-binding-swap",
+      "generator": "attribute-binding",
+      "seed": 786254,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/attribute-binding-786254.png",
+      "mimeType": "image/png",
+      "question": "What colour is the square?",
+      "answerOptions": [
+        "cobalt",
+        "violet",
+        "vermillion",
+        "teal"
+      ],
+      "expectedAnswer": "violet",
+      "sha256": "0cba7c9445efa5e73e454ba4fa393101e8dc8559ba853a5da921c1b2e717e184",
+      "latent": {
+        "shapes": [
+          "circle",
+          "triangle",
+          "square",
+          "diamond"
+        ],
+        "colors": [
+          "vermillion",
+          "teal",
+          "violet",
+          "cobalt"
+        ],
+        "target": "square",
+        "targetIndex": 2,
+        "itemSize": 15
+      }
+    },
+    {
+      "failureModeId": "attribute-binding-swap",
+      "generator": "attribute-binding",
+      "seed": 786255,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/attribute-binding-786255.png",
+      "mimeType": "image/png",
+      "question": "What colour is the circle?",
+      "answerOptions": [
+        "vermillion",
+        "violet",
+        "teal",
+        "cobalt"
+      ],
+      "expectedAnswer": "teal",
+      "sha256": "0b13b129974ac128ca93d725b87029b094ea849f04de23f73a45290d85dd3252",
+      "latent": {
+        "shapes": [
+          "square",
+          "triangle",
+          "diamond",
+          "circle"
+        ],
+        "colors": [
+          "violet",
+          "vermillion",
+          "cobalt",
+          "teal"
+        ],
+        "target": "circle",
+        "targetIndex": 3,
+        "itemSize": 15
+      }
+    },
+    {
+      "failureModeId": "counting-density-confound",
+      "generator": "numerosity-density",
+      "seed": 511536,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/numerosity-density-511536.png",
+      "mimeType": "image/png",
+      "question": "How many violet circles are present?",
+      "answerOptions": [
+        "8",
+        "6",
+        "7",
+        "9"
+      ],
+      "expectedAnswer": "7",
+      "sha256": "e2c7cd2c0170893772a4ab61e2a1509ec7576243743bec470aa0b57d4784ec05",
+      "latent": {
+        "count": 7,
+        "radius": 9.77,
+        "totalArea": 2100,
+        "density": 90,
+        "spread": 17.6
+      }
+    },
+    {
+      "failureModeId": "counting-density-confound",
+      "generator": "numerosity-density",
+      "seed": 511537,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/numerosity-density-511537.png",
+      "mimeType": "image/png",
+      "question": "How many violet circles are present?",
+      "answerOptions": [
+        "9",
+        "8",
+        "10",
+        "7"
+      ],
+      "expectedAnswer": "8",
+      "sha256": "b9b8984498603ff76bcba912ae479526851e785531c9a242a22f61a9ca0c2c53",
+      "latent": {
+        "count": 8,
+        "radius": 9.14,
+        "totalArea": 2100,
+        "density": 90,
+        "spread": 17.6
+      }
+    },
+    {
+      "failureModeId": "counting-density-confound",
+      "generator": "numerosity-density",
+      "seed": 511538,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/numerosity-density-511538.png",
+      "mimeType": "image/png",
+      "question": "How many violet circles are present?",
+      "answerOptions": [
+        "8",
+        "10",
+        "11",
+        "9"
+      ],
+      "expectedAnswer": "9",
+      "sha256": "052daf429c3736032bac09cd1b0c6613fecd91af1edd432f9da7986cbddaa596",
+      "latent": {
+        "count": 9,
+        "radius": 8.62,
+        "totalArea": 2100,
+        "density": 90,
+        "spread": 17.6
+      }
+    },
+    {
+      "failureModeId": "counting-density-confound",
+      "generator": "numerosity-density",
+      "seed": 511539,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/numerosity-density-511539.png",
+      "mimeType": "image/png",
+      "question": "How many violet circles are present?",
+      "answerOptions": [
+        "4",
+        "2",
+        "3",
+        "5"
+      ],
+      "expectedAnswer": "3",
+      "sha256": "b65ed278c3b6faaeb8d8400fa36baa46d22ba7d1b45a96f72d5b54ba3a0672a7",
+      "latent": {
+        "count": 3,
+        "radius": 14.93,
+        "totalArea": 2100,
+        "density": 90,
+        "spread": 17.6
+      }
+    },
+    {
+      "failureModeId": "counting-density-confound",
+      "generator": "numerosity-density",
+      "seed": 511540,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/numerosity-density-511540.png",
+      "mimeType": "image/png",
+      "question": "How many violet circles are present?",
+      "answerOptions": [
+        "3",
+        "6",
+        "4",
+        "5"
+      ],
+      "expectedAnswer": "4",
+      "sha256": "efd1df39114385c9acf35bb903bfbba9ff6f9b1b7a40837f9b5167b8a90fe382",
+      "latent": {
+        "count": 4,
+        "radius": 12.93,
+        "totalArea": 2100,
+        "density": 90,
+        "spread": 17.6
+      }
+    },
+    {
+      "failureModeId": "counting-density-confound",
+      "generator": "numerosity-density",
+      "seed": 511541,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/numerosity-density-511541.png",
+      "mimeType": "image/png",
+      "question": "How many violet circles are present?",
+      "answerOptions": [
+        "6",
+        "5",
+        "4",
+        "7"
+      ],
+      "expectedAnswer": "5",
+      "sha256": "60f7a315de820b46e33aceb7d458bf15c83054dfd32323f99b34e8086ebae84c",
+      "latent": {
+        "count": 5,
+        "radius": 11.56,
+        "totalArea": 2100,
+        "density": 90,
+        "spread": 17.6
+      }
+    },
+    {
+      "failureModeId": "counting-density-confound",
+      "generator": "numerosity-density",
+      "seed": 511542,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/numerosity-density-511542.png",
+      "mimeType": "image/png",
+      "question": "How many violet circles are present?",
+      "answerOptions": [
+        "5",
+        "6",
+        "8",
+        "7"
+      ],
+      "expectedAnswer": "6",
+      "sha256": "2bcbcb7430a1ea6e507d8b03fb5e459efe79b62160baa1265b52211e8bbfbd1d",
+      "latent": {
+        "count": 6,
+        "radius": 10.56,
+        "totalArea": 2100,
+        "density": 90,
+        "spread": 17.6
+      }
+    },
+    {
+      "failureModeId": "counting-density-confound",
+      "generator": "numerosity-density",
+      "seed": 511543,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/numerosity-density-511543.png",
+      "mimeType": "image/png",
+      "question": "How many violet circles are present?",
+      "answerOptions": [
+        "9",
+        "8",
+        "7",
+        "6"
+      ],
+      "expectedAnswer": "7",
+      "sha256": "ef35524c8e93456a2b66ee2dab987194baa19c3073bd8237e2411a91f2061815",
+      "latent": {
+        "count": 7,
+        "radius": 9.77,
+        "totalArea": 2100,
+        "density": 90,
+        "spread": 17.6
+      }
+    },
+    {
+      "failureModeId": "brief-event-blindness",
+      "generator": "brief-event",
+      "seed": 703120,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/brief-event-703120.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 5000,
+      "question": "Does the moving ball ever flash purple?",
+      "answerOptions": [
+        "yes",
+        "no"
+      ],
+      "expectedAnswer": "yes",
+      "sha256": "b2811a06f1058575e056d7d56cc21fd850c14fdce72a3ef77772fb885bbe6d58",
+      "latent": {
+        "durationMs": 144,
+        "eventStartMs": 1760,
+        "eventPresent": true,
+        "videoDurationMs": 5000,
+        "fps": 30
+      }
+    },
+    {
+      "failureModeId": "brief-event-blindness",
+      "generator": "brief-event",
+      "seed": 703121,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/brief-event-703121.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 5000,
+      "question": "Does the moving ball ever flash purple?",
+      "answerOptions": [
+        "yes",
+        "no"
+      ],
+      "expectedAnswer": "no",
+      "sha256": "98d2f2bf6b043111bfc67c78ef06025bbb07d6ef2d9ececb2335217f87324fc0",
+      "latent": {
+        "durationMs": 144,
+        "eventStartMs": 1760,
+        "eventPresent": false,
+        "videoDurationMs": 5000,
+        "fps": 30
+      }
+    },
+    {
+      "failureModeId": "brief-event-blindness",
+      "generator": "brief-event",
+      "seed": 703122,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/brief-event-703122.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 5000,
+      "question": "Does the moving ball ever flash purple?",
+      "answerOptions": [
+        "yes",
+        "no"
+      ],
+      "expectedAnswer": "yes",
+      "sha256": "252c9c255f69e8723488058b5a2bd44a92089081e504e5fc091767fb2e8816b3",
+      "latent": {
+        "durationMs": 144,
+        "eventStartMs": 1891,
+        "eventPresent": true,
+        "videoDurationMs": 5000,
+        "fps": 30
+      }
+    },
+    {
+      "failureModeId": "brief-event-blindness",
+      "generator": "brief-event",
+      "seed": 703123,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/brief-event-703123.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 5000,
+      "question": "Does the moving ball ever flash purple?",
+      "answerOptions": [
+        "yes",
+        "no"
+      ],
+      "expectedAnswer": "no",
+      "sha256": "98d2f2bf6b043111bfc67c78ef06025bbb07d6ef2d9ececb2335217f87324fc0",
+      "latent": {
+        "durationMs": 144,
+        "eventStartMs": 1891,
+        "eventPresent": false,
+        "videoDurationMs": 5000,
+        "fps": 30
+      }
+    },
+    {
+      "failureModeId": "brief-event-blindness",
+      "generator": "brief-event",
+      "seed": 703124,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/brief-event-703124.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 5000,
+      "question": "Does the moving ball ever flash purple?",
+      "answerOptions": [
+        "yes",
+        "no"
+      ],
+      "expectedAnswer": "yes",
+      "sha256": "b71b43a5b165d6a12d1c3d02d09fe650a36f99b4d61b073c0dc232c921a19230",
+      "latent": {
+        "durationMs": 144,
+        "eventStartMs": 2022,
+        "eventPresent": true,
+        "videoDurationMs": 5000,
+        "fps": 30
+      }
+    },
+    {
+      "failureModeId": "brief-event-blindness",
+      "generator": "brief-event",
+      "seed": 703125,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/brief-event-703125.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 5000,
+      "question": "Does the moving ball ever flash purple?",
+      "answerOptions": [
+        "yes",
+        "no"
+      ],
+      "expectedAnswer": "no",
+      "sha256": "98d2f2bf6b043111bfc67c78ef06025bbb07d6ef2d9ececb2335217f87324fc0",
+      "latent": {
+        "durationMs": 144,
+        "eventStartMs": 2022,
+        "eventPresent": false,
+        "videoDurationMs": 5000,
+        "fps": 30
+      }
+    },
+    {
+      "failureModeId": "brief-event-blindness",
+      "generator": "brief-event",
+      "seed": 703126,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/brief-event-703126.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 5000,
+      "question": "Does the moving ball ever flash purple?",
+      "answerOptions": [
+        "yes",
+        "no"
+      ],
+      "expectedAnswer": "yes",
+      "sha256": "d20525abeb062c31a42ae4598eeb8b32594adaf27091dd5f63f61f155de970ff",
+      "latent": {
+        "durationMs": 144,
+        "eventStartMs": 2153,
+        "eventPresent": true,
+        "videoDurationMs": 5000,
+        "fps": 30
+      }
+    },
+    {
+      "failureModeId": "brief-event-blindness",
+      "generator": "brief-event",
+      "seed": 703127,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/brief-event-703127.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 5000,
+      "question": "Does the moving ball ever flash purple?",
+      "answerOptions": [
+        "yes",
+        "no"
+      ],
+      "expectedAnswer": "no",
+      "sha256": "98d2f2bf6b043111bfc67c78ef06025bbb07d6ef2d9ececb2335217f87324fc0",
+      "latent": {
+        "durationMs": 144,
+        "eventStartMs": 2153,
+        "eventPresent": false,
+        "videoDurationMs": 5000,
+        "fps": 30
+      }
+    },
+    {
+      "failureModeId": "temporal-order-reversal",
+      "generator": "event-order",
+      "seed": 768312,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/event-order-768312.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 4500,
+      "question": "Which shape flashed first?",
+      "answerOptions": [
+        "circle",
+        "square"
+      ],
+      "expectedAnswer": "square",
+      "sha256": "e139c7748a88870824e147a7b724d1c0eb2ef683865a387b47bbe302c2e057e7",
+      "latent": {
+        "order": [
+          "square",
+          "circle"
+        ],
+        "firstAtMs": 1200,
+        "secondAtMs": 2120,
+        "eventGapMs": 920,
+        "videoDurationMs": 4500
+      }
+    },
+    {
+      "failureModeId": "temporal-order-reversal",
+      "generator": "event-order",
+      "seed": 768313,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/event-order-768313.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 4500,
+      "question": "Which shape flashed first?",
+      "answerOptions": [
+        "circle",
+        "square"
+      ],
+      "expectedAnswer": "circle",
+      "sha256": "20591c832be949512918857e1ae0927b0757340dfaa80aea7a0791ff6a0a6d32",
+      "latent": {
+        "order": [
+          "circle",
+          "square"
+        ],
+        "firstAtMs": 1200,
+        "secondAtMs": 2120,
+        "eventGapMs": 920,
+        "videoDurationMs": 4500
+      }
+    },
+    {
+      "failureModeId": "temporal-order-reversal",
+      "generator": "event-order",
+      "seed": 768314,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/event-order-768314.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 4500,
+      "question": "Which shape flashed first?",
+      "answerOptions": [
+        "circle",
+        "square"
+      ],
+      "expectedAnswer": "square",
+      "sha256": "e139c7748a88870824e147a7b724d1c0eb2ef683865a387b47bbe302c2e057e7",
+      "latent": {
+        "order": [
+          "square",
+          "circle"
+        ],
+        "firstAtMs": 1200,
+        "secondAtMs": 2120,
+        "eventGapMs": 920,
+        "videoDurationMs": 4500
+      }
+    },
+    {
+      "failureModeId": "temporal-order-reversal",
+      "generator": "event-order",
+      "seed": 768315,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/event-order-768315.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 4500,
+      "question": "Which shape flashed first?",
+      "answerOptions": [
+        "circle",
+        "square"
+      ],
+      "expectedAnswer": "circle",
+      "sha256": "20591c832be949512918857e1ae0927b0757340dfaa80aea7a0791ff6a0a6d32",
+      "latent": {
+        "order": [
+          "circle",
+          "square"
+        ],
+        "firstAtMs": 1200,
+        "secondAtMs": 2120,
+        "eventGapMs": 920,
+        "videoDurationMs": 4500
+      }
+    },
+    {
+      "failureModeId": "temporal-order-reversal",
+      "generator": "event-order",
+      "seed": 768316,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/event-order-768316.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 4500,
+      "question": "Which shape flashed first?",
+      "answerOptions": [
+        "circle",
+        "square"
+      ],
+      "expectedAnswer": "square",
+      "sha256": "e139c7748a88870824e147a7b724d1c0eb2ef683865a387b47bbe302c2e057e7",
+      "latent": {
+        "order": [
+          "square",
+          "circle"
+        ],
+        "firstAtMs": 1200,
+        "secondAtMs": 2120,
+        "eventGapMs": 920,
+        "videoDurationMs": 4500
+      }
+    },
+    {
+      "failureModeId": "temporal-order-reversal",
+      "generator": "event-order",
+      "seed": 768317,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/event-order-768317.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 4500,
+      "question": "Which shape flashed first?",
+      "answerOptions": [
+        "circle",
+        "square"
+      ],
+      "expectedAnswer": "circle",
+      "sha256": "20591c832be949512918857e1ae0927b0757340dfaa80aea7a0791ff6a0a6d32",
+      "latent": {
+        "order": [
+          "circle",
+          "square"
+        ],
+        "firstAtMs": 1200,
+        "secondAtMs": 2120,
+        "eventGapMs": 920,
+        "videoDurationMs": 4500
+      }
+    },
+    {
+      "failureModeId": "temporal-order-reversal",
+      "generator": "event-order",
+      "seed": 768318,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/event-order-768318.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 4500,
+      "question": "Which shape flashed first?",
+      "answerOptions": [
+        "circle",
+        "square"
+      ],
+      "expectedAnswer": "square",
+      "sha256": "e139c7748a88870824e147a7b724d1c0eb2ef683865a387b47bbe302c2e057e7",
+      "latent": {
+        "order": [
+          "square",
+          "circle"
+        ],
+        "firstAtMs": 1200,
+        "secondAtMs": 2120,
+        "eventGapMs": 920,
+        "videoDurationMs": 4500
+      }
+    },
+    {
+      "failureModeId": "temporal-order-reversal",
+      "generator": "event-order",
+      "seed": 768319,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/event-order-768319.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 4500,
+      "question": "Which shape flashed first?",
+      "answerOptions": [
+        "circle",
+        "square"
+      ],
+      "expectedAnswer": "circle",
+      "sha256": "20591c832be949512918857e1ae0927b0757340dfaa80aea7a0791ff6a0a6d32",
+      "latent": {
+        "order": [
+          "circle",
+          "square"
+        ],
+        "firstAtMs": 1200,
+        "secondAtMs": 2120,
+        "eventGapMs": 920,
+        "videoDurationMs": 4500
+      }
+    },
+    {
+      "failureModeId": "identity-through-occlusion",
+      "generator": "identity-occlusion",
+      "seed": 942376,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/identity-occlusion-942376.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 6000,
+      "question": "After emerging, is the blue ball above the red ball?",
+      "answerOptions": [
+        "yes",
+        "no"
+      ],
+      "expectedAnswer": "no",
+      "sha256": "ab2638db04cc0b7f3ea07aeb4c106e7e66bea908f8ae3b3a773cbddc79bcd8ee",
+      "latent": {
+        "swap": true,
+        "occlusionMs": 1940,
+        "occlusionHalfWindow": 0.246,
+        "videoDurationMs": 6000,
+        "identities": [
+          "blue",
+          "red"
+        ]
+      }
+    },
+    {
+      "failureModeId": "identity-through-occlusion",
+      "generator": "identity-occlusion",
+      "seed": 942377,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/identity-occlusion-942377.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 6000,
+      "question": "After emerging, is the blue ball above the red ball?",
+      "answerOptions": [
+        "yes",
+        "no"
+      ],
+      "expectedAnswer": "yes",
+      "sha256": "4d4e7e23f246f675483f426dec001b479ca25750f6cbc09275b305d91a3101b6",
+      "latent": {
+        "swap": false,
+        "occlusionMs": 1940,
+        "occlusionHalfWindow": 0.246,
+        "videoDurationMs": 6000,
+        "identities": [
+          "blue",
+          "red"
+        ]
+      }
+    },
+    {
+      "failureModeId": "identity-through-occlusion",
+      "generator": "identity-occlusion",
+      "seed": 942378,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/identity-occlusion-942378.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 6000,
+      "question": "After emerging, is the blue ball above the red ball?",
+      "answerOptions": [
+        "yes",
+        "no"
+      ],
+      "expectedAnswer": "no",
+      "sha256": "ab2638db04cc0b7f3ea07aeb4c106e7e66bea908f8ae3b3a773cbddc79bcd8ee",
+      "latent": {
+        "swap": true,
+        "occlusionMs": 1940,
+        "occlusionHalfWindow": 0.246,
+        "videoDurationMs": 6000,
+        "identities": [
+          "blue",
+          "red"
+        ]
+      }
+    },
+    {
+      "failureModeId": "identity-through-occlusion",
+      "generator": "identity-occlusion",
+      "seed": 942379,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/identity-occlusion-942379.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 6000,
+      "question": "After emerging, is the blue ball above the red ball?",
+      "answerOptions": [
+        "yes",
+        "no"
+      ],
+      "expectedAnswer": "yes",
+      "sha256": "4d4e7e23f246f675483f426dec001b479ca25750f6cbc09275b305d91a3101b6",
+      "latent": {
+        "swap": false,
+        "occlusionMs": 1940,
+        "occlusionHalfWindow": 0.246,
+        "videoDurationMs": 6000,
+        "identities": [
+          "blue",
+          "red"
+        ]
+      }
+    },
+    {
+      "failureModeId": "identity-through-occlusion",
+      "generator": "identity-occlusion",
+      "seed": 942380,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/identity-occlusion-942380.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 6000,
+      "question": "After emerging, is the blue ball above the red ball?",
+      "answerOptions": [
+        "yes",
+        "no"
+      ],
+      "expectedAnswer": "no",
+      "sha256": "ab2638db04cc0b7f3ea07aeb4c106e7e66bea908f8ae3b3a773cbddc79bcd8ee",
+      "latent": {
+        "swap": true,
+        "occlusionMs": 1940,
+        "occlusionHalfWindow": 0.246,
+        "videoDurationMs": 6000,
+        "identities": [
+          "blue",
+          "red"
+        ]
+      }
+    },
+    {
+      "failureModeId": "identity-through-occlusion",
+      "generator": "identity-occlusion",
+      "seed": 942381,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/identity-occlusion-942381.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 6000,
+      "question": "After emerging, is the blue ball above the red ball?",
+      "answerOptions": [
+        "yes",
+        "no"
+      ],
+      "expectedAnswer": "yes",
+      "sha256": "4d4e7e23f246f675483f426dec001b479ca25750f6cbc09275b305d91a3101b6",
+      "latent": {
+        "swap": false,
+        "occlusionMs": 1940,
+        "occlusionHalfWindow": 0.246,
+        "videoDurationMs": 6000,
+        "identities": [
+          "blue",
+          "red"
+        ]
+      }
+    },
+    {
+      "failureModeId": "identity-through-occlusion",
+      "generator": "identity-occlusion",
+      "seed": 942382,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/identity-occlusion-942382.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 6000,
+      "question": "After emerging, is the blue ball above the red ball?",
+      "answerOptions": [
+        "yes",
+        "no"
+      ],
+      "expectedAnswer": "no",
+      "sha256": "ab2638db04cc0b7f3ea07aeb4c106e7e66bea908f8ae3b3a773cbddc79bcd8ee",
+      "latent": {
+        "swap": true,
+        "occlusionMs": 1940,
+        "occlusionHalfWindow": 0.246,
+        "videoDurationMs": 6000,
+        "identities": [
+          "blue",
+          "red"
+        ]
+      }
+    },
+    {
+      "failureModeId": "identity-through-occlusion",
+      "generator": "identity-occlusion",
+      "seed": 942383,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/identity-occlusion-942383.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 6000,
+      "question": "After emerging, is the blue ball above the red ball?",
+      "answerOptions": [
+        "yes",
+        "no"
+      ],
+      "expectedAnswer": "yes",
+      "sha256": "4d4e7e23f246f675483f426dec001b479ca25750f6cbc09275b305d91a3101b6",
+      "latent": {
+        "swap": false,
+        "occlusionMs": 1940,
+        "occlusionHalfWindow": 0.246,
+        "videoDurationMs": 6000,
+        "identities": [
+          "blue",
+          "red"
+        ]
+      }
+    },
+    {
+      "failureModeId": "repeated-event-undercount",
+      "generator": "event-counting",
+      "seed": 345992,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/event-counting-345992.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 5200,
+      "question": "How many times does the central light flash?",
+      "answerOptions": [
+        "4",
+        "6",
+        "7",
+        "5"
+      ],
+      "expectedAnswer": "5",
+      "sha256": "3a0a5e7b358ef5ff9cdde3f69e65a2f95b798879e919a9ded31b1763b6e5fecb",
+      "latent": {
+        "count": 5,
+        "firstFlashAtMs": 700,
+        "intervalMs": 250,
+        "flashDurationMs": 75,
+        "videoDurationMs": 5200
+      }
+    },
+    {
+      "failureModeId": "repeated-event-undercount",
+      "generator": "event-counting",
+      "seed": 345993,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/event-counting-345993.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 5200,
+      "question": "How many times does the central light flash?",
+      "answerOptions": [
+        "6",
+        "7",
+        "8",
+        "5"
+      ],
+      "expectedAnswer": "6",
+      "sha256": "94ef8aacf0ed2e6181247c272ffba4d35f33ca4b8bfa81fc71328921a47816cb",
+      "latent": {
+        "count": 6,
+        "firstFlashAtMs": 700,
+        "intervalMs": 250,
+        "flashDurationMs": 75,
+        "videoDurationMs": 5200
+      }
+    },
+    {
+      "failureModeId": "repeated-event-undercount",
+      "generator": "event-counting",
+      "seed": 345994,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/event-counting-345994.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 5200,
+      "question": "How many times does the central light flash?",
+      "answerOptions": [
+        "6",
+        "8",
+        "9",
+        "7"
+      ],
+      "expectedAnswer": "7",
+      "sha256": "1fcba74297f241fb21d739fc4af9b54c9f8c12c4d1114b7c5d99a8e7b2db7171",
+      "latent": {
+        "count": 7,
+        "firstFlashAtMs": 700,
+        "intervalMs": 250,
+        "flashDurationMs": 75,
+        "videoDurationMs": 5200
+      }
+    },
+    {
+      "failureModeId": "repeated-event-undercount",
+      "generator": "event-counting",
+      "seed": 345995,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/event-counting-345995.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 5200,
+      "question": "How many times does the central light flash?",
+      "answerOptions": [
+        "9",
+        "10",
+        "8",
+        "7"
+      ],
+      "expectedAnswer": "8",
+      "sha256": "1f3e61c1bf08af30a1b46ff45fa9a764c401ea4a8ead9872fcaa28252a477c56",
+      "latent": {
+        "count": 8,
+        "firstFlashAtMs": 700,
+        "intervalMs": 250,
+        "flashDurationMs": 75,
+        "videoDurationMs": 5200
+      }
+    },
+    {
+      "failureModeId": "repeated-event-undercount",
+      "generator": "event-counting",
+      "seed": 345996,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/event-counting-345996.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 5200,
+      "question": "How many times does the central light flash?",
+      "answerOptions": [
+        "3",
+        "4",
+        "2",
+        "1"
+      ],
+      "expectedAnswer": "2",
+      "sha256": "315d6b63bd583d6d430a5dffea156d63bb28c9d2207a63eebabde8045d18d03e",
+      "latent": {
+        "count": 2,
+        "firstFlashAtMs": 700,
+        "intervalMs": 250,
+        "flashDurationMs": 75,
+        "videoDurationMs": 5200
+      }
+    },
+    {
+      "failureModeId": "repeated-event-undercount",
+      "generator": "event-counting",
+      "seed": 345997,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/event-counting-345997.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 5200,
+      "question": "How many times does the central light flash?",
+      "answerOptions": [
+        "2",
+        "3",
+        "5",
+        "4"
+      ],
+      "expectedAnswer": "3",
+      "sha256": "30444abedcdf97236aa31f5b0cbd18bd67258f4f90523cc0167d8a4331b42223",
+      "latent": {
+        "count": 3,
+        "firstFlashAtMs": 700,
+        "intervalMs": 250,
+        "flashDurationMs": 75,
+        "videoDurationMs": 5200
+      }
+    },
+    {
+      "failureModeId": "repeated-event-undercount",
+      "generator": "event-counting",
+      "seed": 345998,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/event-counting-345998.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 5200,
+      "question": "How many times does the central light flash?",
+      "answerOptions": [
+        "4",
+        "3",
+        "5",
+        "6"
+      ],
+      "expectedAnswer": "4",
+      "sha256": "a73926f98f88af8d0f33bc57134d9ef427da6c43668a5941c50b3c2d8115f38d",
+      "latent": {
+        "count": 4,
+        "firstFlashAtMs": 700,
+        "intervalMs": 250,
+        "flashDurationMs": 75,
+        "videoDurationMs": 5200
+      }
+    },
+    {
+      "failureModeId": "repeated-event-undercount",
+      "generator": "event-counting",
+      "seed": 345999,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/frontier-pilot-2026-08-30/event-counting-345999.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 5200,
+      "question": "How many times does the central light flash?",
+      "answerOptions": [
+        "6",
+        "7",
+        "5",
+        "4"
+      ],
+      "expectedAnswer": "5",
+      "sha256": "3a0a5e7b358ef5ff9cdde3f69e65a2f95b798879e919a9ded31b1763b6e5fecb",
+      "latent": {
+        "count": 5,
+        "firstFlashAtMs": 700,
+        "intervalMs": 250,
+        "flashDurationMs": 75,
+        "videoDurationMs": 5200
+      }
+    }
+  ]
+}

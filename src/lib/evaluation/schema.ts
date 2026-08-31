@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 export const evaluationRequestSchema = z.object({
-  provider: z.enum(["fixture", "gemini", "kimi", "qwen-local", "glm"]),
+  provider: z.enum(["fixture", "gemini", "openrouter", "kimi", "qwen-local", "glm"]),
   modelId: z.string().min(1).max(120),
   failureModeId: z.string().min(1).max(120),
   generator: z.enum([
@@ -24,6 +24,9 @@ export const evaluationRequestSchema = z.object({
   temperature: z.number().min(0).max(2).default(0),
   maxOutputTokens: z.number().int().min(1).max(4096).default(64),
   trial: z.number().int().positive().default(1),
+  routingProvider: z.string().min(1).max(120).optional(),
+  allowProviderFallbacks: z.boolean().optional(),
+  dataCollection: z.enum(["allow", "deny"]).optional(),
 });
 
 export type EvaluationRequest = z.infer<typeof evaluationRequestSchema>;
@@ -53,7 +56,27 @@ export const evaluationRunSchema = z.object({
   scorer: z.string(),
   latencyMs: z.number().nonnegative(),
   costUsd: z.number().nonnegative(),
+  costBasis: z.enum(["estimated", "reported"]).optional(),
   requestId: z.string().optional(),
+  upstreamProvider: z.string().optional(),
+  systemFingerprint: z.string().optional(),
+  usage: z
+    .object({
+      promptTokens: z.number().int().nonnegative().optional(),
+      completionTokens: z.number().int().nonnegative().optional(),
+      reasoningTokens: z.number().int().nonnegative().optional(),
+      totalTokens: z.number().int().nonnegative().optional(),
+    })
+    .optional(),
+  routingProvider: z.string().optional(),
+  allowProviderFallbacks: z.boolean().optional(),
+  dataCollection: z.enum(["allow", "deny"]).optional(),
+  artifactPath: z.string().optional(),
+  evaluationPlanId: z.string().optional(),
+  evaluationPlanSha256: z
+    .string()
+    .regex(/^[a-f0-9]{64}$/)
+    .optional(),
   preprocessingNotes: z.array(z.string()),
   status: z.enum(["verified", "fixture", "pending-review"]),
 });

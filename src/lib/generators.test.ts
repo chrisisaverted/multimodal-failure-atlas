@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import { renderDiagnosticSvg } from "./evaluation/render";
 import { generateInstance } from "./generators";
 import type { GeneratorKey } from "./types";
 
@@ -113,5 +114,15 @@ describe("diagnostic generators", () => {
     const easyEvent = generateInstance("brief-event", { seed: 4, difficulty: 0, variant: 0 });
     const hardEvent = generateInstance("brief-event", { seed: 4, difficulty: 100, variant: 0 });
     expect(Number(easyEvent.latent.durationMs)).toBeGreaterThan(Number(hardEvent.latent.durationMs));
+  });
+
+  it("difficulty changes rendered evidence for every diagnostic", () => {
+    for (const key of keys) {
+      const easy = generateInstance(key, { seed: 4, difficulty: 0, variant: 0 });
+      const hard = generateInstance(key, { seed: 4, difficulty: 100, variant: 0 });
+      const renderSweep = (instance: typeof easy) =>
+        Array.from({ length: 31 }, (_, index) => renderDiagnosticSvg(instance, index / 30)).join("\n");
+      expect(renderSweep(easy)).not.toBe(renderSweep(hard));
+    }
   });
 });

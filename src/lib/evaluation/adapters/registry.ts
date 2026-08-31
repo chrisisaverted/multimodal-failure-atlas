@@ -3,10 +3,12 @@ import type { EvaluationAdapter } from "./types";
 import { declaredAdapter } from "./declared";
 import { fixtureAdapter } from "./fixture";
 import { geminiAdapter } from "./gemini";
+import { openRouterAdapter } from "./openrouter";
 
 const adapters: Record<EvaluationRequest["provider"], EvaluationAdapter> = {
   fixture: fixtureAdapter,
   gemini: geminiAdapter,
+  openrouter: openRouterAdapter,
   kimi: declaredAdapter("kimi"),
   "qwen-local": declaredAdapter("qwen-local"),
   glm: declaredAdapter("glm"),

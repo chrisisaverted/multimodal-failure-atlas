@@ -57,6 +57,7 @@ export function DiagnosticVisual({
     case "patch-phase": {
       const offset = number(latent.offset);
       const separation = number(latent.separation);
+      const strokeWidth = number(latent.strokeWidth);
       return (
         <svg
           className="diagnostic-svg"
@@ -71,14 +72,21 @@ export function DiagnosticVisual({
           {Array.from({ length: 8 }, (_, i) => (
             <line key={`h${i}`} y1={i * 14} y2={i * 14} x1="0" x2="140" stroke="#171915" opacity=".08" />
           ))}
-          <circle cx={42 + offset} cy="50" r="20" fill="none" stroke={palette.cobalt} strokeWidth="3" />
+          <circle
+            cx={42 + offset}
+            cy="50"
+            r="20"
+            fill="none"
+            stroke={palette.cobalt}
+            strokeWidth={strokeWidth}
+          />
           <circle
             cx={42 + offset + separation}
             cy="50"
             r="20"
             fill="none"
             stroke={palette.vermillion}
-            strokeWidth="3"
+            strokeWidth={strokeWidth}
           />
         </svg>
       );
@@ -86,6 +94,7 @@ export function DiagnosticVisual({
     case "attribute-binding": {
       const items = latent.shapes as string[];
       const itemColors = latent.colors as string[];
+      const itemSize = number(latent.itemSize);
       return (
         <svg
           className="diagnostic-svg"
@@ -101,7 +110,7 @@ export function DiagnosticVisual({
               fill={palette[itemColors[index]!]!}
               x={25 + index * 30}
               y={50 + (index % 2 ? 7 : -5)}
-              size={18}
+              size={itemSize}
             />
           ))}
         </svg>
@@ -110,6 +119,7 @@ export function DiagnosticVisual({
     case "numerosity-density": {
       const count = number(latent.count);
       const radius = number(latent.radius) * 0.7;
+      const spread = number(latent.spread);
       return (
         <svg
           className="diagnostic-svg"
@@ -120,7 +130,7 @@ export function DiagnosticVisual({
           <rect width="140" height="100" fill={palette.cream} />
           {Array.from({ length: count }, (_, index) => {
             const angle = (index / count) * Math.PI * 2 + instance.seed * 0.1;
-            const ring = 19 + (index % 3) * 8;
+            const ring = spread * (0.65 + (index % 3) * 0.18);
             return (
               <circle
                 key={index}
@@ -188,7 +198,8 @@ export function DiagnosticVisual({
     }
     case "identity-occlusion": {
       const t = playhead;
-      const behind = t > 0.32 && t < 0.68;
+      const halfWindow = number(latent.occlusionHalfWindow);
+      const behind = Math.abs(t - 0.5) < halfWindow;
       const progress = t < 0.5 ? t / 0.5 : (t - 0.5) / 0.5;
       const blueY = t < 0.5 ? 34 : Boolean(latent.swap) ? 67 : 33;
       const redY = t < 0.5 ? 66 : Boolean(latent.swap) ? 33 : 67;

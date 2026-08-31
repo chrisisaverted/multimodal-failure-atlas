@@ -144,7 +144,7 @@ export default async function FailurePage({ params }: FailurePageProps) {
             and uncertainty.
           </p>
         </div>
-        <ResultMatrix affectedModels={mode.affectedModels} />
+        <ResultMatrix affectedModels={mode.affectedModels} failureModeId={mode.id} />
       </section>
 
       <section className="section-shell diagnosis-section">

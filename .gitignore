@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/.venv-eval/
 /.pnp
 .pnp.*
 .yarn/*

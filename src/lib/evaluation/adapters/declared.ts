@@ -1,7 +1,7 @@
 import { AdapterUnavailableError, type EvaluationAdapter } from "./types";
 import type { EvaluationRequest } from "../schema";
 
-type DeclaredProvider = Exclude<EvaluationRequest["provider"], "fixture" | "gemini">;
+type DeclaredProvider = Exclude<EvaluationRequest["provider"], "fixture" | "gemini" | "openrouter">;
 
 const requirements: Record<
   DeclaredProvider,

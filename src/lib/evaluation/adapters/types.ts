@@ -16,6 +16,14 @@ export interface AdapterResponse {
   latencyMs: number;
   reportedCostUsd?: number;
   requestId?: string;
+  upstreamProvider?: string;
+  systemFingerprint?: string;
+  usage?: {
+    promptTokens?: number;
+    completionTokens?: number;
+    reasoningTokens?: number;
+    totalTokens?: number;
+  };
 }
 
 export interface EvaluationAdapter {

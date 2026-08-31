@@ -5,6 +5,7 @@ const links = [
   ["Atlas", "/taxonomy"],
   ["Live lab", "/lab"],
   ["Models", "/models"],
+  ["Run ledger", "/runs"],
   ["Compare", "/compare"],
   ["Methods", "/methods"],
   ["Library", "/research"],

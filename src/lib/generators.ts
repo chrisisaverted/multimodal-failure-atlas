@@ -1,6 +1,6 @@
 import type { DiagnosticInstance, DiagnosticParams, GeneratorKey } from "./types";
 
-export const generatorVersion = "1.1.0";
+export const generatorVersion = "1.2.0";
 
 function mulberry32(seed: number) {
   let state = seed >>> 0;
@@ -57,12 +57,19 @@ export function generateInstance(generator: GeneratorKey, params: DiagnosticPara
     case "patch-phase": {
       const offset = params.variant % 14;
       const relation = params.seed % 2 === 0 ? "overlap" : "do not overlap";
+      const strokeWidth = Number((4 - difficulty * 0.025).toFixed(2));
       return {
         ...base(generator, params),
         question: "Do the two outlined circles overlap?",
         answer: relation === "overlap" ? "yes" : "no",
         answerOptions: ["yes", "no"],
-        latent: { offset, patchSize: 14, relation, separation: relation === "overlap" ? 31 : 41 },
+        latent: {
+          offset,
+          patchSize: 14,
+          relation,
+          separation: relation === "overlap" ? 31 : 41,
+          strokeWidth,
+        },
         minimalPairDescription:
           "The complete drawing shifts relative to a 14-pixel reference grid; geometry and answer do not change.",
       };
@@ -83,12 +90,13 @@ export function generateInstance(generator: GeneratorKey, params: DiagnosticPara
       const orderedColors = baseColors.map((_, index) => baseColors[(index + shift) % baseColors.length]!);
       const target = orderedShapes[targetIndex]!;
       const answer = orderedColors[targetIndex]!;
+      const itemSize = Number((24 - difficulty * 0.1).toFixed(2));
       return {
         ...base(generator, params),
         question: `What colour is the ${target}?`,
         answer,
         answerOptions: shuffled(colors, random),
-        latent: { shapes: orderedShapes, colors: orderedColors, target, targetIndex },
+        latent: { shapes: orderedShapes, colors: orderedColors, target, targetIndex, itemSize },
         minimalPairDescription:
           "A paired seed permutes colours between fixed objects while preserving the same inventory of shapes and colours.",
       };
@@ -97,6 +105,7 @@ export function generateInstance(generator: GeneratorKey, params: DiagnosticPara
       const count = 3 + ((params.seed + params.variant) % 7);
       const totalArea = 2100;
       const radius = Math.sqrt(totalArea / count / Math.PI);
+      const spread = Number((32 - difficulty * 0.16).toFixed(2));
       return {
         ...base(generator, params),
         question: "How many violet circles are present?",
@@ -105,7 +114,7 @@ export function generateInstance(generator: GeneratorKey, params: DiagnosticPara
           [String(count), String(Math.max(1, count - 1)), String(count + 1), String(count + 2)],
           random,
         ),
-        latent: { count, radius: Number(radius.toFixed(2)), totalArea, density: difficulty },
+        latent: { count, radius: Number(radius.toFixed(2)), totalArea, density: difficulty, spread },
         minimalPairDescription:
           "Count varies while total coloured area is held approximately constant, separating numerosity from visual mass.",
       };
@@ -126,12 +135,20 @@ export function generateInstance(generator: GeneratorKey, params: DiagnosticPara
     }
     case "event-order": {
       const order = params.seed % 2 === 0 ? ["square", "circle"] : ["circle", "square"];
+      const firstAtMs = 1200;
+      const eventGapMs = 2000 - difficulty * 12;
       return {
         ...base(generator, params),
         question: "Which shape flashed first?",
         answer: order[0]!,
         answerOptions: ["circle", "square"],
-        latent: { order, firstAtMs: 1200, secondAtMs: 2800, videoDurationMs: 4500 },
+        latent: {
+          order,
+          firstAtMs,
+          secondAtMs: firstAtMs + eventGapMs,
+          eventGapMs,
+          videoDurationMs: 4500,
+        },
         minimalPairDescription:
           "The paired clip contains identical frames and events in exactly reversed temporal order.",
       };
@@ -139,12 +156,19 @@ export function generateInstance(generator: GeneratorKey, params: DiagnosticPara
     case "identity-occlusion": {
       const swap = params.seed % 2 === 0;
       const occlusionMs = 500 + difficulty * 16;
+      const occlusionHalfWindow = Number((0.12 + difficulty * 0.0014).toFixed(3));
       return {
         ...base(generator, params),
         question: "After emerging, is the blue ball above the red ball?",
         answer: swap ? "no" : "yes",
         answerOptions: ["yes", "no"],
-        latent: { swap, occlusionMs, videoDurationMs: 6000, identities: ["blue", "red"] },
+        latent: {
+          swap,
+          occlusionMs,
+          occlusionHalfWindow,
+          videoDurationMs: 6000,
+          identities: ["blue", "red"],
+        },
         minimalPairDescription:
           "The exit trajectories swap while entry trajectories, occluder, timing, and final positions remain controlled.",
       };
