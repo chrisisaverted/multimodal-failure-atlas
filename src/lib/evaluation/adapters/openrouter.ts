@@ -23,17 +23,17 @@ function mediaParts(media: MediaPayload) {
 }
 
 interface OpenRouterResponse {
-  id?: string;
-  model?: string;
-  provider?: string;
-  system_fingerprint?: string;
+  id?: string | null;
+  model?: string | null;
+  provider?: string | null;
+  system_fingerprint?: string | null;
   choices?: Array<{ message?: { content?: string | Array<{ type?: string; text?: string }> } }>;
   usage?: {
-    prompt_tokens?: number;
-    completion_tokens?: number;
-    total_tokens?: number;
-    completion_tokens_details?: { reasoning_tokens?: number };
-    cost?: number;
+    prompt_tokens?: number | null;
+    completion_tokens?: number | null;
+    total_tokens?: number | null;
+    completion_tokens_details?: { reasoning_tokens?: number | null } | null;
+    cost?: number | null;
   };
   error?: { message?: string; code?: string | number };
 }
@@ -104,16 +104,16 @@ export const openRouterAdapter: EvaluationAdapter = {
       rawResponse,
       modelVersion: body.model ?? request.modelId,
       latencyMs: Math.round(performance.now() - started),
-      requestId: body.id,
+      requestId: body.id ?? undefined,
       upstreamProvider: body.provider ?? request.routingProvider,
-      systemFingerprint: body.system_fingerprint,
-      reportedCostUsd: usage?.cost,
+      systemFingerprint: body.system_fingerprint ?? undefined,
+      reportedCostUsd: usage?.cost ?? undefined,
       usage: usage
         ? {
-            promptTokens: usage.prompt_tokens,
-            completionTokens: usage.completion_tokens,
-            reasoningTokens: usage.completion_tokens_details?.reasoning_tokens,
-            totalTokens: usage.total_tokens,
+            promptTokens: usage.prompt_tokens ?? undefined,
+            completionTokens: usage.completion_tokens ?? undefined,
+            reasoningTokens: usage.completion_tokens_details?.reasoning_tokens ?? undefined,
+            totalTokens: usage.total_tokens ?? undefined,
           }
         : undefined,
     };

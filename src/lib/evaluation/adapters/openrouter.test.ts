@@ -85,4 +85,39 @@ describe("OpenRouter adapter", () => {
       ),
     ).rejects.toThrow(/pinned routingProvider/);
   });
+
+  it("treats nullable optional provenance fields as absent", async () => {
+    process.env.OPENROUTER_API_KEY = "test-only";
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async () =>
+        new Response(
+          JSON.stringify({
+            id: "generation-2",
+            model: "example/video-model-20260830",
+            provider: "provider-a",
+            system_fingerprint: null,
+            choices: [{ message: { content: "yes" } }],
+            usage: {
+              prompt_tokens: 42,
+              completion_tokens: 1,
+              total_tokens: 43,
+              completion_tokens_details: { reasoning_tokens: null },
+              cost: 0.0012,
+            },
+          }),
+          { status: 200 },
+        )),
+    );
+
+    await expect(
+      openRouterAdapter.evaluate(request, {
+        mimeType: "video/mp4",
+        bytes: new Uint8Array([1, 2, 3]),
+      }),
+    ).resolves.toMatchObject({
+      systemFingerprint: undefined,
+      usage: { reasoningTokens: undefined },
+    });
+  });
 });
