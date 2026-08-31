@@ -57,11 +57,16 @@ const manifestSchema = z.object({
 const manifestPath = resolve(process.argv[2] ?? "public/evaluations/frontier-pilot-2026-08-30/manifest.json");
 const manifest = manifestSchema.parse(JSON.parse(await readFile(manifestPath, "utf8")));
 if (manifest.generatorVersion !== generatorVersion) throw new Error("Pilot manifest generator is stale.");
-const caseLimit = Number(process.env.ATLAS_CASE_LIMIT ?? manifest.cases.length);
-if (!Number.isInteger(caseLimit) || caseLimit < 1 || caseLimit > manifest.cases.length) {
-  throw new Error(`ATLAS_CASE_LIMIT must be an integer from 1 to ${manifest.cases.length}.`);
+const caseOffset = Number(process.env.ATLAS_CASE_OFFSET ?? 0);
+if (!Number.isInteger(caseOffset) || caseOffset < 0 || caseOffset >= manifest.cases.length) {
+  throw new Error(`ATLAS_CASE_OFFSET must be an integer from 0 to ${manifest.cases.length - 1}.`);
 }
-const selectedCases = manifest.cases.slice(0, caseLimit);
+const maximumCaseLimit = manifest.cases.length - caseOffset;
+const caseLimit = Number(process.env.ATLAS_CASE_LIMIT ?? maximumCaseLimit);
+if (!Number.isInteger(caseLimit) || caseLimit < 1 || caseLimit > maximumCaseLimit) {
+  throw new Error(`ATLAS_CASE_LIMIT must be an integer from 1 to ${maximumCaseLimit} at this offset.`);
+}
+const selectedCases = manifest.cases.slice(caseOffset, caseOffset + caseLimit);
 
 const provider = z.enum(["gemini", "openrouter"]).parse(process.env.ATLAS_PROVIDER ?? "gemini");
 const modelId = process.env.ATLAS_MODEL_ID ?? process.env.ATLAS_GEMINI_MODEL_ID ?? "gemini-3.7-flash";

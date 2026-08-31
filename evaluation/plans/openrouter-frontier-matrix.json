@@ -1,0 +1,102 @@
+{
+  "id": "openrouter-frontier-matrix-2026-08-30",
+  "resolvedAt": "2026-08-30",
+  "gateway": "OpenRouter",
+  "evaluationPlanId": "frontier-pilot-2026-08-30",
+  "evaluationPlanSha256": "0c4c7fa481ee418413aa4a9a5046a6a71141159eecd3056b96fa6239a8c00726",
+  "casesPerModel": 64,
+  "trials": 1,
+  "temperature": 0,
+  "maxOutputTokens": 128,
+  "allowProviderFallbacks": false,
+  "dataCollection": "deny",
+  "campaignCostCeilingUsd": 25,
+  "canaryPolicy": {
+    "imageCaseOffset": 0,
+    "videoCaseOffset": 32,
+    "casesPerModality": 1,
+    "requireBothBeforeFullRun": true
+  },
+  "models": [
+    {
+      "modelId": "google/gemini-3.7-flash",
+      "modelRevision": "google/gemini-3.7-flash-20260813",
+      "upstreamProvider": "Google AI Studio",
+      "quantization": "unknown",
+      "promptUsdPerToken": 0.00000075,
+      "completionUsdPerToken": 0.00000375
+    },
+    {
+      "modelId": "moonshotai/kimi-k3",
+      "modelRevision": "moonshotai/kimi-k3-20260715",
+      "upstreamProvider": "Moonshot AI",
+      "quantization": "mxfp4",
+      "promptUsdPerToken": 0.000003,
+      "completionUsdPerToken": 0.000015
+    },
+    {
+      "modelId": "qwen/qwen3.8-max",
+      "modelRevision": "qwen/qwen3.8-max-20260803",
+      "upstreamProvider": "Alibaba",
+      "quantization": "unknown",
+      "promptUsdPerToken": 0.000002,
+      "completionUsdPerToken": 0.000006
+    },
+    {
+      "modelId": "z-ai/glm-5.3-flash",
+      "modelRevision": "z-ai/glm-5.3-flash-20260826",
+      "upstreamProvider": "Z.AI",
+      "quantization": "fp8",
+      "promptUsdPerToken": 0.000000075,
+      "completionUsdPerToken": 0.00000025
+    },
+    {
+      "modelId": "minimax/minimax-m3",
+      "modelRevision": "minimax/minimax-m3-20260531",
+      "upstreamProvider": "Minimax",
+      "quantization": "fp8",
+      "promptUsdPerToken": 0.0000003,
+      "completionUsdPerToken": 0.0000012
+    },
+    {
+      "modelId": "meta/muse-spark-1.2",
+      "modelRevision": "meta/muse-spark-1.2-20260805",
+      "upstreamProvider": "Meta",
+      "quantization": "unknown",
+      "promptUsdPerToken": 0.00000125,
+      "completionUsdPerToken": 0.00000425
+    },
+    {
+      "modelId": "bytedance-seed/seed-2-1-turbo",
+      "modelRevision": "bytedance-seed/seed-2-1-turbo-20260810",
+      "upstreamProvider": "Seed",
+      "quantization": "fp8",
+      "promptUsdPerToken": 0.0000005,
+      "completionUsdPerToken": 0.0000025
+    },
+    {
+      "modelId": "amazon/nova-2-lite-v1",
+      "modelRevision": "amazon/nova-2-lite-v1",
+      "upstreamProvider": "Amazon Bedrock",
+      "quantization": "unknown",
+      "promptUsdPerToken": 0.0000003,
+      "completionUsdPerToken": 0.0000025
+    },
+    {
+      "modelId": "xiaomi/mimo-v2.5",
+      "modelRevision": "xiaomi/mimo-v2.5-20260422",
+      "upstreamProvider": "Xiaomi",
+      "quantization": "fp8",
+      "promptUsdPerToken": 0.00000014,
+      "completionUsdPerToken": 0.00000028
+    },
+    {
+      "modelId": "google/gemma-4-31b-it",
+      "modelRevision": "google/gemma-4-31b-it-20260402",
+      "upstreamProvider": "CoreWeave",
+      "quantization": "fp4",
+      "promptUsdPerToken": 0.00000009,
+      "completionUsdPerToken": 0.00000034
+    }
+  ]
+}
