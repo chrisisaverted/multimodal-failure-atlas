@@ -9,13 +9,13 @@ The atlas treats every failure as a falsifiable family rather than a spectacular
 - 32 mapped failure families across image, video, audiovisual, multi-image, and interleaved media
 - 8 deterministic interactive generators with construction-grounded answers
 - 37 primary or official technical sources with retrieval dates and scope notes
-- 44 statically prerendered routes
+- 45 statically prerendered routes
 - Evidence ladder separating behavior, interventions, representations, hypotheses, and speculation
 - Typed, provider-neutral evaluation contract
-- 640 genuine, provenance-complete responses from 10 pinned model/provider routes
+- 912 genuine, provenance-complete responses: a 640-response frontier matrix plus 272 adaptive discovery and holdout evaluations
 - $25 default campaign cap, $25 protected reserve, and a $200 prepaid evaluation ceiling
-- 53 explicit no-answer outcomes and 10 review-routed responses retained rather than discarded
-- A budgeted adaptive-discovery pipeline with disjoint confirmatory holdouts
+- 201 explicit no-answer outcomes and 19 review-routed responses retained rather than discarded
+- A budgeted adaptive-discovery pipeline with disjoint confirmatory holdouts and paired native/slow-motion interventions
 
 ## Quick start
 

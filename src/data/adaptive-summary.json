@@ -1,0 +1,226 @@
+{
+  "id": "adaptive-lattice-counting-v1",
+  "generatedAt": "2026-08-31T07:00:51.270Z",
+  "evidenceStatus": "discovery-plus-frozen-confirmatory-holdout",
+  "humanSolvability": "unverified",
+  "discovery": {
+    "requests": 192,
+    "substantiveAnswers": 52,
+    "correct": 17,
+    "incorrect": 35,
+    "noAnswer": 133,
+    "pendingReview": 7,
+    "costUsd": 0.22936903039999987,
+    "models": [
+      {
+        "modelId": "google/gemma-4-31b-it",
+        "requests": 48,
+        "substantiveAnswers": 24,
+        "correct": 9,
+        "incorrect": 15,
+        "noAnswer": 24,
+        "pendingReview": 0,
+        "costUsd": 0.03496089999999999
+      },
+      {
+        "modelId": "stepfun/step-3.7-flash",
+        "requests": 48,
+        "substantiveAnswers": 0,
+        "correct": 0,
+        "incorrect": 0,
+        "noAnswer": 48,
+        "pendingReview": 0,
+        "costUsd": 0.1262879999999999
+      },
+      {
+        "modelId": "xiaomi/mimo-v2.5",
+        "requests": 48,
+        "substantiveAnswers": 17,
+        "correct": 7,
+        "incorrect": 10,
+        "noAnswer": 28,
+        "pendingReview": 3,
+        "costUsd": 0.0353202304
+      },
+      {
+        "modelId": "z-ai/glm-5.3-flash",
+        "requests": 48,
+        "substantiveAnswers": 11,
+        "correct": 1,
+        "incorrect": 10,
+        "noAnswer": 33,
+        "pendingReview": 4,
+        "costUsd": 0.03279990000000001
+      }
+    ]
+  },
+  "selectedCells": [
+    {
+      "cellId": "cell-2425d6a3dea94aeb",
+      "rankScore": 0.38257498469700063,
+      "substantiveFailureRate": 1,
+      "failureWilsonLowerBound": 0.5100999795960008,
+      "noAnswerRate": 0.75,
+      "scoredAnswers": 4,
+      "incorrectAnswers": 4,
+      "distinctModels": 3,
+      "parameters": {
+        "flashDurationMs": 233,
+        "intervalMs": 400,
+        "phaseMs": 625
+      }
+    },
+    {
+      "cellId": "cell-81c71722a2496e4a",
+      "rankScore": 0.2816461980889041,
+      "substantiveFailureRate": 0.8,
+      "failureWilsonLowerBound": 0.37552826411853885,
+      "noAnswerRate": 0.5625,
+      "scoredAnswers": 5,
+      "incorrectAnswers": 4,
+      "distinctModels": 3,
+      "parameters": {
+        "flashDurationMs": 100,
+        "intervalMs": 700,
+        "phaseMs": 375
+      }
+    }
+  ],
+  "selectionRule": "top two cells by Wilson-95%-lower-bound × model coverage; no-answer weight is zero",
+  "confirmatory": {
+    "requests": 80,
+    "substantiveAnswers": 63,
+    "correct": 39,
+    "incorrect": 24,
+    "noAnswer": 15,
+    "pendingReview": 2,
+    "costUsd": 1.6084979076000006,
+    "models": [
+      {
+        "modelId": "google/gemini-3.7-flash",
+        "requests": 16,
+        "substantiveAnswers": 16,
+        "correct": 12,
+        "incorrect": 4,
+        "noAnswer": 0,
+        "pendingReview": 0,
+        "costUsd": 0.05568000000000001
+      },
+      {
+        "modelId": "moonshotai/kimi-k3",
+        "requests": 16,
+        "substantiveAnswers": 15,
+        "correct": 12,
+        "incorrect": 3,
+        "noAnswer": 1,
+        "pendingReview": 0,
+        "costUsd": 1.141713
+      },
+      {
+        "modelId": "qwen/qwen3.8-max",
+        "requests": 16,
+        "substantiveAnswers": 16,
+        "correct": 10,
+        "incorrect": 6,
+        "noAnswer": 0,
+        "pendingReview": 0,
+        "costUsd": 0.369426
+      },
+      {
+        "modelId": "xiaomi/mimo-v2.5",
+        "requests": 16,
+        "substantiveAnswers": 7,
+        "correct": 2,
+        "incorrect": 5,
+        "noAnswer": 9,
+        "pendingReview": 0,
+        "costUsd": 0.024241257600000003
+      },
+      {
+        "modelId": "z-ai/glm-5.3-flash",
+        "requests": 16,
+        "substantiveAnswers": 9,
+        "correct": 3,
+        "incorrect": 6,
+        "noAnswer": 5,
+        "pendingReview": 2,
+        "costUsd": 0.017437650000000002
+      }
+    ],
+    "native": {
+      "requests": 40,
+      "substantiveAnswers": 29,
+      "correct": 17,
+      "incorrect": 12,
+      "noAnswer": 11,
+      "pendingReview": 0,
+      "costUsd": 0.4508632699999999
+    },
+    "slowMotion4x": {
+      "requests": 40,
+      "substantiveAnswers": 34,
+      "correct": 22,
+      "incorrect": 12,
+      "noAnswer": 4,
+      "pendingReview": 2,
+      "costUsd": 1.1576346376
+    },
+    "completePairs": 40,
+    "nativeFailureRecoveredBySlowMotion": 7
+  },
+  "resultFiles": [
+    "lattice-counting-confirmatory-v1-gemini-a.jsonl",
+    "lattice-counting-confirmatory-v1-gemini-b.jsonl",
+    "lattice-counting-confirmatory-v1-gemini-c.jsonl",
+    "lattice-counting-confirmatory-v1-gemini-d.jsonl",
+    "lattice-counting-confirmatory-v1-glm-a.jsonl",
+    "lattice-counting-confirmatory-v1-glm-b.jsonl",
+    "lattice-counting-confirmatory-v1-glm-c.jsonl",
+    "lattice-counting-confirmatory-v1-glm-d.jsonl",
+    "lattice-counting-confirmatory-v1-kimi-a.jsonl",
+    "lattice-counting-confirmatory-v1-kimi-b.jsonl",
+    "lattice-counting-confirmatory-v1-kimi-c.jsonl",
+    "lattice-counting-confirmatory-v1-kimi-d.jsonl",
+    "lattice-counting-confirmatory-v1-mimo-a.jsonl",
+    "lattice-counting-confirmatory-v1-mimo-b.jsonl",
+    "lattice-counting-confirmatory-v1-mimo-c.jsonl",
+    "lattice-counting-confirmatory-v1-mimo-d.jsonl",
+    "lattice-counting-confirmatory-v1-qwen-a.jsonl",
+    "lattice-counting-confirmatory-v1-qwen-b.jsonl",
+    "lattice-counting-confirmatory-v1-qwen-c.jsonl",
+    "lattice-counting-confirmatory-v1-qwen-d.jsonl",
+    "lattice-counting-discovery-v1-gemma-a.jsonl",
+    "lattice-counting-discovery-v1-gemma-a1.jsonl",
+    "lattice-counting-discovery-v1-gemma-a2.jsonl",
+    "lattice-counting-discovery-v1-gemma-a3.jsonl",
+    "lattice-counting-discovery-v1-gemma-b.jsonl",
+    "lattice-counting-discovery-v1-gemma-b1.jsonl",
+    "lattice-counting-discovery-v1-gemma-b2.jsonl",
+    "lattice-counting-discovery-v1-gemma-b3.jsonl",
+    "lattice-counting-discovery-v1-gemma-c.jsonl",
+    "lattice-counting-discovery-v1-gemma-c1.jsonl",
+    "lattice-counting-discovery-v1-gemma-c2.jsonl",
+    "lattice-counting-discovery-v1-gemma-c3.jsonl",
+    "lattice-counting-discovery-v1-glm-a.jsonl",
+    "lattice-counting-discovery-v1-glm-a1.jsonl",
+    "lattice-counting-discovery-v1-glm-a2.jsonl",
+    "lattice-counting-discovery-v1-glm-a3.jsonl",
+    "lattice-counting-discovery-v1-glm-b.jsonl",
+    "lattice-counting-discovery-v1-glm-b1.jsonl",
+    "lattice-counting-discovery-v1-glm-b2.jsonl",
+    "lattice-counting-discovery-v1-glm-b3.jsonl",
+    "lattice-counting-discovery-v1-glm-c.jsonl",
+    "lattice-counting-discovery-v1-glm-c1.jsonl",
+    "lattice-counting-discovery-v1-glm-c2.jsonl",
+    "lattice-counting-discovery-v1-glm-c3.jsonl",
+    "lattice-counting-discovery-v1-mimo-a.jsonl",
+    "lattice-counting-discovery-v1-mimo-b.jsonl",
+    "lattice-counting-discovery-v1-mimo-c.jsonl",
+    "lattice-counting-discovery-v1-mimo.jsonl",
+    "lattice-counting-discovery-v1-step-a.jsonl",
+    "lattice-counting-discovery-v1-step-b.jsonl",
+    "lattice-counting-discovery-v1-step-c.jsonl",
+    "lattice-counting-discovery-v1-stepfun.jsonl",
+    "lattice-counting-discovery-v1.jsonl"
+  ]
+}

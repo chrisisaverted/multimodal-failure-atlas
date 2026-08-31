@@ -1,6 +1,6 @@
 # Build and evaluation report
 
-Release audit updated 2026-08-30.
+Release audit updated 2026-08-31.
 
 ## Delivered
 
@@ -9,6 +9,7 @@ Release audit updated 2026-08-30.
 - Eight deterministic interactive generators with construction-grounded answers and downloadable specimens
 - A frozen 64-case pilot: eight independently seeded cases across four image and four video families
 - 640 genuine responses from 10 distinct model families through pinned upstream providers
+- 192 adaptive screening responses and 80 frozen-holdout responses, including 40 paired native/slow-motion probes
 - Exact media, prompt, stimulus-plan, and evaluation-protocol hashes on every public response record
 - Raw answers, finish reasons, no-answer outcomes, token usage, cost, scorer decisions, and review states
 - A fail-closed evaluation runner with resumption, no provider fallback, denied data collection, and hard spending guards
@@ -49,9 +50,32 @@ the precommitted parser found more than one answer option; they were not retroac
 - Provider-returned model IDs were aliases; dated endpoint revisions and quantization labels are the
   OpenRouter endpoint snapshot resolved when the protocol was frozen
 
+## Adaptive counting experiment
+
+The reusable discovery pipeline generated 48 event-counting videos over a 12-cell timing grid and
+screened them against GLM, MiMo, Step, and a prespecified Gemma replacement. Its selection objective
+used the Wilson 95% lower bound on substantive wrong answers multiplied by substantive model coverage;
+no-answer and review outcomes had zero hardness weight. The two promoted timing cells were frozen
+before generating an untouched eight-case holdout with unseen even counts and visual seeds. Each
+holdout case has an exact-frame 4× slow-motion twin.
+
+The screen produced 192 records: 52 substantive answers, of which 35 were wrong, plus 133 no-answer
+and seven review outcomes. The confirmatory run produced 80 records from Gemini, Kimi, Qwen, GLM,
+and MiMo: 63 substantive answers, of which 39 were correct and 24 wrong, plus 15 no-answer and two
+review outcomes. Native video yielded 17/29 correct substantive answers; slow motion yielded 22/34.
+Seven of 40 paired native failures were recovered by slowing the identical frames. This is evidence
+of acquisition/timing sensitivity, not proof that sparse sampling is the sole causal mechanism;
+some pairs regressed and stronger models were not uniformly defeated.
+
+Human solvability remains unverified. The included blinded local self-test is a demonstration and
+export tool, not a research-grade human baseline. The next defensible study step is preregistered
+human validation followed by a dense-frame or event-transcript oracle intervention.
+
 ## Operations
 
 Hosting is GitHub Pages at zero recurring cost. The only cash outlay was a $200 prepaid OpenRouter
-credit purchase; no further deposits are authorized. Code-level cumulative evaluation allowance is
-$200 with a protected $25 reserve and a $25 default campaign ceiling, stricter than the user’s $500
-total-project limit.
+credit purchase; no further deposits are authorized. As of the final audit, OpenRouter reported
+$3.009663 used and approximately $196.99 remaining. Published rows account for $2.999496; $0.010167
+is conservatively recorded as retry/aborted-request overhead. Code-level cumulative evaluation
+allowance is $200 with a protected $25 reserve and a $25 default campaign ceiling, stricter than the
+user’s $500 total-project limit.

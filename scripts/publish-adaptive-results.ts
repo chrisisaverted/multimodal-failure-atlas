@@ -37,6 +37,7 @@ const ranking = z
         failureWilsonLowerBound: z.number(),
         noAnswerRate: z.number(),
         scoredAnswers: z.number(),
+        incorrectAnswers: z.number(),
         distinctModels: z.number(),
         parameters: z.object({
           flashDurationMs: z.number(),

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { FlaskConical, LockKeyhole, Search, Users } from "lucide-react";
 import manifest from "../../../public/evaluations/lattice-counting-discovery-v1/manifest.json";
 import { HumanBaselineLab } from "@/components/human-baseline-lab";
+import { AdaptiveResultsPanel } from "@/components/adaptive-results-panel";
 
 export const metadata: Metadata = { title: "Adaptive discovery" };
 
@@ -80,6 +81,8 @@ export default function DiscoveryPage() {
           </div>
         </div>
       </section>
+
+      <AdaptiveResultsPanel />
 
       <section className="section-shell baseline-section">
         <div className="section-heading split-heading">
