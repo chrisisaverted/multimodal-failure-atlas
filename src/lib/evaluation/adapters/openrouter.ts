@@ -27,7 +27,13 @@ interface OpenRouterResponse {
   model?: string | null;
   provider?: string | null;
   system_fingerprint?: string | null;
-  choices?: Array<{ message?: { content?: string | Array<{ type?: string; text?: string }> } }>;
+  choices?: Array<{
+    finish_reason?: string | null;
+    message?: {
+      content?: string | Array<{ type?: string; text?: string }> | null;
+      reasoning?: string | null;
+    };
+  }>;
   usage?: {
     prompt_tokens?: number | null;
     completion_tokens?: number | null;
@@ -93,13 +99,21 @@ export const openRouterAdapter: EvaluationAdapter = {
     });
     const body = (await response.json()) as OpenRouterResponse;
     if (!response.ok || body.error) {
+      const detail = body.error?.message?.replace(/\s+/g, " ").slice(0, 300);
       throw new Error(
-        `OpenRouter request failed (${response.status}): ${body.error?.code ?? "unknown error"}`,
+        `OpenRouter request failed (${response.status}): ${body.error?.code ?? "unknown error"}${detail ? ` — ${detail}` : ""}`,
       );
     }
     const rawResponse = responseText(body);
-    if (!rawResponse) throw new Error("OpenRouter returned no text candidate; the run was not recorded.");
     const usage = body.usage;
+    if (!rawResponse) {
+      const finishReason = body.choices?.[0]?.finish_reason ?? "unspecified";
+      const reasoningCharacters = body.choices?.[0]?.message?.reasoning?.length ?? 0;
+      const reasoningTokens = usage?.completion_tokens_details?.reasoning_tokens ?? "unspecified";
+      throw new Error(
+        `OpenRouter returned no text candidate; the run was not recorded (finish_reason=${finishReason}, reasoning_characters=${reasoningCharacters}, reasoning_tokens=${reasoningTokens}).`,
+      );
+    }
     return {
       rawResponse,
       modelVersion: body.model ?? request.modelId,

@@ -120,4 +120,32 @@ describe("OpenRouter adapter", () => {
       usage: { reasoningTokens: undefined },
     });
   });
+
+  it("reports sanitized termination diagnostics when a model emits no answer", async () => {
+    process.env.OPENROUTER_API_KEY = "test-only";
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async () =>
+        new Response(
+          JSON.stringify({
+            id: "generation-3",
+            choices: [
+              { finish_reason: "length", message: { content: "", reasoning: "internal trace" } },
+            ],
+            usage: {
+              completion_tokens: 128,
+              completion_tokens_details: { reasoning_tokens: 128 },
+            },
+          }),
+          { status: 200 },
+        )),
+    );
+
+    await expect(
+      openRouterAdapter.evaluate(request, {
+        mimeType: "video/mp4",
+        bytes: new Uint8Array([1, 2, 3]),
+      }),
+    ).rejects.toThrow(/finish_reason=length, reasoning_characters=14, reasoning_tokens=128/);
+  });
 });
