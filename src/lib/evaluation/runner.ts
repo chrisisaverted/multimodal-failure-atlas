@@ -1,0 +1,167 @@
+import { createHash } from "node:crypto";
+import type { EvaluationAdapter, MediaPayload } from "./adapters/types";
+import { AdapterUnavailableError } from "./adapters/types";
+import { assertWithinBudget } from "./cost";
+import { sha256 } from "./hash";
+import { scoreExactOption } from "./scorer";
+import {
+  evaluationRequestSchema,
+  evaluationRunSchema,
+  type EvaluationRequest,
+  type EvaluationRunRecord,
+} from "./schema";
+import type { EvaluationStore } from "./store";
+
+export interface EvaluationJob {
+  request: EvaluationRequest;
+  media: MediaPayload;
+  expectedAnswer: string;
+  answerOptions: string[];
+  generatorVersion: string;
+}
+
+export interface BatchOptions {
+  adapter: EvaluationAdapter;
+  store: EvaluationStore;
+  env?: Record<string, string | undefined>;
+  minimumIntervalMs?: number;
+  now?: () => Date;
+  onProgress?: (event: { completed: number; total: number; cached: boolean; id: string }) => void;
+}
+
+function mediaDigest(media: MediaPayload) {
+  if (media.sha256) {
+    if (!/^[a-f0-9]{64}$/.test(media.sha256))
+      throw new Error("media.sha256 must be a lowercase SHA-256 digest.");
+    return media.sha256;
+  }
+  const hash = createHash("sha256");
+  if (media.bytes) {
+    hash.update(media.mimeType).update(media.bytes);
+    return hash.digest("hex");
+  }
+  if (media.frames?.length) {
+    for (const frame of media.frames) {
+      hash.update(frame.mimeType).update(String(frame.timestampMs)).update(frame.bytes);
+    }
+    return hash.digest("hex");
+  }
+  throw new Error("Evaluation media needs bytes, frames, or a trusted explicit SHA-256 digest.");
+}
+
+function runId(job: EvaluationJob, digest: string) {
+  return sha256(
+    JSON.stringify({
+      request: job.request,
+      expectedAnswer: job.expectedAnswer,
+      answerOptions: job.answerOptions,
+      generatorVersion: job.generatorVersion,
+      mediaSha256: digest,
+    }),
+  );
+}
+
+const wait = (milliseconds: number) => new Promise((resolve) => setTimeout(resolve, milliseconds));
+
+export async function runEvaluationBatch(jobs: EvaluationJob[], options: BatchOptions) {
+  if (jobs.length === 0) return [];
+  if (jobs.length > 1000) throw new Error("A batch may contain at most 1,000 jobs.");
+
+  const env = options.env ?? process.env;
+  const parsedJobs = jobs.map((job) => ({ ...job, request: evaluationRequestSchema.parse(job.request) }));
+  if (parsedJobs.some(({ request }) => request.provider !== options.adapter.provider)) {
+    throw new Error("Every job provider must match the selected adapter.");
+  }
+  if (options.adapter.provider !== "fixture" && env.ATLAS_EVALUATION_ENABLED !== "true") {
+    throw new AdapterUnavailableError(options.adapter.provider, "ATLAS_EVALUATION_ENABLED is not true");
+  }
+
+  const availability = options.adapter.availability(env);
+  if (!availability.available) {
+    throw new AdapterUnavailableError(options.adapter.provider, availability.reason ?? "not configured");
+  }
+  for (const { request } of parsedJobs) {
+    if (!options.adapter.supports.includes(request.inputCondition)) {
+      throw new AdapterUnavailableError(
+        options.adapter.provider,
+        `does not support ${request.inputCondition}`,
+      );
+    }
+  }
+
+  const prepared = await Promise.all(
+    parsedJobs.map(async (job) => {
+      const mediaSha256 = mediaDigest(job.media);
+      const id = runId(job, mediaSha256);
+      const cached = await options.store.find(id);
+      const adapterEstimate = cached ? 0 : await options.adapter.estimate(job.request, job.media);
+      const estimate = cached ? 0 : Math.max(adapterEstimate, job.request.estimatedCostUsd);
+      return { ...job, id, mediaSha256, cached, estimate };
+    }),
+  );
+
+  const recordedSpend = Number(env.ATLAS_RECORDED_SPEND_USD ?? 0);
+  if (!Number.isFinite(recordedSpend) || recordedSpend < 0) {
+    throw new Error("ATLAS_RECORDED_SPEND_USD must be a finite non-negative number.");
+  }
+  let projectedSpend = recordedSpend + (await options.store.spentUsd());
+  for (const item of prepared) {
+    assertWithinBudget(item.estimate, projectedSpend, env);
+    projectedSpend += item.estimate;
+  }
+
+  const results: EvaluationRunRecord[] = [];
+  let lastStartedAt = 0;
+  const minimumIntervalMs = Math.max(0, options.minimumIntervalMs ?? 250);
+  const now = options.now ?? (() => new Date());
+
+  for (const item of prepared) {
+    if (item.cached) {
+      results.push(item.cached);
+      options.onProgress?.({ completed: results.length, total: prepared.length, cached: true, id: item.id });
+      continue;
+    }
+
+    const delay = minimumIntervalMs - (Date.now() - lastStartedAt);
+    if (delay > 0) await wait(delay);
+    lastStartedAt = Date.now();
+    const response = await options.adapter.evaluate(item.request, item.media);
+    const actualCost = response.reportedCostUsd ?? item.estimate;
+    assertWithinBudget(actualCost, recordedSpend + (await options.store.spentUsd()), env);
+    const score = scoreExactOption(response.rawResponse, item.expectedAnswer, item.answerOptions);
+    const record = evaluationRunSchema.parse({
+      id: item.id,
+      failureModeId: item.request.failureModeId,
+      provider: item.request.provider,
+      modelId: item.request.modelId,
+      modelVersion: response.modelVersion,
+      evaluatedAt: now().toISOString(),
+      inputCondition: item.request.inputCondition,
+      mediaSha256: item.mediaSha256,
+      promptSha256: sha256(`${item.request.systemMessage}\n${item.request.prompt}`),
+      generatorVersion: item.generatorVersion,
+      seed: item.request.seed,
+      params: { difficulty: item.request.difficulty, variant: item.request.variant },
+      systemMessage: item.request.systemMessage,
+      prompt: item.request.prompt,
+      temperature: item.request.temperature,
+      maxOutputTokens: item.request.maxOutputTokens,
+      trial: item.request.trial,
+      rawResponse: response.rawResponse,
+      parsedAnswer: score.parsedAnswer,
+      expectedAnswer: item.expectedAnswer,
+      correct: score.correct,
+      scorer: score.method,
+      latencyMs: response.latencyMs,
+      costUsd: actualCost,
+      requestId: response.requestId,
+      preprocessingNotes: item.media.preprocessingNotes ?? [],
+      status:
+        item.request.provider === "fixture" ? "fixture" : score.needsReview ? "pending-review" : "verified",
+    });
+    await options.store.append(record);
+    results.push(record);
+    options.onProgress?.({ completed: results.length, total: prepared.length, cached: false, id: item.id });
+  }
+  return results;
+}

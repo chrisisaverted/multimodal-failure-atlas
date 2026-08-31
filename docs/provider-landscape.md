@@ -1,0 +1,14 @@
+# Provider input landscape
+
+Snapshot retrieved 2026-08-30. This table records documented input surfaces, not measured capability. Provider documentation can change; every scored run must preserve a dated model ID and preprocessing path.
+
+| Provider target  | What current official material establishes                                                                                                                                                        | Atlas status                                                                      |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| Google Gemini    | The [video-understanding guide](https://ai.google.dev/gemini-api/docs/video-understanding) documents direct video input and controllable clipping/frame rate.                                     | Real adapter implemented; credentialed conformance run pending.                   |
+| OpenAI GPT       | The [vision guide](https://developers.openai.com/api/docs/guides/images-vision) documents `input_image` analysis. It does not document a native video-analysis input type.                        | Research slot only; a frame-extraction adapter would be a distinct condition.     |
+| Anthropic Claude | The [vision guide](https://platform.claude.com/docs/en/build-with-claude/vision) documents image content blocks and joint analysis of multiple images. It does not document a native video block. | Research slot only; standardized frames remain a possible experimental condition. |
+| Z.AI GLM-4.5V    | The [official model page](https://docs.z.ai/guides/vlm/glm-4.5v) explicitly lists video, image, text, and file inputs.                                                                            | Capability declared; request conformance and adapter implementation pending.      |
+| Qwen3-VL         | The [official model card](https://huggingface.co/Qwen/Qwen3-VL-30B-A3B-Instruct) reports enhanced video-dynamics comprehension and provides local serving paths.                                  | Capability declared; pinned local runtime and hardware fixture pending.           |
+| Moonshot Kimi    | The reviewed [official API material](https://platform.kimi.ai/docs/guide/prompt-best-practice) did not establish an exact native-video request schema.                                            | Entirely fail-closed until a specific endpoint contract is verified.              |
+
+Absence from one current guide is recorded narrowly as “not documented there,” never as proof that a provider cannot process video through another product or future endpoint.

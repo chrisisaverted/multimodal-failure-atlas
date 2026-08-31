@@ -1,0 +1,98 @@
+{
+  "provider": "fixture",
+  "modelId": "fixture-1",
+  "systemMessage": "This is a diagnostic. Inspect the media and return exactly one allowed answer, with no explanation.",
+  "temperature": 0,
+  "maxOutputTokens": 16,
+  "minimumIntervalMs": 0,
+  "cases": [
+    {
+      "failureModeId": "small-object-erasure",
+      "generator": "small-object",
+      "seed": 1847,
+      "difficulty": 58,
+      "variant": 0,
+      "inputCondition": "native-image",
+      "artifact": "public/generated/small-object.svg",
+      "estimatedCostUsd": 0
+    },
+    {
+      "failureModeId": "patch-phase-sensitivity",
+      "generator": "patch-phase",
+      "seed": 1847,
+      "difficulty": 58,
+      "variant": 0,
+      "inputCondition": "native-image",
+      "artifact": "public/generated/patch-phase.svg",
+      "estimatedCostUsd": 0
+    },
+    {
+      "failureModeId": "attribute-binding-swap",
+      "generator": "attribute-binding",
+      "seed": 1847,
+      "difficulty": 58,
+      "variant": 0,
+      "inputCondition": "native-image",
+      "artifact": "public/generated/attribute-binding.svg",
+      "estimatedCostUsd": 0
+    },
+    {
+      "failureModeId": "counting-density-confound",
+      "generator": "numerosity-density",
+      "seed": 1847,
+      "difficulty": 58,
+      "variant": 0,
+      "inputCondition": "native-image",
+      "artifact": "public/generated/numerosity-density.svg",
+      "estimatedCostUsd": 0
+    },
+    {
+      "failureModeId": "brief-event-blindness",
+      "generator": "brief-event",
+      "seed": 1848,
+      "difficulty": 58,
+      "variant": 0,
+      "inputCondition": "native-video",
+      "artifact": "public/generated/brief-event.mp4",
+      "durationMs": 5000,
+      "estimatedCostUsd": 0,
+      "preprocessingNotes": ["Reference artifact; not a seed-specific scored specimen."]
+    },
+    {
+      "failureModeId": "temporal-order-reversal",
+      "generator": "event-order",
+      "seed": 1847,
+      "difficulty": 58,
+      "variant": 0,
+      "inputCondition": "native-video",
+      "artifact": "public/generated/event-order.mp4",
+      "durationMs": 5000,
+      "estimatedCostUsd": 0,
+      "preprocessingNotes": ["Reference artifact; not a seed-specific scored specimen."]
+    },
+    {
+      "failureModeId": "identity-through-occlusion",
+      "generator": "identity-occlusion",
+      "seed": 1847,
+      "difficulty": 58,
+      "variant": 0,
+      "inputCondition": "native-video",
+      "artifact": "public/generated/identity-occlusion.mp4",
+      "durationMs": 5000,
+      "estimatedCostUsd": 0,
+      "preprocessingNotes": ["Reference artifact; not a seed-specific scored specimen."]
+    },
+    {
+      "failureModeId": "repeated-event-undercount",
+      "generator": "event-counting",
+      "seed": 1847,
+      "difficulty": 58,
+      "variant": 0,
+      "inputCondition": "native-video",
+      "artifact": "public/generated/event-counting.mp4",
+      "durationMs": 5000,
+      "estimatedCostUsd": 0,
+      "preprocessingNotes": ["Reference artifact; not a seed-specific scored specimen."]
+    }
+  ]
+}

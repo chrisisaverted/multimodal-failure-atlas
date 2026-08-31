@@ -1,0 +1,4 @@
+date,category,vendor,description,cost_usd,status
+2026-08-30,development,local,Local application development and generated assets,0.00,spent
+2026-08-30,hosting,none,No deployment or paid account created,0.00,spent
+2026-08-30,model-evaluation,none,No model API calls performed,0.00,spent
