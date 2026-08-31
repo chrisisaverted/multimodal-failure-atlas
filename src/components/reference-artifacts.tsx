@@ -13,6 +13,7 @@ const videos = [
   ["identity-occlusion.mp4", "Identity-through-occlusion specimen"],
   ["event-counting.mp4", "Repeated-event count specimen"],
 ] as const;
+const publicBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export function ReferenceArtifacts() {
   return (
@@ -34,10 +35,10 @@ export function ReferenceArtifacts() {
       <div className="artifact-grid">
         {images.map(([file, alt]) => (
           <figure key={file}>
-            <Image src={`/generated/${file}`} width={640} height={400} alt={alt} />
+            <Image src={`${publicBasePath}/generated/${file}`} width={640} height={400} alt={alt} />
             <figcaption>
               <span>{alt}</span>
-              <a href={`/generated/${file}`} download>
+              <a href={`${publicBasePath}/generated/${file}`} download>
                 <Download size={14} /> SVG
               </a>
             </figcaption>
@@ -46,7 +47,7 @@ export function ReferenceArtifacts() {
         {videos.map(([file, alt]) => (
           <figure key={file}>
             <video
-              src={`/generated/${file}`}
+              src={`${publicBasePath}/generated/${file}`}
               aria-label={alt}
               controls
               muted
@@ -56,7 +57,7 @@ export function ReferenceArtifacts() {
             />
             <figcaption>
               <span>{alt}</span>
-              <a href={`/generated/${file}`} download>
+              <a href={`${publicBasePath}/generated/${file}`} download>
                 <Download size={14} /> MP4
               </a>
             </figcaption>
