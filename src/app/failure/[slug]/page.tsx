@@ -10,17 +10,19 @@ import { PipelineMap } from "@/components/pipeline-map";
 import { CapabilityCurve } from "@/components/capability-curve";
 import { ResultMatrix } from "@/components/result-matrix";
 
+type FailurePageProps = { params: Promise<{ slug: string }> };
+
 export function generateStaticParams() {
   return failureModes.map(({ id }) => ({ slug: id }));
 }
 
-export async function generateMetadata({ params }: PageProps<"/failure/[slug]">): Promise<Metadata> {
+export async function generateMetadata({ params }: FailurePageProps): Promise<Metadata> {
   const { slug } = await params;
   const mode = failureModesById.get(slug);
   return mode ? { title: mode.shortTitle, description: mode.subtitle } : {};
 }
 
-export default async function FailurePage({ params }: PageProps<"/failure/[slug]">) {
+export default async function FailurePage({ params }: FailurePageProps) {
   const { slug } = await params;
   const mode = failureModesById.get(slug);
   if (!mode) notFound();

@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://failure-atlas.org"),
+  metadataBase: new URL("https://chrisisaverted.github.io/multimodal-failure-atlas/"),
   title: { default: "The Multimodal Failure Atlas", template: "%s · Failure Atlas" },
   description:
     "A living, executable field guide to image and video failure modes in frontier multimodal models.",
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body>
