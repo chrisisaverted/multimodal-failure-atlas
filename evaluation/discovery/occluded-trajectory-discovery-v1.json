@@ -1,0 +1,240 @@
+{
+  "id": "occluded-trajectory-discovery-v1",
+  "generatorVersion": "occluded-trajectory-continuity-v1",
+  "status": "discovery-only",
+  "hypothesis": "Video models fail identity-preserving amodal completion through a shared opaque region.",
+  "candidates": [
+    {
+      "id": "ot-c9e67f1c8bf33c8c",
+      "cellId": "cell-four-straight-trajectories-central-occluder",
+      "split": "discovery",
+      "seed": 3900000,
+      "failureModeId": "occluded-trajectory-continuity",
+      "question": "Which numbered exit receives the disk that was GOLD at the start? Every disk continues at constant speed in a perfectly straight line behind the opaque panel.",
+      "answerOptions": [
+        "2",
+        "1",
+        "4",
+        "3"
+      ],
+      "expectedAnswer": "1",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetIdentity": 0,
+        "targetExit": 0,
+        "exitPermutation": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "videoDurationMs": 9200,
+        "fps": 30,
+        "visualVariant": 0
+      }
+    },
+    {
+      "id": "ot-979922e1aa041f9d",
+      "cellId": "cell-four-straight-trajectories-central-occluder",
+      "split": "discovery",
+      "seed": 3900001,
+      "failureModeId": "occluded-trajectory-continuity",
+      "question": "Which numbered exit receives the disk that was GOLD at the start? Every disk continues at constant speed in a perfectly straight line behind the opaque panel.",
+      "answerOptions": [
+        "2",
+        "1",
+        "4",
+        "3"
+      ],
+      "expectedAnswer": "2",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetIdentity": 1,
+        "targetExit": 1,
+        "exitPermutation": [
+          2,
+          1,
+          0,
+          3
+        ],
+        "videoDurationMs": 9200,
+        "fps": 30,
+        "visualVariant": 1
+      }
+    },
+    {
+      "id": "ot-e87778469a831d6b",
+      "cellId": "cell-four-straight-trajectories-central-occluder",
+      "split": "discovery",
+      "seed": 3900002,
+      "failureModeId": "occluded-trajectory-continuity",
+      "question": "Which numbered exit receives the disk that was GOLD at the start? Every disk continues at constant speed in a perfectly straight line behind the opaque panel.",
+      "answerOptions": [
+        "1",
+        "2",
+        "4",
+        "3"
+      ],
+      "expectedAnswer": "3",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetIdentity": 2,
+        "targetExit": 2,
+        "exitPermutation": [
+          1,
+          0,
+          2,
+          3
+        ],
+        "videoDurationMs": 9200,
+        "fps": 30,
+        "visualVariant": 2
+      }
+    },
+    {
+      "id": "ot-a16402e9dbd722d8",
+      "cellId": "cell-four-straight-trajectories-central-occluder",
+      "split": "discovery",
+      "seed": 3900003,
+      "failureModeId": "occluded-trajectory-continuity",
+      "question": "Which numbered exit receives the disk that was GOLD at the start? Every disk continues at constant speed in a perfectly straight line behind the opaque panel.",
+      "answerOptions": [
+        "2",
+        "4",
+        "1",
+        "3"
+      ],
+      "expectedAnswer": "4",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetIdentity": 3,
+        "targetExit": 3,
+        "exitPermutation": [
+          1,
+          0,
+          2,
+          3
+        ],
+        "videoDurationMs": 9200,
+        "fps": 30,
+        "visualVariant": 3
+      }
+    },
+    {
+      "id": "ot-ea901e1b83973b5c",
+      "cellId": "cell-four-straight-trajectories-central-occluder",
+      "split": "discovery",
+      "seed": 3900004,
+      "failureModeId": "occluded-trajectory-continuity",
+      "question": "Which numbered exit receives the disk that was GOLD at the start? Every disk continues at constant speed in a perfectly straight line behind the opaque panel.",
+      "answerOptions": [
+        "2",
+        "4",
+        "1",
+        "3"
+      ],
+      "expectedAnswer": "1",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetIdentity": 0,
+        "targetExit": 0,
+        "exitPermutation": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "videoDurationMs": 9200,
+        "fps": 30,
+        "visualVariant": 4
+      }
+    },
+    {
+      "id": "ot-9990d80e33b46cd7",
+      "cellId": "cell-four-straight-trajectories-central-occluder",
+      "split": "discovery",
+      "seed": 3900005,
+      "failureModeId": "occluded-trajectory-continuity",
+      "question": "Which numbered exit receives the disk that was GOLD at the start? Every disk continues at constant speed in a perfectly straight line behind the opaque panel.",
+      "answerOptions": [
+        "4",
+        "2",
+        "1",
+        "3"
+      ],
+      "expectedAnswer": "2",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetIdentity": 1,
+        "targetExit": 1,
+        "exitPermutation": [
+          2,
+          1,
+          0,
+          3
+        ],
+        "videoDurationMs": 9200,
+        "fps": 30,
+        "visualVariant": 5
+      }
+    },
+    {
+      "id": "ot-21682f5817bf66f1",
+      "cellId": "cell-four-straight-trajectories-central-occluder",
+      "split": "discovery",
+      "seed": 3900006,
+      "failureModeId": "occluded-trajectory-continuity",
+      "question": "Which numbered exit receives the disk that was GOLD at the start? Every disk continues at constant speed in a perfectly straight line behind the opaque panel.",
+      "answerOptions": [
+        "2",
+        "4",
+        "1",
+        "3"
+      ],
+      "expectedAnswer": "3",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetIdentity": 2,
+        "targetExit": 2,
+        "exitPermutation": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "videoDurationMs": 9200,
+        "fps": 30,
+        "visualVariant": 6
+      }
+    },
+    {
+      "id": "ot-cfb6510d8c193dad",
+      "cellId": "cell-four-straight-trajectories-central-occluder",
+      "split": "discovery",
+      "seed": 3900007,
+      "failureModeId": "occluded-trajectory-continuity",
+      "question": "Which numbered exit receives the disk that was GOLD at the start? Every disk continues at constant speed in a perfectly straight line behind the opaque panel.",
+      "answerOptions": [
+        "4",
+        "1",
+        "2",
+        "3"
+      ],
+      "expectedAnswer": "4",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetIdentity": 3,
+        "targetExit": 3,
+        "exitPermutation": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "videoDurationMs": 9200,
+        "fps": 30,
+        "visualVariant": 7
+      }
+    }
+  ]
+}

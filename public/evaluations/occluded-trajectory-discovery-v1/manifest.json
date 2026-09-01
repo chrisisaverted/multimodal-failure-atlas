@@ -1,0 +1,321 @@
+{
+  "id": "occluded-trajectory-discovery-v1",
+  "planSha256": "3b8336cd49ad0e65cadfe452e5c6850a4bfe9b3b92a1add0d4516d5ecb9af4fe",
+  "generatorVersion": "occluded-trajectory-continuity-v1",
+  "renderer": "occluded-trajectory-svg-raster-v1",
+  "fps": 30,
+  "cases": [
+    {
+      "candidateId": "ot-c9e67f1c8bf33c8c",
+      "cellId": "cell-four-straight-trajectories-central-occluder",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four straight trajectories cross behind one opaque region after the target loses its identifying color.",
+      "failureModeId": "occluded-trajectory-continuity",
+      "generator": "occluded-trajectory",
+      "seed": 3900000,
+      "difficulty": 79,
+      "variant": 0,
+      "artifact": "public/evaluations/occluded-trajectory-discovery-v1/ot-c9e67f1c8bf33c8c.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 9200,
+      "question": "Which numbered exit receives the disk that was GOLD at the start? Every disk continues at constant speed in a perfectly straight line behind the opaque panel.",
+      "answerOptions": [
+        "2",
+        "1",
+        "4",
+        "3"
+      ],
+      "expectedAnswer": "1",
+      "sha256": "493791f4faa11b4aec4e750ba41bca5f9a8764b17dbaf3f26bf549ad1197cac0",
+      "parameters": {
+        "targetIdentity": 0,
+        "targetExit": 0,
+        "exitPermutation": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "videoDurationMs": 9200,
+        "fps": 30,
+        "visualVariant": 0
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Use constant straight-line motion to preserve the originally gold disk's identity through the occluder. Return exactly one exit number."
+    },
+    {
+      "candidateId": "ot-979922e1aa041f9d",
+      "cellId": "cell-four-straight-trajectories-central-occluder",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four straight trajectories cross behind one opaque region after the target loses its identifying color.",
+      "failureModeId": "occluded-trajectory-continuity",
+      "generator": "occluded-trajectory",
+      "seed": 3900001,
+      "difficulty": 79,
+      "variant": 1,
+      "artifact": "public/evaluations/occluded-trajectory-discovery-v1/ot-979922e1aa041f9d.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 9200,
+      "question": "Which numbered exit receives the disk that was GOLD at the start? Every disk continues at constant speed in a perfectly straight line behind the opaque panel.",
+      "answerOptions": [
+        "2",
+        "1",
+        "4",
+        "3"
+      ],
+      "expectedAnswer": "2",
+      "sha256": "44908b03fd59a8e38fc4d3880650bd384c281aaf2980719fd9e18ccbca45a0df",
+      "parameters": {
+        "targetIdentity": 1,
+        "targetExit": 1,
+        "exitPermutation": [
+          2,
+          1,
+          0,
+          3
+        ],
+        "videoDurationMs": 9200,
+        "fps": 30,
+        "visualVariant": 1
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Use constant straight-line motion to preserve the originally gold disk's identity through the occluder. Return exactly one exit number."
+    },
+    {
+      "candidateId": "ot-e87778469a831d6b",
+      "cellId": "cell-four-straight-trajectories-central-occluder",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four straight trajectories cross behind one opaque region after the target loses its identifying color.",
+      "failureModeId": "occluded-trajectory-continuity",
+      "generator": "occluded-trajectory",
+      "seed": 3900002,
+      "difficulty": 79,
+      "variant": 2,
+      "artifact": "public/evaluations/occluded-trajectory-discovery-v1/ot-e87778469a831d6b.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 9200,
+      "question": "Which numbered exit receives the disk that was GOLD at the start? Every disk continues at constant speed in a perfectly straight line behind the opaque panel.",
+      "answerOptions": [
+        "1",
+        "2",
+        "4",
+        "3"
+      ],
+      "expectedAnswer": "3",
+      "sha256": "69825691738f43f4c49605a8537e2db9f264113404a6e3aedee06cceeff61358",
+      "parameters": {
+        "targetIdentity": 2,
+        "targetExit": 2,
+        "exitPermutation": [
+          1,
+          0,
+          2,
+          3
+        ],
+        "videoDurationMs": 9200,
+        "fps": 30,
+        "visualVariant": 2
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Use constant straight-line motion to preserve the originally gold disk's identity through the occluder. Return exactly one exit number."
+    },
+    {
+      "candidateId": "ot-a16402e9dbd722d8",
+      "cellId": "cell-four-straight-trajectories-central-occluder",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four straight trajectories cross behind one opaque region after the target loses its identifying color.",
+      "failureModeId": "occluded-trajectory-continuity",
+      "generator": "occluded-trajectory",
+      "seed": 3900003,
+      "difficulty": 79,
+      "variant": 3,
+      "artifact": "public/evaluations/occluded-trajectory-discovery-v1/ot-a16402e9dbd722d8.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 9200,
+      "question": "Which numbered exit receives the disk that was GOLD at the start? Every disk continues at constant speed in a perfectly straight line behind the opaque panel.",
+      "answerOptions": [
+        "2",
+        "4",
+        "1",
+        "3"
+      ],
+      "expectedAnswer": "4",
+      "sha256": "4e1c7d110dddede1a30f5d7ec94e8102acb47087bc1a8719dd21b309174b9edc",
+      "parameters": {
+        "targetIdentity": 3,
+        "targetExit": 3,
+        "exitPermutation": [
+          1,
+          0,
+          2,
+          3
+        ],
+        "videoDurationMs": 9200,
+        "fps": 30,
+        "visualVariant": 3
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Use constant straight-line motion to preserve the originally gold disk's identity through the occluder. Return exactly one exit number."
+    },
+    {
+      "candidateId": "ot-ea901e1b83973b5c",
+      "cellId": "cell-four-straight-trajectories-central-occluder",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four straight trajectories cross behind one opaque region after the target loses its identifying color.",
+      "failureModeId": "occluded-trajectory-continuity",
+      "generator": "occluded-trajectory",
+      "seed": 3900004,
+      "difficulty": 79,
+      "variant": 4,
+      "artifact": "public/evaluations/occluded-trajectory-discovery-v1/ot-ea901e1b83973b5c.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 9200,
+      "question": "Which numbered exit receives the disk that was GOLD at the start? Every disk continues at constant speed in a perfectly straight line behind the opaque panel.",
+      "answerOptions": [
+        "2",
+        "4",
+        "1",
+        "3"
+      ],
+      "expectedAnswer": "1",
+      "sha256": "0b3ff7c8d8b6d5c360d963251c22f70eba232274d00f368d16ae3146a727f5db",
+      "parameters": {
+        "targetIdentity": 0,
+        "targetExit": 0,
+        "exitPermutation": [
+          0,
+          2,
+          1,
+          3
+        ],
+        "videoDurationMs": 9200,
+        "fps": 30,
+        "visualVariant": 4
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Use constant straight-line motion to preserve the originally gold disk's identity through the occluder. Return exactly one exit number."
+    },
+    {
+      "candidateId": "ot-9990d80e33b46cd7",
+      "cellId": "cell-four-straight-trajectories-central-occluder",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four straight trajectories cross behind one opaque region after the target loses its identifying color.",
+      "failureModeId": "occluded-trajectory-continuity",
+      "generator": "occluded-trajectory",
+      "seed": 3900005,
+      "difficulty": 79,
+      "variant": 5,
+      "artifact": "public/evaluations/occluded-trajectory-discovery-v1/ot-9990d80e33b46cd7.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 9200,
+      "question": "Which numbered exit receives the disk that was GOLD at the start? Every disk continues at constant speed in a perfectly straight line behind the opaque panel.",
+      "answerOptions": [
+        "4",
+        "2",
+        "1",
+        "3"
+      ],
+      "expectedAnswer": "2",
+      "sha256": "44908b03fd59a8e38fc4d3880650bd384c281aaf2980719fd9e18ccbca45a0df",
+      "parameters": {
+        "targetIdentity": 1,
+        "targetExit": 1,
+        "exitPermutation": [
+          2,
+          1,
+          0,
+          3
+        ],
+        "videoDurationMs": 9200,
+        "fps": 30,
+        "visualVariant": 5
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Use constant straight-line motion to preserve the originally gold disk's identity through the occluder. Return exactly one exit number."
+    },
+    {
+      "candidateId": "ot-21682f5817bf66f1",
+      "cellId": "cell-four-straight-trajectories-central-occluder",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four straight trajectories cross behind one opaque region after the target loses its identifying color.",
+      "failureModeId": "occluded-trajectory-continuity",
+      "generator": "occluded-trajectory",
+      "seed": 3900006,
+      "difficulty": 79,
+      "variant": 6,
+      "artifact": "public/evaluations/occluded-trajectory-discovery-v1/ot-21682f5817bf66f1.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 9200,
+      "question": "Which numbered exit receives the disk that was GOLD at the start? Every disk continues at constant speed in a perfectly straight line behind the opaque panel.",
+      "answerOptions": [
+        "2",
+        "4",
+        "1",
+        "3"
+      ],
+      "expectedAnswer": "3",
+      "sha256": "b8e15dd01d96c430ebbf51ea9bcfae8743952fe136503637943b105d301ac346",
+      "parameters": {
+        "targetIdentity": 2,
+        "targetExit": 2,
+        "exitPermutation": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "videoDurationMs": 9200,
+        "fps": 30,
+        "visualVariant": 6
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Use constant straight-line motion to preserve the originally gold disk's identity through the occluder. Return exactly one exit number."
+    },
+    {
+      "candidateId": "ot-cfb6510d8c193dad",
+      "cellId": "cell-four-straight-trajectories-central-occluder",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four straight trajectories cross behind one opaque region after the target loses its identifying color.",
+      "failureModeId": "occluded-trajectory-continuity",
+      "generator": "occluded-trajectory",
+      "seed": 3900007,
+      "difficulty": 79,
+      "variant": 7,
+      "artifact": "public/evaluations/occluded-trajectory-discovery-v1/ot-cfb6510d8c193dad.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 9200,
+      "question": "Which numbered exit receives the disk that was GOLD at the start? Every disk continues at constant speed in a perfectly straight line behind the opaque panel.",
+      "answerOptions": [
+        "4",
+        "1",
+        "2",
+        "3"
+      ],
+      "expectedAnswer": "4",
+      "sha256": "022c2669f2eb54f986d7df4f58422b5b588830aa8d4051d41a59f7afd93a6b21",
+      "parameters": {
+        "targetIdentity": 3,
+        "targetExit": 3,
+        "exitPermutation": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "videoDurationMs": 9200,
+        "fps": 30,
+        "visualVariant": 7
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Use constant straight-line motion to preserve the originally gold disk's identity through the occluder. Return exactly one exit number."
+    }
+  ]
+}
