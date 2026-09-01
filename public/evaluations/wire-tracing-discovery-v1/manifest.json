@@ -1,0 +1,505 @@
+{
+  "id": "wire-tracing-discovery-v1",
+  "planSha256": "a5fb901bd3501644f4e88ad650778a5a552b67a8ec5bebea4d7a7397351f531c",
+  "generatorVersion": "wire-tracing-v1",
+  "renderer": "wire-tracing-svg-v1",
+  "fps": 0,
+  "cases": [
+    {
+      "candidateId": "wt-e3f7af1a188618e4",
+      "cellId": "cell-eb1307002d5801ef",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four continuous same-color wires with explicit non-joining crossings.",
+      "failureModeId": "identity-through-occlusion",
+      "generator": "identity-occlusion",
+      "seed": 710000,
+      "difficulty": 36,
+      "variant": 0,
+      "artifact": "public/evaluations/wire-tracing-discovery-v1/wt-e3f7af1a188618e4.png",
+      "mimeType": "image/png",
+      "question": "Starting at wire A, which symbol does that same wire reach?",
+      "answerOptions": [
+        "circle",
+        "triangle",
+        "square",
+        "star"
+      ],
+      "expectedAnswer": "circle",
+      "sha256": "7c958ea07752c77d250dff29994d425fcf2e4e63e544f783d4b97cc96b86fa48",
+      "parameters": {
+        "crossings": 8,
+        "sourceWire": 0,
+        "targetEndpoint": 0,
+        "visualVariant": 5
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "This is an exact visual path-tracing diagnostic. Follow the requested continuous wire through every crossing and return exactly one allowed endpoint symbol without explanation."
+    },
+    {
+      "candidateId": "wt-8b636cfdea3ad485",
+      "cellId": "cell-eb1307002d5801ef",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four continuous same-color wires with explicit non-joining crossings.",
+      "failureModeId": "identity-through-occlusion",
+      "generator": "identity-occlusion",
+      "seed": 710001,
+      "difficulty": 36,
+      "variant": 1,
+      "artifact": "public/evaluations/wire-tracing-discovery-v1/wt-8b636cfdea3ad485.png",
+      "mimeType": "image/png",
+      "question": "Starting at wire B, which symbol does that same wire reach?",
+      "answerOptions": [
+        "triangle",
+        "square",
+        "star",
+        "circle"
+      ],
+      "expectedAnswer": "triangle",
+      "sha256": "074befa26251665f21c354e4e09bd528d23bd58224e0eed2cd676e558eea0031",
+      "parameters": {
+        "crossings": 8,
+        "sourceWire": 1,
+        "targetEndpoint": 1,
+        "visualVariant": 6
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "This is an exact visual path-tracing diagnostic. Follow the requested continuous wire through every crossing and return exactly one allowed endpoint symbol without explanation."
+    },
+    {
+      "candidateId": "wt-296a642326a42508",
+      "cellId": "cell-eb1307002d5801ef",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four continuous same-color wires with explicit non-joining crossings.",
+      "failureModeId": "identity-through-occlusion",
+      "generator": "identity-occlusion",
+      "seed": 710002,
+      "difficulty": 36,
+      "variant": 2,
+      "artifact": "public/evaluations/wire-tracing-discovery-v1/wt-296a642326a42508.png",
+      "mimeType": "image/png",
+      "question": "Starting at wire C, which symbol does that same wire reach?",
+      "answerOptions": [
+        "square",
+        "star",
+        "circle",
+        "triangle"
+      ],
+      "expectedAnswer": "square",
+      "sha256": "8d247f2c62ff6973e182945ec5cdec979fa3cfae46618b2636aff73122ea0919",
+      "parameters": {
+        "crossings": 8,
+        "sourceWire": 2,
+        "targetEndpoint": 2,
+        "visualVariant": 7
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "This is an exact visual path-tracing diagnostic. Follow the requested continuous wire through every crossing and return exactly one allowed endpoint symbol without explanation."
+    },
+    {
+      "candidateId": "wt-f3f328bffcd755d4",
+      "cellId": "cell-eb1307002d5801ef",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four continuous same-color wires with explicit non-joining crossings.",
+      "failureModeId": "identity-through-occlusion",
+      "generator": "identity-occlusion",
+      "seed": 710003,
+      "difficulty": 36,
+      "variant": 3,
+      "artifact": "public/evaluations/wire-tracing-discovery-v1/wt-f3f328bffcd755d4.png",
+      "mimeType": "image/png",
+      "question": "Starting at wire D, which symbol does that same wire reach?",
+      "answerOptions": [
+        "star",
+        "circle",
+        "triangle",
+        "square"
+      ],
+      "expectedAnswer": "star",
+      "sha256": "2f0f6f91ba7585873b0081de3fc496bb3087bd153e522873dab3f777b0dfaa2c",
+      "parameters": {
+        "crossings": 8,
+        "sourceWire": 3,
+        "targetEndpoint": 3,
+        "visualVariant": 8
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "This is an exact visual path-tracing diagnostic. Follow the requested continuous wire through every crossing and return exactly one allowed endpoint symbol without explanation."
+    },
+    {
+      "candidateId": "wt-6e178837947f4b87",
+      "cellId": "cell-1ca467d8de25de8f",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four continuous same-color wires with explicit non-joining crossings.",
+      "failureModeId": "identity-through-occlusion",
+      "generator": "identity-occlusion",
+      "seed": 710004,
+      "difficulty": 52,
+      "variant": 4,
+      "artifact": "public/evaluations/wire-tracing-discovery-v1/wt-6e178837947f4b87.png",
+      "mimeType": "image/png",
+      "question": "Starting at wire A, which symbol does that same wire reach?",
+      "answerOptions": [
+        "circle",
+        "triangle",
+        "square",
+        "star"
+      ],
+      "expectedAnswer": "circle",
+      "sha256": "77594c541ec468e2c2ad22639b2aa58efe354d2b9ca70d56762d615636df1752",
+      "parameters": {
+        "crossings": 16,
+        "sourceWire": 0,
+        "targetEndpoint": 0,
+        "visualVariant": 9
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "This is an exact visual path-tracing diagnostic. Follow the requested continuous wire through every crossing and return exactly one allowed endpoint symbol without explanation."
+    },
+    {
+      "candidateId": "wt-b56f24739daae755",
+      "cellId": "cell-1ca467d8de25de8f",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four continuous same-color wires with explicit non-joining crossings.",
+      "failureModeId": "identity-through-occlusion",
+      "generator": "identity-occlusion",
+      "seed": 710005,
+      "difficulty": 52,
+      "variant": 5,
+      "artifact": "public/evaluations/wire-tracing-discovery-v1/wt-b56f24739daae755.png",
+      "mimeType": "image/png",
+      "question": "Starting at wire B, which symbol does that same wire reach?",
+      "answerOptions": [
+        "triangle",
+        "square",
+        "star",
+        "circle"
+      ],
+      "expectedAnswer": "triangle",
+      "sha256": "f1bdbdf29f7c5a48a73fdca231a17ffda1db1d40b8a6408566832a52f5093cc6",
+      "parameters": {
+        "crossings": 16,
+        "sourceWire": 1,
+        "targetEndpoint": 1,
+        "visualVariant": 10
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "This is an exact visual path-tracing diagnostic. Follow the requested continuous wire through every crossing and return exactly one allowed endpoint symbol without explanation."
+    },
+    {
+      "candidateId": "wt-392c7a6b5f29b902",
+      "cellId": "cell-1ca467d8de25de8f",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four continuous same-color wires with explicit non-joining crossings.",
+      "failureModeId": "identity-through-occlusion",
+      "generator": "identity-occlusion",
+      "seed": 710006,
+      "difficulty": 52,
+      "variant": 6,
+      "artifact": "public/evaluations/wire-tracing-discovery-v1/wt-392c7a6b5f29b902.png",
+      "mimeType": "image/png",
+      "question": "Starting at wire C, which symbol does that same wire reach?",
+      "answerOptions": [
+        "square",
+        "star",
+        "circle",
+        "triangle"
+      ],
+      "expectedAnswer": "square",
+      "sha256": "e06491df8e787cb011c3b6203528fe4765eef58177a7cb90b6685b4893db09b4",
+      "parameters": {
+        "crossings": 16,
+        "sourceWire": 2,
+        "targetEndpoint": 2,
+        "visualVariant": 11
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "This is an exact visual path-tracing diagnostic. Follow the requested continuous wire through every crossing and return exactly one allowed endpoint symbol without explanation."
+    },
+    {
+      "candidateId": "wt-6b9ab92d83bcf429",
+      "cellId": "cell-1ca467d8de25de8f",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four continuous same-color wires with explicit non-joining crossings.",
+      "failureModeId": "identity-through-occlusion",
+      "generator": "identity-occlusion",
+      "seed": 710007,
+      "difficulty": 52,
+      "variant": 7,
+      "artifact": "public/evaluations/wire-tracing-discovery-v1/wt-6b9ab92d83bcf429.png",
+      "mimeType": "image/png",
+      "question": "Starting at wire D, which symbol does that same wire reach?",
+      "answerOptions": [
+        "star",
+        "circle",
+        "triangle",
+        "square"
+      ],
+      "expectedAnswer": "star",
+      "sha256": "b2664627ff480f7fae4583be39b66120aa9b5b1a1451932b8e132087d93e11e2",
+      "parameters": {
+        "crossings": 16,
+        "sourceWire": 3,
+        "targetEndpoint": 3,
+        "visualVariant": 12
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "This is an exact visual path-tracing diagnostic. Follow the requested continuous wire through every crossing and return exactly one allowed endpoint symbol without explanation."
+    },
+    {
+      "candidateId": "wt-f222f60a355cfbe1",
+      "cellId": "cell-f29725f1f6d8fd11",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four continuous same-color wires with explicit non-joining crossings.",
+      "failureModeId": "identity-through-occlusion",
+      "generator": "identity-occlusion",
+      "seed": 710008,
+      "difficulty": 76,
+      "variant": 8,
+      "artifact": "public/evaluations/wire-tracing-discovery-v1/wt-f222f60a355cfbe1.png",
+      "mimeType": "image/png",
+      "question": "Starting at wire A, which symbol does that same wire reach?",
+      "answerOptions": [
+        "circle",
+        "triangle",
+        "square",
+        "star"
+      ],
+      "expectedAnswer": "circle",
+      "sha256": "db121d0d65db9d37b774b672d16300fa7cb61f49c88b072efd283cccc3b8f9e7",
+      "parameters": {
+        "crossings": 28,
+        "sourceWire": 0,
+        "targetEndpoint": 0,
+        "visualVariant": 0
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "This is an exact visual path-tracing diagnostic. Follow the requested continuous wire through every crossing and return exactly one allowed endpoint symbol without explanation."
+    },
+    {
+      "candidateId": "wt-6b3956da8c0c02bf",
+      "cellId": "cell-f29725f1f6d8fd11",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four continuous same-color wires with explicit non-joining crossings.",
+      "failureModeId": "identity-through-occlusion",
+      "generator": "identity-occlusion",
+      "seed": 710009,
+      "difficulty": 76,
+      "variant": 9,
+      "artifact": "public/evaluations/wire-tracing-discovery-v1/wt-6b3956da8c0c02bf.png",
+      "mimeType": "image/png",
+      "question": "Starting at wire B, which symbol does that same wire reach?",
+      "answerOptions": [
+        "triangle",
+        "square",
+        "star",
+        "circle"
+      ],
+      "expectedAnswer": "triangle",
+      "sha256": "0869d422a7b30f8080f1e4428d36189a522aa39eebd8b947f3319fbfb3a83304",
+      "parameters": {
+        "crossings": 28,
+        "sourceWire": 1,
+        "targetEndpoint": 1,
+        "visualVariant": 1
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "This is an exact visual path-tracing diagnostic. Follow the requested continuous wire through every crossing and return exactly one allowed endpoint symbol without explanation."
+    },
+    {
+      "candidateId": "wt-367527f26018d74c",
+      "cellId": "cell-f29725f1f6d8fd11",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four continuous same-color wires with explicit non-joining crossings.",
+      "failureModeId": "identity-through-occlusion",
+      "generator": "identity-occlusion",
+      "seed": 710010,
+      "difficulty": 76,
+      "variant": 10,
+      "artifact": "public/evaluations/wire-tracing-discovery-v1/wt-367527f26018d74c.png",
+      "mimeType": "image/png",
+      "question": "Starting at wire C, which symbol does that same wire reach?",
+      "answerOptions": [
+        "square",
+        "star",
+        "circle",
+        "triangle"
+      ],
+      "expectedAnswer": "square",
+      "sha256": "ec8beebf8321dfeb6945a40b1b215495f31c13027390a433f203eac6a063bfb2",
+      "parameters": {
+        "crossings": 28,
+        "sourceWire": 2,
+        "targetEndpoint": 2,
+        "visualVariant": 2
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "This is an exact visual path-tracing diagnostic. Follow the requested continuous wire through every crossing and return exactly one allowed endpoint symbol without explanation."
+    },
+    {
+      "candidateId": "wt-1ddd0997a0eb5c46",
+      "cellId": "cell-f29725f1f6d8fd11",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four continuous same-color wires with explicit non-joining crossings.",
+      "failureModeId": "identity-through-occlusion",
+      "generator": "identity-occlusion",
+      "seed": 710011,
+      "difficulty": 76,
+      "variant": 11,
+      "artifact": "public/evaluations/wire-tracing-discovery-v1/wt-1ddd0997a0eb5c46.png",
+      "mimeType": "image/png",
+      "question": "Starting at wire D, which symbol does that same wire reach?",
+      "answerOptions": [
+        "star",
+        "circle",
+        "triangle",
+        "square"
+      ],
+      "expectedAnswer": "star",
+      "sha256": "0ca213bce7a06c24cc17ef94a8294ef48552a8e9603536d7e302dc4f50d8c54a",
+      "parameters": {
+        "crossings": 28,
+        "sourceWire": 3,
+        "targetEndpoint": 3,
+        "visualVariant": 3
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "This is an exact visual path-tracing diagnostic. Follow the requested continuous wire through every crossing and return exactly one allowed endpoint symbol without explanation."
+    },
+    {
+      "candidateId": "wt-ba8df8227a4cb317",
+      "cellId": "cell-14abfd7b512488d5",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four continuous same-color wires with explicit non-joining crossings.",
+      "failureModeId": "identity-through-occlusion",
+      "generator": "identity-occlusion",
+      "seed": 710012,
+      "difficulty": 100,
+      "variant": 12,
+      "artifact": "public/evaluations/wire-tracing-discovery-v1/wt-ba8df8227a4cb317.png",
+      "mimeType": "image/png",
+      "question": "Starting at wire A, which symbol does that same wire reach?",
+      "answerOptions": [
+        "circle",
+        "triangle",
+        "square",
+        "star"
+      ],
+      "expectedAnswer": "circle",
+      "sha256": "a059cc411b5475b059b977da51a6c27d56a50497247b88be08be538534433107",
+      "parameters": {
+        "crossings": 40,
+        "sourceWire": 0,
+        "targetEndpoint": 0,
+        "visualVariant": 4
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "This is an exact visual path-tracing diagnostic. Follow the requested continuous wire through every crossing and return exactly one allowed endpoint symbol without explanation."
+    },
+    {
+      "candidateId": "wt-96575deb26ffeb4e",
+      "cellId": "cell-14abfd7b512488d5",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four continuous same-color wires with explicit non-joining crossings.",
+      "failureModeId": "identity-through-occlusion",
+      "generator": "identity-occlusion",
+      "seed": 710013,
+      "difficulty": 100,
+      "variant": 13,
+      "artifact": "public/evaluations/wire-tracing-discovery-v1/wt-96575deb26ffeb4e.png",
+      "mimeType": "image/png",
+      "question": "Starting at wire B, which symbol does that same wire reach?",
+      "answerOptions": [
+        "triangle",
+        "square",
+        "star",
+        "circle"
+      ],
+      "expectedAnswer": "triangle",
+      "sha256": "f155b3ae9b16940f8e0b10c14def07ad348d3b46b624699830c84f9deed2e3c4",
+      "parameters": {
+        "crossings": 40,
+        "sourceWire": 1,
+        "targetEndpoint": 1,
+        "visualVariant": 5
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "This is an exact visual path-tracing diagnostic. Follow the requested continuous wire through every crossing and return exactly one allowed endpoint symbol without explanation."
+    },
+    {
+      "candidateId": "wt-60cdf71f2a41b13d",
+      "cellId": "cell-14abfd7b512488d5",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four continuous same-color wires with explicit non-joining crossings.",
+      "failureModeId": "identity-through-occlusion",
+      "generator": "identity-occlusion",
+      "seed": 710014,
+      "difficulty": 100,
+      "variant": 14,
+      "artifact": "public/evaluations/wire-tracing-discovery-v1/wt-60cdf71f2a41b13d.png",
+      "mimeType": "image/png",
+      "question": "Starting at wire C, which symbol does that same wire reach?",
+      "answerOptions": [
+        "square",
+        "star",
+        "circle",
+        "triangle"
+      ],
+      "expectedAnswer": "square",
+      "sha256": "41b7cc8e74cb832ef77b1cf2d2d3d28987f97cced2907799d07778c2b7ba0274",
+      "parameters": {
+        "crossings": 40,
+        "sourceWire": 2,
+        "targetEndpoint": 2,
+        "visualVariant": 6
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "This is an exact visual path-tracing diagnostic. Follow the requested continuous wire through every crossing and return exactly one allowed endpoint symbol without explanation."
+    },
+    {
+      "candidateId": "wt-ce87cc14bd83c5ba",
+      "cellId": "cell-14abfd7b512488d5",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four continuous same-color wires with explicit non-joining crossings.",
+      "failureModeId": "identity-through-occlusion",
+      "generator": "identity-occlusion",
+      "seed": 710015,
+      "difficulty": 100,
+      "variant": 15,
+      "artifact": "public/evaluations/wire-tracing-discovery-v1/wt-ce87cc14bd83c5ba.png",
+      "mimeType": "image/png",
+      "question": "Starting at wire D, which symbol does that same wire reach?",
+      "answerOptions": [
+        "star",
+        "circle",
+        "triangle",
+        "square"
+      ],
+      "expectedAnswer": "star",
+      "sha256": "4bb25776aa46825c34784497163a4afdb7143b35dc56ae1b7c4fcfbac9db654b",
+      "parameters": {
+        "crossings": 40,
+        "sourceWire": 3,
+        "targetEndpoint": 3,
+        "visualVariant": 7
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "This is an exact visual path-tracing diagnostic. Follow the requested continuous wire through every crossing and return exactly one allowed endpoint symbol without explanation."
+    }
+  ]
+}

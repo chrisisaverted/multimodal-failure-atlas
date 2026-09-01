@@ -1,0 +1,360 @@
+{
+  "id": "wire-tracing-discovery-v1",
+  "generatorVersion": "wire-tracing-v1",
+  "status": "discovery-only",
+  "hypothesis": "Identity tracking across repeated visual crossings degrades before human traceability does.",
+  "candidates": [
+    {
+      "id": "wt-e3f7af1a188618e4",
+      "cellId": "cell-eb1307002d5801ef",
+      "split": "discovery",
+      "seed": 710000,
+      "failureModeId": "identity-through-occlusion",
+      "question": "Starting at wire A, which symbol does that same wire reach?",
+      "answerOptions": [
+        "circle",
+        "triangle",
+        "square",
+        "star"
+      ],
+      "expectedAnswer": "circle",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "crossings": 8,
+        "sourceWire": 0,
+        "targetEndpoint": 0,
+        "visualVariant": 5
+      }
+    },
+    {
+      "id": "wt-8b636cfdea3ad485",
+      "cellId": "cell-eb1307002d5801ef",
+      "split": "discovery",
+      "seed": 710001,
+      "failureModeId": "identity-through-occlusion",
+      "question": "Starting at wire B, which symbol does that same wire reach?",
+      "answerOptions": [
+        "triangle",
+        "square",
+        "star",
+        "circle"
+      ],
+      "expectedAnswer": "triangle",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "crossings": 8,
+        "sourceWire": 1,
+        "targetEndpoint": 1,
+        "visualVariant": 6
+      }
+    },
+    {
+      "id": "wt-296a642326a42508",
+      "cellId": "cell-eb1307002d5801ef",
+      "split": "discovery",
+      "seed": 710002,
+      "failureModeId": "identity-through-occlusion",
+      "question": "Starting at wire C, which symbol does that same wire reach?",
+      "answerOptions": [
+        "square",
+        "star",
+        "circle",
+        "triangle"
+      ],
+      "expectedAnswer": "square",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "crossings": 8,
+        "sourceWire": 2,
+        "targetEndpoint": 2,
+        "visualVariant": 7
+      }
+    },
+    {
+      "id": "wt-f3f328bffcd755d4",
+      "cellId": "cell-eb1307002d5801ef",
+      "split": "discovery",
+      "seed": 710003,
+      "failureModeId": "identity-through-occlusion",
+      "question": "Starting at wire D, which symbol does that same wire reach?",
+      "answerOptions": [
+        "star",
+        "circle",
+        "triangle",
+        "square"
+      ],
+      "expectedAnswer": "star",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "crossings": 8,
+        "sourceWire": 3,
+        "targetEndpoint": 3,
+        "visualVariant": 8
+      }
+    },
+    {
+      "id": "wt-6e178837947f4b87",
+      "cellId": "cell-1ca467d8de25de8f",
+      "split": "discovery",
+      "seed": 710004,
+      "failureModeId": "identity-through-occlusion",
+      "question": "Starting at wire A, which symbol does that same wire reach?",
+      "answerOptions": [
+        "circle",
+        "triangle",
+        "square",
+        "star"
+      ],
+      "expectedAnswer": "circle",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "crossings": 16,
+        "sourceWire": 0,
+        "targetEndpoint": 0,
+        "visualVariant": 9
+      }
+    },
+    {
+      "id": "wt-b56f24739daae755",
+      "cellId": "cell-1ca467d8de25de8f",
+      "split": "discovery",
+      "seed": 710005,
+      "failureModeId": "identity-through-occlusion",
+      "question": "Starting at wire B, which symbol does that same wire reach?",
+      "answerOptions": [
+        "triangle",
+        "square",
+        "star",
+        "circle"
+      ],
+      "expectedAnswer": "triangle",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "crossings": 16,
+        "sourceWire": 1,
+        "targetEndpoint": 1,
+        "visualVariant": 10
+      }
+    },
+    {
+      "id": "wt-392c7a6b5f29b902",
+      "cellId": "cell-1ca467d8de25de8f",
+      "split": "discovery",
+      "seed": 710006,
+      "failureModeId": "identity-through-occlusion",
+      "question": "Starting at wire C, which symbol does that same wire reach?",
+      "answerOptions": [
+        "square",
+        "star",
+        "circle",
+        "triangle"
+      ],
+      "expectedAnswer": "square",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "crossings": 16,
+        "sourceWire": 2,
+        "targetEndpoint": 2,
+        "visualVariant": 11
+      }
+    },
+    {
+      "id": "wt-6b9ab92d83bcf429",
+      "cellId": "cell-1ca467d8de25de8f",
+      "split": "discovery",
+      "seed": 710007,
+      "failureModeId": "identity-through-occlusion",
+      "question": "Starting at wire D, which symbol does that same wire reach?",
+      "answerOptions": [
+        "star",
+        "circle",
+        "triangle",
+        "square"
+      ],
+      "expectedAnswer": "star",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "crossings": 16,
+        "sourceWire": 3,
+        "targetEndpoint": 3,
+        "visualVariant": 12
+      }
+    },
+    {
+      "id": "wt-f222f60a355cfbe1",
+      "cellId": "cell-f29725f1f6d8fd11",
+      "split": "discovery",
+      "seed": 710008,
+      "failureModeId": "identity-through-occlusion",
+      "question": "Starting at wire A, which symbol does that same wire reach?",
+      "answerOptions": [
+        "circle",
+        "triangle",
+        "square",
+        "star"
+      ],
+      "expectedAnswer": "circle",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "crossings": 28,
+        "sourceWire": 0,
+        "targetEndpoint": 0,
+        "visualVariant": 0
+      }
+    },
+    {
+      "id": "wt-6b3956da8c0c02bf",
+      "cellId": "cell-f29725f1f6d8fd11",
+      "split": "discovery",
+      "seed": 710009,
+      "failureModeId": "identity-through-occlusion",
+      "question": "Starting at wire B, which symbol does that same wire reach?",
+      "answerOptions": [
+        "triangle",
+        "square",
+        "star",
+        "circle"
+      ],
+      "expectedAnswer": "triangle",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "crossings": 28,
+        "sourceWire": 1,
+        "targetEndpoint": 1,
+        "visualVariant": 1
+      }
+    },
+    {
+      "id": "wt-367527f26018d74c",
+      "cellId": "cell-f29725f1f6d8fd11",
+      "split": "discovery",
+      "seed": 710010,
+      "failureModeId": "identity-through-occlusion",
+      "question": "Starting at wire C, which symbol does that same wire reach?",
+      "answerOptions": [
+        "square",
+        "star",
+        "circle",
+        "triangle"
+      ],
+      "expectedAnswer": "square",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "crossings": 28,
+        "sourceWire": 2,
+        "targetEndpoint": 2,
+        "visualVariant": 2
+      }
+    },
+    {
+      "id": "wt-1ddd0997a0eb5c46",
+      "cellId": "cell-f29725f1f6d8fd11",
+      "split": "discovery",
+      "seed": 710011,
+      "failureModeId": "identity-through-occlusion",
+      "question": "Starting at wire D, which symbol does that same wire reach?",
+      "answerOptions": [
+        "star",
+        "circle",
+        "triangle",
+        "square"
+      ],
+      "expectedAnswer": "star",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "crossings": 28,
+        "sourceWire": 3,
+        "targetEndpoint": 3,
+        "visualVariant": 3
+      }
+    },
+    {
+      "id": "wt-ba8df8227a4cb317",
+      "cellId": "cell-14abfd7b512488d5",
+      "split": "discovery",
+      "seed": 710012,
+      "failureModeId": "identity-through-occlusion",
+      "question": "Starting at wire A, which symbol does that same wire reach?",
+      "answerOptions": [
+        "circle",
+        "triangle",
+        "square",
+        "star"
+      ],
+      "expectedAnswer": "circle",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "crossings": 40,
+        "sourceWire": 0,
+        "targetEndpoint": 0,
+        "visualVariant": 4
+      }
+    },
+    {
+      "id": "wt-96575deb26ffeb4e",
+      "cellId": "cell-14abfd7b512488d5",
+      "split": "discovery",
+      "seed": 710013,
+      "failureModeId": "identity-through-occlusion",
+      "question": "Starting at wire B, which symbol does that same wire reach?",
+      "answerOptions": [
+        "triangle",
+        "square",
+        "star",
+        "circle"
+      ],
+      "expectedAnswer": "triangle",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "crossings": 40,
+        "sourceWire": 1,
+        "targetEndpoint": 1,
+        "visualVariant": 5
+      }
+    },
+    {
+      "id": "wt-60cdf71f2a41b13d",
+      "cellId": "cell-14abfd7b512488d5",
+      "split": "discovery",
+      "seed": 710014,
+      "failureModeId": "identity-through-occlusion",
+      "question": "Starting at wire C, which symbol does that same wire reach?",
+      "answerOptions": [
+        "square",
+        "star",
+        "circle",
+        "triangle"
+      ],
+      "expectedAnswer": "square",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "crossings": 40,
+        "sourceWire": 2,
+        "targetEndpoint": 2,
+        "visualVariant": 6
+      }
+    },
+    {
+      "id": "wt-ce87cc14bd83c5ba",
+      "cellId": "cell-14abfd7b512488d5",
+      "split": "discovery",
+      "seed": 710015,
+      "failureModeId": "identity-through-occlusion",
+      "question": "Starting at wire D, which symbol does that same wire reach?",
+      "answerOptions": [
+        "star",
+        "circle",
+        "triangle",
+        "square"
+      ],
+      "expectedAnswer": "star",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "crossings": 40,
+        "sourceWire": 3,
+        "targetEndpoint": 3,
+        "visualVariant": 7
+      }
+    }
+  ]
+}

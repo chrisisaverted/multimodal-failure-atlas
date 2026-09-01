@@ -21,8 +21,27 @@ import {
   generateGlyphs,
   renderCompositionalCountingSvg,
 } from "./compositional-counting";
+import {
+  createWireTracingDiscoveryGrid,
+  renderWireTracingSvg,
+  traceWireEndpoints,
+  wireAnswers,
+} from "./wire-tracing";
 
 describe("adaptive multimodal discovery", () => {
+  it("balances wire endpoints and independently traces every exact answer", () => {
+    const candidates = createWireTracingDiscoveryGrid();
+    expect(candidates).toHaveLength(16);
+    for (const cellId of new Set(candidates.map((candidate) => candidate.cellId))) {
+      expect(candidates.filter((candidate) => candidate.cellId === cellId).map((candidate) => candidate.expectedAnswer).sort()).toEqual([...wireAnswers].sort());
+    }
+    for (const candidate of candidates) {
+      const endpoint = traceWireEndpoints(candidate)[candidate.parameters.sourceWire]!;
+      expect(wireAnswers[endpoint]).toBe(candidate.expectedAnswer);
+      expect(renderWireTracingSvg(candidate)).toContain("they never join");
+    }
+  });
+
   it("builds balanced compositional-counting cells with exact deterministic ground truth", () => {
     const candidates = createCompositionalCountingDiscoveryGrid();
     expect(candidates).toHaveLength(24);
