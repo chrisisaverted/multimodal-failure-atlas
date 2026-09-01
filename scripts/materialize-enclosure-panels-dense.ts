@@ -42,7 +42,7 @@ for (const candidate of plan.candidates) {
       generator: "enclosure-panels-dense",
       seed: candidate.seed,
       difficulty: 92,
-      variant: candidate.parameters.visualVariant + (oracle ? 1000 : 0),
+      variant: (candidate.parameters.visualVariant % 400) + (oracle ? 500 : 0),
       artifact: artifact.slice(resolve(".").length + 1),
       mimeType: "image/png",
       question: candidate.question,
