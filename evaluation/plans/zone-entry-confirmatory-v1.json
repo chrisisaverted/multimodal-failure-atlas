@@ -1,0 +1,29 @@
+{
+  "id": "zone-entry-confirmatory-v1-low-reasoning-2026-09-01",
+  "resolvedAt": "2026-09-01",
+  "gateway": "OpenRouter",
+  "evaluationPlanId": "zone-entry-confirmatory-v1",
+  "evaluationPlanSha256": "ac4225837eb4ab039ee7ca20b9a13b1b580f56ae5f4b269c939c944bad771e5e",
+  "stage": "frozen-confirmatory-holdout-with-oracle-counter-control",
+  "casesPerModel": 32,
+  "trials": 1,
+  "temperature": 0,
+  "maxOutputTokens": 8192,
+  "reasoning": { "effort": "low", "exclude": true },
+  "scorer": "terminal-option-v3",
+  "allowProviderFallbacks": false,
+  "dataCollection": "deny",
+  "campaignCostCeilingUsd": 10,
+  "models": [
+    {
+      "modelId": "google/gemini-3.7-flash",
+      "modelRevision": "google/gemini-3.7-flash-20260813",
+      "upstreamProvider": "Google AI Studio"
+    },
+    {
+      "modelId": "qwen/qwen3.8-max",
+      "modelRevision": "qwen/qwen3.8-max-20260803",
+      "upstreamProvider": "Alibaba"
+    }
+  ]
+}

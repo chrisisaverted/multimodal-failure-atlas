@@ -116,6 +116,7 @@
     "generate:parity-matrix": "tsx scripts/materialize-parity-matrix.ts",
     "plan:zone-entry": "tsx scripts/plan-zone-entry.ts",
     "generate:zone-entry": "tsx scripts/materialize-zone-entry.ts",
+    "freeze:zone-entry": "tsx scripts/freeze-zone-entry.ts",
     "plan:pair-collision": "tsx scripts/plan-pair-collision.ts",
     "generate:pair-collision": "tsx scripts/materialize-pair-collision.ts",
     "plan:reversal-count": "tsx scripts/plan-reversal-count.ts",

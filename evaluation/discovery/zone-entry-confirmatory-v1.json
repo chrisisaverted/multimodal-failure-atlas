@@ -1,0 +1,333 @@
+{
+  "id": "zone-entry-confirmatory-v1",
+  "generatorVersion": "identity-conditioned-zone-entry-count-v1",
+  "status": "frozen-confirmatory-holdout-with-oracle-counter-control",
+  "frozenAt": "2026-09-01",
+  "selectedFromDiscovery": "zone-entry-discovery-v1",
+  "selectedCell": {
+    "cycles": [4, 5, 6, 7],
+    "distractorObjects": 4
+  },
+  "candidates": [
+    {
+      "id": "ze-8d3249230c4181fc",
+      "cellId": "cell-ringed-target-central-zone-entries",
+      "split": "confirmatory",
+      "seed": 4310000,
+      "failureModeId": "identity-conditioned-spatial-transition-counting",
+      "question": "How many times does the RED-RINGED target disk ENTER the gold zone? Count each outside→inside transition and ignore every other disk.",
+      "answerOptions": ["14", "8", "10", "12"],
+      "expectedAnswer": "8",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "cycles": 4,
+        "entryCount": 8,
+        "activeStartMs": 900,
+        "activeEndMs": 11400,
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 100
+      }
+    },
+    {
+      "id": "ze-3cfdb931594f3008",
+      "cellId": "cell-ringed-target-central-zone-entries",
+      "split": "confirmatory",
+      "seed": 4310001,
+      "failureModeId": "identity-conditioned-spatial-transition-counting",
+      "question": "How many times does the RED-RINGED target disk ENTER the gold zone? Count each outside→inside transition and ignore every other disk.",
+      "answerOptions": ["10", "8", "14", "12"],
+      "expectedAnswer": "10",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "cycles": 5,
+        "entryCount": 10,
+        "activeStartMs": 900,
+        "activeEndMs": 11400,
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 101
+      }
+    },
+    {
+      "id": "ze-0e9ac79a568cc199",
+      "cellId": "cell-ringed-target-central-zone-entries",
+      "split": "confirmatory",
+      "seed": 4310002,
+      "failureModeId": "identity-conditioned-spatial-transition-counting",
+      "question": "How many times does the RED-RINGED target disk ENTER the gold zone? Count each outside→inside transition and ignore every other disk.",
+      "answerOptions": ["8", "10", "14", "12"],
+      "expectedAnswer": "12",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "cycles": 6,
+        "entryCount": 12,
+        "activeStartMs": 900,
+        "activeEndMs": 11400,
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 102
+      }
+    },
+    {
+      "id": "ze-2e3e053a67fa9fe9",
+      "cellId": "cell-ringed-target-central-zone-entries",
+      "split": "confirmatory",
+      "seed": 4310003,
+      "failureModeId": "identity-conditioned-spatial-transition-counting",
+      "question": "How many times does the RED-RINGED target disk ENTER the gold zone? Count each outside→inside transition and ignore every other disk.",
+      "answerOptions": ["10", "8", "14", "12"],
+      "expectedAnswer": "14",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "cycles": 7,
+        "entryCount": 14,
+        "activeStartMs": 900,
+        "activeEndMs": 11400,
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 103
+      }
+    },
+    {
+      "id": "ze-b1dd42baaff59986",
+      "cellId": "cell-ringed-target-central-zone-entries",
+      "split": "confirmatory",
+      "seed": 4310004,
+      "failureModeId": "identity-conditioned-spatial-transition-counting",
+      "question": "How many times does the RED-RINGED target disk ENTER the gold zone? Count each outside→inside transition and ignore every other disk.",
+      "answerOptions": ["10", "8", "14", "12"],
+      "expectedAnswer": "8",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "cycles": 4,
+        "entryCount": 8,
+        "activeStartMs": 900,
+        "activeEndMs": 11400,
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 104
+      }
+    },
+    {
+      "id": "ze-eaf061fedc899842",
+      "cellId": "cell-ringed-target-central-zone-entries",
+      "split": "confirmatory",
+      "seed": 4310005,
+      "failureModeId": "identity-conditioned-spatial-transition-counting",
+      "question": "How many times does the RED-RINGED target disk ENTER the gold zone? Count each outside→inside transition and ignore every other disk.",
+      "answerOptions": ["14", "10", "8", "12"],
+      "expectedAnswer": "10",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "cycles": 5,
+        "entryCount": 10,
+        "activeStartMs": 900,
+        "activeEndMs": 11400,
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 105
+      }
+    },
+    {
+      "id": "ze-c1732b3acd7bea9c",
+      "cellId": "cell-ringed-target-central-zone-entries",
+      "split": "confirmatory",
+      "seed": 4310006,
+      "failureModeId": "identity-conditioned-spatial-transition-counting",
+      "question": "How many times does the RED-RINGED target disk ENTER the gold zone? Count each outside→inside transition and ignore every other disk.",
+      "answerOptions": ["10", "14", "8", "12"],
+      "expectedAnswer": "12",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "cycles": 6,
+        "entryCount": 12,
+        "activeStartMs": 900,
+        "activeEndMs": 11400,
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 106
+      }
+    },
+    {
+      "id": "ze-397b7c23389c7580",
+      "cellId": "cell-ringed-target-central-zone-entries",
+      "split": "confirmatory",
+      "seed": 4310007,
+      "failureModeId": "identity-conditioned-spatial-transition-counting",
+      "question": "How many times does the RED-RINGED target disk ENTER the gold zone? Count each outside→inside transition and ignore every other disk.",
+      "answerOptions": ["10", "14", "8", "12"],
+      "expectedAnswer": "14",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "cycles": 7,
+        "entryCount": 14,
+        "activeStartMs": 900,
+        "activeEndMs": 11400,
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 107
+      }
+    },
+    {
+      "id": "ze-f282d688c5cf8d72",
+      "cellId": "cell-ringed-target-central-zone-entries",
+      "split": "confirmatory",
+      "seed": 4310008,
+      "failureModeId": "identity-conditioned-spatial-transition-counting",
+      "question": "How many times does the RED-RINGED target disk ENTER the gold zone? Count each outside→inside transition and ignore every other disk.",
+      "answerOptions": ["14", "10", "8", "12"],
+      "expectedAnswer": "8",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "cycles": 4,
+        "entryCount": 8,
+        "activeStartMs": 900,
+        "activeEndMs": 11400,
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 108
+      }
+    },
+    {
+      "id": "ze-8b632d8340b46ade",
+      "cellId": "cell-ringed-target-central-zone-entries",
+      "split": "confirmatory",
+      "seed": 4310009,
+      "failureModeId": "identity-conditioned-spatial-transition-counting",
+      "question": "How many times does the RED-RINGED target disk ENTER the gold zone? Count each outside→inside transition and ignore every other disk.",
+      "answerOptions": ["8", "14", "10", "12"],
+      "expectedAnswer": "10",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "cycles": 5,
+        "entryCount": 10,
+        "activeStartMs": 900,
+        "activeEndMs": 11400,
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 109
+      }
+    },
+    {
+      "id": "ze-a468f8f2a5eb5b04",
+      "cellId": "cell-ringed-target-central-zone-entries",
+      "split": "confirmatory",
+      "seed": 4310010,
+      "failureModeId": "identity-conditioned-spatial-transition-counting",
+      "question": "How many times does the RED-RINGED target disk ENTER the gold zone? Count each outside→inside transition and ignore every other disk.",
+      "answerOptions": ["14", "8", "10", "12"],
+      "expectedAnswer": "12",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "cycles": 6,
+        "entryCount": 12,
+        "activeStartMs": 900,
+        "activeEndMs": 11400,
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 110
+      }
+    },
+    {
+      "id": "ze-6d09af3e5851235b",
+      "cellId": "cell-ringed-target-central-zone-entries",
+      "split": "confirmatory",
+      "seed": 4310011,
+      "failureModeId": "identity-conditioned-spatial-transition-counting",
+      "question": "How many times does the RED-RINGED target disk ENTER the gold zone? Count each outside→inside transition and ignore every other disk.",
+      "answerOptions": ["8", "14", "10", "12"],
+      "expectedAnswer": "14",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "cycles": 7,
+        "entryCount": 14,
+        "activeStartMs": 900,
+        "activeEndMs": 11400,
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 111
+      }
+    },
+    {
+      "id": "ze-10ec6168366f2e79",
+      "cellId": "cell-ringed-target-central-zone-entries",
+      "split": "confirmatory",
+      "seed": 4310012,
+      "failureModeId": "identity-conditioned-spatial-transition-counting",
+      "question": "How many times does the RED-RINGED target disk ENTER the gold zone? Count each outside→inside transition and ignore every other disk.",
+      "answerOptions": ["8", "10", "14", "12"],
+      "expectedAnswer": "8",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "cycles": 4,
+        "entryCount": 8,
+        "activeStartMs": 900,
+        "activeEndMs": 11400,
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 112
+      }
+    },
+    {
+      "id": "ze-586e34cf223d1bd6",
+      "cellId": "cell-ringed-target-central-zone-entries",
+      "split": "confirmatory",
+      "seed": 4310013,
+      "failureModeId": "identity-conditioned-spatial-transition-counting",
+      "question": "How many times does the RED-RINGED target disk ENTER the gold zone? Count each outside→inside transition and ignore every other disk.",
+      "answerOptions": ["10", "8", "14", "12"],
+      "expectedAnswer": "10",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "cycles": 5,
+        "entryCount": 10,
+        "activeStartMs": 900,
+        "activeEndMs": 11400,
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 113
+      }
+    },
+    {
+      "id": "ze-ec09bc879693dd1d",
+      "cellId": "cell-ringed-target-central-zone-entries",
+      "split": "confirmatory",
+      "seed": 4310014,
+      "failureModeId": "identity-conditioned-spatial-transition-counting",
+      "question": "How many times does the RED-RINGED target disk ENTER the gold zone? Count each outside→inside transition and ignore every other disk.",
+      "answerOptions": ["8", "10", "14", "12"],
+      "expectedAnswer": "12",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "cycles": 6,
+        "entryCount": 12,
+        "activeStartMs": 900,
+        "activeEndMs": 11400,
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 114
+      }
+    },
+    {
+      "id": "ze-3b2df9e45f80de54",
+      "cellId": "cell-ringed-target-central-zone-entries",
+      "split": "confirmatory",
+      "seed": 4310015,
+      "failureModeId": "identity-conditioned-spatial-transition-counting",
+      "question": "How many times does the RED-RINGED target disk ENTER the gold zone? Count each outside→inside transition and ignore every other disk.",
+      "answerOptions": ["8", "10", "14", "12"],
+      "expectedAnswer": "14",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "cycles": 7,
+        "entryCount": 14,
+        "activeStartMs": 900,
+        "activeEndMs": 11400,
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 115
+      }
+    }
+  ]
+}
