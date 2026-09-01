@@ -1,0 +1,24 @@
+{
+  "id": "route-turn-screen-v1-kimi-no-reasoning-2026-09-01",
+  "resolvedAt": "2026-09-01",
+  "gateway": "OpenRouter",
+  "evaluationPlanId": "route-turn-discovery-v1",
+  "evaluationPlanSha256": "a83ef3cfd0965615f36fbca7bd5f2018d0ed8b9e3977f3106f870cc2556c4d2e",
+  "stage": "balanced-hidden-trail-route-turn-screen",
+  "casesPerModel": 8,
+  "trials": 1,
+  "temperature": 0,
+  "maxOutputTokens": 1024,
+  "reasoning": { "effort": "none", "exclude": true },
+  "scorer": "terminal-option-v3",
+  "allowProviderFallbacks": false,
+  "dataCollection": "deny",
+  "campaignCostCeilingUsd": 6,
+  "models": [
+    {
+      "modelId": "moonshotai/kimi-k3",
+      "modelRevision": "moonshotai/kimi-k3-20260715",
+      "upstreamProvider": "Moonshot AI"
+    }
+  ]
+}

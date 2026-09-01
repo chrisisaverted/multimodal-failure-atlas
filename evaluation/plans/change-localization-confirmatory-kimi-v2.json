@@ -1,0 +1,24 @@
+{
+  "id": "change-localization-confirmatory-v2-kimi-no-reasoning-2026-09-01",
+  "resolvedAt": "2026-09-01",
+  "gateway": "OpenRouter",
+  "evaluationPlanId": "change-localization-confirmatory-v2",
+  "evaluationPlanSha256": "a48003576cd1afdab136a06f170533a921161a8f807c4d7fdf46c883d2a49a4b",
+  "stage": "frozen-confirmatory-holdout-with-oracle-control",
+  "casesPerModel": 32,
+  "trials": 1,
+  "temperature": 0,
+  "maxOutputTokens": 1024,
+  "reasoning": { "effort": "none", "exclude": true },
+  "scorer": "terminal-option-v3",
+  "allowProviderFallbacks": false,
+  "dataCollection": "deny",
+  "campaignCostCeilingUsd": 10,
+  "models": [
+    {
+      "modelId": "moonshotai/kimi-k3",
+      "modelRevision": "moonshotai/kimi-k3-20260715",
+      "upstreamProvider": "Moonshot AI"
+    }
+  ]
+}

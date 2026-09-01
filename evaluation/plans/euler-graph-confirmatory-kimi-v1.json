@@ -1,0 +1,24 @@
+{
+  "id": "euler-graph-confirmatory-v1-kimi-no-reasoning-2026-09-01",
+  "resolvedAt": "2026-09-01",
+  "gateway": "OpenRouter",
+  "evaluationPlanId": "euler-graph-confirmatory-v1",
+  "evaluationPlanSha256": "420a28c73f278871963cfd54f47ee4e10ef54de79922021763c2c98447e89f8d",
+  "stage": "frozen-confirmatory-holdout-with-oracle-ring-control",
+  "casesPerModel": 32,
+  "trials": 1,
+  "temperature": 0,
+  "maxOutputTokens": 1024,
+  "reasoning": { "effort": "none", "exclude": true },
+  "scorer": "terminal-option-v3",
+  "allowProviderFallbacks": false,
+  "dataCollection": "deny",
+  "campaignCostCeilingUsd": 10,
+  "models": [
+    {
+      "modelId": "moonshotai/kimi-k3",
+      "modelRevision": "moonshotai/kimi-k3-20260715",
+      "upstreamProvider": "Moonshot AI"
+    }
+  ]
+}

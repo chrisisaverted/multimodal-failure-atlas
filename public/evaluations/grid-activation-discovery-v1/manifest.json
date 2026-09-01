@@ -1,0 +1,243 @@
+{
+  "id": "grid-activation-discovery-v1",
+  "planSha256": "1b2eba7ae12fe7fa76fe430e950c0ab6f3e673e9f5d067d889efa3598596c972",
+  "generatorVersion": "unique-grid-activation-memory-v1",
+  "renderer": "grid-activation-svg-raster-v1",
+  "fps": 30,
+  "cases": [
+    {
+      "candidateId": "ga-3676b14f06af8ebe",
+      "cellId": "cell-twenty-four-activations-five-by-five",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Twenty-four brief activations contain repeats over a five-by-five spatial grid.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory",
+      "seed": 4800000,
+      "difficulty": 91,
+      "variant": 0,
+      "artifact": "public/evaluations/grid-activation-discovery-v1/ga-3676b14f06af8ebe.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 14400,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeated activations of the same cell count only once.",
+      "answerOptions": ["9", "8", "11", "10"],
+      "expectedAnswer": "8",
+      "sha256": "74f83f579babffdd472dd38a2f91012ab91dd87a4129d89b54a764c216007cac",
+      "parameters": {
+        "uniqueCount": 8,
+        "activations": [
+          16, 17, 12, 16, 23, 17, 9, 12, 12, 12, 17, 22, 0, 22, 9, 17, 16, 23, 22, 9, 23, 22, 0, 11
+        ],
+        "videoDurationMs": 14400,
+        "fps": 30,
+        "visualVariant": 0
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions that activate at least once and return exactly one allowed count."
+    },
+    {
+      "candidateId": "ga-250eb54e950c3b99",
+      "cellId": "cell-twenty-four-activations-five-by-five",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Twenty-four brief activations contain repeats over a five-by-five spatial grid.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory",
+      "seed": 4800001,
+      "difficulty": 91,
+      "variant": 1,
+      "artifact": "public/evaluations/grid-activation-discovery-v1/ga-250eb54e950c3b99.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 14400,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeated activations of the same cell count only once.",
+      "answerOptions": ["8", "9", "11", "10"],
+      "expectedAnswer": "9",
+      "sha256": "cba42ec93c0aaab1d0ebb756034dbd081704e604de4a77783c81e963a74eb92f",
+      "parameters": {
+        "uniqueCount": 9,
+        "activations": [
+          12, 2, 22, 22, 12, 22, 10, 16, 3, 10, 2, 23, 10, 14, 14, 12, 2, 16, 3, 10, 14, 2, 1, 22
+        ],
+        "videoDurationMs": 14400,
+        "fps": 30,
+        "visualVariant": 1
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions that activate at least once and return exactly one allowed count."
+    },
+    {
+      "candidateId": "ga-e15c7faac9f2c574",
+      "cellId": "cell-twenty-four-activations-five-by-five",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Twenty-four brief activations contain repeats over a five-by-five spatial grid.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory",
+      "seed": 4800002,
+      "difficulty": 91,
+      "variant": 2,
+      "artifact": "public/evaluations/grid-activation-discovery-v1/ga-e15c7faac9f2c574.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 14400,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeated activations of the same cell count only once.",
+      "answerOptions": ["11", "9", "8", "10"],
+      "expectedAnswer": "10",
+      "sha256": "7d36e2e4efb063a74fe50335311c51dbd555e9029e877079cc98ad45117cc742",
+      "parameters": {
+        "uniqueCount": 10,
+        "activations": [
+          7, 2, 20, 12, 6, 18, 2, 10, 20, 18, 12, 20, 10, 20, 11, 6, 12, 6, 12, 17, 15, 15, 15, 20
+        ],
+        "videoDurationMs": 14400,
+        "fps": 30,
+        "visualVariant": 2
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions that activate at least once and return exactly one allowed count."
+    },
+    {
+      "candidateId": "ga-0ac8c03d4a1fa901",
+      "cellId": "cell-twenty-four-activations-five-by-five",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Twenty-four brief activations contain repeats over a five-by-five spatial grid.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory",
+      "seed": 4800003,
+      "difficulty": 91,
+      "variant": 3,
+      "artifact": "public/evaluations/grid-activation-discovery-v1/ga-0ac8c03d4a1fa901.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 14400,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeated activations of the same cell count only once.",
+      "answerOptions": ["9", "11", "8", "10"],
+      "expectedAnswer": "11",
+      "sha256": "cf338f5e86e4d43ff3b28c00b25b48cf72a4264c425651a1b5ad344aeb9c3bf7",
+      "parameters": {
+        "uniqueCount": 11,
+        "activations": [
+          11, 23, 11, 11, 7, 19, 14, 12, 7, 14, 7, 10, 17, 23, 11, 19, 10, 23, 7, 5, 24, 12, 3, 5
+        ],
+        "videoDurationMs": 14400,
+        "fps": 30,
+        "visualVariant": 3
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions that activate at least once and return exactly one allowed count."
+    },
+    {
+      "candidateId": "ga-0128301faebca43e",
+      "cellId": "cell-twenty-four-activations-five-by-five",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Twenty-four brief activations contain repeats over a five-by-five spatial grid.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory",
+      "seed": 4800004,
+      "difficulty": 91,
+      "variant": 4,
+      "artifact": "public/evaluations/grid-activation-discovery-v1/ga-0128301faebca43e.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 14400,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeated activations of the same cell count only once.",
+      "answerOptions": ["9", "11", "8", "10"],
+      "expectedAnswer": "8",
+      "sha256": "9152eeabd7570c07cafd35eaecd837c062f53a0424b23e1c22f45cac5e5461ac",
+      "parameters": {
+        "uniqueCount": 8,
+        "activations": [
+          6, 17, 10, 6, 15, 5, 17, 22, 17, 11, 10, 15, 11, 10, 22, 22, 6, 18, 6, 18, 11, 18, 11, 22
+        ],
+        "videoDurationMs": 14400,
+        "fps": 30,
+        "visualVariant": 4
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions that activate at least once and return exactly one allowed count."
+    },
+    {
+      "candidateId": "ga-c32824d3bebc745c",
+      "cellId": "cell-twenty-four-activations-five-by-five",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Twenty-four brief activations contain repeats over a five-by-five spatial grid.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory",
+      "seed": 4800005,
+      "difficulty": 91,
+      "variant": 5,
+      "artifact": "public/evaluations/grid-activation-discovery-v1/ga-c32824d3bebc745c.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 14400,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeated activations of the same cell count only once.",
+      "answerOptions": ["8", "11", "9", "10"],
+      "expectedAnswer": "9",
+      "sha256": "7bc64b05f9ec70f20d0d0db7668970dd3203c1e6299cfe6f59644f335bbd9bce",
+      "parameters": {
+        "uniqueCount": 9,
+        "activations": [4, 4, 21, 15, 9, 9, 12, 0, 2, 12, 2, 0, 2, 12, 2, 21, 16, 20, 4, 9, 20, 0, 12, 15],
+        "videoDurationMs": 14400,
+        "fps": 30,
+        "visualVariant": 5
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions that activate at least once and return exactly one allowed count."
+    },
+    {
+      "candidateId": "ga-6f810141b155a050",
+      "cellId": "cell-twenty-four-activations-five-by-five",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Twenty-four brief activations contain repeats over a five-by-five spatial grid.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory",
+      "seed": 4800006,
+      "difficulty": 91,
+      "variant": 6,
+      "artifact": "public/evaluations/grid-activation-discovery-v1/ga-6f810141b155a050.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 14400,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeated activations of the same cell count only once.",
+      "answerOptions": ["11", "8", "9", "10"],
+      "expectedAnswer": "10",
+      "sha256": "f6bb13d51b07ec12b816cae5d953b1571feaea3766ca5a3a46f220bac90e9f19",
+      "parameters": {
+        "uniqueCount": 10,
+        "activations": [0, 4, 22, 8, 16, 0, 0, 22, 4, 6, 4, 2, 2, 16, 6, 22, 0, 5, 8, 12, 24, 2, 22, 12],
+        "videoDurationMs": 14400,
+        "fps": 30,
+        "visualVariant": 6
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions that activate at least once and return exactly one allowed count."
+    },
+    {
+      "candidateId": "ga-c37820b623e39ad3",
+      "cellId": "cell-twenty-four-activations-five-by-five",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Twenty-four brief activations contain repeats over a five-by-five spatial grid.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory",
+      "seed": 4800007,
+      "difficulty": 91,
+      "variant": 7,
+      "artifact": "public/evaluations/grid-activation-discovery-v1/ga-c37820b623e39ad3.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 14400,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeated activations of the same cell count only once.",
+      "answerOptions": ["11", "8", "9", "10"],
+      "expectedAnswer": "11",
+      "sha256": "ac31e103d3d1243858f5ec09f2bd9f884c19262ae9b956f179d64075fc27b921",
+      "parameters": {
+        "uniqueCount": 11,
+        "activations": [0, 24, 5, 5, 7, 15, 24, 24, 4, 11, 17, 1, 7, 24, 21, 1, 4, 17, 21, 1, 20, 4, 0, 15],
+        "videoDurationMs": 14400,
+        "fps": 30,
+        "visualVariant": 7
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions that activate at least once and return exactly one allowed count."
+    }
+  ]
+}

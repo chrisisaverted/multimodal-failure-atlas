@@ -1,0 +1,318 @@
+{
+  "id": "selective-flash-confirmatory-v2",
+  "generatorVersion": "selective-flash-tracking-v1",
+  "status": "frozen-confirmatory-holdout-with-oracle-counter-control",
+  "frozenAt": "2026-09-01",
+  "selectedFromDiscovery": "selective-flash-discovery-v1",
+  "selectedCell": {
+    "targetCounts": [8, 9, 10, 11],
+    "flashDurationMs": 133,
+    "distractorObjects": 4
+  },
+  "candidates": [
+    {
+      "id": "sf-3ccd4c3a20d7210e",
+      "cellId": "cell-3fdcb1046736e913",
+      "split": "confirmatory",
+      "seed": 1620000,
+      "failureModeId": "identity-conditioned-temporal-event-counting",
+      "question": "How many times does the RED-RINGED target disk flash yellow? Ignore every other disk.",
+      "answerOptions": ["8", "9", "10", "11"],
+      "expectedAnswer": "8",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetCount": 8,
+        "flashDurationMs": 133,
+        "distractorObjects": 4,
+        "videoDurationMs": 12000,
+        "fps": 30,
+        "visualVariant": 508
+      }
+    },
+    {
+      "id": "sf-922c9de5961fda76",
+      "cellId": "cell-3fdcb1046736e913",
+      "split": "confirmatory",
+      "seed": 1620001,
+      "failureModeId": "identity-conditioned-temporal-event-counting",
+      "question": "How many times does the RED-RINGED target disk flash yellow? Ignore every other disk.",
+      "answerOptions": ["9", "10", "11", "8"],
+      "expectedAnswer": "9",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetCount": 9,
+        "flashDurationMs": 133,
+        "distractorObjects": 4,
+        "videoDurationMs": 12000,
+        "fps": 30,
+        "visualVariant": 509
+      }
+    },
+    {
+      "id": "sf-d48daf276d7a0f8b",
+      "cellId": "cell-3fdcb1046736e913",
+      "split": "confirmatory",
+      "seed": 1620002,
+      "failureModeId": "identity-conditioned-temporal-event-counting",
+      "question": "How many times does the RED-RINGED target disk flash yellow? Ignore every other disk.",
+      "answerOptions": ["10", "11", "8", "9"],
+      "expectedAnswer": "10",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetCount": 10,
+        "flashDurationMs": 133,
+        "distractorObjects": 4,
+        "videoDurationMs": 12000,
+        "fps": 30,
+        "visualVariant": 510
+      }
+    },
+    {
+      "id": "sf-70d462dcc7e16e84",
+      "cellId": "cell-3fdcb1046736e913",
+      "split": "confirmatory",
+      "seed": 1620003,
+      "failureModeId": "identity-conditioned-temporal-event-counting",
+      "question": "How many times does the RED-RINGED target disk flash yellow? Ignore every other disk.",
+      "answerOptions": ["11", "8", "9", "10"],
+      "expectedAnswer": "11",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetCount": 11,
+        "flashDurationMs": 133,
+        "distractorObjects": 4,
+        "videoDurationMs": 12000,
+        "fps": 30,
+        "visualVariant": 511
+      }
+    },
+    {
+      "id": "sf-1b23ece9eff319c2",
+      "cellId": "cell-3fdcb1046736e913",
+      "split": "confirmatory",
+      "seed": 1620004,
+      "failureModeId": "identity-conditioned-temporal-event-counting",
+      "question": "How many times does the RED-RINGED target disk flash yellow? Ignore every other disk.",
+      "answerOptions": ["8", "9", "10", "11"],
+      "expectedAnswer": "8",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetCount": 8,
+        "flashDurationMs": 133,
+        "distractorObjects": 4,
+        "videoDurationMs": 12000,
+        "fps": 30,
+        "visualVariant": 512
+      }
+    },
+    {
+      "id": "sf-f0088d18b6a7a303",
+      "cellId": "cell-3fdcb1046736e913",
+      "split": "confirmatory",
+      "seed": 1620005,
+      "failureModeId": "identity-conditioned-temporal-event-counting",
+      "question": "How many times does the RED-RINGED target disk flash yellow? Ignore every other disk.",
+      "answerOptions": ["9", "10", "11", "8"],
+      "expectedAnswer": "9",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetCount": 9,
+        "flashDurationMs": 133,
+        "distractorObjects": 4,
+        "videoDurationMs": 12000,
+        "fps": 30,
+        "visualVariant": 513
+      }
+    },
+    {
+      "id": "sf-f43afb36541f67b0",
+      "cellId": "cell-3fdcb1046736e913",
+      "split": "confirmatory",
+      "seed": 1620006,
+      "failureModeId": "identity-conditioned-temporal-event-counting",
+      "question": "How many times does the RED-RINGED target disk flash yellow? Ignore every other disk.",
+      "answerOptions": ["10", "11", "8", "9"],
+      "expectedAnswer": "10",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetCount": 10,
+        "flashDurationMs": 133,
+        "distractorObjects": 4,
+        "videoDurationMs": 12000,
+        "fps": 30,
+        "visualVariant": 514
+      }
+    },
+    {
+      "id": "sf-06796b48ddb4d06e",
+      "cellId": "cell-3fdcb1046736e913",
+      "split": "confirmatory",
+      "seed": 1620007,
+      "failureModeId": "identity-conditioned-temporal-event-counting",
+      "question": "How many times does the RED-RINGED target disk flash yellow? Ignore every other disk.",
+      "answerOptions": ["11", "8", "9", "10"],
+      "expectedAnswer": "11",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetCount": 11,
+        "flashDurationMs": 133,
+        "distractorObjects": 4,
+        "videoDurationMs": 12000,
+        "fps": 30,
+        "visualVariant": 515
+      }
+    },
+    {
+      "id": "sf-85395b5b2c1a5434",
+      "cellId": "cell-3fdcb1046736e913",
+      "split": "confirmatory",
+      "seed": 1620008,
+      "failureModeId": "identity-conditioned-temporal-event-counting",
+      "question": "How many times does the RED-RINGED target disk flash yellow? Ignore every other disk.",
+      "answerOptions": ["8", "9", "10", "11"],
+      "expectedAnswer": "8",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetCount": 8,
+        "flashDurationMs": 133,
+        "distractorObjects": 4,
+        "videoDurationMs": 12000,
+        "fps": 30,
+        "visualVariant": 516
+      }
+    },
+    {
+      "id": "sf-61b22a9cad8815d4",
+      "cellId": "cell-3fdcb1046736e913",
+      "split": "confirmatory",
+      "seed": 1620009,
+      "failureModeId": "identity-conditioned-temporal-event-counting",
+      "question": "How many times does the RED-RINGED target disk flash yellow? Ignore every other disk.",
+      "answerOptions": ["9", "10", "11", "8"],
+      "expectedAnswer": "9",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetCount": 9,
+        "flashDurationMs": 133,
+        "distractorObjects": 4,
+        "videoDurationMs": 12000,
+        "fps": 30,
+        "visualVariant": 517
+      }
+    },
+    {
+      "id": "sf-c64c1e7afff5f092",
+      "cellId": "cell-3fdcb1046736e913",
+      "split": "confirmatory",
+      "seed": 1620010,
+      "failureModeId": "identity-conditioned-temporal-event-counting",
+      "question": "How many times does the RED-RINGED target disk flash yellow? Ignore every other disk.",
+      "answerOptions": ["10", "11", "8", "9"],
+      "expectedAnswer": "10",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetCount": 10,
+        "flashDurationMs": 133,
+        "distractorObjects": 4,
+        "videoDurationMs": 12000,
+        "fps": 30,
+        "visualVariant": 518
+      }
+    },
+    {
+      "id": "sf-c4c326938fe8f4cb",
+      "cellId": "cell-3fdcb1046736e913",
+      "split": "confirmatory",
+      "seed": 1620011,
+      "failureModeId": "identity-conditioned-temporal-event-counting",
+      "question": "How many times does the RED-RINGED target disk flash yellow? Ignore every other disk.",
+      "answerOptions": ["11", "8", "9", "10"],
+      "expectedAnswer": "11",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetCount": 11,
+        "flashDurationMs": 133,
+        "distractorObjects": 4,
+        "videoDurationMs": 12000,
+        "fps": 30,
+        "visualVariant": 519
+      }
+    },
+    {
+      "id": "sf-b75f6aeb97d1047c",
+      "cellId": "cell-3fdcb1046736e913",
+      "split": "confirmatory",
+      "seed": 1620012,
+      "failureModeId": "identity-conditioned-temporal-event-counting",
+      "question": "How many times does the RED-RINGED target disk flash yellow? Ignore every other disk.",
+      "answerOptions": ["8", "9", "10", "11"],
+      "expectedAnswer": "8",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetCount": 8,
+        "flashDurationMs": 133,
+        "distractorObjects": 4,
+        "videoDurationMs": 12000,
+        "fps": 30,
+        "visualVariant": 520
+      }
+    },
+    {
+      "id": "sf-352c3fe5f2667044",
+      "cellId": "cell-3fdcb1046736e913",
+      "split": "confirmatory",
+      "seed": 1620013,
+      "failureModeId": "identity-conditioned-temporal-event-counting",
+      "question": "How many times does the RED-RINGED target disk flash yellow? Ignore every other disk.",
+      "answerOptions": ["9", "10", "11", "8"],
+      "expectedAnswer": "9",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetCount": 9,
+        "flashDurationMs": 133,
+        "distractorObjects": 4,
+        "videoDurationMs": 12000,
+        "fps": 30,
+        "visualVariant": 521
+      }
+    },
+    {
+      "id": "sf-a609db43e0df8811",
+      "cellId": "cell-3fdcb1046736e913",
+      "split": "confirmatory",
+      "seed": 1620014,
+      "failureModeId": "identity-conditioned-temporal-event-counting",
+      "question": "How many times does the RED-RINGED target disk flash yellow? Ignore every other disk.",
+      "answerOptions": ["10", "11", "8", "9"],
+      "expectedAnswer": "10",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetCount": 10,
+        "flashDurationMs": 133,
+        "distractorObjects": 4,
+        "videoDurationMs": 12000,
+        "fps": 30,
+        "visualVariant": 522
+      }
+    },
+    {
+      "id": "sf-ce2fd09749829e75",
+      "cellId": "cell-3fdcb1046736e913",
+      "split": "confirmatory",
+      "seed": 1620015,
+      "failureModeId": "identity-conditioned-temporal-event-counting",
+      "question": "How many times does the RED-RINGED target disk flash yellow? Ignore every other disk.",
+      "answerOptions": ["11", "8", "9", "10"],
+      "expectedAnswer": "11",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetCount": 11,
+        "flashDurationMs": 133,
+        "distractorObjects": 4,
+        "videoDurationMs": 12000,
+        "fps": 30,
+        "visualVariant": 523
+      }
+    }
+  ]
+}

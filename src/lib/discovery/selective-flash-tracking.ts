@@ -2,6 +2,7 @@ import { z } from "zod";
 import { sha256 } from "../evaluation/hash";
 
 export const selectiveFlashVersion = "selective-flash-tracking-v1";
+export const selectiveFlashAnswerVersion = "selective-flash-tracking-v2";
 export const selectiveFlashAnswers = ["8", "9", "10", "11"] as const;
 
 export const selectiveFlashCandidateSchema = z.object({
@@ -100,15 +101,59 @@ export function createSelectiveFlashHoldout() {
   let seed = 1_610_000;
   for (let replicate = 0; replicate < 4; replicate += 1) {
     for (const answer of selectiveFlashAnswers) {
-      candidates.push(createSelectiveFlashCandidate({
-        split: "confirmatory",
-        seed: seed++,
-        targetCount: Number(answer),
-        flashDurationMs: 133,
-        distractorObjects: 4,
-        videoDurationMs: 12_000,
-        visualVariant: 300 + replicate * 4 + Number(answer),
-      }));
+      candidates.push(
+        createSelectiveFlashCandidate({
+          split: "confirmatory",
+          seed: seed++,
+          targetCount: Number(answer),
+          flashDurationMs: 133,
+          distractorObjects: 4,
+          videoDurationMs: 12_000,
+          visualVariant: 300 + replicate * 4 + Number(answer),
+        }),
+      );
+    }
+  }
+  return candidates;
+}
+
+export function createSelectiveFlashHoldoutV2() {
+  const candidates: SelectiveFlashCandidate[] = [];
+  let seed = 1_620_000;
+  for (let replicate = 0; replicate < 4; replicate += 1) {
+    for (const answer of selectiveFlashAnswers) {
+      candidates.push(
+        createSelectiveFlashCandidate({
+          split: "confirmatory",
+          seed: seed++,
+          targetCount: Number(answer),
+          flashDurationMs: 133,
+          distractorObjects: 4,
+          videoDurationMs: 12_000,
+          visualVariant: 500 + replicate * 4 + Number(answer),
+        }),
+      );
+    }
+  }
+  return candidates;
+}
+
+export function createSelectiveFlashHoldoutV3() {
+  const candidates: SelectiveFlashCandidate[] = [];
+  let seed = 1_630_000;
+  for (let replicate = 0; replicate < 4; replicate += 1) {
+    for (const answer of selectiveFlashAnswers) {
+      candidates.push(
+        createSelectiveFlashCandidate({
+          split: "confirmatory",
+          seed: seed++,
+          targetCount: Number(answer),
+          flashDurationMs: 133,
+          distractorObjects: 4,
+          videoDurationMs: 12_000,
+          visualVariant: 700 + replicate * 4 + Number(answer),
+        }),
+      );
     }
   }
   return candidates;
@@ -134,8 +179,15 @@ function isFlashing(candidate: SelectiveFlashCandidate, object: number, timestam
   );
 }
 
-export function renderSelectiveFlashSvg(candidate: SelectiveFlashCandidate, timestampMs: number, control = false) {
-  const objects = control ? 1 : candidate.parameters.distractorObjects + 1;
+export function renderSelectiveFlashSvg(
+  candidate: SelectiveFlashCandidate,
+  timestampMs: number,
+  control: boolean | "counter" | "answer" = false,
+) {
+  const isolationControl = control === true;
+  const counterControl = control === "counter";
+  const answerControl = control === "answer";
+  const objects = isolationControl ? 1 : candidate.parameters.distractorObjects + 1;
   const t = timestampMs / candidate.parameters.videoDurationMs;
   const disks = Array.from({ length: objects }, (_, object) => {
     const phase = (object / objects) * Math.PI * 2 + candidate.parameters.visualVariant * 0.17;
@@ -143,10 +195,13 @@ export function renderSelectiveFlashSvg(candidate: SelectiveFlashCandidate, time
     // modulo wrap would introduce at the edge of the canvas.
     const x = 90 + (0.5 - 0.5 * Math.cos((t * 2.7 + object / objects) * Math.PI * 2)) * 540;
     const y = 240 + Math.sin(t * Math.PI * (4 + (object % 2)) + phase) * (120 - object * 7);
-    const flashing = control
+    const flashing = isolationControl
       ? flashStarts(candidate, object).some((start) => timestampMs >= start && timestampMs < start + 500)
       : isFlashing(candidate, object, timestampMs);
     return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="26" fill="${flashing ? "#f4d934" : "#555b58"}" stroke="${object === 0 ? "#e23e31" : "#f7f5ef"}" stroke-width="${object === 0 ? 8 : 3}"/>${object === 0 ? `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="34" fill="none" stroke="#e23e31" stroke-width="2"/>` : ""}`;
   }).join("");
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480"><rect width="100%" height="100%" fill="#e9e6dc"/><text x="24" y="38" font-family="Arial" font-size="22" font-weight="700">${control ? "CONTROL: COUNT THE LONG FLASHES" : "COUNT YELLOW FLASHES ON THE RED-RINGED DISK ONLY"}</text><path d="M0 420H720" stroke="#252928" opacity=".16"/>${disks}</svg>`;
+  const completed = targetFlashStarts(candidate).filter(
+    (start) => timestampMs >= start + candidate.parameters.flashDurationMs,
+  ).length;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480"><rect width="100%" height="100%" fill="#e9e6dc"/><text x="24" y="38" font-family="Arial" font-size="22" font-weight="700">${isolationControl ? "CONTROL: COUNT THE LONG FLASHES" : "COUNT YELLOW FLASHES ON THE RED-RINGED DISK ONLY"}</text><path d="M0 420H720" stroke="#252928" opacity=".16"/>${disks}${counterControl ? `<rect x="225" y="416" width="270" height="52" rx="12" fill="#202322"/><text x="360" y="451" text-anchor="middle" font-family="Arial" font-size="23" font-weight="700" fill="#fff">TARGET FLASH COUNT: ${completed}</text>` : ""}${answerControl ? `<rect x="185" y="392" width="350" height="76" rx="14" fill="#202322" stroke="#f4d934" stroke-width="5"/><text x="360" y="442" text-anchor="middle" font-family="Arial" font-size="31" font-weight="700" fill="#fff">TARGET TOTAL: ${candidate.parameters.targetCount}</text>` : ""}</svg>`;
 }

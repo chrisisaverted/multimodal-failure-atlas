@@ -1,0 +1,162 @@
+{
+  "id": "grid-activation-discovery-v1",
+  "generatorVersion": "unique-grid-activation-memory-v1",
+  "status": "discovery-only",
+  "hypothesis": "Video models fail to maintain a duplicate-suppressed set of spatial events across a temporal stream.",
+  "candidates": [
+    {
+      "id": "ga-3676b14f06af8ebe",
+      "cellId": "cell-twenty-four-activations-five-by-five",
+      "split": "discovery",
+      "seed": 4800000,
+      "failureModeId": "temporal-set-cardinality",
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeated activations of the same cell count only once.",
+      "answerOptions": ["9", "8", "11", "10"],
+      "expectedAnswer": "8",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "uniqueCount": 8,
+        "activations": [
+          16, 17, 12, 16, 23, 17, 9, 12, 12, 12, 17, 22, 0, 22, 9, 17, 16, 23, 22, 9, 23, 22, 0, 11
+        ],
+        "videoDurationMs": 14400,
+        "fps": 30,
+        "visualVariant": 0
+      }
+    },
+    {
+      "id": "ga-250eb54e950c3b99",
+      "cellId": "cell-twenty-four-activations-five-by-five",
+      "split": "discovery",
+      "seed": 4800001,
+      "failureModeId": "temporal-set-cardinality",
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeated activations of the same cell count only once.",
+      "answerOptions": ["8", "9", "11", "10"],
+      "expectedAnswer": "9",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "uniqueCount": 9,
+        "activations": [
+          12, 2, 22, 22, 12, 22, 10, 16, 3, 10, 2, 23, 10, 14, 14, 12, 2, 16, 3, 10, 14, 2, 1, 22
+        ],
+        "videoDurationMs": 14400,
+        "fps": 30,
+        "visualVariant": 1
+      }
+    },
+    {
+      "id": "ga-e15c7faac9f2c574",
+      "cellId": "cell-twenty-four-activations-five-by-five",
+      "split": "discovery",
+      "seed": 4800002,
+      "failureModeId": "temporal-set-cardinality",
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeated activations of the same cell count only once.",
+      "answerOptions": ["11", "9", "8", "10"],
+      "expectedAnswer": "10",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "uniqueCount": 10,
+        "activations": [
+          7, 2, 20, 12, 6, 18, 2, 10, 20, 18, 12, 20, 10, 20, 11, 6, 12, 6, 12, 17, 15, 15, 15, 20
+        ],
+        "videoDurationMs": 14400,
+        "fps": 30,
+        "visualVariant": 2
+      }
+    },
+    {
+      "id": "ga-0ac8c03d4a1fa901",
+      "cellId": "cell-twenty-four-activations-five-by-five",
+      "split": "discovery",
+      "seed": 4800003,
+      "failureModeId": "temporal-set-cardinality",
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeated activations of the same cell count only once.",
+      "answerOptions": ["9", "11", "8", "10"],
+      "expectedAnswer": "11",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "uniqueCount": 11,
+        "activations": [
+          11, 23, 11, 11, 7, 19, 14, 12, 7, 14, 7, 10, 17, 23, 11, 19, 10, 23, 7, 5, 24, 12, 3, 5
+        ],
+        "videoDurationMs": 14400,
+        "fps": 30,
+        "visualVariant": 3
+      }
+    },
+    {
+      "id": "ga-0128301faebca43e",
+      "cellId": "cell-twenty-four-activations-five-by-five",
+      "split": "discovery",
+      "seed": 4800004,
+      "failureModeId": "temporal-set-cardinality",
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeated activations of the same cell count only once.",
+      "answerOptions": ["9", "11", "8", "10"],
+      "expectedAnswer": "8",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "uniqueCount": 8,
+        "activations": [
+          6, 17, 10, 6, 15, 5, 17, 22, 17, 11, 10, 15, 11, 10, 22, 22, 6, 18, 6, 18, 11, 18, 11, 22
+        ],
+        "videoDurationMs": 14400,
+        "fps": 30,
+        "visualVariant": 4
+      }
+    },
+    {
+      "id": "ga-c32824d3bebc745c",
+      "cellId": "cell-twenty-four-activations-five-by-five",
+      "split": "discovery",
+      "seed": 4800005,
+      "failureModeId": "temporal-set-cardinality",
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeated activations of the same cell count only once.",
+      "answerOptions": ["8", "11", "9", "10"],
+      "expectedAnswer": "9",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "uniqueCount": 9,
+        "activations": [4, 4, 21, 15, 9, 9, 12, 0, 2, 12, 2, 0, 2, 12, 2, 21, 16, 20, 4, 9, 20, 0, 12, 15],
+        "videoDurationMs": 14400,
+        "fps": 30,
+        "visualVariant": 5
+      }
+    },
+    {
+      "id": "ga-6f810141b155a050",
+      "cellId": "cell-twenty-four-activations-five-by-five",
+      "split": "discovery",
+      "seed": 4800006,
+      "failureModeId": "temporal-set-cardinality",
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeated activations of the same cell count only once.",
+      "answerOptions": ["11", "8", "9", "10"],
+      "expectedAnswer": "10",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "uniqueCount": 10,
+        "activations": [0, 4, 22, 8, 16, 0, 0, 22, 4, 6, 4, 2, 2, 16, 6, 22, 0, 5, 8, 12, 24, 2, 22, 12],
+        "videoDurationMs": 14400,
+        "fps": 30,
+        "visualVariant": 6
+      }
+    },
+    {
+      "id": "ga-c37820b623e39ad3",
+      "cellId": "cell-twenty-four-activations-five-by-five",
+      "split": "discovery",
+      "seed": 4800007,
+      "failureModeId": "temporal-set-cardinality",
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeated activations of the same cell count only once.",
+      "answerOptions": ["11", "8", "9", "10"],
+      "expectedAnswer": "11",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "uniqueCount": 11,
+        "activations": [0, 24, 5, 5, 7, 15, 24, 24, 4, 11, 17, 1, 7, 24, 21, 1, 4, 17, 21, 1, 20, 4, 0, 15],
+        "videoDurationMs": 14400,
+        "fps": 30,
+        "visualVariant": 7
+      }
+    }
+  ]
+}
