@@ -14,7 +14,7 @@ Wilson-qualified and human-validated are stricter, separately reported states.
 | Topological enclosure depth | observed holdout pass | 6/16 | 7/16 | 5/16 | 16/16, 16/16, 10/16 | unverified |
 | Rotation-invariant exact correspondence | observed holdout pass | 6/16 | 4/14 substantive | 2/16 | 16/16, 16/16, 14/16 | unverified |
 | Global bilateral symmetry verification | observed holdout pass | 6/16 | 3/16 | 1/16 | 16/16 each | unverified |
-| Occluded cube-stack enumeration | Qwen holdout running | 3/16 | pending | 6/16 | 16/16 Gemini and Kimi | unverified |
+| Occluded cube-stack enumeration | observed holdout pass | 3/16 | 6/16 | 6/16 | 16/16 each | unverified |
 | Maze reachability | frozen holdout incomplete | incomplete after 429 | 3/16 native; control incomplete | 4/16 | 16/16 Kimi | unverified |
 | Dense cross-image change localization | harder replacement screen | 1/8 | pending | 0/8 | pending | unverified |
 | Dense visual XOR composition | v2 replacement screen | v1 2/8 | v1 4/8 | v1 3/8 | pending | unverified |
