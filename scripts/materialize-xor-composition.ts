@@ -27,22 +27,24 @@ for (const [index, candidate] of plan.candidates.entries()) {
   const { truth, panels } = xorMatrices(candidate);
   if (panels.filter((panel) => JSON.stringify(panel) === JSON.stringify(truth)).length !== 1)
     throw new Error("XOR oracle mismatch");
-  const artifact = join(output, `${candidate.id}.png`);
-  await sharp(Buffer.from(renderXorSvg(candidate)))
-    .png()
-    .toFile(artifact);
-  cases.push({
+  for (const control of plan.status === "frozen-confirmatory-holdout" ? [false, true] : [false]) {
+    const artifact = join(output, `${candidate.id}${control ? "-control" : ""}.png`);
+    await sharp(Buffer.from(renderXorSvg(candidate, control)))
+      .png()
+      .toFile(artifact);
+    cases.push({
     candidateId: candidate.id,
     cellId: candidate.cellId,
     split: candidate.split,
-    condition: "native",
-    interventionDescription:
-      "Two dense binary inputs and four near-matching output candidates are shown together.",
+    condition: control ? "oracle-boxed-control" : "native-image",
+    interventionDescription: control
+      ? "The exact XOR output is explicitly boxed in green."
+      : "Two dense binary inputs and four near-matching output candidates are shown together.",
     failureModeId: candidate.failureModeId,
     generator: "xor-composition",
     seed: candidate.seed,
-    difficulty: candidate.parameters.size === 20 ? 98 : 91,
-    variant: index,
+    difficulty: control ? 0 : candidate.parameters.size === 20 ? 98 : 91,
+    variant: index + (control ? 100 : 0),
     artifact: artifact.slice(resolve(".").length + 1),
     mimeType: "image/png",
     question: candidate.question,
@@ -51,12 +53,14 @@ for (const [index, candidate] of plan.candidates.entries()) {
     sha256: sha256(new Uint8Array(await readFile(artifact))),
     parameters: candidate.parameters,
     humanSolvability: candidate.humanSolvability,
-    systemMessage:
-      "Apply XOR independently to every aligned cell. Return exactly one option letter and do not explain.",
-  });
+    systemMessage: control
+      ? "The correct output is explicitly boxed in green. Return exactly its option letter."
+      : "Apply XOR independently to every aligned cell. Return exactly one option letter and do not explain.",
+    });
+  }
 }
 await writeFile(
   join(output, "manifest.json"),
-  `${JSON.stringify({ id: plan.id, planSha256: sha256(bytes), generatorVersion: plan.generatorVersion, renderer: "xor-composition-svg-raster-v1", fps: 0, cases }, null, 2)}\n`,
+  `${JSON.stringify({ id: plan.id, planSha256: sha256(bytes), generatorVersion: plan.generatorVersion, renderer: plan.status === "frozen-confirmatory-holdout" ? "xor-composition-svg-raster-v2-with-oracle-control" : "xor-composition-svg-raster-v1", fps: 0, cases }, null, 2)}\n`,
 );
 console.log({ output, cases: cases.length });

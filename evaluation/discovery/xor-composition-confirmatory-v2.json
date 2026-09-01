@@ -1,0 +1,365 @@
+{
+  "id": "xor-composition-confirmatory-v2",
+  "generatorVersion": "visual-xor-composition-v2",
+  "status": "frozen-confirmatory-holdout",
+  "frozenAt": "2026-09-01",
+  "selectedFromDiscovery": "xor-composition-discovery-v2",
+  "selectedCell": {
+    "gridSize": 20,
+    "flipsPerDistractor": 1
+  },
+  "candidates": [
+    {
+      "id": "xch-3ee36d1d9d79acc8",
+      "cellId": "cell-20x20-xor-one-bit-distractors",
+      "split": "confirmatory",
+      "seed": 5100000,
+      "failureModeId": "dense-visual-boolean-composition",
+      "question": "Which option is the EXACT cell-by-cell XOR of INPUT 1 and INPUT 2? Each wrong option differs from the true XOR in only ONE cell.",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "size": 20,
+        "correctPanel": 0,
+        "flipsPerDistractor": 1,
+        "visualVariant": 300
+      }
+    },
+    {
+      "id": "xch-4a384f5786248510",
+      "cellId": "cell-20x20-xor-one-bit-distractors",
+      "split": "confirmatory",
+      "seed": 5100001,
+      "failureModeId": "dense-visual-boolean-composition",
+      "question": "Which option is the EXACT cell-by-cell XOR of INPUT 1 and INPUT 2? Each wrong option differs from the true XOR in only ONE cell.",
+      "answerOptions": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "size": 20,
+        "correctPanel": 1,
+        "flipsPerDistractor": 1,
+        "visualVariant": 301
+      }
+    },
+    {
+      "id": "xch-908a31e13117b890",
+      "cellId": "cell-20x20-xor-one-bit-distractors",
+      "split": "confirmatory",
+      "seed": 5100002,
+      "failureModeId": "dense-visual-boolean-composition",
+      "question": "Which option is the EXACT cell-by-cell XOR of INPUT 1 and INPUT 2? Each wrong option differs from the true XOR in only ONE cell.",
+      "answerOptions": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "size": 20,
+        "correctPanel": 2,
+        "flipsPerDistractor": 1,
+        "visualVariant": 302
+      }
+    },
+    {
+      "id": "xch-b95c5319db057bd4",
+      "cellId": "cell-20x20-xor-one-bit-distractors",
+      "split": "confirmatory",
+      "seed": 5100003,
+      "failureModeId": "dense-visual-boolean-composition",
+      "question": "Which option is the EXACT cell-by-cell XOR of INPUT 1 and INPUT 2? Each wrong option differs from the true XOR in only ONE cell.",
+      "answerOptions": [
+        "C",
+        "A",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "size": 20,
+        "correctPanel": 3,
+        "flipsPerDistractor": 1,
+        "visualVariant": 303
+      }
+    },
+    {
+      "id": "xch-94779274e68843f6",
+      "cellId": "cell-20x20-xor-one-bit-distractors",
+      "split": "confirmatory",
+      "seed": 5100004,
+      "failureModeId": "dense-visual-boolean-composition",
+      "question": "Which option is the EXACT cell-by-cell XOR of INPUT 1 and INPUT 2? Each wrong option differs from the true XOR in only ONE cell.",
+      "answerOptions": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "size": 20,
+        "correctPanel": 0,
+        "flipsPerDistractor": 1,
+        "visualVariant": 304
+      }
+    },
+    {
+      "id": "xch-691fede44f12d575",
+      "cellId": "cell-20x20-xor-one-bit-distractors",
+      "split": "confirmatory",
+      "seed": 5100005,
+      "failureModeId": "dense-visual-boolean-composition",
+      "question": "Which option is the EXACT cell-by-cell XOR of INPUT 1 and INPUT 2? Each wrong option differs from the true XOR in only ONE cell.",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "size": 20,
+        "correctPanel": 1,
+        "flipsPerDistractor": 1,
+        "visualVariant": 305
+      }
+    },
+    {
+      "id": "xch-4372d56316a32400",
+      "cellId": "cell-20x20-xor-one-bit-distractors",
+      "split": "confirmatory",
+      "seed": 5100006,
+      "failureModeId": "dense-visual-boolean-composition",
+      "question": "Which option is the EXACT cell-by-cell XOR of INPUT 1 and INPUT 2? Each wrong option differs from the true XOR in only ONE cell.",
+      "answerOptions": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "size": 20,
+        "correctPanel": 2,
+        "flipsPerDistractor": 1,
+        "visualVariant": 306
+      }
+    },
+    {
+      "id": "xch-cc93945ba8f8f27c",
+      "cellId": "cell-20x20-xor-one-bit-distractors",
+      "split": "confirmatory",
+      "seed": 5100007,
+      "failureModeId": "dense-visual-boolean-composition",
+      "question": "Which option is the EXACT cell-by-cell XOR of INPUT 1 and INPUT 2? Each wrong option differs from the true XOR in only ONE cell.",
+      "answerOptions": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "size": 20,
+        "correctPanel": 3,
+        "flipsPerDistractor": 1,
+        "visualVariant": 307
+      }
+    },
+    {
+      "id": "xch-f130571033041077",
+      "cellId": "cell-20x20-xor-one-bit-distractors",
+      "split": "confirmatory",
+      "seed": 5100008,
+      "failureModeId": "dense-visual-boolean-composition",
+      "question": "Which option is the EXACT cell-by-cell XOR of INPUT 1 and INPUT 2? Each wrong option differs from the true XOR in only ONE cell.",
+      "answerOptions": [
+        "C",
+        "B",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "size": 20,
+        "correctPanel": 0,
+        "flipsPerDistractor": 1,
+        "visualVariant": 308
+      }
+    },
+    {
+      "id": "xch-8df1c791a79d0f93",
+      "cellId": "cell-20x20-xor-one-bit-distractors",
+      "split": "confirmatory",
+      "seed": 5100009,
+      "failureModeId": "dense-visual-boolean-composition",
+      "question": "Which option is the EXACT cell-by-cell XOR of INPUT 1 and INPUT 2? Each wrong option differs from the true XOR in only ONE cell.",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "size": 20,
+        "correctPanel": 1,
+        "flipsPerDistractor": 1,
+        "visualVariant": 309
+      }
+    },
+    {
+      "id": "xch-d00f6c7013551224",
+      "cellId": "cell-20x20-xor-one-bit-distractors",
+      "split": "confirmatory",
+      "seed": 5100010,
+      "failureModeId": "dense-visual-boolean-composition",
+      "question": "Which option is the EXACT cell-by-cell XOR of INPUT 1 and INPUT 2? Each wrong option differs from the true XOR in only ONE cell.",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "size": 20,
+        "correctPanel": 2,
+        "flipsPerDistractor": 1,
+        "visualVariant": 310
+      }
+    },
+    {
+      "id": "xch-8a2335ac6e11c630",
+      "cellId": "cell-20x20-xor-one-bit-distractors",
+      "split": "confirmatory",
+      "seed": 5100011,
+      "failureModeId": "dense-visual-boolean-composition",
+      "question": "Which option is the EXACT cell-by-cell XOR of INPUT 1 and INPUT 2? Each wrong option differs from the true XOR in only ONE cell.",
+      "answerOptions": [
+        "C",
+        "B",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "size": 20,
+        "correctPanel": 3,
+        "flipsPerDistractor": 1,
+        "visualVariant": 311
+      }
+    },
+    {
+      "id": "xch-0a6ca06ee241fdeb",
+      "cellId": "cell-20x20-xor-one-bit-distractors",
+      "split": "confirmatory",
+      "seed": 5100012,
+      "failureModeId": "dense-visual-boolean-composition",
+      "question": "Which option is the EXACT cell-by-cell XOR of INPUT 1 and INPUT 2? Each wrong option differs from the true XOR in only ONE cell.",
+      "answerOptions": [
+        "C",
+        "A",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "size": 20,
+        "correctPanel": 0,
+        "flipsPerDistractor": 1,
+        "visualVariant": 312
+      }
+    },
+    {
+      "id": "xch-98586cce4f775912",
+      "cellId": "cell-20x20-xor-one-bit-distractors",
+      "split": "confirmatory",
+      "seed": 5100013,
+      "failureModeId": "dense-visual-boolean-composition",
+      "question": "Which option is the EXACT cell-by-cell XOR of INPUT 1 and INPUT 2? Each wrong option differs from the true XOR in only ONE cell.",
+      "answerOptions": [
+        "C",
+        "A",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "size": 20,
+        "correctPanel": 1,
+        "flipsPerDistractor": 1,
+        "visualVariant": 313
+      }
+    },
+    {
+      "id": "xch-6e812163ca73be54",
+      "cellId": "cell-20x20-xor-one-bit-distractors",
+      "split": "confirmatory",
+      "seed": 5100014,
+      "failureModeId": "dense-visual-boolean-composition",
+      "question": "Which option is the EXACT cell-by-cell XOR of INPUT 1 and INPUT 2? Each wrong option differs from the true XOR in only ONE cell.",
+      "answerOptions": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "size": 20,
+        "correctPanel": 2,
+        "flipsPerDistractor": 1,
+        "visualVariant": 314
+      }
+    },
+    {
+      "id": "xch-c4ee2ffe42203080",
+      "cellId": "cell-20x20-xor-one-bit-distractors",
+      "split": "confirmatory",
+      "seed": 5100015,
+      "failureModeId": "dense-visual-boolean-composition",
+      "question": "Which option is the EXACT cell-by-cell XOR of INPUT 1 and INPUT 2? Each wrong option differs from the true XOR in only ONE cell.",
+      "answerOptions": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "size": 20,
+        "correctPanel": 3,
+        "flipsPerDistractor": 1,
+        "visualVariant": 315
+      }
+    }
+  ]
+}

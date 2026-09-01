@@ -115,6 +115,14 @@ export function createXorHardGrid() {
       out.push(createXorHardCandidate({ split: "discovery", seed: seed++, correctPanel, visualVariant: rep * 4 + correctPanel }));
   return out;
 }
+export function createXorHardHoldout() {
+  const out: XorCandidate[] = [];
+  let seed = 5_100_000;
+  for (let rep = 0; rep < 4; rep++)
+    for (let correctPanel = 0; correctPanel < 4; correctPanel++)
+      out.push(createXorHardCandidate({ split: "confirmatory", seed: seed++, correctPanel, visualVariant: 300 + rep * 4 + correctPanel }));
+  return out;
+}
 function gridSvg(matrix: readonly (readonly boolean[])[], x: number, y: number, cell: number, label: string) {
   const rects = matrix
     .flatMap((row, yy) =>

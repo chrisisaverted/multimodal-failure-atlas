@@ -93,6 +93,7 @@
     "generate:coflash": "tsx scripts/materialize-coflash.ts",
     "plan:xor-composition": "tsx scripts/plan-xor-composition.ts",
     "plan:xor-composition:hard": "tsx scripts/plan-xor-composition-hard.ts",
+    "freeze:xor-composition:hard": "tsx scripts/freeze-xor-composition-hard.ts",
     "generate:xor-composition": "tsx scripts/materialize-xor-composition.ts",
     "plan:infection-spread": "tsx scripts/plan-infection-spread.ts",
     "generate:infection-spread": "tsx scripts/materialize-infection-spread.ts",

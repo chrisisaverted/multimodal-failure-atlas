@@ -90,7 +90,7 @@ import { applyConservation, createConservationGrid } from "./conservation-ledger
 import { createSymmetryGrid, createSymmetryHoldout, symmetryMatrix } from "./symmetry-search";
 import { applySwaps, createSwapTrackingGrid } from "./swap-tracking";
 import { coflashPairCounts, createCoflashGrid, createCoflashHardGrid } from "./coflash-counting";
-import { createXorGrid, createXorHardGrid, xorMatrices } from "./xor-composition";
+import { createXorGrid, createXorHardGrid, createXorHardHoldout, xorMatrices } from "./xor-composition";
 import { applyInfection, createInfectionGrid } from "./infection-spread";
 import { createEulerGrid, graphDegrees } from "./euler-graph";
 import { createOrdinalGrid, createOrdinalHardGrid, ordinalNthSuccessor, ordinalSuccessor } from "./ordinal-successor";
@@ -106,6 +106,13 @@ import { createReversalGrid } from "./reversal-count";
 import { createPaperHardGrid, paperHardPatterns, unfoldHardPunches } from "./paper-folding-hard";
 
 describe("adaptive multimodal discovery", () => {
+  it("freezes sixteen balanced one-bit XOR holdout cases", () => {
+    const holdout = createXorHardHoldout();
+    expect(holdout).toHaveLength(16);
+    expect(new Set(holdout.map(candidate => candidate.seed)).size).toBe(16);
+    for (const answer of ["A", "B", "C", "D"]) expect(holdout.filter(candidate => candidate.expectedAnswer === answer)).toHaveLength(4);
+  });
+
   it("propagates three punches through four folds into unique 16x16 patterns", () => {
     for (const candidate of createPaperHardGrid()) {
       expect(unfoldHardPunches(candidate.parameters.punches)).toHaveLength(48);
