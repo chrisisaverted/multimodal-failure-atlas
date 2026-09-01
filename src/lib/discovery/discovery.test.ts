@@ -83,8 +83,19 @@ import { createPaperFoldingDiscoveryGrid, paperOptionPatterns, unfoldPunches } f
 import { createPeriodicAnomalyGrid, periodicLaneStarts } from "./periodic-anomaly";
 import { createCubeStackGrid, cubeHeights } from "./cube-stack";
 import { bindingSequences, createBindingGrid } from "./temporal-binding";
+import { createMirrorRayGrid, traceMirrorRay } from "./mirror-ray";
 
 describe("adaptive multimodal discovery", () => {
+  it("balances exact mirror-ray exits after six or more reflections", () => {
+    const candidates = createMirrorRayGrid();
+    expect(candidates).toHaveLength(8);
+    for (const candidate of candidates) {
+      const result = traceMirrorRay(candidate.parameters.configSeed);
+      expect(result.exit).toBe(candidate.parameters.targetExit);
+      expect(result.hits).toBeGreaterThanOrEqual(6);
+    }
+  });
+
   it("binds the queried six-color sequence to exactly one object", () => {
     const candidates = createBindingGrid();
     expect(candidates).toHaveLength(8);

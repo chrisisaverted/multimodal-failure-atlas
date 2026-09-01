@@ -72,6 +72,8 @@
     "generate:cube-stack": "tsx scripts/materialize-cube-stack.ts",
     "plan:temporal-binding": "tsx scripts/plan-temporal-binding.ts",
     "generate:temporal-binding": "tsx scripts/materialize-temporal-binding.ts",
+    "plan:mirror-ray": "tsx scripts/plan-mirror-ray.ts",
+    "generate:mirror-ray": "tsx scripts/materialize-mirror-ray.ts",
     "publish:adaptive": "tsx scripts/publish-adaptive-results.ts",
     "publish:precision-wire": "tsx scripts/publish-precision-wire-results.ts",
     "evaluate": "tsx scripts/evaluate.ts",
