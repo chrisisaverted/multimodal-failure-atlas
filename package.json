@@ -35,6 +35,7 @@
     "rank:precision-wire-count": "tsx scripts/rank-precision-wire-count.ts",
     "freeze:precision-wire-count": "tsx scripts/freeze-precision-wire-count.ts",
     "publish:adaptive": "tsx scripts/publish-adaptive-results.ts",
+    "publish:precision-wire": "tsx scripts/publish-precision-wire-results.ts",
     "evaluate": "tsx scripts/evaluate.ts",
     "evaluate:fixture": "tsx scripts/evaluate.ts evaluation/plans/fixture-smoke.json",
     "evaluate:pilot": "tsx scripts/evaluate-pilot.ts",

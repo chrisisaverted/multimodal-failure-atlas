@@ -1,0 +1,13 @@
+{
+  "protocol": "single-response-human-review-v1",
+  "reviewedAt": "2026-09-01",
+  "scope": "Only responses routed to pending-review by the frozen terminal-option-v2 scorer.",
+  "decisions": [
+    {
+      "runId": "f08cdb0ae952e176ec5bdfe95a93a375aad0f37492065bb14115f1f72163c03e",
+      "decision": "correct",
+      "expectedAnswer": "10",
+      "evidence": "The response explicitly concludes 'Count = 10'; the scorer conservatively rejected the Markdown-formatted terminal line."
+    }
+  ]
+}

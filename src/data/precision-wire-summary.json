@@ -1,0 +1,111 @@
+{
+  "id": "precision-wire-count-confirmatory-v1",
+  "evidenceStatus": "frozen-confirmatory-holdout-passed-three-routes",
+  "generatorVersion": "wire-crossing-count-v2-precision",
+  "difficultySetting": {
+    "totalCrossings": 40,
+    "exactAnswerOptions": [
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  "admission": {
+    "everyModelSubstantiveSolveRateBelow": 0.5,
+    "oracleTarget": 0.75,
+    "passed": true
+  },
+  "humanSolvability": "unverified",
+  "models": [
+    {
+      "modelId": "google/gemini-3.7-flash",
+      "reasoningEffort": "low",
+      "native": {
+        "requests": 16,
+        "substantiveAnswers": 16,
+        "automaticCorrect": 7,
+        "adjudicatedCorrect": 7,
+        "pendingReview": 0,
+        "costUsd": 0.16479074999999999
+      },
+      "oracle": {
+        "requests": 16,
+        "substantiveAnswers": 16,
+        "automaticCorrect": 16,
+        "adjudicatedCorrect": 16,
+        "pendingReview": 0,
+        "costUsd": 0.0193095
+      }
+    },
+    {
+      "modelId": "moonshotai/kimi-k3",
+      "reasoningEffort": "none",
+      "native": {
+        "requests": 16,
+        "substantiveAnswers": 16,
+        "automaticCorrect": 1,
+        "adjudicatedCorrect": 1,
+        "pendingReview": 0,
+        "costUsd": 0.10963199999999997
+      },
+      "oracle": {
+        "requests": 16,
+        "substantiveAnswers": 16,
+        "automaticCorrect": 13,
+        "adjudicatedCorrect": 13,
+        "pendingReview": 0,
+        "costUsd": 0.10939199999999999
+      }
+    },
+    {
+      "modelId": "qwen/qwen3.8-max",
+      "reasoningEffort": "low",
+      "native": {
+        "requests": 16,
+        "substantiveAnswers": 16,
+        "automaticCorrect": 0,
+        "adjudicatedCorrect": 0,
+        "pendingReview": 0,
+        "costUsd": 0.33159600000000006
+      },
+      "oracle": {
+        "requests": 16,
+        "substantiveAnswers": 16,
+        "automaticCorrect": 15,
+        "adjudicatedCorrect": 16,
+        "pendingReview": 0,
+        "costUsd": 0.09647599999999999
+      }
+    }
+  ],
+  "discovery": {
+    "requests": 32,
+    "substantiveAnswers": 32,
+    "automaticCorrect": 7,
+    "adjudicatedCorrect": 7,
+    "pendingReview": 0,
+    "costUsd": 0.353247
+  },
+  "confirmatory": {
+    "requests": 96,
+    "substantiveAnswers": 96,
+    "automaticCorrect": 52,
+    "adjudicatedCorrect": 53,
+    "pendingReview": 0,
+    "costUsd": 0.8311962500000003
+  },
+  "totalCostUsd": 1.1844432499999997,
+  "resultFiles": [
+    "precision-wire-count-confirmatory-v1-gemini.jsonl",
+    "precision-wire-count-confirmatory-v1-kimi.jsonl",
+    "precision-wire-count-confirmatory-v1-qwen-b.jsonl",
+    "precision-wire-count-confirmatory-v1-qwen-c.jsonl",
+    "precision-wire-count-confirmatory-v1-qwen-d.jsonl",
+    "precision-wire-count-confirmatory-v1-qwen.jsonl",
+    "precision-wire-count-discovery-v1-gemini.jsonl",
+    "precision-wire-count-discovery-v1-kimi.jsonl",
+    "precision-wire-count-discovery-v1-qwen.jsonl"
+  ],
+  "reviewFile": "evaluation/reviews/precision-wire-count-confirmatory-v1.json"
+}

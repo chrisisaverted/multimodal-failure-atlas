@@ -111,6 +111,24 @@ receive no hardness credit. Current OpenRouter model metadata is now checked bef
 corrected protocol uses the lowest effort supported by all three routes and enough output budget to
 obtain a substantive answer.
 
+Endpoint-only wire tracing did not clear the universal gate: Kimi answered 12/16 under its optional
+no-reasoning forced-choice condition. Widely spaced identity-conditioned counts then made Kimi weak but
+left Gemini at or above 50% in every cell. The successful refinement composes two requirements and removes
+an approximation shortcut: trace one wire through 40 crossings, count only that wire's crossings, and
+choose among adjacent exact values 7, 8, 9, and 10.
+
+The untouched 16-case holdout confirmed the setting. Native accuracy was 7/16 for Gemini 3.7 Flash,
+1/16 for Kimi K3, and 0/16 for Qwen 3.8 Max. On paired images where the same target path was highlighted
+and every relevant crossing numbered, accuracy was 16/16, 13/16, and 16/16 after one documented review.
+This narrows the failure toward sustained identity-conditioned exact counting. It does not establish a
+specific hidden representation, and human solvability remains unverified pending a blinded baseline.
+
+The reusable design lesson is to search task compositions and answer precision, not only raw perceptual
+degradation. A task can remain readable while becoming diagnostic when (1) two individually available
+operations must share one visual intermediate, (2) distractors exercise the same primitive operations,
+and (3) adjacent balanced answers make approximate magnitude insufficient. Easier cells remain in the
+atlas as controls rather than being discarded.
+
 ## Objective and promotion
 
 For each cell, let a substantive answer be a verified, non-empty answer. The primary quantity is the

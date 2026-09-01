@@ -608,6 +608,46 @@ for (const [offset, raw] of extensions.entries()) {
   });
 }
 
+entries.push({
+  id: "identity-conditioned-exact-counting",
+  index: entries.length + 1,
+  title: "Trace first, count exactly",
+  shortTitle: "Identity-conditioned exact counting",
+  subtitle:
+    "A model can trace endpoints or estimate counts separately yet fail when it must preserve one visual identity and count only that path’s events.",
+  modalities: ["image"],
+  stages: ["vision-encoding", "object-state-representation", "reasoning"],
+  capabilities: ["identity-persistence", "tracking", "counting", "cross-region-integration"],
+  evidence: "reproduced-here",
+  sourceIds: ["traversalbench"],
+  trigger:
+    "Ask for the exact number of crossings on one labeled wire among many distractor crossings, using adjacent answer values.",
+  symptom:
+    "Answers cluster one or two counts away from the truth even when the same route succeeds after the target path and crossings are highlighted.",
+  violatedExpectation:
+    "A continuous, unambiguous path that a person can trace should support an exact count of its marked interactions.",
+  mechanism:
+    "Consistent with lossy sustained visual identity or approximate magnitude replacing an exact identity-conditioned event representation.",
+  alternatives: [
+    "The crossing convention is misread",
+    "Textual search consumes the reasoning budget",
+    "Exact count decoding is weak despite successful tracing",
+  ],
+  disconfirmingTest:
+    "Highlight and number only the target path’s crossings while preserving the same geometry, then compare exact paired responses.",
+  mitigations: [
+    "Path-conditioned visual attention",
+    "Explicit object files",
+    "External visual tracing and counting tools",
+  ],
+  affectedModels:
+    "Confirmed on the frozen 2026-09-01 routes for Gemini 3.7 Flash, Kimi K3, and Qwen 3.8 Max at 40 crossings; Kimi used its separately declared no-reasoning forced-choice condition.",
+  severity: "foundational",
+  reproducibility: "high",
+  accent: "cobalt",
+  featured: true,
+});
+
 export const failureModes: FailureMode[] = entries.map((entry) => ({
   ...entry,
   affectedModels:

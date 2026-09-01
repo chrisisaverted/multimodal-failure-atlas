@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { FlaskConical, LockKeyhole, Search, Users } from "lucide-react";
 import manifest from "../../../public/evaluations/lattice-counting-discovery-v1/manifest.json";
+import precisionManifest from "../../../public/evaluations/precision-wire-count-confirmatory-v1/manifest.json";
 import { HumanBaselineLab } from "@/components/human-baseline-lab";
 import { AdaptiveResultsPanel } from "@/components/adaptive-results-panel";
+import { PrecisionWireResultsPanel } from "@/components/precision-wire-results-panel";
 
 export const metadata: Metadata = { title: "Adaptive discovery" };
 
@@ -17,41 +19,54 @@ const selfTestCases = manifest.cases
     count: item.parameters.count,
   }));
 
+const precisionSelfTestCases = precisionManifest.cases
+  .filter((item) => item.condition === "native-image")
+  .slice(0, 8)
+  .map((item) => ({
+    candidateId: item.candidateId,
+    artifactPath: `/${item.artifact.replace(/^public\//, "")}`,
+    question: item.question,
+    answerOptions: item.answerOptions,
+    expectedAnswer: item.expectedAnswer,
+    count: item.expectedAnswer,
+    mediaType: "image" as const,
+  }));
+
 export default function DiscoveryPage() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
   return (
     <>
       <section className="section-shell page-section discovery-hero">
         <header className="page-header">
-          <p className="eyebrow">Adaptive discovery · protocol v1</p>
+          <p className="eyebrow">Adaptive discovery · live protocol</p>
           <h1>
             Search for the boundary.
             <br />
             <em>Then lock the test.</em>
           </h1>
           <p>
-            Forty-eight frozen videos map where short repeated events disappear or become hard to count.
-            Model-guided discovery and untouched confirmation are kept structurally separate.
+            Deterministic image and video generators search for controlled difficulty settings where every
+            target route fails. Model-guided discovery and untouched confirmation stay structurally separate.
           </p>
         </header>
         <div className="discovery-protocol-grid">
           <article>
             <Search />
             <span>01 · Discover</span>
-            <h2>12 parameter cells</h2>
-            <p>Duration × interval × sampling phase, each tested at four odd-numbered counts.</p>
+            <h2>Parameterized cells</h2>
+            <p>Each generator varies one interpretable difficulty axis with balanced answers.</p>
           </article>
           <article>
             <FlaskConical />
             <span>02 · Select</span>
-            <h2>Wrong answers only</h2>
-            <p>Silence never earns hardness. A conservative cross-model score chooses two cells.</p>
+            <h2>Every model matters</h2>
+            <p>Silence never earns hardness. The easiest target route determines whether a cell advances.</p>
           </article>
           <article>
             <LockKeyhole />
             <span>03 · Confirm</span>
             <h2>Untouched holdout</h2>
-            <p>Even counts, new appearances, and disjoint seeds are reserved before screening.</p>
+            <p>New paths, appearances, answer locations, and disjoint seeds are reserved before screening.</p>
           </article>
           <article>
             <Users />
@@ -83,6 +98,7 @@ export default function DiscoveryPage() {
       </section>
 
       <AdaptiveResultsPanel />
+      <PrecisionWireResultsPanel />
 
       <section className="section-shell baseline-section">
         <div className="section-heading split-heading">
@@ -95,11 +111,14 @@ export default function DiscoveryPage() {
             </h2>
           </div>
           <p>
-            Try eight discovery specimens before seeing their answers. Results stay in your browser and can be
-            exported. This checks the instrument; it is not yet a research-grade human baseline.
+            Try eight confirmatory specimens before seeing their answers. Results stay in your browser and can
+            be exported. This checks the instrument; it is not yet a research-grade human baseline.
           </p>
         </div>
-        <HumanBaselineLab cases={selfTestCases} basePath={basePath} />
+        <HumanBaselineLab
+          cases={precisionSelfTestCases.length ? precisionSelfTestCases : selfTestCases}
+          basePath={basePath}
+        />
       </section>
     </>
   );

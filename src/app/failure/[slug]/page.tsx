@@ -9,6 +9,7 @@ import { EvidenceChip } from "@/components/evidence-chip";
 import { PipelineMap } from "@/components/pipeline-map";
 import { CapabilityCurve } from "@/components/capability-curve";
 import { ResultMatrix } from "@/components/result-matrix";
+import { PrecisionWireResultsPanel } from "@/components/precision-wire-results-panel";
 
 type FailurePageProps = { params: Promise<{ slug: string }> };
 
@@ -51,7 +52,9 @@ export default async function FailurePage({ params }: FailurePageProps) {
         </div>
       </header>
 
-      {mode.generator ? (
+      {mode.id === "identity-conditioned-exact-counting" ? (
+        <PrecisionWireResultsPanel />
+      ) : mode.generator ? (
         <section className="section-shell exhibit-lab-section">
           <div className="section-intro">
             <p className="eyebrow">Generate a specimen</p>

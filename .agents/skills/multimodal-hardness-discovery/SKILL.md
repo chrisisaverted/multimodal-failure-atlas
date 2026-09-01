@@ -36,6 +36,12 @@ duration, phase, temporal location, clip length, and visual appearance independe
 compression research, vary native scale, resize phase, crowding, and answer-location while preserving
 a native-resolution oracle.
 
+When a single primitive transfers too well, compose two observed weaknesses around a shared visual
+intermediate—for example, preserve one identity and then count only its events. Treat answer spacing as
+a difficulty variable: adjacent balanced numeric options test exactness, while widely separated options
+may reward approximate magnitude. Never increase nominal difficulty by making evidence ambiguous or
+human-illegible.
+
 Preserve every artifact, content hash, prompt, raw response, route, endpoint revision, scorer decision,
 and provider-reported cost. New evidence should refine this skill; do not generalize one route-specific
 failure into a universal rule.

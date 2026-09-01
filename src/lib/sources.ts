@@ -329,6 +329,15 @@ export const citations: Citation[] = [
     retrieved: "2026-08-30",
   },
   {
+    id: "traversalbench",
+    title: "TraversalBench: Challenging Paths to Follow for Vision Language Models",
+    authors: "Petrova, Chen, and Soljačić",
+    year: 2026,
+    url: "https://arxiv.org/abs/2604.10999",
+    note: "Controlled exact visual path traversal showing that self-intersections dominate errors and localize breakdown near the first crossing.",
+    retrieved: "2026-09-01",
+  },
+  {
     id: "atp-llava",
     title: "ATP-LLaVA: Adaptive Token Pruning for Large Vision Language Models",
     authors: "Ye et al.",

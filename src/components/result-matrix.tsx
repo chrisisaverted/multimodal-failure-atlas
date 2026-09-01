@@ -1,8 +1,62 @@
 import Link from "next/link";
 import { DatabaseZap } from "lucide-react";
 import { groupRunSummaries, runsForFailure } from "@/lib/published-results";
+import precisionSummary from "@/data/precision-wire-summary.json";
 
 const percent = (value: number) => `${Math.round(value * 100)}%`;
+
+function interval(correct: number, n: number) {
+  if (!n) return { lower: 0, upper: 0 };
+  const z = 1.959963984540054;
+  const p = correct / n;
+  const denominator = 1 + (z * z) / n;
+  const centre = (p + (z * z) / (2 * n)) / denominator;
+  const margin = (z * Math.sqrt((p * (1 - p)) / n + (z * z) / (4 * n * n))) / denominator;
+  return { lower: Math.max(0, centre - margin), upper: Math.min(1, centre + margin) };
+}
+
+function PrecisionResultMatrix({ affectedModels }: { affectedModels?: string }) {
+  const rows = precisionSummary.models.flatMap((model) =>
+    ([
+      ["native image", model.native],
+      ["numbered oracle control", model.oracle],
+    ] as const).map(([condition, result]) => {
+      const bounds = interval(result.adjudicatedCorrect, result.substantiveAnswers);
+      return { model, condition, result, ...bounds };
+    }),
+  );
+  return (
+    <div className="result-matrix" aria-label="Verified model result matrix">
+      <div className="result-matrix-head">
+        <span>Model snapshot</span>
+        <span>Input condition</span>
+        <span>Accuracy · 95% CI</span>
+        <span>Samples</span>
+      </div>
+      {rows.map(({ model, condition, result, lower, upper }) => (
+        <div className="result-matrix-row" key={`${model.modelId}-${condition}`}>
+          <span>
+            <b>{model.modelId}</b>
+            <small>openrouter · {model.reasoningEffort} reasoning</small>
+          </span>
+          <span>{condition}</span>
+          <span>
+            <b>{percent(result.adjudicatedCorrect / result.substantiveAnswers)}</b>
+            <small>
+              {percent(lower)}–{percent(upper)}
+            </small>
+          </span>
+          <span>{result.substantiveAnswers}</span>
+        </div>
+      ))}
+      <p className="affected-model-scope">
+        <span>Affected-model scope</span>
+        This frozen holdout reports paired native and control results for three routes. One Qwen control
+        response was counted correct by the recorded human adjudication. {affectedModels}
+      </p>
+    </div>
+  );
+}
 
 export function ResultMatrix({
   affectedModels,
@@ -11,6 +65,9 @@ export function ResultMatrix({
   affectedModels?: string;
   failureModeId: string;
 }) {
+  if (failureModeId === "identity-conditioned-exact-counting") {
+    return <PrecisionResultMatrix affectedModels={affectedModels} />;
+  }
   const summaries = groupRunSummaries(runsForFailure(failureModeId));
   return (
     <div className="result-matrix" aria-label="Verified model result matrix">

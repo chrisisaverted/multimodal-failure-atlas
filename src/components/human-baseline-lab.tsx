@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import Image from "next/image";
 
 interface BaselineCase {
   candidateId: string;
@@ -8,7 +9,8 @@ interface BaselineCase {
   question: string;
   answerOptions: string[];
   expectedAnswer: string;
-  count: number;
+  count: number | string;
+  mediaType?: "video" | "image";
 }
 
 interface BaselineResponse {
@@ -119,18 +121,32 @@ export function HumanBaselineLab({ cases, basePath }: { cases: BaselineCase[]; b
         </span>
         <span>{responses.length} recorded locally</span>
       </div>
-      <video
-        key={current.candidateId}
-        controls
-        playsInline
-        preload="metadata"
-        onLoadedMetadata={(event) => {
-          startedAt.current = event.timeStamp;
-        }}
-        aria-label={`Counting specimen ${index + 1}`}
-      >
-        <source src={`${basePath}${current.artifactPath}`} type="video/mp4" />
-      </video>
+      {current.mediaType === "image" ? (
+        <Image
+          key={current.candidateId}
+          src={`${basePath}${current.artifactPath}`}
+          width={1800}
+          height={900}
+          unoptimized
+          onLoad={(event) => {
+            startedAt.current = event.timeStamp;
+          }}
+          alt={`Visual counting specimen ${index + 1}`}
+        />
+      ) : (
+        <video
+          key={current.candidateId}
+          controls
+          playsInline
+          preload="metadata"
+          onLoadedMetadata={(event) => {
+            startedAt.current = event.timeStamp;
+          }}
+          aria-label={`Counting specimen ${index + 1}`}
+        >
+          <source src={`${basePath}${current.artifactPath}`} type="video/mp4" />
+        </video>
+      )}
       <div className="baseline-question">
         <p>{current.question}</p>
         <div className="baseline-options" aria-label="Answer options">
@@ -158,7 +174,7 @@ export function HumanBaselineLab({ cases, basePath }: { cases: BaselineCase[]; b
           </button>
         </div>
       ) : (
-        <small>Play the complete clip, then choose once. Replays are allowed and not yet controlled.</small>
+        <small>Inspect the complete specimen, then choose once. Viewing time is recorded locally.</small>
       )}
     </div>
   );
