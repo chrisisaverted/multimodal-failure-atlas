@@ -1,0 +1,344 @@
+{
+  "id": "maze-reachability-discovery-v1",
+  "generatorVersion": "maze-reachability-v1",
+  "status": "discovery-only",
+  "hypothesis": "Frontier models fail exact visual graph reachability in dense mazes even when one of four choices is objectively connected.",
+  "candidates": [
+    {
+      "id": "mr-91f76ad609fb1f60",
+      "cellId": "cell-bd83a51c08de5473",
+      "split": "discovery",
+      "seed": 1700000,
+      "failureModeId": "visual-maze-reachability",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "D",
+        "C",
+        "B",
+        "A"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "mazeSize": 11,
+        "correctPanel": 0,
+        "visualVariant": 0
+      }
+    },
+    {
+      "id": "mr-706daf918f3fa36b",
+      "cellId": "cell-bd83a51c08de5473",
+      "split": "discovery",
+      "seed": 1700001,
+      "failureModeId": "visual-maze-reachability",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "D",
+        "C",
+        "B",
+        "A"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "mazeSize": 11,
+        "correctPanel": 1,
+        "visualVariant": 1
+      }
+    },
+    {
+      "id": "mr-6a45d6e93310b862",
+      "cellId": "cell-bd83a51c08de5473",
+      "split": "discovery",
+      "seed": 1700002,
+      "failureModeId": "visual-maze-reachability",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "C",
+        "D",
+        "B",
+        "A"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "mazeSize": 11,
+        "correctPanel": 2,
+        "visualVariant": 2
+      }
+    },
+    {
+      "id": "mr-88617376eedb0fc0",
+      "cellId": "cell-bd83a51c08de5473",
+      "split": "discovery",
+      "seed": 1700003,
+      "failureModeId": "visual-maze-reachability",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "D",
+        "B",
+        "C",
+        "A"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "mazeSize": 11,
+        "correctPanel": 3,
+        "visualVariant": 3
+      }
+    },
+    {
+      "id": "mr-d298c33989ffc0a3",
+      "cellId": "cell-bd83a51c08de5473",
+      "split": "discovery",
+      "seed": 1700004,
+      "failureModeId": "visual-maze-reachability",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "D",
+        "B",
+        "C",
+        "A"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "mazeSize": 11,
+        "correctPanel": 0,
+        "visualVariant": 4
+      }
+    },
+    {
+      "id": "mr-99e86da4e8704cd9",
+      "cellId": "cell-bd83a51c08de5473",
+      "split": "discovery",
+      "seed": 1700005,
+      "failureModeId": "visual-maze-reachability",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "B",
+        "D",
+        "C",
+        "A"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "mazeSize": 11,
+        "correctPanel": 1,
+        "visualVariant": 5
+      }
+    },
+    {
+      "id": "mr-06caaacf7c1d12fc",
+      "cellId": "cell-bd83a51c08de5473",
+      "split": "discovery",
+      "seed": 1700006,
+      "failureModeId": "visual-maze-reachability",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "B",
+        "D",
+        "C",
+        "A"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "mazeSize": 11,
+        "correctPanel": 2,
+        "visualVariant": 6
+      }
+    },
+    {
+      "id": "mr-013d4fe704800fb7",
+      "cellId": "cell-bd83a51c08de5473",
+      "split": "discovery",
+      "seed": 1700007,
+      "failureModeId": "visual-maze-reachability",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "C",
+        "B",
+        "D",
+        "A"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "mazeSize": 11,
+        "correctPanel": 3,
+        "visualVariant": 7
+      }
+    },
+    {
+      "id": "mr-e1f8049ff054bef1",
+      "cellId": "cell-5bdcea999d99020c",
+      "split": "discovery",
+      "seed": 1700008,
+      "failureModeId": "visual-maze-reachability",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "B",
+        "C",
+        "D",
+        "A"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "mazeSize": 15,
+        "correctPanel": 0,
+        "visualVariant": 0
+      }
+    },
+    {
+      "id": "mr-88ea123c96fcb82a",
+      "cellId": "cell-5bdcea999d99020c",
+      "split": "discovery",
+      "seed": 1700009,
+      "failureModeId": "visual-maze-reachability",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "B",
+        "C",
+        "D",
+        "A"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "mazeSize": 15,
+        "correctPanel": 1,
+        "visualVariant": 1
+      }
+    },
+    {
+      "id": "mr-9493bf3e484acd66",
+      "cellId": "cell-5bdcea999d99020c",
+      "split": "discovery",
+      "seed": 1700010,
+      "failureModeId": "visual-maze-reachability",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "C",
+        "B",
+        "D",
+        "A"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "mazeSize": 15,
+        "correctPanel": 2,
+        "visualVariant": 2
+      }
+    },
+    {
+      "id": "mr-c47b4dfbf02a1b9c",
+      "cellId": "cell-5bdcea999d99020c",
+      "split": "discovery",
+      "seed": 1700011,
+      "failureModeId": "visual-maze-reachability",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "C",
+        "D",
+        "B",
+        "A"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "mazeSize": 15,
+        "correctPanel": 3,
+        "visualVariant": 3
+      }
+    },
+    {
+      "id": "mr-9ed5db21d2db1474",
+      "cellId": "cell-5bdcea999d99020c",
+      "split": "discovery",
+      "seed": 1700012,
+      "failureModeId": "visual-maze-reachability",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "C",
+        "D",
+        "B",
+        "A"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "mazeSize": 15,
+        "correctPanel": 0,
+        "visualVariant": 4
+      }
+    },
+    {
+      "id": "mr-5f91019ba3165ef3",
+      "cellId": "cell-5bdcea999d99020c",
+      "split": "discovery",
+      "seed": 1700013,
+      "failureModeId": "visual-maze-reachability",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "D",
+        "C",
+        "B",
+        "A"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "mazeSize": 15,
+        "correctPanel": 1,
+        "visualVariant": 5
+      }
+    },
+    {
+      "id": "mr-60621fe8a16f8035",
+      "cellId": "cell-5bdcea999d99020c",
+      "split": "discovery",
+      "seed": 1700014,
+      "failureModeId": "visual-maze-reachability",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "B",
+        "D",
+        "C",
+        "A"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "mazeSize": 15,
+        "correctPanel": 2,
+        "visualVariant": 6
+      }
+    },
+    {
+      "id": "mr-59ca5d3eedc0b4ca",
+      "cellId": "cell-5bdcea999d99020c",
+      "split": "discovery",
+      "seed": 1700015,
+      "failureModeId": "visual-maze-reachability",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "B",
+        "D",
+        "C",
+        "A"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "mazeSize": 15,
+        "correctPanel": 3,
+        "visualVariant": 7
+      }
+    }
+  ]
+}

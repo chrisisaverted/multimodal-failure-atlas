@@ -53,8 +53,30 @@ import {
   renderSelectiveFlashSvg,
   targetFlashStarts,
 } from "./selective-flash-tracking";
+import {
+  createMazeReachabilityDiscoveryGrid,
+  mazePanelEdges,
+  renderMazeReachabilitySvg,
+} from "./maze-reachability";
 
 describe("adaptive multimodal discovery", () => {
+  it("constructs balanced edge-count-matched maze reachability panels", () => {
+    const candidates = createMazeReachabilityDiscoveryGrid();
+    expect(candidates).toHaveLength(16);
+    for (const cellId of new Set(candidates.map((candidate) => candidate.cellId))) {
+      const answers = candidates
+        .filter((candidate) => candidate.cellId === cellId)
+        .map((candidate) => candidate.expectedAnswer)
+        .sort();
+      expect(answers).toEqual(["A", "A", "B", "B", "C", "C", "D", "D"]);
+    }
+    for (const candidate of candidates) {
+      const edgeCounts = Array.from({ length: 4 }, (_, panel) => mazePanelEdges(candidate, panel).size);
+      expect(new Set(edgeCounts).size).toBe(1);
+      expect(renderMazeReachabilitySvg(candidate)).toBe(renderMazeReachabilitySvg(candidate));
+    }
+  });
+
   it("balances selective target-flash counts with exact non-overlapping schedules", () => {
     const candidates = createSelectiveFlashDiscoveryGrid();
     expect(candidates).toHaveLength(8);

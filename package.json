@@ -46,6 +46,8 @@
     "generate:change-localization": "tsx scripts/materialize-change-localization.ts",
     "plan:selective-flash": "tsx scripts/plan-selective-flash.ts",
     "generate:selective-flash": "tsx scripts/materialize-selective-flash.ts",
+    "plan:maze-reachability": "tsx scripts/plan-maze-reachability.ts",
+    "generate:maze-reachability": "tsx scripts/materialize-maze-reachability.ts",
     "publish:adaptive": "tsx scripts/publish-adaptive-results.ts",
     "publish:precision-wire": "tsx scripts/publish-precision-wire-results.ts",
     "evaluate": "tsx scripts/evaluate.ts",
