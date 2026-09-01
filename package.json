@@ -186,6 +186,7 @@
     "generate:paper-folding:hard": "tsx scripts/materialize-paper-folding-hard.ts",
     "publish:adaptive": "tsx scripts/publish-adaptive-results.ts",
     "publish:admitted": "tsx scripts/publish-admitted-evidence.ts",
+    "build:human-study": "tsx scripts/build-human-study-manifest.ts",
     "audit:coverage": "tsx scripts/audit-substantive-coverage.ts",
     "audit:export": "tsx scripts/audit-static-export.ts",
     "freeze:replication": "tsx scripts/freeze-replication-protocols.ts",

@@ -121,6 +121,7 @@ export default function VerifiedPage() {
           claims.
         </p>
         <Link href="/methods">Read the evidence standard</Link>
+        <Link href="/human-study">Open the human study instrument</Link>
         <Link href="/runs">Open the response ledger</Link>
       </div>
     </section>
