@@ -46,6 +46,7 @@ import {
 import {
   changeQuadrants,
   createChangeLocalizationHoldout,
+  createChangeLocalizationExtremeGrid,
   createChangeLocalizationDiscoveryGrid,
   renderChangeLocalizationSvg,
 } from "./change-localization";
@@ -83,10 +84,25 @@ import { createPaperFoldingDiscoveryGrid, paperOptionPatterns, unfoldPunches } f
 import { createPeriodicAnomalyGrid, periodicLaneStarts } from "./periodic-anomaly";
 import { createCubeStackGrid, cubeHeights } from "./cube-stack";
 import { bindingSequences, createBindingGrid } from "./temporal-binding";
-import { createMirrorRayGrid, traceMirrorRay } from "./mirror-ray";
+import { createMirrorRayGrid, createMirrorRayHardGrid, traceMirrorRay } from "./mirror-ray";
 import { applyTransfers, createCausalTransferGrid } from "./causal-transfer";
+import { applyConservation, createConservationGrid } from "./conservation-ledger";
 
 describe("adaptive multimodal discovery", () => {
+  it("conserves tokens and balances unique final maxima", () => {
+    const candidates = createConservationGrid();
+    expect(candidates).toHaveLength(8);
+    for (const candidate of candidates) {
+      const final = applyConservation(candidate.parameters.initialCounts, candidate.parameters.transfers);
+      const maximum = Math.max(...final);
+      expect(final.indexOf(maximum)).toBe(candidate.parameters.targetBox);
+      expect(final.filter((count) => count === maximum)).toHaveLength(1);
+      expect(final.reduce((sum, count) => sum + count, 0)).toBe(
+        candidate.parameters.initialCounts.reduce((sum, count) => sum + count, 0),
+      );
+    }
+  });
+
   it("balances exact final nodes under causally gated hidden transfers", () => {
     const candidates = createCausalTransferGrid();
     expect(candidates).toHaveLength(8);
@@ -104,6 +120,11 @@ describe("adaptive multimodal discovery", () => {
       expect(result.exit).toBe(candidate.parameters.targetExit);
       expect(result.hits).toBeGreaterThanOrEqual(6);
     }
+  });
+
+  it("raises the mirror-ray replacement cell to fourteen reflections", () => {
+    for (const candidate of createMirrorRayHardGrid())
+      expect(traceMirrorRay(candidate.parameters.configSeed).hits).toBeGreaterThanOrEqual(14);
   });
 
   it("binds the queried six-color sequence to exactly one object", () => {
@@ -291,6 +312,14 @@ describe("adaptive multimodal discovery", () => {
     expect(holdout.every((candidate) => candidate.seed >= 1_420_000)).toBe(true);
     for (const answer of changeQuadrants)
       expect(holdout.filter((candidate) => candidate.expectedAnswer === answer)).toHaveLength(4);
+  });
+
+  it("builds a balanced 42×42 replacement after the 34×34 boundary tie", () => {
+    const candidates = createChangeLocalizationExtremeGrid();
+    expect(candidates).toHaveLength(8);
+    expect(candidates.every((candidate) => candidate.parameters.gridSize === 42)).toBe(true);
+    for (const answer of changeQuadrants)
+      expect(candidates.filter((candidate) => candidate.expectedAnswer === answer)).toHaveLength(2);
   });
 
   it("balances exact rotation correspondence across candidate locations", () => {

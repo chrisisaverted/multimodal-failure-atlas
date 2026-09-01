@@ -15,7 +15,7 @@ export const changeLocalizationCandidateSchema = z.object({
   expectedAnswer: z.enum(changeQuadrants),
   humanSolvability: z.literal("unverified"),
   parameters: z.object({
-    gridSize: z.number().int().min(8).max(36),
+    gridSize: z.number().int().min(8).max(48),
     changedQuadrant: z.number().int().min(0).max(3),
     changeRow: z.number().int().nonnegative(),
     changeColumn: z.number().int().nonnegative(),
@@ -117,6 +117,20 @@ export function createChangeLocalizationHardGrid() {
         }),
       );
       seed += 1;
+    }
+  }
+  return candidates;
+}
+
+export function createChangeLocalizationExtremeGrid() {
+  const candidates: ChangeLocalizationCandidate[] = [];
+  let seed = 1_430_000;
+  for (let replicate = 0; replicate < 2; replicate += 1) {
+    for (let changedQuadrant = 0; changedQuadrant < 4; changedQuadrant += 1) {
+      candidates.push(createChangeLocalizationCandidate({
+        split: "discovery", seed: seed++, gridSize: 42, changedQuadrant,
+        visualVariant: 600 + replicate * 4 + changedQuadrant,
+      }));
     }
   }
   return candidates;

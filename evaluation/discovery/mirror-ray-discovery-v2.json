@@ -1,0 +1,193 @@
+{
+  "id": "mirror-ray-discovery-v2",
+  "generatorVersion": "mirror-ray-v1",
+  "status": "discovery-only",
+  "supersedes": "6+ reflection screen where Gemini scored exactly 4/8",
+  "hypothesis": "Fourteen or more exact reflections cross the model boundary while remaining a deterministic traceable geometry task.",
+  "candidates": [
+    {
+      "id": "ray-ff85254cc7812f88",
+      "cellId": "cell-15x15-14-plus-reflections",
+      "split": "discovery",
+      "seed": 2810000,
+      "failureModeId": "multi-step-geometric-ray-tracing",
+      "question": "The red laser enters from the left and reflects from every / or \\ mirror. Which SIDE does it exit?",
+      "answerOptions": [
+        "BOTTOM",
+        "TOP",
+        "LEFT",
+        "RIGHT"
+      ],
+      "expectedAnswer": "TOP",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "gridSize": 15,
+        "targetExit": 0,
+        "configSeed": 47801687,
+        "mirrorHits": 19,
+        "visualVariant": 100
+      }
+    },
+    {
+      "id": "ray-e4ff781398d5d3b5",
+      "cellId": "cell-15x15-14-plus-reflections",
+      "split": "discovery",
+      "seed": 2810001,
+      "failureModeId": "multi-step-geometric-ray-tracing",
+      "question": "The red laser enters from the left and reflects from every / or \\ mirror. Which SIDE does it exit?",
+      "answerOptions": [
+        "TOP",
+        "LEFT",
+        "BOTTOM",
+        "RIGHT"
+      ],
+      "expectedAnswer": "RIGHT",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "gridSize": 15,
+        "targetExit": 1,
+        "configSeed": 47801704,
+        "mirrorHits": 20,
+        "visualVariant": 101
+      }
+    },
+    {
+      "id": "ray-d67dbbc3a06de72c",
+      "cellId": "cell-15x15-14-plus-reflections",
+      "split": "discovery",
+      "seed": 2810002,
+      "failureModeId": "multi-step-geometric-ray-tracing",
+      "question": "The red laser enters from the left and reflects from every / or \\ mirror. Which SIDE does it exit?",
+      "answerOptions": [
+        "TOP",
+        "LEFT",
+        "BOTTOM",
+        "RIGHT"
+      ],
+      "expectedAnswer": "BOTTOM",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "gridSize": 15,
+        "targetExit": 2,
+        "configSeed": 47841316,
+        "mirrorHits": 25,
+        "visualVariant": 102
+      }
+    },
+    {
+      "id": "ray-1bea01b3a3721a47",
+      "cellId": "cell-15x15-14-plus-reflections",
+      "split": "discovery",
+      "seed": 2810003,
+      "failureModeId": "multi-step-geometric-ray-tracing",
+      "question": "The red laser enters from the left and reflects from every / or \\ mirror. Which SIDE does it exit?",
+      "answerOptions": [
+        "LEFT",
+        "TOP",
+        "BOTTOM",
+        "RIGHT"
+      ],
+      "expectedAnswer": "LEFT",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "gridSize": 15,
+        "targetExit": 3,
+        "configSeed": 47833414,
+        "mirrorHits": 22,
+        "visualVariant": 103
+      }
+    },
+    {
+      "id": "ray-e21aaa6ccb020a34",
+      "cellId": "cell-15x15-14-plus-reflections",
+      "split": "discovery",
+      "seed": 2810004,
+      "failureModeId": "multi-step-geometric-ray-tracing",
+      "question": "The red laser enters from the left and reflects from every / or \\ mirror. Which SIDE does it exit?",
+      "answerOptions": [
+        "TOP",
+        "LEFT",
+        "BOTTOM",
+        "RIGHT"
+      ],
+      "expectedAnswer": "TOP",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "gridSize": 15,
+        "targetExit": 0,
+        "configSeed": 47896783,
+        "mirrorHits": 29,
+        "visualVariant": 104
+      }
+    },
+    {
+      "id": "ray-945e3ed2d0aa9b3b",
+      "cellId": "cell-15x15-14-plus-reflections",
+      "split": "discovery",
+      "seed": 2810005,
+      "failureModeId": "multi-step-geometric-ray-tracing",
+      "question": "The red laser enters from the left and reflects from every / or \\ mirror. Which SIDE does it exit?",
+      "answerOptions": [
+        "BOTTOM",
+        "LEFT",
+        "TOP",
+        "RIGHT"
+      ],
+      "expectedAnswer": "RIGHT",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "gridSize": 15,
+        "targetExit": 1,
+        "configSeed": 47880962,
+        "mirrorHits": 14,
+        "visualVariant": 105
+      }
+    },
+    {
+      "id": "ray-b14df1ea65f01c20",
+      "cellId": "cell-15x15-14-plus-reflections",
+      "split": "discovery",
+      "seed": 2810006,
+      "failureModeId": "multi-step-geometric-ray-tracing",
+      "question": "The red laser enters from the left and reflects from every / or \\ mirror. Which SIDE does it exit?",
+      "answerOptions": [
+        "LEFT",
+        "BOTTOM",
+        "TOP",
+        "RIGHT"
+      ],
+      "expectedAnswer": "BOTTOM",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "gridSize": 15,
+        "targetExit": 2,
+        "configSeed": 48276929,
+        "mirrorHits": 19,
+        "visualVariant": 106
+      }
+    },
+    {
+      "id": "ray-5b84b670277b5afd",
+      "cellId": "cell-15x15-14-plus-reflections",
+      "split": "discovery",
+      "seed": 2810007,
+      "failureModeId": "multi-step-geometric-ray-tracing",
+      "question": "The red laser enters from the left and reflects from every / or \\ mirror. Which SIDE does it exit?",
+      "answerOptions": [
+        "BOTTOM",
+        "LEFT",
+        "TOP",
+        "RIGHT"
+      ],
+      "expectedAnswer": "LEFT",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "gridSize": 15,
+        "targetExit": 3,
+        "configSeed": 47793887,
+        "mirrorHits": 20,
+        "visualVariant": 107
+      }
+    }
+  ]
+}

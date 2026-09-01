@@ -1,0 +1,265 @@
+{
+  "id": "mirror-ray-discovery-v2",
+  "planSha256": "27d5dd9360c21ac234d600b4fd265ac4b7b2ee2f61efdea7ee0784053a41c68a",
+  "generatorVersion": "mirror-ray-v1",
+  "renderer": "mirror-ray-svg-v1",
+  "fps": 0,
+  "cases": [
+    {
+      "candidateId": "ray-ff85254cc7812f88",
+      "cellId": "cell-15x15-14-plus-reflections",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "A 15×15 mirror field requiring 19 exact reflections.",
+      "failureModeId": "multi-step-geometric-ray-tracing",
+      "generator": "mirror-ray",
+      "seed": 2810000,
+      "difficulty": 89,
+      "variant": 0,
+      "artifact": "public/evaluations/mirror-ray-discovery-v2/ray-ff85254cc7812f88.png",
+      "mimeType": "image/png",
+      "question": "The red laser enters from the left and reflects from every / or \\ mirror. Which SIDE does it exit?",
+      "answerOptions": [
+        "BOTTOM",
+        "TOP",
+        "LEFT",
+        "RIGHT"
+      ],
+      "expectedAnswer": "TOP",
+      "sha256": "e6351b3ecb2a21cf5efe8cd76064c47135b9c4aee26de100b205a6f576ef5fb5",
+      "parameters": {
+        "gridSize": 15,
+        "targetExit": 0,
+        "configSeed": 47801687,
+        "mirrorHits": 19,
+        "visualVariant": 100
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Trace the ray one cell at a time through every mirror. Return exactly one allowed exit side."
+    },
+    {
+      "candidateId": "ray-e4ff781398d5d3b5",
+      "cellId": "cell-15x15-14-plus-reflections",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "A 15×15 mirror field requiring 20 exact reflections.",
+      "failureModeId": "multi-step-geometric-ray-tracing",
+      "generator": "mirror-ray",
+      "seed": 2810001,
+      "difficulty": 90,
+      "variant": 1,
+      "artifact": "public/evaluations/mirror-ray-discovery-v2/ray-e4ff781398d5d3b5.png",
+      "mimeType": "image/png",
+      "question": "The red laser enters from the left and reflects from every / or \\ mirror. Which SIDE does it exit?",
+      "answerOptions": [
+        "TOP",
+        "LEFT",
+        "BOTTOM",
+        "RIGHT"
+      ],
+      "expectedAnswer": "RIGHT",
+      "sha256": "74090b8e61deedaabb1653c1cd28c73d7b47a5c7849a7286bf6acb1e84c3184a",
+      "parameters": {
+        "gridSize": 15,
+        "targetExit": 1,
+        "configSeed": 47801704,
+        "mirrorHits": 20,
+        "visualVariant": 101
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Trace the ray one cell at a time through every mirror. Return exactly one allowed exit side."
+    },
+    {
+      "candidateId": "ray-d67dbbc3a06de72c",
+      "cellId": "cell-15x15-14-plus-reflections",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "A 15×15 mirror field requiring 25 exact reflections.",
+      "failureModeId": "multi-step-geometric-ray-tracing",
+      "generator": "mirror-ray",
+      "seed": 2810002,
+      "difficulty": 95,
+      "variant": 2,
+      "artifact": "public/evaluations/mirror-ray-discovery-v2/ray-d67dbbc3a06de72c.png",
+      "mimeType": "image/png",
+      "question": "The red laser enters from the left and reflects from every / or \\ mirror. Which SIDE does it exit?",
+      "answerOptions": [
+        "TOP",
+        "LEFT",
+        "BOTTOM",
+        "RIGHT"
+      ],
+      "expectedAnswer": "BOTTOM",
+      "sha256": "d07cf7a947710047306cd380728880f9948388f60373958a92d8a0b8aab1da5f",
+      "parameters": {
+        "gridSize": 15,
+        "targetExit": 2,
+        "configSeed": 47841316,
+        "mirrorHits": 25,
+        "visualVariant": 102
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Trace the ray one cell at a time through every mirror. Return exactly one allowed exit side."
+    },
+    {
+      "candidateId": "ray-1bea01b3a3721a47",
+      "cellId": "cell-15x15-14-plus-reflections",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "A 15×15 mirror field requiring 22 exact reflections.",
+      "failureModeId": "multi-step-geometric-ray-tracing",
+      "generator": "mirror-ray",
+      "seed": 2810003,
+      "difficulty": 92,
+      "variant": 3,
+      "artifact": "public/evaluations/mirror-ray-discovery-v2/ray-1bea01b3a3721a47.png",
+      "mimeType": "image/png",
+      "question": "The red laser enters from the left and reflects from every / or \\ mirror. Which SIDE does it exit?",
+      "answerOptions": [
+        "LEFT",
+        "TOP",
+        "BOTTOM",
+        "RIGHT"
+      ],
+      "expectedAnswer": "LEFT",
+      "sha256": "8d83f8b128dce867b34bbe4ecf6c5af677547420b5c1b3b50c706251f8804898",
+      "parameters": {
+        "gridSize": 15,
+        "targetExit": 3,
+        "configSeed": 47833414,
+        "mirrorHits": 22,
+        "visualVariant": 103
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Trace the ray one cell at a time through every mirror. Return exactly one allowed exit side."
+    },
+    {
+      "candidateId": "ray-e21aaa6ccb020a34",
+      "cellId": "cell-15x15-14-plus-reflections",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "A 15×15 mirror field requiring 29 exact reflections.",
+      "failureModeId": "multi-step-geometric-ray-tracing",
+      "generator": "mirror-ray",
+      "seed": 2810004,
+      "difficulty": 99,
+      "variant": 4,
+      "artifact": "public/evaluations/mirror-ray-discovery-v2/ray-e21aaa6ccb020a34.png",
+      "mimeType": "image/png",
+      "question": "The red laser enters from the left and reflects from every / or \\ mirror. Which SIDE does it exit?",
+      "answerOptions": [
+        "TOP",
+        "LEFT",
+        "BOTTOM",
+        "RIGHT"
+      ],
+      "expectedAnswer": "TOP",
+      "sha256": "c5e432c250cf97af1694c307c29d9bdf2908dcd9de24fb6c4e495972437e19fb",
+      "parameters": {
+        "gridSize": 15,
+        "targetExit": 0,
+        "configSeed": 47896783,
+        "mirrorHits": 29,
+        "visualVariant": 104
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Trace the ray one cell at a time through every mirror. Return exactly one allowed exit side."
+    },
+    {
+      "candidateId": "ray-945e3ed2d0aa9b3b",
+      "cellId": "cell-15x15-14-plus-reflections",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "A 15×15 mirror field requiring 14 exact reflections.",
+      "failureModeId": "multi-step-geometric-ray-tracing",
+      "generator": "mirror-ray",
+      "seed": 2810005,
+      "difficulty": 84,
+      "variant": 5,
+      "artifact": "public/evaluations/mirror-ray-discovery-v2/ray-945e3ed2d0aa9b3b.png",
+      "mimeType": "image/png",
+      "question": "The red laser enters from the left and reflects from every / or \\ mirror. Which SIDE does it exit?",
+      "answerOptions": [
+        "BOTTOM",
+        "LEFT",
+        "TOP",
+        "RIGHT"
+      ],
+      "expectedAnswer": "RIGHT",
+      "sha256": "be5d9dfc15c8ee758d09b44a6db2e3530087b3e7dcfeb394b490737d1a098c8f",
+      "parameters": {
+        "gridSize": 15,
+        "targetExit": 1,
+        "configSeed": 47880962,
+        "mirrorHits": 14,
+        "visualVariant": 105
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Trace the ray one cell at a time through every mirror. Return exactly one allowed exit side."
+    },
+    {
+      "candidateId": "ray-b14df1ea65f01c20",
+      "cellId": "cell-15x15-14-plus-reflections",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "A 15×15 mirror field requiring 19 exact reflections.",
+      "failureModeId": "multi-step-geometric-ray-tracing",
+      "generator": "mirror-ray",
+      "seed": 2810006,
+      "difficulty": 89,
+      "variant": 6,
+      "artifact": "public/evaluations/mirror-ray-discovery-v2/ray-b14df1ea65f01c20.png",
+      "mimeType": "image/png",
+      "question": "The red laser enters from the left and reflects from every / or \\ mirror. Which SIDE does it exit?",
+      "answerOptions": [
+        "LEFT",
+        "BOTTOM",
+        "TOP",
+        "RIGHT"
+      ],
+      "expectedAnswer": "BOTTOM",
+      "sha256": "a2fd2666a22fe3f20e3fc423d2560eea8c8e110511c114ff9162c4d1dd87805c",
+      "parameters": {
+        "gridSize": 15,
+        "targetExit": 2,
+        "configSeed": 48276929,
+        "mirrorHits": 19,
+        "visualVariant": 106
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Trace the ray one cell at a time through every mirror. Return exactly one allowed exit side."
+    },
+    {
+      "candidateId": "ray-5b84b670277b5afd",
+      "cellId": "cell-15x15-14-plus-reflections",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "A 15×15 mirror field requiring 20 exact reflections.",
+      "failureModeId": "multi-step-geometric-ray-tracing",
+      "generator": "mirror-ray",
+      "seed": 2810007,
+      "difficulty": 90,
+      "variant": 7,
+      "artifact": "public/evaluations/mirror-ray-discovery-v2/ray-5b84b670277b5afd.png",
+      "mimeType": "image/png",
+      "question": "The red laser enters from the left and reflects from every / or \\ mirror. Which SIDE does it exit?",
+      "answerOptions": [
+        "BOTTOM",
+        "LEFT",
+        "TOP",
+        "RIGHT"
+      ],
+      "expectedAnswer": "LEFT",
+      "sha256": "1c73b3b0c9bb6bd46423c88340d9b4c61432f29e74b1bf6e2f2e1a4ae09038eb",
+      "parameters": {
+        "gridSize": 15,
+        "targetExit": 3,
+        "configSeed": 47793887,
+        "mirrorHits": 20,
+        "visualVariant": 107
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Trace the ray one cell at a time through every mirror. Return exactly one allowed exit side."
+    }
+  ]
+}

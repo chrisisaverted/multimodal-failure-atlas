@@ -1,0 +1,265 @@
+{
+  "id": "change-localization-discovery-v3",
+  "planSha256": "773c9eb701ac2f57699af6753d71d49d09b060788bf2e7ee0128660a1b9b1e24",
+  "generatorVersion": "dense-change-localization-v1",
+  "renderer": "dense-change-localization-svg-v1",
+  "fps": 0,
+  "cases": [
+    {
+      "candidateId": "cl-458db23af3ce4bba",
+      "cellId": "cell-685a3588c82d60a9",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Two dense grids differ by one 90-degree glyph rotation.",
+      "failureModeId": "dense-cross-image-change-localization",
+      "generator": "dense-change-localization",
+      "seed": 1430000,
+      "difficulty": 100,
+      "variant": 0,
+      "artifact": "public/evaluations/change-localization-discovery-v3/cl-458db23af3ce4bba.png",
+      "mimeType": "image/png",
+      "question": "In which labeled quadrant of the RIGHT grid is the one rotated glyph?",
+      "answerOptions": [
+        "D",
+        "A",
+        "C",
+        "B"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "e93deeeb746680fd72de923600a68472b2ed8a0aed6757774793ca7c1167a017",
+      "parameters": {
+        "gridSize": 42,
+        "changedQuadrant": 0,
+        "changeRow": 9,
+        "changeColumn": 2,
+        "visualVariant": 600
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Compare the two grids exhaustively and return exactly one allowed quadrant label without explanation."
+    },
+    {
+      "candidateId": "cl-96e07f09d895068b",
+      "cellId": "cell-685a3588c82d60a9",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Two dense grids differ by one 90-degree glyph rotation.",
+      "failureModeId": "dense-cross-image-change-localization",
+      "generator": "dense-change-localization",
+      "seed": 1430001,
+      "difficulty": 100,
+      "variant": 1,
+      "artifact": "public/evaluations/change-localization-discovery-v3/cl-96e07f09d895068b.png",
+      "mimeType": "image/png",
+      "question": "In which labeled quadrant of the RIGHT grid is the one rotated glyph?",
+      "answerOptions": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "38784b69ab907018d489e097fb4bc7c01827eb3c9b08fb29a70bca5a3eb0647e",
+      "parameters": {
+        "gridSize": 42,
+        "changedQuadrant": 1,
+        "changeRow": 9,
+        "changeColumn": 24,
+        "visualVariant": 601
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Compare the two grids exhaustively and return exactly one allowed quadrant label without explanation."
+    },
+    {
+      "candidateId": "cl-f1d3eb830ad3e554",
+      "cellId": "cell-685a3588c82d60a9",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Two dense grids differ by one 90-degree glyph rotation.",
+      "failureModeId": "dense-cross-image-change-localization",
+      "generator": "dense-change-localization",
+      "seed": 1430002,
+      "difficulty": 100,
+      "variant": 2,
+      "artifact": "public/evaluations/change-localization-discovery-v3/cl-f1d3eb830ad3e554.png",
+      "mimeType": "image/png",
+      "question": "In which labeled quadrant of the RIGHT grid is the one rotated glyph?",
+      "answerOptions": [
+        "A",
+        "B",
+        "D",
+        "C"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "0b34acd7aea10801a5400ef4d08514e6bf62c517b4527a713b366cfd90e12a60",
+      "parameters": {
+        "gridSize": 42,
+        "changedQuadrant": 2,
+        "changeRow": 29,
+        "changeColumn": 6,
+        "visualVariant": 602
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Compare the two grids exhaustively and return exactly one allowed quadrant label without explanation."
+    },
+    {
+      "candidateId": "cl-f5b8a51a0cf77ca3",
+      "cellId": "cell-685a3588c82d60a9",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Two dense grids differ by one 90-degree glyph rotation.",
+      "failureModeId": "dense-cross-image-change-localization",
+      "generator": "dense-change-localization",
+      "seed": 1430003,
+      "difficulty": 100,
+      "variant": 3,
+      "artifact": "public/evaluations/change-localization-discovery-v3/cl-f5b8a51a0cf77ca3.png",
+      "mimeType": "image/png",
+      "question": "In which labeled quadrant of the RIGHT grid is the one rotated glyph?",
+      "answerOptions": [
+        "D",
+        "A",
+        "C",
+        "B"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "2000afbdec273617894012926dd4310ea498e0e7a35bff7eceb7b127022389c7",
+      "parameters": {
+        "gridSize": 42,
+        "changedQuadrant": 3,
+        "changeRow": 29,
+        "changeColumn": 28,
+        "visualVariant": 603
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Compare the two grids exhaustively and return exactly one allowed quadrant label without explanation."
+    },
+    {
+      "candidateId": "cl-bf57a2a590ca7db9",
+      "cellId": "cell-685a3588c82d60a9",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Two dense grids differ by one 90-degree glyph rotation.",
+      "failureModeId": "dense-cross-image-change-localization",
+      "generator": "dense-change-localization",
+      "seed": 1430004,
+      "difficulty": 100,
+      "variant": 4,
+      "artifact": "public/evaluations/change-localization-discovery-v3/cl-bf57a2a590ca7db9.png",
+      "mimeType": "image/png",
+      "question": "In which labeled quadrant of the RIGHT grid is the one rotated glyph?",
+      "answerOptions": [
+        "B",
+        "D",
+        "C",
+        "A"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "4d6da5527ae2a547b57c11b57d2312466ddc67da5a79f1424b18b2f69d50da17",
+      "parameters": {
+        "gridSize": 42,
+        "changedQuadrant": 0,
+        "changeRow": 9,
+        "changeColumn": 9,
+        "visualVariant": 604
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Compare the two grids exhaustively and return exactly one allowed quadrant label without explanation."
+    },
+    {
+      "candidateId": "cl-d6cf0f598ec0b72d",
+      "cellId": "cell-685a3588c82d60a9",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Two dense grids differ by one 90-degree glyph rotation.",
+      "failureModeId": "dense-cross-image-change-localization",
+      "generator": "dense-change-localization",
+      "seed": 1430005,
+      "difficulty": 100,
+      "variant": 5,
+      "artifact": "public/evaluations/change-localization-discovery-v3/cl-d6cf0f598ec0b72d.png",
+      "mimeType": "image/png",
+      "question": "In which labeled quadrant of the RIGHT grid is the one rotated glyph?",
+      "answerOptions": [
+        "A",
+        "B",
+        "D",
+        "C"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "290c168f88c6f187daf8bb81b0cf03d9827321e475d873e9b3c9ea1878208ee3",
+      "parameters": {
+        "gridSize": 42,
+        "changedQuadrant": 1,
+        "changeRow": 9,
+        "changeColumn": 31,
+        "visualVariant": 605
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Compare the two grids exhaustively and return exactly one allowed quadrant label without explanation."
+    },
+    {
+      "candidateId": "cl-08a312d644185547",
+      "cellId": "cell-685a3588c82d60a9",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Two dense grids differ by one 90-degree glyph rotation.",
+      "failureModeId": "dense-cross-image-change-localization",
+      "generator": "dense-change-localization",
+      "seed": 1430006,
+      "difficulty": 100,
+      "variant": 6,
+      "artifact": "public/evaluations/change-localization-discovery-v3/cl-08a312d644185547.png",
+      "mimeType": "image/png",
+      "question": "In which labeled quadrant of the RIGHT grid is the one rotated glyph?",
+      "answerOptions": [
+        "D",
+        "A",
+        "C",
+        "B"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "7765009427648ab288ae5a144c53d23f1d40fe9dbc62fc398c383925ab617a7c",
+      "parameters": {
+        "gridSize": 42,
+        "changedQuadrant": 2,
+        "changeRow": 29,
+        "changeColumn": 13,
+        "visualVariant": 606
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Compare the two grids exhaustively and return exactly one allowed quadrant label without explanation."
+    },
+    {
+      "candidateId": "cl-e9bfcd25bc20d056",
+      "cellId": "cell-685a3588c82d60a9",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Two dense grids differ by one 90-degree glyph rotation.",
+      "failureModeId": "dense-cross-image-change-localization",
+      "generator": "dense-change-localization",
+      "seed": 1430007,
+      "difficulty": 100,
+      "variant": 7,
+      "artifact": "public/evaluations/change-localization-discovery-v3/cl-e9bfcd25bc20d056.png",
+      "mimeType": "image/png",
+      "question": "In which labeled quadrant of the RIGHT grid is the one rotated glyph?",
+      "answerOptions": [
+        "B",
+        "D",
+        "C",
+        "A"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "e1571b5817a6f7c9066d388e98f03b47b3daa3357c455951a2ecf6f07e2e9d40",
+      "parameters": {
+        "gridSize": 42,
+        "changedQuadrant": 3,
+        "changeRow": 29,
+        "changeColumn": 35,
+        "visualVariant": 607
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Compare the two grids exhaustively and return exactly one allowed quadrant label without explanation."
+    }
+  ]
+}

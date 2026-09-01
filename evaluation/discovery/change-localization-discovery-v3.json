@@ -1,0 +1,193 @@
+{
+  "id": "change-localization-discovery-v3",
+  "generatorVersion": "dense-change-localization-v1",
+  "status": "discovery-only",
+  "supersedes": "34×34 confirmatory cell where Gemini scored exactly 8/16",
+  "hypothesis": "A 42×42 difficulty cell moves beyond Gemini's observed exhaustive-comparison boundary while retaining the same causal task and native-resolution human inspectability.",
+  "candidates": [
+    {
+      "id": "cl-458db23af3ce4bba",
+      "cellId": "cell-685a3588c82d60a9",
+      "split": "discovery",
+      "seed": 1430000,
+      "failureModeId": "dense-cross-image-change-localization",
+      "question": "In which labeled quadrant of the RIGHT grid is the one rotated glyph?",
+      "answerOptions": [
+        "D",
+        "A",
+        "C",
+        "B"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "gridSize": 42,
+        "changedQuadrant": 0,
+        "changeRow": 9,
+        "changeColumn": 2,
+        "visualVariant": 600
+      }
+    },
+    {
+      "id": "cl-96e07f09d895068b",
+      "cellId": "cell-685a3588c82d60a9",
+      "split": "discovery",
+      "seed": 1430001,
+      "failureModeId": "dense-cross-image-change-localization",
+      "question": "In which labeled quadrant of the RIGHT grid is the one rotated glyph?",
+      "answerOptions": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "gridSize": 42,
+        "changedQuadrant": 1,
+        "changeRow": 9,
+        "changeColumn": 24,
+        "visualVariant": 601
+      }
+    },
+    {
+      "id": "cl-f1d3eb830ad3e554",
+      "cellId": "cell-685a3588c82d60a9",
+      "split": "discovery",
+      "seed": 1430002,
+      "failureModeId": "dense-cross-image-change-localization",
+      "question": "In which labeled quadrant of the RIGHT grid is the one rotated glyph?",
+      "answerOptions": [
+        "A",
+        "B",
+        "D",
+        "C"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "gridSize": 42,
+        "changedQuadrant": 2,
+        "changeRow": 29,
+        "changeColumn": 6,
+        "visualVariant": 602
+      }
+    },
+    {
+      "id": "cl-f5b8a51a0cf77ca3",
+      "cellId": "cell-685a3588c82d60a9",
+      "split": "discovery",
+      "seed": 1430003,
+      "failureModeId": "dense-cross-image-change-localization",
+      "question": "In which labeled quadrant of the RIGHT grid is the one rotated glyph?",
+      "answerOptions": [
+        "D",
+        "A",
+        "C",
+        "B"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "gridSize": 42,
+        "changedQuadrant": 3,
+        "changeRow": 29,
+        "changeColumn": 28,
+        "visualVariant": 603
+      }
+    },
+    {
+      "id": "cl-bf57a2a590ca7db9",
+      "cellId": "cell-685a3588c82d60a9",
+      "split": "discovery",
+      "seed": 1430004,
+      "failureModeId": "dense-cross-image-change-localization",
+      "question": "In which labeled quadrant of the RIGHT grid is the one rotated glyph?",
+      "answerOptions": [
+        "B",
+        "D",
+        "C",
+        "A"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "gridSize": 42,
+        "changedQuadrant": 0,
+        "changeRow": 9,
+        "changeColumn": 9,
+        "visualVariant": 604
+      }
+    },
+    {
+      "id": "cl-d6cf0f598ec0b72d",
+      "cellId": "cell-685a3588c82d60a9",
+      "split": "discovery",
+      "seed": 1430005,
+      "failureModeId": "dense-cross-image-change-localization",
+      "question": "In which labeled quadrant of the RIGHT grid is the one rotated glyph?",
+      "answerOptions": [
+        "A",
+        "B",
+        "D",
+        "C"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "gridSize": 42,
+        "changedQuadrant": 1,
+        "changeRow": 9,
+        "changeColumn": 31,
+        "visualVariant": 605
+      }
+    },
+    {
+      "id": "cl-08a312d644185547",
+      "cellId": "cell-685a3588c82d60a9",
+      "split": "discovery",
+      "seed": 1430006,
+      "failureModeId": "dense-cross-image-change-localization",
+      "question": "In which labeled quadrant of the RIGHT grid is the one rotated glyph?",
+      "answerOptions": [
+        "D",
+        "A",
+        "C",
+        "B"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "gridSize": 42,
+        "changedQuadrant": 2,
+        "changeRow": 29,
+        "changeColumn": 13,
+        "visualVariant": 606
+      }
+    },
+    {
+      "id": "cl-e9bfcd25bc20d056",
+      "cellId": "cell-685a3588c82d60a9",
+      "split": "discovery",
+      "seed": 1430007,
+      "failureModeId": "dense-cross-image-change-localization",
+      "question": "In which labeled quadrant of the RIGHT grid is the one rotated glyph?",
+      "answerOptions": [
+        "B",
+        "D",
+        "C",
+        "A"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "gridSize": 42,
+        "changedQuadrant": 3,
+        "changeRow": 29,
+        "changeColumn": 35,
+        "visualVariant": 607
+      }
+    }
+  ]
+}
