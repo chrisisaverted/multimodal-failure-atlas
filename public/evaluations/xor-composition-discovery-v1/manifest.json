@@ -1,0 +1,256 @@
+{
+  "id": "xor-composition-discovery-v1",
+  "planSha256": "446d95b2748b8b11e259baab20ad62d4edf266190433e6a6ae75bd7f854d9146",
+  "generatorVersion": "visual-xor-composition-v1",
+  "renderer": "xor-composition-svg-raster-v1",
+  "cases": [
+    {
+      "candidateId": "xc-44d8e18dce62d63a",
+      "cellId": "cell-14x14-xor-four-bit-distractors",
+      "split": "discovery",
+      "condition": "native",
+      "interventionDescription": "Two dense binary inputs and four near-matching output candidates are shown together.",
+      "failureModeId": "dense-visual-boolean-composition",
+      "generator": "xor-composition",
+      "seed": 3300000,
+      "difficulty": 91,
+      "variant": 0,
+      "artifact": "public/evaluations/xor-composition-discovery-v1/xc-44d8e18dce62d63a.png",
+      "mimeType": "image/png",
+      "question": "Which option is the cell-by-cell XOR of INPUT 1 and INPUT 2? A cell is black iff exactly one corresponding input cell is black.",
+      "answerOptions": [
+        "C",
+        "D",
+        "B",
+        "A"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "d178aa1228dac259099e1e85e3e0f8795c85ee73aa138ca2202bc0a0808e3e4e",
+      "parameters": {
+        "size": 14,
+        "correctPanel": 0,
+        "flipsPerDistractor": 4,
+        "visualVariant": 0
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Apply XOR independently to every aligned cell. Return exactly one option letter and do not explain."
+    },
+    {
+      "candidateId": "xc-d489ad5eb6e2074b",
+      "cellId": "cell-14x14-xor-four-bit-distractors",
+      "split": "discovery",
+      "condition": "native",
+      "interventionDescription": "Two dense binary inputs and four near-matching output candidates are shown together.",
+      "failureModeId": "dense-visual-boolean-composition",
+      "generator": "xor-composition",
+      "seed": 3300001,
+      "difficulty": 91,
+      "variant": 1,
+      "artifact": "public/evaluations/xor-composition-discovery-v1/xc-d489ad5eb6e2074b.png",
+      "mimeType": "image/png",
+      "question": "Which option is the cell-by-cell XOR of INPUT 1 and INPUT 2? A cell is black iff exactly one corresponding input cell is black.",
+      "answerOptions": [
+        "C",
+        "D",
+        "B",
+        "A"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "ce4859e1ff95322d2528a26baca1a2c76c1fafb2cf769bdb80ce53270b24fd17",
+      "parameters": {
+        "size": 14,
+        "correctPanel": 1,
+        "flipsPerDistractor": 4,
+        "visualVariant": 1
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Apply XOR independently to every aligned cell. Return exactly one option letter and do not explain."
+    },
+    {
+      "candidateId": "xc-131fd3bb308b3139",
+      "cellId": "cell-14x14-xor-four-bit-distractors",
+      "split": "discovery",
+      "condition": "native",
+      "interventionDescription": "Two dense binary inputs and four near-matching output candidates are shown together.",
+      "failureModeId": "dense-visual-boolean-composition",
+      "generator": "xor-composition",
+      "seed": 3300002,
+      "difficulty": 91,
+      "variant": 2,
+      "artifact": "public/evaluations/xor-composition-discovery-v1/xc-131fd3bb308b3139.png",
+      "mimeType": "image/png",
+      "question": "Which option is the cell-by-cell XOR of INPUT 1 and INPUT 2? A cell is black iff exactly one corresponding input cell is black.",
+      "answerOptions": [
+        "D",
+        "B",
+        "C",
+        "A"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "7e44eb6f036446e7855f737e4f84113f630411cc62cbc90032a372faa0309af7",
+      "parameters": {
+        "size": 14,
+        "correctPanel": 2,
+        "flipsPerDistractor": 4,
+        "visualVariant": 2
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Apply XOR independently to every aligned cell. Return exactly one option letter and do not explain."
+    },
+    {
+      "candidateId": "xc-8f1bccf359d07cec",
+      "cellId": "cell-14x14-xor-four-bit-distractors",
+      "split": "discovery",
+      "condition": "native",
+      "interventionDescription": "Two dense binary inputs and four near-matching output candidates are shown together.",
+      "failureModeId": "dense-visual-boolean-composition",
+      "generator": "xor-composition",
+      "seed": 3300003,
+      "difficulty": 91,
+      "variant": 3,
+      "artifact": "public/evaluations/xor-composition-discovery-v1/xc-8f1bccf359d07cec.png",
+      "mimeType": "image/png",
+      "question": "Which option is the cell-by-cell XOR of INPUT 1 and INPUT 2? A cell is black iff exactly one corresponding input cell is black.",
+      "answerOptions": [
+        "B",
+        "D",
+        "C",
+        "A"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "c8f8af1649381673d90334b70815dac8d8c45e96befa07d941b0f03a6b297520",
+      "parameters": {
+        "size": 14,
+        "correctPanel": 3,
+        "flipsPerDistractor": 4,
+        "visualVariant": 3
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Apply XOR independently to every aligned cell. Return exactly one option letter and do not explain."
+    },
+    {
+      "candidateId": "xc-d4d1d4208c114445",
+      "cellId": "cell-14x14-xor-four-bit-distractors",
+      "split": "discovery",
+      "condition": "native",
+      "interventionDescription": "Two dense binary inputs and four near-matching output candidates are shown together.",
+      "failureModeId": "dense-visual-boolean-composition",
+      "generator": "xor-composition",
+      "seed": 3300004,
+      "difficulty": 91,
+      "variant": 4,
+      "artifact": "public/evaluations/xor-composition-discovery-v1/xc-d4d1d4208c114445.png",
+      "mimeType": "image/png",
+      "question": "Which option is the cell-by-cell XOR of INPUT 1 and INPUT 2? A cell is black iff exactly one corresponding input cell is black.",
+      "answerOptions": [
+        "B",
+        "D",
+        "C",
+        "A"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "48f12784d37e93b8432c2f3ec32fb0e8da73f682c272bf85351e8eb05023e5b2",
+      "parameters": {
+        "size": 14,
+        "correctPanel": 0,
+        "flipsPerDistractor": 4,
+        "visualVariant": 4
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Apply XOR independently to every aligned cell. Return exactly one option letter and do not explain."
+    },
+    {
+      "candidateId": "xc-46baa43e4d9f61c0",
+      "cellId": "cell-14x14-xor-four-bit-distractors",
+      "split": "discovery",
+      "condition": "native",
+      "interventionDescription": "Two dense binary inputs and four near-matching output candidates are shown together.",
+      "failureModeId": "dense-visual-boolean-composition",
+      "generator": "xor-composition",
+      "seed": 3300005,
+      "difficulty": 91,
+      "variant": 5,
+      "artifact": "public/evaluations/xor-composition-discovery-v1/xc-46baa43e4d9f61c0.png",
+      "mimeType": "image/png",
+      "question": "Which option is the cell-by-cell XOR of INPUT 1 and INPUT 2? A cell is black iff exactly one corresponding input cell is black.",
+      "answerOptions": [
+        "D",
+        "B",
+        "C",
+        "A"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "02b71f566067066cb460e9f397cec949cb2e0b1b51b53813ddcc2755ea43a9e8",
+      "parameters": {
+        "size": 14,
+        "correctPanel": 1,
+        "flipsPerDistractor": 4,
+        "visualVariant": 5
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Apply XOR independently to every aligned cell. Return exactly one option letter and do not explain."
+    },
+    {
+      "candidateId": "xc-146021daf3e5f0a4",
+      "cellId": "cell-14x14-xor-four-bit-distractors",
+      "split": "discovery",
+      "condition": "native",
+      "interventionDescription": "Two dense binary inputs and four near-matching output candidates are shown together.",
+      "failureModeId": "dense-visual-boolean-composition",
+      "generator": "xor-composition",
+      "seed": 3300006,
+      "difficulty": 91,
+      "variant": 6,
+      "artifact": "public/evaluations/xor-composition-discovery-v1/xc-146021daf3e5f0a4.png",
+      "mimeType": "image/png",
+      "question": "Which option is the cell-by-cell XOR of INPUT 1 and INPUT 2? A cell is black iff exactly one corresponding input cell is black.",
+      "answerOptions": [
+        "B",
+        "C",
+        "D",
+        "A"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "7d2871a5a8208dc8801832036d65f03da1737b8cc8f43920e7c2dfeb0b3e142f",
+      "parameters": {
+        "size": 14,
+        "correctPanel": 2,
+        "flipsPerDistractor": 4,
+        "visualVariant": 6
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Apply XOR independently to every aligned cell. Return exactly one option letter and do not explain."
+    },
+    {
+      "candidateId": "xc-f0224884da4b64b3",
+      "cellId": "cell-14x14-xor-four-bit-distractors",
+      "split": "discovery",
+      "condition": "native",
+      "interventionDescription": "Two dense binary inputs and four near-matching output candidates are shown together.",
+      "failureModeId": "dense-visual-boolean-composition",
+      "generator": "xor-composition",
+      "seed": 3300007,
+      "difficulty": 91,
+      "variant": 7,
+      "artifact": "public/evaluations/xor-composition-discovery-v1/xc-f0224884da4b64b3.png",
+      "mimeType": "image/png",
+      "question": "Which option is the cell-by-cell XOR of INPUT 1 and INPUT 2? A cell is black iff exactly one corresponding input cell is black.",
+      "answerOptions": [
+        "B",
+        "C",
+        "D",
+        "A"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "09318320ae7ba19788cc0aec35664f2ce8d91ec3baad044052671f6c1a3b1cbd",
+      "parameters": {
+        "size": 14,
+        "correctPanel": 3,
+        "flipsPerDistractor": 4,
+        "visualVariant": 7
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Apply XOR independently to every aligned cell. Return exactly one option letter and do not explain."
+    }
+  ]
+}

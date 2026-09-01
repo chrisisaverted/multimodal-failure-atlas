@@ -90,8 +90,19 @@ import { applyConservation, createConservationGrid } from "./conservation-ledger
 import { createSymmetryGrid, symmetryMatrix } from "./symmetry-search";
 import { applySwaps, createSwapTrackingGrid } from "./swap-tracking";
 import { coflashPairCounts, createCoflashGrid } from "./coflash-counting";
+import { createXorGrid, xorMatrices } from "./xor-composition";
 
 describe("adaptive multimodal discovery", () => {
+  it("creates one exact XOR panel and three four-bit distractors", () => {
+    for (const candidate of createXorGrid()) {
+      const { truth, panels } = xorMatrices(candidate);
+      const distances = panels.map(panel => panel.flatMap((row, y) => row.map((value, x): number => value === truth[y]![x] ? 0 : 1)).reduce((sum, value) => sum + value, 0));
+      expect(distances[candidate.parameters.correctPanel]).toBe(0);
+      expect(distances.filter(value => value === 0)).toHaveLength(1);
+      expect(distances.filter(value => value === 4)).toHaveLength(3);
+    }
+  });
+
   it("binds a unique exactly-four coflash pair in each balanced video", () => {
     const candidates = createCoflashGrid();
     expect(candidates).toHaveLength(8);

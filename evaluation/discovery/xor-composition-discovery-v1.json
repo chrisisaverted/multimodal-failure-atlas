@@ -1,0 +1,184 @@
+{
+  "id": "xor-composition-discovery-v1",
+  "generatorVersion": "visual-xor-composition-v1",
+  "status": "discovery-only",
+  "hypothesis": "Vision-language models fail exact dense cellwise composition even when the Boolean rule is explicit.",
+  "candidates": [
+    {
+      "id": "xc-44d8e18dce62d63a",
+      "cellId": "cell-14x14-xor-four-bit-distractors",
+      "split": "discovery",
+      "seed": 3300000,
+      "failureModeId": "dense-visual-boolean-composition",
+      "question": "Which option is the cell-by-cell XOR of INPUT 1 and INPUT 2? A cell is black iff exactly one corresponding input cell is black.",
+      "answerOptions": [
+        "C",
+        "D",
+        "B",
+        "A"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "size": 14,
+        "correctPanel": 0,
+        "flipsPerDistractor": 4,
+        "visualVariant": 0
+      }
+    },
+    {
+      "id": "xc-d489ad5eb6e2074b",
+      "cellId": "cell-14x14-xor-four-bit-distractors",
+      "split": "discovery",
+      "seed": 3300001,
+      "failureModeId": "dense-visual-boolean-composition",
+      "question": "Which option is the cell-by-cell XOR of INPUT 1 and INPUT 2? A cell is black iff exactly one corresponding input cell is black.",
+      "answerOptions": [
+        "C",
+        "D",
+        "B",
+        "A"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "size": 14,
+        "correctPanel": 1,
+        "flipsPerDistractor": 4,
+        "visualVariant": 1
+      }
+    },
+    {
+      "id": "xc-131fd3bb308b3139",
+      "cellId": "cell-14x14-xor-four-bit-distractors",
+      "split": "discovery",
+      "seed": 3300002,
+      "failureModeId": "dense-visual-boolean-composition",
+      "question": "Which option is the cell-by-cell XOR of INPUT 1 and INPUT 2? A cell is black iff exactly one corresponding input cell is black.",
+      "answerOptions": [
+        "D",
+        "B",
+        "C",
+        "A"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "size": 14,
+        "correctPanel": 2,
+        "flipsPerDistractor": 4,
+        "visualVariant": 2
+      }
+    },
+    {
+      "id": "xc-8f1bccf359d07cec",
+      "cellId": "cell-14x14-xor-four-bit-distractors",
+      "split": "discovery",
+      "seed": 3300003,
+      "failureModeId": "dense-visual-boolean-composition",
+      "question": "Which option is the cell-by-cell XOR of INPUT 1 and INPUT 2? A cell is black iff exactly one corresponding input cell is black.",
+      "answerOptions": [
+        "B",
+        "D",
+        "C",
+        "A"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "size": 14,
+        "correctPanel": 3,
+        "flipsPerDistractor": 4,
+        "visualVariant": 3
+      }
+    },
+    {
+      "id": "xc-d4d1d4208c114445",
+      "cellId": "cell-14x14-xor-four-bit-distractors",
+      "split": "discovery",
+      "seed": 3300004,
+      "failureModeId": "dense-visual-boolean-composition",
+      "question": "Which option is the cell-by-cell XOR of INPUT 1 and INPUT 2? A cell is black iff exactly one corresponding input cell is black.",
+      "answerOptions": [
+        "B",
+        "D",
+        "C",
+        "A"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "size": 14,
+        "correctPanel": 0,
+        "flipsPerDistractor": 4,
+        "visualVariant": 4
+      }
+    },
+    {
+      "id": "xc-46baa43e4d9f61c0",
+      "cellId": "cell-14x14-xor-four-bit-distractors",
+      "split": "discovery",
+      "seed": 3300005,
+      "failureModeId": "dense-visual-boolean-composition",
+      "question": "Which option is the cell-by-cell XOR of INPUT 1 and INPUT 2? A cell is black iff exactly one corresponding input cell is black.",
+      "answerOptions": [
+        "D",
+        "B",
+        "C",
+        "A"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "size": 14,
+        "correctPanel": 1,
+        "flipsPerDistractor": 4,
+        "visualVariant": 5
+      }
+    },
+    {
+      "id": "xc-146021daf3e5f0a4",
+      "cellId": "cell-14x14-xor-four-bit-distractors",
+      "split": "discovery",
+      "seed": 3300006,
+      "failureModeId": "dense-visual-boolean-composition",
+      "question": "Which option is the cell-by-cell XOR of INPUT 1 and INPUT 2? A cell is black iff exactly one corresponding input cell is black.",
+      "answerOptions": [
+        "B",
+        "C",
+        "D",
+        "A"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "size": 14,
+        "correctPanel": 2,
+        "flipsPerDistractor": 4,
+        "visualVariant": 6
+      }
+    },
+    {
+      "id": "xc-f0224884da4b64b3",
+      "cellId": "cell-14x14-xor-four-bit-distractors",
+      "split": "discovery",
+      "seed": 3300007,
+      "failureModeId": "dense-visual-boolean-composition",
+      "question": "Which option is the cell-by-cell XOR of INPUT 1 and INPUT 2? A cell is black iff exactly one corresponding input cell is black.",
+      "answerOptions": [
+        "B",
+        "C",
+        "D",
+        "A"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "size": 14,
+        "correctPanel": 3,
+        "flipsPerDistractor": 4,
+        "visualVariant": 7
+      }
+    }
+  ]
+}

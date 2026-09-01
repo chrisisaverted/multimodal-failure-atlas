@@ -89,6 +89,8 @@
     "generate:swap-tracking": "tsx scripts/materialize-swap-tracking.ts",
     "plan:coflash": "tsx scripts/plan-coflash.ts",
     "generate:coflash": "tsx scripts/materialize-coflash.ts",
+    "plan:xor-composition": "tsx scripts/plan-xor-composition.ts",
+    "generate:xor-composition": "tsx scripts/materialize-xor-composition.ts",
     "publish:adaptive": "tsx scripts/publish-adaptive-results.ts",
     "publish:precision-wire": "tsx scripts/publish-precision-wire-results.ts",
     "evaluate": "tsx scripts/evaluate.ts",
