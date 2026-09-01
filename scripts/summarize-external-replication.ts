@@ -20,6 +20,18 @@ function conditionOf(run: EvaluationRunRecord) {
   );
 }
 
+function wilson(correct: number, total: number) {
+  if (!total) return { lower95: null, upper95: null };
+  const zScore = 1.959963984540054;
+  const proportion = correct / total;
+  const denominator = 1 + (zScore * zScore) / total;
+  const centre = (proportion + (zScore * zScore) / (2 * total)) / denominator;
+  const margin =
+    (zScore * Math.sqrt((proportion * (1 - proportion)) / total + (zScore * zScore) / (4 * total * total))) /
+    denominator;
+  return { lower95: Math.max(0, centre - margin), upper95: Math.min(1, centre + margin) };
+}
+
 async function resultFiles(directory: string) {
   try {
     return (await readdir(resolve(directory))).filter((name) => name.endsWith(".jsonl"));
@@ -57,10 +69,14 @@ const runs = (
 const uniqueRuns = [...new Map(runs.map((run) => [run.id, run])).values()].sort(
   (left, right) => left.evaluatedAt.localeCompare(right.evaluatedAt) || left.id.localeCompare(right.id),
 );
-const canonicalProtocolSuffix = new Map([
+const canonicalProtocolSuffix = new Map<string, string>([
   ["bytedance-seed/seed-2-1-turbo", "external-replication-v1-no-reasoning"],
   ["xiaomi/mimo-v2.5", "external-replication-v1-mimo-declared-answer"],
 ]);
+const isCanonical = (run: EvaluationRunRecord) =>
+  cohort.includes(run.modelId as (typeof cohort)[number]) &&
+  run.evaluationProtocolId?.endsWith(canonicalProtocolSuffix.get(run.modelId) ?? "never") === true;
+const canonicalRuns = uniqueRuns.filter(isCanonical);
 
 const families = [];
 for (const family of evidence.families) {
@@ -99,6 +115,7 @@ for (const family of evidence.families) {
         substantiveAnswers: answered.length,
         correct,
         solveRate: answered.length ? correct / answered.length : null,
+        ...wilson(correct, answered.length),
         missingCandidateIds: perCase
           .filter((entry) => !entry.substantive)
           .map((entry) => entry.candidate.candidateId),
@@ -131,7 +148,7 @@ for (const family of evidence.families) {
     modality: family.modality,
     models,
     complete: models.every((model) => model.complete),
-    replicatedBelowHalf: models.every((model) => model.observedBelowHalf),
+    replicatedBelowHalf: models.every((model) => model.complete && model.observedBelowHalf),
   });
 }
 
@@ -145,6 +162,37 @@ const output = {
   cohortId: "external-replication-v1-2026-09-01",
   generatedAt: uniqueRuns.at(-1)?.evaluatedAt ?? null,
   analysisRole: "Untouched post-confirmatory route replication; never used for generator selection.",
+  analysisRule:
+    "A family externally replicates only when both untouched routes provide 16 substantive native answers and each observed native solve rate is strictly below 50%.",
+  canonicalCohort: cohort.map((modelId) => ({
+    modelId,
+    protocolSuffix: canonicalProtocolSuffix.get(modelId),
+    canonicalRequests: canonicalRuns.filter((run) => run.modelId === modelId).length,
+    substantiveAnswers: canonicalRuns.filter(
+      (run) => run.modelId === modelId && run.status === "verified" && !run.emptyResponse,
+    ).length,
+    costUsd: canonicalRuns
+      .filter((run) => run.modelId === modelId)
+      .reduce((sum, run) => sum + run.costUsd, 0),
+  })),
+  audit: {
+    allAttemptRequests: uniqueRuns.length,
+    canonicalRequests: canonicalRuns.length,
+    noncanonicalAttempts: uniqueRuns.length - canonicalRuns.length,
+    allAttemptCostUsd: uniqueRuns.reduce((sum, run) => sum + run.costUsd, 0),
+    canonicalCostUsd: canonicalRuns.reduce((sum, run) => sum + run.costUsd, 0),
+    attemptedModels: [...new Set(uniqueRuns.map((run) => run.modelId))].map((modelId) => ({
+      modelId,
+      requests: uniqueRuns.filter((run) => run.modelId === modelId).length,
+      substantiveAnswers: uniqueRuns.filter(
+        (run) => run.modelId === modelId && run.status === "verified" && !run.emptyResponse,
+      ).length,
+      pendingReview: uniqueRuns.filter((run) => run.modelId === modelId && run.status === "pending-review")
+        .length,
+      emptyResponses: uniqueRuns.filter((run) => run.modelId === modelId && run.emptyResponse).length,
+      costUsd: uniqueRuns.filter((run) => run.modelId === modelId).reduce((sum, run) => sum + run.costUsd, 0),
+    })),
+  },
   families,
 };
 for (const [path, value] of [
@@ -159,6 +207,7 @@ for (const [path, value] of [
 console.log(
   JSON.stringify({
     requests: uniqueRuns.length,
+    canonicalRequests: canonicalRuns.length,
     completeFamilies: families.filter((family) => family.complete).length,
     replicatedBelowHalf: families.filter((family) => family.replicatedBelowHalf).length,
     costUsd: uniqueRuns.reduce((sum, run) => sum + run.costUsd, 0),
