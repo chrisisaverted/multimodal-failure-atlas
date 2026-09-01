@@ -94,7 +94,9 @@ export default function Home() {
           <h2>Twenty families survived the holdout.</h2>
           <p>
             For each family, Gemini, Qwen, and Kimi supplied at least 16 substantive native-media answers.
-            Every observed solve rate stayed strictly below 50%; non-answers were excluded.
+            Every observed solve rate stayed strictly below 50%; non-answers were excluded. Every current
+            family also passed a frozen Seed and MiMo route expansion after two threshold-crossing generators
+            were replaced with new preregistered gated holdouts.
           </p>
         </div>
         <Link className="button-primary" href="/verified">

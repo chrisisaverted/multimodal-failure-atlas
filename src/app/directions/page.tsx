@@ -9,7 +9,7 @@ const directions = [
     title: "Sufficient-statistic interventions",
     question: "What is the smallest external state that restores exact video reasoning?",
     design:
-      "Factor persistent trails, direction labels, intermediate states, and running counters across path length.",
+      "Compare scalar route state, gated spatial histograms, and pair/color conjunctions through prespecified intervention ladders.",
   },
   {
     title: "Relevance-shift stress tests",
@@ -78,9 +78,10 @@ export default function DirectionsPage() {
           <p className="eyebrow">Recommended first paper</p>
           <h2>Sufficient-statistic intervention curves</h2>
           <p>
-            Route turns, signed accumulation, and identity swaps already have low native accuracy, exact
-            generators, and useful controls. A shared factorial design can isolate where state is lost while a
-            blinded human study establishes the genuine human-model gap.
+            Route turns, gated exact-frequency histograms, and pair/color collision counting already have low
+            native accuracy, exact generators, and useful controls. A shared intervention ladder can estimate
+            the smallest external state that restores each computation while a blinded human study establishes
+            the genuine human-model gap.
           </p>
         </div>
       </div>
@@ -108,6 +109,12 @@ export default function DirectionsPage() {
           href="https://github.com/chrisisaverted/multimodal-failure-atlas/blob/main/docs/mechanism-hypotheses.md"
         >
           Read the causal mechanism map
+        </a>
+        <a
+          className="text-link"
+          href="https://github.com/chrisisaverted/multimodal-failure-atlas/blob/main/docs/followup-preregistration.md"
+        >
+          Read the draft follow-up preregistration
         </a>
       </div>
     </section>

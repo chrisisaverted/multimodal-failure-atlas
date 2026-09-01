@@ -27,6 +27,14 @@ If none recover, the original control likely changed more than the hypothesized 
 This could become a paper because it estimates the minimal external state needed to restore a deployed
 video model, rather than just documenting low accuracy.
 
+The gated exact-frequency family now supplies a complementary structured-state case. Its sufficient
+statistic is not one counter but a frame-color-conditioned 6×6 histogram followed by an exact-multiplicity
+predicate. Compare six frozen interventions: native video; accepted-event markers; persistent per-cell
+visit flags; persistent per-cell counts; highlights only on cells currently equal to two; and the final
+qualifying-set cardinality. The current native scores are 2/16, 3/16, 2/16, 6/16, and 4/16 across five
+routes, while the full visible histogram is 16/16 throughout. The first intervention that restores each
+route estimates how much state must be externalized without assuming access to hidden computation.
+
 ## 2. Relevance-shift stress tests for visual-token retention
 
 Work on visual-token pruning reports that the relevant visual information can shift during decoding.
@@ -67,9 +75,9 @@ decode artifacts.
 
 ## 4. Recognition-to-state-update decomposition
 
-Several admitted video tasks use individually obvious events but require a persistent update: set insertion,
-signed accumulation, identity swaps, pair-specific collision counts, and conservation transfers. For every
-event sequence, collect four outputs:
+Several admitted video tasks use individually obvious events but require a persistent update: gated
+per-location histograms, signed accumulation, identity swaps, pair-and-color collision counts, and
+conservation transfers. For every event sequence, collect four outputs:
 
 1. event recognition at each step;
 2. state before update;
@@ -139,15 +147,23 @@ request budgets. Score success by the number of distinct mechanisms that transfe
 sealed routes, penalized by human error and weak controls.
 
 This directly tests whether model-guided synthetic discovery finds real capability boundaries or merely
-overfits hosted quirks. The new Seed and MiMo replication cohort is a small first version of this design; it
-was frozen only after the original three-route families were complete and cannot influence those generators.
+overfits hosted quirks. The Seed and MiMo cohort is a small first version of this design: it rejected two of
+20 original generators. Their replacements were then reserved before screening; one additional temporal
+repair passed its screen but failed the holdout before the exact-frequency design finally passed all five
+routes. That sequence makes discovery-to-holdout and route-to-route transfer measurable outcomes rather than
+footnotes.
 
 ## Near-term priority
 
-The best paper-shaped next experiment is sufficient-statistic intervention curves on three video families:
-route turns, signed accumulation, and identity swaps. They already have strong native failures and useful
-controls, can be generated exactly, and permit a shared factorial design. In parallel, a blinded human pilot
-should establish which difficulty points are genuinely easy rather than merely visually clean.
+The best paper-shaped next experiment is a preregistered sufficient-statistic ladder on three complementary
+video families: scalar route-turn state, structured gated-frequency histograms, and conjunctive pair/color
+event counting. All three are exact, have strong native failures, useful controls, and frozen evidence; the
+latter two also pass five-route confirmation after shortcut-driven redesign. The primary scientific endpoint
+should be the earliest intervention that restores each route, not another aggregate benchmark score.
+
+In parallel, run the blinded human pilot before using “human-easy” in a title or abstract. The strongest
+publishable subset is the intersection where a prespecified human lower bound clears the criterion, all five
+routes remain below 50%, and the sufficient-statistic ladder localizes a recoverable boundary.
 
 Relevant starting points include:
 

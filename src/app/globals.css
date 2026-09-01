@@ -2502,6 +2502,59 @@ select {
 .admitted-expanded-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
+.admitted-expanded-link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  color: var(--citron);
+  font: 10px monospace;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.replication-repairs {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.75fr) minmax(0, 1.25fr);
+  gap: 2rem;
+  margin: 3rem 0;
+  padding: 2rem;
+  border: 1px solid var(--line);
+}
+.replication-repairs h2 {
+  margin: 0.5rem 0 0.8rem;
+  font: 40px/1 var(--serif);
+}
+.replication-repairs > div > p:last-child {
+  color: var(--muted);
+  line-height: 1.55;
+}
+.replication-repair-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+.replication-repair-grid article {
+  padding: 1.25rem;
+  background: var(--ink);
+  color: var(--paper);
+}
+.replication-repair-grid span,
+.replication-repair-grid a {
+  color: var(--citron);
+  font: 9px monospace;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.replication-repair-grid h3 {
+  margin: 0.8rem 0;
+  font: 27px/1.05 var(--serif);
+}
+.replication-repair-grid p {
+  color: #c7c2b8;
+  font: 10px/1.65 monospace;
+}
+.replication-repair-grid a {
+  display: inline-block;
+  margin-top: 0.75rem;
+}
 .admitted-model-grid article {
   min-height: 180px;
   padding: 22px;
@@ -2539,6 +2592,10 @@ select {
 .admitted-model-grid em {
   margin-top: 7px;
   color: #f4aa8d;
+}
+.admitted-model-grid .admitted-output-distribution {
+  margin-top: 7px;
+  color: #d7d2c8;
 }
 .admitted-evidence-notes {
   display: grid;
@@ -3586,6 +3643,10 @@ select {
     margin-bottom: 24px;
   }
   .replication-route-grid {
+    grid-template-columns: 1fr;
+  }
+  .replication-repairs,
+  .replication-repair-grid {
     grid-template-columns: 1fr;
   }
   .replication-family {

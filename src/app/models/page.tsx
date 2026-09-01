@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Clock3, Database, ShieldCheck } from "lucide-react";
-import { publishedRuns } from "@/lib/published-results";
 import { admittedEvidence } from "@/lib/admitted-evidence";
+import { routeExpansionModels } from "@/lib/external-replication";
 import protocol from "../../../evaluation/plans/openrouter-frontier-matrix-v2.json";
 
 export const metadata: Metadata = { title: "Models" };
@@ -10,29 +10,49 @@ export const metadata: Metadata = { title: "Models" };
 const percent = (value: number) => `${Math.round(value * 100)}%`;
 
 export default function ModelsPage() {
-  const strictRoutes = admittedEvidence.families[0]!.models.map((route) => {
-    const familyRoutes = admittedEvidence.families.map((family) =>
-      family.models.find((model) => model.modelId === route.modelId)!,
-    );
+  const firstFamily = admittedEvidence.families[0]!;
+  const strictModelIds = [
+    ...firstFamily.models.map((model) => model.modelId),
+    ...(routeExpansionModels(firstFamily) ?? []).map((model) => model.modelId),
+  ];
+  const strictRoutes = strictModelIds.map((modelId) => {
+    const familyRoutes = admittedEvidence.families.map((family) => {
+      const routes = [...family.models, ...(routeExpansionModels(family) ?? [])];
+      const route = routes.find((model) => model.modelId === modelId);
+      if (!route) throw new Error(`Missing ${modelId} route expansion for ${family.planId}`);
+      return route;
+    });
     const nativeCorrect = familyRoutes.reduce((sum, model) => sum + model.native.correct, 0);
     const nativeN = familyRoutes.reduce((sum, model) => sum + model.native.substantiveAnswers, 0);
     const controlCorrect = familyRoutes.reduce((sum, model) => sum + model.control.correct, 0);
     const controlN = familyRoutes.reduce((sum, model) => sum + model.control.substantiveAnswers, 0);
-    const pending = familyRoutes.reduce(
-      (sum, model) => sum + model.native.pendingReview + model.control.pendingReview,
+    const pending = familyRoutes.reduce((sum, model) => {
+      const nativePending =
+        "pendingReview" in model.native
+          ? model.native.pendingReview
+          : model.native.missingCandidateIds.length;
+      const controlPending =
+        "pendingReview" in model.control
+          ? model.control.pendingReview
+          : model.control.missingCandidateIds.length;
+      return sum + nativePending + controlPending;
+    }, 0);
+    const costUsd = familyRoutes.reduce(
+      (sum, model) => sum + model.native.costUsd + model.control.costUsd,
       0,
     );
     return {
-      modelId: route.modelId,
-      upstreamProvider: route.upstreamProvider,
+      modelId,
+      upstreamProvider: familyRoutes[0]!.upstreamProvider,
       nativeCorrect,
       nativeN,
       controlCorrect,
       controlN,
       pending,
+      costUsd,
     };
   });
-  const totalCost = publishedRuns.reduce((sum, run) => sum + run.costUsd, 0);
+  const strictCost = strictRoutes.reduce((sum, route) => sum + route.costUsd, 0);
   return (
     <section className="section-shell page-section">
       <header className="page-header">
@@ -54,19 +74,20 @@ export default function ModelsPage() {
             <ShieldCheck size={24} />
             <div>
               <b>
-                {admittedEvidence.families.length} strict families recur across three frontier routes; a
+                {admittedEvidence.families.length} strict families recur across five evaluated routes; a
                 broader frozen pilot covers {protocol.models.length} model families.
               </b>
               <p>
-                The strict cohort uses 16 substantive native answers per family and route. The broader
-                protocol is {protocol.id}; the two evidence levels are not pooled into a leaderboard.
+                The current cohort combines three admission routes with two frozen route-expansion routes,
+                using 16 substantive native answers per family and route. The broader historical protocol is{" "}
+                {protocol.id}; the evidence levels are not pooled into a leaderboard.
               </p>
             </div>
           </div>
           <div className="observatory-summary">
             {strictRoutes.map((route) => (
               <article key={route.modelId}>
-                <p>20-family strict native cohort</p>
+                <p>20-family current native cohort</p>
                 <h2>{route.modelId}</h2>
                 <strong>{percent(route.nativeCorrect / route.nativeN)}</strong>
                 <span>
@@ -78,9 +99,10 @@ export default function ModelsPage() {
             ))}
           </div>
           <p className="observatory-cost">
-            Recorded provider API cost across published requests: <b>${totalCost.toFixed(4)}</b>. Aggregate
-            route rates are descriptive because families differ; individual family results, exclusions, and
-            uncertainty appear in the verified view and response ledger.
+            Recorded provider API cost for the five-route current-family evidence:{" "}
+            <b>${strictCost.toFixed(4)}</b>. Aggregate route rates are descriptive because families differ;
+            individual family results, exclusions, and uncertainty appear in the verified view and response
+            ledger.
           </p>
           <Link className="text-link" href="/verified">
             Compare the 20 strict family results

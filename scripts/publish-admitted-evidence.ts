@@ -117,12 +117,21 @@ function summarizeCondition(
   const adjudicatedRunIds = new Set(
     substantive.filter((entry) => entry.adjudicated).map((entry) => entry.run.id),
   );
+  const answers = substantive.map((entry) =>
+    entry.adjudicated ? entry.claimedAnswer! : entry.run.parsedAnswer,
+  );
+  const answerDistribution = Object.fromEntries(
+    [...new Set(answers)]
+      .sort()
+      .map((answer) => [answer, answers.filter((candidate) => candidate === answer).length]),
+  );
   const interval = wilsonInterval(correct, substantive.length);
   return {
     condition,
     requests: selected.length,
     substantiveAnswers: substantive.length,
     adjudicatedAnswers: substantive.filter((entry) => entry.adjudicated).length,
+    answerDistribution,
     correct,
     solveRate: substantive.length ? correct / substantive.length : null,
     lower95: substantive.length ? interval.lower : null,

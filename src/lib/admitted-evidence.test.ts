@@ -32,6 +32,10 @@ describe("published admitted evidence", () => {
         expect(model.native.correct, `${family.planId}: ${model.modelId}`).toBeLessThan(
           model.native.substantiveAnswers / 2,
         );
+        expect(
+          Object.values(model.native.answerDistribution ?? {}).reduce((sum, count) => sum + count, 0),
+          `${family.planId}: ${model.modelId} output distribution`,
+        ).toBe(model.native.substantiveAnswers);
       }
     }
   });

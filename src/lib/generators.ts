@@ -1,6 +1,6 @@
 import type { DiagnosticInstance, DiagnosticParams, GeneratorKey } from "./types";
 
-export const generatorVersion = "1.3.0";
+export const generatorVersion = "1.4.0";
 
 function mulberry32(seed: number) {
   let state = seed >>> 0;

@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { CheckCircle2, CircleDashed, Download, ShieldCheck, XCircle } from "lucide-react";
 import { failureModesById } from "@/lib/catalogue";
-import { externalReplication, replicationStatus } from "@/lib/external-replication";
+import { admittedFamilyByCatalogueId } from "@/lib/admitted-evidence";
+import { externalReplication, replicationStatus, routeExpansionModels } from "@/lib/external-replication";
 
 export const metadata: Metadata = { title: "External replication" };
 
@@ -13,6 +14,7 @@ const frozenCampaignTitles = new Map([
   ["pair-collision-confirmatory-v1", "Pair-only identity collision counting"],
   ["grid-activation-confirmatory-v3", "Ungated temporal set cardinality"],
 ]);
+const repairIds = ["identity-pair-interaction-counting", "temporal-set-cardinality"];
 
 export default function ReplicationPage() {
   const complete = externalReplication.families.filter((family) => family.complete).length;
@@ -32,9 +34,9 @@ export default function ReplicationPage() {
           <em>same frozen media.</em>
         </h1>
         <p>
-          Seed 2.1 Turbo and MiMo 2.5 were evaluated only after the original 20 families and their
-          holdouts were fixed. This frozen audit found two threshold crossings; both negative results were
-          retained and used to begin new, separately reserved repair cycles in the core atlas.
+          Seed 2.1 Turbo and MiMo 2.5 were evaluated only after the original 20 families and their holdouts
+          were fixed. This frozen audit found two threshold crossings; both negative results were retained and
+          used to begin new, separately reserved repair cycles in the core atlas.
         </p>
       </header>
 
@@ -80,6 +82,36 @@ export default function ReplicationPage() {
           </article>
         ))}
       </div>
+
+      <section className="replication-repairs" aria-labelledby="repair-closure-title">
+        <div>
+          <p className="eyebrow">Repair closure</p>
+          <h2 id="repair-closure-title">Threshold crossings became new generators.</h2>
+          <p>
+            The current atlas does not count the two failed original generators. Each was replaced by a
+            separately reserved conjunctive task and rerun on all five routes.
+          </p>
+        </div>
+        <div className="replication-repair-grid">
+          {repairIds.map((catalogueId) => {
+            const family = admittedFamilyByCatalogueId.get(catalogueId)!;
+            const mode = failureModesById.get(catalogueId)!;
+            const routes = [...family.models, ...(routeExpansionModels(family) ?? [])];
+            return (
+              <article key={catalogueId}>
+                <span>{mode.modalities[0]}</span>
+                <h3>{mode.shortTitle}</h3>
+                <p>
+                  {routes
+                    .map((route) => `${shortModel(route.modelId)} ${route.native.correct}/16`)
+                    .join(" · ")}
+                </p>
+                <Link href={`/failure/${catalogueId}`}>Inspect repaired holdout</Link>
+              </article>
+            );
+          })}
+        </div>
+      </section>
 
       <div className="replication-list">
         {externalReplication.families.map((family, index) => {

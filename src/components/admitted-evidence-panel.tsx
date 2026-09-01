@@ -6,6 +6,11 @@ import { routeExpansionModels } from "@/lib/external-replication";
 
 const percent = (value: number | null) => (value === null ? "—" : `${Math.round(value * 100)}%`);
 const modelName = (id: string) => id.split("/").at(-1)?.replaceAll("-", " ") ?? id;
+const outputDistribution = (summary: AdmittedFamilyEvidence["models"][number]["native"]) => {
+  const entries = Object.entries(summary.answerDistribution ?? {});
+  if (!entries.length || entries.some(([answer]) => answer.length > 8)) return undefined;
+  return entries.map(([answer, count]) => `${answer}×${count}`).join(" · ");
+};
 
 export function AdmittedEvidencePanel({ evidence }: { evidence: AdmittedFamilyEvidence }) {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
@@ -68,6 +73,11 @@ export function AdmittedEvidencePanel({ evidence }: { evidence: AdmittedFamilyEv
                 95% Wilson {percent(model.native.lower95)}–{percent(model.native.upper95)} · control{" "}
                 {model.control.correct}/{model.control.substantiveAnswers}
               </small>
+              {outputDistribution(model.native) ? (
+                <small className="admitted-output-distribution">
+                  Native outputs {outputDistribution(model.native)}
+                </small>
+              ) : null}
               {model.native.pendingReview ? (
                 <em>{model.native.pendingReview} non-substantive request(s), excluded</em>
               ) : null}
@@ -92,12 +102,20 @@ export function AdmittedEvidencePanel({ evidence }: { evidence: AdmittedFamilyEv
                     95% Wilson {percent(model.native.lower95)}–{percent(model.native.upper95)} · control{" "}
                     {model.control.correct}/{model.control.substantiveAnswers}
                   </small>
+                  {"answerDistribution" in model.native && outputDistribution(model.native) ? (
+                    <small className="admitted-output-distribution">
+                      Native outputs {outputDistribution(model.native)}
+                    </small>
+                  ) : null}
                   {model.native.adjudicatedAnswers ? (
                     <em>{model.native.adjudicatedAnswers} explicit answer(s) recovered answer-key-blind</em>
                   ) : null}
                 </article>
               ))}
             </div>
+            <Link className="admitted-expanded-link" href="/replication">
+              Inspect the frozen route-expansion audit
+            </Link>
           </>
         ) : null}
         <div className="admitted-evidence-notes">

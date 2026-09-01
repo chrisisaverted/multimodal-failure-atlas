@@ -6,6 +6,7 @@ export interface ConditionSummary {
   requests: number;
   substantiveAnswers: number;
   adjudicatedAnswers?: number;
+  answerDistribution?: Record<string, number>;
   correct: number;
   solveRate: number | null;
   lower95: number | null;
