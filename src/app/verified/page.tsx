@@ -4,6 +4,7 @@ import { ArrowUpRight, CheckCircle2, ImageIcon, Video } from "lucide-react";
 import { admittedEvidence } from "@/lib/admitted-evidence";
 import {
   easiestRouteRate,
+  currentFamilyRoutes,
   orderByUniversalHardness,
   pooledNativeRate,
   weakestControlRate,
@@ -87,7 +88,7 @@ export default function VerifiedPage() {
                 </small>
               </div>
               <div className="verified-route-grid">
-                {family.models.map((model) => (
+                {currentFamilyRoutes(family).map((model) => (
                   <div key={model.modelId}>
                     <span>{modelName(model.modelId)}</span>
                     <strong>
@@ -112,10 +113,9 @@ export default function VerifiedPage() {
         <p>
           Ordering uses the easiest route&apos;s observed accuracy, with pooled accuracy only as a
           tie-breaker, so weaker routes cannot hide a stronger route. It is not a calibrated psychometric
-          scale, and neither the three ranking routes nor the two expansion routes are independent samples
-          from “all models.” The displayed difficulty values parameterize different generators and are not
-          comparable between families. Controls diagnose whether a simpler presentation recovers performance;
-          weak controls limit causal claims.
+          scale, and the five routes are not independent samples from “all models.” The displayed difficulty
+          values parameterize different generators and are not comparable between families. Controls diagnose
+          whether a simpler presentation recovers performance; weak controls limit causal claims.
         </p>
         <Link href="/methods">Read the evidence standard</Link>
         <Link href="/human-study">Open the human study instrument</Link>

@@ -2866,7 +2866,7 @@ select {
 }
 .verified-route-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   border: 1px solid var(--line);
 }
 .verified-route-grid > div {

@@ -1,10 +1,10 @@
 # Verified multimodal failure findings
 
 Generated from the frozen Atlas evidence on 1 September 2026. This report describes 20 admitted
-synthetic families evaluated through three hosted frontier routes: Gemini 3.7 Flash, Qwen 3.8 Max,
-and Kimi K3. Every current family also has a frozen below-half confirmation on Seed 2.1 Turbo and
-MiMo 2.5: 18 survived the original route-expansion campaign, while the two threshold crossings were
-repaired with newly preregistered gated holdouts that passed all five routes.
+synthetic families across five hosted frontier routes: Gemini 3.7 Flash, Qwen 3.8 Max, Kimi K3,
+Seed 2.1 Turbo, and MiMo 2.5. The first three routes form the core confirmatory cohort. Eighteen
+families survived an untouched two-route expansion; two threshold crossings were repaired with newly
+preregistered gated holdouts that passed all five routes. Rankings below use all five current routes.
 
 ## What “admitted” means
 
@@ -32,26 +32,27 @@ at least one disclosed setting per family clears the below-half gate, not that e
 
 ## Image results
 
-| Conservative rank | Family                                    | Gemini | Qwen | Kimi | Easiest route | Pooled | Weakest control |
-| ----------------: | ----------------------------------------- | -----: | ---: | ---: | ------------: | -----: | --------------: |
-|                1= | Dense cross-image change localization     |   4/16 | 2/16 | 5/16 |          5/16 |  11/48 |            9/16 |
-|                1= | Visual graph-degree topology              |   4/16 | 5/16 | 2/16 |          5/16 |  11/48 |           16/16 |
-|                 3 | Topological enclosure depth               |   4/16 | 5/16 | 3/16 |          5/16 |  12/48 |           16/16 |
-|                 4 | 2D parity-matrix verification             |   5/16 | 4/16 | 4/16 |          5/16 |  13/48 |           16/16 |
-|                 5 | Global bilateral symmetry verification    |   6/16 | 3/16 | 1/16 |          6/16 |  10/48 |           16/16 |
-|                6= | Rotation-invariant exact correspondence   |   6/16 | 5/16 | 2/16 |          6/16 |  13/48 |           14/16 |
-|                6= | Maze reachability                         |   6/16 | 3/16 | 4/16 |          6/16 |  13/48 |             9/9 |
-|                 8 | Occluded cube-stack enumeration           |   3/16 | 6/16 | 6/16 |          6/16 |  15/48 |           16/16 |
-|                 9 | Identity-conditioned exact crossing count |   7/16 | 0/16 | 1/16 |          7/16 |   8/48 |           13/16 |
-|                10 | Dense visual XOR composition              |   4/16 | 2/16 | 7/16 |          7/16 |  13/48 |           15/15 |
+| Rank | Family                                    | Gemini | Qwen | Kimi | Seed | MiMo | Easiest | Pooled | Weakest control |
+| ---: | ----------------------------------------- | -----: | ---: | ---: | ---: | ---: | ------: | -----: | --------------: |
+|    1 | 2D parity-matrix verification             |   5/16 | 4/16 | 4/16 | 3/16 | 1/16 |    5/16 |  17/80 |           16/16 |
+|    2 | Dense cross-image change localization     |   4/16 | 2/16 | 5/16 | 4/16 | 3/16 |    5/16 |  18/80 |            9/16 |
+|    3 | Visual graph-degree topology              |   4/16 | 5/16 | 2/16 | 3/16 | 5/16 |    5/16 |  19/80 |           11/16 |
+|    4 | Rotation-invariant exact correspondence   |   6/16 | 5/16 | 2/16 | 1/16 | 3/16 |    6/16 |  17/80 |            1/16 |
+|    5 | Topological enclosure depth               |   4/16 | 5/16 | 3/16 | 2/16 | 6/16 |    6/16 |  20/80 |           15/16 |
+|    6 | Occluded cube-stack enumeration           |   3/16 | 6/16 | 6/16 | 3/16 | 3/16 |    6/16 |  21/80 |           15/16 |
+|    7 | Maze reachability                         |   6/16 | 3/16 | 4/16 | 5/16 | 5/16 |    6/16 |  23/80 |           14/16 |
+|    8 | Identity-conditioned exact crossing count |   7/16 | 0/16 | 1/16 | 3/16 | 3/16 |    7/16 |  14/80 |           13/16 |
+|    9 | Global bilateral symmetry verification    |   6/16 | 3/16 | 1/16 | 4/16 | 7/16 |    7/16 |  21/80 |           16/16 |
+|   10 | Dense visual XOR composition              |   4/16 | 2/16 | 7/16 | 4/16 | 6/16 |    7/16 |  23/80 |           15/16 |
 
-By the conservative easiest-route criterion, change localization and graph topology are the hardest
-observed image families; fixed-target enclosure follows, then parity. The cleanest image localizations are
-bilateral symmetry, graph topology, enclosure, parity, cube enumeration, and the fully answered maze controls: a simpler evidence-preserving presentation recovers strongly
-while native accuracy remains low. Exact wire counting is the lowest pooled score, but Gemini is near
-the gate at 7/16 and the Kimi control reaches 13/16 rather than ceiling. The most cautious image claims
-is change localization because its weakest control recovers only to 9/16. That result establishes task
-difficulty but does not isolate a single causal bottleneck; the new enclosure count-badge control fully recovers.
+Parity is the strongest current image result: no route exceeds 5/16, pooled accuracy is 17/80, and
+all five controls are 16/16. Change localization and graph topology share the same easiest-route score,
+but their weakest controls recover only to 9/16 and 11/16, so they establish hardness more cleanly than
+mechanism. Rotation correspondence is likewise behaviorally hard but has a 1/16 expansion-route control;
+it cannot currently localize the failure. Enclosure and cube enumeration combine a 6/16 easiest route with
+15/16 control floors. Symmetry has a higher 7/16 easiest route but ceiling controls. Exact wire counting has
+the lowest pooled score, 14/80, yet its strongest route is near the gate; this is precisely why the
+conservative rank is based on the easiest route rather than the pooled mean.
 
 The strongest reusable image recipe is distributed exact verification. Render many locally legible
 elements, make the answer depend on a global invariant or one near-miss defect, balance four adjacent
@@ -61,32 +62,32 @@ this useful generator shape.
 
 ## Video results
 
-| Conservative rank | Family                                     | Gemini | Qwen | Kimi | Easiest route | Pooled | Weakest control |
-| ----------------: | ------------------------------------------ | -----: | ---: | ---: | ------------: | -----: | --------------: |
-|                1= | Dynamic route-turn integration             |   2/16 | 2/16 | 3/16 |          3/16 |   7/48 |           16/16 |
-|                1= | Gated exact-frequency set cardinality      |   2/16 | 3/16 | 2/16 |          3/16 |   7/48 |           16/16 |
-|                 3 | Identity-conditioned selective flash count |   2/16 | 4/16 | 2/16 |          4/16 |   8/48 |           16/16 |
-|                 4 | Sequential identity permutation            |   2/16 | 1/16 | 5/16 |          5/16 |   8/48 |           13/16 |
-|                 5 | Temporal target-transition counting        |   3/16 | 5/16 | 3/16 |          5/16 |  11/48 |           16/16 |
-|                6= | Gated identity-pair collision counting     |   3/16 | 4/16 | 5/16 |          5/16 |  12/48 |           15/16 |
-|                6= | Signed temporal state accumulation         |   5/16 | 3/16 | 4/16 |          5/16 |  12/48 |           13/16 |
-|                 8 | Hidden-trail trajectory topology           |   4/16 | 5/16 | 6/16 |          6/16 |  15/48 |            4/15 |
-|                 9 | Dynamic conservation ledger                |   7/16 | 5/16 | 2/16 |          7/16 |  14/48 |           16/16 |
-|                10 | Identity-conditioned spatial zone entries  |   4/16 | 7/16 | 4/16 |          7/16 |  15/48 |           16/16 |
+| Rank | Family                                     | Gemini | Qwen | Kimi | Seed | MiMo | Easiest | Pooled | Weakest control |
+| ---: | ------------------------------------------ | -----: | ---: | ---: | ---: | ---: | ------: | -----: | --------------: |
+|    1 | Identity-conditioned selective flash count |   2/16 | 4/16 | 2/16 | 4/16 | 4/16 |    4/16 |  16/80 |            6/16 |
+|    2 | Sequential identity permutation            |   2/16 | 1/16 | 5/16 | 4/16 | 4/16 |    5/16 |  16/80 |            2/16 |
+|    3 | Dynamic route-turn integration             |   2/16 | 2/16 | 3/16 | 5/16 | 5/16 |    5/16 |  17/80 |           16/16 |
+|    4 | Gated identity-pair collision counting     |   3/16 | 4/16 | 5/16 | 3/16 | 5/16 |    5/16 |  20/80 |           12/16 |
+|    5 | Gated exact-frequency set cardinality      |   2/16 | 3/16 | 2/16 | 6/16 | 4/16 |    6/16 |  17/80 |           16/16 |
+|    6 | Temporal target-transition counting        |   3/16 | 5/16 | 3/16 | 4/16 | 6/16 |    6/16 |  21/80 |           11/16 |
+|    7 | Hidden-trail trajectory topology           |   4/16 | 5/16 | 6/16 | 3/16 | 5/16 |    6/16 |  23/80 |            3/16 |
+|    8 | Signed temporal state accumulation         |   5/16 | 3/16 | 4/16 | 6/16 | 5/16 |    6/16 |  23/80 |           13/16 |
+|    9 | Dynamic conservation ledger                |   7/16 | 5/16 | 2/16 | 5/16 | 2/16 |    7/16 |  21/80 |           13/16 |
+|   10 | Identity-conditioned spatial zone entries  |   4/16 | 7/16 | 4/16 | 5/16 | 5/16 |    7/16 |  25/80 |           16/16 |
 
-Route-turn integration and gated exact-frequency set cardinality are tied as the strongest current
-results: every core route is at or below 3/16 and every matched control is 16/16. The frequency task also
-holds on Seed at 6/16 and MiMo at 4/16. Its wrong answers are not one shared off-by-one pattern: Gemini
-and Kimi concentrate on 4, MiMo on 5, and Qwen on 3–4 despite balanced truths. That route-specific
-collapse, paired with ceiling controls, is consistent with approximate temporal compression but does not
-by itself localize an internal mechanism. Selective flash counting and transition counting
-also combine low native accuracy with ceiling controls. Sequential swaps show incomplete control
-recovery, so identity maintenance is a plausible boundary rather than a uniquely identified cause. The
-gated collision replacement is cleaner: all five routes are below half on native video, while its exact
-conjunctive-event counter recovers to at least 12/16.
+Selective flash counting is behaviorally hardest across all five routes: no route exceeds 4/16. Its
+weakest control is only 6/16, however, so the current evidence does not isolate temporal acquisition from
+later exact counting. Sequential identity permutation has the next-lowest pooled score but an even weaker
+2/16 control floor. The strongest diagnostic video result is route-turn integration: its easiest route is
+5/16, pooled native accuracy is 17/80, and every control is 16/16. Gated exact-frequency cardinality is also
+clean, with a 6/16 easiest route, 17/80 pooled accuracy, and ceiling controls. Its wrong answers are not one
+shared off-by-one pattern: Gemini and Kimi concentrate on 4, MiMo on 5, and Qwen on 3–4 despite balanced
+truths. That route-specific collapse is consistent with approximate temporal compression but does not by
+itself identify an internal mechanism. The gated collision replacement is somewhat weaker but still useful:
+all routes remain at or below 5/16 and its conjunctive counter control recovers to at least 12/16.
 
 Hidden-trail topology is behaviorally hard but mechanistically weak. Drawing the trail does not recover
-performance; the weakest route is only 4/15 on the control. This directly rules out presenting it as a
+performance; the weakest route is only 3/16 on the control. This directly rules out presenting it as a
 localized temporal-memory failure. It may instead reflect geometric intersection counting, clutter,
 or an inadequate control. It stays in the atlas because the native holdout passes, with the limitation
 prominent.
@@ -127,7 +128,8 @@ retaining a task-relevant sufficient statistic over the complete clip.
   the capability boundary.
 - Treat this first 20-family campaign as hypothesis generation for a smaller preregistered benchmark.
 
-The source of truth is `src/data/admitted-families.json`; response-level records are in
-`src/data/admitted-runs.json`. Re-running `npm run publish:admitted` reconstructs both from frozen plans,
-manifests, and append-only result files and fails closed if any route falls below the substantive-answer
-minimum or reaches 50%.
+Core source data are in `src/data/admitted-families.json` and `src/data/admitted-runs.json`; the derived
+five-route matrix is published at `/evidence/five-route-matrix.json`, and expansion responses remain in the
+separate replication audit. Re-running `npm run publish:admitted` reconstructs the core evidence from frozen
+plans, manifests, and append-only result files and fails closed if any route falls below the
+substantive-answer minimum or reaches 50%.

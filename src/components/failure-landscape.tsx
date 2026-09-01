@@ -34,8 +34,8 @@ export function FailureLandscape({ families }: { families: AdmittedFamilyEvidenc
         <svg viewBox={`0 0 ${width} ${height}`} role="img" aria-labelledby="landscape-title landscape-desc">
           <title id="landscape-title">Universal hardness versus weakest control recovery</title>
           <desc id="landscape-desc">
-            Twenty admitted families. Points farther left have lower accuracy on their easiest model route.
-            Points higher up have better accuracy on their weakest control route.
+            Twenty admitted families across five current routes. Points farther left have lower accuracy on
+            their easiest model route. Points higher up have better accuracy on their weakest control route.
           </desc>
           <rect
             className="landscape-frame"
@@ -129,7 +129,7 @@ export function FailureLandscape({ families }: { families: AdmittedFamilyEvidenc
                 <text className="landscape-point-label" x={x(native)} y={y(control) + 4} textAnchor="middle">
                   {index + 1}
                 </text>
-            </Link>
+              </Link>
             );
           })}
         </svg>

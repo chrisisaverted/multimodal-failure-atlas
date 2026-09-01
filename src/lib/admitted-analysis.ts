@@ -1,11 +1,16 @@
-import type { AdmittedFamilyEvidence, ConditionSummary } from "./admitted-evidence";
+import type { AdmittedFamilyEvidence } from "./admitted-evidence";
+import { routeExpansionModels } from "./external-replication";
 
-export function conditionRate(condition: ConditionSummary) {
+export function conditionRate(condition: { substantiveAnswers: number; correct: number }) {
   return condition.substantiveAnswers ? condition.correct / condition.substantiveAnswers : null;
 }
 
+export function currentFamilyRoutes(family: AdmittedFamilyEvidence) {
+  return [...family.models, ...(routeExpansionModels(family) ?? [])];
+}
+
 export function easiestRouteRate(family: AdmittedFamilyEvidence) {
-  const rates = family.models.flatMap((model) => {
+  const rates = currentFamilyRoutes(family).flatMap((model) => {
     const rate = conditionRate(model.native);
     return rate === null ? [] : [rate];
   });
@@ -13,13 +18,14 @@ export function easiestRouteRate(family: AdmittedFamilyEvidence) {
 }
 
 export function pooledNativeRate(family: AdmittedFamilyEvidence) {
-  const correct = family.models.reduce((sum, model) => sum + model.native.correct, 0);
-  const total = family.models.reduce((sum, model) => sum + model.native.substantiveAnswers, 0);
+  const routes = currentFamilyRoutes(family);
+  const correct = routes.reduce((sum, model) => sum + model.native.correct, 0);
+  const total = routes.reduce((sum, model) => sum + model.native.substantiveAnswers, 0);
   return total ? correct / total : null;
 }
 
 export function weakestControlRate(family: AdmittedFamilyEvidence) {
-  const rates = family.models.flatMap((model) => {
+  const rates = currentFamilyRoutes(family).flatMap((model) => {
     const rate = conditionRate(model.control);
     return rate === null ? [] : [rate];
   });

@@ -33,18 +33,18 @@ Observed below-half is a finite-holdout gate, not a population claim. Several 95
 
 ## Current findings
 
-The conservative hardness order uses the easiest core route, with pooled accuracy only as a tie-breaker.
+The conservative hardness order uses the easiest of all five current routes, with pooled accuracy only as a tie-breaker.
 This prevents a weak route from hiding a stronger route.
 
-The hardest observed image families are dense change localization and visual graph-degree topology, whose
-easiest core routes each score 5/16. Fixed-target enclosure depth and parity verification follow. Exact wire
-counting has the lowest pooled image score but one route reaches 7/16 and its weakest control is 13/16, so it
-is not the cleanest localized result.
+The strongest image result is parity-matrix verification: no route exceeds 5/16, pooled accuracy is 17/80,
+and every control is 16/16. Change localization and graph topology also remain at or below 5/16, but their
+weakest controls are only 9/16 and 11/16. Exact wire counting has the lowest pooled image score, 14/80, but
+one route reaches 7/16, so it is not ranked first.
 
-The hardest observed video families are tied: dynamic route-turn integration scores 2/16, 2/16, and 3/16,
-while gated exact-frequency set cardinality scores 2/16, 3/16, and 2/16. Every matched control for both is
-16/16. The frequency task also scores 6/16 on Seed and 4/16 on MiMo. Selective flash counting follows at
-2/16, 4/16, and 2/16 with ceiling controls.
+Selective flash counting is behaviorally hardest across all five routes: no route exceeds 4/16 and pooled
+accuracy is 16/80, but its weakest control is only 6/16. The cleanest hard video result is dynamic route-turn
+integration: no route exceeds 5/16, pooled accuracy is 17/80, and every control is 16/16. Gated exact-frequency
+cardinality is similarly diagnostic at an easiest-route score of 6/16, pooled 17/80, and ceiling controls.
 
 The strongest reusable image recipe is distributed exact verification: make the answer depend on a global
 invariant or one near-miss defect, balance adjacent answers, and expose the missing intermediate in a

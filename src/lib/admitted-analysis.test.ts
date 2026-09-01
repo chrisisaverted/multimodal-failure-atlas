@@ -13,7 +13,7 @@ describe("conservative admitted-family analysis", () => {
     for (let index = 1; index < ordered.length; index += 1) {
       expect(easiestRouteRate(ordered[index - 1]!)!).toBeLessThanOrEqual(easiestRouteRate(ordered[index]!)!);
     }
-    expect(ordered[0]!.catalogueId).toBe("dynamic-route-turn-integration");
+    expect(ordered[0]!.catalogueId).toBe("identity-conditioned-temporal-event-counting");
   });
 
   it("keeps every easiest route strictly below the admission threshold", () => {
@@ -25,7 +25,7 @@ describe("conservative admitted-family analysis", () => {
       (family) => family.catalogueId === "identity-conditioned-exact-counting",
     )!;
     expect(easiestRouteRate(wire)).toBe(7 / 16);
-    expect(pooledNativeRate(wire)).toBe(8 / 48);
+    expect(pooledNativeRate(wire)).toBe(14 / 80);
     expect(weakestControlRate(wire)).toBe(13 / 16);
   });
 });
