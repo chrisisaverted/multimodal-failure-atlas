@@ -189,6 +189,8 @@
     "audit:coverage": "tsx scripts/audit-substantive-coverage.ts",
     "audit:export": "tsx scripts/audit-static-export.ts",
     "freeze:replication": "tsx scripts/freeze-replication-protocols.ts",
+    "summarize:replication": "tsx scripts/summarize-external-replication.ts",
+    "evaluate:replication": "tsx scripts/run-external-replication.ts",
     "publish:precision-wire": "tsx scripts/publish-precision-wire-results.ts",
     "evaluate": "tsx scripts/evaluate.ts",
     "evaluate:fixture": "tsx scripts/evaluate.ts evaluation/plans/fixture-smoke.json",
