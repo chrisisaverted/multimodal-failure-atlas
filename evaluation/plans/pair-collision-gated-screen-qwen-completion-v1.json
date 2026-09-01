@@ -1,0 +1,25 @@
+{
+  "id": "pair-collision-gated-screen-qwen-completion-v1-2026-09-01",
+  "resolvedAt": "2026-09-01",
+  "gateway": "OpenRouter",
+  "evaluationPlanId": "pair-collision-gated-discovery-v1",
+  "evaluationPlanSha256": "c4767b019b2c2a71e44b74216be5402a2b01b896b23435bcd2ef6052494cee27",
+  "stage": "five-route-gated-target-pair-screen-completion",
+  "casesPerModel": 1,
+  "trials": 1,
+  "temperature": 0,
+  "maxOutputTokens": 16384,
+  "reasoning": { "effort": "low", "exclude": true },
+  "scorer": "terminal-option-v3",
+  "allowProviderFallbacks": false,
+  "dataCollection": "deny",
+  "campaignCostCeilingUsd": 5,
+  "amendmentReason": "Seed 5300002 exhausted the frozen 8192-token hidden-reasoning allowance without emitting an answer. The original attempt remains immutable and receives no hardness credit; this prospective completion changes only the output allowance.",
+  "models": [
+    {
+      "modelId": "qwen/qwen3.8-max",
+      "modelRevision": "qwen/qwen3.8-max-20260803",
+      "upstreamProvider": "Alibaba"
+    }
+  ]
+}
