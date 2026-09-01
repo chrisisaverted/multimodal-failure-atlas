@@ -25,20 +25,30 @@ const caseSchema = z.object({
   candidateId: z.string(),
   cellId: z.string(),
   split: z.enum(["discovery", "confirmatory"]),
-  condition: z.enum(["native-1x", "slow-motion-4x"]).default("native-1x"),
+  condition: z.string().min(1).default("native-1x"),
   interventionDescription: z.string().optional(),
   failureModeId: z.string(),
-  generator: z.literal("event-counting"),
+  generator: z.enum([
+    "small-object",
+    "patch-phase",
+    "attribute-binding",
+    "numerosity-density",
+    "brief-event",
+    "event-order",
+    "identity-occlusion",
+    "event-counting",
+  ]),
   seed: z.number().int(),
   difficulty: z.number(),
   variant: z.number().int(),
   artifact: z.string(),
-  mimeType: z.literal("video/mp4"),
-  durationMs: z.number(),
+  mimeType: z.enum(["video/mp4", "image/png"]),
+  durationMs: z.number().optional(),
   question: z.string(),
   answerOptions: z.array(z.string()),
   expectedAnswer: z.string(),
   sha256: z.string().regex(/^[a-f0-9]{64}$/),
+  systemMessage: z.string().optional(),
 });
 const manifestSchema = z.object({
   id: z.string(),
@@ -104,8 +114,8 @@ if (!Number.isInteger(offset) || !Number.isInteger(limit) || offset < 0 || limit
 const cases = manifest.cases.slice(offset, offset + limit);
 if (cases.length !== limit) throw new Error("Requested discovery range exceeds the manifest.");
 
-const systemMessage =
-  "This is a controlled visual diagnostic. Count each distinct onset of the central light turning bright yellow. Inspect only the supplied video and return exactly one allowed integer. Do not explain.";
+const defaultSystemMessage =
+  "This is a controlled visual diagnostic. Inspect only the supplied media and return exactly one allowed answer. Do not explain.";
 const jobs: EvaluationJob[] = await Promise.all(
   cases.map(async (entry) => ({
     request: {
@@ -116,9 +126,11 @@ const jobs: EvaluationJob[] = await Promise.all(
       seed: entry.seed,
       difficulty: entry.difficulty,
       variant: entry.variant,
-      inputCondition: "native-video" as const,
+      inputCondition: entry.mimeType.startsWith("video/")
+        ? ("native-video" as const)
+        : ("native-image" as const),
       estimatedCostUsd: estimatedCaseCostUsd,
-      systemMessage,
+      systemMessage: entry.systemMessage ?? defaultSystemMessage,
       prompt: `${entry.question}\nAllowed answers: ${entry.answerOptions.join(", ")}.`,
       temperature: protocol.temperature,
       maxOutputTokens: protocol.maxOutputTokens,
@@ -136,7 +148,7 @@ const jobs: EvaluationJob[] = await Promise.all(
       durationMs: entry.durationMs,
       preprocessingNotes: [
         `Exact ${manifest.renderer} artifact`,
-        `${manifest.fps} FPS H.264 source`,
+        ...(entry.mimeType === "video/mp4" ? [`${manifest.fps} FPS H.264 source`] : []),
         `Condition: ${entry.condition}`,
         ...(entry.interventionDescription ? [entry.interventionDescription] : []),
       ],

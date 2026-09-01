@@ -1,0 +1,44 @@
+{
+  "id": "momentary-symbol-screen-v1-2026-08-31",
+  "resolvedAt": "2026-08-31",
+  "gateway": "OpenRouter",
+  "evaluationPlanId": "momentary-symbol-discovery-v1",
+  "evaluationPlanSha256": "6e38e4b92320f1e99c54dd876fbafa341d9d03c6673c7dbc45f519b360951133",
+  "stage": "adaptive-discovery-screen",
+  "casesPerModel": 36,
+  "trials": 1,
+  "temperature": 0,
+  "maxOutputTokens": 2048,
+  "reasoning": { "effort": "minimal", "exclude": true },
+  "scorer": "terminal-option-v2",
+  "allowProviderFallbacks": false,
+  "dataCollection": "deny",
+  "campaignCostCeilingUsd": 8,
+  "scientificGuardrails": {
+    "primaryObjective": "minimize the maximum substantive solve rate across all target models",
+    "maximumSolveRateExclusive": 0.5,
+    "minimumSubstantiveAnswersPerModelForDiscovery": 4,
+    "noAnswerReward": 0,
+    "balancedFourWayLabelsWithinEveryCell": true,
+    "humanSolvability": "unverified",
+    "confirmationIsUntouched": true,
+    "oracleControl": "critical event frame presented separately after cell selection"
+  },
+  "models": [
+    {
+      "modelId": "google/gemini-3.7-flash",
+      "modelRevision": "google/gemini-3.7-flash-20260813",
+      "upstreamProvider": "Google AI Studio"
+    },
+    {
+      "modelId": "moonshotai/kimi-k3",
+      "modelRevision": "moonshotai/kimi-k3-20260715",
+      "upstreamProvider": "Moonshot AI"
+    },
+    {
+      "modelId": "qwen/qwen3.8-max",
+      "modelRevision": "qwen/qwen3.8-max-20260803",
+      "upstreamProvider": "Alibaba"
+    }
+  ]
+}

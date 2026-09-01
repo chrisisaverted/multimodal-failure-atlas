@@ -59,6 +59,34 @@ objective or whether hidden reasoning is represented textually. A miss can occur
 receives the evidence. The paired temporal intervention is intended to distinguish one upstream loss from
 downstream integration, not to establish a general theory of intelligence from final-answer behavior.
 
+## Search family 2: momentary symbol acquisition
+
+The first holdout transferred strongly to GLM and MiMo but not below 50% for Gemini, Kimi, or Qwen. The
+second family therefore removes the predictable rhythm that allowed counting from global timing and
+tests acquisition directly. A 20-second clip contains one large, high-contrast answer-bearing symbol for
+67, 100, or 133 ms. Four labels are balanced inside every duration/phase cell, temporal locations are
+counterbalanced, and all event windows avoid the integer and half-second instants used by common 1–2 FPS
+sampling lattices.
+
+The search ranks the easiest of Gemini, Kimi, and Qwen, not their pooled average. A cell cannot advance
+unless every route supplies substantive answers below the 50% solve-rate bar. Its untouched holdout uses
+16 new seeds and appearances with four examples per label. The exact answer-bearing frame is retained as
+an image oracle: native-video failure accompanied by oracle success narrows the boundary toward temporal
+acquisition rather than symbol recognition.
+
+This design follows the empirical direction established by Moment-Video, whose 33-model evaluation
+reported a best overall accuracy of 39.6% and weaker transient-counting results, while making the Atlas
+stimulus generation deterministic and its adaptive selection auditable. Google documents 1 FPS video
+sampling for Gemini's File API; Qwen3-VL's official processor defaults to 2 FPS and exposes both frame and
+total-pixel budgets. Gateway preprocessing remains opaque, so the phase grid is still a behavioral probe,
+not an assertion about a hidden implementation.
+
+Kimi K3's released reference processor samples at 4 FPS, uses uniformly spaced indices over the complete
+source, and temporally merges groups of four frames. Confirmatory event times are therefore chosen from
+new temporal locations whose answer-bearing windows do not intersect the documented uniform 1, 2, or 4
+FPS reference indices. This is a predeclared mechanism probe, not a guarantee that OpenRouter's pinned
+upstream uses the reference processor unchanged.
+
 ## Objective and promotion
 
 For each cell, let a substantive answer be a verified, non-empty answer. The primary quantity is the

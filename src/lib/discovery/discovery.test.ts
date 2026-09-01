@@ -4,6 +4,15 @@ import {
   createDiscoveryGrid,
   renderLatticeCountingSvg,
 } from "./lattice-counting";
+import { scoreCrossModelCells, wilsonUpper } from "./admission";
+import {
+  createMomentarySymbolDiscoveryGrid,
+  createMomentarySymbolHoldout,
+  eventTouchesReferenceSampler,
+  isMomentaryEventActive,
+  momentarySymbols,
+  renderMomentarySymbolSvg,
+} from "./momentary-symbol";
 import { scoreCells } from "./objective";
 import { scheduleBudgetedRound } from "./scheduler";
 
@@ -71,5 +80,89 @@ describe("adaptive multimodal discovery", () => {
     });
     expect(calls).toHaveLength(20);
     expect(calls.reduce((sum, call) => sum + call.maximumEstimatedCostUsd, 0)).toBeCloseTo(1);
+  });
+
+  it("uses the easiest target model as the admission bottleneck", () => {
+    const [first] = createDiscoveryGrid();
+    const observations = [
+      ...Array.from({ length: 8 }, (_, index) => ({
+        candidateId: first!.id,
+        modelId: "model-a",
+        outcome: index < 2 ? ("correct" as const) : ("incorrect" as const),
+        costUsd: 0,
+      })),
+      ...Array.from({ length: 8 }, (_, index) => ({
+        candidateId: first!.id,
+        modelId: "model-b",
+        outcome: index < 5 ? ("correct" as const) : ("incorrect" as const),
+        costUsd: 0,
+      })),
+    ];
+    const [score] = scoreCrossModelCells([first!], observations, ["model-a", "model-b"]);
+    expect(score!.models[0]!.substantiveSolveRate).toBe(0.25);
+    expect(score!.worstModelSolveRate).toBe(0.625);
+    expect(score!.observedAdmitted).toBe(false);
+  });
+
+  it("never treats model silence as evidence of hardness", () => {
+    const [first] = createDiscoveryGrid();
+    const observations = Array.from({ length: 20 }, () => ({
+      candidateId: first!.id,
+      modelId: "silent-model",
+      outcome: "no-answer" as const,
+      costUsd: 0,
+    }));
+    const [score] = scoreCrossModelCells([first!], observations, ["silent-model"]);
+    expect(score!.noAnswerRate).toBe(1);
+    expect(score!.evidenceComplete).toBe(false);
+    expect(score!.rankScore).toBe(0);
+    expect(score!.observedAdmitted).toBe(false);
+  });
+
+  it("requires stronger evidence than an observed below-bar rate", () => {
+    expect(wilsonUpper(3, 16)).toBeLessThan(0.5);
+    expect(wilsonUpper(4, 16)).toBeLessThan(0.5);
+    expect(wilsonUpper(5, 16)).toBeGreaterThan(0.5);
+  });
+
+  it("builds balanced momentary-symbol cells with answer-bearing frames off the 2 FPS lattice", () => {
+    const candidates = createMomentarySymbolDiscoveryGrid();
+    expect(candidates).toHaveLength(36);
+    expect(new Set(candidates.map((candidate) => candidate.cellId))).toHaveLength(9);
+    for (const cellId of new Set(candidates.map((candidate) => candidate.cellId))) {
+      const cell = candidates.filter((candidate) => candidate.cellId === cellId);
+      expect(new Set(cell.map((candidate) => candidate.expectedAnswer))).toEqual(new Set(momentarySymbols));
+      expect(
+        cell.every((candidate) => candidate.parameters.phaseMs + candidate.parameters.eventDurationMs < 500),
+      ).toBe(true);
+    }
+  });
+
+  it("keeps momentary holdout labels balanced and seeds disjoint", () => {
+    const [winner] = createMomentarySymbolDiscoveryGrid();
+    const discoverySeconds = createMomentarySymbolDiscoveryGrid()
+      .filter((candidate) => candidate.cellId === winner!.cellId)
+      .map((candidate) => candidate.parameters.eventSecond);
+    const holdout = createMomentarySymbolHoldout(winner!, discoverySeconds);
+    expect(holdout).toHaveLength(16);
+    expect(holdout.every((candidate) => candidate.seed >= 920_000)).toBe(true);
+    expect(holdout.every((candidate) => !discoverySeconds.includes(candidate.parameters.eventSecond))).toBe(
+      true,
+    );
+    for (const symbol of momentarySymbols) {
+      expect(holdout.filter((candidate) => candidate.expectedAnswer === symbol)).toHaveLength(4);
+    }
+    for (const candidate of holdout) {
+      expect([1, 2, 4].some((sampleFps) => eventTouchesReferenceSampler(candidate, sampleFps))).toBe(false);
+    }
+  });
+
+  it("renders the oracle symbol only during the committed event interval", () => {
+    const [candidate] = createMomentarySymbolDiscoveryGrid();
+    const start = candidate!.parameters.eventSecond * 1000 + candidate!.parameters.phaseMs;
+    expect(isMomentaryEventActive(candidate!, start - 1)).toBe(false);
+    expect(isMomentaryEventActive(candidate!, start)).toBe(true);
+    expect(renderMomentarySymbolSvg(candidate!, start)).toContain("#f4dc36");
+    expect(isMomentaryEventActive(candidate!, start + candidate!.parameters.eventDurationMs)).toBe(false);
   });
 });

@@ -1,0 +1,601 @@
+{
+  "id": "momentary-symbol-ranking-v1",
+  "status": "adaptive-discovery-not-confirmatory-evidence",
+  "planSha256": "6e38e4b92320f1e99c54dd876fbafa341d9d03c6673c7dbc45f519b360951133",
+  "targetModelIds": [
+    "google/gemini-3.7-flash",
+    "moonshotai/kimi-k3",
+    "qwen/qwen3.8-max"
+  ],
+  "policy": {
+    "maximumSolveRateExclusive": 0.5,
+    "minimumSubstantiveAnswersPerModel": 4,
+    "confidenceZ": 1.96
+  },
+  "resultFiles": [
+    "evaluation/results/momentary-symbol-discovery-v1-gemini.jsonl",
+    "evaluation/results/momentary-symbol-discovery-v1-kimi.jsonl",
+    "evaluation/results/momentary-symbol-discovery-v1-qwen.jsonl"
+  ],
+  "records": 108,
+  "totalCostUsd": 2.8135492500000003,
+  "selectionRule": "minimize the easiest target model's Wilson-95% upper solve bound; require substantive coverage from every model; no-answer weight is zero",
+  "predictionDistribution": {
+    "google/gemini-3.7-flash": {
+      "diamond": 8,
+      "square": 3,
+      "star": 19,
+      "triangle": 6
+    },
+    "moonshotai/kimi-k3": {
+      "diamond": 10,
+      "square": 7,
+      "star": 12,
+      "triangle": 7
+    },
+    "qwen/qwen3.8-max": {
+      "square": 2,
+      "star": 34
+    }
+  },
+  "cells": [
+    {
+      "cellId": "cell-cd51e28b4fe1ecf3",
+      "models": [
+        {
+          "modelId": "google/gemini-3.7-flash",
+          "requests": 4,
+          "substantiveAnswers": 4,
+          "correct": 1,
+          "incorrect": 3,
+          "noAnswers": 0,
+          "reviewOrErrors": 0,
+          "operationalSolveRate": 0.25,
+          "substantiveSolveRate": 0.25,
+          "solveRateWilsonUpper": 0.6993639475573634,
+          "evidenceSufficient": true,
+          "observedBelowBar": true,
+          "confidenceBelowBar": false
+        },
+        {
+          "modelId": "moonshotai/kimi-k3",
+          "requests": 4,
+          "substantiveAnswers": 4,
+          "correct": 1,
+          "incorrect": 3,
+          "noAnswers": 0,
+          "reviewOrErrors": 0,
+          "operationalSolveRate": 0.25,
+          "substantiveSolveRate": 0.25,
+          "solveRateWilsonUpper": 0.6993639475573634,
+          "evidenceSufficient": true,
+          "observedBelowBar": true,
+          "confidenceBelowBar": false
+        },
+        {
+          "modelId": "qwen/qwen3.8-max",
+          "requests": 4,
+          "substantiveAnswers": 4,
+          "correct": 1,
+          "incorrect": 3,
+          "noAnswers": 0,
+          "reviewOrErrors": 0,
+          "operationalSolveRate": 0.25,
+          "substantiveSolveRate": 0.25,
+          "solveRateWilsonUpper": 0.6993639475573634,
+          "evidenceSufficient": true,
+          "observedBelowBar": true,
+          "confidenceBelowBar": false
+        }
+      ],
+      "evidenceComplete": true,
+      "observedAdmitted": true,
+      "confidenceAdmitted": false,
+      "worstModelSolveRate": 0.25,
+      "worstModelWilsonUpper": 0.6993639475573634,
+      "noAnswerRate": 0,
+      "rankScore": 0.3006360524426366,
+      "parameters": {
+        "eventDurationMs": 67,
+        "phaseMs": 350,
+        "videoDurationMs": 20000
+      }
+    },
+    {
+      "cellId": "cell-1c337cff60631b10",
+      "models": [
+        {
+          "modelId": "google/gemini-3.7-flash",
+          "requests": 4,
+          "substantiveAnswers": 4,
+          "correct": 2,
+          "incorrect": 2,
+          "noAnswers": 0,
+          "reviewOrErrors": 0,
+          "operationalSolveRate": 0.5,
+          "substantiveSolveRate": 0.5,
+          "solveRateWilsonUpper": 0.8499642911798285,
+          "evidenceSufficient": true,
+          "observedBelowBar": false,
+          "confidenceBelowBar": false
+        },
+        {
+          "modelId": "moonshotai/kimi-k3",
+          "requests": 4,
+          "substantiveAnswers": 4,
+          "correct": 3,
+          "incorrect": 1,
+          "noAnswers": 0,
+          "reviewOrErrors": 0,
+          "operationalSolveRate": 0.75,
+          "substantiveSolveRate": 0.75,
+          "solveRateWilsonUpper": 0.9544139373553638,
+          "evidenceSufficient": true,
+          "observedBelowBar": false,
+          "confidenceBelowBar": false
+        },
+        {
+          "modelId": "qwen/qwen3.8-max",
+          "requests": 4,
+          "substantiveAnswers": 4,
+          "correct": 0,
+          "incorrect": 4,
+          "noAnswers": 0,
+          "reviewOrErrors": 0,
+          "operationalSolveRate": 0,
+          "substantiveSolveRate": 0,
+          "solveRateWilsonUpper": 0.48990002040399916,
+          "evidenceSufficient": true,
+          "observedBelowBar": true,
+          "confidenceBelowBar": true
+        }
+      ],
+      "evidenceComplete": true,
+      "observedAdmitted": false,
+      "confidenceAdmitted": false,
+      "worstModelSolveRate": 0.75,
+      "worstModelWilsonUpper": 0.9544139373553638,
+      "noAnswerRate": 0,
+      "rankScore": 0.04558606264463616,
+      "parameters": {
+        "eventDurationMs": 100,
+        "phaseMs": 150,
+        "videoDurationMs": 20000
+      }
+    },
+    {
+      "cellId": "cell-38a8155bb25cf8d9",
+      "models": [
+        {
+          "modelId": "google/gemini-3.7-flash",
+          "requests": 4,
+          "substantiveAnswers": 4,
+          "correct": 0,
+          "incorrect": 4,
+          "noAnswers": 0,
+          "reviewOrErrors": 0,
+          "operationalSolveRate": 0,
+          "substantiveSolveRate": 0,
+          "solveRateWilsonUpper": 0.48990002040399916,
+          "evidenceSufficient": true,
+          "observedBelowBar": true,
+          "confidenceBelowBar": true
+        },
+        {
+          "modelId": "moonshotai/kimi-k3",
+          "requests": 4,
+          "substantiveAnswers": 4,
+          "correct": 3,
+          "incorrect": 1,
+          "noAnswers": 0,
+          "reviewOrErrors": 0,
+          "operationalSolveRate": 0.75,
+          "substantiveSolveRate": 0.75,
+          "solveRateWilsonUpper": 0.9544139373553638,
+          "evidenceSufficient": true,
+          "observedBelowBar": false,
+          "confidenceBelowBar": false
+        },
+        {
+          "modelId": "qwen/qwen3.8-max",
+          "requests": 4,
+          "substantiveAnswers": 4,
+          "correct": 1,
+          "incorrect": 3,
+          "noAnswers": 0,
+          "reviewOrErrors": 0,
+          "operationalSolveRate": 0.25,
+          "substantiveSolveRate": 0.25,
+          "solveRateWilsonUpper": 0.6993639475573634,
+          "evidenceSufficient": true,
+          "observedBelowBar": true,
+          "confidenceBelowBar": false
+        }
+      ],
+      "evidenceComplete": true,
+      "observedAdmitted": false,
+      "confidenceAdmitted": false,
+      "worstModelSolveRate": 0.75,
+      "worstModelWilsonUpper": 0.9544139373553638,
+      "noAnswerRate": 0,
+      "rankScore": 0.04558606264463616,
+      "parameters": {
+        "eventDurationMs": 67,
+        "phaseMs": 150,
+        "videoDurationMs": 20000
+      }
+    },
+    {
+      "cellId": "cell-32600b8cbe6bf895",
+      "models": [
+        {
+          "modelId": "google/gemini-3.7-flash",
+          "requests": 4,
+          "substantiveAnswers": 4,
+          "correct": 1,
+          "incorrect": 3,
+          "noAnswers": 0,
+          "reviewOrErrors": 0,
+          "operationalSolveRate": 0.25,
+          "substantiveSolveRate": 0.25,
+          "solveRateWilsonUpper": 0.6993639475573634,
+          "evidenceSufficient": true,
+          "observedBelowBar": true,
+          "confidenceBelowBar": false
+        },
+        {
+          "modelId": "moonshotai/kimi-k3",
+          "requests": 4,
+          "substantiveAnswers": 4,
+          "correct": 4,
+          "incorrect": 0,
+          "noAnswers": 0,
+          "reviewOrErrors": 0,
+          "operationalSolveRate": 1,
+          "substantiveSolveRate": 1,
+          "solveRateWilsonUpper": 1,
+          "evidenceSufficient": true,
+          "observedBelowBar": false,
+          "confidenceBelowBar": false
+        },
+        {
+          "modelId": "qwen/qwen3.8-max",
+          "requests": 4,
+          "substantiveAnswers": 4,
+          "correct": 1,
+          "incorrect": 3,
+          "noAnswers": 0,
+          "reviewOrErrors": 0,
+          "operationalSolveRate": 0.25,
+          "substantiveSolveRate": 0.25,
+          "solveRateWilsonUpper": 0.6993639475573634,
+          "evidenceSufficient": true,
+          "observedBelowBar": true,
+          "confidenceBelowBar": false
+        }
+      ],
+      "evidenceComplete": true,
+      "observedAdmitted": false,
+      "confidenceAdmitted": false,
+      "worstModelSolveRate": 1,
+      "worstModelWilsonUpper": 1,
+      "noAnswerRate": 0,
+      "rankScore": 0,
+      "parameters": {
+        "eventDurationMs": 100,
+        "phaseMs": 250,
+        "videoDurationMs": 20000
+      }
+    },
+    {
+      "cellId": "cell-7d779a07fe8bb17e",
+      "models": [
+        {
+          "modelId": "google/gemini-3.7-flash",
+          "requests": 4,
+          "substantiveAnswers": 4,
+          "correct": 2,
+          "incorrect": 2,
+          "noAnswers": 0,
+          "reviewOrErrors": 0,
+          "operationalSolveRate": 0.5,
+          "substantiveSolveRate": 0.5,
+          "solveRateWilsonUpper": 0.8499642911798285,
+          "evidenceSufficient": true,
+          "observedBelowBar": false,
+          "confidenceBelowBar": false
+        },
+        {
+          "modelId": "moonshotai/kimi-k3",
+          "requests": 4,
+          "substantiveAnswers": 4,
+          "correct": 4,
+          "incorrect": 0,
+          "noAnswers": 0,
+          "reviewOrErrors": 0,
+          "operationalSolveRate": 1,
+          "substantiveSolveRate": 1,
+          "solveRateWilsonUpper": 1,
+          "evidenceSufficient": true,
+          "observedBelowBar": false,
+          "confidenceBelowBar": false
+        },
+        {
+          "modelId": "qwen/qwen3.8-max",
+          "requests": 4,
+          "substantiveAnswers": 4,
+          "correct": 1,
+          "incorrect": 3,
+          "noAnswers": 0,
+          "reviewOrErrors": 0,
+          "operationalSolveRate": 0.25,
+          "substantiveSolveRate": 0.25,
+          "solveRateWilsonUpper": 0.6993639475573634,
+          "evidenceSufficient": true,
+          "observedBelowBar": true,
+          "confidenceBelowBar": false
+        }
+      ],
+      "evidenceComplete": true,
+      "observedAdmitted": false,
+      "confidenceAdmitted": false,
+      "worstModelSolveRate": 1,
+      "worstModelWilsonUpper": 1,
+      "noAnswerRate": 0,
+      "rankScore": 0,
+      "parameters": {
+        "eventDurationMs": 133,
+        "phaseMs": 150,
+        "videoDurationMs": 20000
+      }
+    },
+    {
+      "cellId": "cell-97537afbe15235e1",
+      "models": [
+        {
+          "modelId": "google/gemini-3.7-flash",
+          "requests": 4,
+          "substantiveAnswers": 4,
+          "correct": 1,
+          "incorrect": 3,
+          "noAnswers": 0,
+          "reviewOrErrors": 0,
+          "operationalSolveRate": 0.25,
+          "substantiveSolveRate": 0.25,
+          "solveRateWilsonUpper": 0.6993639475573634,
+          "evidenceSufficient": true,
+          "observedBelowBar": true,
+          "confidenceBelowBar": false
+        },
+        {
+          "modelId": "moonshotai/kimi-k3",
+          "requests": 4,
+          "substantiveAnswers": 4,
+          "correct": 4,
+          "incorrect": 0,
+          "noAnswers": 0,
+          "reviewOrErrors": 0,
+          "operationalSolveRate": 1,
+          "substantiveSolveRate": 1,
+          "solveRateWilsonUpper": 1,
+          "evidenceSufficient": true,
+          "observedBelowBar": false,
+          "confidenceBelowBar": false
+        },
+        {
+          "modelId": "qwen/qwen3.8-max",
+          "requests": 4,
+          "substantiveAnswers": 4,
+          "correct": 1,
+          "incorrect": 3,
+          "noAnswers": 0,
+          "reviewOrErrors": 0,
+          "operationalSolveRate": 0.25,
+          "substantiveSolveRate": 0.25,
+          "solveRateWilsonUpper": 0.6993639475573634,
+          "evidenceSufficient": true,
+          "observedBelowBar": true,
+          "confidenceBelowBar": false
+        }
+      ],
+      "evidenceComplete": true,
+      "observedAdmitted": false,
+      "confidenceAdmitted": false,
+      "worstModelSolveRate": 1,
+      "worstModelWilsonUpper": 1,
+      "noAnswerRate": 0,
+      "rankScore": 0,
+      "parameters": {
+        "eventDurationMs": 67,
+        "phaseMs": 250,
+        "videoDurationMs": 20000
+      }
+    },
+    {
+      "cellId": "cell-a079390805aa52cb",
+      "models": [
+        {
+          "modelId": "google/gemini-3.7-flash",
+          "requests": 4,
+          "substantiveAnswers": 4,
+          "correct": 4,
+          "incorrect": 0,
+          "noAnswers": 0,
+          "reviewOrErrors": 0,
+          "operationalSolveRate": 1,
+          "substantiveSolveRate": 1,
+          "solveRateWilsonUpper": 1,
+          "evidenceSufficient": true,
+          "observedBelowBar": false,
+          "confidenceBelowBar": false
+        },
+        {
+          "modelId": "moonshotai/kimi-k3",
+          "requests": 4,
+          "substantiveAnswers": 4,
+          "correct": 4,
+          "incorrect": 0,
+          "noAnswers": 0,
+          "reviewOrErrors": 0,
+          "operationalSolveRate": 1,
+          "substantiveSolveRate": 1,
+          "solveRateWilsonUpper": 1,
+          "evidenceSufficient": true,
+          "observedBelowBar": false,
+          "confidenceBelowBar": false
+        },
+        {
+          "modelId": "qwen/qwen3.8-max",
+          "requests": 4,
+          "substantiveAnswers": 4,
+          "correct": 1,
+          "incorrect": 3,
+          "noAnswers": 0,
+          "reviewOrErrors": 0,
+          "operationalSolveRate": 0.25,
+          "substantiveSolveRate": 0.25,
+          "solveRateWilsonUpper": 0.6993639475573634,
+          "evidenceSufficient": true,
+          "observedBelowBar": true,
+          "confidenceBelowBar": false
+        }
+      ],
+      "evidenceComplete": true,
+      "observedAdmitted": false,
+      "confidenceAdmitted": false,
+      "worstModelSolveRate": 1,
+      "worstModelWilsonUpper": 1,
+      "noAnswerRate": 0,
+      "rankScore": 0,
+      "parameters": {
+        "eventDurationMs": 133,
+        "phaseMs": 350,
+        "videoDurationMs": 20000
+      }
+    },
+    {
+      "cellId": "cell-cd9e7ee544e31b8c",
+      "models": [
+        {
+          "modelId": "google/gemini-3.7-flash",
+          "requests": 4,
+          "substantiveAnswers": 4,
+          "correct": 3,
+          "incorrect": 1,
+          "noAnswers": 0,
+          "reviewOrErrors": 0,
+          "operationalSolveRate": 0.75,
+          "substantiveSolveRate": 0.75,
+          "solveRateWilsonUpper": 0.9544139373553638,
+          "evidenceSufficient": true,
+          "observedBelowBar": false,
+          "confidenceBelowBar": false
+        },
+        {
+          "modelId": "moonshotai/kimi-k3",
+          "requests": 4,
+          "substantiveAnswers": 4,
+          "correct": 4,
+          "incorrect": 0,
+          "noAnswers": 0,
+          "reviewOrErrors": 0,
+          "operationalSolveRate": 1,
+          "substantiveSolveRate": 1,
+          "solveRateWilsonUpper": 1,
+          "evidenceSufficient": true,
+          "observedBelowBar": false,
+          "confidenceBelowBar": false
+        },
+        {
+          "modelId": "qwen/qwen3.8-max",
+          "requests": 4,
+          "substantiveAnswers": 4,
+          "correct": 0,
+          "incorrect": 4,
+          "noAnswers": 0,
+          "reviewOrErrors": 0,
+          "operationalSolveRate": 0,
+          "substantiveSolveRate": 0,
+          "solveRateWilsonUpper": 0.48990002040399916,
+          "evidenceSufficient": true,
+          "observedBelowBar": true,
+          "confidenceBelowBar": true
+        }
+      ],
+      "evidenceComplete": true,
+      "observedAdmitted": false,
+      "confidenceAdmitted": false,
+      "worstModelSolveRate": 1,
+      "worstModelWilsonUpper": 1,
+      "noAnswerRate": 0,
+      "rankScore": 0,
+      "parameters": {
+        "eventDurationMs": 133,
+        "phaseMs": 250,
+        "videoDurationMs": 20000
+      }
+    },
+    {
+      "cellId": "cell-d7da0503261f2cb9",
+      "models": [
+        {
+          "modelId": "google/gemini-3.7-flash",
+          "requests": 4,
+          "substantiveAnswers": 4,
+          "correct": 1,
+          "incorrect": 3,
+          "noAnswers": 0,
+          "reviewOrErrors": 0,
+          "operationalSolveRate": 0.25,
+          "substantiveSolveRate": 0.25,
+          "solveRateWilsonUpper": 0.6993639475573634,
+          "evidenceSufficient": true,
+          "observedBelowBar": true,
+          "confidenceBelowBar": false
+        },
+        {
+          "modelId": "moonshotai/kimi-k3",
+          "requests": 4,
+          "substantiveAnswers": 4,
+          "correct": 4,
+          "incorrect": 0,
+          "noAnswers": 0,
+          "reviewOrErrors": 0,
+          "operationalSolveRate": 1,
+          "substantiveSolveRate": 1,
+          "solveRateWilsonUpper": 1,
+          "evidenceSufficient": true,
+          "observedBelowBar": false,
+          "confidenceBelowBar": false
+        },
+        {
+          "modelId": "qwen/qwen3.8-max",
+          "requests": 4,
+          "substantiveAnswers": 4,
+          "correct": 1,
+          "incorrect": 3,
+          "noAnswers": 0,
+          "reviewOrErrors": 0,
+          "operationalSolveRate": 0.25,
+          "substantiveSolveRate": 0.25,
+          "solveRateWilsonUpper": 0.6993639475573634,
+          "evidenceSufficient": true,
+          "observedBelowBar": true,
+          "confidenceBelowBar": false
+        }
+      ],
+      "evidenceComplete": true,
+      "observedAdmitted": false,
+      "confidenceAdmitted": false,
+      "worstModelSolveRate": 1,
+      "worstModelWilsonUpper": 1,
+      "noAnswerRate": 0,
+      "rankScore": 0,
+      "parameters": {
+        "eventDurationMs": 100,
+        "phaseMs": 350,
+        "videoDurationMs": 20000
+      }
+    }
+  ]
+}

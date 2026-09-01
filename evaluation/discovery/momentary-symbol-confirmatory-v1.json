@@ -1,0 +1,448 @@
+{
+  "id": "momentary-symbol-confirmatory-v1",
+  "createdAt": "2026-08-31",
+  "generatorVersion": "momentary-symbol-v1",
+  "status": "frozen-confirmatory-holdout",
+  "derivedFrom": {
+    "discoveryPlanSha256": "6e38e4b92320f1e99c54dd876fbafa341d9d03c6673c7dbc45f519b360951133",
+    "rankingSha256": "a0274500bd024186db30a2ad7370426f36fc169a9e96bcd5b3e1da2e4f0e058d",
+    "selectedCellId": "cell-cd51e28b4fe1ecf3",
+    "selectionRule": "first ranked cell clearing the all-model observed below-50% bar"
+  },
+  "holdoutGuarantees": {
+    "balancedLabels": true,
+    "candidatesPerModel": 16,
+    "disjointSeedMinimum": 920000,
+    "newEventTimesAndVisualVariants": true,
+    "constructionAmendment": "Before any holdout request, validation replaced the first draft's temporal locations with 2, 3, 4, and 6 seconds because those exact windows avoid the separately rounded reference indices at 1, 2, and 4 FPS. No model saw either draft before this correction.",
+    "humanSolvability": "unverified-until-blinded-human-baseline"
+  },
+  "interventions": [
+    {
+      "id": "native-1x",
+      "description": "Exact source video at native speed; primary admission condition."
+    },
+    {
+      "id": "oracle-critical-frame",
+      "description": "The answer-bearing frame as a still image; positive acquisition control."
+    }
+  ],
+  "candidates": [
+    {
+      "id": "ms-6ce953bec268bd1c",
+      "cellId": "cell-cd51e28b4fe1ecf3",
+      "mechanism": "momentary-evidence-acquisition",
+      "split": "confirmatory",
+      "seed": 920000,
+      "failureModeId": "brief-event-blindness",
+      "question": "Which large black symbol appears briefly at the center of the video?",
+      "answerOptions": [
+        "triangle",
+        "square",
+        "diamond",
+        "star"
+      ],
+      "expectedAnswer": "triangle",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "symbol": "triangle",
+        "eventDurationMs": 67,
+        "phaseMs": 350,
+        "eventSecond": 2,
+        "videoDurationMs": 20000,
+        "fps": 30,
+        "visualVariant": 20
+      }
+    },
+    {
+      "id": "ms-599a107564a08ada",
+      "cellId": "cell-cd51e28b4fe1ecf3",
+      "mechanism": "momentary-evidence-acquisition",
+      "split": "confirmatory",
+      "seed": 920001,
+      "failureModeId": "brief-event-blindness",
+      "question": "Which large black symbol appears briefly at the center of the video?",
+      "answerOptions": [
+        "square",
+        "diamond",
+        "star",
+        "triangle"
+      ],
+      "expectedAnswer": "square",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "symbol": "square",
+        "eventDurationMs": 67,
+        "phaseMs": 350,
+        "eventSecond": 3,
+        "videoDurationMs": 20000,
+        "fps": 30,
+        "visualVariant": 21
+      }
+    },
+    {
+      "id": "ms-17b9cb99ad64b400",
+      "cellId": "cell-cd51e28b4fe1ecf3",
+      "mechanism": "momentary-evidence-acquisition",
+      "split": "confirmatory",
+      "seed": 920002,
+      "failureModeId": "brief-event-blindness",
+      "question": "Which large black symbol appears briefly at the center of the video?",
+      "answerOptions": [
+        "diamond",
+        "star",
+        "triangle",
+        "square"
+      ],
+      "expectedAnswer": "diamond",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "symbol": "diamond",
+        "eventDurationMs": 67,
+        "phaseMs": 350,
+        "eventSecond": 4,
+        "videoDurationMs": 20000,
+        "fps": 30,
+        "visualVariant": 22
+      }
+    },
+    {
+      "id": "ms-9b3fdcf60a5f0785",
+      "cellId": "cell-cd51e28b4fe1ecf3",
+      "mechanism": "momentary-evidence-acquisition",
+      "split": "confirmatory",
+      "seed": 920003,
+      "failureModeId": "brief-event-blindness",
+      "question": "Which large black symbol appears briefly at the center of the video?",
+      "answerOptions": [
+        "star",
+        "triangle",
+        "square",
+        "diamond"
+      ],
+      "expectedAnswer": "star",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "symbol": "star",
+        "eventDurationMs": 67,
+        "phaseMs": 350,
+        "eventSecond": 6,
+        "videoDurationMs": 20000,
+        "fps": 30,
+        "visualVariant": 23
+      }
+    },
+    {
+      "id": "ms-4f1238d6b26e8eb5",
+      "cellId": "cell-cd51e28b4fe1ecf3",
+      "mechanism": "momentary-evidence-acquisition",
+      "split": "confirmatory",
+      "seed": 920004,
+      "failureModeId": "brief-event-blindness",
+      "question": "Which large black symbol appears briefly at the center of the video?",
+      "answerOptions": [
+        "triangle",
+        "square",
+        "diamond",
+        "star"
+      ],
+      "expectedAnswer": "triangle",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "symbol": "triangle",
+        "eventDurationMs": 67,
+        "phaseMs": 350,
+        "eventSecond": 3,
+        "videoDurationMs": 20000,
+        "fps": 30,
+        "visualVariant": 24
+      }
+    },
+    {
+      "id": "ms-4a56c8f0f5015808",
+      "cellId": "cell-cd51e28b4fe1ecf3",
+      "mechanism": "momentary-evidence-acquisition",
+      "split": "confirmatory",
+      "seed": 920005,
+      "failureModeId": "brief-event-blindness",
+      "question": "Which large black symbol appears briefly at the center of the video?",
+      "answerOptions": [
+        "square",
+        "diamond",
+        "star",
+        "triangle"
+      ],
+      "expectedAnswer": "square",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "symbol": "square",
+        "eventDurationMs": 67,
+        "phaseMs": 350,
+        "eventSecond": 4,
+        "videoDurationMs": 20000,
+        "fps": 30,
+        "visualVariant": 25
+      }
+    },
+    {
+      "id": "ms-fc95a56323c50f9f",
+      "cellId": "cell-cd51e28b4fe1ecf3",
+      "mechanism": "momentary-evidence-acquisition",
+      "split": "confirmatory",
+      "seed": 920006,
+      "failureModeId": "brief-event-blindness",
+      "question": "Which large black symbol appears briefly at the center of the video?",
+      "answerOptions": [
+        "diamond",
+        "star",
+        "triangle",
+        "square"
+      ],
+      "expectedAnswer": "diamond",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "symbol": "diamond",
+        "eventDurationMs": 67,
+        "phaseMs": 350,
+        "eventSecond": 6,
+        "videoDurationMs": 20000,
+        "fps": 30,
+        "visualVariant": 26
+      }
+    },
+    {
+      "id": "ms-255130d2a6d9644c",
+      "cellId": "cell-cd51e28b4fe1ecf3",
+      "mechanism": "momentary-evidence-acquisition",
+      "split": "confirmatory",
+      "seed": 920007,
+      "failureModeId": "brief-event-blindness",
+      "question": "Which large black symbol appears briefly at the center of the video?",
+      "answerOptions": [
+        "star",
+        "triangle",
+        "square",
+        "diamond"
+      ],
+      "expectedAnswer": "star",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "symbol": "star",
+        "eventDurationMs": 67,
+        "phaseMs": 350,
+        "eventSecond": 2,
+        "videoDurationMs": 20000,
+        "fps": 30,
+        "visualVariant": 27
+      }
+    },
+    {
+      "id": "ms-db1b34125f636461",
+      "cellId": "cell-cd51e28b4fe1ecf3",
+      "mechanism": "momentary-evidence-acquisition",
+      "split": "confirmatory",
+      "seed": 920008,
+      "failureModeId": "brief-event-blindness",
+      "question": "Which large black symbol appears briefly at the center of the video?",
+      "answerOptions": [
+        "triangle",
+        "square",
+        "diamond",
+        "star"
+      ],
+      "expectedAnswer": "triangle",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "symbol": "triangle",
+        "eventDurationMs": 67,
+        "phaseMs": 350,
+        "eventSecond": 4,
+        "videoDurationMs": 20000,
+        "fps": 30,
+        "visualVariant": 28
+      }
+    },
+    {
+      "id": "ms-b1cc08685dc8aaaa",
+      "cellId": "cell-cd51e28b4fe1ecf3",
+      "mechanism": "momentary-evidence-acquisition",
+      "split": "confirmatory",
+      "seed": 920009,
+      "failureModeId": "brief-event-blindness",
+      "question": "Which large black symbol appears briefly at the center of the video?",
+      "answerOptions": [
+        "square",
+        "diamond",
+        "star",
+        "triangle"
+      ],
+      "expectedAnswer": "square",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "symbol": "square",
+        "eventDurationMs": 67,
+        "phaseMs": 350,
+        "eventSecond": 6,
+        "videoDurationMs": 20000,
+        "fps": 30,
+        "visualVariant": 29
+      }
+    },
+    {
+      "id": "ms-ff501feac469241d",
+      "cellId": "cell-cd51e28b4fe1ecf3",
+      "mechanism": "momentary-evidence-acquisition",
+      "split": "confirmatory",
+      "seed": 920010,
+      "failureModeId": "brief-event-blindness",
+      "question": "Which large black symbol appears briefly at the center of the video?",
+      "answerOptions": [
+        "diamond",
+        "star",
+        "triangle",
+        "square"
+      ],
+      "expectedAnswer": "diamond",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "symbol": "diamond",
+        "eventDurationMs": 67,
+        "phaseMs": 350,
+        "eventSecond": 2,
+        "videoDurationMs": 20000,
+        "fps": 30,
+        "visualVariant": 30
+      }
+    },
+    {
+      "id": "ms-b2ba9fb170dde734",
+      "cellId": "cell-cd51e28b4fe1ecf3",
+      "mechanism": "momentary-evidence-acquisition",
+      "split": "confirmatory",
+      "seed": 920011,
+      "failureModeId": "brief-event-blindness",
+      "question": "Which large black symbol appears briefly at the center of the video?",
+      "answerOptions": [
+        "star",
+        "triangle",
+        "square",
+        "diamond"
+      ],
+      "expectedAnswer": "star",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "symbol": "star",
+        "eventDurationMs": 67,
+        "phaseMs": 350,
+        "eventSecond": 3,
+        "videoDurationMs": 20000,
+        "fps": 30,
+        "visualVariant": 31
+      }
+    },
+    {
+      "id": "ms-cf953adb0c2a2a45",
+      "cellId": "cell-cd51e28b4fe1ecf3",
+      "mechanism": "momentary-evidence-acquisition",
+      "split": "confirmatory",
+      "seed": 920012,
+      "failureModeId": "brief-event-blindness",
+      "question": "Which large black symbol appears briefly at the center of the video?",
+      "answerOptions": [
+        "triangle",
+        "square",
+        "diamond",
+        "star"
+      ],
+      "expectedAnswer": "triangle",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "symbol": "triangle",
+        "eventDurationMs": 67,
+        "phaseMs": 350,
+        "eventSecond": 6,
+        "videoDurationMs": 20000,
+        "fps": 30,
+        "visualVariant": 32
+      }
+    },
+    {
+      "id": "ms-720e4aa0ecaa2122",
+      "cellId": "cell-cd51e28b4fe1ecf3",
+      "mechanism": "momentary-evidence-acquisition",
+      "split": "confirmatory",
+      "seed": 920013,
+      "failureModeId": "brief-event-blindness",
+      "question": "Which large black symbol appears briefly at the center of the video?",
+      "answerOptions": [
+        "square",
+        "diamond",
+        "star",
+        "triangle"
+      ],
+      "expectedAnswer": "square",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "symbol": "square",
+        "eventDurationMs": 67,
+        "phaseMs": 350,
+        "eventSecond": 2,
+        "videoDurationMs": 20000,
+        "fps": 30,
+        "visualVariant": 33
+      }
+    },
+    {
+      "id": "ms-93c11a70fffdced7",
+      "cellId": "cell-cd51e28b4fe1ecf3",
+      "mechanism": "momentary-evidence-acquisition",
+      "split": "confirmatory",
+      "seed": 920014,
+      "failureModeId": "brief-event-blindness",
+      "question": "Which large black symbol appears briefly at the center of the video?",
+      "answerOptions": [
+        "diamond",
+        "star",
+        "triangle",
+        "square"
+      ],
+      "expectedAnswer": "diamond",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "symbol": "diamond",
+        "eventDurationMs": 67,
+        "phaseMs": 350,
+        "eventSecond": 3,
+        "videoDurationMs": 20000,
+        "fps": 30,
+        "visualVariant": 34
+      }
+    },
+    {
+      "id": "ms-9628a8629b300aea",
+      "cellId": "cell-cd51e28b4fe1ecf3",
+      "mechanism": "momentary-evidence-acquisition",
+      "split": "confirmatory",
+      "seed": 920015,
+      "failureModeId": "brief-event-blindness",
+      "question": "Which large black symbol appears briefly at the center of the video?",
+      "answerOptions": [
+        "star",
+        "triangle",
+        "square",
+        "diamond"
+      ],
+      "expectedAnswer": "star",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "symbol": "star",
+        "eventDurationMs": 67,
+        "phaseMs": 350,
+        "eventSecond": 4,
+        "videoDurationMs": 20000,
+        "fps": 30,
+        "visualVariant": 35
+      }
+    }
+  ]
+}
