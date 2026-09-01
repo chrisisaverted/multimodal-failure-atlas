@@ -113,8 +113,8 @@ seeds are deliberately not added to scored evidence.
 ## Cost and credential audit
 
 The user funded a $200 prepaid OpenRouter balance and authorized no further deposits. The repository retains
-a $200 cumulative ceiling, a protected $25 reserve, and a $25 default campaign cap. Across 7,799 unique
-recorded requests, reconciled model-evaluation spend is $111.534871. The public site and repository contain
+a $200 cumulative ceiling, a protected $25 reserve, and a $25 default campaign cap. Across 7,800 unique
+recorded requests, reconciled model-evaluation spend is $111.608224. The public site and repository contain
 no provider credentials. Hosting remains GitHub Pages at zero recurring charge.
 
 The detailed reconciliation is in [`cost-ledger.csv`](cost-ledger.csv).

@@ -85,7 +85,7 @@ No external service is necessary to browse the atlas or generate public educatio
 The user funded a $200 prepaid OpenRouter balance and authorized no further deposits. Total project
 cash outlay must remain below $500; the code enforces a stricter $200 cumulative evaluation ceiling,
 a protected $25 reserve, and a $25 default campaign cap. Reconciled unique-request model spend is
-$111.534871. Current usage is recorded in
+$111.608224. Current usage is recorded in
 [docs/cost-ledger.csv](docs/cost-ledger.csv).
 
 ## Status
