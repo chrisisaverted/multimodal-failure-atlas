@@ -1,0 +1,4 @@
+{
+  "id": "conservation-confirmatory-v2-kimi-no-reasoning-2026-09-01", "resolvedAt": "2026-09-01", "gateway": "OpenRouter", "evaluationPlanId": "conservation-confirmatory-v2", "evaluationPlanSha256": "1994e0622875b149007d6dbbe744810624371e75c72cd11c154da3c8bcbc46de", "stage": "frozen-confirmatory-holdout-with-visible-ledger-control", "casesPerModel": 32, "trials": 1, "temperature": 0, "maxOutputTokens": 1024, "reasoning": { "effort": "none", "exclude": true }, "scorer": "terminal-option-v3", "allowProviderFallbacks": false, "dataCollection": "deny", "campaignCostCeilingUsd": 12,
+  "models": [{ "modelId": "moonshotai/kimi-k3", "modelRevision": "moonshotai/kimi-k3-20260715", "upstreamProvider": "Moonshot AI" }]
+}

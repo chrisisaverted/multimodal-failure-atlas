@@ -1,0 +1,4 @@
+{
+  "id": "transition-count-screen-v1-kimi-no-reasoning-2026-09-01", "resolvedAt": "2026-09-01", "gateway": "OpenRouter", "evaluationPlanId": "transition-count-discovery-v1", "evaluationPlanSha256": "687ff73d43d014da375390557c2209c8fcabb6a348b355d589462cb65e40f833", "stage": "balanced-rapid-target-transition-screen", "casesPerModel": 8, "trials": 1, "temperature": 0, "maxOutputTokens": 1024, "reasoning": { "effort": "none", "exclude": true }, "scorer": "terminal-option-v3", "allowProviderFallbacks": false, "dataCollection": "deny", "campaignCostCeilingUsd": 6,
+  "models": [{ "modelId": "moonshotai/kimi-k3", "modelRevision": "moonshotai/kimi-k3-20260715", "upstreamProvider": "Moonshot AI" }]
+}

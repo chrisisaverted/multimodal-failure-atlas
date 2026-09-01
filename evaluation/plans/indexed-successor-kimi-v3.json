@@ -1,0 +1,4 @@
+{
+  "id": "indexed-successor-screen-v3-kimi-no-reasoning-2026-09-01", "resolvedAt": "2026-09-01", "gateway": "OpenRouter", "evaluationPlanId": "indexed-successor-discovery-v3", "evaluationPlanSha256": "10041dc2dc4c5e7d6161e478a8b450edbb7bd7136e8c03d37e61856298930fb2", "stage": "balanced-sixty-event-indexed-successor-screen", "casesPerModel": 8, "trials": 1, "temperature": 0, "maxOutputTokens": 1024, "reasoning": { "effort": "none", "exclude": true }, "scorer": "terminal-option-v3", "allowProviderFallbacks": false, "dataCollection": "deny", "campaignCostCeilingUsd": 6,
+  "models": [{ "modelId": "moonshotai/kimi-k3", "modelRevision": "moonshotai/kimi-k3-20260715", "upstreamProvider": "Moonshot AI" }]
+}

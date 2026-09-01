@@ -1,0 +1,969 @@
+{
+  "id": "conservation-confirmatory-v2",
+  "planSha256": "1994e0622875b149007d6dbbe744810624371e75c72cd11c154da3c8bcbc46de",
+  "generatorVersion": "conservation-ledger-v2",
+  "renderer": "conservation-ledger-svg-raster-v2",
+  "fps": 30,
+  "cases": [
+    {
+      "candidateId": "cvh-da9c6dd78c4ee83b-native-1x",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "Four hidden ledgers undergo twenty visible conserved transfers.",
+      "failureModeId": "dynamic-conservation-ledger",
+      "generator": "conservation-ledger-hard",
+      "seed": 3010000,
+      "difficulty": 96,
+      "variant": 0,
+      "artifact": "public/evaluations/conservation-confirmatory-v2/cvh-da9c6dd78c4ee83b-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "e485d705697b861fd61bf5e474a73b0553954057b35c01335b1653de37c5a23e",
+      "parameters": {
+        "targetBox": 0,
+        "visualVariant": 100
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain all hidden token counts through the conserved transfers and return exactly one box letter."
+    },
+    {
+      "candidateId": "cvh-da9c6dd78c4ee83b-visible-ledger-control",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "condition": "visible-ledger-control",
+      "interventionDescription": "Diagnostic control keeps exact token counts visible after every transfer.",
+      "failureModeId": "dynamic-conservation-ledger",
+      "generator": "conservation-ledger-hard",
+      "seed": 3010000,
+      "difficulty": 10,
+      "variant": 0,
+      "artifact": "public/evaluations/conservation-confirmatory-v2/cvh-da9c6dd78c4ee83b-visible-ledger-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "9dd581f4eca86ba84276a632bd26f73c9b9372c3791222a973a19a4e31d1a03b",
+      "parameters": {
+        "targetBox": 0,
+        "visualVariant": 100
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain all hidden token counts through the conserved transfers and return exactly one box letter."
+    },
+    {
+      "candidateId": "cvh-3d841c6466e3edaf-native-1x",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "Four hidden ledgers undergo twenty visible conserved transfers.",
+      "failureModeId": "dynamic-conservation-ledger",
+      "generator": "conservation-ledger-hard",
+      "seed": 3010001,
+      "difficulty": 96,
+      "variant": 1,
+      "artifact": "public/evaluations/conservation-confirmatory-v2/cvh-3d841c6466e3edaf-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "80017f635830fcdd43bb9eede02aecfdeb7d1e5cb021ce890a19921514ff8efa",
+      "parameters": {
+        "targetBox": 1,
+        "visualVariant": 101
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain all hidden token counts through the conserved transfers and return exactly one box letter."
+    },
+    {
+      "candidateId": "cvh-3d841c6466e3edaf-visible-ledger-control",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "condition": "visible-ledger-control",
+      "interventionDescription": "Diagnostic control keeps exact token counts visible after every transfer.",
+      "failureModeId": "dynamic-conservation-ledger",
+      "generator": "conservation-ledger-hard",
+      "seed": 3010001,
+      "difficulty": 10,
+      "variant": 1,
+      "artifact": "public/evaluations/conservation-confirmatory-v2/cvh-3d841c6466e3edaf-visible-ledger-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "07d0e48c2e573b886515685f51c7b28f0e4cb80164a445f0a62b665c1d086c2c",
+      "parameters": {
+        "targetBox": 1,
+        "visualVariant": 101
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain all hidden token counts through the conserved transfers and return exactly one box letter."
+    },
+    {
+      "candidateId": "cvh-143d9a8ed96ea44b-native-1x",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "Four hidden ledgers undergo twenty visible conserved transfers.",
+      "failureModeId": "dynamic-conservation-ledger",
+      "generator": "conservation-ledger-hard",
+      "seed": 3010002,
+      "difficulty": 96,
+      "variant": 2,
+      "artifact": "public/evaluations/conservation-confirmatory-v2/cvh-143d9a8ed96ea44b-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "C",
+        "B",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "b3ad2a6f607f7bb64dc349df603336e51aeb6d85ecf18044474999d1c862d5c8",
+      "parameters": {
+        "targetBox": 2,
+        "visualVariant": 102
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain all hidden token counts through the conserved transfers and return exactly one box letter."
+    },
+    {
+      "candidateId": "cvh-143d9a8ed96ea44b-visible-ledger-control",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "condition": "visible-ledger-control",
+      "interventionDescription": "Diagnostic control keeps exact token counts visible after every transfer.",
+      "failureModeId": "dynamic-conservation-ledger",
+      "generator": "conservation-ledger-hard",
+      "seed": 3010002,
+      "difficulty": 10,
+      "variant": 2,
+      "artifact": "public/evaluations/conservation-confirmatory-v2/cvh-143d9a8ed96ea44b-visible-ledger-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "C",
+        "B",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "f9d43687d2671039e6f1856d4a977ea2fba3c12b801f9c17960d4dde3171cdf8",
+      "parameters": {
+        "targetBox": 2,
+        "visualVariant": 102
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain all hidden token counts through the conserved transfers and return exactly one box letter."
+    },
+    {
+      "candidateId": "cvh-157e7df60831dfac-native-1x",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "Four hidden ledgers undergo twenty visible conserved transfers.",
+      "failureModeId": "dynamic-conservation-ledger",
+      "generator": "conservation-ledger-hard",
+      "seed": 3010003,
+      "difficulty": 96,
+      "variant": 3,
+      "artifact": "public/evaluations/conservation-confirmatory-v2/cvh-157e7df60831dfac-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "1ff9ee47d8cc385218492086c204e1863cb5a1c9890a75947dca4fcc6372e4fa",
+      "parameters": {
+        "targetBox": 3,
+        "visualVariant": 103
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain all hidden token counts through the conserved transfers and return exactly one box letter."
+    },
+    {
+      "candidateId": "cvh-157e7df60831dfac-visible-ledger-control",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "condition": "visible-ledger-control",
+      "interventionDescription": "Diagnostic control keeps exact token counts visible after every transfer.",
+      "failureModeId": "dynamic-conservation-ledger",
+      "generator": "conservation-ledger-hard",
+      "seed": 3010003,
+      "difficulty": 10,
+      "variant": 3,
+      "artifact": "public/evaluations/conservation-confirmatory-v2/cvh-157e7df60831dfac-visible-ledger-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "8c0fdbba2acff803fb4f905732391b4772982912e3e6f2ee5047fd9baf4ce299",
+      "parameters": {
+        "targetBox": 3,
+        "visualVariant": 103
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain all hidden token counts through the conserved transfers and return exactly one box letter."
+    },
+    {
+      "candidateId": "cvh-cee5ba5ca39b9dcd-native-1x",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "Four hidden ledgers undergo twenty visible conserved transfers.",
+      "failureModeId": "dynamic-conservation-ledger",
+      "generator": "conservation-ledger-hard",
+      "seed": 3010004,
+      "difficulty": 96,
+      "variant": 4,
+      "artifact": "public/evaluations/conservation-confirmatory-v2/cvh-cee5ba5ca39b9dcd-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "C",
+        "A",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "9b4091f3862ab488bdfc769d8e85deecc3edd940ce839751fbcd9712e247c256",
+      "parameters": {
+        "targetBox": 0,
+        "visualVariant": 104
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain all hidden token counts through the conserved transfers and return exactly one box letter."
+    },
+    {
+      "candidateId": "cvh-cee5ba5ca39b9dcd-visible-ledger-control",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "condition": "visible-ledger-control",
+      "interventionDescription": "Diagnostic control keeps exact token counts visible after every transfer.",
+      "failureModeId": "dynamic-conservation-ledger",
+      "generator": "conservation-ledger-hard",
+      "seed": 3010004,
+      "difficulty": 10,
+      "variant": 4,
+      "artifact": "public/evaluations/conservation-confirmatory-v2/cvh-cee5ba5ca39b9dcd-visible-ledger-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "C",
+        "A",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "fba80ec042879657f460d6234b0d5c0afb0d119c7b43ed1c0d8bbd97925beacd",
+      "parameters": {
+        "targetBox": 0,
+        "visualVariant": 104
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain all hidden token counts through the conserved transfers and return exactly one box letter."
+    },
+    {
+      "candidateId": "cvh-1c36b2d7f0065c71-native-1x",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "Four hidden ledgers undergo twenty visible conserved transfers.",
+      "failureModeId": "dynamic-conservation-ledger",
+      "generator": "conservation-ledger-hard",
+      "seed": 3010005,
+      "difficulty": 96,
+      "variant": 5,
+      "artifact": "public/evaluations/conservation-confirmatory-v2/cvh-1c36b2d7f0065c71-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "66feafb988ff49b37e0a8210e34a3452e0b104526c9cfa44628b7a65316ad348",
+      "parameters": {
+        "targetBox": 1,
+        "visualVariant": 105
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain all hidden token counts through the conserved transfers and return exactly one box letter."
+    },
+    {
+      "candidateId": "cvh-1c36b2d7f0065c71-visible-ledger-control",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "condition": "visible-ledger-control",
+      "interventionDescription": "Diagnostic control keeps exact token counts visible after every transfer.",
+      "failureModeId": "dynamic-conservation-ledger",
+      "generator": "conservation-ledger-hard",
+      "seed": 3010005,
+      "difficulty": 10,
+      "variant": 5,
+      "artifact": "public/evaluations/conservation-confirmatory-v2/cvh-1c36b2d7f0065c71-visible-ledger-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "e6b8dc95605a453b8e881165a90ddf6a3967ac4150a34e9ead7d77e4441b8908",
+      "parameters": {
+        "targetBox": 1,
+        "visualVariant": 105
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain all hidden token counts through the conserved transfers and return exactly one box letter."
+    },
+    {
+      "candidateId": "cvh-b0f9e6f9b47c9ae9-native-1x",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "Four hidden ledgers undergo twenty visible conserved transfers.",
+      "failureModeId": "dynamic-conservation-ledger",
+      "generator": "conservation-ledger-hard",
+      "seed": 3010006,
+      "difficulty": 96,
+      "variant": 6,
+      "artifact": "public/evaluations/conservation-confirmatory-v2/cvh-b0f9e6f9b47c9ae9-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "225cd28587672c2acd5c7d078774c874404e5e61a26e947a604cabfc9cd66d23",
+      "parameters": {
+        "targetBox": 2,
+        "visualVariant": 106
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain all hidden token counts through the conserved transfers and return exactly one box letter."
+    },
+    {
+      "candidateId": "cvh-b0f9e6f9b47c9ae9-visible-ledger-control",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "condition": "visible-ledger-control",
+      "interventionDescription": "Diagnostic control keeps exact token counts visible after every transfer.",
+      "failureModeId": "dynamic-conservation-ledger",
+      "generator": "conservation-ledger-hard",
+      "seed": 3010006,
+      "difficulty": 10,
+      "variant": 6,
+      "artifact": "public/evaluations/conservation-confirmatory-v2/cvh-b0f9e6f9b47c9ae9-visible-ledger-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "9a3b89a9feadd8104e068d202f56d19cb569b6f8e838ada9bf72b9cee8901789",
+      "parameters": {
+        "targetBox": 2,
+        "visualVariant": 106
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain all hidden token counts through the conserved transfers and return exactly one box letter."
+    },
+    {
+      "candidateId": "cvh-73124f0819cafcd2-native-1x",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "Four hidden ledgers undergo twenty visible conserved transfers.",
+      "failureModeId": "dynamic-conservation-ledger",
+      "generator": "conservation-ledger-hard",
+      "seed": 3010007,
+      "difficulty": 96,
+      "variant": 7,
+      "artifact": "public/evaluations/conservation-confirmatory-v2/cvh-73124f0819cafcd2-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "bc071b854b07f151e60ce32c5b5d3e0c931a1538da03319b0ec01c0c1e2131ac",
+      "parameters": {
+        "targetBox": 3,
+        "visualVariant": 107
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain all hidden token counts through the conserved transfers and return exactly one box letter."
+    },
+    {
+      "candidateId": "cvh-73124f0819cafcd2-visible-ledger-control",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "condition": "visible-ledger-control",
+      "interventionDescription": "Diagnostic control keeps exact token counts visible after every transfer.",
+      "failureModeId": "dynamic-conservation-ledger",
+      "generator": "conservation-ledger-hard",
+      "seed": 3010007,
+      "difficulty": 10,
+      "variant": 7,
+      "artifact": "public/evaluations/conservation-confirmatory-v2/cvh-73124f0819cafcd2-visible-ledger-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "06a6089e2a58da45f3210bf9869cf39a2ddd9461c08aeda2914237cf8d7c3114",
+      "parameters": {
+        "targetBox": 3,
+        "visualVariant": 107
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain all hidden token counts through the conserved transfers and return exactly one box letter."
+    },
+    {
+      "candidateId": "cvh-b43235a0f58a9647-native-1x",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "Four hidden ledgers undergo twenty visible conserved transfers.",
+      "failureModeId": "dynamic-conservation-ledger",
+      "generator": "conservation-ledger-hard",
+      "seed": 3010008,
+      "difficulty": 96,
+      "variant": 8,
+      "artifact": "public/evaluations/conservation-confirmatory-v2/cvh-b43235a0f58a9647-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "e38e8b91eac04d045969bdf8f4fcd5e091f296a11a65edfcd0294e81cc12ac05",
+      "parameters": {
+        "targetBox": 0,
+        "visualVariant": 108
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain all hidden token counts through the conserved transfers and return exactly one box letter."
+    },
+    {
+      "candidateId": "cvh-b43235a0f58a9647-visible-ledger-control",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "condition": "visible-ledger-control",
+      "interventionDescription": "Diagnostic control keeps exact token counts visible after every transfer.",
+      "failureModeId": "dynamic-conservation-ledger",
+      "generator": "conservation-ledger-hard",
+      "seed": 3010008,
+      "difficulty": 10,
+      "variant": 8,
+      "artifact": "public/evaluations/conservation-confirmatory-v2/cvh-b43235a0f58a9647-visible-ledger-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "5251f1d481322ac9be256f23ad24ad1dff46f284c38f401f7a151abd38400448",
+      "parameters": {
+        "targetBox": 0,
+        "visualVariant": 108
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain all hidden token counts through the conserved transfers and return exactly one box letter."
+    },
+    {
+      "candidateId": "cvh-013ef4af1dd05102-native-1x",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "Four hidden ledgers undergo twenty visible conserved transfers.",
+      "failureModeId": "dynamic-conservation-ledger",
+      "generator": "conservation-ledger-hard",
+      "seed": 3010009,
+      "difficulty": 96,
+      "variant": 9,
+      "artifact": "public/evaluations/conservation-confirmatory-v2/cvh-013ef4af1dd05102-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "e2c603fd77699d669b3157c799dafd4f17b909a7fbea6139ef4e6334ad1f9b7f",
+      "parameters": {
+        "targetBox": 1,
+        "visualVariant": 109
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain all hidden token counts through the conserved transfers and return exactly one box letter."
+    },
+    {
+      "candidateId": "cvh-013ef4af1dd05102-visible-ledger-control",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "condition": "visible-ledger-control",
+      "interventionDescription": "Diagnostic control keeps exact token counts visible after every transfer.",
+      "failureModeId": "dynamic-conservation-ledger",
+      "generator": "conservation-ledger-hard",
+      "seed": 3010009,
+      "difficulty": 10,
+      "variant": 9,
+      "artifact": "public/evaluations/conservation-confirmatory-v2/cvh-013ef4af1dd05102-visible-ledger-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "b30f44c1062eda025de52a9266454c48ba328644224ef58af9c4fab68c30f8ba",
+      "parameters": {
+        "targetBox": 1,
+        "visualVariant": 109
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain all hidden token counts through the conserved transfers and return exactly one box letter."
+    },
+    {
+      "candidateId": "cvh-0e1f9d4cd29ff0f5-native-1x",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "Four hidden ledgers undergo twenty visible conserved transfers.",
+      "failureModeId": "dynamic-conservation-ledger",
+      "generator": "conservation-ledger-hard",
+      "seed": 3010010,
+      "difficulty": 96,
+      "variant": 10,
+      "artifact": "public/evaluations/conservation-confirmatory-v2/cvh-0e1f9d4cd29ff0f5-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "b9538f6ae69c5d49a753b596d0746ca5ab2fc6083bdaf250231729370cd842d2",
+      "parameters": {
+        "targetBox": 2,
+        "visualVariant": 110
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain all hidden token counts through the conserved transfers and return exactly one box letter."
+    },
+    {
+      "candidateId": "cvh-0e1f9d4cd29ff0f5-visible-ledger-control",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "condition": "visible-ledger-control",
+      "interventionDescription": "Diagnostic control keeps exact token counts visible after every transfer.",
+      "failureModeId": "dynamic-conservation-ledger",
+      "generator": "conservation-ledger-hard",
+      "seed": 3010010,
+      "difficulty": 10,
+      "variant": 10,
+      "artifact": "public/evaluations/conservation-confirmatory-v2/cvh-0e1f9d4cd29ff0f5-visible-ledger-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "4b3e92d7c4a05bce1e343456f35c4a7d01d417e9615b46ddb752ad803ae9b90b",
+      "parameters": {
+        "targetBox": 2,
+        "visualVariant": 110
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain all hidden token counts through the conserved transfers and return exactly one box letter."
+    },
+    {
+      "candidateId": "cvh-aa069071a50f8eca-native-1x",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "Four hidden ledgers undergo twenty visible conserved transfers.",
+      "failureModeId": "dynamic-conservation-ledger",
+      "generator": "conservation-ledger-hard",
+      "seed": 3010011,
+      "difficulty": 96,
+      "variant": 11,
+      "artifact": "public/evaluations/conservation-confirmatory-v2/cvh-aa069071a50f8eca-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "f79aea9f516178a91daca2f979cbf348419e02fe2f096630ebd9ccbb7ecfac95",
+      "parameters": {
+        "targetBox": 3,
+        "visualVariant": 111
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain all hidden token counts through the conserved transfers and return exactly one box letter."
+    },
+    {
+      "candidateId": "cvh-aa069071a50f8eca-visible-ledger-control",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "condition": "visible-ledger-control",
+      "interventionDescription": "Diagnostic control keeps exact token counts visible after every transfer.",
+      "failureModeId": "dynamic-conservation-ledger",
+      "generator": "conservation-ledger-hard",
+      "seed": 3010011,
+      "difficulty": 10,
+      "variant": 11,
+      "artifact": "public/evaluations/conservation-confirmatory-v2/cvh-aa069071a50f8eca-visible-ledger-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "a003b7da2c0800eeb473db9316834d1e1ba3d9999530008d1ad09a3fa7556c37",
+      "parameters": {
+        "targetBox": 3,
+        "visualVariant": 111
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain all hidden token counts through the conserved transfers and return exactly one box letter."
+    },
+    {
+      "candidateId": "cvh-74e75939f32166f0-native-1x",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "Four hidden ledgers undergo twenty visible conserved transfers.",
+      "failureModeId": "dynamic-conservation-ledger",
+      "generator": "conservation-ledger-hard",
+      "seed": 3010012,
+      "difficulty": 96,
+      "variant": 12,
+      "artifact": "public/evaluations/conservation-confirmatory-v2/cvh-74e75939f32166f0-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "C",
+        "B",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "82278b56d8a3b507d0984bddda4498561406a12a88c6064eef29c301b41c10ec",
+      "parameters": {
+        "targetBox": 0,
+        "visualVariant": 112
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain all hidden token counts through the conserved transfers and return exactly one box letter."
+    },
+    {
+      "candidateId": "cvh-74e75939f32166f0-visible-ledger-control",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "condition": "visible-ledger-control",
+      "interventionDescription": "Diagnostic control keeps exact token counts visible after every transfer.",
+      "failureModeId": "dynamic-conservation-ledger",
+      "generator": "conservation-ledger-hard",
+      "seed": 3010012,
+      "difficulty": 10,
+      "variant": 12,
+      "artifact": "public/evaluations/conservation-confirmatory-v2/cvh-74e75939f32166f0-visible-ledger-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "C",
+        "B",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "1cb4305feaccb1f555394a5ce85dd47025f35b7612a6cc9177da8e1ea12922e9",
+      "parameters": {
+        "targetBox": 0,
+        "visualVariant": 112
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain all hidden token counts through the conserved transfers and return exactly one box letter."
+    },
+    {
+      "candidateId": "cvh-e7ed867d3ae54e49-native-1x",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "Four hidden ledgers undergo twenty visible conserved transfers.",
+      "failureModeId": "dynamic-conservation-ledger",
+      "generator": "conservation-ledger-hard",
+      "seed": 3010013,
+      "difficulty": 96,
+      "variant": 13,
+      "artifact": "public/evaluations/conservation-confirmatory-v2/cvh-e7ed867d3ae54e49-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "8e3b5d59549c675f4caea31243eb0e64709c320dffd97261e13fe711aa486bc2",
+      "parameters": {
+        "targetBox": 1,
+        "visualVariant": 113
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain all hidden token counts through the conserved transfers and return exactly one box letter."
+    },
+    {
+      "candidateId": "cvh-e7ed867d3ae54e49-visible-ledger-control",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "condition": "visible-ledger-control",
+      "interventionDescription": "Diagnostic control keeps exact token counts visible after every transfer.",
+      "failureModeId": "dynamic-conservation-ledger",
+      "generator": "conservation-ledger-hard",
+      "seed": 3010013,
+      "difficulty": 10,
+      "variant": 13,
+      "artifact": "public/evaluations/conservation-confirmatory-v2/cvh-e7ed867d3ae54e49-visible-ledger-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "e6409fe8423ec33b057ce31d38528221c735f3c9521bba9a71ebf6675f6ce08e",
+      "parameters": {
+        "targetBox": 1,
+        "visualVariant": 113
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain all hidden token counts through the conserved transfers and return exactly one box letter."
+    },
+    {
+      "candidateId": "cvh-3f7d1f43e21e84ba-native-1x",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "Four hidden ledgers undergo twenty visible conserved transfers.",
+      "failureModeId": "dynamic-conservation-ledger",
+      "generator": "conservation-ledger-hard",
+      "seed": 3010014,
+      "difficulty": 96,
+      "variant": 14,
+      "artifact": "public/evaluations/conservation-confirmatory-v2/cvh-3f7d1f43e21e84ba-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "C",
+        "A",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "ba226963aeeabaf984aa63f815cdc2cd6785af0374f530f1a098fec579344b97",
+      "parameters": {
+        "targetBox": 2,
+        "visualVariant": 114
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain all hidden token counts through the conserved transfers and return exactly one box letter."
+    },
+    {
+      "candidateId": "cvh-3f7d1f43e21e84ba-visible-ledger-control",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "condition": "visible-ledger-control",
+      "interventionDescription": "Diagnostic control keeps exact token counts visible after every transfer.",
+      "failureModeId": "dynamic-conservation-ledger",
+      "generator": "conservation-ledger-hard",
+      "seed": 3010014,
+      "difficulty": 10,
+      "variant": 14,
+      "artifact": "public/evaluations/conservation-confirmatory-v2/cvh-3f7d1f43e21e84ba-visible-ledger-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "C",
+        "A",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "b7e8eb8536f1c976b3710b45fa2c85fb7ccdbf7363dbfacdfbce172f65fef19f",
+      "parameters": {
+        "targetBox": 2,
+        "visualVariant": 114
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain all hidden token counts through the conserved transfers and return exactly one box letter."
+    },
+    {
+      "candidateId": "cvh-ceee08d2500674e9-native-1x",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "Four hidden ledgers undergo twenty visible conserved transfers.",
+      "failureModeId": "dynamic-conservation-ledger",
+      "generator": "conservation-ledger-hard",
+      "seed": 3010015,
+      "difficulty": 96,
+      "variant": 15,
+      "artifact": "public/evaluations/conservation-confirmatory-v2/cvh-ceee08d2500674e9-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "2936849094d169dba78c955ae30f8e412f4ea24359d89bb6617be0b587888201",
+      "parameters": {
+        "targetBox": 3,
+        "visualVariant": 115
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain all hidden token counts through the conserved transfers and return exactly one box letter."
+    },
+    {
+      "candidateId": "cvh-ceee08d2500674e9-visible-ledger-control",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "condition": "visible-ledger-control",
+      "interventionDescription": "Diagnostic control keeps exact token counts visible after every transfer.",
+      "failureModeId": "dynamic-conservation-ledger",
+      "generator": "conservation-ledger-hard",
+      "seed": 3010015,
+      "difficulty": 10,
+      "variant": 15,
+      "artifact": "public/evaluations/conservation-confirmatory-v2/cvh-ceee08d2500674e9-visible-ledger-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "6f515f57a95b9bdcd706b51ec0a7502e5d6678b6350cbbbb06849c4bc85331d0",
+      "parameters": {
+        "targetBox": 3,
+        "visualVariant": 115
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain all hidden token counts through the conserved transfers and return exactly one box letter."
+    }
+  ]
+}

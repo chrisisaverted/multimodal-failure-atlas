@@ -1,0 +1,4 @@
+{
+  "id": "grid-activation-screen-v3-kimi-no-reasoning-2026-09-01", "resolvedAt": "2026-09-01", "gateway": "OpenRouter", "evaluationPlanId": "grid-activation-discovery-v3", "evaluationPlanSha256": "f139a720550f3458de6b5999cdf76c500937e3dd5cbcfd25ef240d41ead1c672", "stage": "balanced-sixty-event-set-cardinality-screen", "casesPerModel": 8, "trials": 1, "temperature": 0, "maxOutputTokens": 1024, "reasoning": { "effort": "none", "exclude": true }, "scorer": "terminal-option-v3", "allowProviderFallbacks": false, "dataCollection": "deny", "campaignCostCeilingUsd": 6,
+  "models": [{ "modelId": "moonshotai/kimi-k3", "modelRevision": "moonshotai/kimi-k3-20260715", "upstreamProvider": "Moonshot AI" }]
+}

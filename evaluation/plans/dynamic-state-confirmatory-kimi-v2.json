@@ -1,0 +1,4 @@
+{
+  "id": "dynamic-state-confirmatory-v2-kimi-no-reasoning-2026-09-01", "resolvedAt": "2026-09-01", "gateway": "OpenRouter", "evaluationPlanId": "dynamic-state-confirmatory-v2", "evaluationPlanSha256": "bebb1110bb38dd0ff51928e1bd0e2dff760d236f7427d78f76a44649086288a4", "stage": "frozen-confirmatory-holdout-with-visible-state-control", "casesPerModel": 32, "trials": 1, "temperature": 0, "maxOutputTokens": 1024, "reasoning": { "effort": "none", "exclude": true }, "scorer": "terminal-option-v3", "allowProviderFallbacks": false, "dataCollection": "deny", "campaignCostCeilingUsd": 12,
+  "models": [{ "modelId": "moonshotai/kimi-k3", "modelRevision": "moonshotai/kimi-k3-20260715", "upstreamProvider": "Moonshot AI" }]
+}

@@ -1,0 +1,424 @@
+{
+  "id": "dynamic-state-confirmatory-v2",
+  "generatorVersion": "dynamic-state-accumulation-v2",
+  "status": "frozen-confirmatory",
+  "hypothesis": "Models fail latent symbolic state integration over long physical event streams.",
+  "candidates": [
+    {
+      "id": "dsh-cd22019f47b9ea48",
+      "cellId": "cell-hidden-four-state-high-bounce-updates",
+      "split": "confirmatory",
+      "seed": 2320000,
+      "failureModeId": "latent-dynamic-state-accumulation",
+      "question": "What is the ball's hidden final state? Cycle RED→GREEN→BLUE→PURPLE→RED. Each VERTICAL-wall bounce advances 1 step; each HORIZONTAL-wall bounce advances 2 steps.",
+      "answerOptions": [
+        "BLUE",
+        "RED",
+        "PURPLE",
+        "GREEN"
+      ],
+      "expectedAnswer": "RED",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetState": 0,
+        "initialState": 1,
+        "vx": 173.58477383293211,
+        "vy": 118.3161471481435,
+        "videoDurationMs": 18500,
+        "motionEndMs": 16000,
+        "fps": 30,
+        "visualVariant": 100
+      }
+    },
+    {
+      "id": "dsh-45ea18887ad55ef0",
+      "cellId": "cell-hidden-four-state-high-bounce-updates",
+      "split": "confirmatory",
+      "seed": 2320001,
+      "failureModeId": "latent-dynamic-state-accumulation",
+      "question": "What is the ball's hidden final state? Cycle RED→GREEN→BLUE→PURPLE→RED. Each VERTICAL-wall bounce advances 1 step; each HORIZONTAL-wall bounce advances 2 steps.",
+      "answerOptions": [
+        "BLUE",
+        "RED",
+        "PURPLE",
+        "GREEN"
+      ],
+      "expectedAnswer": "GREEN",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetState": 1,
+        "initialState": 2,
+        "vx": 173.59407509118319,
+        "vy": 120.40233374689706,
+        "videoDurationMs": 18500,
+        "motionEndMs": 16000,
+        "fps": 30,
+        "visualVariant": 101
+      }
+    },
+    {
+      "id": "dsh-ec6633ef10670610",
+      "cellId": "cell-hidden-four-state-high-bounce-updates",
+      "split": "confirmatory",
+      "seed": 2320002,
+      "failureModeId": "latent-dynamic-state-accumulation",
+      "question": "What is the ball's hidden final state? Cycle RED→GREEN→BLUE→PURPLE→RED. Each VERTICAL-wall bounce advances 1 step; each HORIZONTAL-wall bounce advances 2 steps.",
+      "answerOptions": [
+        "RED",
+        "BLUE",
+        "PURPLE",
+        "GREEN"
+      ],
+      "expectedAnswer": "BLUE",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetState": 2,
+        "initialState": 3,
+        "vx": 173.60337634943426,
+        "vy": 122.48852034565061,
+        "videoDurationMs": 18500,
+        "motionEndMs": 16000,
+        "fps": 30,
+        "visualVariant": 102
+      }
+    },
+    {
+      "id": "dsh-4408556e481219a8",
+      "cellId": "cell-hidden-four-state-high-bounce-updates",
+      "split": "confirmatory",
+      "seed": 2320003,
+      "failureModeId": "latent-dynamic-state-accumulation",
+      "question": "What is the ball's hidden final state? Cycle RED→GREEN→BLUE→PURPLE→RED. Each VERTICAL-wall bounce advances 1 step; each HORIZONTAL-wall bounce advances 2 steps.",
+      "answerOptions": [
+        "PURPLE",
+        "RED",
+        "BLUE",
+        "GREEN"
+      ],
+      "expectedAnswer": "PURPLE",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetState": 3,
+        "initialState": 0,
+        "vx": 173.61267760768533,
+        "vy": 124.57470694440417,
+        "videoDurationMs": 18500,
+        "motionEndMs": 16000,
+        "fps": 30,
+        "visualVariant": 103
+      }
+    },
+    {
+      "id": "dsh-aa0a537690518655",
+      "cellId": "cell-hidden-four-state-high-bounce-updates",
+      "split": "confirmatory",
+      "seed": 2320004,
+      "failureModeId": "latent-dynamic-state-accumulation",
+      "question": "What is the ball's hidden final state? Cycle RED→GREEN→BLUE→PURPLE→RED. Each VERTICAL-wall bounce advances 1 step; each HORIZONTAL-wall bounce advances 2 steps.",
+      "answerOptions": [
+        "PURPLE",
+        "RED",
+        "BLUE",
+        "GREEN"
+      ],
+      "expectedAnswer": "RED",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetState": 0,
+        "initialState": 1,
+        "vx": 173.6219788659364,
+        "vy": 126.66089354315773,
+        "videoDurationMs": 18500,
+        "motionEndMs": 16000,
+        "fps": 30,
+        "visualVariant": 104
+      }
+    },
+    {
+      "id": "dsh-35524205c23a6eaf",
+      "cellId": "cell-hidden-four-state-high-bounce-updates",
+      "split": "confirmatory",
+      "seed": 2320005,
+      "failureModeId": "latent-dynamic-state-accumulation",
+      "question": "What is the ball's hidden final state? Cycle RED→GREEN→BLUE→PURPLE→RED. Each VERTICAL-wall bounce advances 1 step; each HORIZONTAL-wall bounce advances 2 steps.",
+      "answerOptions": [
+        "RED",
+        "PURPLE",
+        "BLUE",
+        "GREEN"
+      ],
+      "expectedAnswer": "GREEN",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetState": 1,
+        "initialState": 2,
+        "vx": 173.63128012418747,
+        "vy": 128.74708014191128,
+        "videoDurationMs": 18500,
+        "motionEndMs": 16000,
+        "fps": 30,
+        "visualVariant": 105
+      }
+    },
+    {
+      "id": "dsh-d95bf871a84965f2",
+      "cellId": "cell-hidden-four-state-high-bounce-updates",
+      "split": "confirmatory",
+      "seed": 2320006,
+      "failureModeId": "latent-dynamic-state-accumulation",
+      "question": "What is the ball's hidden final state? Cycle RED→GREEN→BLUE→PURPLE→RED. Each VERTICAL-wall bounce advances 1 step; each HORIZONTAL-wall bounce advances 2 steps.",
+      "answerOptions": [
+        "BLUE",
+        "PURPLE",
+        "RED",
+        "GREEN"
+      ],
+      "expectedAnswer": "BLUE",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetState": 2,
+        "initialState": 3,
+        "vx": 173.64058138243854,
+        "vy": 130.83326674066484,
+        "videoDurationMs": 18500,
+        "motionEndMs": 16000,
+        "fps": 30,
+        "visualVariant": 106
+      }
+    },
+    {
+      "id": "dsh-40d1222ca220d3ae",
+      "cellId": "cell-hidden-four-state-high-bounce-updates",
+      "split": "confirmatory",
+      "seed": 2320007,
+      "failureModeId": "latent-dynamic-state-accumulation",
+      "question": "What is the ball's hidden final state? Cycle RED→GREEN→BLUE→PURPLE→RED. Each VERTICAL-wall bounce advances 1 step; each HORIZONTAL-wall bounce advances 2 steps.",
+      "answerOptions": [
+        "PURPLE",
+        "BLUE",
+        "RED",
+        "GREEN"
+      ],
+      "expectedAnswer": "PURPLE",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetState": 3,
+        "initialState": 0,
+        "vx": 173.6498826406896,
+        "vy": 132.9194533394184,
+        "videoDurationMs": 18500,
+        "motionEndMs": 16000,
+        "fps": 30,
+        "visualVariant": 107
+      }
+    },
+    {
+      "id": "dsh-a7e8e0b8478b2a0c",
+      "cellId": "cell-hidden-four-state-high-bounce-updates",
+      "split": "confirmatory",
+      "seed": 2320008,
+      "failureModeId": "latent-dynamic-state-accumulation",
+      "question": "What is the ball's hidden final state? Cycle RED→GREEN→BLUE→PURPLE→RED. Each VERTICAL-wall bounce advances 1 step; each HORIZONTAL-wall bounce advances 2 steps.",
+      "answerOptions": [
+        "BLUE",
+        "PURPLE",
+        "RED",
+        "GREEN"
+      ],
+      "expectedAnswer": "RED",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetState": 0,
+        "initialState": 3,
+        "vx": 173.65918389894068,
+        "vy": 135.00563993817195,
+        "videoDurationMs": 18500,
+        "motionEndMs": 16000,
+        "fps": 30,
+        "visualVariant": 108
+      }
+    },
+    {
+      "id": "dsh-b24288390af15923",
+      "cellId": "cell-hidden-four-state-high-bounce-updates",
+      "split": "confirmatory",
+      "seed": 2320009,
+      "failureModeId": "latent-dynamic-state-accumulation",
+      "question": "What is the ball's hidden final state? Cycle RED→GREEN→BLUE→PURPLE→RED. Each VERTICAL-wall bounce advances 1 step; each HORIZONTAL-wall bounce advances 2 steps.",
+      "answerOptions": [
+        "BLUE",
+        "PURPLE",
+        "RED",
+        "GREEN"
+      ],
+      "expectedAnswer": "GREEN",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetState": 1,
+        "initialState": 0,
+        "vx": 173.66848515719175,
+        "vy": 137.0918265369255,
+        "videoDurationMs": 18500,
+        "motionEndMs": 16000,
+        "fps": 30,
+        "visualVariant": 109
+      }
+    },
+    {
+      "id": "dsh-c0968ccdce82efef",
+      "cellId": "cell-hidden-four-state-high-bounce-updates",
+      "split": "confirmatory",
+      "seed": 2320010,
+      "failureModeId": "latent-dynamic-state-accumulation",
+      "question": "What is the ball's hidden final state? Cycle RED→GREEN→BLUE→PURPLE→RED. Each VERTICAL-wall bounce advances 1 step; each HORIZONTAL-wall bounce advances 2 steps.",
+      "answerOptions": [
+        "BLUE",
+        "RED",
+        "PURPLE",
+        "GREEN"
+      ],
+      "expectedAnswer": "BLUE",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetState": 2,
+        "initialState": 1,
+        "vx": 173.67778641544282,
+        "vy": 139.17801313567907,
+        "videoDurationMs": 18500,
+        "motionEndMs": 16000,
+        "fps": 30,
+        "visualVariant": 110
+      }
+    },
+    {
+      "id": "dsh-773565d5cb0f9ab5",
+      "cellId": "cell-hidden-four-state-high-bounce-updates",
+      "split": "confirmatory",
+      "seed": 2320011,
+      "failureModeId": "latent-dynamic-state-accumulation",
+      "question": "What is the ball's hidden final state? Cycle RED→GREEN→BLUE→PURPLE→RED. Each VERTICAL-wall bounce advances 1 step; each HORIZONTAL-wall bounce advances 2 steps.",
+      "answerOptions": [
+        "RED",
+        "BLUE",
+        "PURPLE",
+        "GREEN"
+      ],
+      "expectedAnswer": "PURPLE",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetState": 3,
+        "initialState": 0,
+        "vx": 173.6870876736939,
+        "vy": 118.26419973443262,
+        "videoDurationMs": 18500,
+        "motionEndMs": 16000,
+        "fps": 30,
+        "visualVariant": 111
+      }
+    },
+    {
+      "id": "dsh-58d959d16c39faff",
+      "cellId": "cell-hidden-four-state-high-bounce-updates",
+      "split": "confirmatory",
+      "seed": 2320012,
+      "failureModeId": "latent-dynamic-state-accumulation",
+      "question": "What is the ball's hidden final state? Cycle RED→GREEN→BLUE→PURPLE→RED. Each VERTICAL-wall bounce advances 1 step; each HORIZONTAL-wall bounce advances 2 steps.",
+      "answerOptions": [
+        "RED",
+        "BLUE",
+        "PURPLE",
+        "GREEN"
+      ],
+      "expectedAnswer": "RED",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetState": 0,
+        "initialState": 1,
+        "vx": 173.69638893194497,
+        "vy": 120.35038633318618,
+        "videoDurationMs": 18500,
+        "motionEndMs": 16000,
+        "fps": 30,
+        "visualVariant": 112
+      }
+    },
+    {
+      "id": "dsh-f2b2156766951434",
+      "cellId": "cell-hidden-four-state-high-bounce-updates",
+      "split": "confirmatory",
+      "seed": 2320013,
+      "failureModeId": "latent-dynamic-state-accumulation",
+      "question": "What is the ball's hidden final state? Cycle RED→GREEN→BLUE→PURPLE→RED. Each VERTICAL-wall bounce advances 1 step; each HORIZONTAL-wall bounce advances 2 steps.",
+      "answerOptions": [
+        "BLUE",
+        "RED",
+        "PURPLE",
+        "GREEN"
+      ],
+      "expectedAnswer": "GREEN",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetState": 1,
+        "initialState": 2,
+        "vx": 173.70569019019604,
+        "vy": 122.43657293193974,
+        "videoDurationMs": 18500,
+        "motionEndMs": 16000,
+        "fps": 30,
+        "visualVariant": 113
+      }
+    },
+    {
+      "id": "dsh-bc43e63a77add284",
+      "cellId": "cell-hidden-four-state-high-bounce-updates",
+      "split": "confirmatory",
+      "seed": 2320014,
+      "failureModeId": "latent-dynamic-state-accumulation",
+      "question": "What is the ball's hidden final state? Cycle RED→GREEN→BLUE→PURPLE→RED. Each VERTICAL-wall bounce advances 1 step; each HORIZONTAL-wall bounce advances 2 steps.",
+      "answerOptions": [
+        "PURPLE",
+        "RED",
+        "BLUE",
+        "GREEN"
+      ],
+      "expectedAnswer": "BLUE",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetState": 2,
+        "initialState": 3,
+        "vx": 173.7149914484471,
+        "vy": 124.52275953069329,
+        "videoDurationMs": 18500,
+        "motionEndMs": 16000,
+        "fps": 30,
+        "visualVariant": 114
+      }
+    },
+    {
+      "id": "dsh-24f39109a075c905",
+      "cellId": "cell-hidden-four-state-high-bounce-updates",
+      "split": "confirmatory",
+      "seed": 2320015,
+      "failureModeId": "latent-dynamic-state-accumulation",
+      "question": "What is the ball's hidden final state? Cycle RED→GREEN→BLUE→PURPLE→RED. Each VERTICAL-wall bounce advances 1 step; each HORIZONTAL-wall bounce advances 2 steps.",
+      "answerOptions": [
+        "RED",
+        "PURPLE",
+        "BLUE",
+        "GREEN"
+      ],
+      "expectedAnswer": "PURPLE",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetState": 3,
+        "initialState": 0,
+        "vx": 173.72429270669818,
+        "vy": 126.60894612944685,
+        "videoDurationMs": 18500,
+        "motionEndMs": 16000,
+        "fps": 30,
+        "visualVariant": 115
+      }
+    }
+  ]
+}

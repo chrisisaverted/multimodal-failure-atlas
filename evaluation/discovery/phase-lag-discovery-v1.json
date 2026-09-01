@@ -1,0 +1,216 @@
+{
+  "id": "phase-lag-discovery-v1",
+  "generatorVersion": "subsecond-phase-lag-v1",
+  "status": "discovery-only",
+  "hypothesis": "Models fail repeated subsecond relative-timing discrimination that humans perceive as phase lag.",
+  "candidates": [
+    {
+      "id": "pl-870b5dbfdc296f1c",
+      "cellId": "cell-four-lane-repeated-180ms-lag",
+      "split": "discovery",
+      "seed": 5200000,
+      "failureModeId": "subsecond-relative-event-timing",
+      "question": "Which labeled lane flashes consistently LATE, just after the other three lanes flash together?",
+      "answerOptions": [
+        "A",
+        "D",
+        "B",
+        "C"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "lagLane": 0,
+        "beats": 12,
+        "periodMs": 720,
+        "lagMs": 180,
+        "flashDurationMs": 110,
+        "videoDurationMs": 11500,
+        "fps": 30,
+        "visualVariant": 0
+      }
+    },
+    {
+      "id": "pl-f3c7c0dbe2bf3c47",
+      "cellId": "cell-four-lane-repeated-180ms-lag",
+      "split": "discovery",
+      "seed": 5200001,
+      "failureModeId": "subsecond-relative-event-timing",
+      "question": "Which labeled lane flashes consistently LATE, just after the other three lanes flash together?",
+      "answerOptions": [
+        "A",
+        "B",
+        "D",
+        "C"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "lagLane": 1,
+        "beats": 12,
+        "periodMs": 720,
+        "lagMs": 180,
+        "flashDurationMs": 110,
+        "videoDurationMs": 11500,
+        "fps": 30,
+        "visualVariant": 1
+      }
+    },
+    {
+      "id": "pl-56d88b06a2939f7d",
+      "cellId": "cell-four-lane-repeated-180ms-lag",
+      "split": "discovery",
+      "seed": 5200002,
+      "failureModeId": "subsecond-relative-event-timing",
+      "question": "Which labeled lane flashes consistently LATE, just after the other three lanes flash together?",
+      "answerOptions": [
+        "B",
+        "A",
+        "D",
+        "C"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "lagLane": 2,
+        "beats": 12,
+        "periodMs": 720,
+        "lagMs": 180,
+        "flashDurationMs": 110,
+        "videoDurationMs": 11500,
+        "fps": 30,
+        "visualVariant": 2
+      }
+    },
+    {
+      "id": "pl-66b714ed5017046c",
+      "cellId": "cell-four-lane-repeated-180ms-lag",
+      "split": "discovery",
+      "seed": 5200003,
+      "failureModeId": "subsecond-relative-event-timing",
+      "question": "Which labeled lane flashes consistently LATE, just after the other three lanes flash together?",
+      "answerOptions": [
+        "A",
+        "B",
+        "D",
+        "C"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "lagLane": 3,
+        "beats": 12,
+        "periodMs": 720,
+        "lagMs": 180,
+        "flashDurationMs": 110,
+        "videoDurationMs": 11500,
+        "fps": 30,
+        "visualVariant": 3
+      }
+    },
+    {
+      "id": "pl-3d4c15ddfdf7b6f4",
+      "cellId": "cell-four-lane-repeated-180ms-lag",
+      "split": "discovery",
+      "seed": 5200004,
+      "failureModeId": "subsecond-relative-event-timing",
+      "question": "Which labeled lane flashes consistently LATE, just after the other three lanes flash together?",
+      "answerOptions": [
+        "A",
+        "B",
+        "D",
+        "C"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "lagLane": 0,
+        "beats": 12,
+        "periodMs": 720,
+        "lagMs": 180,
+        "flashDurationMs": 110,
+        "videoDurationMs": 11500,
+        "fps": 30,
+        "visualVariant": 4
+      }
+    },
+    {
+      "id": "pl-ca7d551a792a4dd1",
+      "cellId": "cell-four-lane-repeated-180ms-lag",
+      "split": "discovery",
+      "seed": 5200005,
+      "failureModeId": "subsecond-relative-event-timing",
+      "question": "Which labeled lane flashes consistently LATE, just after the other three lanes flash together?",
+      "answerOptions": [
+        "B",
+        "D",
+        "A",
+        "C"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "lagLane": 1,
+        "beats": 12,
+        "periodMs": 720,
+        "lagMs": 180,
+        "flashDurationMs": 110,
+        "videoDurationMs": 11500,
+        "fps": 30,
+        "visualVariant": 5
+      }
+    },
+    {
+      "id": "pl-4320338bcccc3247",
+      "cellId": "cell-four-lane-repeated-180ms-lag",
+      "split": "discovery",
+      "seed": 5200006,
+      "failureModeId": "subsecond-relative-event-timing",
+      "question": "Which labeled lane flashes consistently LATE, just after the other three lanes flash together?",
+      "answerOptions": [
+        "B",
+        "D",
+        "A",
+        "C"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "lagLane": 2,
+        "beats": 12,
+        "periodMs": 720,
+        "lagMs": 180,
+        "flashDurationMs": 110,
+        "videoDurationMs": 11500,
+        "fps": 30,
+        "visualVariant": 6
+      }
+    },
+    {
+      "id": "pl-a3f361add7028dba",
+      "cellId": "cell-four-lane-repeated-180ms-lag",
+      "split": "discovery",
+      "seed": 5200007,
+      "failureModeId": "subsecond-relative-event-timing",
+      "question": "Which labeled lane flashes consistently LATE, just after the other three lanes flash together?",
+      "answerOptions": [
+        "D",
+        "B",
+        "A",
+        "C"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "lagLane": 3,
+        "beats": 12,
+        "periodMs": 720,
+        "lagMs": 180,
+        "flashDurationMs": 110,
+        "videoDurationMs": 11500,
+        "fps": 30,
+        "visualVariant": 7
+      }
+    }
+  ]
+}

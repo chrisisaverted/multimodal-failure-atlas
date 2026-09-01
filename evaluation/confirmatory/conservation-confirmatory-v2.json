@@ -1,0 +1,1768 @@
+{
+  "id": "conservation-confirmatory-v2",
+  "generatorVersion": "conservation-ledger-v2",
+  "status": "frozen-confirmatory",
+  "hypothesis": "Models fail multi-entity quantitative object permanence under many conserved transfers.",
+  "candidates": [
+    {
+      "id": "cvh-da9c6dd78c4ee83b",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "seed": 3010000,
+      "failureModeId": "dynamic-conservation-ledger",
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetBox": 0,
+        "initialCounts": [
+          5,
+          3,
+          6,
+          4
+        ],
+        "transfers": [
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            2
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 100
+      }
+    },
+    {
+      "id": "cvh-3d841c6466e3edaf",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "seed": 3010001,
+      "failureModeId": "dynamic-conservation-ledger",
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetBox": 1,
+        "initialCounts": [
+          6,
+          5,
+          3,
+          4
+        ],
+        "transfers": [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 101
+      }
+    },
+    {
+      "id": "cvh-143d9a8ed96ea44b",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "seed": 3010002,
+      "failureModeId": "dynamic-conservation-ledger",
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "C",
+        "B",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetBox": 2,
+        "initialCounts": [
+          3,
+          6,
+          5,
+          4
+        ],
+        "transfers": [
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 102
+      }
+    },
+    {
+      "id": "cvh-157e7df60831dfac",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "seed": 3010003,
+      "failureModeId": "dynamic-conservation-ledger",
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetBox": 3,
+        "initialCounts": [
+          4,
+          6,
+          3,
+          5
+        ],
+        "transfers": [
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 103
+      }
+    },
+    {
+      "id": "cvh-cee5ba5ca39b9dcd",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "seed": 3010004,
+      "failureModeId": "dynamic-conservation-ledger",
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "C",
+        "A",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetBox": 0,
+        "initialCounts": [
+          6,
+          3,
+          5,
+          4
+        ],
+        "transfers": [
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 104
+      }
+    },
+    {
+      "id": "cvh-1c36b2d7f0065c71",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "seed": 3010005,
+      "failureModeId": "dynamic-conservation-ledger",
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetBox": 1,
+        "initialCounts": [
+          4,
+          6,
+          3,
+          5
+        ],
+        "transfers": [
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 105
+      }
+    },
+    {
+      "id": "cvh-b0f9e6f9b47c9ae9",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "seed": 3010006,
+      "failureModeId": "dynamic-conservation-ledger",
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetBox": 2,
+        "initialCounts": [
+          4,
+          6,
+          3,
+          5
+        ],
+        "transfers": [
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 106
+      }
+    },
+    {
+      "id": "cvh-73124f0819cafcd2",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "seed": 3010007,
+      "failureModeId": "dynamic-conservation-ledger",
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetBox": 3,
+        "initialCounts": [
+          4,
+          5,
+          6,
+          3
+        ],
+        "transfers": [
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 107
+      }
+    },
+    {
+      "id": "cvh-b43235a0f58a9647",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "seed": 3010008,
+      "failureModeId": "dynamic-conservation-ledger",
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetBox": 0,
+        "initialCounts": [
+          5,
+          3,
+          6,
+          4
+        ],
+        "transfers": [
+          [
+            3,
+            0
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 108
+      }
+    },
+    {
+      "id": "cvh-013ef4af1dd05102",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "seed": 3010009,
+      "failureModeId": "dynamic-conservation-ledger",
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetBox": 1,
+        "initialCounts": [
+          6,
+          3,
+          4,
+          5
+        ],
+        "transfers": [
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 109
+      }
+    },
+    {
+      "id": "cvh-0e1f9d4cd29ff0f5",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "seed": 3010010,
+      "failureModeId": "dynamic-conservation-ledger",
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetBox": 2,
+        "initialCounts": [
+          3,
+          5,
+          6,
+          4
+        ],
+        "transfers": [
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 110
+      }
+    },
+    {
+      "id": "cvh-aa069071a50f8eca",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "seed": 3010011,
+      "failureModeId": "dynamic-conservation-ledger",
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetBox": 3,
+        "initialCounts": [
+          6,
+          3,
+          5,
+          4
+        ],
+        "transfers": [
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 111
+      }
+    },
+    {
+      "id": "cvh-74e75939f32166f0",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "seed": 3010012,
+      "failureModeId": "dynamic-conservation-ledger",
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "C",
+        "B",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetBox": 0,
+        "initialCounts": [
+          4,
+          3,
+          6,
+          5
+        ],
+        "transfers": [
+          [
+            1,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 112
+      }
+    },
+    {
+      "id": "cvh-e7ed867d3ae54e49",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "seed": 3010013,
+      "failureModeId": "dynamic-conservation-ledger",
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetBox": 1,
+        "initialCounts": [
+          6,
+          3,
+          4,
+          5
+        ],
+        "transfers": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 113
+      }
+    },
+    {
+      "id": "cvh-3f7d1f43e21e84ba",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "seed": 3010014,
+      "failureModeId": "dynamic-conservation-ledger",
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "C",
+        "A",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetBox": 2,
+        "initialCounts": [
+          6,
+          4,
+          3,
+          5
+        ],
+        "transfers": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 114
+      }
+    },
+    {
+      "id": "cvh-ceee08d2500674e9",
+      "cellId": "cell-four-bin-twenty-transfer-ledger",
+      "split": "confirmatory",
+      "seed": 3010015,
+      "failureModeId": "dynamic-conservation-ledger",
+      "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetBox": 3,
+        "initialCounts": [
+          4,
+          3,
+          6,
+          5
+        ],
+        "transfers": [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 115
+      }
+    }
+  ]
+}

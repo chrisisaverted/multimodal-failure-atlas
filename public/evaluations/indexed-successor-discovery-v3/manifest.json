@@ -1,0 +1,257 @@
+{
+  "id": "indexed-successor-discovery-v3",
+  "planSha256": "10041dc2dc4c5e7d6161e478a8b450edbb7bd7136e8c03d37e61856298930fb2",
+  "generatorVersion": "indexed-successor-v3",
+  "renderer": "indexed-successor-svg-raster-v3",
+  "fps": 30,
+  "cases": [
+    {
+      "candidateId": "isx-24e6f9b2f5845faa",
+      "cellId": "cell-sixty-event-sixth-marker-successor",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "A sixty-event stream requires binding the sixth target occurrence to its immediate successor.",
+      "failureModeId": "ordinal-event-successor-binding",
+      "generator": "indexed-successor-hard",
+      "seed": 5300000,
+      "difficulty": 97,
+      "variant": 0,
+      "artifact": "public/evaluations/indexed-successor-discovery-v3/isx-24e6f9b2f5845faa.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 16500,
+      "question": "Which symbol appears IMMEDIATELY AFTER the SIXTH white diamond in the complete stream?",
+      "answerOptions": [
+        "STAR",
+        "SQUARE",
+        "CIRCLE",
+        "TRIANGLE"
+      ],
+      "expectedAnswer": "CIRCLE",
+      "sha256": "0da1d1ee5e8c38b254f794f48b4737111350ca41f432e40d839fc31268ef4fc1",
+      "parameters": {
+        "answerIndex": 0,
+        "targetOccurrence": 6,
+        "visualVariant": 0
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count target occurrences, bind the sixth one to its immediate successor, and return exactly one symbol name."
+    },
+    {
+      "candidateId": "isx-8f7490b6d88850c6",
+      "cellId": "cell-sixty-event-sixth-marker-successor",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "A sixty-event stream requires binding the sixth target occurrence to its immediate successor.",
+      "failureModeId": "ordinal-event-successor-binding",
+      "generator": "indexed-successor-hard",
+      "seed": 5300001,
+      "difficulty": 97,
+      "variant": 1,
+      "artifact": "public/evaluations/indexed-successor-discovery-v3/isx-8f7490b6d88850c6.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 16500,
+      "question": "Which symbol appears IMMEDIATELY AFTER the SIXTH white diamond in the complete stream?",
+      "answerOptions": [
+        "SQUARE",
+        "STAR",
+        "CIRCLE",
+        "TRIANGLE"
+      ],
+      "expectedAnswer": "TRIANGLE",
+      "sha256": "4df64c70b466170713db174100ec3e14d8ca3deeebe37458e833236ac441e4de",
+      "parameters": {
+        "answerIndex": 1,
+        "targetOccurrence": 6,
+        "visualVariant": 1
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count target occurrences, bind the sixth one to its immediate successor, and return exactly one symbol name."
+    },
+    {
+      "candidateId": "isx-dbbaa224f8ae419b",
+      "cellId": "cell-sixty-event-sixth-marker-successor",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "A sixty-event stream requires binding the sixth target occurrence to its immediate successor.",
+      "failureModeId": "ordinal-event-successor-binding",
+      "generator": "indexed-successor-hard",
+      "seed": 5300002,
+      "difficulty": 97,
+      "variant": 2,
+      "artifact": "public/evaluations/indexed-successor-discovery-v3/isx-dbbaa224f8ae419b.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 16500,
+      "question": "Which symbol appears IMMEDIATELY AFTER the SIXTH white diamond in the complete stream?",
+      "answerOptions": [
+        "STAR",
+        "SQUARE",
+        "CIRCLE",
+        "TRIANGLE"
+      ],
+      "expectedAnswer": "SQUARE",
+      "sha256": "19c7e6a468f4ebf80028040674aed0a05cef7337baa7cb3c1ba8e69cd252f71e",
+      "parameters": {
+        "answerIndex": 2,
+        "targetOccurrence": 6,
+        "visualVariant": 2
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count target occurrences, bind the sixth one to its immediate successor, and return exactly one symbol name."
+    },
+    {
+      "candidateId": "isx-ef99cf0ffff776e6",
+      "cellId": "cell-sixty-event-sixth-marker-successor",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "A sixty-event stream requires binding the sixth target occurrence to its immediate successor.",
+      "failureModeId": "ordinal-event-successor-binding",
+      "generator": "indexed-successor-hard",
+      "seed": 5300003,
+      "difficulty": 97,
+      "variant": 3,
+      "artifact": "public/evaluations/indexed-successor-discovery-v3/isx-ef99cf0ffff776e6.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 16500,
+      "question": "Which symbol appears IMMEDIATELY AFTER the SIXTH white diamond in the complete stream?",
+      "answerOptions": [
+        "SQUARE",
+        "CIRCLE",
+        "STAR",
+        "TRIANGLE"
+      ],
+      "expectedAnswer": "STAR",
+      "sha256": "2feb62ca340eec43d4a37a706a9cf60411dbd3f33625cf8cab4807c5a3b7482d",
+      "parameters": {
+        "answerIndex": 3,
+        "targetOccurrence": 6,
+        "visualVariant": 3
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count target occurrences, bind the sixth one to its immediate successor, and return exactly one symbol name."
+    },
+    {
+      "candidateId": "isx-73613523e398bb95",
+      "cellId": "cell-sixty-event-sixth-marker-successor",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "A sixty-event stream requires binding the sixth target occurrence to its immediate successor.",
+      "failureModeId": "ordinal-event-successor-binding",
+      "generator": "indexed-successor-hard",
+      "seed": 5300004,
+      "difficulty": 97,
+      "variant": 4,
+      "artifact": "public/evaluations/indexed-successor-discovery-v3/isx-73613523e398bb95.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 16500,
+      "question": "Which symbol appears IMMEDIATELY AFTER the SIXTH white diamond in the complete stream?",
+      "answerOptions": [
+        "CIRCLE",
+        "SQUARE",
+        "STAR",
+        "TRIANGLE"
+      ],
+      "expectedAnswer": "CIRCLE",
+      "sha256": "7ad1ca5b4aeef874dac1105dff300c9ebbbb166adb085bd2a21d585516e886e5",
+      "parameters": {
+        "answerIndex": 0,
+        "targetOccurrence": 6,
+        "visualVariant": 4
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count target occurrences, bind the sixth one to its immediate successor, and return exactly one symbol name."
+    },
+    {
+      "candidateId": "isx-ce4286bea18812cb",
+      "cellId": "cell-sixty-event-sixth-marker-successor",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "A sixty-event stream requires binding the sixth target occurrence to its immediate successor.",
+      "failureModeId": "ordinal-event-successor-binding",
+      "generator": "indexed-successor-hard",
+      "seed": 5300005,
+      "difficulty": 97,
+      "variant": 5,
+      "artifact": "public/evaluations/indexed-successor-discovery-v3/isx-ce4286bea18812cb.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 16500,
+      "question": "Which symbol appears IMMEDIATELY AFTER the SIXTH white diamond in the complete stream?",
+      "answerOptions": [
+        "CIRCLE",
+        "SQUARE",
+        "STAR",
+        "TRIANGLE"
+      ],
+      "expectedAnswer": "TRIANGLE",
+      "sha256": "7027fb6d5213aa1b2e1f4869ecfbfb856430eb53865555fc8499e219e1cd5122",
+      "parameters": {
+        "answerIndex": 1,
+        "targetOccurrence": 6,
+        "visualVariant": 5
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count target occurrences, bind the sixth one to its immediate successor, and return exactly one symbol name."
+    },
+    {
+      "candidateId": "isx-8806d16e8b448996",
+      "cellId": "cell-sixty-event-sixth-marker-successor",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "A sixty-event stream requires binding the sixth target occurrence to its immediate successor.",
+      "failureModeId": "ordinal-event-successor-binding",
+      "generator": "indexed-successor-hard",
+      "seed": 5300006,
+      "difficulty": 97,
+      "variant": 6,
+      "artifact": "public/evaluations/indexed-successor-discovery-v3/isx-8806d16e8b448996.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 16500,
+      "question": "Which symbol appears IMMEDIATELY AFTER the SIXTH white diamond in the complete stream?",
+      "answerOptions": [
+        "STAR",
+        "CIRCLE",
+        "SQUARE",
+        "TRIANGLE"
+      ],
+      "expectedAnswer": "SQUARE",
+      "sha256": "a81853515b2efc31e4d4754f0283cdd8e18d00b799b524f6e4e22b74baf727e3",
+      "parameters": {
+        "answerIndex": 2,
+        "targetOccurrence": 6,
+        "visualVariant": 6
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count target occurrences, bind the sixth one to its immediate successor, and return exactly one symbol name."
+    },
+    {
+      "candidateId": "isx-3be13e06735be560",
+      "cellId": "cell-sixty-event-sixth-marker-successor",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "A sixty-event stream requires binding the sixth target occurrence to its immediate successor.",
+      "failureModeId": "ordinal-event-successor-binding",
+      "generator": "indexed-successor-hard",
+      "seed": 5300007,
+      "difficulty": 97,
+      "variant": 7,
+      "artifact": "public/evaluations/indexed-successor-discovery-v3/isx-3be13e06735be560.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 16500,
+      "question": "Which symbol appears IMMEDIATELY AFTER the SIXTH white diamond in the complete stream?",
+      "answerOptions": [
+        "CIRCLE",
+        "STAR",
+        "SQUARE",
+        "TRIANGLE"
+      ],
+      "expectedAnswer": "STAR",
+      "sha256": "45fda381b197c3c7365f6daecf57a5bf732c9af554f2f0b40acfcbd7e891d9f0",
+      "parameters": {
+        "answerIndex": 3,
+        "targetOccurrence": 6,
+        "visualVariant": 7
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count target occurrences, bind the sixth one to its immediate successor, and return exactly one symbol name."
+    }
+  ]
+}

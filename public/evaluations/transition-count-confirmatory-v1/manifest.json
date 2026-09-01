@@ -1,0 +1,969 @@
+{
+  "id": "transition-count-confirmatory-v1",
+  "planSha256": "d8067fa5d80da3f1c4fd7c36d7ff74cc9e1dffb4aa69fffd741a173d83386771",
+  "generatorVersion": "temporal-transition-count-v1",
+  "renderer": "transition-count-svg-raster-v2",
+  "fps": 30,
+  "cases": [
+    {
+      "candidateId": "tc-3137769a9ecfbeb2-native-1x",
+      "cellId": "cell-thirty-two-symbol-target-transition-count",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A rapid 32-symbol stream contains a target adjacent transition several times.",
+      "failureModeId": "temporal-pattern-counting",
+      "generator": "transition-count",
+      "seed": 5110000,
+      "difficulty": 94,
+      "variant": 0,
+      "artifact": "public/evaluations/transition-count-confirmatory-v1/tc-3137769a9ecfbeb2-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13000,
+      "question": "How many times is a BLUE CIRCLE immediately followed by a RED SQUARE in the complete sequence? Count overlapping occurrences.",
+      "answerOptions": [
+        "4",
+        "6",
+        "3",
+        "5"
+      ],
+      "expectedAnswer": "3",
+      "sha256": "70570287c722f0c2d782568d7b764d09bd6c5148001f72a81fc66e55c3243248",
+      "parameters": {
+        "targetCount": 3,
+        "visualVariant": 100
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count every occurrence of the specified adjacent transition and return exactly one allowed count."
+    },
+    {
+      "candidateId": "tc-3137769a9ecfbeb2-running-transition-counter-control",
+      "cellId": "cell-thirty-two-symbol-target-transition-count",
+      "split": "confirmatory",
+      "condition": "running-transition-counter-control",
+      "interventionDescription": "Diagnostic control displays the exact cumulative count of target transitions.",
+      "failureModeId": "temporal-pattern-counting",
+      "generator": "transition-count",
+      "seed": 5110000,
+      "difficulty": 8,
+      "variant": 0,
+      "artifact": "public/evaluations/transition-count-confirmatory-v1/tc-3137769a9ecfbeb2-running-transition-counter-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13000,
+      "question": "How many times is a BLUE CIRCLE immediately followed by a RED SQUARE in the complete sequence? Count overlapping occurrences.",
+      "answerOptions": [
+        "4",
+        "6",
+        "3",
+        "5"
+      ],
+      "expectedAnswer": "3",
+      "sha256": "211814bdbb33dab0f80b126e4d15a743c57605c054f473120eb8ee9a2e5fefff",
+      "parameters": {
+        "targetCount": 3,
+        "visualVariant": 100
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count every occurrence of the specified adjacent transition and return exactly one allowed count."
+    },
+    {
+      "candidateId": "tc-fa06760d7a8a48a6-native-1x",
+      "cellId": "cell-thirty-two-symbol-target-transition-count",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A rapid 32-symbol stream contains a target adjacent transition several times.",
+      "failureModeId": "temporal-pattern-counting",
+      "generator": "transition-count",
+      "seed": 5110001,
+      "difficulty": 94,
+      "variant": 1,
+      "artifact": "public/evaluations/transition-count-confirmatory-v1/tc-fa06760d7a8a48a6-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13000,
+      "question": "How many times is a BLUE CIRCLE immediately followed by a RED SQUARE in the complete sequence? Count overlapping occurrences.",
+      "answerOptions": [
+        "6",
+        "3",
+        "4",
+        "5"
+      ],
+      "expectedAnswer": "4",
+      "sha256": "04c9840c9bf382760a30876bdc2085c1436e06390540b51eb0d8fa87070f4158",
+      "parameters": {
+        "targetCount": 4,
+        "visualVariant": 101
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count every occurrence of the specified adjacent transition and return exactly one allowed count."
+    },
+    {
+      "candidateId": "tc-fa06760d7a8a48a6-running-transition-counter-control",
+      "cellId": "cell-thirty-two-symbol-target-transition-count",
+      "split": "confirmatory",
+      "condition": "running-transition-counter-control",
+      "interventionDescription": "Diagnostic control displays the exact cumulative count of target transitions.",
+      "failureModeId": "temporal-pattern-counting",
+      "generator": "transition-count",
+      "seed": 5110001,
+      "difficulty": 8,
+      "variant": 1,
+      "artifact": "public/evaluations/transition-count-confirmatory-v1/tc-fa06760d7a8a48a6-running-transition-counter-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13000,
+      "question": "How many times is a BLUE CIRCLE immediately followed by a RED SQUARE in the complete sequence? Count overlapping occurrences.",
+      "answerOptions": [
+        "6",
+        "3",
+        "4",
+        "5"
+      ],
+      "expectedAnswer": "4",
+      "sha256": "1d85681622126a9ec4af253fb32a00bb95c4298b2536297e62d714e21763f8cd",
+      "parameters": {
+        "targetCount": 4,
+        "visualVariant": 101
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count every occurrence of the specified adjacent transition and return exactly one allowed count."
+    },
+    {
+      "candidateId": "tc-55fa3ad5afd1dd5f-native-1x",
+      "cellId": "cell-thirty-two-symbol-target-transition-count",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A rapid 32-symbol stream contains a target adjacent transition several times.",
+      "failureModeId": "temporal-pattern-counting",
+      "generator": "transition-count",
+      "seed": 5110002,
+      "difficulty": 94,
+      "variant": 2,
+      "artifact": "public/evaluations/transition-count-confirmatory-v1/tc-55fa3ad5afd1dd5f-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13000,
+      "question": "How many times is a BLUE CIRCLE immediately followed by a RED SQUARE in the complete sequence? Count overlapping occurrences.",
+      "answerOptions": [
+        "3",
+        "6",
+        "4",
+        "5"
+      ],
+      "expectedAnswer": "5",
+      "sha256": "55c5a9ce591dc9a7e19cded68bc7b81b452993c89644e658985f56075fab6ea8",
+      "parameters": {
+        "targetCount": 5,
+        "visualVariant": 102
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count every occurrence of the specified adjacent transition and return exactly one allowed count."
+    },
+    {
+      "candidateId": "tc-55fa3ad5afd1dd5f-running-transition-counter-control",
+      "cellId": "cell-thirty-two-symbol-target-transition-count",
+      "split": "confirmatory",
+      "condition": "running-transition-counter-control",
+      "interventionDescription": "Diagnostic control displays the exact cumulative count of target transitions.",
+      "failureModeId": "temporal-pattern-counting",
+      "generator": "transition-count",
+      "seed": 5110002,
+      "difficulty": 8,
+      "variant": 2,
+      "artifact": "public/evaluations/transition-count-confirmatory-v1/tc-55fa3ad5afd1dd5f-running-transition-counter-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13000,
+      "question": "How many times is a BLUE CIRCLE immediately followed by a RED SQUARE in the complete sequence? Count overlapping occurrences.",
+      "answerOptions": [
+        "3",
+        "6",
+        "4",
+        "5"
+      ],
+      "expectedAnswer": "5",
+      "sha256": "17da3091844dbc683ea9ec1fbe6556f9483c34ba69426c4263229ae37fb505d6",
+      "parameters": {
+        "targetCount": 5,
+        "visualVariant": 102
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count every occurrence of the specified adjacent transition and return exactly one allowed count."
+    },
+    {
+      "candidateId": "tc-a017a29246867203-native-1x",
+      "cellId": "cell-thirty-two-symbol-target-transition-count",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A rapid 32-symbol stream contains a target adjacent transition several times.",
+      "failureModeId": "temporal-pattern-counting",
+      "generator": "transition-count",
+      "seed": 5110003,
+      "difficulty": 94,
+      "variant": 3,
+      "artifact": "public/evaluations/transition-count-confirmatory-v1/tc-a017a29246867203-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13000,
+      "question": "How many times is a BLUE CIRCLE immediately followed by a RED SQUARE in the complete sequence? Count overlapping occurrences.",
+      "answerOptions": [
+        "6",
+        "3",
+        "4",
+        "5"
+      ],
+      "expectedAnswer": "6",
+      "sha256": "224b22c5992a27b5024ef4ec12fb54ff08c31a6d3e7dcd862927a2418436bd1f",
+      "parameters": {
+        "targetCount": 6,
+        "visualVariant": 103
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count every occurrence of the specified adjacent transition and return exactly one allowed count."
+    },
+    {
+      "candidateId": "tc-a017a29246867203-running-transition-counter-control",
+      "cellId": "cell-thirty-two-symbol-target-transition-count",
+      "split": "confirmatory",
+      "condition": "running-transition-counter-control",
+      "interventionDescription": "Diagnostic control displays the exact cumulative count of target transitions.",
+      "failureModeId": "temporal-pattern-counting",
+      "generator": "transition-count",
+      "seed": 5110003,
+      "difficulty": 8,
+      "variant": 3,
+      "artifact": "public/evaluations/transition-count-confirmatory-v1/tc-a017a29246867203-running-transition-counter-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13000,
+      "question": "How many times is a BLUE CIRCLE immediately followed by a RED SQUARE in the complete sequence? Count overlapping occurrences.",
+      "answerOptions": [
+        "6",
+        "3",
+        "4",
+        "5"
+      ],
+      "expectedAnswer": "6",
+      "sha256": "e42bbc905197c48ca5a71f59e6d323d9a9152907d61fefc89380f1734feb3931",
+      "parameters": {
+        "targetCount": 6,
+        "visualVariant": 103
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count every occurrence of the specified adjacent transition and return exactly one allowed count."
+    },
+    {
+      "candidateId": "tc-1e3adf5f7bddf147-native-1x",
+      "cellId": "cell-thirty-two-symbol-target-transition-count",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A rapid 32-symbol stream contains a target adjacent transition several times.",
+      "failureModeId": "temporal-pattern-counting",
+      "generator": "transition-count",
+      "seed": 5110004,
+      "difficulty": 94,
+      "variant": 4,
+      "artifact": "public/evaluations/transition-count-confirmatory-v1/tc-1e3adf5f7bddf147-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13000,
+      "question": "How many times is a BLUE CIRCLE immediately followed by a RED SQUARE in the complete sequence? Count overlapping occurrences.",
+      "answerOptions": [
+        "4",
+        "3",
+        "6",
+        "5"
+      ],
+      "expectedAnswer": "3",
+      "sha256": "14af505493be8eb895d90766996e97880e41ffa5e81f0b299aa8453bfd56317e",
+      "parameters": {
+        "targetCount": 3,
+        "visualVariant": 104
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count every occurrence of the specified adjacent transition and return exactly one allowed count."
+    },
+    {
+      "candidateId": "tc-1e3adf5f7bddf147-running-transition-counter-control",
+      "cellId": "cell-thirty-two-symbol-target-transition-count",
+      "split": "confirmatory",
+      "condition": "running-transition-counter-control",
+      "interventionDescription": "Diagnostic control displays the exact cumulative count of target transitions.",
+      "failureModeId": "temporal-pattern-counting",
+      "generator": "transition-count",
+      "seed": 5110004,
+      "difficulty": 8,
+      "variant": 4,
+      "artifact": "public/evaluations/transition-count-confirmatory-v1/tc-1e3adf5f7bddf147-running-transition-counter-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13000,
+      "question": "How many times is a BLUE CIRCLE immediately followed by a RED SQUARE in the complete sequence? Count overlapping occurrences.",
+      "answerOptions": [
+        "4",
+        "3",
+        "6",
+        "5"
+      ],
+      "expectedAnswer": "3",
+      "sha256": "d7f31c9ea4cba900e916fc8aacae642881c28d4fa30cc14886da59856f45b123",
+      "parameters": {
+        "targetCount": 3,
+        "visualVariant": 104
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count every occurrence of the specified adjacent transition and return exactly one allowed count."
+    },
+    {
+      "candidateId": "tc-31dd8709463c8efc-native-1x",
+      "cellId": "cell-thirty-two-symbol-target-transition-count",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A rapid 32-symbol stream contains a target adjacent transition several times.",
+      "failureModeId": "temporal-pattern-counting",
+      "generator": "transition-count",
+      "seed": 5110005,
+      "difficulty": 94,
+      "variant": 5,
+      "artifact": "public/evaluations/transition-count-confirmatory-v1/tc-31dd8709463c8efc-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13000,
+      "question": "How many times is a BLUE CIRCLE immediately followed by a RED SQUARE in the complete sequence? Count overlapping occurrences.",
+      "answerOptions": [
+        "3",
+        "4",
+        "6",
+        "5"
+      ],
+      "expectedAnswer": "4",
+      "sha256": "bc6b2b199ceb0edcd7edcdd0c40a3c562d6e86de982adcd3dfc5f34fdb8f49d1",
+      "parameters": {
+        "targetCount": 4,
+        "visualVariant": 105
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count every occurrence of the specified adjacent transition and return exactly one allowed count."
+    },
+    {
+      "candidateId": "tc-31dd8709463c8efc-running-transition-counter-control",
+      "cellId": "cell-thirty-two-symbol-target-transition-count",
+      "split": "confirmatory",
+      "condition": "running-transition-counter-control",
+      "interventionDescription": "Diagnostic control displays the exact cumulative count of target transitions.",
+      "failureModeId": "temporal-pattern-counting",
+      "generator": "transition-count",
+      "seed": 5110005,
+      "difficulty": 8,
+      "variant": 5,
+      "artifact": "public/evaluations/transition-count-confirmatory-v1/tc-31dd8709463c8efc-running-transition-counter-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13000,
+      "question": "How many times is a BLUE CIRCLE immediately followed by a RED SQUARE in the complete sequence? Count overlapping occurrences.",
+      "answerOptions": [
+        "3",
+        "4",
+        "6",
+        "5"
+      ],
+      "expectedAnswer": "4",
+      "sha256": "879b6d24c943e963507e52090485029368ca4070697b6b5d34ea64645fdab6e6",
+      "parameters": {
+        "targetCount": 4,
+        "visualVariant": 105
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count every occurrence of the specified adjacent transition and return exactly one allowed count."
+    },
+    {
+      "candidateId": "tc-99b4f042672ad889-native-1x",
+      "cellId": "cell-thirty-two-symbol-target-transition-count",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A rapid 32-symbol stream contains a target adjacent transition several times.",
+      "failureModeId": "temporal-pattern-counting",
+      "generator": "transition-count",
+      "seed": 5110006,
+      "difficulty": 94,
+      "variant": 6,
+      "artifact": "public/evaluations/transition-count-confirmatory-v1/tc-99b4f042672ad889-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13000,
+      "question": "How many times is a BLUE CIRCLE immediately followed by a RED SQUARE in the complete sequence? Count overlapping occurrences.",
+      "answerOptions": [
+        "4",
+        "3",
+        "6",
+        "5"
+      ],
+      "expectedAnswer": "5",
+      "sha256": "aaa6f5c35463b6869d907cfb94c328673c8913dad4b2c91a79f8dcff42cb338c",
+      "parameters": {
+        "targetCount": 5,
+        "visualVariant": 106
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count every occurrence of the specified adjacent transition and return exactly one allowed count."
+    },
+    {
+      "candidateId": "tc-99b4f042672ad889-running-transition-counter-control",
+      "cellId": "cell-thirty-two-symbol-target-transition-count",
+      "split": "confirmatory",
+      "condition": "running-transition-counter-control",
+      "interventionDescription": "Diagnostic control displays the exact cumulative count of target transitions.",
+      "failureModeId": "temporal-pattern-counting",
+      "generator": "transition-count",
+      "seed": 5110006,
+      "difficulty": 8,
+      "variant": 6,
+      "artifact": "public/evaluations/transition-count-confirmatory-v1/tc-99b4f042672ad889-running-transition-counter-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13000,
+      "question": "How many times is a BLUE CIRCLE immediately followed by a RED SQUARE in the complete sequence? Count overlapping occurrences.",
+      "answerOptions": [
+        "4",
+        "3",
+        "6",
+        "5"
+      ],
+      "expectedAnswer": "5",
+      "sha256": "228b4becae53166d67184e4443bf8ba0550af2ebd54cb06fa5341e24ce12eee2",
+      "parameters": {
+        "targetCount": 5,
+        "visualVariant": 106
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count every occurrence of the specified adjacent transition and return exactly one allowed count."
+    },
+    {
+      "candidateId": "tc-82eb3ca2f726d6cb-native-1x",
+      "cellId": "cell-thirty-two-symbol-target-transition-count",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A rapid 32-symbol stream contains a target adjacent transition several times.",
+      "failureModeId": "temporal-pattern-counting",
+      "generator": "transition-count",
+      "seed": 5110007,
+      "difficulty": 94,
+      "variant": 7,
+      "artifact": "public/evaluations/transition-count-confirmatory-v1/tc-82eb3ca2f726d6cb-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13000,
+      "question": "How many times is a BLUE CIRCLE immediately followed by a RED SQUARE in the complete sequence? Count overlapping occurrences.",
+      "answerOptions": [
+        "4",
+        "3",
+        "6",
+        "5"
+      ],
+      "expectedAnswer": "6",
+      "sha256": "b1daac5aaaa4cccfff242a2b63ac78422bf4d8c3c0a68a8e69dc27a9435ffe3e",
+      "parameters": {
+        "targetCount": 6,
+        "visualVariant": 107
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count every occurrence of the specified adjacent transition and return exactly one allowed count."
+    },
+    {
+      "candidateId": "tc-82eb3ca2f726d6cb-running-transition-counter-control",
+      "cellId": "cell-thirty-two-symbol-target-transition-count",
+      "split": "confirmatory",
+      "condition": "running-transition-counter-control",
+      "interventionDescription": "Diagnostic control displays the exact cumulative count of target transitions.",
+      "failureModeId": "temporal-pattern-counting",
+      "generator": "transition-count",
+      "seed": 5110007,
+      "difficulty": 8,
+      "variant": 7,
+      "artifact": "public/evaluations/transition-count-confirmatory-v1/tc-82eb3ca2f726d6cb-running-transition-counter-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13000,
+      "question": "How many times is a BLUE CIRCLE immediately followed by a RED SQUARE in the complete sequence? Count overlapping occurrences.",
+      "answerOptions": [
+        "4",
+        "3",
+        "6",
+        "5"
+      ],
+      "expectedAnswer": "6",
+      "sha256": "96032607e0fc2bf11987c37669d8f511a6335be2a7d74483c4f1d0dc578523f4",
+      "parameters": {
+        "targetCount": 6,
+        "visualVariant": 107
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count every occurrence of the specified adjacent transition and return exactly one allowed count."
+    },
+    {
+      "candidateId": "tc-7d1a01b77a27be88-native-1x",
+      "cellId": "cell-thirty-two-symbol-target-transition-count",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A rapid 32-symbol stream contains a target adjacent transition several times.",
+      "failureModeId": "temporal-pattern-counting",
+      "generator": "transition-count",
+      "seed": 5110008,
+      "difficulty": 94,
+      "variant": 8,
+      "artifact": "public/evaluations/transition-count-confirmatory-v1/tc-7d1a01b77a27be88-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13000,
+      "question": "How many times is a BLUE CIRCLE immediately followed by a RED SQUARE in the complete sequence? Count overlapping occurrences.",
+      "answerOptions": [
+        "6",
+        "4",
+        "3",
+        "5"
+      ],
+      "expectedAnswer": "3",
+      "sha256": "cc167be947957fbb6f26984cf18770a2b2af45832219686820086fc50da125e0",
+      "parameters": {
+        "targetCount": 3,
+        "visualVariant": 108
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count every occurrence of the specified adjacent transition and return exactly one allowed count."
+    },
+    {
+      "candidateId": "tc-7d1a01b77a27be88-running-transition-counter-control",
+      "cellId": "cell-thirty-two-symbol-target-transition-count",
+      "split": "confirmatory",
+      "condition": "running-transition-counter-control",
+      "interventionDescription": "Diagnostic control displays the exact cumulative count of target transitions.",
+      "failureModeId": "temporal-pattern-counting",
+      "generator": "transition-count",
+      "seed": 5110008,
+      "difficulty": 8,
+      "variant": 8,
+      "artifact": "public/evaluations/transition-count-confirmatory-v1/tc-7d1a01b77a27be88-running-transition-counter-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13000,
+      "question": "How many times is a BLUE CIRCLE immediately followed by a RED SQUARE in the complete sequence? Count overlapping occurrences.",
+      "answerOptions": [
+        "6",
+        "4",
+        "3",
+        "5"
+      ],
+      "expectedAnswer": "3",
+      "sha256": "fb89df33c3c5b95f55137f55ed884652534f156ad2df67f21637f7c03ac93a4b",
+      "parameters": {
+        "targetCount": 3,
+        "visualVariant": 108
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count every occurrence of the specified adjacent transition and return exactly one allowed count."
+    },
+    {
+      "candidateId": "tc-d9df2e2062765f6b-native-1x",
+      "cellId": "cell-thirty-two-symbol-target-transition-count",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A rapid 32-symbol stream contains a target adjacent transition several times.",
+      "failureModeId": "temporal-pattern-counting",
+      "generator": "transition-count",
+      "seed": 5110009,
+      "difficulty": 94,
+      "variant": 9,
+      "artifact": "public/evaluations/transition-count-confirmatory-v1/tc-d9df2e2062765f6b-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13000,
+      "question": "How many times is a BLUE CIRCLE immediately followed by a RED SQUARE in the complete sequence? Count overlapping occurrences.",
+      "answerOptions": [
+        "4",
+        "6",
+        "3",
+        "5"
+      ],
+      "expectedAnswer": "4",
+      "sha256": "56552550eab666143897be20492486eacfa07b0f12f181d803d03a3f7d11f901",
+      "parameters": {
+        "targetCount": 4,
+        "visualVariant": 109
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count every occurrence of the specified adjacent transition and return exactly one allowed count."
+    },
+    {
+      "candidateId": "tc-d9df2e2062765f6b-running-transition-counter-control",
+      "cellId": "cell-thirty-two-symbol-target-transition-count",
+      "split": "confirmatory",
+      "condition": "running-transition-counter-control",
+      "interventionDescription": "Diagnostic control displays the exact cumulative count of target transitions.",
+      "failureModeId": "temporal-pattern-counting",
+      "generator": "transition-count",
+      "seed": 5110009,
+      "difficulty": 8,
+      "variant": 9,
+      "artifact": "public/evaluations/transition-count-confirmatory-v1/tc-d9df2e2062765f6b-running-transition-counter-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13000,
+      "question": "How many times is a BLUE CIRCLE immediately followed by a RED SQUARE in the complete sequence? Count overlapping occurrences.",
+      "answerOptions": [
+        "4",
+        "6",
+        "3",
+        "5"
+      ],
+      "expectedAnswer": "4",
+      "sha256": "0758e912f37ac598e3a4a2d3e4828d3d13d84f49d1f38321460c5b4ad39a7680",
+      "parameters": {
+        "targetCount": 4,
+        "visualVariant": 109
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count every occurrence of the specified adjacent transition and return exactly one allowed count."
+    },
+    {
+      "candidateId": "tc-5f23d308e5c08c7d-native-1x",
+      "cellId": "cell-thirty-two-symbol-target-transition-count",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A rapid 32-symbol stream contains a target adjacent transition several times.",
+      "failureModeId": "temporal-pattern-counting",
+      "generator": "transition-count",
+      "seed": 5110010,
+      "difficulty": 94,
+      "variant": 10,
+      "artifact": "public/evaluations/transition-count-confirmatory-v1/tc-5f23d308e5c08c7d-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13000,
+      "question": "How many times is a BLUE CIRCLE immediately followed by a RED SQUARE in the complete sequence? Count overlapping occurrences.",
+      "answerOptions": [
+        "4",
+        "6",
+        "3",
+        "5"
+      ],
+      "expectedAnswer": "5",
+      "sha256": "69e083d25bcdc470b3ea551e748199f060462e34a125cc41ba77d4eb2ac61ca1",
+      "parameters": {
+        "targetCount": 5,
+        "visualVariant": 110
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count every occurrence of the specified adjacent transition and return exactly one allowed count."
+    },
+    {
+      "candidateId": "tc-5f23d308e5c08c7d-running-transition-counter-control",
+      "cellId": "cell-thirty-two-symbol-target-transition-count",
+      "split": "confirmatory",
+      "condition": "running-transition-counter-control",
+      "interventionDescription": "Diagnostic control displays the exact cumulative count of target transitions.",
+      "failureModeId": "temporal-pattern-counting",
+      "generator": "transition-count",
+      "seed": 5110010,
+      "difficulty": 8,
+      "variant": 10,
+      "artifact": "public/evaluations/transition-count-confirmatory-v1/tc-5f23d308e5c08c7d-running-transition-counter-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13000,
+      "question": "How many times is a BLUE CIRCLE immediately followed by a RED SQUARE in the complete sequence? Count overlapping occurrences.",
+      "answerOptions": [
+        "4",
+        "6",
+        "3",
+        "5"
+      ],
+      "expectedAnswer": "5",
+      "sha256": "57a2656aabf7a54b0eb20b6c5b435e38ff505c49fe745883113fba895a138adc",
+      "parameters": {
+        "targetCount": 5,
+        "visualVariant": 110
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count every occurrence of the specified adjacent transition and return exactly one allowed count."
+    },
+    {
+      "candidateId": "tc-32e6443ec7a52886-native-1x",
+      "cellId": "cell-thirty-two-symbol-target-transition-count",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A rapid 32-symbol stream contains a target adjacent transition several times.",
+      "failureModeId": "temporal-pattern-counting",
+      "generator": "transition-count",
+      "seed": 5110011,
+      "difficulty": 94,
+      "variant": 11,
+      "artifact": "public/evaluations/transition-count-confirmatory-v1/tc-32e6443ec7a52886-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13000,
+      "question": "How many times is a BLUE CIRCLE immediately followed by a RED SQUARE in the complete sequence? Count overlapping occurrences.",
+      "answerOptions": [
+        "6",
+        "4",
+        "3",
+        "5"
+      ],
+      "expectedAnswer": "6",
+      "sha256": "59cdc7d6d347b005a2beab2b8eb04ec6e81453e744d149df507b98375bef8168",
+      "parameters": {
+        "targetCount": 6,
+        "visualVariant": 111
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count every occurrence of the specified adjacent transition and return exactly one allowed count."
+    },
+    {
+      "candidateId": "tc-32e6443ec7a52886-running-transition-counter-control",
+      "cellId": "cell-thirty-two-symbol-target-transition-count",
+      "split": "confirmatory",
+      "condition": "running-transition-counter-control",
+      "interventionDescription": "Diagnostic control displays the exact cumulative count of target transitions.",
+      "failureModeId": "temporal-pattern-counting",
+      "generator": "transition-count",
+      "seed": 5110011,
+      "difficulty": 8,
+      "variant": 11,
+      "artifact": "public/evaluations/transition-count-confirmatory-v1/tc-32e6443ec7a52886-running-transition-counter-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13000,
+      "question": "How many times is a BLUE CIRCLE immediately followed by a RED SQUARE in the complete sequence? Count overlapping occurrences.",
+      "answerOptions": [
+        "6",
+        "4",
+        "3",
+        "5"
+      ],
+      "expectedAnswer": "6",
+      "sha256": "d6d975220123f109a8813a16d9f8a66c771a12de09b87cd1eeee9955841d7cee",
+      "parameters": {
+        "targetCount": 6,
+        "visualVariant": 111
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count every occurrence of the specified adjacent transition and return exactly one allowed count."
+    },
+    {
+      "candidateId": "tc-ec9b3138d6ea4878-native-1x",
+      "cellId": "cell-thirty-two-symbol-target-transition-count",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A rapid 32-symbol stream contains a target adjacent transition several times.",
+      "failureModeId": "temporal-pattern-counting",
+      "generator": "transition-count",
+      "seed": 5110012,
+      "difficulty": 94,
+      "variant": 12,
+      "artifact": "public/evaluations/transition-count-confirmatory-v1/tc-ec9b3138d6ea4878-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13000,
+      "question": "How many times is a BLUE CIRCLE immediately followed by a RED SQUARE in the complete sequence? Count overlapping occurrences.",
+      "answerOptions": [
+        "3",
+        "6",
+        "4",
+        "5"
+      ],
+      "expectedAnswer": "3",
+      "sha256": "e50336d1408df16faed05388a281dab1795887d2b342500c84905c7296eb2e5b",
+      "parameters": {
+        "targetCount": 3,
+        "visualVariant": 112
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count every occurrence of the specified adjacent transition and return exactly one allowed count."
+    },
+    {
+      "candidateId": "tc-ec9b3138d6ea4878-running-transition-counter-control",
+      "cellId": "cell-thirty-two-symbol-target-transition-count",
+      "split": "confirmatory",
+      "condition": "running-transition-counter-control",
+      "interventionDescription": "Diagnostic control displays the exact cumulative count of target transitions.",
+      "failureModeId": "temporal-pattern-counting",
+      "generator": "transition-count",
+      "seed": 5110012,
+      "difficulty": 8,
+      "variant": 12,
+      "artifact": "public/evaluations/transition-count-confirmatory-v1/tc-ec9b3138d6ea4878-running-transition-counter-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13000,
+      "question": "How many times is a BLUE CIRCLE immediately followed by a RED SQUARE in the complete sequence? Count overlapping occurrences.",
+      "answerOptions": [
+        "3",
+        "6",
+        "4",
+        "5"
+      ],
+      "expectedAnswer": "3",
+      "sha256": "44774d511c79b883cc479d1c7769c17c70e69d7df634269aa1bd48c14520eff5",
+      "parameters": {
+        "targetCount": 3,
+        "visualVariant": 112
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count every occurrence of the specified adjacent transition and return exactly one allowed count."
+    },
+    {
+      "candidateId": "tc-a17527eea0b696fb-native-1x",
+      "cellId": "cell-thirty-two-symbol-target-transition-count",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A rapid 32-symbol stream contains a target adjacent transition several times.",
+      "failureModeId": "temporal-pattern-counting",
+      "generator": "transition-count",
+      "seed": 5110013,
+      "difficulty": 94,
+      "variant": 13,
+      "artifact": "public/evaluations/transition-count-confirmatory-v1/tc-a17527eea0b696fb-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13000,
+      "question": "How many times is a BLUE CIRCLE immediately followed by a RED SQUARE in the complete sequence? Count overlapping occurrences.",
+      "answerOptions": [
+        "6",
+        "3",
+        "4",
+        "5"
+      ],
+      "expectedAnswer": "4",
+      "sha256": "44588431b1c36c65dc5b4e0a07652dd35107c120f3efcdeaa31a2e4d78fee2e4",
+      "parameters": {
+        "targetCount": 4,
+        "visualVariant": 113
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count every occurrence of the specified adjacent transition and return exactly one allowed count."
+    },
+    {
+      "candidateId": "tc-a17527eea0b696fb-running-transition-counter-control",
+      "cellId": "cell-thirty-two-symbol-target-transition-count",
+      "split": "confirmatory",
+      "condition": "running-transition-counter-control",
+      "interventionDescription": "Diagnostic control displays the exact cumulative count of target transitions.",
+      "failureModeId": "temporal-pattern-counting",
+      "generator": "transition-count",
+      "seed": 5110013,
+      "difficulty": 8,
+      "variant": 13,
+      "artifact": "public/evaluations/transition-count-confirmatory-v1/tc-a17527eea0b696fb-running-transition-counter-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13000,
+      "question": "How many times is a BLUE CIRCLE immediately followed by a RED SQUARE in the complete sequence? Count overlapping occurrences.",
+      "answerOptions": [
+        "6",
+        "3",
+        "4",
+        "5"
+      ],
+      "expectedAnswer": "4",
+      "sha256": "d40618c4d40eb9cc852f448bb89aef531c80f879923e6608e3ba63def0ea82f7",
+      "parameters": {
+        "targetCount": 4,
+        "visualVariant": 113
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count every occurrence of the specified adjacent transition and return exactly one allowed count."
+    },
+    {
+      "candidateId": "tc-8a83827e08b4c37c-native-1x",
+      "cellId": "cell-thirty-two-symbol-target-transition-count",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A rapid 32-symbol stream contains a target adjacent transition several times.",
+      "failureModeId": "temporal-pattern-counting",
+      "generator": "transition-count",
+      "seed": 5110014,
+      "difficulty": 94,
+      "variant": 14,
+      "artifact": "public/evaluations/transition-count-confirmatory-v1/tc-8a83827e08b4c37c-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13000,
+      "question": "How many times is a BLUE CIRCLE immediately followed by a RED SQUARE in the complete sequence? Count overlapping occurrences.",
+      "answerOptions": [
+        "3",
+        "6",
+        "4",
+        "5"
+      ],
+      "expectedAnswer": "5",
+      "sha256": "8676621031f4b9a3b26ec53fddec8a7c18a1fb2eab0327550c9de764234398a4",
+      "parameters": {
+        "targetCount": 5,
+        "visualVariant": 114
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count every occurrence of the specified adjacent transition and return exactly one allowed count."
+    },
+    {
+      "candidateId": "tc-8a83827e08b4c37c-running-transition-counter-control",
+      "cellId": "cell-thirty-two-symbol-target-transition-count",
+      "split": "confirmatory",
+      "condition": "running-transition-counter-control",
+      "interventionDescription": "Diagnostic control displays the exact cumulative count of target transitions.",
+      "failureModeId": "temporal-pattern-counting",
+      "generator": "transition-count",
+      "seed": 5110014,
+      "difficulty": 8,
+      "variant": 14,
+      "artifact": "public/evaluations/transition-count-confirmatory-v1/tc-8a83827e08b4c37c-running-transition-counter-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13000,
+      "question": "How many times is a BLUE CIRCLE immediately followed by a RED SQUARE in the complete sequence? Count overlapping occurrences.",
+      "answerOptions": [
+        "3",
+        "6",
+        "4",
+        "5"
+      ],
+      "expectedAnswer": "5",
+      "sha256": "0456dc6d7fa135ab6f7528f61fc5af0907b8ab6590bbe6e2a10ade2a4779ef9d",
+      "parameters": {
+        "targetCount": 5,
+        "visualVariant": 114
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count every occurrence of the specified adjacent transition and return exactly one allowed count."
+    },
+    {
+      "candidateId": "tc-d004631a8ca28b4b-native-1x",
+      "cellId": "cell-thirty-two-symbol-target-transition-count",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A rapid 32-symbol stream contains a target adjacent transition several times.",
+      "failureModeId": "temporal-pattern-counting",
+      "generator": "transition-count",
+      "seed": 5110015,
+      "difficulty": 94,
+      "variant": 15,
+      "artifact": "public/evaluations/transition-count-confirmatory-v1/tc-d004631a8ca28b4b-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13000,
+      "question": "How many times is a BLUE CIRCLE immediately followed by a RED SQUARE in the complete sequence? Count overlapping occurrences.",
+      "answerOptions": [
+        "3",
+        "4",
+        "6",
+        "5"
+      ],
+      "expectedAnswer": "6",
+      "sha256": "21243de16682cac2a17ee680a8cc27ee470edf9c5dfbffdf34d4854fc8e2a661",
+      "parameters": {
+        "targetCount": 6,
+        "visualVariant": 115
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count every occurrence of the specified adjacent transition and return exactly one allowed count."
+    },
+    {
+      "candidateId": "tc-d004631a8ca28b4b-running-transition-counter-control",
+      "cellId": "cell-thirty-two-symbol-target-transition-count",
+      "split": "confirmatory",
+      "condition": "running-transition-counter-control",
+      "interventionDescription": "Diagnostic control displays the exact cumulative count of target transitions.",
+      "failureModeId": "temporal-pattern-counting",
+      "generator": "transition-count",
+      "seed": 5110015,
+      "difficulty": 8,
+      "variant": 15,
+      "artifact": "public/evaluations/transition-count-confirmatory-v1/tc-d004631a8ca28b4b-running-transition-counter-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13000,
+      "question": "How many times is a BLUE CIRCLE immediately followed by a RED SQUARE in the complete sequence? Count overlapping occurrences.",
+      "answerOptions": [
+        "3",
+        "4",
+        "6",
+        "5"
+      ],
+      "expectedAnswer": "6",
+      "sha256": "6e9db20e86dacfa1998987f10bf06270a81d37ef9a866f1f9ff07d8a80781815",
+      "parameters": {
+        "targetCount": 6,
+        "visualVariant": 115
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count every occurrence of the specified adjacent transition and return exactly one allowed count."
+    }
+  ]
+}

@@ -1,0 +1,249 @@
+{
+  "id": "grid-activation-discovery-v3",
+  "planSha256": "f139a720550f3458de6b5999cdf76c500937e3dd5cbcfd25ef240d41ead1c672",
+  "generatorVersion": "unique-grid-activation-memory-v3",
+  "renderer": "grid-activation-svg-raster-v3",
+  "fps": 30,
+  "cases": [
+    {
+      "candidateId": "gax-6d0ebb6d830d4bc7",
+      "cellId": "cell-sixty-activations-eight-by-eight",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Sixty brief activations contain repeats over an eight-by-eight grid.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory-extreme",
+      "seed": 4820000,
+      "difficulty": 98,
+      "variant": 0,
+      "artifact": "public/evaluations/grid-activation-discovery-v3/gax-6d0ebb6d830d4bc7.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 22500,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeats count only once.",
+      "answerOptions": [
+        "24",
+        "21",
+        "23",
+        "22"
+      ],
+      "expectedAnswer": "21",
+      "sha256": "6beff6b134b14f346f8b94fc494b6e864cd97e9db305118eb1bf40af954be264",
+      "parameters": {
+        "uniqueCount": 21,
+        "visualVariant": 0
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions and return exactly one allowed count."
+    },
+    {
+      "candidateId": "gax-5ac6ee0994640ba6",
+      "cellId": "cell-sixty-activations-eight-by-eight",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Sixty brief activations contain repeats over an eight-by-eight grid.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory-extreme",
+      "seed": 4820001,
+      "difficulty": 98,
+      "variant": 1,
+      "artifact": "public/evaluations/grid-activation-discovery-v3/gax-5ac6ee0994640ba6.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 22500,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeats count only once.",
+      "answerOptions": [
+        "24",
+        "23",
+        "21",
+        "22"
+      ],
+      "expectedAnswer": "22",
+      "sha256": "f04ff86936eecbc891a30ae8945b7b3963ea596d80aa5c08e9f6502cc995aed9",
+      "parameters": {
+        "uniqueCount": 22,
+        "visualVariant": 1
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions and return exactly one allowed count."
+    },
+    {
+      "candidateId": "gax-bddf31f07677bb4e",
+      "cellId": "cell-sixty-activations-eight-by-eight",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Sixty brief activations contain repeats over an eight-by-eight grid.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory-extreme",
+      "seed": 4820002,
+      "difficulty": 98,
+      "variant": 2,
+      "artifact": "public/evaluations/grid-activation-discovery-v3/gax-bddf31f07677bb4e.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 22500,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeats count only once.",
+      "answerOptions": [
+        "23",
+        "24",
+        "21",
+        "22"
+      ],
+      "expectedAnswer": "23",
+      "sha256": "2d968dc1d050c669f9a64e311447f8fc86ec7c0396b54fd76abcf14a147236f1",
+      "parameters": {
+        "uniqueCount": 23,
+        "visualVariant": 2
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions and return exactly one allowed count."
+    },
+    {
+      "candidateId": "gax-4870780beada37f6",
+      "cellId": "cell-sixty-activations-eight-by-eight",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Sixty brief activations contain repeats over an eight-by-eight grid.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory-extreme",
+      "seed": 4820003,
+      "difficulty": 98,
+      "variant": 3,
+      "artifact": "public/evaluations/grid-activation-discovery-v3/gax-4870780beada37f6.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 22500,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeats count only once.",
+      "answerOptions": [
+        "23",
+        "24",
+        "21",
+        "22"
+      ],
+      "expectedAnswer": "24",
+      "sha256": "d2af0227707d13ed2a36e6a22c12739033d8025f80e8342acc29126c0a89f6b1",
+      "parameters": {
+        "uniqueCount": 24,
+        "visualVariant": 3
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions and return exactly one allowed count."
+    },
+    {
+      "candidateId": "gax-31530ac227994656",
+      "cellId": "cell-sixty-activations-eight-by-eight",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Sixty brief activations contain repeats over an eight-by-eight grid.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory-extreme",
+      "seed": 4820004,
+      "difficulty": 98,
+      "variant": 4,
+      "artifact": "public/evaluations/grid-activation-discovery-v3/gax-31530ac227994656.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 22500,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeats count only once.",
+      "answerOptions": [
+        "24",
+        "23",
+        "21",
+        "22"
+      ],
+      "expectedAnswer": "21",
+      "sha256": "1170be48aa7bf75f1bfd7f572bd8bcc19bbff93dcccf45b6f26f73366fba2b53",
+      "parameters": {
+        "uniqueCount": 21,
+        "visualVariant": 4
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions and return exactly one allowed count."
+    },
+    {
+      "candidateId": "gax-cd796ec454788eb7",
+      "cellId": "cell-sixty-activations-eight-by-eight",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Sixty brief activations contain repeats over an eight-by-eight grid.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory-extreme",
+      "seed": 4820005,
+      "difficulty": 98,
+      "variant": 5,
+      "artifact": "public/evaluations/grid-activation-discovery-v3/gax-cd796ec454788eb7.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 22500,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeats count only once.",
+      "answerOptions": [
+        "21",
+        "23",
+        "24",
+        "22"
+      ],
+      "expectedAnswer": "22",
+      "sha256": "76e2d9b21a694c1fdf0765debca8d2813a15068447ae36a49f0574b7f800d500",
+      "parameters": {
+        "uniqueCount": 22,
+        "visualVariant": 5
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions and return exactly one allowed count."
+    },
+    {
+      "candidateId": "gax-b5ad62dc1e9af7d1",
+      "cellId": "cell-sixty-activations-eight-by-eight",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Sixty brief activations contain repeats over an eight-by-eight grid.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory-extreme",
+      "seed": 4820006,
+      "difficulty": 98,
+      "variant": 6,
+      "artifact": "public/evaluations/grid-activation-discovery-v3/gax-b5ad62dc1e9af7d1.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 22500,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeats count only once.",
+      "answerOptions": [
+        "21",
+        "23",
+        "24",
+        "22"
+      ],
+      "expectedAnswer": "23",
+      "sha256": "418739cee7987e0d996aa66d37567a90d3cee9fd6308e4a287cfc06c6850bb44",
+      "parameters": {
+        "uniqueCount": 23,
+        "visualVariant": 6
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions and return exactly one allowed count."
+    },
+    {
+      "candidateId": "gax-ae7679a6e67122aa",
+      "cellId": "cell-sixty-activations-eight-by-eight",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Sixty brief activations contain repeats over an eight-by-eight grid.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory-extreme",
+      "seed": 4820007,
+      "difficulty": 98,
+      "variant": 7,
+      "artifact": "public/evaluations/grid-activation-discovery-v3/gax-ae7679a6e67122aa.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 22500,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeats count only once.",
+      "answerOptions": [
+        "23",
+        "21",
+        "24",
+        "22"
+      ],
+      "expectedAnswer": "24",
+      "sha256": "c1fa41cb083e179d1c65a863be0ffaf0e776c0beb328c866a562d551fe83fd13",
+      "parameters": {
+        "uniqueCount": 24,
+        "visualVariant": 7
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions and return exactly one allowed count."
+    }
+  ]
+}

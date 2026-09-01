@@ -37,7 +37,12 @@ holdouts finish.
 | Sequential identity permutation            | observed holdout pass       |        2/16 |             1/16 |        5/16 | 16/16, 13/16, 16/16               | unverified |
 | Identity-conditioned selective flash count | observed holdout pass       |        2/16 |             4/16 |        2/16 | 16/16 each                        | unverified |
 | Temporal set cardinality                   | harder holdout queued       |         3/8 |              4/8 | 4/7 + pending | persistent-set control generated  | unverified |
-| Dynamic route turn integration             | harder holdout queued       |         2/8 |              2/8 | 4/7 + pending | running-counter control generated | unverified |
+| Dynamic route turn integration             | observed holdout pass       |        3/16 |             4/16 |        3/16 | 16/16, 16/16, 15/15               | unverified |
+| Dynamic conservation ledger                | holdout running             |        4/16 |             2/16 |      pending | visible-ledger control running     | unverified |
+| Latent dynamic-state accumulation           | replacement holdout running |        5/16 |     5/13 so far |      pending | state-visible control running      | unverified |
+| Temporal target-transition counting         | frozen holdout running      |         2/8 |              3/8 | 1/7 + pending | running-counter control generated  | unverified |
+| Temporal set cardinality (60-event cell)    | replacement screen running  |         1/8 |          pending |         2/8 | confirmatory control pending       | unverified |
+| Occurrence-indexed successor binding        | screen running              |     pending |          pending |     pending | indexed-marker control planned     | unverified |
 
 ## Rejected or superseded searches
 
@@ -58,6 +63,7 @@ holdouts finish.
 | Duration comparison                      | Gemini reached 4/8 and Kimi solved 7/8.                                                                                                      |
 | Periodic anomaly detection               | Kimi solved 5/8.                                                                                                                             |
 | Synchrony detection                      | Qwen solved 8/8.                                                                                                                             |
+| Repeated 180 ms phase lag                | Gemini and Kimi solved 8/8; Qwen solved all 6 substantive cases, with two parser-pending outputs excluded.                                  |
 | Latent dynamic-state accumulation        | Discovery failed to replicate: Qwen solved 12/16 native holdout cases.                                                                       |
 | Latent causal set propagation            | Gemini solved 8/8 and Kimi solved 7/8 discovery cases.                                                                                       |
 | Hidden causal activation transfer        | Qwen solved 6/8 discovery cases.                                                                                                             |
