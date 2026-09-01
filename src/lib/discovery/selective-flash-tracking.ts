@@ -95,6 +95,25 @@ export function createSelectiveFlashDiscoveryGrid() {
   return candidates;
 }
 
+export function createSelectiveFlashHoldout() {
+  const candidates: SelectiveFlashCandidate[] = [];
+  let seed = 1_610_000;
+  for (let replicate = 0; replicate < 4; replicate += 1) {
+    for (const answer of selectiveFlashAnswers) {
+      candidates.push(createSelectiveFlashCandidate({
+        split: "confirmatory",
+        seed: seed++,
+        targetCount: Number(answer),
+        flashDurationMs: 133,
+        distractorObjects: 4,
+        videoDurationMs: 12_000,
+        visualVariant: 300 + replicate * 4 + Number(answer),
+      }));
+    }
+  }
+  return candidates;
+}
+
 function flashStarts(candidate: SelectiveFlashCandidate, object: number) {
   const random = rng(candidate.seed + object * 7919 + candidate.parameters.visualVariant * 101);
   const count = object === 0 ? candidate.parameters.targetCount : 7 + ((candidate.seed + object) % 6);
@@ -115,8 +134,8 @@ function isFlashing(candidate: SelectiveFlashCandidate, object: number, timestam
   );
 }
 
-export function renderSelectiveFlashSvg(candidate: SelectiveFlashCandidate, timestampMs: number) {
-  const objects = candidate.parameters.distractorObjects + 1;
+export function renderSelectiveFlashSvg(candidate: SelectiveFlashCandidate, timestampMs: number, control = false) {
+  const objects = control ? 1 : candidate.parameters.distractorObjects + 1;
   const t = timestampMs / candidate.parameters.videoDurationMs;
   const disks = Array.from({ length: objects }, (_, object) => {
     const phase = (object / objects) * Math.PI * 2 + candidate.parameters.visualVariant * 0.17;
@@ -124,8 +143,10 @@ export function renderSelectiveFlashSvg(candidate: SelectiveFlashCandidate, time
     // modulo wrap would introduce at the edge of the canvas.
     const x = 90 + (0.5 - 0.5 * Math.cos((t * 2.7 + object / objects) * Math.PI * 2)) * 540;
     const y = 240 + Math.sin(t * Math.PI * (4 + (object % 2)) + phase) * (120 - object * 7);
-    const flashing = isFlashing(candidate, object, timestampMs);
+    const flashing = control
+      ? flashStarts(candidate, object).some((start) => timestampMs >= start && timestampMs < start + 500)
+      : isFlashing(candidate, object, timestampMs);
     return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="26" fill="${flashing ? "#f4d934" : "#555b58"}" stroke="${object === 0 ? "#e23e31" : "#f7f5ef"}" stroke-width="${object === 0 ? 8 : 3}"/>${object === 0 ? `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="34" fill="none" stroke="#e23e31" stroke-width="2"/>` : ""}`;
   }).join("");
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480"><rect width="100%" height="100%" fill="#e9e6dc"/><text x="24" y="38" font-family="Arial" font-size="22" font-weight="700">COUNT YELLOW FLASHES ON THE RED-RINGED DISK ONLY</text><path d="M0 420H720" stroke="#252928" opacity=".16"/>${disks}</svg>`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480"><rect width="100%" height="100%" fill="#e9e6dc"/><text x="24" y="38" font-family="Arial" font-size="22" font-weight="700">${control ? "CONTROL: COUNT THE LONG FLASHES" : "COUNT YELLOW FLASHES ON THE RED-RINGED DISK ONLY"}</text><path d="M0 420H720" stroke="#252928" opacity=".16"/>${disks}</svg>`;
 }

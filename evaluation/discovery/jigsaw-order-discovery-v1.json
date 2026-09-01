@@ -1,0 +1,184 @@
+{
+  "id": "jigsaw-order-discovery-v1",
+  "generatorVersion": "jigsaw-strip-order-v1",
+  "status": "discovery-only",
+  "hypothesis": "Models fail exact global reconstruction from local cross-boundary visual continuity.",
+  "candidates": [
+    {
+      "id": "jo-2377ec3b226796a6",
+      "cellId": "cell-adff7d34d89cb496",
+      "split": "discovery",
+      "seed": 2000000,
+      "failureModeId": "visual-jigsaw-order-reconstruction",
+      "question": "Which row arranges the strips so every colored track continues smoothly across all boundaries?",
+      "answerOptions": [
+        "D",
+        "C",
+        "A",
+        "B"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "strips": 8,
+        "curves": 5,
+        "correctRow": 0,
+        "visualVariant": 0
+      }
+    },
+    {
+      "id": "jo-5b23606b2201431e",
+      "cellId": "cell-adff7d34d89cb496",
+      "split": "discovery",
+      "seed": 2000001,
+      "failureModeId": "visual-jigsaw-order-reconstruction",
+      "question": "Which row arranges the strips so every colored track continues smoothly across all boundaries?",
+      "answerOptions": [
+        "D",
+        "C",
+        "A",
+        "B"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "strips": 8,
+        "curves": 5,
+        "correctRow": 1,
+        "visualVariant": 1
+      }
+    },
+    {
+      "id": "jo-568f54dc8832c0cc",
+      "cellId": "cell-adff7d34d89cb496",
+      "split": "discovery",
+      "seed": 2000002,
+      "failureModeId": "visual-jigsaw-order-reconstruction",
+      "question": "Which row arranges the strips so every colored track continues smoothly across all boundaries?",
+      "answerOptions": [
+        "C",
+        "D",
+        "A",
+        "B"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "strips": 8,
+        "curves": 5,
+        "correctRow": 2,
+        "visualVariant": 2
+      }
+    },
+    {
+      "id": "jo-9cd85629dbd46c46",
+      "cellId": "cell-adff7d34d89cb496",
+      "split": "discovery",
+      "seed": 2000003,
+      "failureModeId": "visual-jigsaw-order-reconstruction",
+      "question": "Which row arranges the strips so every colored track continues smoothly across all boundaries?",
+      "answerOptions": [
+        "C",
+        "A",
+        "D",
+        "B"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "strips": 8,
+        "curves": 5,
+        "correctRow": 3,
+        "visualVariant": 3
+      }
+    },
+    {
+      "id": "jo-d742cc246cd867f8",
+      "cellId": "cell-adff7d34d89cb496",
+      "split": "discovery",
+      "seed": 2000004,
+      "failureModeId": "visual-jigsaw-order-reconstruction",
+      "question": "Which row arranges the strips so every colored track continues smoothly across all boundaries?",
+      "answerOptions": [
+        "C",
+        "A",
+        "D",
+        "B"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "strips": 8,
+        "curves": 5,
+        "correctRow": 0,
+        "visualVariant": 4
+      }
+    },
+    {
+      "id": "jo-1cf598429db32fe6",
+      "cellId": "cell-adff7d34d89cb496",
+      "split": "discovery",
+      "seed": 2000005,
+      "failureModeId": "visual-jigsaw-order-reconstruction",
+      "question": "Which row arranges the strips so every colored track continues smoothly across all boundaries?",
+      "answerOptions": [
+        "A",
+        "C",
+        "D",
+        "B"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "strips": 8,
+        "curves": 5,
+        "correctRow": 1,
+        "visualVariant": 5
+      }
+    },
+    {
+      "id": "jo-963e1da105468400",
+      "cellId": "cell-adff7d34d89cb496",
+      "split": "discovery",
+      "seed": 2000006,
+      "failureModeId": "visual-jigsaw-order-reconstruction",
+      "question": "Which row arranges the strips so every colored track continues smoothly across all boundaries?",
+      "answerOptions": [
+        "A",
+        "C",
+        "D",
+        "B"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "strips": 8,
+        "curves": 5,
+        "correctRow": 2,
+        "visualVariant": 6
+      }
+    },
+    {
+      "id": "jo-8d4bb44ccd5a68c9",
+      "cellId": "cell-adff7d34d89cb496",
+      "split": "discovery",
+      "seed": 2000007,
+      "failureModeId": "visual-jigsaw-order-reconstruction",
+      "question": "Which row arranges the strips so every colored track continues smoothly across all boundaries?",
+      "answerOptions": [
+        "D",
+        "A",
+        "C",
+        "B"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "strips": 8,
+        "curves": 5,
+        "correctRow": 3,
+        "visualVariant": 7
+      }
+    }
+  ]
+}

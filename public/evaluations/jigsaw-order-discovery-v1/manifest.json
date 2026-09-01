@@ -1,0 +1,257 @@
+{
+  "id": "jigsaw-order-discovery-v1",
+  "planSha256": "e5712bac96c9a490cf584c6e78fd56cf544baeb19fde5d91a85fd98a1ba590fb",
+  "generatorVersion": "jigsaw-strip-order-v1",
+  "renderer": "jigsaw-strip-order-svg-v1",
+  "fps": 0,
+  "cases": [
+    {
+      "candidateId": "jo-2377ec3b226796a6",
+      "cellId": "cell-adff7d34d89cb496",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four orderings of the same eight strips; only one preserves every track boundary.",
+      "failureModeId": "visual-jigsaw-order-reconstruction",
+      "generator": "jigsaw-order",
+      "seed": 2000000,
+      "difficulty": 82,
+      "variant": 0,
+      "artifact": "public/evaluations/jigsaw-order-discovery-v1/jo-2377ec3b226796a6.png",
+      "mimeType": "image/png",
+      "question": "Which row arranges the strips so every colored track continues smoothly across all boundaries?",
+      "answerOptions": [
+        "D",
+        "C",
+        "A",
+        "B"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "c46823208f932393378eaeff46a6511971db729e0a22837a7b42679b61cefba8",
+      "parameters": {
+        "strips": 8,
+        "curves": 5,
+        "correctRow": 0,
+        "visualVariant": 0
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Inspect cross-boundary visual continuity and return exactly one allowed row letter without explanation."
+    },
+    {
+      "candidateId": "jo-5b23606b2201431e",
+      "cellId": "cell-adff7d34d89cb496",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four orderings of the same eight strips; only one preserves every track boundary.",
+      "failureModeId": "visual-jigsaw-order-reconstruction",
+      "generator": "jigsaw-order",
+      "seed": 2000001,
+      "difficulty": 82,
+      "variant": 1,
+      "artifact": "public/evaluations/jigsaw-order-discovery-v1/jo-5b23606b2201431e.png",
+      "mimeType": "image/png",
+      "question": "Which row arranges the strips so every colored track continues smoothly across all boundaries?",
+      "answerOptions": [
+        "D",
+        "C",
+        "A",
+        "B"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "28b7c0291a110d9877bcbe0d48b241a8a08f274c5a54eea7e5030d6dd008172c",
+      "parameters": {
+        "strips": 8,
+        "curves": 5,
+        "correctRow": 1,
+        "visualVariant": 1
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Inspect cross-boundary visual continuity and return exactly one allowed row letter without explanation."
+    },
+    {
+      "candidateId": "jo-568f54dc8832c0cc",
+      "cellId": "cell-adff7d34d89cb496",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four orderings of the same eight strips; only one preserves every track boundary.",
+      "failureModeId": "visual-jigsaw-order-reconstruction",
+      "generator": "jigsaw-order",
+      "seed": 2000002,
+      "difficulty": 82,
+      "variant": 2,
+      "artifact": "public/evaluations/jigsaw-order-discovery-v1/jo-568f54dc8832c0cc.png",
+      "mimeType": "image/png",
+      "question": "Which row arranges the strips so every colored track continues smoothly across all boundaries?",
+      "answerOptions": [
+        "C",
+        "D",
+        "A",
+        "B"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "a2eaef026b33e063cfd62d3c3b0512021657491bf92db6ffb475b1c70bd55b74",
+      "parameters": {
+        "strips": 8,
+        "curves": 5,
+        "correctRow": 2,
+        "visualVariant": 2
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Inspect cross-boundary visual continuity and return exactly one allowed row letter without explanation."
+    },
+    {
+      "candidateId": "jo-9cd85629dbd46c46",
+      "cellId": "cell-adff7d34d89cb496",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four orderings of the same eight strips; only one preserves every track boundary.",
+      "failureModeId": "visual-jigsaw-order-reconstruction",
+      "generator": "jigsaw-order",
+      "seed": 2000003,
+      "difficulty": 82,
+      "variant": 3,
+      "artifact": "public/evaluations/jigsaw-order-discovery-v1/jo-9cd85629dbd46c46.png",
+      "mimeType": "image/png",
+      "question": "Which row arranges the strips so every colored track continues smoothly across all boundaries?",
+      "answerOptions": [
+        "C",
+        "A",
+        "D",
+        "B"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "ddb335cce8f6ce9e162cda0e53430780c4cfe8a09a9974fb25a9225938e36231",
+      "parameters": {
+        "strips": 8,
+        "curves": 5,
+        "correctRow": 3,
+        "visualVariant": 3
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Inspect cross-boundary visual continuity and return exactly one allowed row letter without explanation."
+    },
+    {
+      "candidateId": "jo-d742cc246cd867f8",
+      "cellId": "cell-adff7d34d89cb496",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four orderings of the same eight strips; only one preserves every track boundary.",
+      "failureModeId": "visual-jigsaw-order-reconstruction",
+      "generator": "jigsaw-order",
+      "seed": 2000004,
+      "difficulty": 82,
+      "variant": 4,
+      "artifact": "public/evaluations/jigsaw-order-discovery-v1/jo-d742cc246cd867f8.png",
+      "mimeType": "image/png",
+      "question": "Which row arranges the strips so every colored track continues smoothly across all boundaries?",
+      "answerOptions": [
+        "C",
+        "A",
+        "D",
+        "B"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "bcd7acc142686ceb098151d97a3d933336ed3b6154b7cc32f4962b9d2fa446ca",
+      "parameters": {
+        "strips": 8,
+        "curves": 5,
+        "correctRow": 0,
+        "visualVariant": 4
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Inspect cross-boundary visual continuity and return exactly one allowed row letter without explanation."
+    },
+    {
+      "candidateId": "jo-1cf598429db32fe6",
+      "cellId": "cell-adff7d34d89cb496",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four orderings of the same eight strips; only one preserves every track boundary.",
+      "failureModeId": "visual-jigsaw-order-reconstruction",
+      "generator": "jigsaw-order",
+      "seed": 2000005,
+      "difficulty": 82,
+      "variant": 5,
+      "artifact": "public/evaluations/jigsaw-order-discovery-v1/jo-1cf598429db32fe6.png",
+      "mimeType": "image/png",
+      "question": "Which row arranges the strips so every colored track continues smoothly across all boundaries?",
+      "answerOptions": [
+        "A",
+        "C",
+        "D",
+        "B"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "82e23c3bd39c4cc6d07083139a0083fb9fe98c3b2e35b97b96a21b8de8d9926f",
+      "parameters": {
+        "strips": 8,
+        "curves": 5,
+        "correctRow": 1,
+        "visualVariant": 5
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Inspect cross-boundary visual continuity and return exactly one allowed row letter without explanation."
+    },
+    {
+      "candidateId": "jo-963e1da105468400",
+      "cellId": "cell-adff7d34d89cb496",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four orderings of the same eight strips; only one preserves every track boundary.",
+      "failureModeId": "visual-jigsaw-order-reconstruction",
+      "generator": "jigsaw-order",
+      "seed": 2000006,
+      "difficulty": 82,
+      "variant": 6,
+      "artifact": "public/evaluations/jigsaw-order-discovery-v1/jo-963e1da105468400.png",
+      "mimeType": "image/png",
+      "question": "Which row arranges the strips so every colored track continues smoothly across all boundaries?",
+      "answerOptions": [
+        "A",
+        "C",
+        "D",
+        "B"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "d7cdd3498e67088ceabfb7caa214a666ad4570a453ca51c8d510b53644c65cbd",
+      "parameters": {
+        "strips": 8,
+        "curves": 5,
+        "correctRow": 2,
+        "visualVariant": 6
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Inspect cross-boundary visual continuity and return exactly one allowed row letter without explanation."
+    },
+    {
+      "candidateId": "jo-8d4bb44ccd5a68c9",
+      "cellId": "cell-adff7d34d89cb496",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four orderings of the same eight strips; only one preserves every track boundary.",
+      "failureModeId": "visual-jigsaw-order-reconstruction",
+      "generator": "jigsaw-order",
+      "seed": 2000007,
+      "difficulty": 82,
+      "variant": 7,
+      "artifact": "public/evaluations/jigsaw-order-discovery-v1/jo-8d4bb44ccd5a68c9.png",
+      "mimeType": "image/png",
+      "question": "Which row arranges the strips so every colored track continues smoothly across all boundaries?",
+      "answerOptions": [
+        "D",
+        "A",
+        "C",
+        "B"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "f1638de294ff6f2dc8ea96f9e36567c368f70b4c51ab0d9e62dc2b787113b7cc",
+      "parameters": {
+        "strips": 8,
+        "curves": 5,
+        "correctRow": 3,
+        "visualVariant": 7
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Inspect cross-boundary visual continuity and return exactly one allowed row letter without explanation."
+    }
+  ]
+}

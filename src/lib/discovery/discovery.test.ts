@@ -51,6 +51,7 @@ import {
 } from "./change-localization";
 import {
   createSelectiveFlashDiscoveryGrid,
+  createSelectiveFlashHoldout,
   renderSelectiveFlashSvg,
   targetFlashStarts,
 } from "./selective-flash-tracking";
@@ -69,8 +70,24 @@ import {
   renderTemporalRelationSvg,
   temporalRelationEvents,
 } from "./temporal-relations";
+import {
+  createJigsawOrderDiscoveryGrid,
+  jigsawRowOrders,
+  renderJigsawOrderSvg,
+} from "./jigsaw-order";
 
 describe("adaptive multimodal discovery", () => {
+  it("balances jigsaw rows and gives only one identity strip order", () => {
+    const candidates = createJigsawOrderDiscoveryGrid();
+    expect(candidates).toHaveLength(8);
+    for (const candidate of candidates) {
+      const identity = Array.from({ length: candidate.parameters.strips }, (_, index) => index);
+      const rows = jigsawRowOrders(candidate);
+      expect(rows.filter((row) => row.every((value, index) => value === identity[index]))).toHaveLength(1);
+      expect(renderJigsawOrderSvg(candidate)).toContain("WHICH ROW");
+    }
+  });
+
   it("balances duration and synchrony diagnostics with exact event oracles", () => {
     for (const task of ["duration-comparison", "synchrony-detection"] as const) {
       const candidates = createTemporalRelationGrid(task);
@@ -132,6 +149,14 @@ describe("adaptive multimodal discovery", () => {
       expect(renderSelectiveFlashSvg(candidate, 0)).toBe(renderSelectiveFlashSvg(candidate, 0));
       expect(renderSelectiveFlashSvg(candidate, starts[0]!)).toContain("#f4d934");
     }
+  });
+
+  it("reserves balanced unseen selective-flash confirmation seeds", () => {
+    const holdout = createSelectiveFlashHoldout();
+    expect(holdout).toHaveLength(16);
+    expect(holdout.every((candidate) => candidate.seed >= 1_610_000)).toBe(true);
+    for (const answer of ["8", "9", "10", "11"])
+      expect(holdout.filter((candidate) => candidate.expectedAnswer === answer)).toHaveLength(4);
   });
 
   it("balances dense change locations across all four quadrants", () => {
