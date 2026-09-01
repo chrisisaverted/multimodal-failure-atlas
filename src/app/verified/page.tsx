@@ -9,6 +9,7 @@ import {
   weakestControlRate,
 } from "@/lib/admitted-analysis";
 import { failureModesById } from "@/lib/catalogue";
+import { FailureLandscape } from "@/components/failure-landscape";
 
 export const metadata: Metadata = { title: "Verified failures" };
 
@@ -65,6 +66,8 @@ export default function VerifiedPage() {
           parser failures, and output exhaustion never count as failures.
         </p>
       </div>
+
+      <FailureLandscape families={admittedEvidence.families} />
 
       <div className="verified-list">
         {ordered.map((family, index) => {

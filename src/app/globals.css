@@ -2635,6 +2635,114 @@ select {
   border: 1px solid var(--line);
   background: color-mix(in srgb, var(--citron) 17%, var(--paper));
 }
+.failure-landscape {
+  margin: 0 0 95px;
+  padding: 34px;
+  border: 1px solid var(--ink);
+  background: var(--paper-light);
+}
+.failure-landscape figcaption {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 24px;
+}
+.failure-landscape h2 {
+  max-width: 760px;
+  margin: 9px 0 0;
+  font: clamp(38px, 4vw, 57px)/0.98 var(--serif);
+  font-weight: 420;
+  letter-spacing: -0.035em;
+}
+.failure-landscape svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+.landscape-scroll {
+  overflow-x: auto;
+}
+.landscape-frame {
+  fill: rgba(23, 25, 21, 0.015);
+  stroke: var(--ink);
+}
+.landscape-grid {
+  stroke: var(--line);
+  stroke-width: 1;
+}
+.landscape-guide {
+  stroke: var(--ink);
+  stroke-width: 1;
+  stroke-dasharray: 5 5;
+}
+.landscape-tick,
+.landscape-guide-label,
+.landscape-axis-title {
+  fill: var(--muted);
+  font: 11px var(--sans);
+}
+.landscape-axis-title {
+  fill: var(--ink);
+  font-size: 12px;
+}
+.landscape-guide-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.landscape-point {
+  stroke: var(--paper-light);
+  stroke-width: 2;
+  transition: r 0.15s ease;
+}
+.landscape-point.image,
+.landscape-legend i.image {
+  fill: var(--cobalt);
+  background: var(--cobalt);
+}
+.landscape-point.video,
+.landscape-legend i.video {
+  fill: var(--vermillion);
+  background: var(--vermillion);
+}
+.failure-landscape a:hover .landscape-point,
+.failure-landscape a:focus .landscape-point {
+  r: 17px;
+  stroke: var(--ink);
+}
+.landscape-point-label {
+  pointer-events: none;
+  fill: white;
+  font: 9px var(--sans);
+  font-weight: 700;
+}
+.landscape-legend {
+  display: flex;
+  gap: 18px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.landscape-legend span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.landscape-legend i {
+  width: 10px;
+  height: 10px;
+  display: block;
+  border-radius: 50%;
+}
+.failure-landscape > p {
+  max-width: 780px;
+  margin: 22px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.55;
+}
 .verified-rule svg {
   flex: 0 0 auto;
 }
@@ -3298,6 +3406,16 @@ select {
   }
   .verified-stat-grid {
     grid-template-columns: 1fr 1fr;
+  }
+  .failure-landscape {
+    padding: 22px 14px;
+  }
+  .failure-landscape figcaption {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .failure-landscape svg {
+    min-width: 720px;
   }
   .verified-stat-grid article:nth-child(2) {
     border-right: 0;
