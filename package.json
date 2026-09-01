@@ -67,6 +67,8 @@
     "generate:paper-folding": "tsx scripts/materialize-paper-folding.ts",
     "plan:periodic-anomaly": "tsx scripts/plan-periodic-anomaly.ts",
     "generate:periodic-anomaly": "tsx scripts/materialize-periodic-anomaly.ts",
+    "plan:cube-stack": "tsx scripts/plan-cube-stack.ts",
+    "generate:cube-stack": "tsx scripts/materialize-cube-stack.ts",
     "publish:adaptive": "tsx scripts/publish-adaptive-results.ts",
     "publish:precision-wire": "tsx scripts/publish-precision-wire-results.ts",
     "evaluate": "tsx scripts/evaluate.ts",

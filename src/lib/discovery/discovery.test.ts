@@ -81,8 +81,20 @@ import { createMotDiscoveryGrid, motEndpointAssignment, renderMotSvg } from "./m
 import { createDynamicStateDiscoveryGrid, dynamicFinalState, renderDynamicStateSvg } from "./dynamic-state";
 import { createPaperFoldingDiscoveryGrid, paperOptionPatterns, unfoldPunches } from "./paper-folding";
 import { createPeriodicAnomalyGrid, periodicLaneStarts } from "./periodic-anomaly";
+import { createCubeStackGrid, cubeHeights } from "./cube-stack";
 
 describe("adaptive multimodal discovery", () => {
+  it("constructs exact adjacent cube totals with one target panel", () => {
+    const candidates = createCubeStackGrid();
+    expect(candidates).toHaveLength(8);
+    for (const candidate of candidates) {
+      const totals = Array.from({ length: 4 }, (_, panel) =>
+        cubeHeights(candidate, panel).reduce((sum, height) => sum + height, 0),
+      );
+      expect(totals.filter((total) => total === candidate.parameters.targetTotal)).toHaveLength(1);
+    }
+  });
+
   it("balances exactly one omitted beat across periodic lanes", () => {
     const candidates = createPeriodicAnomalyGrid();
     expect(candidates).toHaveLength(8);

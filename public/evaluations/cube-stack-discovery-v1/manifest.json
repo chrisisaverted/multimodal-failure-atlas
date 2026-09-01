@@ -1,0 +1,249 @@
+{
+  "id": "cube-stack-discovery-v1",
+  "planSha256": "4d0a5fa94fb5820266a14df3d0dfed4ee6494e8b2fa64eae99215609bfdcc1f5",
+  "generatorVersion": "cube-stack-v1",
+  "renderer": "cube-stack-isometric-svg-v1",
+  "fps": 0,
+  "cases": [
+    {
+      "candidateId": "cs-85b9edc557de91e0",
+      "cellId": "cell-3x3-hidden-support-cubes",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four solid 3×3 column structures have adjacent total cube counts.",
+      "failureModeId": "occluded-3d-cube-enumeration",
+      "generator": "cube-stack",
+      "seed": 2600000,
+      "difficulty": 77,
+      "variant": 0,
+      "artifact": "public/evaluations/cube-stack-discovery-v1/cs-85b9edc557de91e0.png",
+      "mimeType": "image/png",
+      "question": "Which structure contains exactly 28 unit cubes? Every column is solid down to the floor.",
+      "answerOptions": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "a809c836458d0e869f7b0e62c269a27fe1cf9263f7ba50ece0f1261efcee6c17",
+      "parameters": {
+        "correctPanel": 0,
+        "targetTotal": 28,
+        "visualVariant": 0
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count all unit cubes, including hidden cubes supporting higher cubes. Return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "cs-03834668cf205778",
+      "cellId": "cell-3x3-hidden-support-cubes",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four solid 3×3 column structures have adjacent total cube counts.",
+      "failureModeId": "occluded-3d-cube-enumeration",
+      "generator": "cube-stack",
+      "seed": 2600001,
+      "difficulty": 77,
+      "variant": 1,
+      "artifact": "public/evaluations/cube-stack-discovery-v1/cs-03834668cf205778.png",
+      "mimeType": "image/png",
+      "question": "Which structure contains exactly 28 unit cubes? Every column is solid down to the floor.",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "ae59681b997fd4991f3d70e16d142fe4534a9ffe8daff8aedd62a4d016819602",
+      "parameters": {
+        "correctPanel": 1,
+        "targetTotal": 28,
+        "visualVariant": 1
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count all unit cubes, including hidden cubes supporting higher cubes. Return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "cs-40902f8d3182257d",
+      "cellId": "cell-3x3-hidden-support-cubes",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four solid 3×3 column structures have adjacent total cube counts.",
+      "failureModeId": "occluded-3d-cube-enumeration",
+      "generator": "cube-stack",
+      "seed": 2600002,
+      "difficulty": 77,
+      "variant": 2,
+      "artifact": "public/evaluations/cube-stack-discovery-v1/cs-40902f8d3182257d.png",
+      "mimeType": "image/png",
+      "question": "Which structure contains exactly 28 unit cubes? Every column is solid down to the floor.",
+      "answerOptions": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "a06865738dd18cf9b4d5cedfd6ed5d5bbf9987e240a3f86a8da11015777baa83",
+      "parameters": {
+        "correctPanel": 2,
+        "targetTotal": 28,
+        "visualVariant": 2
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count all unit cubes, including hidden cubes supporting higher cubes. Return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "cs-d8c33bf695d96fef",
+      "cellId": "cell-3x3-hidden-support-cubes",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four solid 3×3 column structures have adjacent total cube counts.",
+      "failureModeId": "occluded-3d-cube-enumeration",
+      "generator": "cube-stack",
+      "seed": 2600003,
+      "difficulty": 77,
+      "variant": 3,
+      "artifact": "public/evaluations/cube-stack-discovery-v1/cs-d8c33bf695d96fef.png",
+      "mimeType": "image/png",
+      "question": "Which structure contains exactly 28 unit cubes? Every column is solid down to the floor.",
+      "answerOptions": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "240a5d6e774053c15bd38a82c9f8d419f2d2a20509a48f1b87151ae3a43f5b05",
+      "parameters": {
+        "correctPanel": 3,
+        "targetTotal": 28,
+        "visualVariant": 3
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count all unit cubes, including hidden cubes supporting higher cubes. Return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "cs-f78d531635051d48",
+      "cellId": "cell-3x3-hidden-support-cubes",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four solid 3×3 column structures have adjacent total cube counts.",
+      "failureModeId": "occluded-3d-cube-enumeration",
+      "generator": "cube-stack",
+      "seed": 2600004,
+      "difficulty": 77,
+      "variant": 4,
+      "artifact": "public/evaluations/cube-stack-discovery-v1/cs-f78d531635051d48.png",
+      "mimeType": "image/png",
+      "question": "Which structure contains exactly 29 unit cubes? Every column is solid down to the floor.",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "45aef5bd0523259f7cd7727c276b0ce0927b2e15d14cbea7def01817d94f4887",
+      "parameters": {
+        "correctPanel": 0,
+        "targetTotal": 29,
+        "visualVariant": 4
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count all unit cubes, including hidden cubes supporting higher cubes. Return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "cs-bba86389f027322c",
+      "cellId": "cell-3x3-hidden-support-cubes",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four solid 3×3 column structures have adjacent total cube counts.",
+      "failureModeId": "occluded-3d-cube-enumeration",
+      "generator": "cube-stack",
+      "seed": 2600005,
+      "difficulty": 77,
+      "variant": 5,
+      "artifact": "public/evaluations/cube-stack-discovery-v1/cs-bba86389f027322c.png",
+      "mimeType": "image/png",
+      "question": "Which structure contains exactly 29 unit cubes? Every column is solid down to the floor.",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "c361d4a93f97d47996e50b8fc0379463fb8a06e7f2adb4d758b62eacc46e86c4",
+      "parameters": {
+        "correctPanel": 1,
+        "targetTotal": 29,
+        "visualVariant": 5
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count all unit cubes, including hidden cubes supporting higher cubes. Return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "cs-ccf5d7f719aba196",
+      "cellId": "cell-3x3-hidden-support-cubes",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four solid 3×3 column structures have adjacent total cube counts.",
+      "failureModeId": "occluded-3d-cube-enumeration",
+      "generator": "cube-stack",
+      "seed": 2600006,
+      "difficulty": 77,
+      "variant": 6,
+      "artifact": "public/evaluations/cube-stack-discovery-v1/cs-ccf5d7f719aba196.png",
+      "mimeType": "image/png",
+      "question": "Which structure contains exactly 29 unit cubes? Every column is solid down to the floor.",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "5cdbc5779ba90bfdcd0966c43db2f963559de46a4d17e02baf8909e06fe317e5",
+      "parameters": {
+        "correctPanel": 2,
+        "targetTotal": 29,
+        "visualVariant": 6
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count all unit cubes, including hidden cubes supporting higher cubes. Return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "cs-c3859246f8cac134",
+      "cellId": "cell-3x3-hidden-support-cubes",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four solid 3×3 column structures have adjacent total cube counts.",
+      "failureModeId": "occluded-3d-cube-enumeration",
+      "generator": "cube-stack",
+      "seed": 2600007,
+      "difficulty": 77,
+      "variant": 7,
+      "artifact": "public/evaluations/cube-stack-discovery-v1/cs-c3859246f8cac134.png",
+      "mimeType": "image/png",
+      "question": "Which structure contains exactly 29 unit cubes? Every column is solid down to the floor.",
+      "answerOptions": [
+        "C",
+        "B",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "5efaa335e95ab94147f57d780c3521ed2fbef9d7c2f27d17dfda2e3ebf67dbd1",
+      "parameters": {
+        "correctPanel": 3,
+        "targetTotal": 29,
+        "visualVariant": 7
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count all unit cubes, including hidden cubes supporting higher cubes. Return exactly one allowed panel letter."
+    }
+  ]
+}

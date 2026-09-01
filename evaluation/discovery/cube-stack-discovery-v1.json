@@ -1,0 +1,176 @@
+{
+  "id": "cube-stack-discovery-v1",
+  "generatorVersion": "cube-stack-v1",
+  "status": "discovery-only",
+  "hypothesis": "Models fail exact enumeration when 3D occlusion requires inferring hidden support cubes.",
+  "candidates": [
+    {
+      "id": "cs-85b9edc557de91e0",
+      "cellId": "cell-3x3-hidden-support-cubes",
+      "split": "discovery",
+      "seed": 2600000,
+      "failureModeId": "occluded-3d-cube-enumeration",
+      "question": "Which structure contains exactly 28 unit cubes? Every column is solid down to the floor.",
+      "answerOptions": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 0,
+        "targetTotal": 28,
+        "visualVariant": 0
+      }
+    },
+    {
+      "id": "cs-03834668cf205778",
+      "cellId": "cell-3x3-hidden-support-cubes",
+      "split": "discovery",
+      "seed": 2600001,
+      "failureModeId": "occluded-3d-cube-enumeration",
+      "question": "Which structure contains exactly 28 unit cubes? Every column is solid down to the floor.",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 1,
+        "targetTotal": 28,
+        "visualVariant": 1
+      }
+    },
+    {
+      "id": "cs-40902f8d3182257d",
+      "cellId": "cell-3x3-hidden-support-cubes",
+      "split": "discovery",
+      "seed": 2600002,
+      "failureModeId": "occluded-3d-cube-enumeration",
+      "question": "Which structure contains exactly 28 unit cubes? Every column is solid down to the floor.",
+      "answerOptions": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 2,
+        "targetTotal": 28,
+        "visualVariant": 2
+      }
+    },
+    {
+      "id": "cs-d8c33bf695d96fef",
+      "cellId": "cell-3x3-hidden-support-cubes",
+      "split": "discovery",
+      "seed": 2600003,
+      "failureModeId": "occluded-3d-cube-enumeration",
+      "question": "Which structure contains exactly 28 unit cubes? Every column is solid down to the floor.",
+      "answerOptions": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 3,
+        "targetTotal": 28,
+        "visualVariant": 3
+      }
+    },
+    {
+      "id": "cs-f78d531635051d48",
+      "cellId": "cell-3x3-hidden-support-cubes",
+      "split": "discovery",
+      "seed": 2600004,
+      "failureModeId": "occluded-3d-cube-enumeration",
+      "question": "Which structure contains exactly 29 unit cubes? Every column is solid down to the floor.",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 0,
+        "targetTotal": 29,
+        "visualVariant": 4
+      }
+    },
+    {
+      "id": "cs-bba86389f027322c",
+      "cellId": "cell-3x3-hidden-support-cubes",
+      "split": "discovery",
+      "seed": 2600005,
+      "failureModeId": "occluded-3d-cube-enumeration",
+      "question": "Which structure contains exactly 29 unit cubes? Every column is solid down to the floor.",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 1,
+        "targetTotal": 29,
+        "visualVariant": 5
+      }
+    },
+    {
+      "id": "cs-ccf5d7f719aba196",
+      "cellId": "cell-3x3-hidden-support-cubes",
+      "split": "discovery",
+      "seed": 2600006,
+      "failureModeId": "occluded-3d-cube-enumeration",
+      "question": "Which structure contains exactly 29 unit cubes? Every column is solid down to the floor.",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 2,
+        "targetTotal": 29,
+        "visualVariant": 6
+      }
+    },
+    {
+      "id": "cs-c3859246f8cac134",
+      "cellId": "cell-3x3-hidden-support-cubes",
+      "split": "discovery",
+      "seed": 2600007,
+      "failureModeId": "occluded-3d-cube-enumeration",
+      "question": "Which structure contains exactly 29 unit cubes? Every column is solid down to the floor.",
+      "answerOptions": [
+        "C",
+        "B",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 3,
+        "targetTotal": 29,
+        "visualVariant": 7
+      }
+    }
+  ]
+}
