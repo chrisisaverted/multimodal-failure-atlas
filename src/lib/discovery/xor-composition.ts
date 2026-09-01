@@ -1,17 +1,150 @@
 import { z } from "zod";
 import { sha256 } from "../evaluation/hash";
 export const xorCompositionVersion = "visual-xor-composition-v1";
+export const xorCompositionHardVersion = "visual-xor-composition-v2";
 export const xorAnswers = ["A", "B", "C", "D"] as const;
-export const xorCandidateSchema = z.object({ id: z.string(), cellId: z.string(), split: z.enum(["discovery", "confirmatory"]), seed: z.number().int().nonnegative(), failureModeId: z.literal("dense-visual-boolean-composition"), question: z.string(), answerOptions: z.array(z.enum(xorAnswers)).length(4), expectedAnswer: z.enum(xorAnswers), humanSolvability: z.literal("unverified"), parameters: z.object({ size: z.literal(14), correctPanel: z.number().int().min(0).max(3), flipsPerDistractor: z.literal(4), visualVariant: z.number().int().nonnegative() }) });
+export const xorCandidateSchema = z.object({
+  id: z.string(),
+  cellId: z.string(),
+  split: z.enum(["discovery", "confirmatory"]),
+  seed: z.number().int().nonnegative(),
+  failureModeId: z.literal("dense-visual-boolean-composition"),
+  question: z.string(),
+  answerOptions: z.array(z.enum(xorAnswers)).length(4),
+  expectedAnswer: z.enum(xorAnswers),
+  humanSolvability: z.literal("unverified"),
+  parameters: z.object({
+    size: z.union([z.literal(14), z.literal(20)]),
+    correctPanel: z.number().int().min(0).max(3),
+    flipsPerDistractor: z.union([z.literal(1), z.literal(4)]),
+    visualVariant: z.number().int().nonnegative(),
+  }),
+});
 export type XorCandidate = z.infer<typeof xorCandidateSchema>;
-function rng(seed: number) { let state = seed >>> 0; return () => ((state = (Math.imul(state, 1664525) + 1013904223) >>> 0) / 0x1_0000_0000); }
-function shuffled<T>(values: readonly T[], random: () => number) { const out = [...values]; for (let i = out.length - 1; i > 0; i--) { const j = Math.floor(random() * (i + 1)); [out[i], out[j]] = [out[j]!, out[i]!]; } return out; }
+function rng(seed: number) {
+  let state = seed >>> 0;
+  return () => (state = (Math.imul(state, 1664525) + 1013904223) >>> 0) / 0x1_0000_0000;
+}
+function shuffled<T>(values: readonly T[], random: () => number) {
+  const out = [...values];
+  for (let i = out.length - 1; i > 0; i--) {
+    const j = Math.floor(random() * (i + 1));
+    [out[i], out[j]] = [out[j]!, out[i]!];
+  }
+  return out;
+}
 export function xorMatrices(candidate: XorCandidate) {
-  const random = rng(candidate.seed + 211), n = candidate.parameters.size, a = Array.from({ length: n }, () => Array.from({ length: n }, () => random() < 0.5)), b = Array.from({ length: n }, () => Array.from({ length: n }, () => random() < 0.5)), truth = a.map((row, y) => row.map((value, x) => value !== b[y]![x])), panels = Array.from({ length: 4 }, () => truth.map(row => [...row]));
-  for (let panel = 0; panel < 4; panel++) if (panel !== candidate.parameters.correctPanel) { const used = new Set<number>(); while (used.size < candidate.parameters.flipsPerDistractor) used.add(Math.floor(random() * n * n)); for (const index of used) panels[panel]![Math.floor(index / n)]![index % n] = !panels[panel]![Math.floor(index / n)]![index % n]; }
+  const random = rng(candidate.seed + 211),
+    n = candidate.parameters.size,
+    a = Array.from({ length: n }, () => Array.from({ length: n }, () => random() < 0.5)),
+    b = Array.from({ length: n }, () => Array.from({ length: n }, () => random() < 0.5)),
+    truth = a.map((row, y) => row.map((value, x) => value !== b[y]![x])),
+    panels = Array.from({ length: 4 }, () => truth.map((row) => [...row]));
+  for (let panel = 0; panel < 4; panel++)
+    if (panel !== candidate.parameters.correctPanel) {
+      const used = new Set<number>();
+      while (used.size < candidate.parameters.flipsPerDistractor) used.add(Math.floor(random() * n * n));
+      for (const index of used)
+        panels[panel]![Math.floor(index / n)]![index % n] =
+          !panels[panel]![Math.floor(index / n)]![index % n];
+    }
   return { a, b, truth, panels };
 }
-export function createXorCandidate(input: { split: "discovery" | "confirmatory"; seed: number; correctPanel: number; visualVariant?: number }) { const visualVariant = input.visualVariant ?? input.seed % 197; return xorCandidateSchema.parse({ id: `xc-${sha256(JSON.stringify({ ...input, visualVariant })).slice(0, 16)}`, cellId: "cell-14x14-xor-four-bit-distractors", split: input.split, seed: input.seed, failureModeId: "dense-visual-boolean-composition", question: "Which option is the cell-by-cell XOR of INPUT 1 and INPUT 2? A cell is black iff exactly one corresponding input cell is black.", answerOptions: shuffled(xorAnswers, rng(input.seed + 31)), expectedAnswer: xorAnswers[input.correctPanel], humanSolvability: "unverified", parameters: { size: 14, correctPanel: input.correctPanel, flipsPerDistractor: 4, visualVariant } }); }
-export function createXorGrid() { const out: XorCandidate[] = []; let seed = 3_300_000; for (let rep = 0; rep < 2; rep++) for (let correctPanel = 0; correctPanel < 4; correctPanel++) out.push(createXorCandidate({ split: "discovery", seed: seed++, correctPanel, visualVariant: rep * 4 + correctPanel })); return out; }
-function gridSvg(matrix: readonly (readonly boolean[])[], x: number, y: number, cell: number, label: string) { const rects = matrix.flatMap((row, yy) => row.map((value, xx) => value ? `<rect x="${x + xx * cell}" y="${y + yy * cell}" width="${cell}" height="${cell}" fill="#202322"/>` : "")).join(""); return `<text x="${x + matrix.length * cell / 2}" y="${y - 10}" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700">${label}</text><rect x="${x}" y="${y}" width="${matrix.length * cell}" height="${matrix.length * cell}" fill="#fffef9" stroke="#202322" stroke-width="3"/>${rects}`; }
-export function renderXorSvg(candidate: XorCandidate, oracle = false) { const { a, b, panels } = xorMatrices(candidate), cell = 9, inputs = gridSvg(a, 75, 120, cell, "INPUT 1") + `<text x="245" y="190" text-anchor="middle" font-family="Arial" font-size="34" font-weight="700">XOR</text>` + gridSvg(b, 305, 120, cell, "INPUT 2"), positions = [[75, 385], [285, 385], [495, 385], [705, 385]], options = panels.map((panel, i) => `${oracle && i === candidate.parameters.correctPanel ? `<rect x="${positions[i]![0] - 12}" y="350" width="150" height="180" rx="10" fill="none" stroke="#1d9b5f" stroke-width="8"/>` : ""}${gridSvg(panel, positions[i]![0], positions[i]![1], cell, xorAnswers[i]!)}`).join(""); return `<svg xmlns="http://www.w3.org/2000/svg" width="900" height="590"><rect width="100%" height="100%" fill="#eeeae0"/><text x="450" y="48" text-anchor="middle" font-family="Arial" font-size="28" font-weight="700">CELL-BY-CELL XOR</text><text x="450" y="82" text-anchor="middle" font-family="Arial" font-size="17" fill="#59605d">Black exactly when the two corresponding input cells differ</text>${inputs}<text x="665" y="190" text-anchor="middle" font-family="Arial" font-size="22" font-weight="700">WHICH OUTPUT?</text>${options}</svg>`; }
+export function createXorCandidate(input: {
+  split: "discovery" | "confirmatory";
+  seed: number;
+  correctPanel: number;
+  visualVariant?: number;
+}) {
+  const visualVariant = input.visualVariant ?? input.seed % 197;
+  return xorCandidateSchema.parse({
+    id: `xc-${sha256(JSON.stringify({ ...input, visualVariant })).slice(0, 16)}`,
+    cellId: "cell-14x14-xor-four-bit-distractors",
+    split: input.split,
+    seed: input.seed,
+    failureModeId: "dense-visual-boolean-composition",
+    question:
+      "Which option is the cell-by-cell XOR of INPUT 1 and INPUT 2? A cell is black iff exactly one corresponding input cell is black.",
+    answerOptions: shuffled(xorAnswers, rng(input.seed + 31)),
+    expectedAnswer: xorAnswers[input.correctPanel],
+    humanSolvability: "unverified",
+    parameters: { size: 14, correctPanel: input.correctPanel, flipsPerDistractor: 4, visualVariant },
+  });
+}
+export function createXorGrid() {
+  const out: XorCandidate[] = [];
+  let seed = 3_300_000;
+  for (let rep = 0; rep < 2; rep++)
+    for (let correctPanel = 0; correctPanel < 4; correctPanel++)
+      out.push(
+        createXorCandidate({
+          split: "discovery",
+          seed: seed++,
+          correctPanel,
+          visualVariant: rep * 4 + correctPanel,
+        }),
+      );
+  return out;
+}
+export function createXorHardCandidate(input: {
+  split: "discovery" | "confirmatory";
+  seed: number;
+  correctPanel: number;
+  visualVariant?: number;
+}) {
+  const visualVariant = input.visualVariant ?? input.seed % 281;
+  return xorCandidateSchema.parse({
+    id: `xch-${sha256(JSON.stringify({ ...input, visualVariant })).slice(0, 16)}`,
+    cellId: "cell-20x20-xor-one-bit-distractors",
+    split: input.split,
+    seed: input.seed,
+    failureModeId: "dense-visual-boolean-composition",
+    question:
+      "Which option is the EXACT cell-by-cell XOR of INPUT 1 and INPUT 2? Each wrong option differs from the true XOR in only ONE cell.",
+    answerOptions: shuffled(xorAnswers, rng(input.seed + 31)),
+    expectedAnswer: xorAnswers[input.correctPanel],
+    humanSolvability: "unverified",
+    parameters: { size: 20, correctPanel: input.correctPanel, flipsPerDistractor: 1, visualVariant },
+  });
+}
+export function createXorHardGrid() {
+  const out: XorCandidate[] = [];
+  let seed = 4_700_000;
+  for (let rep = 0; rep < 2; rep++)
+    for (let correctPanel = 0; correctPanel < 4; correctPanel++)
+      out.push(createXorHardCandidate({ split: "discovery", seed: seed++, correctPanel, visualVariant: rep * 4 + correctPanel }));
+  return out;
+}
+function gridSvg(matrix: readonly (readonly boolean[])[], x: number, y: number, cell: number, label: string) {
+  const rects = matrix
+    .flatMap((row, yy) =>
+      row.map((value, xx) =>
+        value
+          ? `<rect x="${x + xx * cell}" y="${y + yy * cell}" width="${cell}" height="${cell}" fill="#202322"/>`
+          : "",
+      ),
+    )
+    .join("");
+  return `<text x="${x + (matrix.length * cell) / 2}" y="${y - 10}" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700">${label}</text><rect x="${x}" y="${y}" width="${matrix.length * cell}" height="${matrix.length * cell}" fill="#fffef9" stroke="#202322" stroke-width="3"/>${rects}`;
+}
+export function renderXorSvg(candidate: XorCandidate, oracle = false) {
+  const { a, b, panels } = xorMatrices(candidate),
+    cell = candidate.parameters.size === 20 ? 7 : 9,
+    inputs =
+      gridSvg(a, 75, 120, cell, "INPUT 1") +
+      `<text x="245" y="190" text-anchor="middle" font-family="Arial" font-size="34" font-weight="700">XOR</text>` +
+      gridSvg(b, 305, 120, cell, "INPUT 2"),
+    positions = [
+      [75, 385],
+      [285, 385],
+      [495, 385],
+      [705, 385],
+    ],
+    options = panels
+      .map(
+        (panel, i) =>
+          `${oracle && i === candidate.parameters.correctPanel ? `<rect x="${positions[i]![0] - 12}" y="350" width="${candidate.parameters.size * cell + 24}" height="${candidate.parameters.size * cell + 54}" rx="10" fill="none" stroke="#1d9b5f" stroke-width="8"/>` : ""}${gridSvg(panel, positions[i]![0], positions[i]![1], cell, xorAnswers[i]!)}`,
+      )
+      .join("");
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="900" height="590"><rect width="100%" height="100%" fill="#eeeae0"/><text x="450" y="48" text-anchor="middle" font-family="Arial" font-size="28" font-weight="700">CELL-BY-CELL XOR</text><text x="450" y="82" text-anchor="middle" font-family="Arial" font-size="17" fill="#59605d">Black exactly when the two corresponding input cells differ</text>${inputs}<text x="665" y="190" text-anchor="middle" font-family="Arial" font-size="22" font-weight="700">WHICH OUTPUT?</text>${options}</svg>`;
+}

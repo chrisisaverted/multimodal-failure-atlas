@@ -90,7 +90,7 @@ import { applyConservation, createConservationGrid } from "./conservation-ledger
 import { createSymmetryGrid, createSymmetryHoldout, symmetryMatrix } from "./symmetry-search";
 import { applySwaps, createSwapTrackingGrid } from "./swap-tracking";
 import { coflashPairCounts, createCoflashGrid, createCoflashHardGrid } from "./coflash-counting";
-import { createXorGrid, xorMatrices } from "./xor-composition";
+import { createXorGrid, createXorHardGrid, xorMatrices } from "./xor-composition";
 import { applyInfection, createInfectionGrid } from "./infection-spread";
 import { createEulerGrid, graphDegrees } from "./euler-graph";
 import { createOrdinalGrid, createOrdinalHardGrid, ordinalNthSuccessor, ordinalSuccessor } from "./ordinal-successor";
@@ -104,6 +104,15 @@ import { createZoneEntryGrid } from "./zone-entry-count";
 import { countTargetPair, createPairCollisionGrid } from "./pair-collision-count";
 
 describe("adaptive multimodal discovery", () => {
+  it("creates one exact 20x20 XOR and three one-bit near misses", () => {
+    for (const candidate of createXorHardGrid()) {
+      const { truth, panels } = xorMatrices(candidate);
+      const distances = panels.map(panel => panel.flatMap((row, y) => row.map((value, x): number => value === truth[y]![x] ? 0 : 1)).reduce((sum, value) => sum + value, 0));
+      expect(distances[candidate.parameters.correctPanel]).toBe(0);
+      expect(distances.filter(value => value === 1)).toHaveLength(3);
+    }
+  });
+
   it("binds relational collision streams to balanced target-pair counts", () => {
     for (const candidate of createPairCollisionGrid()) expect(countTargetPair(candidate.parameters.events)).toBe(candidate.parameters.targetCount);
   });

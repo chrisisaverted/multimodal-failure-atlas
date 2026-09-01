@@ -1,0 +1,257 @@
+{
+  "id": "xor-composition-discovery-v2",
+  "planSha256": "2a0badafc919fb9812e113f006024cbbdeebe51a61c71ce41dcbd69adeba59a6",
+  "generatorVersion": "visual-xor-composition-v2",
+  "renderer": "xor-composition-svg-raster-v1",
+  "fps": 0,
+  "cases": [
+    {
+      "candidateId": "xch-d2e470e4010a7db3",
+      "cellId": "cell-20x20-xor-one-bit-distractors",
+      "split": "discovery",
+      "condition": "native",
+      "interventionDescription": "Two dense binary inputs and four near-matching output candidates are shown together.",
+      "failureModeId": "dense-visual-boolean-composition",
+      "generator": "xor-composition",
+      "seed": 4700000,
+      "difficulty": 98,
+      "variant": 0,
+      "artifact": "public/evaluations/xor-composition-discovery-v2/xch-d2e470e4010a7db3.png",
+      "mimeType": "image/png",
+      "question": "Which option is the EXACT cell-by-cell XOR of INPUT 1 and INPUT 2? Each wrong option differs from the true XOR in only ONE cell.",
+      "answerOptions": [
+        "A",
+        "B",
+        "D",
+        "C"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "df119c71d6f0fbe52a2255b3182a8adf264fe53f016513977194f3ae3299f8e1",
+      "parameters": {
+        "size": 20,
+        "correctPanel": 0,
+        "flipsPerDistractor": 1,
+        "visualVariant": 0
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Apply XOR independently to every aligned cell. Return exactly one option letter and do not explain."
+    },
+    {
+      "candidateId": "xch-88f7545dde123e51",
+      "cellId": "cell-20x20-xor-one-bit-distractors",
+      "split": "discovery",
+      "condition": "native",
+      "interventionDescription": "Two dense binary inputs and four near-matching output candidates are shown together.",
+      "failureModeId": "dense-visual-boolean-composition",
+      "generator": "xor-composition",
+      "seed": 4700001,
+      "difficulty": 98,
+      "variant": 1,
+      "artifact": "public/evaluations/xor-composition-discovery-v2/xch-88f7545dde123e51.png",
+      "mimeType": "image/png",
+      "question": "Which option is the EXACT cell-by-cell XOR of INPUT 1 and INPUT 2? Each wrong option differs from the true XOR in only ONE cell.",
+      "answerOptions": [
+        "A",
+        "B",
+        "D",
+        "C"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "4d422f4deeb5e3ee71916a0cc08efb37b371424e24e24eba4a4cfd6bde966c5f",
+      "parameters": {
+        "size": 20,
+        "correctPanel": 1,
+        "flipsPerDistractor": 1,
+        "visualVariant": 1
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Apply XOR independently to every aligned cell. Return exactly one option letter and do not explain."
+    },
+    {
+      "candidateId": "xch-c0897bb1b5e26ad6",
+      "cellId": "cell-20x20-xor-one-bit-distractors",
+      "split": "discovery",
+      "condition": "native",
+      "interventionDescription": "Two dense binary inputs and four near-matching output candidates are shown together.",
+      "failureModeId": "dense-visual-boolean-composition",
+      "generator": "xor-composition",
+      "seed": 4700002,
+      "difficulty": 98,
+      "variant": 2,
+      "artifact": "public/evaluations/xor-composition-discovery-v2/xch-c0897bb1b5e26ad6.png",
+      "mimeType": "image/png",
+      "question": "Which option is the EXACT cell-by-cell XOR of INPUT 1 and INPUT 2? Each wrong option differs from the true XOR in only ONE cell.",
+      "answerOptions": [
+        "B",
+        "A",
+        "D",
+        "C"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "e8e3f0b58b9547c144d5d7df29a99e001529757862fab03b196fa1bb447c9627",
+      "parameters": {
+        "size": 20,
+        "correctPanel": 2,
+        "flipsPerDistractor": 1,
+        "visualVariant": 2
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Apply XOR independently to every aligned cell. Return exactly one option letter and do not explain."
+    },
+    {
+      "candidateId": "xch-b1839d076b99cdf7",
+      "cellId": "cell-20x20-xor-one-bit-distractors",
+      "split": "discovery",
+      "condition": "native",
+      "interventionDescription": "Two dense binary inputs and four near-matching output candidates are shown together.",
+      "failureModeId": "dense-visual-boolean-composition",
+      "generator": "xor-composition",
+      "seed": 4700003,
+      "difficulty": 98,
+      "variant": 3,
+      "artifact": "public/evaluations/xor-composition-discovery-v2/xch-b1839d076b99cdf7.png",
+      "mimeType": "image/png",
+      "question": "Which option is the EXACT cell-by-cell XOR of INPUT 1 and INPUT 2? Each wrong option differs from the true XOR in only ONE cell.",
+      "answerOptions": [
+        "D",
+        "B",
+        "A",
+        "C"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "13bcf519774ba00a7946a9b22e5b06104e643e99d24c6ad7dc2c17f869e8b764",
+      "parameters": {
+        "size": 20,
+        "correctPanel": 3,
+        "flipsPerDistractor": 1,
+        "visualVariant": 3
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Apply XOR independently to every aligned cell. Return exactly one option letter and do not explain."
+    },
+    {
+      "candidateId": "xch-95099888fa3f4525",
+      "cellId": "cell-20x20-xor-one-bit-distractors",
+      "split": "discovery",
+      "condition": "native",
+      "interventionDescription": "Two dense binary inputs and four near-matching output candidates are shown together.",
+      "failureModeId": "dense-visual-boolean-composition",
+      "generator": "xor-composition",
+      "seed": 4700004,
+      "difficulty": 98,
+      "variant": 4,
+      "artifact": "public/evaluations/xor-composition-discovery-v2/xch-95099888fa3f4525.png",
+      "mimeType": "image/png",
+      "question": "Which option is the EXACT cell-by-cell XOR of INPUT 1 and INPUT 2? Each wrong option differs from the true XOR in only ONE cell.",
+      "answerOptions": [
+        "D",
+        "B",
+        "A",
+        "C"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "a2411d0458c8f5860ebf521edc88fd726613f82a7121cde22b3fc2889644adfb",
+      "parameters": {
+        "size": 20,
+        "correctPanel": 0,
+        "flipsPerDistractor": 1,
+        "visualVariant": 4
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Apply XOR independently to every aligned cell. Return exactly one option letter and do not explain."
+    },
+    {
+      "candidateId": "xch-a16c204dba79b42e",
+      "cellId": "cell-20x20-xor-one-bit-distractors",
+      "split": "discovery",
+      "condition": "native",
+      "interventionDescription": "Two dense binary inputs and four near-matching output candidates are shown together.",
+      "failureModeId": "dense-visual-boolean-composition",
+      "generator": "xor-composition",
+      "seed": 4700005,
+      "difficulty": 98,
+      "variant": 5,
+      "artifact": "public/evaluations/xor-composition-discovery-v2/xch-a16c204dba79b42e.png",
+      "mimeType": "image/png",
+      "question": "Which option is the EXACT cell-by-cell XOR of INPUT 1 and INPUT 2? Each wrong option differs from the true XOR in only ONE cell.",
+      "answerOptions": [
+        "B",
+        "D",
+        "A",
+        "C"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "671b4fc394a44d1202f5d7de362600d0e60334693f8672570ef50e99336b30dd",
+      "parameters": {
+        "size": 20,
+        "correctPanel": 1,
+        "flipsPerDistractor": 1,
+        "visualVariant": 5
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Apply XOR independently to every aligned cell. Return exactly one option letter and do not explain."
+    },
+    {
+      "candidateId": "xch-94e2548ea72703b1",
+      "cellId": "cell-20x20-xor-one-bit-distractors",
+      "split": "discovery",
+      "condition": "native",
+      "interventionDescription": "Two dense binary inputs and four near-matching output candidates are shown together.",
+      "failureModeId": "dense-visual-boolean-composition",
+      "generator": "xor-composition",
+      "seed": 4700006,
+      "difficulty": 98,
+      "variant": 6,
+      "artifact": "public/evaluations/xor-composition-discovery-v2/xch-94e2548ea72703b1.png",
+      "mimeType": "image/png",
+      "question": "Which option is the EXACT cell-by-cell XOR of INPUT 1 and INPUT 2? Each wrong option differs from the true XOR in only ONE cell.",
+      "answerOptions": [
+        "B",
+        "D",
+        "A",
+        "C"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "e1a72484144c2fe1c171a90ba2a118c526e2c2c37e1147f5613c0a059c7be598",
+      "parameters": {
+        "size": 20,
+        "correctPanel": 2,
+        "flipsPerDistractor": 1,
+        "visualVariant": 6
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Apply XOR independently to every aligned cell. Return exactly one option letter and do not explain."
+    },
+    {
+      "candidateId": "xch-2cfd1a274d7a7bfe",
+      "cellId": "cell-20x20-xor-one-bit-distractors",
+      "split": "discovery",
+      "condition": "native",
+      "interventionDescription": "Two dense binary inputs and four near-matching output candidates are shown together.",
+      "failureModeId": "dense-visual-boolean-composition",
+      "generator": "xor-composition",
+      "seed": 4700007,
+      "difficulty": 98,
+      "variant": 7,
+      "artifact": "public/evaluations/xor-composition-discovery-v2/xch-2cfd1a274d7a7bfe.png",
+      "mimeType": "image/png",
+      "question": "Which option is the EXACT cell-by-cell XOR of INPUT 1 and INPUT 2? Each wrong option differs from the true XOR in only ONE cell.",
+      "answerOptions": [
+        "A",
+        "D",
+        "B",
+        "C"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "e07b689622057ecddb8974214a45eecd2af8872eb2631203b0b7a2d4f8f79f23",
+      "parameters": {
+        "size": 20,
+        "correctPanel": 3,
+        "flipsPerDistractor": 1,
+        "visualVariant": 7
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Apply XOR independently to every aligned cell. Return exactly one option letter and do not explain."
+    }
+  ]
+}
