@@ -132,6 +132,8 @@
     "plan:pair-collision": "tsx scripts/plan-pair-collision.ts",
     "generate:pair-collision": "tsx scripts/materialize-pair-collision.ts",
     "freeze:pair-collision": "tsx scripts/freeze-pair-collision.ts",
+    "plan:pair-collision:hard": "tsx scripts/plan-pair-collision-hard.ts",
+    "generate:pair-collision:hard": "tsx scripts/materialize-pair-collision-hard.ts",
     "plan:reversal-count": "tsx scripts/plan-reversal-count.ts",
     "generate:reversal-count": "tsx scripts/materialize-reversal-count.ts",
     "plan:grid-activation": "tsx scripts/plan-grid-activation.ts",

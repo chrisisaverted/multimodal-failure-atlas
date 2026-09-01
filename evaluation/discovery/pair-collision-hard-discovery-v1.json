@@ -1,0 +1,1267 @@
+{
+  "id": "pair-collision-hard-discovery-v1",
+  "generatorVersion": "identity-pair-collision-count-hard-v1",
+  "status": "discovery-only",
+  "frozenAt": "2026-09-01T12:14:00.000Z",
+  "hypothesis": "Variable target-pair binding, 32 collision events, and 12 single-target near misses will push the externally borderline Seed route below 50% while preserving explicit human-readable identities.",
+  "selectionRule": "Promote only if Gemini, Qwen, Kimi, Seed, and MiMo each provide eight substantive answers and score strictly below 4/8; the 16-case holdout is already reserved.",
+  "difficultyContract": "Every case has 32 events at 520 ms/event, 12 near misses containing exactly one target identity, adjacent answers 7-10, and a target pair printed throughout the video.",
+  "candidates": [
+    {
+      "id": "pch-68c15bc2de220e8d",
+      "cellId": "cell-thirty-two-variable-target-pair-collisions",
+      "split": "discovery",
+      "seed": 5200000,
+      "failureModeId": "identity-pair-interaction-counting",
+      "question": "How many collision events involve the specific pair A AND B together? Ignore collisions involving any other pairing.",
+      "answerOptions": [
+        "8",
+        "10",
+        "7",
+        "9"
+      ],
+      "expectedAnswer": "7",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetCount": 7,
+        "targetPair": [
+          0,
+          1
+        ],
+        "events": [
+          [
+            3,
+            5
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        "singleTargetDistractors": 12,
+        "videoDurationMs": 18000,
+        "fps": 30,
+        "visualVariant": 200
+      }
+    },
+    {
+      "id": "pch-d29a1411e8ba2a37",
+      "cellId": "cell-thirty-two-variable-target-pair-collisions",
+      "split": "discovery",
+      "seed": 5200001,
+      "failureModeId": "identity-pair-interaction-counting",
+      "question": "How many collision events involve the specific pair C AND E together? Ignore collisions involving any other pairing.",
+      "answerOptions": [
+        "10",
+        "7",
+        "8",
+        "9"
+      ],
+      "expectedAnswer": "8",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetCount": 8,
+        "targetPair": [
+          2,
+          4
+        ],
+        "events": [
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            5
+          ]
+        ],
+        "singleTargetDistractors": 12,
+        "videoDurationMs": 18000,
+        "fps": 30,
+        "visualVariant": 201
+      }
+    },
+    {
+      "id": "pch-cf7dde6b8562a256",
+      "cellId": "cell-thirty-two-variable-target-pair-collisions",
+      "split": "discovery",
+      "seed": 5200002,
+      "failureModeId": "identity-pair-interaction-counting",
+      "question": "How many collision events involve the specific pair D AND F together? Ignore collisions involving any other pairing.",
+      "answerOptions": [
+        "7",
+        "10",
+        "8",
+        "9"
+      ],
+      "expectedAnswer": "9",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetCount": 9,
+        "targetPair": [
+          3,
+          5
+        ],
+        "events": [
+          [
+            3,
+            5
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "singleTargetDistractors": 12,
+        "videoDurationMs": 18000,
+        "fps": 30,
+        "visualVariant": 202
+      }
+    },
+    {
+      "id": "pch-966bfc6c3e9856c0",
+      "cellId": "cell-thirty-two-variable-target-pair-collisions",
+      "split": "discovery",
+      "seed": 5200003,
+      "failureModeId": "identity-pair-interaction-counting",
+      "question": "How many collision events involve the specific pair B AND E together? Ignore collisions involving any other pairing.",
+      "answerOptions": [
+        "7",
+        "10",
+        "8",
+        "9"
+      ],
+      "expectedAnswer": "10",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetCount": 10,
+        "targetPair": [
+          1,
+          4
+        ],
+        "events": [
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "singleTargetDistractors": 12,
+        "videoDurationMs": 18000,
+        "fps": 30,
+        "visualVariant": 203
+      }
+    },
+    {
+      "id": "pch-ccc92d3d7a33f81a",
+      "cellId": "cell-thirty-two-variable-target-pair-collisions",
+      "split": "discovery",
+      "seed": 5200004,
+      "failureModeId": "identity-pair-interaction-counting",
+      "question": "How many collision events involve the specific pair A AND F together? Ignore collisions involving any other pairing.",
+      "answerOptions": [
+        "10",
+        "7",
+        "8",
+        "9"
+      ],
+      "expectedAnswer": "7",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetCount": 7,
+        "targetPair": [
+          0,
+          5
+        ],
+        "events": [
+          [
+            1,
+            5
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            5
+          ]
+        ],
+        "singleTargetDistractors": 12,
+        "videoDurationMs": 18000,
+        "fps": 30,
+        "visualVariant": 204
+      }
+    },
+    {
+      "id": "pch-d572bc4b845c3d60",
+      "cellId": "cell-thirty-two-variable-target-pair-collisions",
+      "split": "discovery",
+      "seed": 5200005,
+      "failureModeId": "identity-pair-interaction-counting",
+      "question": "How many collision events involve the specific pair C AND D together? Ignore collisions involving any other pairing.",
+      "answerOptions": [
+        "7",
+        "8",
+        "10",
+        "9"
+      ],
+      "expectedAnswer": "8",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetCount": 8,
+        "targetPair": [
+          2,
+          3
+        ],
+        "events": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        "singleTargetDistractors": 12,
+        "videoDurationMs": 18000,
+        "fps": 30,
+        "visualVariant": 205
+      }
+    },
+    {
+      "id": "pch-06f3985e6586bc0f",
+      "cellId": "cell-thirty-two-variable-target-pair-collisions",
+      "split": "discovery",
+      "seed": 5200006,
+      "failureModeId": "identity-pair-interaction-counting",
+      "question": "How many collision events involve the specific pair B AND F together? Ignore collisions involving any other pairing.",
+      "answerOptions": [
+        "7",
+        "8",
+        "10",
+        "9"
+      ],
+      "expectedAnswer": "9",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetCount": 9,
+        "targetPair": [
+          1,
+          5
+        ],
+        "events": [
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "singleTargetDistractors": 12,
+        "videoDurationMs": 18000,
+        "fps": 30,
+        "visualVariant": 206
+      }
+    },
+    {
+      "id": "pch-12094997b4d7fcf5",
+      "cellId": "cell-thirty-two-variable-target-pair-collisions",
+      "split": "discovery",
+      "seed": 5200007,
+      "failureModeId": "identity-pair-interaction-counting",
+      "question": "How many collision events involve the specific pair A AND D together? Ignore collisions involving any other pairing.",
+      "answerOptions": [
+        "8",
+        "7",
+        "10",
+        "9"
+      ],
+      "expectedAnswer": "10",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetCount": 10,
+        "targetPair": [
+          0,
+          3
+        ],
+        "events": [
+          [
+            4,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "singleTargetDistractors": 12,
+        "videoDurationMs": 18000,
+        "fps": 30,
+        "visualVariant": 207
+      }
+    }
+  ]
+}

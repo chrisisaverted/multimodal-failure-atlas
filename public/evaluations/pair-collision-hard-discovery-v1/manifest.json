@@ -1,0 +1,1345 @@
+{
+  "id": "pair-collision-hard-discovery-v1",
+  "planSha256": "6a91c41a0b30925a6eb4a9b4cbdc765b2e8eb09e102cd3c2cca4444df36d6574",
+  "generatorVersion": "identity-pair-collision-count-hard-v1",
+  "renderer": "pair-collision-hard-svg-raster-v1",
+  "fps": 30,
+  "cases": [
+    {
+      "candidateId": "pch-68c15bc2de220e8d",
+      "cellId": "cell-thirty-two-variable-target-pair-collisions",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Thirty-two pairwise collisions include 12 near misses containing exactly one target identity.",
+      "failureModeId": "identity-pair-interaction-counting",
+      "generator": "pair-collision-hard",
+      "seed": 5200000,
+      "difficulty": 96,
+      "variant": 0,
+      "artifact": "public/evaluations/pair-collision-hard-discovery-v1/pch-68c15bc2de220e8d.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18000,
+      "question": "How many collision events involve the specific pair A AND B together? Ignore collisions involving any other pairing.",
+      "answerOptions": [
+        "8",
+        "10",
+        "7",
+        "9"
+      ],
+      "expectedAnswer": "7",
+      "sha256": "8206ffcb2d57dbddf6aae32370a53734016cd1843b1ab1316d97f1a79d1e5af3",
+      "parameters": {
+        "targetCount": 7,
+        "targetPair": [
+          0,
+          1
+        ],
+        "events": [
+          [
+            3,
+            5
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        "singleTargetDistractors": 12,
+        "videoDurationMs": 18000,
+        "fps": 30,
+        "visualVariant": 200
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the case-specific target pair and count only collisions containing both identities together. Return exactly one allowed count."
+    },
+    {
+      "candidateId": "pch-d29a1411e8ba2a37",
+      "cellId": "cell-thirty-two-variable-target-pair-collisions",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Thirty-two pairwise collisions include 12 near misses containing exactly one target identity.",
+      "failureModeId": "identity-pair-interaction-counting",
+      "generator": "pair-collision-hard",
+      "seed": 5200001,
+      "difficulty": 96,
+      "variant": 1,
+      "artifact": "public/evaluations/pair-collision-hard-discovery-v1/pch-d29a1411e8ba2a37.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18000,
+      "question": "How many collision events involve the specific pair C AND E together? Ignore collisions involving any other pairing.",
+      "answerOptions": [
+        "10",
+        "7",
+        "8",
+        "9"
+      ],
+      "expectedAnswer": "8",
+      "sha256": "bdf2c41b9db15d954a4c361ae646258820db1aa80741f983e17342ba72b66263",
+      "parameters": {
+        "targetCount": 8,
+        "targetPair": [
+          2,
+          4
+        ],
+        "events": [
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            5
+          ]
+        ],
+        "singleTargetDistractors": 12,
+        "videoDurationMs": 18000,
+        "fps": 30,
+        "visualVariant": 201
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the case-specific target pair and count only collisions containing both identities together. Return exactly one allowed count."
+    },
+    {
+      "candidateId": "pch-cf7dde6b8562a256",
+      "cellId": "cell-thirty-two-variable-target-pair-collisions",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Thirty-two pairwise collisions include 12 near misses containing exactly one target identity.",
+      "failureModeId": "identity-pair-interaction-counting",
+      "generator": "pair-collision-hard",
+      "seed": 5200002,
+      "difficulty": 96,
+      "variant": 2,
+      "artifact": "public/evaluations/pair-collision-hard-discovery-v1/pch-cf7dde6b8562a256.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18000,
+      "question": "How many collision events involve the specific pair D AND F together? Ignore collisions involving any other pairing.",
+      "answerOptions": [
+        "7",
+        "10",
+        "8",
+        "9"
+      ],
+      "expectedAnswer": "9",
+      "sha256": "e7a06e4f6336402e9ab04acdac7d6fd06a4e840df8e07f39802192b57d10d521",
+      "parameters": {
+        "targetCount": 9,
+        "targetPair": [
+          3,
+          5
+        ],
+        "events": [
+          [
+            3,
+            5
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "singleTargetDistractors": 12,
+        "videoDurationMs": 18000,
+        "fps": 30,
+        "visualVariant": 202
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the case-specific target pair and count only collisions containing both identities together. Return exactly one allowed count."
+    },
+    {
+      "candidateId": "pch-966bfc6c3e9856c0",
+      "cellId": "cell-thirty-two-variable-target-pair-collisions",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Thirty-two pairwise collisions include 12 near misses containing exactly one target identity.",
+      "failureModeId": "identity-pair-interaction-counting",
+      "generator": "pair-collision-hard",
+      "seed": 5200003,
+      "difficulty": 96,
+      "variant": 3,
+      "artifact": "public/evaluations/pair-collision-hard-discovery-v1/pch-966bfc6c3e9856c0.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18000,
+      "question": "How many collision events involve the specific pair B AND E together? Ignore collisions involving any other pairing.",
+      "answerOptions": [
+        "7",
+        "10",
+        "8",
+        "9"
+      ],
+      "expectedAnswer": "10",
+      "sha256": "7cd3d8332f5772fd6545ba4859c589286a00265087578a2d27e340bdf648756e",
+      "parameters": {
+        "targetCount": 10,
+        "targetPair": [
+          1,
+          4
+        ],
+        "events": [
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "singleTargetDistractors": 12,
+        "videoDurationMs": 18000,
+        "fps": 30,
+        "visualVariant": 203
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the case-specific target pair and count only collisions containing both identities together. Return exactly one allowed count."
+    },
+    {
+      "candidateId": "pch-ccc92d3d7a33f81a",
+      "cellId": "cell-thirty-two-variable-target-pair-collisions",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Thirty-two pairwise collisions include 12 near misses containing exactly one target identity.",
+      "failureModeId": "identity-pair-interaction-counting",
+      "generator": "pair-collision-hard",
+      "seed": 5200004,
+      "difficulty": 96,
+      "variant": 4,
+      "artifact": "public/evaluations/pair-collision-hard-discovery-v1/pch-ccc92d3d7a33f81a.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18000,
+      "question": "How many collision events involve the specific pair A AND F together? Ignore collisions involving any other pairing.",
+      "answerOptions": [
+        "10",
+        "7",
+        "8",
+        "9"
+      ],
+      "expectedAnswer": "7",
+      "sha256": "c95760ba4305b380783bffd6574cc96f1961feca2321faf2ae4095028e53cfb2",
+      "parameters": {
+        "targetCount": 7,
+        "targetPair": [
+          0,
+          5
+        ],
+        "events": [
+          [
+            1,
+            5
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            5
+          ]
+        ],
+        "singleTargetDistractors": 12,
+        "videoDurationMs": 18000,
+        "fps": 30,
+        "visualVariant": 204
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the case-specific target pair and count only collisions containing both identities together. Return exactly one allowed count."
+    },
+    {
+      "candidateId": "pch-d572bc4b845c3d60",
+      "cellId": "cell-thirty-two-variable-target-pair-collisions",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Thirty-two pairwise collisions include 12 near misses containing exactly one target identity.",
+      "failureModeId": "identity-pair-interaction-counting",
+      "generator": "pair-collision-hard",
+      "seed": 5200005,
+      "difficulty": 96,
+      "variant": 5,
+      "artifact": "public/evaluations/pair-collision-hard-discovery-v1/pch-d572bc4b845c3d60.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18000,
+      "question": "How many collision events involve the specific pair C AND D together? Ignore collisions involving any other pairing.",
+      "answerOptions": [
+        "7",
+        "8",
+        "10",
+        "9"
+      ],
+      "expectedAnswer": "8",
+      "sha256": "ca5c410af79e432a89338b0b9c669ed4f4e18d2700fdbef7913f07a8c1e3340f",
+      "parameters": {
+        "targetCount": 8,
+        "targetPair": [
+          2,
+          3
+        ],
+        "events": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        "singleTargetDistractors": 12,
+        "videoDurationMs": 18000,
+        "fps": 30,
+        "visualVariant": 205
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the case-specific target pair and count only collisions containing both identities together. Return exactly one allowed count."
+    },
+    {
+      "candidateId": "pch-06f3985e6586bc0f",
+      "cellId": "cell-thirty-two-variable-target-pair-collisions",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Thirty-two pairwise collisions include 12 near misses containing exactly one target identity.",
+      "failureModeId": "identity-pair-interaction-counting",
+      "generator": "pair-collision-hard",
+      "seed": 5200006,
+      "difficulty": 96,
+      "variant": 6,
+      "artifact": "public/evaluations/pair-collision-hard-discovery-v1/pch-06f3985e6586bc0f.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18000,
+      "question": "How many collision events involve the specific pair B AND F together? Ignore collisions involving any other pairing.",
+      "answerOptions": [
+        "7",
+        "8",
+        "10",
+        "9"
+      ],
+      "expectedAnswer": "9",
+      "sha256": "bc366962b80b142abda9098839023bb50a8f20a045b62d7543183137c0ed4cc4",
+      "parameters": {
+        "targetCount": 9,
+        "targetPair": [
+          1,
+          5
+        ],
+        "events": [
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "singleTargetDistractors": 12,
+        "videoDurationMs": 18000,
+        "fps": 30,
+        "visualVariant": 206
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the case-specific target pair and count only collisions containing both identities together. Return exactly one allowed count."
+    },
+    {
+      "candidateId": "pch-12094997b4d7fcf5",
+      "cellId": "cell-thirty-two-variable-target-pair-collisions",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Thirty-two pairwise collisions include 12 near misses containing exactly one target identity.",
+      "failureModeId": "identity-pair-interaction-counting",
+      "generator": "pair-collision-hard",
+      "seed": 5200007,
+      "difficulty": 96,
+      "variant": 7,
+      "artifact": "public/evaluations/pair-collision-hard-discovery-v1/pch-12094997b4d7fcf5.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18000,
+      "question": "How many collision events involve the specific pair A AND D together? Ignore collisions involving any other pairing.",
+      "answerOptions": [
+        "8",
+        "7",
+        "10",
+        "9"
+      ],
+      "expectedAnswer": "10",
+      "sha256": "a9b9804cdf860e4f22d5239c1dbae2314e9c9fc0c11daee9c712369b1485b8fa",
+      "parameters": {
+        "targetCount": 10,
+        "targetPair": [
+          0,
+          3
+        ],
+        "events": [
+          [
+            4,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "singleTargetDistractors": 12,
+        "videoDurationMs": 18000,
+        "fps": 30,
+        "visualVariant": 207
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the case-specific target pair and count only collisions containing both identities together. Return exactly one allowed count."
+    }
+  ]
+}
