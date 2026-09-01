@@ -92,7 +92,30 @@ import { createHardDynamicStateHoldout, hardDynamicFinalState } from "./dynamic-
 import { createExtremeGrid, createExtremeGridHoldout } from "./grid-activation-memory-extreme";
 import { createHardGridActivationHoldout, hardUniqueActivationCount } from "./grid-activation-memory-hard";
 import { createIndexedSuccessorGrid, createIndexedSuccessorHoldout, indexedSuccessor } from "./indexed-successor-hard";
-import { countHiddenTrailIntersections, createHiddenTrailGrid } from "./hidden-trail-intersections";
+import {
+  countHiddenTrailIntersections,
+  createHiddenTrailGrid,
+  createHiddenTrailHoldout,
+} from "./hidden-trail-intersections";
+import {
+  createTemporalRunGrid,
+  createTemporalRunHoldout,
+  longestTemporalRun,
+} from "./temporal-run-maximum";
+import {
+  createExtremeIndexedGrid,
+  extremeIndexedSuccessor,
+} from "./indexed-successor-extreme";
+import {
+  createHardTemporalRunGrid,
+  createHardTemporalRunHoldout,
+  longestHardTemporalRun,
+} from "./temporal-run-maximum-hard";
+import {
+  createSignedAccumulatorGrid,
+  createSignedAccumulatorHoldout,
+  signedAccumulatorTotal,
+} from "./signed-accumulator";
 import { createHardParityHoldout, hardParityMatrices, hardParityViolations } from "./parity-matrix-hard";
 import { createHardRouteTurnHoldout, hardCountRouteTurns } from "./route-turn-count-hard";
 import { countTargetTransitions, createTransitionCountGrid, createTransitionCountHoldout } from "./transition-count";
@@ -841,7 +864,15 @@ describe("adaptive multimodal discovery", () => {
       expect(indexedSuccessor(candidate.parameters.sequence)).toBe(candidate.parameters.answerIndex);
     for (const candidate of [...createExtremeGrid(), ...createExtremeGridHoldout()])
       expect(new Set(candidate.parameters.activations).size).toBe(candidate.parameters.uniqueCount);
-    for (const candidate of createHiddenTrailGrid())
+    for (const candidate of [...createHiddenTrailGrid(), ...createHiddenTrailHoldout()])
       expect(countHiddenTrailIntersections(candidate.parameters.path)).toBe(candidate.parameters.intersectionCount);
+    for (const candidate of [...createTemporalRunGrid(), ...createTemporalRunHoldout()])
+      expect(longestTemporalRun(candidate.parameters.sequence)).toBe(candidate.parameters.maximumRun);
+    for (const candidate of createExtremeIndexedGrid())
+      expect(extremeIndexedSuccessor(candidate.parameters.sequence)).toBe(candidate.parameters.answerIndex);
+    for (const candidate of [...createHardTemporalRunGrid(), ...createHardTemporalRunHoldout()])
+      expect(longestHardTemporalRun(candidate.parameters.sequence)).toBe(candidate.parameters.maximumRun);
+    for (const candidate of [...createSignedAccumulatorGrid(), ...createSignedAccumulatorHoldout()])
+      expect(signedAccumulatorTotal(candidate.parameters.events)).toBe(candidate.parameters.finalBalance);
   });
 });

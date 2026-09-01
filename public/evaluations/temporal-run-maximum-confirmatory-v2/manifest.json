@@ -1,0 +1,969 @@
+{
+  "id": "temporal-run-maximum-confirmatory-v2",
+  "planSha256": "ec62c4d0c41635aa02c84e65ef11596369ddf4482029e23f395c7434c4ac804c",
+  "generatorVersion": "temporal-run-maximum-v2",
+  "renderer": "temporal-run-maximum-svg-raster-v4",
+  "fps": 30,
+  "cases": [
+    {
+      "candidateId": "trm2-3fab55e50a9c1914-native-1x",
+      "cellId": "cell-eighty-event-longest-red-run",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "An 80-event binary stream requires retaining the maximum contiguous target run.",
+      "failureModeId": "temporal-run-length-extrema",
+      "generator": "temporal-run-maximum-hard",
+      "seed": 5530000,
+      "difficulty": 99,
+      "variant": 0,
+      "artifact": "public/evaluations/temporal-run-maximum-confirmatory-v2/trm2-3fab55e50a9c1914-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 15000,
+      "question": "What is the LONGEST uninterrupted run of consecutive RED SQUARES in the complete sequence?",
+      "answerOptions": [
+        "4",
+        "6",
+        "7",
+        "5"
+      ],
+      "expectedAnswer": "4",
+      "sha256": "be6edb4d50b8d553db4e9fe3ca3ae1f0701cb3ef4124b0725d42c7a1ef9c547f",
+      "parameters": {
+        "maximumRun": 4,
+        "visualVariant": 100
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track consecutive red events, retain the maximum run length, and return exactly one allowed count."
+    },
+    {
+      "candidateId": "trm2-3fab55e50a9c1914-running-maximum-control",
+      "cellId": "cell-eighty-event-longest-red-run",
+      "split": "confirmatory",
+      "condition": "running-maximum-control",
+      "interventionDescription": "Diagnostic control displays both the current run and the longest run so far.",
+      "failureModeId": "temporal-run-length-extrema",
+      "generator": "temporal-run-maximum-hard",
+      "seed": 5530000,
+      "difficulty": 8,
+      "variant": 0,
+      "artifact": "public/evaluations/temporal-run-maximum-confirmatory-v2/trm2-3fab55e50a9c1914-running-maximum-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 15000,
+      "question": "What is the LONGEST uninterrupted run of consecutive RED SQUARES in the complete sequence?",
+      "answerOptions": [
+        "4",
+        "6",
+        "7",
+        "5"
+      ],
+      "expectedAnswer": "4",
+      "sha256": "906253fa29c1016ebd0573f650e0c1aa08cdfcf7c84da47139713b3b2e9bef52",
+      "parameters": {
+        "maximumRun": 4,
+        "visualVariant": 100
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track consecutive red events, retain the maximum run length, and return exactly one allowed count."
+    },
+    {
+      "candidateId": "trm2-a6133c782644fb3c-native-1x",
+      "cellId": "cell-eighty-event-longest-red-run",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "An 80-event binary stream requires retaining the maximum contiguous target run.",
+      "failureModeId": "temporal-run-length-extrema",
+      "generator": "temporal-run-maximum-hard",
+      "seed": 5530001,
+      "difficulty": 99,
+      "variant": 1,
+      "artifact": "public/evaluations/temporal-run-maximum-confirmatory-v2/trm2-a6133c782644fb3c-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 15000,
+      "question": "What is the LONGEST uninterrupted run of consecutive RED SQUARES in the complete sequence?",
+      "answerOptions": [
+        "4",
+        "6",
+        "7",
+        "5"
+      ],
+      "expectedAnswer": "5",
+      "sha256": "66344d69caa93d37853168261054d9574902574ec1eb45a15eb301dbd5b41b01",
+      "parameters": {
+        "maximumRun": 5,
+        "visualVariant": 101
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track consecutive red events, retain the maximum run length, and return exactly one allowed count."
+    },
+    {
+      "candidateId": "trm2-a6133c782644fb3c-running-maximum-control",
+      "cellId": "cell-eighty-event-longest-red-run",
+      "split": "confirmatory",
+      "condition": "running-maximum-control",
+      "interventionDescription": "Diagnostic control displays both the current run and the longest run so far.",
+      "failureModeId": "temporal-run-length-extrema",
+      "generator": "temporal-run-maximum-hard",
+      "seed": 5530001,
+      "difficulty": 8,
+      "variant": 1,
+      "artifact": "public/evaluations/temporal-run-maximum-confirmatory-v2/trm2-a6133c782644fb3c-running-maximum-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 15000,
+      "question": "What is the LONGEST uninterrupted run of consecutive RED SQUARES in the complete sequence?",
+      "answerOptions": [
+        "4",
+        "6",
+        "7",
+        "5"
+      ],
+      "expectedAnswer": "5",
+      "sha256": "e867f5580964291246b48d44281287af470dd7dd1d3943e37cf03135467f9add",
+      "parameters": {
+        "maximumRun": 5,
+        "visualVariant": 101
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track consecutive red events, retain the maximum run length, and return exactly one allowed count."
+    },
+    {
+      "candidateId": "trm2-b4197b027f63ff69-native-1x",
+      "cellId": "cell-eighty-event-longest-red-run",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "An 80-event binary stream requires retaining the maximum contiguous target run.",
+      "failureModeId": "temporal-run-length-extrema",
+      "generator": "temporal-run-maximum-hard",
+      "seed": 5530002,
+      "difficulty": 99,
+      "variant": 2,
+      "artifact": "public/evaluations/temporal-run-maximum-confirmatory-v2/trm2-b4197b027f63ff69-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 15000,
+      "question": "What is the LONGEST uninterrupted run of consecutive RED SQUARES in the complete sequence?",
+      "answerOptions": [
+        "6",
+        "4",
+        "7",
+        "5"
+      ],
+      "expectedAnswer": "6",
+      "sha256": "7b301d0c6914adae1787edc1a4fe21f6d6ed02a33a22e771025c6edc5ead3727",
+      "parameters": {
+        "maximumRun": 6,
+        "visualVariant": 102
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track consecutive red events, retain the maximum run length, and return exactly one allowed count."
+    },
+    {
+      "candidateId": "trm2-b4197b027f63ff69-running-maximum-control",
+      "cellId": "cell-eighty-event-longest-red-run",
+      "split": "confirmatory",
+      "condition": "running-maximum-control",
+      "interventionDescription": "Diagnostic control displays both the current run and the longest run so far.",
+      "failureModeId": "temporal-run-length-extrema",
+      "generator": "temporal-run-maximum-hard",
+      "seed": 5530002,
+      "difficulty": 8,
+      "variant": 2,
+      "artifact": "public/evaluations/temporal-run-maximum-confirmatory-v2/trm2-b4197b027f63ff69-running-maximum-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 15000,
+      "question": "What is the LONGEST uninterrupted run of consecutive RED SQUARES in the complete sequence?",
+      "answerOptions": [
+        "6",
+        "4",
+        "7",
+        "5"
+      ],
+      "expectedAnswer": "6",
+      "sha256": "2ec9f01cc5338598da6a00d8a69b50b8969ffd422d94916b12bc1aa337bd7c4b",
+      "parameters": {
+        "maximumRun": 6,
+        "visualVariant": 102
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track consecutive red events, retain the maximum run length, and return exactly one allowed count."
+    },
+    {
+      "candidateId": "trm2-3a359010b6048498-native-1x",
+      "cellId": "cell-eighty-event-longest-red-run",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "An 80-event binary stream requires retaining the maximum contiguous target run.",
+      "failureModeId": "temporal-run-length-extrema",
+      "generator": "temporal-run-maximum-hard",
+      "seed": 5530003,
+      "difficulty": 99,
+      "variant": 3,
+      "artifact": "public/evaluations/temporal-run-maximum-confirmatory-v2/trm2-3a359010b6048498-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 15000,
+      "question": "What is the LONGEST uninterrupted run of consecutive RED SQUARES in the complete sequence?",
+      "answerOptions": [
+        "4",
+        "7",
+        "6",
+        "5"
+      ],
+      "expectedAnswer": "7",
+      "sha256": "08e80cee3b308eae3dd7ced286aa510683c2bd92d184a147a336834f9101a0d8",
+      "parameters": {
+        "maximumRun": 7,
+        "visualVariant": 103
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track consecutive red events, retain the maximum run length, and return exactly one allowed count."
+    },
+    {
+      "candidateId": "trm2-3a359010b6048498-running-maximum-control",
+      "cellId": "cell-eighty-event-longest-red-run",
+      "split": "confirmatory",
+      "condition": "running-maximum-control",
+      "interventionDescription": "Diagnostic control displays both the current run and the longest run so far.",
+      "failureModeId": "temporal-run-length-extrema",
+      "generator": "temporal-run-maximum-hard",
+      "seed": 5530003,
+      "difficulty": 8,
+      "variant": 3,
+      "artifact": "public/evaluations/temporal-run-maximum-confirmatory-v2/trm2-3a359010b6048498-running-maximum-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 15000,
+      "question": "What is the LONGEST uninterrupted run of consecutive RED SQUARES in the complete sequence?",
+      "answerOptions": [
+        "4",
+        "7",
+        "6",
+        "5"
+      ],
+      "expectedAnswer": "7",
+      "sha256": "2e43c055f564926b1a2efec8a09ddddcdb33be6d1fda867cc542090ba4f6f68f",
+      "parameters": {
+        "maximumRun": 7,
+        "visualVariant": 103
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track consecutive red events, retain the maximum run length, and return exactly one allowed count."
+    },
+    {
+      "candidateId": "trm2-5684993fd62427b8-native-1x",
+      "cellId": "cell-eighty-event-longest-red-run",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "An 80-event binary stream requires retaining the maximum contiguous target run.",
+      "failureModeId": "temporal-run-length-extrema",
+      "generator": "temporal-run-maximum-hard",
+      "seed": 5530004,
+      "difficulty": 99,
+      "variant": 4,
+      "artifact": "public/evaluations/temporal-run-maximum-confirmatory-v2/trm2-5684993fd62427b8-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 15000,
+      "question": "What is the LONGEST uninterrupted run of consecutive RED SQUARES in the complete sequence?",
+      "answerOptions": [
+        "4",
+        "7",
+        "6",
+        "5"
+      ],
+      "expectedAnswer": "4",
+      "sha256": "dd450ae780e76e9626947145e1b5b937e220ff1514c71945c7494c1b8c9e702b",
+      "parameters": {
+        "maximumRun": 4,
+        "visualVariant": 104
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track consecutive red events, retain the maximum run length, and return exactly one allowed count."
+    },
+    {
+      "candidateId": "trm2-5684993fd62427b8-running-maximum-control",
+      "cellId": "cell-eighty-event-longest-red-run",
+      "split": "confirmatory",
+      "condition": "running-maximum-control",
+      "interventionDescription": "Diagnostic control displays both the current run and the longest run so far.",
+      "failureModeId": "temporal-run-length-extrema",
+      "generator": "temporal-run-maximum-hard",
+      "seed": 5530004,
+      "difficulty": 8,
+      "variant": 4,
+      "artifact": "public/evaluations/temporal-run-maximum-confirmatory-v2/trm2-5684993fd62427b8-running-maximum-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 15000,
+      "question": "What is the LONGEST uninterrupted run of consecutive RED SQUARES in the complete sequence?",
+      "answerOptions": [
+        "4",
+        "7",
+        "6",
+        "5"
+      ],
+      "expectedAnswer": "4",
+      "sha256": "2ec3d6c71705c1240a1e4f30d69b2cca324804bafaf833c4c43a5054f00e32bc",
+      "parameters": {
+        "maximumRun": 4,
+        "visualVariant": 104
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track consecutive red events, retain the maximum run length, and return exactly one allowed count."
+    },
+    {
+      "candidateId": "trm2-edb0c31a03337958-native-1x",
+      "cellId": "cell-eighty-event-longest-red-run",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "An 80-event binary stream requires retaining the maximum contiguous target run.",
+      "failureModeId": "temporal-run-length-extrema",
+      "generator": "temporal-run-maximum-hard",
+      "seed": 5530005,
+      "difficulty": 99,
+      "variant": 5,
+      "artifact": "public/evaluations/temporal-run-maximum-confirmatory-v2/trm2-edb0c31a03337958-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 15000,
+      "question": "What is the LONGEST uninterrupted run of consecutive RED SQUARES in the complete sequence?",
+      "answerOptions": [
+        "7",
+        "4",
+        "6",
+        "5"
+      ],
+      "expectedAnswer": "5",
+      "sha256": "52cc2d80c1cf7529b3b9015413bb3ff65d672d6844ceb441fb7c5045e73859f0",
+      "parameters": {
+        "maximumRun": 5,
+        "visualVariant": 105
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track consecutive red events, retain the maximum run length, and return exactly one allowed count."
+    },
+    {
+      "candidateId": "trm2-edb0c31a03337958-running-maximum-control",
+      "cellId": "cell-eighty-event-longest-red-run",
+      "split": "confirmatory",
+      "condition": "running-maximum-control",
+      "interventionDescription": "Diagnostic control displays both the current run and the longest run so far.",
+      "failureModeId": "temporal-run-length-extrema",
+      "generator": "temporal-run-maximum-hard",
+      "seed": 5530005,
+      "difficulty": 8,
+      "variant": 5,
+      "artifact": "public/evaluations/temporal-run-maximum-confirmatory-v2/trm2-edb0c31a03337958-running-maximum-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 15000,
+      "question": "What is the LONGEST uninterrupted run of consecutive RED SQUARES in the complete sequence?",
+      "answerOptions": [
+        "7",
+        "4",
+        "6",
+        "5"
+      ],
+      "expectedAnswer": "5",
+      "sha256": "4304afc0ab825384e533f772662b5f8569d3c6c13c30a8f78e41daeb9138df0a",
+      "parameters": {
+        "maximumRun": 5,
+        "visualVariant": 105
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track consecutive red events, retain the maximum run length, and return exactly one allowed count."
+    },
+    {
+      "candidateId": "trm2-ca78e86c00db6927-native-1x",
+      "cellId": "cell-eighty-event-longest-red-run",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "An 80-event binary stream requires retaining the maximum contiguous target run.",
+      "failureModeId": "temporal-run-length-extrema",
+      "generator": "temporal-run-maximum-hard",
+      "seed": 5530006,
+      "difficulty": 99,
+      "variant": 6,
+      "artifact": "public/evaluations/temporal-run-maximum-confirmatory-v2/trm2-ca78e86c00db6927-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 15000,
+      "question": "What is the LONGEST uninterrupted run of consecutive RED SQUARES in the complete sequence?",
+      "answerOptions": [
+        "7",
+        "6",
+        "4",
+        "5"
+      ],
+      "expectedAnswer": "6",
+      "sha256": "b321e9dfbb19c321d7706871941694fb3cf9cf661dcde41e79083bd02cb66a08",
+      "parameters": {
+        "maximumRun": 6,
+        "visualVariant": 106
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track consecutive red events, retain the maximum run length, and return exactly one allowed count."
+    },
+    {
+      "candidateId": "trm2-ca78e86c00db6927-running-maximum-control",
+      "cellId": "cell-eighty-event-longest-red-run",
+      "split": "confirmatory",
+      "condition": "running-maximum-control",
+      "interventionDescription": "Diagnostic control displays both the current run and the longest run so far.",
+      "failureModeId": "temporal-run-length-extrema",
+      "generator": "temporal-run-maximum-hard",
+      "seed": 5530006,
+      "difficulty": 8,
+      "variant": 6,
+      "artifact": "public/evaluations/temporal-run-maximum-confirmatory-v2/trm2-ca78e86c00db6927-running-maximum-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 15000,
+      "question": "What is the LONGEST uninterrupted run of consecutive RED SQUARES in the complete sequence?",
+      "answerOptions": [
+        "7",
+        "6",
+        "4",
+        "5"
+      ],
+      "expectedAnswer": "6",
+      "sha256": "33d88f460ae16e709ae4c481535cdccb4d3338faa34d68621496fbd3aafcec32",
+      "parameters": {
+        "maximumRun": 6,
+        "visualVariant": 106
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track consecutive red events, retain the maximum run length, and return exactly one allowed count."
+    },
+    {
+      "candidateId": "trm2-a01725d65a6a0a9f-native-1x",
+      "cellId": "cell-eighty-event-longest-red-run",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "An 80-event binary stream requires retaining the maximum contiguous target run.",
+      "failureModeId": "temporal-run-length-extrema",
+      "generator": "temporal-run-maximum-hard",
+      "seed": 5530007,
+      "difficulty": 99,
+      "variant": 7,
+      "artifact": "public/evaluations/temporal-run-maximum-confirmatory-v2/trm2-a01725d65a6a0a9f-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 15000,
+      "question": "What is the LONGEST uninterrupted run of consecutive RED SQUARES in the complete sequence?",
+      "answerOptions": [
+        "6",
+        "7",
+        "4",
+        "5"
+      ],
+      "expectedAnswer": "7",
+      "sha256": "95e81e8dce15820af2284114608cbf4a55b6904a5177a6bd337c0b28d56e259e",
+      "parameters": {
+        "maximumRun": 7,
+        "visualVariant": 107
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track consecutive red events, retain the maximum run length, and return exactly one allowed count."
+    },
+    {
+      "candidateId": "trm2-a01725d65a6a0a9f-running-maximum-control",
+      "cellId": "cell-eighty-event-longest-red-run",
+      "split": "confirmatory",
+      "condition": "running-maximum-control",
+      "interventionDescription": "Diagnostic control displays both the current run and the longest run so far.",
+      "failureModeId": "temporal-run-length-extrema",
+      "generator": "temporal-run-maximum-hard",
+      "seed": 5530007,
+      "difficulty": 8,
+      "variant": 7,
+      "artifact": "public/evaluations/temporal-run-maximum-confirmatory-v2/trm2-a01725d65a6a0a9f-running-maximum-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 15000,
+      "question": "What is the LONGEST uninterrupted run of consecutive RED SQUARES in the complete sequence?",
+      "answerOptions": [
+        "6",
+        "7",
+        "4",
+        "5"
+      ],
+      "expectedAnswer": "7",
+      "sha256": "0b00336ef66d0afec5a3899d37557a3e71b4c80d3059802d5b5e495dea51b0d4",
+      "parameters": {
+        "maximumRun": 7,
+        "visualVariant": 107
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track consecutive red events, retain the maximum run length, and return exactly one allowed count."
+    },
+    {
+      "candidateId": "trm2-65799954ce97f5a8-native-1x",
+      "cellId": "cell-eighty-event-longest-red-run",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "An 80-event binary stream requires retaining the maximum contiguous target run.",
+      "failureModeId": "temporal-run-length-extrema",
+      "generator": "temporal-run-maximum-hard",
+      "seed": 5530008,
+      "difficulty": 99,
+      "variant": 8,
+      "artifact": "public/evaluations/temporal-run-maximum-confirmatory-v2/trm2-65799954ce97f5a8-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 15000,
+      "question": "What is the LONGEST uninterrupted run of consecutive RED SQUARES in the complete sequence?",
+      "answerOptions": [
+        "7",
+        "6",
+        "4",
+        "5"
+      ],
+      "expectedAnswer": "4",
+      "sha256": "00cdcd4436d67862b55c1ed5341b00c095621ffcc5d27f99c4777eead1491649",
+      "parameters": {
+        "maximumRun": 4,
+        "visualVariant": 108
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track consecutive red events, retain the maximum run length, and return exactly one allowed count."
+    },
+    {
+      "candidateId": "trm2-65799954ce97f5a8-running-maximum-control",
+      "cellId": "cell-eighty-event-longest-red-run",
+      "split": "confirmatory",
+      "condition": "running-maximum-control",
+      "interventionDescription": "Diagnostic control displays both the current run and the longest run so far.",
+      "failureModeId": "temporal-run-length-extrema",
+      "generator": "temporal-run-maximum-hard",
+      "seed": 5530008,
+      "difficulty": 8,
+      "variant": 8,
+      "artifact": "public/evaluations/temporal-run-maximum-confirmatory-v2/trm2-65799954ce97f5a8-running-maximum-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 15000,
+      "question": "What is the LONGEST uninterrupted run of consecutive RED SQUARES in the complete sequence?",
+      "answerOptions": [
+        "7",
+        "6",
+        "4",
+        "5"
+      ],
+      "expectedAnswer": "4",
+      "sha256": "7300ee0a8ec78a6532774b3992a7c8fa0f22f31eddca9c169d79a92c48830f63",
+      "parameters": {
+        "maximumRun": 4,
+        "visualVariant": 108
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track consecutive red events, retain the maximum run length, and return exactly one allowed count."
+    },
+    {
+      "candidateId": "trm2-7218386a68d6fb26-native-1x",
+      "cellId": "cell-eighty-event-longest-red-run",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "An 80-event binary stream requires retaining the maximum contiguous target run.",
+      "failureModeId": "temporal-run-length-extrema",
+      "generator": "temporal-run-maximum-hard",
+      "seed": 5530009,
+      "difficulty": 99,
+      "variant": 9,
+      "artifact": "public/evaluations/temporal-run-maximum-confirmatory-v2/trm2-7218386a68d6fb26-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 15000,
+      "question": "What is the LONGEST uninterrupted run of consecutive RED SQUARES in the complete sequence?",
+      "answerOptions": [
+        "7",
+        "6",
+        "4",
+        "5"
+      ],
+      "expectedAnswer": "5",
+      "sha256": "246f348033af9d542cbf0a8fbec175111e260171383ef35519f61e3e75eb558b",
+      "parameters": {
+        "maximumRun": 5,
+        "visualVariant": 109
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track consecutive red events, retain the maximum run length, and return exactly one allowed count."
+    },
+    {
+      "candidateId": "trm2-7218386a68d6fb26-running-maximum-control",
+      "cellId": "cell-eighty-event-longest-red-run",
+      "split": "confirmatory",
+      "condition": "running-maximum-control",
+      "interventionDescription": "Diagnostic control displays both the current run and the longest run so far.",
+      "failureModeId": "temporal-run-length-extrema",
+      "generator": "temporal-run-maximum-hard",
+      "seed": 5530009,
+      "difficulty": 8,
+      "variant": 9,
+      "artifact": "public/evaluations/temporal-run-maximum-confirmatory-v2/trm2-7218386a68d6fb26-running-maximum-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 15000,
+      "question": "What is the LONGEST uninterrupted run of consecutive RED SQUARES in the complete sequence?",
+      "answerOptions": [
+        "7",
+        "6",
+        "4",
+        "5"
+      ],
+      "expectedAnswer": "5",
+      "sha256": "eea2092554ad7fa9e85d1d5c5d0d4bf17c7e0cde58a481ee05ab4879bd295061",
+      "parameters": {
+        "maximumRun": 5,
+        "visualVariant": 109
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track consecutive red events, retain the maximum run length, and return exactly one allowed count."
+    },
+    {
+      "candidateId": "trm2-623eda6e1609fba7-native-1x",
+      "cellId": "cell-eighty-event-longest-red-run",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "An 80-event binary stream requires retaining the maximum contiguous target run.",
+      "failureModeId": "temporal-run-length-extrema",
+      "generator": "temporal-run-maximum-hard",
+      "seed": 5530010,
+      "difficulty": 99,
+      "variant": 10,
+      "artifact": "public/evaluations/temporal-run-maximum-confirmatory-v2/trm2-623eda6e1609fba7-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 15000,
+      "question": "What is the LONGEST uninterrupted run of consecutive RED SQUARES in the complete sequence?",
+      "answerOptions": [
+        "4",
+        "6",
+        "7",
+        "5"
+      ],
+      "expectedAnswer": "6",
+      "sha256": "513078b2cb64335bdf96ebb7a65a11d7dcfbbc04a7caa9eb3cd2e686df46c079",
+      "parameters": {
+        "maximumRun": 6,
+        "visualVariant": 110
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track consecutive red events, retain the maximum run length, and return exactly one allowed count."
+    },
+    {
+      "candidateId": "trm2-623eda6e1609fba7-running-maximum-control",
+      "cellId": "cell-eighty-event-longest-red-run",
+      "split": "confirmatory",
+      "condition": "running-maximum-control",
+      "interventionDescription": "Diagnostic control displays both the current run and the longest run so far.",
+      "failureModeId": "temporal-run-length-extrema",
+      "generator": "temporal-run-maximum-hard",
+      "seed": 5530010,
+      "difficulty": 8,
+      "variant": 10,
+      "artifact": "public/evaluations/temporal-run-maximum-confirmatory-v2/trm2-623eda6e1609fba7-running-maximum-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 15000,
+      "question": "What is the LONGEST uninterrupted run of consecutive RED SQUARES in the complete sequence?",
+      "answerOptions": [
+        "4",
+        "6",
+        "7",
+        "5"
+      ],
+      "expectedAnswer": "6",
+      "sha256": "94ffac4e1fa67e727f73bd56b5b7ee12467f0985645e4b5bbb5177b7ffd6e03c",
+      "parameters": {
+        "maximumRun": 6,
+        "visualVariant": 110
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track consecutive red events, retain the maximum run length, and return exactly one allowed count."
+    },
+    {
+      "candidateId": "trm2-2374d53b16afbf7c-native-1x",
+      "cellId": "cell-eighty-event-longest-red-run",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "An 80-event binary stream requires retaining the maximum contiguous target run.",
+      "failureModeId": "temporal-run-length-extrema",
+      "generator": "temporal-run-maximum-hard",
+      "seed": 5530011,
+      "difficulty": 99,
+      "variant": 11,
+      "artifact": "public/evaluations/temporal-run-maximum-confirmatory-v2/trm2-2374d53b16afbf7c-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 15000,
+      "question": "What is the LONGEST uninterrupted run of consecutive RED SQUARES in the complete sequence?",
+      "answerOptions": [
+        "6",
+        "4",
+        "7",
+        "5"
+      ],
+      "expectedAnswer": "7",
+      "sha256": "b8a5fd3eddf691c317e7c1f9d7bd6916aab264b5b68537c69f8c51959a8ed4f9",
+      "parameters": {
+        "maximumRun": 7,
+        "visualVariant": 111
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track consecutive red events, retain the maximum run length, and return exactly one allowed count."
+    },
+    {
+      "candidateId": "trm2-2374d53b16afbf7c-running-maximum-control",
+      "cellId": "cell-eighty-event-longest-red-run",
+      "split": "confirmatory",
+      "condition": "running-maximum-control",
+      "interventionDescription": "Diagnostic control displays both the current run and the longest run so far.",
+      "failureModeId": "temporal-run-length-extrema",
+      "generator": "temporal-run-maximum-hard",
+      "seed": 5530011,
+      "difficulty": 8,
+      "variant": 11,
+      "artifact": "public/evaluations/temporal-run-maximum-confirmatory-v2/trm2-2374d53b16afbf7c-running-maximum-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 15000,
+      "question": "What is the LONGEST uninterrupted run of consecutive RED SQUARES in the complete sequence?",
+      "answerOptions": [
+        "6",
+        "4",
+        "7",
+        "5"
+      ],
+      "expectedAnswer": "7",
+      "sha256": "df2ca26bd71f346593372da14caf615223ac83191051f034f024e935321c2cf7",
+      "parameters": {
+        "maximumRun": 7,
+        "visualVariant": 111
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track consecutive red events, retain the maximum run length, and return exactly one allowed count."
+    },
+    {
+      "candidateId": "trm2-e2d72c96d8b7fd06-native-1x",
+      "cellId": "cell-eighty-event-longest-red-run",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "An 80-event binary stream requires retaining the maximum contiguous target run.",
+      "failureModeId": "temporal-run-length-extrema",
+      "generator": "temporal-run-maximum-hard",
+      "seed": 5530012,
+      "difficulty": 99,
+      "variant": 12,
+      "artifact": "public/evaluations/temporal-run-maximum-confirmatory-v2/trm2-e2d72c96d8b7fd06-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 15000,
+      "question": "What is the LONGEST uninterrupted run of consecutive RED SQUARES in the complete sequence?",
+      "answerOptions": [
+        "6",
+        "4",
+        "7",
+        "5"
+      ],
+      "expectedAnswer": "4",
+      "sha256": "5d81a957f584a4fcdd7ae38e15bcec8fd2c6621d70716b9fe70f668391feb461",
+      "parameters": {
+        "maximumRun": 4,
+        "visualVariant": 112
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track consecutive red events, retain the maximum run length, and return exactly one allowed count."
+    },
+    {
+      "candidateId": "trm2-e2d72c96d8b7fd06-running-maximum-control",
+      "cellId": "cell-eighty-event-longest-red-run",
+      "split": "confirmatory",
+      "condition": "running-maximum-control",
+      "interventionDescription": "Diagnostic control displays both the current run and the longest run so far.",
+      "failureModeId": "temporal-run-length-extrema",
+      "generator": "temporal-run-maximum-hard",
+      "seed": 5530012,
+      "difficulty": 8,
+      "variant": 12,
+      "artifact": "public/evaluations/temporal-run-maximum-confirmatory-v2/trm2-e2d72c96d8b7fd06-running-maximum-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 15000,
+      "question": "What is the LONGEST uninterrupted run of consecutive RED SQUARES in the complete sequence?",
+      "answerOptions": [
+        "6",
+        "4",
+        "7",
+        "5"
+      ],
+      "expectedAnswer": "4",
+      "sha256": "7a20ee183e0db668b9a8653f721144f4810b9e32aabd29bc619588c0ad23a448",
+      "parameters": {
+        "maximumRun": 4,
+        "visualVariant": 112
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track consecutive red events, retain the maximum run length, and return exactly one allowed count."
+    },
+    {
+      "candidateId": "trm2-b9933f04e6ee148b-native-1x",
+      "cellId": "cell-eighty-event-longest-red-run",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "An 80-event binary stream requires retaining the maximum contiguous target run.",
+      "failureModeId": "temporal-run-length-extrema",
+      "generator": "temporal-run-maximum-hard",
+      "seed": 5530013,
+      "difficulty": 99,
+      "variant": 13,
+      "artifact": "public/evaluations/temporal-run-maximum-confirmatory-v2/trm2-b9933f04e6ee148b-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 15000,
+      "question": "What is the LONGEST uninterrupted run of consecutive RED SQUARES in the complete sequence?",
+      "answerOptions": [
+        "4",
+        "6",
+        "7",
+        "5"
+      ],
+      "expectedAnswer": "5",
+      "sha256": "90e9c8562840420369f55fd2826abb7a0d0383e5f21c1bf42f68703c079e2744",
+      "parameters": {
+        "maximumRun": 5,
+        "visualVariant": 113
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track consecutive red events, retain the maximum run length, and return exactly one allowed count."
+    },
+    {
+      "candidateId": "trm2-b9933f04e6ee148b-running-maximum-control",
+      "cellId": "cell-eighty-event-longest-red-run",
+      "split": "confirmatory",
+      "condition": "running-maximum-control",
+      "interventionDescription": "Diagnostic control displays both the current run and the longest run so far.",
+      "failureModeId": "temporal-run-length-extrema",
+      "generator": "temporal-run-maximum-hard",
+      "seed": 5530013,
+      "difficulty": 8,
+      "variant": 13,
+      "artifact": "public/evaluations/temporal-run-maximum-confirmatory-v2/trm2-b9933f04e6ee148b-running-maximum-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 15000,
+      "question": "What is the LONGEST uninterrupted run of consecutive RED SQUARES in the complete sequence?",
+      "answerOptions": [
+        "4",
+        "6",
+        "7",
+        "5"
+      ],
+      "expectedAnswer": "5",
+      "sha256": "81bf8907a769f3257a2468e66562e77eb2318f42369bbc5a429d6ce519b7b0d1",
+      "parameters": {
+        "maximumRun": 5,
+        "visualVariant": 113
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track consecutive red events, retain the maximum run length, and return exactly one allowed count."
+    },
+    {
+      "candidateId": "trm2-3a42b8c9242413ad-native-1x",
+      "cellId": "cell-eighty-event-longest-red-run",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "An 80-event binary stream requires retaining the maximum contiguous target run.",
+      "failureModeId": "temporal-run-length-extrema",
+      "generator": "temporal-run-maximum-hard",
+      "seed": 5530014,
+      "difficulty": 99,
+      "variant": 14,
+      "artifact": "public/evaluations/temporal-run-maximum-confirmatory-v2/trm2-3a42b8c9242413ad-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 15000,
+      "question": "What is the LONGEST uninterrupted run of consecutive RED SQUARES in the complete sequence?",
+      "answerOptions": [
+        "7",
+        "4",
+        "6",
+        "5"
+      ],
+      "expectedAnswer": "6",
+      "sha256": "ee6bb4f4c7a4045c2a5a119478fef426cbc12d853938e1ef3b1dec5251e75a51",
+      "parameters": {
+        "maximumRun": 6,
+        "visualVariant": 114
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track consecutive red events, retain the maximum run length, and return exactly one allowed count."
+    },
+    {
+      "candidateId": "trm2-3a42b8c9242413ad-running-maximum-control",
+      "cellId": "cell-eighty-event-longest-red-run",
+      "split": "confirmatory",
+      "condition": "running-maximum-control",
+      "interventionDescription": "Diagnostic control displays both the current run and the longest run so far.",
+      "failureModeId": "temporal-run-length-extrema",
+      "generator": "temporal-run-maximum-hard",
+      "seed": 5530014,
+      "difficulty": 8,
+      "variant": 14,
+      "artifact": "public/evaluations/temporal-run-maximum-confirmatory-v2/trm2-3a42b8c9242413ad-running-maximum-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 15000,
+      "question": "What is the LONGEST uninterrupted run of consecutive RED SQUARES in the complete sequence?",
+      "answerOptions": [
+        "7",
+        "4",
+        "6",
+        "5"
+      ],
+      "expectedAnswer": "6",
+      "sha256": "f73e6a00ce49f366722022591a4edfe0f17644719b530e8aaaeedb307911d28f",
+      "parameters": {
+        "maximumRun": 6,
+        "visualVariant": 114
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track consecutive red events, retain the maximum run length, and return exactly one allowed count."
+    },
+    {
+      "candidateId": "trm2-78a0e64a84f2c8ee-native-1x",
+      "cellId": "cell-eighty-event-longest-red-run",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "An 80-event binary stream requires retaining the maximum contiguous target run.",
+      "failureModeId": "temporal-run-length-extrema",
+      "generator": "temporal-run-maximum-hard",
+      "seed": 5530015,
+      "difficulty": 99,
+      "variant": 15,
+      "artifact": "public/evaluations/temporal-run-maximum-confirmatory-v2/trm2-78a0e64a84f2c8ee-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 15000,
+      "question": "What is the LONGEST uninterrupted run of consecutive RED SQUARES in the complete sequence?",
+      "answerOptions": [
+        "7",
+        "4",
+        "6",
+        "5"
+      ],
+      "expectedAnswer": "7",
+      "sha256": "91e907d01977bc1f1a5f06b3e7ad00b3259653a2e1e52ab37cbee313d996ce03",
+      "parameters": {
+        "maximumRun": 7,
+        "visualVariant": 115
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track consecutive red events, retain the maximum run length, and return exactly one allowed count."
+    },
+    {
+      "candidateId": "trm2-78a0e64a84f2c8ee-running-maximum-control",
+      "cellId": "cell-eighty-event-longest-red-run",
+      "split": "confirmatory",
+      "condition": "running-maximum-control",
+      "interventionDescription": "Diagnostic control displays both the current run and the longest run so far.",
+      "failureModeId": "temporal-run-length-extrema",
+      "generator": "temporal-run-maximum-hard",
+      "seed": 5530015,
+      "difficulty": 8,
+      "variant": 15,
+      "artifact": "public/evaluations/temporal-run-maximum-confirmatory-v2/trm2-78a0e64a84f2c8ee-running-maximum-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 15000,
+      "question": "What is the LONGEST uninterrupted run of consecutive RED SQUARES in the complete sequence?",
+      "answerOptions": [
+        "7",
+        "4",
+        "6",
+        "5"
+      ],
+      "expectedAnswer": "7",
+      "sha256": "013adeb4d80080ad075496b2618883349448d232e658e8f692a714c401605d6a",
+      "parameters": {
+        "maximumRun": 7,
+        "visualVariant": 115
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track consecutive red events, retain the maximum run length, and return exactly one allowed count."
+    }
+  ]
+}

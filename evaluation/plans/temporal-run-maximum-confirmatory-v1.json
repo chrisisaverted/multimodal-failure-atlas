@@ -1,0 +1,21 @@
+{
+  "id": "temporal-run-maximum-confirmatory-v1-low-reasoning-2026-09-01",
+  "resolvedAt": "2026-09-01",
+  "gateway": "OpenRouter",
+  "evaluationPlanId": "temporal-run-maximum-confirmatory-v1",
+  "evaluationPlanSha256": "02acbce9d74e4e5f1e0abb0d91712e159d87afb5f91f7cb3760b6e5caea8a2ee",
+  "stage": "seed-disjoint-confirmatory-with-running-maximum-control",
+  "casesPerModel": 32,
+  "trials": 1,
+  "temperature": 0,
+  "maxOutputTokens": 8192,
+  "reasoning": { "effort": "low", "exclude": true },
+  "scorer": "terminal-option-v3",
+  "allowProviderFallbacks": false,
+  "dataCollection": "deny",
+  "campaignCostCeilingUsd": 12,
+  "models": [
+    { "modelId": "google/gemini-3.7-flash", "modelRevision": "google/gemini-3.7-flash-20260813", "upstreamProvider": "Google AI Studio" },
+    { "modelId": "qwen/qwen3.8-max", "modelRevision": "qwen/qwen3.8-max-20260803", "upstreamProvider": "Alibaba" }
+  ]
+}

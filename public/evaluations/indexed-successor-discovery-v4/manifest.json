@@ -1,0 +1,257 @@
+{
+  "id": "indexed-successor-discovery-v4",
+  "planSha256": "573c09767aff53a8082de74d7bb5232a18d1564f713ae7454954fe7c5f5db2f5",
+  "generatorVersion": "indexed-successor-v4",
+  "renderer": "indexed-successor-svg-raster-v5",
+  "fps": 30,
+  "cases": [
+    {
+      "candidateId": "isx4-c5c539f6bf7fae52",
+      "cellId": "cell-eighty-event-ninth-marker-successor",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "An eighty-event stream requires binding the ninth target occurrence to its immediate successor.",
+      "failureModeId": "ordinal-event-successor-binding",
+      "generator": "indexed-successor-extreme",
+      "seed": 5320000,
+      "difficulty": 99,
+      "variant": 0,
+      "artifact": "public/evaluations/indexed-successor-discovery-v4/isx4-c5c539f6bf7fae52.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "Which symbol appears IMMEDIATELY AFTER the NINTH white diamond in the complete stream?",
+      "answerOptions": [
+        "TRIANGLE",
+        "SQUARE",
+        "STAR",
+        "CIRCLE"
+      ],
+      "expectedAnswer": "CIRCLE",
+      "sha256": "8d2055f0b739c05d0078a1395ad0b9a53098da71b82b4f4d588e05a0c5777593",
+      "parameters": {
+        "answerIndex": 0,
+        "targetOccurrence": 9,
+        "visualVariant": 0
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count target occurrences, bind the ninth one to its immediate successor, and return exactly one symbol name."
+    },
+    {
+      "candidateId": "isx4-8c75d8c0ec9d5efc",
+      "cellId": "cell-eighty-event-ninth-marker-successor",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "An eighty-event stream requires binding the ninth target occurrence to its immediate successor.",
+      "failureModeId": "ordinal-event-successor-binding",
+      "generator": "indexed-successor-extreme",
+      "seed": 5320001,
+      "difficulty": 99,
+      "variant": 1,
+      "artifact": "public/evaluations/indexed-successor-discovery-v4/isx4-8c75d8c0ec9d5efc.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "Which symbol appears IMMEDIATELY AFTER the NINTH white diamond in the complete stream?",
+      "answerOptions": [
+        "SQUARE",
+        "TRIANGLE",
+        "STAR",
+        "CIRCLE"
+      ],
+      "expectedAnswer": "TRIANGLE",
+      "sha256": "8e39148a50f013a391a36ae942919da374140f7ebfa3cffb43b6274e403f210e",
+      "parameters": {
+        "answerIndex": 1,
+        "targetOccurrence": 9,
+        "visualVariant": 1
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count target occurrences, bind the ninth one to its immediate successor, and return exactly one symbol name."
+    },
+    {
+      "candidateId": "isx4-5e73bc125d851e3b",
+      "cellId": "cell-eighty-event-ninth-marker-successor",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "An eighty-event stream requires binding the ninth target occurrence to its immediate successor.",
+      "failureModeId": "ordinal-event-successor-binding",
+      "generator": "indexed-successor-extreme",
+      "seed": 5320002,
+      "difficulty": 99,
+      "variant": 2,
+      "artifact": "public/evaluations/indexed-successor-discovery-v4/isx4-5e73bc125d851e3b.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "Which symbol appears IMMEDIATELY AFTER the NINTH white diamond in the complete stream?",
+      "answerOptions": [
+        "STAR",
+        "SQUARE",
+        "TRIANGLE",
+        "CIRCLE"
+      ],
+      "expectedAnswer": "SQUARE",
+      "sha256": "dc9a431e6445ed89e1b0b58013bfd65c032f755aa1eba45bfdda753b60756279",
+      "parameters": {
+        "answerIndex": 2,
+        "targetOccurrence": 9,
+        "visualVariant": 2
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count target occurrences, bind the ninth one to its immediate successor, and return exactly one symbol name."
+    },
+    {
+      "candidateId": "isx4-5c617211e17efa00",
+      "cellId": "cell-eighty-event-ninth-marker-successor",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "An eighty-event stream requires binding the ninth target occurrence to its immediate successor.",
+      "failureModeId": "ordinal-event-successor-binding",
+      "generator": "indexed-successor-extreme",
+      "seed": 5320003,
+      "difficulty": 99,
+      "variant": 3,
+      "artifact": "public/evaluations/indexed-successor-discovery-v4/isx4-5c617211e17efa00.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "Which symbol appears IMMEDIATELY AFTER the NINTH white diamond in the complete stream?",
+      "answerOptions": [
+        "SQUARE",
+        "STAR",
+        "TRIANGLE",
+        "CIRCLE"
+      ],
+      "expectedAnswer": "STAR",
+      "sha256": "6ee9c62c10f00cb6451cd953cfb13597d037679f80f7d86dd7e5cb3280868805",
+      "parameters": {
+        "answerIndex": 3,
+        "targetOccurrence": 9,
+        "visualVariant": 3
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count target occurrences, bind the ninth one to its immediate successor, and return exactly one symbol name."
+    },
+    {
+      "candidateId": "isx4-128bff593c59d206",
+      "cellId": "cell-eighty-event-ninth-marker-successor",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "An eighty-event stream requires binding the ninth target occurrence to its immediate successor.",
+      "failureModeId": "ordinal-event-successor-binding",
+      "generator": "indexed-successor-extreme",
+      "seed": 5320004,
+      "difficulty": 99,
+      "variant": 4,
+      "artifact": "public/evaluations/indexed-successor-discovery-v4/isx4-128bff593c59d206.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "Which symbol appears IMMEDIATELY AFTER the NINTH white diamond in the complete stream?",
+      "answerOptions": [
+        "SQUARE",
+        "STAR",
+        "TRIANGLE",
+        "CIRCLE"
+      ],
+      "expectedAnswer": "CIRCLE",
+      "sha256": "8aacf60b10c85af425bb37791ac0281d5208895b42ba3c362fb8115ed27f98e0",
+      "parameters": {
+        "answerIndex": 0,
+        "targetOccurrence": 9,
+        "visualVariant": 4
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count target occurrences, bind the ninth one to its immediate successor, and return exactly one symbol name."
+    },
+    {
+      "candidateId": "isx4-1701fd3b75d05928",
+      "cellId": "cell-eighty-event-ninth-marker-successor",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "An eighty-event stream requires binding the ninth target occurrence to its immediate successor.",
+      "failureModeId": "ordinal-event-successor-binding",
+      "generator": "indexed-successor-extreme",
+      "seed": 5320005,
+      "difficulty": 99,
+      "variant": 5,
+      "artifact": "public/evaluations/indexed-successor-discovery-v4/isx4-1701fd3b75d05928.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "Which symbol appears IMMEDIATELY AFTER the NINTH white diamond in the complete stream?",
+      "answerOptions": [
+        "STAR",
+        "SQUARE",
+        "TRIANGLE",
+        "CIRCLE"
+      ],
+      "expectedAnswer": "TRIANGLE",
+      "sha256": "7e25bfa83bfcc19a2b3ba889b5cce46423cf84d2347128b5cf057fa2bbc7f87a",
+      "parameters": {
+        "answerIndex": 1,
+        "targetOccurrence": 9,
+        "visualVariant": 5
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count target occurrences, bind the ninth one to its immediate successor, and return exactly one symbol name."
+    },
+    {
+      "candidateId": "isx4-6628ad49094956b5",
+      "cellId": "cell-eighty-event-ninth-marker-successor",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "An eighty-event stream requires binding the ninth target occurrence to its immediate successor.",
+      "failureModeId": "ordinal-event-successor-binding",
+      "generator": "indexed-successor-extreme",
+      "seed": 5320006,
+      "difficulty": 99,
+      "variant": 6,
+      "artifact": "public/evaluations/indexed-successor-discovery-v4/isx4-6628ad49094956b5.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "Which symbol appears IMMEDIATELY AFTER the NINTH white diamond in the complete stream?",
+      "answerOptions": [
+        "TRIANGLE",
+        "STAR",
+        "SQUARE",
+        "CIRCLE"
+      ],
+      "expectedAnswer": "SQUARE",
+      "sha256": "99d7c238891cc83a4f7667077af418890aa867b68fd685dc17dc883cc2d57a44",
+      "parameters": {
+        "answerIndex": 2,
+        "targetOccurrence": 9,
+        "visualVariant": 6
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count target occurrences, bind the ninth one to its immediate successor, and return exactly one symbol name."
+    },
+    {
+      "candidateId": "isx4-5a641cf4a16888ca",
+      "cellId": "cell-eighty-event-ninth-marker-successor",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "An eighty-event stream requires binding the ninth target occurrence to its immediate successor.",
+      "failureModeId": "ordinal-event-successor-binding",
+      "generator": "indexed-successor-extreme",
+      "seed": 5320007,
+      "difficulty": 99,
+      "variant": 7,
+      "artifact": "public/evaluations/indexed-successor-discovery-v4/isx4-5a641cf4a16888ca.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "Which symbol appears IMMEDIATELY AFTER the NINTH white diamond in the complete stream?",
+      "answerOptions": [
+        "TRIANGLE",
+        "STAR",
+        "SQUARE",
+        "CIRCLE"
+      ],
+      "expectedAnswer": "STAR",
+      "sha256": "335bded9aa8f7e8d53f5c4afb01ee9e246e4845253d3bedfd5b91fa4bc48b4cb",
+      "parameters": {
+        "answerIndex": 3,
+        "targetOccurrence": 9,
+        "visualVariant": 7
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count target occurrences, bind the ninth one to its immediate successor, and return exactly one symbol name."
+    }
+  ]
+}

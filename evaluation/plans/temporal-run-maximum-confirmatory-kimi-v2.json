@@ -1,0 +1,4 @@
+{
+  "id": "temporal-run-maximum-confirmatory-v2-kimi-compact-2026-09-01", "resolvedAt": "2026-09-01", "gateway": "OpenRouter", "evaluationPlanId": "temporal-run-maximum-confirmatory-v2", "evaluationPlanSha256": "ec62c4d0c41635aa02c84e65ef11596369ddf4482029e23f395c7434c4ac804c", "stage": "seed-disjoint-confirmatory-with-running-maximum-control", "casesPerModel": 32, "trials": 1, "temperature": 0, "maxOutputTokens": 4096, "reasoning": { "effort": "none", "exclude": true }, "scorer": "terminal-option-v3", "allowProviderFallbacks": false, "dataCollection": "deny", "campaignCostCeilingUsd": 12,
+  "models": [{ "modelId": "moonshotai/kimi-k3", "modelRevision": "moonshotai/kimi-k3-20260715", "upstreamProvider": "Moonshot AI" }]
+}

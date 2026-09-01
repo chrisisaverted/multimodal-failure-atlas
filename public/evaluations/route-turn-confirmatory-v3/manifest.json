@@ -1,0 +1,6345 @@
+{
+  "id": "route-turn-confirmatory-v3",
+  "planSha256": "4407dba238ba7a1970e0f7fc728ba59c24887800b7c413d5dbbd1767680a68cc",
+  "generatorVersion": "hidden-trail-route-turn-count-v2",
+  "renderer": "route-turn-svg-raster-v2",
+  "fps": 30,
+  "cases": [
+    {
+      "candidateId": "rth-8d934be85c62ee08-native-1x",
+      "cellId": "cell-forty-step-hidden-trail",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A forty-step route disappears behind the moving disk.",
+      "failureModeId": "dynamic-route-turn-integration",
+      "generator": "route-turn-count-hard",
+      "seed": 4920000,
+      "difficulty": 96,
+      "variant": 0,
+      "artifact": "public/evaluations/route-turn-confirmatory-v3/rth-8d934be85c62ee08-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "How many times does the moving gold disk CHANGE DIRECTION during the complete route?",
+      "answerOptions": [
+        "22",
+        "21",
+        "23",
+        "20"
+      ],
+      "expectedAnswer": "20",
+      "sha256": "6a5538e2ee1400be7306923a199b2213fcc9ba0a7ba3ef709ad69c9799152dfe",
+      "parameters": {
+        "turnCount": 20,
+        "path": [
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            8,
+            6
+          ],
+          [
+            8,
+            5
+          ],
+          [
+            9,
+            5
+          ],
+          [
+            10,
+            5
+          ],
+          [
+            11,
+            5
+          ],
+          [
+            12,
+            5
+          ],
+          [
+            13,
+            5
+          ],
+          [
+            13,
+            6
+          ],
+          [
+            12,
+            6
+          ],
+          [
+            12,
+            5
+          ],
+          [
+            12,
+            4
+          ],
+          [
+            11,
+            4
+          ],
+          [
+            10,
+            4
+          ],
+          [
+            10,
+            5
+          ],
+          [
+            10,
+            6
+          ],
+          [
+            11,
+            6
+          ],
+          [
+            11,
+            7
+          ],
+          [
+            11,
+            8
+          ],
+          [
+            12,
+            8
+          ],
+          [
+            12,
+            7
+          ],
+          [
+            12,
+            6
+          ],
+          [
+            13,
+            6
+          ],
+          [
+            13,
+            7
+          ],
+          [
+            13,
+            8
+          ],
+          [
+            14,
+            8
+          ],
+          [
+            14,
+            9
+          ],
+          [
+            14,
+            10
+          ],
+          [
+            13,
+            10
+          ],
+          [
+            12,
+            10
+          ],
+          [
+            12,
+            9
+          ],
+          [
+            13,
+            9
+          ],
+          [
+            13,
+            8
+          ],
+          [
+            13,
+            7
+          ],
+          [
+            13,
+            6
+          ],
+          [
+            13,
+            5
+          ],
+          [
+            13,
+            4
+          ],
+          [
+            12,
+            4
+          ],
+          [
+            11,
+            4
+          ],
+          [
+            11,
+            5
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 200
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count changes in motion direction and return exactly one allowed count."
+    },
+    {
+      "candidateId": "rth-8d934be85c62ee08-running-turn-counter-control",
+      "cellId": "cell-forty-step-hidden-trail",
+      "split": "confirmatory",
+      "condition": "running-turn-counter-control",
+      "interventionDescription": "Diagnostic control displays the exact cumulative turn count throughout and at the end.",
+      "failureModeId": "dynamic-route-turn-integration",
+      "generator": "route-turn-count-hard",
+      "seed": 4920000,
+      "difficulty": 10,
+      "variant": 0,
+      "artifact": "public/evaluations/route-turn-confirmatory-v3/rth-8d934be85c62ee08-running-turn-counter-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "How many times does the moving gold disk CHANGE DIRECTION during the complete route?",
+      "answerOptions": [
+        "22",
+        "21",
+        "23",
+        "20"
+      ],
+      "expectedAnswer": "20",
+      "sha256": "b915da07099f34303850da8f4c8a813e77c3d08135d3f7aafb5ab575b00c49f9",
+      "parameters": {
+        "turnCount": 20,
+        "path": [
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            8,
+            6
+          ],
+          [
+            8,
+            5
+          ],
+          [
+            9,
+            5
+          ],
+          [
+            10,
+            5
+          ],
+          [
+            11,
+            5
+          ],
+          [
+            12,
+            5
+          ],
+          [
+            13,
+            5
+          ],
+          [
+            13,
+            6
+          ],
+          [
+            12,
+            6
+          ],
+          [
+            12,
+            5
+          ],
+          [
+            12,
+            4
+          ],
+          [
+            11,
+            4
+          ],
+          [
+            10,
+            4
+          ],
+          [
+            10,
+            5
+          ],
+          [
+            10,
+            6
+          ],
+          [
+            11,
+            6
+          ],
+          [
+            11,
+            7
+          ],
+          [
+            11,
+            8
+          ],
+          [
+            12,
+            8
+          ],
+          [
+            12,
+            7
+          ],
+          [
+            12,
+            6
+          ],
+          [
+            13,
+            6
+          ],
+          [
+            13,
+            7
+          ],
+          [
+            13,
+            8
+          ],
+          [
+            14,
+            8
+          ],
+          [
+            14,
+            9
+          ],
+          [
+            14,
+            10
+          ],
+          [
+            13,
+            10
+          ],
+          [
+            12,
+            10
+          ],
+          [
+            12,
+            9
+          ],
+          [
+            13,
+            9
+          ],
+          [
+            13,
+            8
+          ],
+          [
+            13,
+            7
+          ],
+          [
+            13,
+            6
+          ],
+          [
+            13,
+            5
+          ],
+          [
+            13,
+            4
+          ],
+          [
+            12,
+            4
+          ],
+          [
+            11,
+            4
+          ],
+          [
+            11,
+            5
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 200
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count changes in motion direction and return exactly one allowed count."
+    },
+    {
+      "candidateId": "rth-84f22b7de4840e85-native-1x",
+      "cellId": "cell-forty-step-hidden-trail",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A forty-step route disappears behind the moving disk.",
+      "failureModeId": "dynamic-route-turn-integration",
+      "generator": "route-turn-count-hard",
+      "seed": 4920001,
+      "difficulty": 96,
+      "variant": 1,
+      "artifact": "public/evaluations/route-turn-confirmatory-v3/rth-84f22b7de4840e85-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "How many times does the moving gold disk CHANGE DIRECTION during the complete route?",
+      "answerOptions": [
+        "22",
+        "21",
+        "23",
+        "20"
+      ],
+      "expectedAnswer": "21",
+      "sha256": "6263c707877a8a125869a232c7cd72377bab2be68f514265bc4381c57ea884a0",
+      "parameters": {
+        "turnCount": 21,
+        "path": [
+          [
+            8,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            8,
+            5
+          ],
+          [
+            9,
+            5
+          ],
+          [
+            9,
+            6
+          ],
+          [
+            8,
+            6
+          ],
+          [
+            8,
+            5
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            8,
+            3
+          ],
+          [
+            8,
+            4
+          ],
+          [
+            8,
+            5
+          ],
+          [
+            9,
+            5
+          ],
+          [
+            10,
+            5
+          ],
+          [
+            10,
+            6
+          ],
+          [
+            10,
+            7
+          ],
+          [
+            9,
+            7
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            8,
+            13
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            9,
+            12
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            9,
+            9
+          ],
+          [
+            10,
+            9
+          ],
+          [
+            10,
+            10
+          ],
+          [
+            10,
+            11
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            8
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 201
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count changes in motion direction and return exactly one allowed count."
+    },
+    {
+      "candidateId": "rth-84f22b7de4840e85-running-turn-counter-control",
+      "cellId": "cell-forty-step-hidden-trail",
+      "split": "confirmatory",
+      "condition": "running-turn-counter-control",
+      "interventionDescription": "Diagnostic control displays the exact cumulative turn count throughout and at the end.",
+      "failureModeId": "dynamic-route-turn-integration",
+      "generator": "route-turn-count-hard",
+      "seed": 4920001,
+      "difficulty": 10,
+      "variant": 1,
+      "artifact": "public/evaluations/route-turn-confirmatory-v3/rth-84f22b7de4840e85-running-turn-counter-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "How many times does the moving gold disk CHANGE DIRECTION during the complete route?",
+      "answerOptions": [
+        "22",
+        "21",
+        "23",
+        "20"
+      ],
+      "expectedAnswer": "21",
+      "sha256": "654b832c741cd854878953717094ae1901035cf0ee71955d4bce9a1036c5fe02",
+      "parameters": {
+        "turnCount": 21,
+        "path": [
+          [
+            8,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            8,
+            5
+          ],
+          [
+            9,
+            5
+          ],
+          [
+            9,
+            6
+          ],
+          [
+            8,
+            6
+          ],
+          [
+            8,
+            5
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            8,
+            3
+          ],
+          [
+            8,
+            4
+          ],
+          [
+            8,
+            5
+          ],
+          [
+            9,
+            5
+          ],
+          [
+            10,
+            5
+          ],
+          [
+            10,
+            6
+          ],
+          [
+            10,
+            7
+          ],
+          [
+            9,
+            7
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            8,
+            13
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            9,
+            12
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            9,
+            9
+          ],
+          [
+            10,
+            9
+          ],
+          [
+            10,
+            10
+          ],
+          [
+            10,
+            11
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            8
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 201
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count changes in motion direction and return exactly one allowed count."
+    },
+    {
+      "candidateId": "rth-09a2ee601daa9455-native-1x",
+      "cellId": "cell-forty-step-hidden-trail",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A forty-step route disappears behind the moving disk.",
+      "failureModeId": "dynamic-route-turn-integration",
+      "generator": "route-turn-count-hard",
+      "seed": 4920002,
+      "difficulty": 96,
+      "variant": 2,
+      "artifact": "public/evaluations/route-turn-confirmatory-v3/rth-09a2ee601daa9455-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "How many times does the moving gold disk CHANGE DIRECTION during the complete route?",
+      "answerOptions": [
+        "22",
+        "23",
+        "21",
+        "20"
+      ],
+      "expectedAnswer": "22",
+      "sha256": "37674e00ceae8535fecbd890e4d9b0e97c740794a6da883862597393b1beb2e9",
+      "parameters": {
+        "turnCount": 22,
+        "path": [
+          [
+            8,
+            8
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            9,
+            9
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            9,
+            9
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            10,
+            8
+          ],
+          [
+            11,
+            8
+          ],
+          [
+            11,
+            7
+          ],
+          [
+            11,
+            6
+          ],
+          [
+            10,
+            6
+          ],
+          [
+            9,
+            6
+          ],
+          [
+            8,
+            6
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            8,
+            6
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            9,
+            7
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            8
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 202
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count changes in motion direction and return exactly one allowed count."
+    },
+    {
+      "candidateId": "rth-09a2ee601daa9455-running-turn-counter-control",
+      "cellId": "cell-forty-step-hidden-trail",
+      "split": "confirmatory",
+      "condition": "running-turn-counter-control",
+      "interventionDescription": "Diagnostic control displays the exact cumulative turn count throughout and at the end.",
+      "failureModeId": "dynamic-route-turn-integration",
+      "generator": "route-turn-count-hard",
+      "seed": 4920002,
+      "difficulty": 10,
+      "variant": 2,
+      "artifact": "public/evaluations/route-turn-confirmatory-v3/rth-09a2ee601daa9455-running-turn-counter-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "How many times does the moving gold disk CHANGE DIRECTION during the complete route?",
+      "answerOptions": [
+        "22",
+        "23",
+        "21",
+        "20"
+      ],
+      "expectedAnswer": "22",
+      "sha256": "231e1045b7783caac2c5592930415e3f98ad09afc91741f2d6b277713415335e",
+      "parameters": {
+        "turnCount": 22,
+        "path": [
+          [
+            8,
+            8
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            9,
+            9
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            9,
+            9
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            10,
+            8
+          ],
+          [
+            11,
+            8
+          ],
+          [
+            11,
+            7
+          ],
+          [
+            11,
+            6
+          ],
+          [
+            10,
+            6
+          ],
+          [
+            9,
+            6
+          ],
+          [
+            8,
+            6
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            8,
+            6
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            9,
+            7
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            8
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 202
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count changes in motion direction and return exactly one allowed count."
+    },
+    {
+      "candidateId": "rth-0b2bd585528ff029-native-1x",
+      "cellId": "cell-forty-step-hidden-trail",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A forty-step route disappears behind the moving disk.",
+      "failureModeId": "dynamic-route-turn-integration",
+      "generator": "route-turn-count-hard",
+      "seed": 4920003,
+      "difficulty": 96,
+      "variant": 3,
+      "artifact": "public/evaluations/route-turn-confirmatory-v3/rth-0b2bd585528ff029-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "How many times does the moving gold disk CHANGE DIRECTION during the complete route?",
+      "answerOptions": [
+        "23",
+        "22",
+        "21",
+        "20"
+      ],
+      "expectedAnswer": "23",
+      "sha256": "bdf28605fc0426faf015a3ba9ffb0a347d2c46ae7b739872996ba456a0ca1a6c",
+      "parameters": {
+        "turnCount": 23,
+        "path": [
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 203
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count changes in motion direction and return exactly one allowed count."
+    },
+    {
+      "candidateId": "rth-0b2bd585528ff029-running-turn-counter-control",
+      "cellId": "cell-forty-step-hidden-trail",
+      "split": "confirmatory",
+      "condition": "running-turn-counter-control",
+      "interventionDescription": "Diagnostic control displays the exact cumulative turn count throughout and at the end.",
+      "failureModeId": "dynamic-route-turn-integration",
+      "generator": "route-turn-count-hard",
+      "seed": 4920003,
+      "difficulty": 10,
+      "variant": 3,
+      "artifact": "public/evaluations/route-turn-confirmatory-v3/rth-0b2bd585528ff029-running-turn-counter-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "How many times does the moving gold disk CHANGE DIRECTION during the complete route?",
+      "answerOptions": [
+        "23",
+        "22",
+        "21",
+        "20"
+      ],
+      "expectedAnswer": "23",
+      "sha256": "d3d8c6384355af6468f05d047287dc8319fb1dad4789c44302131ab4cdc4bcf1",
+      "parameters": {
+        "turnCount": 23,
+        "path": [
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 203
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count changes in motion direction and return exactly one allowed count."
+    },
+    {
+      "candidateId": "rth-54b7b3abc84130fa-native-1x",
+      "cellId": "cell-forty-step-hidden-trail",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A forty-step route disappears behind the moving disk.",
+      "failureModeId": "dynamic-route-turn-integration",
+      "generator": "route-turn-count-hard",
+      "seed": 4920004,
+      "difficulty": 96,
+      "variant": 4,
+      "artifact": "public/evaluations/route-turn-confirmatory-v3/rth-54b7b3abc84130fa-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "How many times does the moving gold disk CHANGE DIRECTION during the complete route?",
+      "answerOptions": [
+        "23",
+        "22",
+        "21",
+        "20"
+      ],
+      "expectedAnswer": "20",
+      "sha256": "ef4ccadfda3a868847958541dd27fde3beac8dc8c2406c0cc09b528c987d5860",
+      "parameters": {
+        "turnCount": 20,
+        "path": [
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            10,
+            8
+          ],
+          [
+            11,
+            8
+          ],
+          [
+            11,
+            9
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 204
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count changes in motion direction and return exactly one allowed count."
+    },
+    {
+      "candidateId": "rth-54b7b3abc84130fa-running-turn-counter-control",
+      "cellId": "cell-forty-step-hidden-trail",
+      "split": "confirmatory",
+      "condition": "running-turn-counter-control",
+      "interventionDescription": "Diagnostic control displays the exact cumulative turn count throughout and at the end.",
+      "failureModeId": "dynamic-route-turn-integration",
+      "generator": "route-turn-count-hard",
+      "seed": 4920004,
+      "difficulty": 10,
+      "variant": 4,
+      "artifact": "public/evaluations/route-turn-confirmatory-v3/rth-54b7b3abc84130fa-running-turn-counter-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "How many times does the moving gold disk CHANGE DIRECTION during the complete route?",
+      "answerOptions": [
+        "23",
+        "22",
+        "21",
+        "20"
+      ],
+      "expectedAnswer": "20",
+      "sha256": "a1b52548daee4200795fe3664fffe992c1c43ecfbd3d0fd9446bb3efceafeb5d",
+      "parameters": {
+        "turnCount": 20,
+        "path": [
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            10,
+            8
+          ],
+          [
+            11,
+            8
+          ],
+          [
+            11,
+            9
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 204
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count changes in motion direction and return exactly one allowed count."
+    },
+    {
+      "candidateId": "rth-c51cdcb83cab1bcf-native-1x",
+      "cellId": "cell-forty-step-hidden-trail",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A forty-step route disappears behind the moving disk.",
+      "failureModeId": "dynamic-route-turn-integration",
+      "generator": "route-turn-count-hard",
+      "seed": 4920005,
+      "difficulty": 96,
+      "variant": 5,
+      "artifact": "public/evaluations/route-turn-confirmatory-v3/rth-c51cdcb83cab1bcf-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "How many times does the moving gold disk CHANGE DIRECTION during the complete route?",
+      "answerOptions": [
+        "22",
+        "23",
+        "21",
+        "20"
+      ],
+      "expectedAnswer": "21",
+      "sha256": "13d6edfbb1ab184b69c4c580d82aeac61983bb7da178ca031151be2a7ab3c026",
+      "parameters": {
+        "turnCount": 21,
+        "path": [
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            8,
+            6
+          ],
+          [
+            8,
+            5
+          ],
+          [
+            8,
+            4
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            9,
+            9
+          ],
+          [
+            10,
+            9
+          ],
+          [
+            11,
+            9
+          ],
+          [
+            11,
+            10
+          ],
+          [
+            11,
+            11
+          ],
+          [
+            11,
+            12
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            10,
+            11
+          ],
+          [
+            11,
+            11
+          ],
+          [
+            12,
+            11
+          ],
+          [
+            12,
+            12
+          ],
+          [
+            11,
+            12
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            10,
+            11
+          ],
+          [
+            10,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            9,
+            9
+          ],
+          [
+            10,
+            9
+          ],
+          [
+            10,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            9,
+            9
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            9,
+            7
+          ],
+          [
+            9,
+            6
+          ],
+          [
+            9,
+            5
+          ],
+          [
+            10,
+            5
+          ],
+          [
+            11,
+            5
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 205
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count changes in motion direction and return exactly one allowed count."
+    },
+    {
+      "candidateId": "rth-c51cdcb83cab1bcf-running-turn-counter-control",
+      "cellId": "cell-forty-step-hidden-trail",
+      "split": "confirmatory",
+      "condition": "running-turn-counter-control",
+      "interventionDescription": "Diagnostic control displays the exact cumulative turn count throughout and at the end.",
+      "failureModeId": "dynamic-route-turn-integration",
+      "generator": "route-turn-count-hard",
+      "seed": 4920005,
+      "difficulty": 10,
+      "variant": 5,
+      "artifact": "public/evaluations/route-turn-confirmatory-v3/rth-c51cdcb83cab1bcf-running-turn-counter-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "How many times does the moving gold disk CHANGE DIRECTION during the complete route?",
+      "answerOptions": [
+        "22",
+        "23",
+        "21",
+        "20"
+      ],
+      "expectedAnswer": "21",
+      "sha256": "b945389a17206f0e4194a1543e8746a73bc36b2f63cd721714d6c6ce83f99488",
+      "parameters": {
+        "turnCount": 21,
+        "path": [
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            8,
+            6
+          ],
+          [
+            8,
+            5
+          ],
+          [
+            8,
+            4
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            9,
+            9
+          ],
+          [
+            10,
+            9
+          ],
+          [
+            11,
+            9
+          ],
+          [
+            11,
+            10
+          ],
+          [
+            11,
+            11
+          ],
+          [
+            11,
+            12
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            10,
+            11
+          ],
+          [
+            11,
+            11
+          ],
+          [
+            12,
+            11
+          ],
+          [
+            12,
+            12
+          ],
+          [
+            11,
+            12
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            10,
+            11
+          ],
+          [
+            10,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            9,
+            9
+          ],
+          [
+            10,
+            9
+          ],
+          [
+            10,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            9,
+            9
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            9,
+            7
+          ],
+          [
+            9,
+            6
+          ],
+          [
+            9,
+            5
+          ],
+          [
+            10,
+            5
+          ],
+          [
+            11,
+            5
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 205
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count changes in motion direction and return exactly one allowed count."
+    },
+    {
+      "candidateId": "rth-40635345ca1e39b9-native-1x",
+      "cellId": "cell-forty-step-hidden-trail",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A forty-step route disappears behind the moving disk.",
+      "failureModeId": "dynamic-route-turn-integration",
+      "generator": "route-turn-count-hard",
+      "seed": 4920006,
+      "difficulty": 96,
+      "variant": 6,
+      "artifact": "public/evaluations/route-turn-confirmatory-v3/rth-40635345ca1e39b9-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "How many times does the moving gold disk CHANGE DIRECTION during the complete route?",
+      "answerOptions": [
+        "21",
+        "23",
+        "22",
+        "20"
+      ],
+      "expectedAnswer": "22",
+      "sha256": "50c472efd88957180c318b4b6d3f87c30fad841b73551ff8b49e299134ec2502",
+      "parameters": {
+        "turnCount": 22,
+        "path": [
+          [
+            8,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            9,
+            7
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            9,
+            9
+          ],
+          [
+            10,
+            9
+          ],
+          [
+            11,
+            9
+          ],
+          [
+            11,
+            8
+          ],
+          [
+            10,
+            8
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            4,
+            12
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 206
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count changes in motion direction and return exactly one allowed count."
+    },
+    {
+      "candidateId": "rth-40635345ca1e39b9-running-turn-counter-control",
+      "cellId": "cell-forty-step-hidden-trail",
+      "split": "confirmatory",
+      "condition": "running-turn-counter-control",
+      "interventionDescription": "Diagnostic control displays the exact cumulative turn count throughout and at the end.",
+      "failureModeId": "dynamic-route-turn-integration",
+      "generator": "route-turn-count-hard",
+      "seed": 4920006,
+      "difficulty": 10,
+      "variant": 6,
+      "artifact": "public/evaluations/route-turn-confirmatory-v3/rth-40635345ca1e39b9-running-turn-counter-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "How many times does the moving gold disk CHANGE DIRECTION during the complete route?",
+      "answerOptions": [
+        "21",
+        "23",
+        "22",
+        "20"
+      ],
+      "expectedAnswer": "22",
+      "sha256": "4de8c59a9318a61f88892954f36bc3cbb1de538e8169b7cc3eded1db509f10d1",
+      "parameters": {
+        "turnCount": 22,
+        "path": [
+          [
+            8,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            9,
+            7
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            9,
+            9
+          ],
+          [
+            10,
+            9
+          ],
+          [
+            11,
+            9
+          ],
+          [
+            11,
+            8
+          ],
+          [
+            10,
+            8
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            4,
+            12
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 206
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count changes in motion direction and return exactly one allowed count."
+    },
+    {
+      "candidateId": "rth-f6c8d73881025488-native-1x",
+      "cellId": "cell-forty-step-hidden-trail",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A forty-step route disappears behind the moving disk.",
+      "failureModeId": "dynamic-route-turn-integration",
+      "generator": "route-turn-count-hard",
+      "seed": 4920007,
+      "difficulty": 96,
+      "variant": 7,
+      "artifact": "public/evaluations/route-turn-confirmatory-v3/rth-f6c8d73881025488-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "How many times does the moving gold disk CHANGE DIRECTION during the complete route?",
+      "answerOptions": [
+        "23",
+        "21",
+        "22",
+        "20"
+      ],
+      "expectedAnswer": "23",
+      "sha256": "ff5330e6349f112c1f8855815b506ad0540d064ecb20b85e66e5d2270407c701",
+      "parameters": {
+        "turnCount": 23,
+        "path": [
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            8,
+            13
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            8
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 207
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count changes in motion direction and return exactly one allowed count."
+    },
+    {
+      "candidateId": "rth-f6c8d73881025488-running-turn-counter-control",
+      "cellId": "cell-forty-step-hidden-trail",
+      "split": "confirmatory",
+      "condition": "running-turn-counter-control",
+      "interventionDescription": "Diagnostic control displays the exact cumulative turn count throughout and at the end.",
+      "failureModeId": "dynamic-route-turn-integration",
+      "generator": "route-turn-count-hard",
+      "seed": 4920007,
+      "difficulty": 10,
+      "variant": 7,
+      "artifact": "public/evaluations/route-turn-confirmatory-v3/rth-f6c8d73881025488-running-turn-counter-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "How many times does the moving gold disk CHANGE DIRECTION during the complete route?",
+      "answerOptions": [
+        "23",
+        "21",
+        "22",
+        "20"
+      ],
+      "expectedAnswer": "23",
+      "sha256": "7c6dfac3bc6f2ad51520597a668709852ccfaf723b57fb2d4b6d9914bb30bd7d",
+      "parameters": {
+        "turnCount": 23,
+        "path": [
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            8,
+            13
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            8
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 207
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count changes in motion direction and return exactly one allowed count."
+    },
+    {
+      "candidateId": "rth-4b761abeb81ae764-native-1x",
+      "cellId": "cell-forty-step-hidden-trail",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A forty-step route disappears behind the moving disk.",
+      "failureModeId": "dynamic-route-turn-integration",
+      "generator": "route-turn-count-hard",
+      "seed": 4920008,
+      "difficulty": 96,
+      "variant": 8,
+      "artifact": "public/evaluations/route-turn-confirmatory-v3/rth-4b761abeb81ae764-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "How many times does the moving gold disk CHANGE DIRECTION during the complete route?",
+      "answerOptions": [
+        "21",
+        "23",
+        "22",
+        "20"
+      ],
+      "expectedAnswer": "20",
+      "sha256": "1cad9b4968ff34d4861af9df3d47fc5df11f28819508c3c86b68117c48b32a4d",
+      "parameters": {
+        "turnCount": 20,
+        "path": [
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            10
+          ],
+          [
+            11,
+            10
+          ],
+          [
+            12,
+            10
+          ],
+          [
+            12,
+            9
+          ],
+          [
+            12,
+            8
+          ],
+          [
+            12,
+            7
+          ],
+          [
+            12,
+            6
+          ],
+          [
+            11,
+            6
+          ],
+          [
+            10,
+            6
+          ],
+          [
+            9,
+            6
+          ],
+          [
+            9,
+            7
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            10
+          ],
+          [
+            11,
+            10
+          ],
+          [
+            11,
+            9
+          ],
+          [
+            11,
+            8
+          ],
+          [
+            11,
+            7
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 208
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count changes in motion direction and return exactly one allowed count."
+    },
+    {
+      "candidateId": "rth-4b761abeb81ae764-running-turn-counter-control",
+      "cellId": "cell-forty-step-hidden-trail",
+      "split": "confirmatory",
+      "condition": "running-turn-counter-control",
+      "interventionDescription": "Diagnostic control displays the exact cumulative turn count throughout and at the end.",
+      "failureModeId": "dynamic-route-turn-integration",
+      "generator": "route-turn-count-hard",
+      "seed": 4920008,
+      "difficulty": 10,
+      "variant": 8,
+      "artifact": "public/evaluations/route-turn-confirmatory-v3/rth-4b761abeb81ae764-running-turn-counter-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "How many times does the moving gold disk CHANGE DIRECTION during the complete route?",
+      "answerOptions": [
+        "21",
+        "23",
+        "22",
+        "20"
+      ],
+      "expectedAnswer": "20",
+      "sha256": "1f51f137c6baa5a08cfe5a5a54f1d8332ed699b1871701a5186e48aa745e0cac",
+      "parameters": {
+        "turnCount": 20,
+        "path": [
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            10
+          ],
+          [
+            11,
+            10
+          ],
+          [
+            12,
+            10
+          ],
+          [
+            12,
+            9
+          ],
+          [
+            12,
+            8
+          ],
+          [
+            12,
+            7
+          ],
+          [
+            12,
+            6
+          ],
+          [
+            11,
+            6
+          ],
+          [
+            10,
+            6
+          ],
+          [
+            9,
+            6
+          ],
+          [
+            9,
+            7
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            10
+          ],
+          [
+            11,
+            10
+          ],
+          [
+            11,
+            9
+          ],
+          [
+            11,
+            8
+          ],
+          [
+            11,
+            7
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 208
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count changes in motion direction and return exactly one allowed count."
+    },
+    {
+      "candidateId": "rth-6a8bd2185e298d5f-native-1x",
+      "cellId": "cell-forty-step-hidden-trail",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A forty-step route disappears behind the moving disk.",
+      "failureModeId": "dynamic-route-turn-integration",
+      "generator": "route-turn-count-hard",
+      "seed": 4920009,
+      "difficulty": 96,
+      "variant": 9,
+      "artifact": "public/evaluations/route-turn-confirmatory-v3/rth-6a8bd2185e298d5f-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "How many times does the moving gold disk CHANGE DIRECTION during the complete route?",
+      "answerOptions": [
+        "21",
+        "23",
+        "22",
+        "20"
+      ],
+      "expectedAnswer": "21",
+      "sha256": "004397f09c351a132d67d47a4c3f9f2f3b29520ec6aa40d7969714f1506fb0cc",
+      "parameters": {
+        "turnCount": 21,
+        "path": [
+          [
+            8,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            7,
+            14
+          ],
+          [
+            8,
+            14
+          ],
+          [
+            8,
+            13
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            8,
+            6
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            7,
+            1
+          ],
+          [
+            8,
+            1
+          ],
+          [
+            9,
+            1
+          ],
+          [
+            10,
+            1
+          ],
+          [
+            10,
+            2
+          ],
+          [
+            10,
+            3
+          ],
+          [
+            11,
+            3
+          ],
+          [
+            12,
+            3
+          ],
+          [
+            12,
+            2
+          ],
+          [
+            11,
+            2
+          ],
+          [
+            11,
+            1
+          ],
+          [
+            12,
+            1
+          ],
+          [
+            12,
+            2
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 209
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count changes in motion direction and return exactly one allowed count."
+    },
+    {
+      "candidateId": "rth-6a8bd2185e298d5f-running-turn-counter-control",
+      "cellId": "cell-forty-step-hidden-trail",
+      "split": "confirmatory",
+      "condition": "running-turn-counter-control",
+      "interventionDescription": "Diagnostic control displays the exact cumulative turn count throughout and at the end.",
+      "failureModeId": "dynamic-route-turn-integration",
+      "generator": "route-turn-count-hard",
+      "seed": 4920009,
+      "difficulty": 10,
+      "variant": 9,
+      "artifact": "public/evaluations/route-turn-confirmatory-v3/rth-6a8bd2185e298d5f-running-turn-counter-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "How many times does the moving gold disk CHANGE DIRECTION during the complete route?",
+      "answerOptions": [
+        "21",
+        "23",
+        "22",
+        "20"
+      ],
+      "expectedAnswer": "21",
+      "sha256": "826c18dfff5214ba74d49e210e7c9ac530fda4824298e299c403421fa162ce11",
+      "parameters": {
+        "turnCount": 21,
+        "path": [
+          [
+            8,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            7,
+            14
+          ],
+          [
+            8,
+            14
+          ],
+          [
+            8,
+            13
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            8,
+            6
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            7,
+            1
+          ],
+          [
+            8,
+            1
+          ],
+          [
+            9,
+            1
+          ],
+          [
+            10,
+            1
+          ],
+          [
+            10,
+            2
+          ],
+          [
+            10,
+            3
+          ],
+          [
+            11,
+            3
+          ],
+          [
+            12,
+            3
+          ],
+          [
+            12,
+            2
+          ],
+          [
+            11,
+            2
+          ],
+          [
+            11,
+            1
+          ],
+          [
+            12,
+            1
+          ],
+          [
+            12,
+            2
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 209
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count changes in motion direction and return exactly one allowed count."
+    },
+    {
+      "candidateId": "rth-c868523d0e73f485-native-1x",
+      "cellId": "cell-forty-step-hidden-trail",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A forty-step route disappears behind the moving disk.",
+      "failureModeId": "dynamic-route-turn-integration",
+      "generator": "route-turn-count-hard",
+      "seed": 4920010,
+      "difficulty": 96,
+      "variant": 10,
+      "artifact": "public/evaluations/route-turn-confirmatory-v3/rth-c868523d0e73f485-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "How many times does the moving gold disk CHANGE DIRECTION during the complete route?",
+      "answerOptions": [
+        "22",
+        "21",
+        "23",
+        "20"
+      ],
+      "expectedAnswer": "22",
+      "sha256": "91a5ad0cda173d62ede41bce138d2c9ca6a9d3f001117dfb7d4e22fab29298a9",
+      "parameters": {
+        "turnCount": 22,
+        "path": [
+          [
+            8,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            8,
+            6
+          ],
+          [
+            9,
+            6
+          ],
+          [
+            9,
+            7
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            8,
+            6
+          ],
+          [
+            9,
+            6
+          ],
+          [
+            10,
+            6
+          ],
+          [
+            10,
+            5
+          ],
+          [
+            11,
+            5
+          ],
+          [
+            12,
+            5
+          ],
+          [
+            13,
+            5
+          ],
+          [
+            13,
+            4
+          ],
+          [
+            14,
+            4
+          ],
+          [
+            14,
+            5
+          ],
+          [
+            13,
+            5
+          ],
+          [
+            12,
+            5
+          ],
+          [
+            11,
+            5
+          ],
+          [
+            11,
+            6
+          ],
+          [
+            11,
+            7
+          ],
+          [
+            10,
+            7
+          ],
+          [
+            9,
+            7
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 210
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count changes in motion direction and return exactly one allowed count."
+    },
+    {
+      "candidateId": "rth-c868523d0e73f485-running-turn-counter-control",
+      "cellId": "cell-forty-step-hidden-trail",
+      "split": "confirmatory",
+      "condition": "running-turn-counter-control",
+      "interventionDescription": "Diagnostic control displays the exact cumulative turn count throughout and at the end.",
+      "failureModeId": "dynamic-route-turn-integration",
+      "generator": "route-turn-count-hard",
+      "seed": 4920010,
+      "difficulty": 10,
+      "variant": 10,
+      "artifact": "public/evaluations/route-turn-confirmatory-v3/rth-c868523d0e73f485-running-turn-counter-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "How many times does the moving gold disk CHANGE DIRECTION during the complete route?",
+      "answerOptions": [
+        "22",
+        "21",
+        "23",
+        "20"
+      ],
+      "expectedAnswer": "22",
+      "sha256": "a851fbe553713e23f2580138cdd10556dec081c38def07263e8dbb32a453ea96",
+      "parameters": {
+        "turnCount": 22,
+        "path": [
+          [
+            8,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            8,
+            6
+          ],
+          [
+            9,
+            6
+          ],
+          [
+            9,
+            7
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            8,
+            6
+          ],
+          [
+            9,
+            6
+          ],
+          [
+            10,
+            6
+          ],
+          [
+            10,
+            5
+          ],
+          [
+            11,
+            5
+          ],
+          [
+            12,
+            5
+          ],
+          [
+            13,
+            5
+          ],
+          [
+            13,
+            4
+          ],
+          [
+            14,
+            4
+          ],
+          [
+            14,
+            5
+          ],
+          [
+            13,
+            5
+          ],
+          [
+            12,
+            5
+          ],
+          [
+            11,
+            5
+          ],
+          [
+            11,
+            6
+          ],
+          [
+            11,
+            7
+          ],
+          [
+            10,
+            7
+          ],
+          [
+            9,
+            7
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 210
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count changes in motion direction and return exactly one allowed count."
+    },
+    {
+      "candidateId": "rth-b78656ab11895b08-native-1x",
+      "cellId": "cell-forty-step-hidden-trail",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A forty-step route disappears behind the moving disk.",
+      "failureModeId": "dynamic-route-turn-integration",
+      "generator": "route-turn-count-hard",
+      "seed": 4920011,
+      "difficulty": 96,
+      "variant": 11,
+      "artifact": "public/evaluations/route-turn-confirmatory-v3/rth-b78656ab11895b08-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "How many times does the moving gold disk CHANGE DIRECTION during the complete route?",
+      "answerOptions": [
+        "21",
+        "22",
+        "23",
+        "20"
+      ],
+      "expectedAnswer": "23",
+      "sha256": "2854f1c20228da1197903c35981ff23b2101ea3e43974f457cf1c2f2222c2d88",
+      "parameters": {
+        "turnCount": 23,
+        "path": [
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            10
+          ],
+          [
+            10,
+            11
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            9,
+            12
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            9,
+            12
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            1,
+            13
+          ],
+          [
+            1,
+            14
+          ],
+          [
+            2,
+            14
+          ],
+          [
+            3,
+            14
+          ],
+          [
+            4,
+            14
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 211
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count changes in motion direction and return exactly one allowed count."
+    },
+    {
+      "candidateId": "rth-b78656ab11895b08-running-turn-counter-control",
+      "cellId": "cell-forty-step-hidden-trail",
+      "split": "confirmatory",
+      "condition": "running-turn-counter-control",
+      "interventionDescription": "Diagnostic control displays the exact cumulative turn count throughout and at the end.",
+      "failureModeId": "dynamic-route-turn-integration",
+      "generator": "route-turn-count-hard",
+      "seed": 4920011,
+      "difficulty": 10,
+      "variant": 11,
+      "artifact": "public/evaluations/route-turn-confirmatory-v3/rth-b78656ab11895b08-running-turn-counter-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "How many times does the moving gold disk CHANGE DIRECTION during the complete route?",
+      "answerOptions": [
+        "21",
+        "22",
+        "23",
+        "20"
+      ],
+      "expectedAnswer": "23",
+      "sha256": "49efa65482ffc2edb4f2c49bf5e2db821ce4a4c01843b57b49481f305195e776",
+      "parameters": {
+        "turnCount": 23,
+        "path": [
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            10
+          ],
+          [
+            10,
+            11
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            9,
+            12
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            9,
+            12
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            6,
+            12
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            2,
+            13
+          ],
+          [
+            1,
+            13
+          ],
+          [
+            1,
+            14
+          ],
+          [
+            2,
+            14
+          ],
+          [
+            3,
+            14
+          ],
+          [
+            4,
+            14
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            3,
+            12
+          ],
+          [
+            3,
+            13
+          ],
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            13
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 211
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count changes in motion direction and return exactly one allowed count."
+    },
+    {
+      "candidateId": "rth-d5d93cd4fbd14e07-native-1x",
+      "cellId": "cell-forty-step-hidden-trail",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A forty-step route disappears behind the moving disk.",
+      "failureModeId": "dynamic-route-turn-integration",
+      "generator": "route-turn-count-hard",
+      "seed": 4920012,
+      "difficulty": 96,
+      "variant": 12,
+      "artifact": "public/evaluations/route-turn-confirmatory-v3/rth-d5d93cd4fbd14e07-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "How many times does the moving gold disk CHANGE DIRECTION during the complete route?",
+      "answerOptions": [
+        "21",
+        "22",
+        "23",
+        "20"
+      ],
+      "expectedAnswer": "20",
+      "sha256": "f917b3e9333b4131224454df6ad8611e44f8064d647231aadf41515bbabd06fa",
+      "parameters": {
+        "turnCount": 20,
+        "path": [
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            10
+          ],
+          [
+            10,
+            11
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            9,
+            9
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            9,
+            7
+          ],
+          [
+            9,
+            6
+          ],
+          [
+            9,
+            5
+          ],
+          [
+            9,
+            4
+          ],
+          [
+            10,
+            4
+          ],
+          [
+            11,
+            4
+          ],
+          [
+            11,
+            3
+          ],
+          [
+            12,
+            3
+          ],
+          [
+            13,
+            3
+          ],
+          [
+            13,
+            4
+          ],
+          [
+            13,
+            5
+          ],
+          [
+            13,
+            6
+          ],
+          [
+            13,
+            7
+          ],
+          [
+            12,
+            7
+          ],
+          [
+            11,
+            7
+          ],
+          [
+            10,
+            7
+          ],
+          [
+            10,
+            6
+          ],
+          [
+            10,
+            5
+          ],
+          [
+            11,
+            5
+          ],
+          [
+            11,
+            4
+          ],
+          [
+            11,
+            3
+          ],
+          [
+            10,
+            3
+          ],
+          [
+            9,
+            3
+          ],
+          [
+            8,
+            3
+          ],
+          [
+            8,
+            2
+          ],
+          [
+            9,
+            2
+          ],
+          [
+            9,
+            3
+          ],
+          [
+            9,
+            4
+          ],
+          [
+            9,
+            5
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 212
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count changes in motion direction and return exactly one allowed count."
+    },
+    {
+      "candidateId": "rth-d5d93cd4fbd14e07-running-turn-counter-control",
+      "cellId": "cell-forty-step-hidden-trail",
+      "split": "confirmatory",
+      "condition": "running-turn-counter-control",
+      "interventionDescription": "Diagnostic control displays the exact cumulative turn count throughout and at the end.",
+      "failureModeId": "dynamic-route-turn-integration",
+      "generator": "route-turn-count-hard",
+      "seed": 4920012,
+      "difficulty": 10,
+      "variant": 12,
+      "artifact": "public/evaluations/route-turn-confirmatory-v3/rth-d5d93cd4fbd14e07-running-turn-counter-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "How many times does the moving gold disk CHANGE DIRECTION during the complete route?",
+      "answerOptions": [
+        "21",
+        "22",
+        "23",
+        "20"
+      ],
+      "expectedAnswer": "20",
+      "sha256": "10cd717e1519d46eb1ec7efad67e015bebd6a31ac09d8c0cbf052a5945dfaaf8",
+      "parameters": {
+        "turnCount": 20,
+        "path": [
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            10
+          ],
+          [
+            10,
+            11
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            9,
+            9
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            9,
+            7
+          ],
+          [
+            9,
+            6
+          ],
+          [
+            9,
+            5
+          ],
+          [
+            9,
+            4
+          ],
+          [
+            10,
+            4
+          ],
+          [
+            11,
+            4
+          ],
+          [
+            11,
+            3
+          ],
+          [
+            12,
+            3
+          ],
+          [
+            13,
+            3
+          ],
+          [
+            13,
+            4
+          ],
+          [
+            13,
+            5
+          ],
+          [
+            13,
+            6
+          ],
+          [
+            13,
+            7
+          ],
+          [
+            12,
+            7
+          ],
+          [
+            11,
+            7
+          ],
+          [
+            10,
+            7
+          ],
+          [
+            10,
+            6
+          ],
+          [
+            10,
+            5
+          ],
+          [
+            11,
+            5
+          ],
+          [
+            11,
+            4
+          ],
+          [
+            11,
+            3
+          ],
+          [
+            10,
+            3
+          ],
+          [
+            9,
+            3
+          ],
+          [
+            8,
+            3
+          ],
+          [
+            8,
+            2
+          ],
+          [
+            9,
+            2
+          ],
+          [
+            9,
+            3
+          ],
+          [
+            9,
+            4
+          ],
+          [
+            9,
+            5
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 212
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count changes in motion direction and return exactly one allowed count."
+    },
+    {
+      "candidateId": "rth-70a3f395e072a6c4-native-1x",
+      "cellId": "cell-forty-step-hidden-trail",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A forty-step route disappears behind the moving disk.",
+      "failureModeId": "dynamic-route-turn-integration",
+      "generator": "route-turn-count-hard",
+      "seed": 4920013,
+      "difficulty": 96,
+      "variant": 13,
+      "artifact": "public/evaluations/route-turn-confirmatory-v3/rth-70a3f395e072a6c4-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "How many times does the moving gold disk CHANGE DIRECTION during the complete route?",
+      "answerOptions": [
+        "23",
+        "22",
+        "21",
+        "20"
+      ],
+      "expectedAnswer": "21",
+      "sha256": "46a188c277604e0657ce00707f61295d7c941707d4bac2ac7c7ebafced1c339c",
+      "parameters": {
+        "turnCount": 21,
+        "path": [
+          [
+            8,
+            8
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            9,
+            7
+          ],
+          [
+            9,
+            6
+          ],
+          [
+            8,
+            6
+          ],
+          [
+            8,
+            5
+          ],
+          [
+            9,
+            5
+          ],
+          [
+            9,
+            6
+          ],
+          [
+            9,
+            7
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            9,
+            9
+          ],
+          [
+            10,
+            9
+          ],
+          [
+            11,
+            9
+          ],
+          [
+            12,
+            9
+          ],
+          [
+            13,
+            9
+          ],
+          [
+            14,
+            9
+          ],
+          [
+            14,
+            8
+          ],
+          [
+            13,
+            8
+          ],
+          [
+            13,
+            7
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 213
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count changes in motion direction and return exactly one allowed count."
+    },
+    {
+      "candidateId": "rth-70a3f395e072a6c4-running-turn-counter-control",
+      "cellId": "cell-forty-step-hidden-trail",
+      "split": "confirmatory",
+      "condition": "running-turn-counter-control",
+      "interventionDescription": "Diagnostic control displays the exact cumulative turn count throughout and at the end.",
+      "failureModeId": "dynamic-route-turn-integration",
+      "generator": "route-turn-count-hard",
+      "seed": 4920013,
+      "difficulty": 10,
+      "variant": 13,
+      "artifact": "public/evaluations/route-turn-confirmatory-v3/rth-70a3f395e072a6c4-running-turn-counter-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "How many times does the moving gold disk CHANGE DIRECTION during the complete route?",
+      "answerOptions": [
+        "23",
+        "22",
+        "21",
+        "20"
+      ],
+      "expectedAnswer": "21",
+      "sha256": "6ec80684638aca73fda1a4b3fd90129a1f8b8a948ce265f4fc59a568cf9aa5f4",
+      "parameters": {
+        "turnCount": 21,
+        "path": [
+          [
+            8,
+            8
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            9,
+            7
+          ],
+          [
+            9,
+            6
+          ],
+          [
+            8,
+            6
+          ],
+          [
+            8,
+            5
+          ],
+          [
+            9,
+            5
+          ],
+          [
+            9,
+            6
+          ],
+          [
+            9,
+            7
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            9,
+            9
+          ],
+          [
+            10,
+            9
+          ],
+          [
+            11,
+            9
+          ],
+          [
+            12,
+            9
+          ],
+          [
+            13,
+            9
+          ],
+          [
+            14,
+            9
+          ],
+          [
+            14,
+            8
+          ],
+          [
+            13,
+            8
+          ],
+          [
+            13,
+            7
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 213
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count changes in motion direction and return exactly one allowed count."
+    },
+    {
+      "candidateId": "rth-5f0f02b6e8e97af8-native-1x",
+      "cellId": "cell-forty-step-hidden-trail",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A forty-step route disappears behind the moving disk.",
+      "failureModeId": "dynamic-route-turn-integration",
+      "generator": "route-turn-count-hard",
+      "seed": 4920014,
+      "difficulty": 96,
+      "variant": 14,
+      "artifact": "public/evaluations/route-turn-confirmatory-v3/rth-5f0f02b6e8e97af8-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "How many times does the moving gold disk CHANGE DIRECTION during the complete route?",
+      "answerOptions": [
+        "23",
+        "22",
+        "21",
+        "20"
+      ],
+      "expectedAnswer": "22",
+      "sha256": "a6b06a47417100d456f56b78af71e551214c8de3cbe935e292ff32326cbaf27b",
+      "parameters": {
+        "turnCount": 22,
+        "path": [
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            6,
+            14
+          ],
+          [
+            7,
+            14
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            9,
+            9
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            10
+          ],
+          [
+            10,
+            11
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            9,
+            12
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            11
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 214
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count changes in motion direction and return exactly one allowed count."
+    },
+    {
+      "candidateId": "rth-5f0f02b6e8e97af8-running-turn-counter-control",
+      "cellId": "cell-forty-step-hidden-trail",
+      "split": "confirmatory",
+      "condition": "running-turn-counter-control",
+      "interventionDescription": "Diagnostic control displays the exact cumulative turn count throughout and at the end.",
+      "failureModeId": "dynamic-route-turn-integration",
+      "generator": "route-turn-count-hard",
+      "seed": 4920014,
+      "difficulty": 10,
+      "variant": 14,
+      "artifact": "public/evaluations/route-turn-confirmatory-v3/rth-5f0f02b6e8e97af8-running-turn-counter-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "How many times does the moving gold disk CHANGE DIRECTION during the complete route?",
+      "answerOptions": [
+        "23",
+        "22",
+        "21",
+        "20"
+      ],
+      "expectedAnswer": "22",
+      "sha256": "11492742672d510ee8d28160bd4a0c27f92d23a76369d9dcad13b96f2734634c",
+      "parameters": {
+        "turnCount": 22,
+        "path": [
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            5,
+            13
+          ],
+          [
+            6,
+            13
+          ],
+          [
+            6,
+            14
+          ],
+          [
+            7,
+            14
+          ],
+          [
+            7,
+            13
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            9,
+            9
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            10
+          ],
+          [
+            10,
+            11
+          ],
+          [
+            10,
+            12
+          ],
+          [
+            9,
+            12
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            11
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 214
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count changes in motion direction and return exactly one allowed count."
+    },
+    {
+      "candidateId": "rth-fdba0e7e7a44fd8e-native-1x",
+      "cellId": "cell-forty-step-hidden-trail",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A forty-step route disappears behind the moving disk.",
+      "failureModeId": "dynamic-route-turn-integration",
+      "generator": "route-turn-count-hard",
+      "seed": 4920015,
+      "difficulty": 96,
+      "variant": 15,
+      "artifact": "public/evaluations/route-turn-confirmatory-v3/rth-fdba0e7e7a44fd8e-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "How many times does the moving gold disk CHANGE DIRECTION during the complete route?",
+      "answerOptions": [
+        "22",
+        "23",
+        "21",
+        "20"
+      ],
+      "expectedAnswer": "23",
+      "sha256": "ac656c2084c4a3608ad6665a0453c5e1e4556cb8dc5dbe48091a512d959bd756",
+      "parameters": {
+        "turnCount": 23,
+        "path": [
+          [
+            8,
+            8
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            9,
+            9
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            9,
+            12
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            7,
+            1
+          ],
+          [
+            8,
+            1
+          ],
+          [
+            9,
+            1
+          ],
+          [
+            9,
+            2
+          ],
+          [
+            10,
+            2
+          ],
+          [
+            10,
+            3
+          ],
+          [
+            10,
+            4
+          ],
+          [
+            10,
+            5
+          ],
+          [
+            10,
+            6
+          ],
+          [
+            11,
+            6
+          ],
+          [
+            11,
+            5
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 215
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count changes in motion direction and return exactly one allowed count."
+    },
+    {
+      "candidateId": "rth-fdba0e7e7a44fd8e-running-turn-counter-control",
+      "cellId": "cell-forty-step-hidden-trail",
+      "split": "confirmatory",
+      "condition": "running-turn-counter-control",
+      "interventionDescription": "Diagnostic control displays the exact cumulative turn count throughout and at the end.",
+      "failureModeId": "dynamic-route-turn-integration",
+      "generator": "route-turn-count-hard",
+      "seed": 4920015,
+      "difficulty": 10,
+      "variant": 15,
+      "artifact": "public/evaluations/route-turn-confirmatory-v3/rth-fdba0e7e7a44fd8e-running-turn-counter-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18500,
+      "question": "How many times does the moving gold disk CHANGE DIRECTION during the complete route?",
+      "answerOptions": [
+        "22",
+        "23",
+        "21",
+        "20"
+      ],
+      "expectedAnswer": "23",
+      "sha256": "0faae103cfb8473734da83881c24e6ed6e7e455713fd7551d041fef665cbc24c",
+      "parameters": {
+        "turnCount": 23,
+        "path": [
+          [
+            8,
+            8
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            9,
+            9
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            9,
+            12
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            7,
+            1
+          ],
+          [
+            8,
+            1
+          ],
+          [
+            9,
+            1
+          ],
+          [
+            9,
+            2
+          ],
+          [
+            10,
+            2
+          ],
+          [
+            10,
+            3
+          ],
+          [
+            10,
+            4
+          ],
+          [
+            10,
+            5
+          ],
+          [
+            10,
+            6
+          ],
+          [
+            11,
+            6
+          ],
+          [
+            11,
+            5
+          ]
+        ],
+        "videoDurationMs": 18500,
+        "fps": 30,
+        "visualVariant": 215
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count changes in motion direction and return exactly one allowed count."
+    }
+  ]
+}

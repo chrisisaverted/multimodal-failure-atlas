@@ -12,17 +12,18 @@ Wilson-qualified and human-validated are stricter, separately reported states.
 | ----------------------------------------- | ------------------------- | -------------------: | ------------------------------: | ---: | ------------------- | ---------- |
 | Identity-conditioned exact crossing count | observed holdout pass     |                 7/16 |                            0/16 | 1/16 | 16/16, 16/16, 13/16 | unverified |
 | Topological enclosure depth               | observed holdout pass     |                 6/16 |                            7/16 | 5/16 | 16/16, 16/16, 10/16 | unverified |
-| Rotation-invariant exact correspondence   | observed holdout pass     |                 6/16 |                4/14 substantive | 2/16 | 16/16, 16/16, 14/16 | unverified |
+| Rotation-invariant exact correspondence   | observed holdout pass     |                 6/16 |                            5/16 | 2/16 | 16/16, 16/16, 14/16 | unverified |
 | Global bilateral symmetry verification    | observed holdout pass     |                 6/16 |                            3/16 | 1/16 | 16/16 each          | unverified |
 | Occluded cube-stack enumeration           | observed holdout pass     |                 3/16 |                            6/16 | 6/16 | 16/16 each          | unverified |
 | Dense visual XOR composition              | observed holdout pass     |                 4/16 |                            2/16 | 7/16 | 16/16, 15/15, 16/16 | unverified |
 | Dense cross-image change localization     | observed holdout pass     |                 4/16 |                            2/16 | 5/16 | 16/16, 16/16, 9/16  | unverified |
 | Maze reachability                         | observed holdout pass     |                 6/16 |                            3/16 | 4/16 | 16/16, 9/9, 16/16  | unverified |
 | Visual graph-degree topology              | observed holdout pass     |                 4/16 |                            5/16 | 2/16 | 16/16 each          | unverified |
-| 2D parity-matrix verification             | observed holdout pass     |                 5/16 |                            6/16 | 3/15 | 16/16, 16/16, 14/14 | unverified |
+| 2D parity-matrix verification             | replicated holdout pass  |                 5/16 |                            4/16 | 4/16 | 16/16 each          | unverified |
 
 The enclosure control only partially recovers Kimi, so it confirms behavioral difficulty but does not
-fully localize the mechanism. The rotation Qwen denominator excludes two non-substantive outputs.
+fully localize the mechanism. Rotation required two prospective Qwen reruns after length-exhausted
+responses; the final native denominator is 16 substantive answers from 18 requests.
 
 ## Video families
 
@@ -36,14 +37,11 @@ holdouts finish.
 | Identity-pair collision counting           | observed holdout pass       |        4/16 |             3/16 |        3/16 | 16/16, 12/16, 16/16               | unverified |
 | Sequential identity permutation            | observed holdout pass       |        2/16 |             1/16 |        5/16 | 16/16, 13/16, 16/16               | unverified |
 | Identity-conditioned selective flash count | observed holdout pass       |        2/16 |             4/16 |        2/16 | 16/16 each                        | unverified |
-| Temporal set cardinality                   | harder holdout queued       |         3/8 |              4/8 | 4/7 + pending | persistent-set control generated  | unverified |
-| Dynamic route turn integration             | observed holdout pass       |        3/16 |             4/16 |        3/16 | 16/16, 16/16, 15/15               | unverified |
-| Dynamic conservation ledger                | observed holdout pass       |        4/16 |             2/16 | 4/11 substantive | 16/16 each                    | unverified |
-| Latent dynamic-state accumulation           | replacement holdout running |        5/16 |     5/13 so far |      pending | state-visible control running      | unverified |
-| Temporal target-transition counting         | frozen holdout running      |         2/8 |              3/8 | 1/7 + pending | running-counter control generated  | unverified |
-| Temporal set cardinality (60-event cell)    | replacement screen running  |         1/8 |          pending |         2/8 | confirmatory control pending       | unverified |
-| Occurrence-indexed successor binding        | screen running              |     pending |          pending |     pending | indexed-marker control planned     | unverified |
-| Hidden-trail trajectory topology            | screen running              |         2/8 |          pending |     pending | visible-trail control planned      | unverified |
+| Temporal target-transition counting         | observed holdout pass       |        3/16 |             5/16 |        3/16 | 16/16 each                        | unverified |
+| Temporal set cardinality                    | observed holdout pass       |        5/16 |             4/16 |        4/16 | 16/16 each                        | unverified |
+| Dynamic route turn integration              | replicated holdout pass     |        2/16 |             2/16 |        3/16 | 16/16 each                        | unverified |
+| Dynamic conservation ledger                 | replication awaiting Kimi   |        7/16 |             5/16 |      running | 16/16 each on completed routes    | unverified |
+| Hidden-trail trajectory topology            | observed holdout pass       |        4/16 |             5/16 |        6/16 | 6/16, 5/16, 4/15                 | unverified |
 
 ## Rejected or superseded searches
 
@@ -78,6 +76,9 @@ holdouts finish.
 | Twelve-symbol exact sequence             | Gemini solved 5/8 and Kimi solved 8/8; a faster, longer sequence requires a new screen.                                                      |
 | Identity-conditioned direction reversals | Gemini solved 7/7 substantive cases; one parser-pending response was excluded.                                                               |
 | Irregular cube-net folding               | Gemini solved all 8 discovery cases.                                                                                                         |
+| Occurrence-indexed successor binding     | The harder discovery replacement left Kimi at 4/7 substantive answers correct, so it did not earn a frozen holdout.                         |
+| 48-event temporal run-length maximum     | Discovery did not replicate: Qwen already solved 10/15 substantive native cases on the frozen holdout; one pending output cannot change the decision. |
+| 41-event signed temporal accumulator     | Qwen finished the balanced discovery screen at exactly 4/8, so the cell did not satisfy the strict below-half promotion rule.                       |
 
 Discovery screens are cheap filters, not claims. A family moves above only after a precommitted,
 seed-disjoint holdout replicates across every route and non-substantive outcomes have been rerun or

@@ -1,0 +1,1736 @@
+{
+  "id": "hidden-trail-intersections-confirmatory-v1",
+  "generatorVersion": "hidden-trail-self-intersection-v1",
+  "status": "frozen-confirmatory",
+  "hypothesis": "Models fail topological composition of a moving trajectory when its trail is not externally represented.",
+  "candidates": [
+    {
+      "id": "hti-64d2222b83d7ae18",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "seed": 5410000,
+      "failureModeId": "dynamic-trajectory-topology",
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "3",
+        "5",
+        "4",
+        "6"
+      ],
+      "expectedAnswer": "3",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "intersectionCount": 3,
+        "path": [
+          [
+            4,
+            6
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            6
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            9,
+            6
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            9,
+            11
+          ]
+        ],
+        "videoDurationMs": 13500,
+        "fps": 30,
+        "visualVariant": 100
+      }
+    },
+    {
+      "id": "hti-8d901111bd661303",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "seed": 5410001,
+      "failureModeId": "dynamic-trajectory-topology",
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "3",
+        "5",
+        "4",
+        "6"
+      ],
+      "expectedAnswer": "4",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "intersectionCount": 4,
+        "path": [
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            8,
+            9
+          ]
+        ],
+        "videoDurationMs": 13500,
+        "fps": 30,
+        "visualVariant": 101
+      }
+    },
+    {
+      "id": "hti-2d452fb6beb87671",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "seed": 5410002,
+      "failureModeId": "dynamic-trajectory-topology",
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "5",
+        "3",
+        "4",
+        "6"
+      ],
+      "expectedAnswer": "5",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "intersectionCount": 5,
+        "path": [
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            9,
+            5
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            8,
+            5
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "videoDurationMs": 13500,
+        "fps": 30,
+        "visualVariant": 102
+      }
+    },
+    {
+      "id": "hti-6483d0a43149a7e5",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "seed": 5410003,
+      "failureModeId": "dynamic-trajectory-topology",
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "expectedAnswer": "6",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "intersectionCount": 6,
+        "path": [
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            9,
+            7
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            8
+          ]
+        ],
+        "videoDurationMs": 13500,
+        "fps": 30,
+        "visualVariant": 103
+      }
+    },
+    {
+      "id": "hti-405531d1cc9a8816",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "seed": 5410004,
+      "failureModeId": "dynamic-trajectory-topology",
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "expectedAnswer": "3",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "intersectionCount": 3,
+        "path": [
+          [
+            5,
+            6
+          ],
+          [
+            8,
+            6
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            11,
+            5
+          ],
+          [
+            11,
+            10
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            10,
+            9
+          ],
+          [
+            10,
+            6
+          ],
+          [
+            9,
+            6
+          ],
+          [
+            9,
+            3
+          ],
+          [
+            10,
+            3
+          ],
+          [
+            10,
+            4
+          ],
+          [
+            11,
+            4
+          ],
+          [
+            11,
+            3
+          ],
+          [
+            8,
+            3
+          ],
+          [
+            8,
+            7
+          ]
+        ],
+        "videoDurationMs": 13500,
+        "fps": 30,
+        "visualVariant": 104
+      }
+    },
+    {
+      "id": "hti-d8ccce80f2d4cdf9",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "seed": 5410005,
+      "failureModeId": "dynamic-trajectory-topology",
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "4",
+        "3",
+        "5",
+        "6"
+      ],
+      "expectedAnswer": "4",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "intersectionCount": 4,
+        "path": [
+          [
+            6,
+            4
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            10,
+            3
+          ],
+          [
+            10,
+            4
+          ],
+          [
+            11,
+            4
+          ],
+          [
+            11,
+            2
+          ],
+          [
+            7,
+            2
+          ]
+        ],
+        "videoDurationMs": 13500,
+        "fps": 30,
+        "visualVariant": 105
+      }
+    },
+    {
+      "id": "hti-a46dfb9f816544e7",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "seed": 5410006,
+      "failureModeId": "dynamic-trajectory-topology",
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "expectedAnswer": "5",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "intersectionCount": 5,
+        "path": [
+          [
+            8,
+            6
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            10,
+            8
+          ],
+          [
+            10,
+            7
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            6,
+            6
+          ]
+        ],
+        "videoDurationMs": 13500,
+        "fps": 30,
+        "visualVariant": 106
+      }
+    },
+    {
+      "id": "hti-9a8035b1500a3c15",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "seed": 5410007,
+      "failureModeId": "dynamic-trajectory-topology",
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "5",
+        "4",
+        "3",
+        "6"
+      ],
+      "expectedAnswer": "6",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "intersectionCount": 6,
+        "path": [
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            9,
+            7
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            4
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            8,
+            3
+          ],
+          [
+            10,
+            3
+          ],
+          [
+            10,
+            7
+          ],
+          [
+            9,
+            7
+          ],
+          [
+            9,
+            2
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            10,
+            10
+          ]
+        ],
+        "videoDurationMs": 13500,
+        "fps": 30,
+        "visualVariant": 107
+      }
+    },
+    {
+      "id": "hti-6d4276cf4bd72fae",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "seed": 5410008,
+      "failureModeId": "dynamic-trajectory-topology",
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "4",
+        "5",
+        "3",
+        "6"
+      ],
+      "expectedAnswer": "3",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "intersectionCount": 3,
+        "path": [
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            11,
+            7
+          ],
+          [
+            11,
+            3
+          ],
+          [
+            7,
+            3
+          ]
+        ],
+        "videoDurationMs": 13500,
+        "fps": 30,
+        "visualVariant": 108
+      }
+    },
+    {
+      "id": "hti-877d6ac626ef8e0f",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "seed": 5410009,
+      "failureModeId": "dynamic-trajectory-topology",
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "4",
+        "5",
+        "3",
+        "6"
+      ],
+      "expectedAnswer": "4",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "intersectionCount": 4,
+        "path": [
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            5
+          ],
+          [
+            10,
+            5
+          ],
+          [
+            10,
+            7
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            9,
+            2
+          ],
+          [
+            9,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            1,
+            7
+          ]
+        ],
+        "videoDurationMs": 13500,
+        "fps": 30,
+        "visualVariant": 109
+      }
+    },
+    {
+      "id": "hti-6ba8202e92c327b8",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "seed": 5410010,
+      "failureModeId": "dynamic-trajectory-topology",
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "3",
+        "5",
+        "4",
+        "6"
+      ],
+      "expectedAnswer": "5",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "intersectionCount": 5,
+        "path": [
+          [
+            6,
+            6
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            10,
+            4
+          ],
+          [
+            10,
+            5
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            10,
+            10
+          ],
+          [
+            10,
+            6
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            8,
+            2
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            4,
+            7
+          ]
+        ],
+        "videoDurationMs": 13500,
+        "fps": 30,
+        "visualVariant": 110
+      }
+    },
+    {
+      "id": "hti-f8c4456f275a3e35",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "seed": 5410011,
+      "failureModeId": "dynamic-trajectory-topology",
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "5",
+        "3",
+        "4",
+        "6"
+      ],
+      "expectedAnswer": "6",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "intersectionCount": 6,
+        "path": [
+          [
+            8,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            9,
+            7
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            9,
+            9
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            2
+          ],
+          [
+            10,
+            2
+          ],
+          [
+            10,
+            6
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            9,
+            6
+          ]
+        ],
+        "videoDurationMs": 13500,
+        "fps": 30,
+        "visualVariant": 111
+      }
+    },
+    {
+      "id": "hti-2014b4208fc50a6b",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "seed": 5410012,
+      "failureModeId": "dynamic-trajectory-topology",
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "5",
+        "3",
+        "4",
+        "6"
+      ],
+      "expectedAnswer": "3",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "intersectionCount": 3,
+        "path": [
+          [
+            8,
+            6
+          ],
+          [
+            8,
+            4
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            1,
+            10
+          ],
+          [
+            1,
+            9
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            4,
+            10
+          ]
+        ],
+        "videoDurationMs": 13500,
+        "fps": 30,
+        "visualVariant": 112
+      }
+    },
+    {
+      "id": "hti-962470343b8e8cfb",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "seed": 5410013,
+      "failureModeId": "dynamic-trajectory-topology",
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "3",
+        "5",
+        "4",
+        "6"
+      ],
+      "expectedAnswer": "4",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "intersectionCount": 4,
+        "path": [
+          [
+            6,
+            4
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            6,
+            2
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            1,
+            5
+          ]
+        ],
+        "videoDurationMs": 13500,
+        "fps": 30,
+        "visualVariant": 113
+      }
+    },
+    {
+      "id": "hti-b7c257e45005379d",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "seed": 5410014,
+      "failureModeId": "dynamic-trajectory-topology",
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "4",
+        "3",
+        "5",
+        "6"
+      ],
+      "expectedAnswer": "5",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "intersectionCount": 5,
+        "path": [
+          [
+            7,
+            8
+          ],
+          [
+            11,
+            8
+          ],
+          [
+            11,
+            2
+          ],
+          [
+            9,
+            2
+          ],
+          [
+            9,
+            1
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            11,
+            5
+          ],
+          [
+            11,
+            3
+          ],
+          [
+            9,
+            3
+          ],
+          [
+            9,
+            4
+          ],
+          [
+            8,
+            4
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            11,
+            9
+          ],
+          [
+            11,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            9,
+            5
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            2,
+            5
+          ]
+        ],
+        "videoDurationMs": 13500,
+        "fps": 30,
+        "visualVariant": 114
+      }
+    },
+    {
+      "id": "hti-ea452e8e32d0d721",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "seed": 5410015,
+      "failureModeId": "dynamic-trajectory-topology",
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "4",
+        "3",
+        "5",
+        "6"
+      ],
+      "expectedAnswer": "6",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "intersectionCount": 6,
+        "path": [
+          [
+            7,
+            6
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            1,
+            11
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            8,
+            3
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            8,
+            6
+          ],
+          [
+            2,
+            6
+          ]
+        ],
+        "videoDurationMs": 13500,
+        "fps": 30,
+        "visualVariant": 115
+      }
+    }
+  ]
+}

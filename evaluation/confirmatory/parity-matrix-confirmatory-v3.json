@@ -1,0 +1,345 @@
+{
+  "id": "parity-matrix-confirmatory-v3",
+  "generatorVersion": "two-dimensional-parity-matrix-v2",
+  "status": "frozen-seed-disjoint-replication",
+  "predecessor": "parity-matrix-confirmatory-v2 treated as hard-cell discovery",
+  "hypothesis": "Frontier multimodal models fail exact two-dimensional parity verification over dense arrays.",
+  "candidates": [
+    {
+      "id": "pmh-85e0a3c8999677a4",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "seed": 4220000,
+      "failureModeId": "global-visual-parity-verification",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "B",
+        "A",
+        "D",
+        "C"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 0,
+        "gridSize": 24,
+        "visualVariant": 200
+      }
+    },
+    {
+      "id": "pmh-fe0b78075f1e0d26",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "seed": 4220001,
+      "failureModeId": "global-visual-parity-verification",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "B",
+        "A",
+        "D",
+        "C"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 1,
+        "gridSize": 24,
+        "visualVariant": 201
+      }
+    },
+    {
+      "id": "pmh-785e3eb3c2b90190",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "seed": 4220002,
+      "failureModeId": "global-visual-parity-verification",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "A",
+        "B",
+        "D",
+        "C"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 2,
+        "gridSize": 24,
+        "visualVariant": 202
+      }
+    },
+    {
+      "id": "pmh-619f0ab86f3735a7",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "seed": 4220003,
+      "failureModeId": "global-visual-parity-verification",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "A",
+        "B",
+        "D",
+        "C"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 3,
+        "gridSize": 24,
+        "visualVariant": 203
+      }
+    },
+    {
+      "id": "pmh-7022b7d7fa839457",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "seed": 4220004,
+      "failureModeId": "global-visual-parity-verification",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "B",
+        "D",
+        "A",
+        "C"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 0,
+        "gridSize": 24,
+        "visualVariant": 204
+      }
+    },
+    {
+      "id": "pmh-c9ebfd4505a34ac8",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "seed": 4220005,
+      "failureModeId": "global-visual-parity-verification",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "D",
+        "B",
+        "A",
+        "C"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 1,
+        "gridSize": 24,
+        "visualVariant": 205
+      }
+    },
+    {
+      "id": "pmh-e340b241fb215d95",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "seed": 4220006,
+      "failureModeId": "global-visual-parity-verification",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "D",
+        "B",
+        "A",
+        "C"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 2,
+        "gridSize": 24,
+        "visualVariant": 206
+      }
+    },
+    {
+      "id": "pmh-6341baf603558343",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "seed": 4220007,
+      "failureModeId": "global-visual-parity-verification",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "D",
+        "A",
+        "B",
+        "C"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 3,
+        "gridSize": 24,
+        "visualVariant": 207
+      }
+    },
+    {
+      "id": "pmh-2df20d142d7f8d97",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "seed": 4220008,
+      "failureModeId": "global-visual-parity-verification",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "A",
+        "D",
+        "B",
+        "C"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 0,
+        "gridSize": 24,
+        "visualVariant": 208
+      }
+    },
+    {
+      "id": "pmh-b7e8bfb819312953",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "seed": 4220009,
+      "failureModeId": "global-visual-parity-verification",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "A",
+        "D",
+        "B",
+        "C"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 1,
+        "gridSize": 24,
+        "visualVariant": 209
+      }
+    },
+    {
+      "id": "pmh-42ccca32be21ba27",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "seed": 4220010,
+      "failureModeId": "global-visual-parity-verification",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "D",
+        "A",
+        "B",
+        "C"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 2,
+        "gridSize": 24,
+        "visualVariant": 210
+      }
+    },
+    {
+      "id": "pmh-7c0fc66d9c4f491f",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "seed": 4220011,
+      "failureModeId": "global-visual-parity-verification",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "B",
+        "A",
+        "D",
+        "C"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 3,
+        "gridSize": 24,
+        "visualVariant": 211
+      }
+    },
+    {
+      "id": "pmh-bb2fda2b2b1c870d",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "seed": 4220012,
+      "failureModeId": "global-visual-parity-verification",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "A",
+        "B",
+        "D",
+        "C"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 0,
+        "gridSize": 24,
+        "visualVariant": 212
+      }
+    },
+    {
+      "id": "pmh-f084c0d1987212a2",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "seed": 4220013,
+      "failureModeId": "global-visual-parity-verification",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "B",
+        "A",
+        "D",
+        "C"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 1,
+        "gridSize": 24,
+        "visualVariant": 213
+      }
+    },
+    {
+      "id": "pmh-068b69e7a2cd5a25",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "seed": 4220014,
+      "failureModeId": "global-visual-parity-verification",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "B",
+        "A",
+        "D",
+        "C"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 2,
+        "gridSize": 24,
+        "visualVariant": 214
+      }
+    },
+    {
+      "id": "pmh-f92edbd1391f166e",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "seed": 4220015,
+      "failureModeId": "global-visual-parity-verification",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "D",
+        "B",
+        "A",
+        "C"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 3,
+        "gridSize": 24,
+        "visualVariant": 215
+      }
+    }
+  ]
+}

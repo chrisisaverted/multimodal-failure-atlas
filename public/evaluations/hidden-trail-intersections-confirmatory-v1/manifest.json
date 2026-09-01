@@ -1,0 +1,969 @@
+{
+  "id": "hidden-trail-intersections-confirmatory-v1",
+  "planSha256": "53f816bb4a130ebf9c4b5ec407fe2ee6416e4e51563ad601f410c637197d803b",
+  "generatorVersion": "hidden-trail-self-intersection-v1",
+  "renderer": "hidden-trail-intersections-svg-raster-v2",
+  "fps": 30,
+  "cases": [
+    {
+      "candidateId": "hti-64d2222b83d7ae18-native-1x",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A twenty-segment orthogonal route must be integrated without a visible trail to count self-crossings.",
+      "failureModeId": "dynamic-trajectory-topology",
+      "generator": "hidden-trail-intersections",
+      "seed": 5410000,
+      "difficulty": 94,
+      "variant": 0,
+      "artifact": "public/evaluations/hidden-trail-intersections-confirmatory-v1/hti-64d2222b83d7ae18-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "3",
+        "5",
+        "4",
+        "6"
+      ],
+      "expectedAnswer": "3",
+      "sha256": "8decc634498270459e2d0a361961c6ab505acc79d83975687739503245e8d44d",
+      "parameters": {
+        "intersectionCount": 3,
+        "visualVariant": 100
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Integrate the complete route and return exactly one allowed crossing count."
+    },
+    {
+      "candidateId": "hti-64d2222b83d7ae18-visible-trail-control",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "condition": "visible-trail-control",
+      "interventionDescription": "Diagnostic control persists the complete traversed route behind the moving disk.",
+      "failureModeId": "dynamic-trajectory-topology",
+      "generator": "hidden-trail-intersections",
+      "seed": 5410000,
+      "difficulty": 30,
+      "variant": 0,
+      "artifact": "public/evaluations/hidden-trail-intersections-confirmatory-v1/hti-64d2222b83d7ae18-visible-trail-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "3",
+        "5",
+        "4",
+        "6"
+      ],
+      "expectedAnswer": "3",
+      "sha256": "f2b6cd85dfe0d0d11ee2f53a14bfc3430e1278083dacb532d081b668f6d5b14e",
+      "parameters": {
+        "intersectionCount": 3,
+        "visualVariant": 100
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Integrate the complete route and return exactly one allowed crossing count."
+    },
+    {
+      "candidateId": "hti-8d901111bd661303-native-1x",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A twenty-segment orthogonal route must be integrated without a visible trail to count self-crossings.",
+      "failureModeId": "dynamic-trajectory-topology",
+      "generator": "hidden-trail-intersections",
+      "seed": 5410001,
+      "difficulty": 94,
+      "variant": 1,
+      "artifact": "public/evaluations/hidden-trail-intersections-confirmatory-v1/hti-8d901111bd661303-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "3",
+        "5",
+        "4",
+        "6"
+      ],
+      "expectedAnswer": "4",
+      "sha256": "800ab79d5a50dd7075961f4f4e9137f6bed9ac4ddfe21515c00e522e086bb2fb",
+      "parameters": {
+        "intersectionCount": 4,
+        "visualVariant": 101
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Integrate the complete route and return exactly one allowed crossing count."
+    },
+    {
+      "candidateId": "hti-8d901111bd661303-visible-trail-control",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "condition": "visible-trail-control",
+      "interventionDescription": "Diagnostic control persists the complete traversed route behind the moving disk.",
+      "failureModeId": "dynamic-trajectory-topology",
+      "generator": "hidden-trail-intersections",
+      "seed": 5410001,
+      "difficulty": 30,
+      "variant": 1,
+      "artifact": "public/evaluations/hidden-trail-intersections-confirmatory-v1/hti-8d901111bd661303-visible-trail-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "3",
+        "5",
+        "4",
+        "6"
+      ],
+      "expectedAnswer": "4",
+      "sha256": "c11f363639525ef92af1d8a298bd133f2c91157fbae68cbd69f07564db8d066b",
+      "parameters": {
+        "intersectionCount": 4,
+        "visualVariant": 101
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Integrate the complete route and return exactly one allowed crossing count."
+    },
+    {
+      "candidateId": "hti-2d452fb6beb87671-native-1x",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A twenty-segment orthogonal route must be integrated without a visible trail to count self-crossings.",
+      "failureModeId": "dynamic-trajectory-topology",
+      "generator": "hidden-trail-intersections",
+      "seed": 5410002,
+      "difficulty": 94,
+      "variant": 2,
+      "artifact": "public/evaluations/hidden-trail-intersections-confirmatory-v1/hti-2d452fb6beb87671-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "5",
+        "3",
+        "4",
+        "6"
+      ],
+      "expectedAnswer": "5",
+      "sha256": "2587abd11732cde40cb0ffcc18a7aa4d2c813894553a763fef85a64baad33198",
+      "parameters": {
+        "intersectionCount": 5,
+        "visualVariant": 102
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Integrate the complete route and return exactly one allowed crossing count."
+    },
+    {
+      "candidateId": "hti-2d452fb6beb87671-visible-trail-control",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "condition": "visible-trail-control",
+      "interventionDescription": "Diagnostic control persists the complete traversed route behind the moving disk.",
+      "failureModeId": "dynamic-trajectory-topology",
+      "generator": "hidden-trail-intersections",
+      "seed": 5410002,
+      "difficulty": 30,
+      "variant": 2,
+      "artifact": "public/evaluations/hidden-trail-intersections-confirmatory-v1/hti-2d452fb6beb87671-visible-trail-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "5",
+        "3",
+        "4",
+        "6"
+      ],
+      "expectedAnswer": "5",
+      "sha256": "8d96e5a8e47b90e6ccfdb72cc7be17af8bfa3f4aa28bd70655d9afa7a07d333a",
+      "parameters": {
+        "intersectionCount": 5,
+        "visualVariant": 102
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Integrate the complete route and return exactly one allowed crossing count."
+    },
+    {
+      "candidateId": "hti-6483d0a43149a7e5-native-1x",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A twenty-segment orthogonal route must be integrated without a visible trail to count self-crossings.",
+      "failureModeId": "dynamic-trajectory-topology",
+      "generator": "hidden-trail-intersections",
+      "seed": 5410003,
+      "difficulty": 94,
+      "variant": 3,
+      "artifact": "public/evaluations/hidden-trail-intersections-confirmatory-v1/hti-6483d0a43149a7e5-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "expectedAnswer": "6",
+      "sha256": "42697ee79082e2ef3e9fe4edb2d495cba243fe7c1f13bbf90315a73589b3dd87",
+      "parameters": {
+        "intersectionCount": 6,
+        "visualVariant": 103
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Integrate the complete route and return exactly one allowed crossing count."
+    },
+    {
+      "candidateId": "hti-6483d0a43149a7e5-visible-trail-control",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "condition": "visible-trail-control",
+      "interventionDescription": "Diagnostic control persists the complete traversed route behind the moving disk.",
+      "failureModeId": "dynamic-trajectory-topology",
+      "generator": "hidden-trail-intersections",
+      "seed": 5410003,
+      "difficulty": 30,
+      "variant": 3,
+      "artifact": "public/evaluations/hidden-trail-intersections-confirmatory-v1/hti-6483d0a43149a7e5-visible-trail-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "expectedAnswer": "6",
+      "sha256": "45fc0359f26a6b9ad7d69e9ef4533ef000a42a596d45ff9b18bf9e01597efacb",
+      "parameters": {
+        "intersectionCount": 6,
+        "visualVariant": 103
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Integrate the complete route and return exactly one allowed crossing count."
+    },
+    {
+      "candidateId": "hti-405531d1cc9a8816-native-1x",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A twenty-segment orthogonal route must be integrated without a visible trail to count self-crossings.",
+      "failureModeId": "dynamic-trajectory-topology",
+      "generator": "hidden-trail-intersections",
+      "seed": 5410004,
+      "difficulty": 94,
+      "variant": 4,
+      "artifact": "public/evaluations/hidden-trail-intersections-confirmatory-v1/hti-405531d1cc9a8816-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "expectedAnswer": "3",
+      "sha256": "72e8903fc3fb31f9e929a4b069ecf9432a70ac760ad4b56984e682de6026a47d",
+      "parameters": {
+        "intersectionCount": 3,
+        "visualVariant": 104
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Integrate the complete route and return exactly one allowed crossing count."
+    },
+    {
+      "candidateId": "hti-405531d1cc9a8816-visible-trail-control",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "condition": "visible-trail-control",
+      "interventionDescription": "Diagnostic control persists the complete traversed route behind the moving disk.",
+      "failureModeId": "dynamic-trajectory-topology",
+      "generator": "hidden-trail-intersections",
+      "seed": 5410004,
+      "difficulty": 30,
+      "variant": 4,
+      "artifact": "public/evaluations/hidden-trail-intersections-confirmatory-v1/hti-405531d1cc9a8816-visible-trail-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "expectedAnswer": "3",
+      "sha256": "548dea95037c337cd878ca36c7b15bb0448bfac2c8ea415a130640d23b0a81dd",
+      "parameters": {
+        "intersectionCount": 3,
+        "visualVariant": 104
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Integrate the complete route and return exactly one allowed crossing count."
+    },
+    {
+      "candidateId": "hti-d8ccce80f2d4cdf9-native-1x",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A twenty-segment orthogonal route must be integrated without a visible trail to count self-crossings.",
+      "failureModeId": "dynamic-trajectory-topology",
+      "generator": "hidden-trail-intersections",
+      "seed": 5410005,
+      "difficulty": 94,
+      "variant": 5,
+      "artifact": "public/evaluations/hidden-trail-intersections-confirmatory-v1/hti-d8ccce80f2d4cdf9-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "4",
+        "3",
+        "5",
+        "6"
+      ],
+      "expectedAnswer": "4",
+      "sha256": "8e01104a2e21f30d7401a6cd4885ea7f1fddb63835b36a501acec3b7aa984162",
+      "parameters": {
+        "intersectionCount": 4,
+        "visualVariant": 105
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Integrate the complete route and return exactly one allowed crossing count."
+    },
+    {
+      "candidateId": "hti-d8ccce80f2d4cdf9-visible-trail-control",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "condition": "visible-trail-control",
+      "interventionDescription": "Diagnostic control persists the complete traversed route behind the moving disk.",
+      "failureModeId": "dynamic-trajectory-topology",
+      "generator": "hidden-trail-intersections",
+      "seed": 5410005,
+      "difficulty": 30,
+      "variant": 5,
+      "artifact": "public/evaluations/hidden-trail-intersections-confirmatory-v1/hti-d8ccce80f2d4cdf9-visible-trail-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "4",
+        "3",
+        "5",
+        "6"
+      ],
+      "expectedAnswer": "4",
+      "sha256": "b147515250dfe8cf059573314b6db129ae824074d46f0f8f15d4e94129bba7cf",
+      "parameters": {
+        "intersectionCount": 4,
+        "visualVariant": 105
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Integrate the complete route and return exactly one allowed crossing count."
+    },
+    {
+      "candidateId": "hti-a46dfb9f816544e7-native-1x",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A twenty-segment orthogonal route must be integrated without a visible trail to count self-crossings.",
+      "failureModeId": "dynamic-trajectory-topology",
+      "generator": "hidden-trail-intersections",
+      "seed": 5410006,
+      "difficulty": 94,
+      "variant": 6,
+      "artifact": "public/evaluations/hidden-trail-intersections-confirmatory-v1/hti-a46dfb9f816544e7-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "expectedAnswer": "5",
+      "sha256": "40e90f79d27eae4449582a5fff7888db7c5df75268cd2ee15aed53ab4f8f22c4",
+      "parameters": {
+        "intersectionCount": 5,
+        "visualVariant": 106
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Integrate the complete route and return exactly one allowed crossing count."
+    },
+    {
+      "candidateId": "hti-a46dfb9f816544e7-visible-trail-control",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "condition": "visible-trail-control",
+      "interventionDescription": "Diagnostic control persists the complete traversed route behind the moving disk.",
+      "failureModeId": "dynamic-trajectory-topology",
+      "generator": "hidden-trail-intersections",
+      "seed": 5410006,
+      "difficulty": 30,
+      "variant": 6,
+      "artifact": "public/evaluations/hidden-trail-intersections-confirmatory-v1/hti-a46dfb9f816544e7-visible-trail-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "expectedAnswer": "5",
+      "sha256": "8394a471cca8be208127a898580e9cf7e0268800b40a7d9bee7816d7dcc4acf3",
+      "parameters": {
+        "intersectionCount": 5,
+        "visualVariant": 106
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Integrate the complete route and return exactly one allowed crossing count."
+    },
+    {
+      "candidateId": "hti-9a8035b1500a3c15-native-1x",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A twenty-segment orthogonal route must be integrated without a visible trail to count self-crossings.",
+      "failureModeId": "dynamic-trajectory-topology",
+      "generator": "hidden-trail-intersections",
+      "seed": 5410007,
+      "difficulty": 94,
+      "variant": 7,
+      "artifact": "public/evaluations/hidden-trail-intersections-confirmatory-v1/hti-9a8035b1500a3c15-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "5",
+        "4",
+        "3",
+        "6"
+      ],
+      "expectedAnswer": "6",
+      "sha256": "f7fc787aeaa1af8a9481885698eaeec2b3d8f0c984a31626a857e2763883a96c",
+      "parameters": {
+        "intersectionCount": 6,
+        "visualVariant": 107
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Integrate the complete route and return exactly one allowed crossing count."
+    },
+    {
+      "candidateId": "hti-9a8035b1500a3c15-visible-trail-control",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "condition": "visible-trail-control",
+      "interventionDescription": "Diagnostic control persists the complete traversed route behind the moving disk.",
+      "failureModeId": "dynamic-trajectory-topology",
+      "generator": "hidden-trail-intersections",
+      "seed": 5410007,
+      "difficulty": 30,
+      "variant": 7,
+      "artifact": "public/evaluations/hidden-trail-intersections-confirmatory-v1/hti-9a8035b1500a3c15-visible-trail-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "5",
+        "4",
+        "3",
+        "6"
+      ],
+      "expectedAnswer": "6",
+      "sha256": "a127ed4ebf3f2d6caeede0c7811b185a685332aa78ea8b60fdbe44adb2ebd669",
+      "parameters": {
+        "intersectionCount": 6,
+        "visualVariant": 107
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Integrate the complete route and return exactly one allowed crossing count."
+    },
+    {
+      "candidateId": "hti-6d4276cf4bd72fae-native-1x",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A twenty-segment orthogonal route must be integrated without a visible trail to count self-crossings.",
+      "failureModeId": "dynamic-trajectory-topology",
+      "generator": "hidden-trail-intersections",
+      "seed": 5410008,
+      "difficulty": 94,
+      "variant": 8,
+      "artifact": "public/evaluations/hidden-trail-intersections-confirmatory-v1/hti-6d4276cf4bd72fae-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "4",
+        "5",
+        "3",
+        "6"
+      ],
+      "expectedAnswer": "3",
+      "sha256": "57b8566a3505e380febe7945b1c432c3c526f7da17d0a4376adb33493462541a",
+      "parameters": {
+        "intersectionCount": 3,
+        "visualVariant": 108
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Integrate the complete route and return exactly one allowed crossing count."
+    },
+    {
+      "candidateId": "hti-6d4276cf4bd72fae-visible-trail-control",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "condition": "visible-trail-control",
+      "interventionDescription": "Diagnostic control persists the complete traversed route behind the moving disk.",
+      "failureModeId": "dynamic-trajectory-topology",
+      "generator": "hidden-trail-intersections",
+      "seed": 5410008,
+      "difficulty": 30,
+      "variant": 8,
+      "artifact": "public/evaluations/hidden-trail-intersections-confirmatory-v1/hti-6d4276cf4bd72fae-visible-trail-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "4",
+        "5",
+        "3",
+        "6"
+      ],
+      "expectedAnswer": "3",
+      "sha256": "96f7ee02acdfb987d01fed31dbd53cd0c1380aee6254a28b870c20fd1d682cd9",
+      "parameters": {
+        "intersectionCount": 3,
+        "visualVariant": 108
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Integrate the complete route and return exactly one allowed crossing count."
+    },
+    {
+      "candidateId": "hti-877d6ac626ef8e0f-native-1x",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A twenty-segment orthogonal route must be integrated without a visible trail to count self-crossings.",
+      "failureModeId": "dynamic-trajectory-topology",
+      "generator": "hidden-trail-intersections",
+      "seed": 5410009,
+      "difficulty": 94,
+      "variant": 9,
+      "artifact": "public/evaluations/hidden-trail-intersections-confirmatory-v1/hti-877d6ac626ef8e0f-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "4",
+        "5",
+        "3",
+        "6"
+      ],
+      "expectedAnswer": "4",
+      "sha256": "38e6edc8ab197b6cffc68dafe5a37cf2cccba30c95b58590a9b50dacfb0fecf1",
+      "parameters": {
+        "intersectionCount": 4,
+        "visualVariant": 109
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Integrate the complete route and return exactly one allowed crossing count."
+    },
+    {
+      "candidateId": "hti-877d6ac626ef8e0f-visible-trail-control",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "condition": "visible-trail-control",
+      "interventionDescription": "Diagnostic control persists the complete traversed route behind the moving disk.",
+      "failureModeId": "dynamic-trajectory-topology",
+      "generator": "hidden-trail-intersections",
+      "seed": 5410009,
+      "difficulty": 30,
+      "variant": 9,
+      "artifact": "public/evaluations/hidden-trail-intersections-confirmatory-v1/hti-877d6ac626ef8e0f-visible-trail-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "4",
+        "5",
+        "3",
+        "6"
+      ],
+      "expectedAnswer": "4",
+      "sha256": "54dc4a12767c173f5615f602afab0f964543fa215169625b6a9560924b4b130b",
+      "parameters": {
+        "intersectionCount": 4,
+        "visualVariant": 109
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Integrate the complete route and return exactly one allowed crossing count."
+    },
+    {
+      "candidateId": "hti-6ba8202e92c327b8-native-1x",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A twenty-segment orthogonal route must be integrated without a visible trail to count self-crossings.",
+      "failureModeId": "dynamic-trajectory-topology",
+      "generator": "hidden-trail-intersections",
+      "seed": 5410010,
+      "difficulty": 94,
+      "variant": 10,
+      "artifact": "public/evaluations/hidden-trail-intersections-confirmatory-v1/hti-6ba8202e92c327b8-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "3",
+        "5",
+        "4",
+        "6"
+      ],
+      "expectedAnswer": "5",
+      "sha256": "51fab928a2ee53e966f63a4a5566f2673bb1616606db7765e5f0e6159322a27f",
+      "parameters": {
+        "intersectionCount": 5,
+        "visualVariant": 110
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Integrate the complete route and return exactly one allowed crossing count."
+    },
+    {
+      "candidateId": "hti-6ba8202e92c327b8-visible-trail-control",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "condition": "visible-trail-control",
+      "interventionDescription": "Diagnostic control persists the complete traversed route behind the moving disk.",
+      "failureModeId": "dynamic-trajectory-topology",
+      "generator": "hidden-trail-intersections",
+      "seed": 5410010,
+      "difficulty": 30,
+      "variant": 10,
+      "artifact": "public/evaluations/hidden-trail-intersections-confirmatory-v1/hti-6ba8202e92c327b8-visible-trail-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "3",
+        "5",
+        "4",
+        "6"
+      ],
+      "expectedAnswer": "5",
+      "sha256": "62a17bcbe175bab25aa9f4bae304f13134a4e7e1c20a6033604100f539aa120a",
+      "parameters": {
+        "intersectionCount": 5,
+        "visualVariant": 110
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Integrate the complete route and return exactly one allowed crossing count."
+    },
+    {
+      "candidateId": "hti-f8c4456f275a3e35-native-1x",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A twenty-segment orthogonal route must be integrated without a visible trail to count self-crossings.",
+      "failureModeId": "dynamic-trajectory-topology",
+      "generator": "hidden-trail-intersections",
+      "seed": 5410011,
+      "difficulty": 94,
+      "variant": 11,
+      "artifact": "public/evaluations/hidden-trail-intersections-confirmatory-v1/hti-f8c4456f275a3e35-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "5",
+        "3",
+        "4",
+        "6"
+      ],
+      "expectedAnswer": "6",
+      "sha256": "9a90334d917a99002c799c4dd9557b5ad594792899753a6b24c0dfcdd4517105",
+      "parameters": {
+        "intersectionCount": 6,
+        "visualVariant": 111
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Integrate the complete route and return exactly one allowed crossing count."
+    },
+    {
+      "candidateId": "hti-f8c4456f275a3e35-visible-trail-control",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "condition": "visible-trail-control",
+      "interventionDescription": "Diagnostic control persists the complete traversed route behind the moving disk.",
+      "failureModeId": "dynamic-trajectory-topology",
+      "generator": "hidden-trail-intersections",
+      "seed": 5410011,
+      "difficulty": 30,
+      "variant": 11,
+      "artifact": "public/evaluations/hidden-trail-intersections-confirmatory-v1/hti-f8c4456f275a3e35-visible-trail-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "5",
+        "3",
+        "4",
+        "6"
+      ],
+      "expectedAnswer": "6",
+      "sha256": "43c659a8b117b4e6e68bbe3c4c22ed483a00aa7062e19acd68d7d19cd8c36ec2",
+      "parameters": {
+        "intersectionCount": 6,
+        "visualVariant": 111
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Integrate the complete route and return exactly one allowed crossing count."
+    },
+    {
+      "candidateId": "hti-2014b4208fc50a6b-native-1x",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A twenty-segment orthogonal route must be integrated without a visible trail to count self-crossings.",
+      "failureModeId": "dynamic-trajectory-topology",
+      "generator": "hidden-trail-intersections",
+      "seed": 5410012,
+      "difficulty": 94,
+      "variant": 12,
+      "artifact": "public/evaluations/hidden-trail-intersections-confirmatory-v1/hti-2014b4208fc50a6b-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "5",
+        "3",
+        "4",
+        "6"
+      ],
+      "expectedAnswer": "3",
+      "sha256": "addee01d16b06dc233749fdfb452462850b2d1668e3a59df5c49676af23c975d",
+      "parameters": {
+        "intersectionCount": 3,
+        "visualVariant": 112
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Integrate the complete route and return exactly one allowed crossing count."
+    },
+    {
+      "candidateId": "hti-2014b4208fc50a6b-visible-trail-control",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "condition": "visible-trail-control",
+      "interventionDescription": "Diagnostic control persists the complete traversed route behind the moving disk.",
+      "failureModeId": "dynamic-trajectory-topology",
+      "generator": "hidden-trail-intersections",
+      "seed": 5410012,
+      "difficulty": 30,
+      "variant": 12,
+      "artifact": "public/evaluations/hidden-trail-intersections-confirmatory-v1/hti-2014b4208fc50a6b-visible-trail-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "5",
+        "3",
+        "4",
+        "6"
+      ],
+      "expectedAnswer": "3",
+      "sha256": "0126d407e3641727f65bb0e9a28a6298b4e7474035f482a12c63f11d23398f93",
+      "parameters": {
+        "intersectionCount": 3,
+        "visualVariant": 112
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Integrate the complete route and return exactly one allowed crossing count."
+    },
+    {
+      "candidateId": "hti-962470343b8e8cfb-native-1x",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A twenty-segment orthogonal route must be integrated without a visible trail to count self-crossings.",
+      "failureModeId": "dynamic-trajectory-topology",
+      "generator": "hidden-trail-intersections",
+      "seed": 5410013,
+      "difficulty": 94,
+      "variant": 13,
+      "artifact": "public/evaluations/hidden-trail-intersections-confirmatory-v1/hti-962470343b8e8cfb-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "3",
+        "5",
+        "4",
+        "6"
+      ],
+      "expectedAnswer": "4",
+      "sha256": "184f117eb5066aee57682413815871a2bc1769241df13124e4d221c495336100",
+      "parameters": {
+        "intersectionCount": 4,
+        "visualVariant": 113
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Integrate the complete route and return exactly one allowed crossing count."
+    },
+    {
+      "candidateId": "hti-962470343b8e8cfb-visible-trail-control",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "condition": "visible-trail-control",
+      "interventionDescription": "Diagnostic control persists the complete traversed route behind the moving disk.",
+      "failureModeId": "dynamic-trajectory-topology",
+      "generator": "hidden-trail-intersections",
+      "seed": 5410013,
+      "difficulty": 30,
+      "variant": 13,
+      "artifact": "public/evaluations/hidden-trail-intersections-confirmatory-v1/hti-962470343b8e8cfb-visible-trail-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "3",
+        "5",
+        "4",
+        "6"
+      ],
+      "expectedAnswer": "4",
+      "sha256": "63706f46b6135561d0ecb6c18e119d037e199462494d43d2797f6d61734804b3",
+      "parameters": {
+        "intersectionCount": 4,
+        "visualVariant": 113
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Integrate the complete route and return exactly one allowed crossing count."
+    },
+    {
+      "candidateId": "hti-b7c257e45005379d-native-1x",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A twenty-segment orthogonal route must be integrated without a visible trail to count self-crossings.",
+      "failureModeId": "dynamic-trajectory-topology",
+      "generator": "hidden-trail-intersections",
+      "seed": 5410014,
+      "difficulty": 94,
+      "variant": 14,
+      "artifact": "public/evaluations/hidden-trail-intersections-confirmatory-v1/hti-b7c257e45005379d-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "4",
+        "3",
+        "5",
+        "6"
+      ],
+      "expectedAnswer": "5",
+      "sha256": "4f4061bf2d8fafb025b5249a246c7ad5062aef2a1194012afc2efbbed5893402",
+      "parameters": {
+        "intersectionCount": 5,
+        "visualVariant": 114
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Integrate the complete route and return exactly one allowed crossing count."
+    },
+    {
+      "candidateId": "hti-b7c257e45005379d-visible-trail-control",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "condition": "visible-trail-control",
+      "interventionDescription": "Diagnostic control persists the complete traversed route behind the moving disk.",
+      "failureModeId": "dynamic-trajectory-topology",
+      "generator": "hidden-trail-intersections",
+      "seed": 5410014,
+      "difficulty": 30,
+      "variant": 14,
+      "artifact": "public/evaluations/hidden-trail-intersections-confirmatory-v1/hti-b7c257e45005379d-visible-trail-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "4",
+        "3",
+        "5",
+        "6"
+      ],
+      "expectedAnswer": "5",
+      "sha256": "0754a393678ca5597a188053f8d188881566c2f3594462f9d6ad9304405afee3",
+      "parameters": {
+        "intersectionCount": 5,
+        "visualVariant": 114
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Integrate the complete route and return exactly one allowed crossing count."
+    },
+    {
+      "candidateId": "hti-ea452e8e32d0d721-native-1x",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "A twenty-segment orthogonal route must be integrated without a visible trail to count self-crossings.",
+      "failureModeId": "dynamic-trajectory-topology",
+      "generator": "hidden-trail-intersections",
+      "seed": 5410015,
+      "difficulty": 94,
+      "variant": 15,
+      "artifact": "public/evaluations/hidden-trail-intersections-confirmatory-v1/hti-ea452e8e32d0d721-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "4",
+        "3",
+        "5",
+        "6"
+      ],
+      "expectedAnswer": "6",
+      "sha256": "55499ae34d3a880a21d5ea6336013a5f8cda734bc87d214ff59ca78ce08607c0",
+      "parameters": {
+        "intersectionCount": 6,
+        "visualVariant": 115
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Integrate the complete route and return exactly one allowed crossing count."
+    },
+    {
+      "candidateId": "hti-ea452e8e32d0d721-visible-trail-control",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "confirmatory",
+      "condition": "visible-trail-control",
+      "interventionDescription": "Diagnostic control persists the complete traversed route behind the moving disk.",
+      "failureModeId": "dynamic-trajectory-topology",
+      "generator": "hidden-trail-intersections",
+      "seed": 5410015,
+      "difficulty": 30,
+      "variant": 15,
+      "artifact": "public/evaluations/hidden-trail-intersections-confirmatory-v1/hti-ea452e8e32d0d721-visible-trail-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "4",
+        "3",
+        "5",
+        "6"
+      ],
+      "expectedAnswer": "6",
+      "sha256": "588efcfcd735e906be72148451140c2dbfea5ec9568dba89f04f5c483f4d819e",
+      "parameters": {
+        "intersectionCount": 6,
+        "visualVariant": 115
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Integrate the complete route and return exactly one allowed crossing count."
+    }
+  ]
+}
