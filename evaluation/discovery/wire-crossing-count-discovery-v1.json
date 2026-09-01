@@ -1,0 +1,272 @@
+{
+  "id": "wire-crossing-count-discovery-v1",
+  "generatorVersion": "wire-crossing-count-v1",
+  "status": "discovery-only",
+  "hypothesis": "Composing identity-through-crossings with exact event counting defeats endpoint shortcuts while remaining manually traceable.",
+  "candidates": [
+    {
+      "id": "wc-db1cfe2f194d8dd4",
+      "cellId": "cell-58ba52c5667656f2",
+      "split": "discovery",
+      "seed": 810000,
+      "failureModeId": "identity-through-occlusion",
+      "question": "How many times does wire A cross another wire?",
+      "answerOptions": [
+        "4",
+        "6",
+        "8",
+        "10"
+      ],
+      "expectedAnswer": "4",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "totalCrossings": 16,
+        "targetCrossings": 4,
+        "targetWire": 0,
+        "visualVariant": 11
+      }
+    },
+    {
+      "id": "wc-cda46cc5d609c913",
+      "cellId": "cell-58ba52c5667656f2",
+      "split": "discovery",
+      "seed": 810001,
+      "failureModeId": "identity-through-occlusion",
+      "question": "How many times does wire B cross another wire?",
+      "answerOptions": [
+        "6",
+        "8",
+        "10",
+        "4"
+      ],
+      "expectedAnswer": "6",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "totalCrossings": 16,
+        "targetCrossings": 6,
+        "targetWire": 1,
+        "visualVariant": 12
+      }
+    },
+    {
+      "id": "wc-329317c1054ca84e",
+      "cellId": "cell-58ba52c5667656f2",
+      "split": "discovery",
+      "seed": 810002,
+      "failureModeId": "identity-through-occlusion",
+      "question": "How many times does wire C cross another wire?",
+      "answerOptions": [
+        "8",
+        "10",
+        "4",
+        "6"
+      ],
+      "expectedAnswer": "8",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "totalCrossings": 16,
+        "targetCrossings": 8,
+        "targetWire": 2,
+        "visualVariant": 13
+      }
+    },
+    {
+      "id": "wc-a54696bf33ca77dc",
+      "cellId": "cell-58ba52c5667656f2",
+      "split": "discovery",
+      "seed": 810003,
+      "failureModeId": "identity-through-occlusion",
+      "question": "How many times does wire D cross another wire?",
+      "answerOptions": [
+        "10",
+        "4",
+        "6",
+        "8"
+      ],
+      "expectedAnswer": "10",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "totalCrossings": 16,
+        "targetCrossings": 10,
+        "targetWire": 3,
+        "visualVariant": 14
+      }
+    },
+    {
+      "id": "wc-fa51f6dd160fb7b5",
+      "cellId": "cell-8c64c8ef925f4cf7",
+      "split": "discovery",
+      "seed": 810004,
+      "failureModeId": "identity-through-occlusion",
+      "question": "How many times does wire B cross another wire?",
+      "answerOptions": [
+        "4",
+        "6",
+        "8",
+        "10"
+      ],
+      "expectedAnswer": "4",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "totalCrossings": 28,
+        "targetCrossings": 4,
+        "targetWire": 1,
+        "visualVariant": 15
+      }
+    },
+    {
+      "id": "wc-051a973e053d0ec7",
+      "cellId": "cell-8c64c8ef925f4cf7",
+      "split": "discovery",
+      "seed": 810005,
+      "failureModeId": "identity-through-occlusion",
+      "question": "How many times does wire C cross another wire?",
+      "answerOptions": [
+        "6",
+        "8",
+        "10",
+        "4"
+      ],
+      "expectedAnswer": "6",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "totalCrossings": 28,
+        "targetCrossings": 6,
+        "targetWire": 2,
+        "visualVariant": 16
+      }
+    },
+    {
+      "id": "wc-6436636631ab4fa3",
+      "cellId": "cell-8c64c8ef925f4cf7",
+      "split": "discovery",
+      "seed": 810006,
+      "failureModeId": "identity-through-occlusion",
+      "question": "How many times does wire D cross another wire?",
+      "answerOptions": [
+        "8",
+        "10",
+        "4",
+        "6"
+      ],
+      "expectedAnswer": "8",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "totalCrossings": 28,
+        "targetCrossings": 8,
+        "targetWire": 3,
+        "visualVariant": 17
+      }
+    },
+    {
+      "id": "wc-62ed73510ff82792",
+      "cellId": "cell-8c64c8ef925f4cf7",
+      "split": "discovery",
+      "seed": 810007,
+      "failureModeId": "identity-through-occlusion",
+      "question": "How many times does wire A cross another wire?",
+      "answerOptions": [
+        "10",
+        "4",
+        "6",
+        "8"
+      ],
+      "expectedAnswer": "10",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "totalCrossings": 28,
+        "targetCrossings": 10,
+        "targetWire": 0,
+        "visualVariant": 18
+      }
+    },
+    {
+      "id": "wc-5f487f8879ce2d36",
+      "cellId": "cell-6ea5e3b21bced64f",
+      "split": "discovery",
+      "seed": 810008,
+      "failureModeId": "identity-through-occlusion",
+      "question": "How many times does wire C cross another wire?",
+      "answerOptions": [
+        "4",
+        "6",
+        "8",
+        "10"
+      ],
+      "expectedAnswer": "4",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "totalCrossings": 40,
+        "targetCrossings": 4,
+        "targetWire": 2,
+        "visualVariant": 0
+      }
+    },
+    {
+      "id": "wc-d1a8b2435224c464",
+      "cellId": "cell-6ea5e3b21bced64f",
+      "split": "discovery",
+      "seed": 810009,
+      "failureModeId": "identity-through-occlusion",
+      "question": "How many times does wire D cross another wire?",
+      "answerOptions": [
+        "6",
+        "8",
+        "10",
+        "4"
+      ],
+      "expectedAnswer": "6",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "totalCrossings": 40,
+        "targetCrossings": 6,
+        "targetWire": 3,
+        "visualVariant": 1
+      }
+    },
+    {
+      "id": "wc-aabba0215f6cf3f6",
+      "cellId": "cell-6ea5e3b21bced64f",
+      "split": "discovery",
+      "seed": 810010,
+      "failureModeId": "identity-through-occlusion",
+      "question": "How many times does wire A cross another wire?",
+      "answerOptions": [
+        "8",
+        "10",
+        "4",
+        "6"
+      ],
+      "expectedAnswer": "8",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "totalCrossings": 40,
+        "targetCrossings": 8,
+        "targetWire": 0,
+        "visualVariant": 2
+      }
+    },
+    {
+      "id": "wc-698d10dba4b7c43d",
+      "cellId": "cell-6ea5e3b21bced64f",
+      "split": "discovery",
+      "seed": 810011,
+      "failureModeId": "identity-through-occlusion",
+      "question": "How many times does wire B cross another wire?",
+      "answerOptions": [
+        "10",
+        "4",
+        "6",
+        "8"
+      ],
+      "expectedAnswer": "10",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "totalCrossings": 40,
+        "targetCrossings": 10,
+        "targetWire": 1,
+        "visualVariant": 3
+      }
+    }
+  ]
+}

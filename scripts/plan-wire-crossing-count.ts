@@ -1,0 +1,3 @@
+import { mkdir, writeFile } from "node:fs/promises"; import { dirname, resolve } from "node:path";
+import { createWireCrossingCountDiscoveryGrid, wireCrossingCountVersion } from "../src/lib/discovery/wire-crossing-count";
+const output=resolve("evaluation/discovery/wire-crossing-count-discovery-v1.json"), candidates=createWireCrossingCountDiscoveryGrid(); await mkdir(dirname(output),{recursive:true}); await writeFile(output,`${JSON.stringify({id:"wire-crossing-count-discovery-v1",generatorVersion:wireCrossingCountVersion,status:"discovery-only",hypothesis:"Composing identity-through-crossings with exact event counting defeats endpoint shortcuts while remaining manually traceable.",candidates},null,2)}\n`); console.log({output,candidates:candidates.length});

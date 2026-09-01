@@ -1,0 +1,381 @@
+{
+  "id": "wire-crossing-count-discovery-v1",
+  "planSha256": "53710851abd244b6bf1cf6d67ea416f9296dd6108bdc96b5d31af29888c14dfc",
+  "generatorVersion": "wire-crossing-count-v1",
+  "renderer": "wire-crossing-count-svg-v1",
+  "fps": 0,
+  "cases": [
+    {
+      "candidateId": "wc-db1cfe2f194d8dd4",
+      "cellId": "cell-58ba52c5667656f2",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Unhighlighted four-wire diagram.",
+      "failureModeId": "identity-through-occlusion",
+      "generator": "identity-occlusion",
+      "seed": 810000,
+      "difficulty": 52,
+      "variant": 0,
+      "artifact": "public/evaluations/wire-crossing-count-discovery-v1/wc-db1cfe2f194d8dd4.png",
+      "mimeType": "image/png",
+      "question": "How many times does wire A cross another wire?",
+      "answerOptions": [
+        "4",
+        "6",
+        "8",
+        "10"
+      ],
+      "expectedAnswer": "4",
+      "sha256": "8e6eff7466bcf33fb4cb88af759d5e84fcc433e5d6eaa06b5ba0d45b4a015faf",
+      "parameters": {
+        "totalCrossings": 16,
+        "targetCrossings": 4,
+        "targetWire": 0,
+        "visualVariant": 11
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Trace the red-labeled continuous wire and count only its crossings. Return exactly one allowed count without explanation."
+    },
+    {
+      "candidateId": "wc-cda46cc5d609c913",
+      "cellId": "cell-58ba52c5667656f2",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Unhighlighted four-wire diagram.",
+      "failureModeId": "identity-through-occlusion",
+      "generator": "identity-occlusion",
+      "seed": 810001,
+      "difficulty": 52,
+      "variant": 1,
+      "artifact": "public/evaluations/wire-crossing-count-discovery-v1/wc-cda46cc5d609c913.png",
+      "mimeType": "image/png",
+      "question": "How many times does wire B cross another wire?",
+      "answerOptions": [
+        "6",
+        "8",
+        "10",
+        "4"
+      ],
+      "expectedAnswer": "6",
+      "sha256": "edaa3d7a0a8eeb16e17f2a5a76f419ef9abdd5beeb80c3cd6ebe5c5738e15cc1",
+      "parameters": {
+        "totalCrossings": 16,
+        "targetCrossings": 6,
+        "targetWire": 1,
+        "visualVariant": 12
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Trace the red-labeled continuous wire and count only its crossings. Return exactly one allowed count without explanation."
+    },
+    {
+      "candidateId": "wc-329317c1054ca84e",
+      "cellId": "cell-58ba52c5667656f2",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Unhighlighted four-wire diagram.",
+      "failureModeId": "identity-through-occlusion",
+      "generator": "identity-occlusion",
+      "seed": 810002,
+      "difficulty": 52,
+      "variant": 2,
+      "artifact": "public/evaluations/wire-crossing-count-discovery-v1/wc-329317c1054ca84e.png",
+      "mimeType": "image/png",
+      "question": "How many times does wire C cross another wire?",
+      "answerOptions": [
+        "8",
+        "10",
+        "4",
+        "6"
+      ],
+      "expectedAnswer": "8",
+      "sha256": "9d6853a7a5b416b79fbdee17b62504fa3187b99edff4e0455bd906d34208fde5",
+      "parameters": {
+        "totalCrossings": 16,
+        "targetCrossings": 8,
+        "targetWire": 2,
+        "visualVariant": 13
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Trace the red-labeled continuous wire and count only its crossings. Return exactly one allowed count without explanation."
+    },
+    {
+      "candidateId": "wc-a54696bf33ca77dc",
+      "cellId": "cell-58ba52c5667656f2",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Unhighlighted four-wire diagram.",
+      "failureModeId": "identity-through-occlusion",
+      "generator": "identity-occlusion",
+      "seed": 810003,
+      "difficulty": 52,
+      "variant": 3,
+      "artifact": "public/evaluations/wire-crossing-count-discovery-v1/wc-a54696bf33ca77dc.png",
+      "mimeType": "image/png",
+      "question": "How many times does wire D cross another wire?",
+      "answerOptions": [
+        "10",
+        "4",
+        "6",
+        "8"
+      ],
+      "expectedAnswer": "10",
+      "sha256": "5ce654a2a7292e863136077fe93680f95f97e4727cafcd0572fc838475f97268",
+      "parameters": {
+        "totalCrossings": 16,
+        "targetCrossings": 10,
+        "targetWire": 3,
+        "visualVariant": 14
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Trace the red-labeled continuous wire and count only its crossings. Return exactly one allowed count without explanation."
+    },
+    {
+      "candidateId": "wc-fa51f6dd160fb7b5",
+      "cellId": "cell-8c64c8ef925f4cf7",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Unhighlighted four-wire diagram.",
+      "failureModeId": "identity-through-occlusion",
+      "generator": "identity-occlusion",
+      "seed": 810004,
+      "difficulty": 76,
+      "variant": 4,
+      "artifact": "public/evaluations/wire-crossing-count-discovery-v1/wc-fa51f6dd160fb7b5.png",
+      "mimeType": "image/png",
+      "question": "How many times does wire B cross another wire?",
+      "answerOptions": [
+        "4",
+        "6",
+        "8",
+        "10"
+      ],
+      "expectedAnswer": "4",
+      "sha256": "1567799052ddaa7d1cc861a80a8d185ba29822ef874cd2a48c3de17b93419f41",
+      "parameters": {
+        "totalCrossings": 28,
+        "targetCrossings": 4,
+        "targetWire": 1,
+        "visualVariant": 15
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Trace the red-labeled continuous wire and count only its crossings. Return exactly one allowed count without explanation."
+    },
+    {
+      "candidateId": "wc-051a973e053d0ec7",
+      "cellId": "cell-8c64c8ef925f4cf7",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Unhighlighted four-wire diagram.",
+      "failureModeId": "identity-through-occlusion",
+      "generator": "identity-occlusion",
+      "seed": 810005,
+      "difficulty": 76,
+      "variant": 5,
+      "artifact": "public/evaluations/wire-crossing-count-discovery-v1/wc-051a973e053d0ec7.png",
+      "mimeType": "image/png",
+      "question": "How many times does wire C cross another wire?",
+      "answerOptions": [
+        "6",
+        "8",
+        "10",
+        "4"
+      ],
+      "expectedAnswer": "6",
+      "sha256": "dfd9ddf073308297ffc38a9bbe3fdd3534fe61e74a58b24bd71b7a2cbd7ab8db",
+      "parameters": {
+        "totalCrossings": 28,
+        "targetCrossings": 6,
+        "targetWire": 2,
+        "visualVariant": 16
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Trace the red-labeled continuous wire and count only its crossings. Return exactly one allowed count without explanation."
+    },
+    {
+      "candidateId": "wc-6436636631ab4fa3",
+      "cellId": "cell-8c64c8ef925f4cf7",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Unhighlighted four-wire diagram.",
+      "failureModeId": "identity-through-occlusion",
+      "generator": "identity-occlusion",
+      "seed": 810006,
+      "difficulty": 76,
+      "variant": 6,
+      "artifact": "public/evaluations/wire-crossing-count-discovery-v1/wc-6436636631ab4fa3.png",
+      "mimeType": "image/png",
+      "question": "How many times does wire D cross another wire?",
+      "answerOptions": [
+        "8",
+        "10",
+        "4",
+        "6"
+      ],
+      "expectedAnswer": "8",
+      "sha256": "c46796e94b38668ec3e5c002c407e409cba4bd5cca5026f0b2ac33e1ea43b07c",
+      "parameters": {
+        "totalCrossings": 28,
+        "targetCrossings": 8,
+        "targetWire": 3,
+        "visualVariant": 17
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Trace the red-labeled continuous wire and count only its crossings. Return exactly one allowed count without explanation."
+    },
+    {
+      "candidateId": "wc-62ed73510ff82792",
+      "cellId": "cell-8c64c8ef925f4cf7",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Unhighlighted four-wire diagram.",
+      "failureModeId": "identity-through-occlusion",
+      "generator": "identity-occlusion",
+      "seed": 810007,
+      "difficulty": 76,
+      "variant": 7,
+      "artifact": "public/evaluations/wire-crossing-count-discovery-v1/wc-62ed73510ff82792.png",
+      "mimeType": "image/png",
+      "question": "How many times does wire A cross another wire?",
+      "answerOptions": [
+        "10",
+        "4",
+        "6",
+        "8"
+      ],
+      "expectedAnswer": "10",
+      "sha256": "a698691cff48853308ca43a40a80847bd525931f5843378ebd8cc447caa81897",
+      "parameters": {
+        "totalCrossings": 28,
+        "targetCrossings": 10,
+        "targetWire": 0,
+        "visualVariant": 18
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Trace the red-labeled continuous wire and count only its crossings. Return exactly one allowed count without explanation."
+    },
+    {
+      "candidateId": "wc-5f487f8879ce2d36",
+      "cellId": "cell-6ea5e3b21bced64f",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Unhighlighted four-wire diagram.",
+      "failureModeId": "identity-through-occlusion",
+      "generator": "identity-occlusion",
+      "seed": 810008,
+      "difficulty": 100,
+      "variant": 8,
+      "artifact": "public/evaluations/wire-crossing-count-discovery-v1/wc-5f487f8879ce2d36.png",
+      "mimeType": "image/png",
+      "question": "How many times does wire C cross another wire?",
+      "answerOptions": [
+        "4",
+        "6",
+        "8",
+        "10"
+      ],
+      "expectedAnswer": "4",
+      "sha256": "b261eadcfa0682feb77843cb73e9c23aa500bb1d0b8ad66e5d1c3340a97dfdab",
+      "parameters": {
+        "totalCrossings": 40,
+        "targetCrossings": 4,
+        "targetWire": 2,
+        "visualVariant": 0
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Trace the red-labeled continuous wire and count only its crossings. Return exactly one allowed count without explanation."
+    },
+    {
+      "candidateId": "wc-d1a8b2435224c464",
+      "cellId": "cell-6ea5e3b21bced64f",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Unhighlighted four-wire diagram.",
+      "failureModeId": "identity-through-occlusion",
+      "generator": "identity-occlusion",
+      "seed": 810009,
+      "difficulty": 100,
+      "variant": 9,
+      "artifact": "public/evaluations/wire-crossing-count-discovery-v1/wc-d1a8b2435224c464.png",
+      "mimeType": "image/png",
+      "question": "How many times does wire D cross another wire?",
+      "answerOptions": [
+        "6",
+        "8",
+        "10",
+        "4"
+      ],
+      "expectedAnswer": "6",
+      "sha256": "e96234a56ab1705f613a296c03dac0bc757def1cd90e52a74c2f75111be290c3",
+      "parameters": {
+        "totalCrossings": 40,
+        "targetCrossings": 6,
+        "targetWire": 3,
+        "visualVariant": 1
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Trace the red-labeled continuous wire and count only its crossings. Return exactly one allowed count without explanation."
+    },
+    {
+      "candidateId": "wc-aabba0215f6cf3f6",
+      "cellId": "cell-6ea5e3b21bced64f",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Unhighlighted four-wire diagram.",
+      "failureModeId": "identity-through-occlusion",
+      "generator": "identity-occlusion",
+      "seed": 810010,
+      "difficulty": 100,
+      "variant": 10,
+      "artifact": "public/evaluations/wire-crossing-count-discovery-v1/wc-aabba0215f6cf3f6.png",
+      "mimeType": "image/png",
+      "question": "How many times does wire A cross another wire?",
+      "answerOptions": [
+        "8",
+        "10",
+        "4",
+        "6"
+      ],
+      "expectedAnswer": "8",
+      "sha256": "a38dc39bb7328e5d19e5d6b65b1a14bca4b0e9cf203e3882f682aa36a75aee83",
+      "parameters": {
+        "totalCrossings": 40,
+        "targetCrossings": 8,
+        "targetWire": 0,
+        "visualVariant": 2
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Trace the red-labeled continuous wire and count only its crossings. Return exactly one allowed count without explanation."
+    },
+    {
+      "candidateId": "wc-698d10dba4b7c43d",
+      "cellId": "cell-6ea5e3b21bced64f",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Unhighlighted four-wire diagram.",
+      "failureModeId": "identity-through-occlusion",
+      "generator": "identity-occlusion",
+      "seed": 810011,
+      "difficulty": 100,
+      "variant": 11,
+      "artifact": "public/evaluations/wire-crossing-count-discovery-v1/wc-698d10dba4b7c43d.png",
+      "mimeType": "image/png",
+      "question": "How many times does wire B cross another wire?",
+      "answerOptions": [
+        "10",
+        "4",
+        "6",
+        "8"
+      ],
+      "expectedAnswer": "10",
+      "sha256": "60363e2fcd5e1949804cae1fee3b55cefd16d6741ea84187800bd7a8c5617456",
+      "parameters": {
+        "totalCrossings": 40,
+        "targetCrossings": 10,
+        "targetWire": 1,
+        "visualVariant": 3
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Trace the red-labeled continuous wire and count only its crossings. Return exactly one allowed count without explanation."
+    }
+  ]
+}

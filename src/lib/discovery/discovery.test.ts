@@ -28,8 +28,27 @@ import {
   traceWireEndpoints,
   wireAnswers,
 } from "./wire-tracing";
+import {
+  countTargetCrossings,
+  createWireCrossingCountDiscoveryGrid,
+  createWireCrossingCountHoldout,
+  crossingCountAnswers,
+} from "./wire-crossing-count";
 
 describe("adaptive multimodal discovery", () => {
+  it("constructs exact balanced wire-crossing counts and a disjoint holdout", () => {
+    const candidates = createWireCrossingCountDiscoveryGrid();
+    expect(candidates).toHaveLength(12);
+    for (const cellId of new Set(candidates.map((candidate) => candidate.cellId))) {
+      expect(candidates.filter((candidate) => candidate.cellId === cellId).map((candidate) => candidate.expectedAnswer).sort()).toEqual([...crossingCountAnswers].sort());
+    }
+    for (const candidate of candidates) expect(countTargetCrossings(candidate)).toBe(candidate.parameters.targetCrossings);
+    const holdout = createWireCrossingCountHoldout(candidates[4]!);
+    expect(holdout).toHaveLength(16);
+    expect(holdout.every((candidate) => candidate.seed >= 940_000)).toBe(true);
+    for (const answer of crossingCountAnswers) expect(holdout.filter((candidate) => candidate.expectedAnswer === answer)).toHaveLength(4);
+  });
+
   it("balances wire endpoints and independently traces every exact answer", () => {
     const candidates = createWireTracingDiscoveryGrid();
     expect(candidates).toHaveLength(16);
