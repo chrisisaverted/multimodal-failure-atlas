@@ -163,6 +163,15 @@ export function createMazeReachabilityDiscoveryGrid() {
   return result;
 }
 
+export function createMazeReachabilityHoldout() {
+  const result: MazeReachabilityCandidate[] = [];
+  let seed = 1_710_000;
+  for (let replicate = 0; replicate < 4; replicate += 1)
+    for (let panel = 0; panel < 4; panel += 1)
+      result.push(createMazeReachabilityCandidate({ split: "confirmatory", seed: seed++, mazeSize: 11, correctPanel: panel, visualVariant: 300 + replicate * 4 + panel }));
+  return result;
+}
+
 function renderPanel(candidate: MazeReachabilityCandidate, panel: number, oracle: boolean) {
   const size = candidate.parameters.mazeSize;
   const edges = mazePanelEdges(candidate, panel);

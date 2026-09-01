@@ -1,0 +1,969 @@
+{
+  "id": "maze-reachability-confirmatory-v1",
+  "planSha256": "aa0aba155a0747567964b3151a1518af3b4890664d10aaf7bf6997f1a7521a75",
+  "generatorVersion": "maze-reachability-v1",
+  "renderer": "maze-reachability-svg-v1",
+  "fps": 0,
+  "cases": [
+    {
+      "candidateId": "mr-2073131fc5f526e3",
+      "cellId": "cell-bd83a51c08de5473",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "Four edge-count-matched mazes; one retains S-to-G connectivity.",
+      "failureModeId": "visual-maze-reachability",
+      "generator": "maze-reachability",
+      "seed": 1710000,
+      "difficulty": 55,
+      "variant": 0,
+      "artifact": "public/evaluations/maze-reachability-confirmatory-v1/mr-2073131fc5f526e3.png",
+      "mimeType": "image/png",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "f6b2245ba5c27c07f5701c1f1a3c5de5e5ea17768c66384e5bc5fc11025ddeab",
+      "parameters": {
+        "mazeSize": 11,
+        "correctPanel": 0,
+        "visualVariant": 300
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Trace maze connectivity from S to G. Return exactly one allowed panel letter and do not explain."
+    },
+    {
+      "candidateId": "mr-2073131fc5f526e3",
+      "cellId": "cell-bd83a51c08de5473",
+      "split": "confirmatory",
+      "condition": "solution-path-highlighted",
+      "interventionDescription": "The valid S-to-G route is highlighted in blue.",
+      "failureModeId": "visual-maze-reachability",
+      "generator": "maze-reachability",
+      "seed": 1710000,
+      "difficulty": 0,
+      "variant": 100,
+      "artifact": "public/evaluations/maze-reachability-confirmatory-v1/mr-2073131fc5f526e3-oracle.png",
+      "mimeType": "image/png",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "496810c224597fa482b1e640a100a0719f36b6d37f97a2720b9007e2aaff0446",
+      "parameters": {
+        "mazeSize": 11,
+        "correctPanel": 0,
+        "visualVariant": 300
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "The valid route is highlighted. Return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "mr-13c7d12e9da61ae2",
+      "cellId": "cell-bd83a51c08de5473",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "Four edge-count-matched mazes; one retains S-to-G connectivity.",
+      "failureModeId": "visual-maze-reachability",
+      "generator": "maze-reachability",
+      "seed": 1710001,
+      "difficulty": 55,
+      "variant": 1,
+      "artifact": "public/evaluations/maze-reachability-confirmatory-v1/mr-13c7d12e9da61ae2.png",
+      "mimeType": "image/png",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "e19ca8d49a92a92b816fe87fb7372327268368fd6365fd0ed76fd58219905c1a",
+      "parameters": {
+        "mazeSize": 11,
+        "correctPanel": 1,
+        "visualVariant": 301
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Trace maze connectivity from S to G. Return exactly one allowed panel letter and do not explain."
+    },
+    {
+      "candidateId": "mr-13c7d12e9da61ae2",
+      "cellId": "cell-bd83a51c08de5473",
+      "split": "confirmatory",
+      "condition": "solution-path-highlighted",
+      "interventionDescription": "The valid S-to-G route is highlighted in blue.",
+      "failureModeId": "visual-maze-reachability",
+      "generator": "maze-reachability",
+      "seed": 1710001,
+      "difficulty": 0,
+      "variant": 101,
+      "artifact": "public/evaluations/maze-reachability-confirmatory-v1/mr-13c7d12e9da61ae2-oracle.png",
+      "mimeType": "image/png",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "6bfe1e36e89409f694e396b21ff813bbf06e9bd616b949ffe3fef67593b029ba",
+      "parameters": {
+        "mazeSize": 11,
+        "correctPanel": 1,
+        "visualVariant": 301
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "The valid route is highlighted. Return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "mr-8661023eb5b4ec7e",
+      "cellId": "cell-bd83a51c08de5473",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "Four edge-count-matched mazes; one retains S-to-G connectivity.",
+      "failureModeId": "visual-maze-reachability",
+      "generator": "maze-reachability",
+      "seed": 1710002,
+      "difficulty": 55,
+      "variant": 2,
+      "artifact": "public/evaluations/maze-reachability-confirmatory-v1/mr-8661023eb5b4ec7e.png",
+      "mimeType": "image/png",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "C",
+        "A",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "92391a6f66848f214b1b1901251a20a46a393784c5f94a1fba71cd8f49d9ca28",
+      "parameters": {
+        "mazeSize": 11,
+        "correctPanel": 2,
+        "visualVariant": 302
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Trace maze connectivity from S to G. Return exactly one allowed panel letter and do not explain."
+    },
+    {
+      "candidateId": "mr-8661023eb5b4ec7e",
+      "cellId": "cell-bd83a51c08de5473",
+      "split": "confirmatory",
+      "condition": "solution-path-highlighted",
+      "interventionDescription": "The valid S-to-G route is highlighted in blue.",
+      "failureModeId": "visual-maze-reachability",
+      "generator": "maze-reachability",
+      "seed": 1710002,
+      "difficulty": 0,
+      "variant": 102,
+      "artifact": "public/evaluations/maze-reachability-confirmatory-v1/mr-8661023eb5b4ec7e-oracle.png",
+      "mimeType": "image/png",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "C",
+        "A",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "60df2926cfb6bb9862db6141394e2d3f2ff58d215306e94015fcc7ec244c4152",
+      "parameters": {
+        "mazeSize": 11,
+        "correctPanel": 2,
+        "visualVariant": 302
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "The valid route is highlighted. Return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "mr-f6fc8477bae4be62",
+      "cellId": "cell-bd83a51c08de5473",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "Four edge-count-matched mazes; one retains S-to-G connectivity.",
+      "failureModeId": "visual-maze-reachability",
+      "generator": "maze-reachability",
+      "seed": 1710003,
+      "difficulty": 55,
+      "variant": 3,
+      "artifact": "public/evaluations/maze-reachability-confirmatory-v1/mr-f6fc8477bae4be62.png",
+      "mimeType": "image/png",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "5859e9eb498a90cc2f073c944340b25bd3f48eebccd1dac674859f40e56ba7da",
+      "parameters": {
+        "mazeSize": 11,
+        "correctPanel": 3,
+        "visualVariant": 303
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Trace maze connectivity from S to G. Return exactly one allowed panel letter and do not explain."
+    },
+    {
+      "candidateId": "mr-f6fc8477bae4be62",
+      "cellId": "cell-bd83a51c08de5473",
+      "split": "confirmatory",
+      "condition": "solution-path-highlighted",
+      "interventionDescription": "The valid S-to-G route is highlighted in blue.",
+      "failureModeId": "visual-maze-reachability",
+      "generator": "maze-reachability",
+      "seed": 1710003,
+      "difficulty": 0,
+      "variant": 103,
+      "artifact": "public/evaluations/maze-reachability-confirmatory-v1/mr-f6fc8477bae4be62-oracle.png",
+      "mimeType": "image/png",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "b7b5a6e72af90a01c8869b5c6435405f3dbc50e777c57cbee08a2b25a9eb12c8",
+      "parameters": {
+        "mazeSize": 11,
+        "correctPanel": 3,
+        "visualVariant": 303
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "The valid route is highlighted. Return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "mr-3e39470379732051",
+      "cellId": "cell-bd83a51c08de5473",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "Four edge-count-matched mazes; one retains S-to-G connectivity.",
+      "failureModeId": "visual-maze-reachability",
+      "generator": "maze-reachability",
+      "seed": 1710004,
+      "difficulty": 55,
+      "variant": 4,
+      "artifact": "public/evaluations/maze-reachability-confirmatory-v1/mr-3e39470379732051.png",
+      "mimeType": "image/png",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "5231a4e74d10c7ff20f5ed246a92bba3a22aa0945e9d0f196b61bacd8f850fb8",
+      "parameters": {
+        "mazeSize": 11,
+        "correctPanel": 0,
+        "visualVariant": 304
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Trace maze connectivity from S to G. Return exactly one allowed panel letter and do not explain."
+    },
+    {
+      "candidateId": "mr-3e39470379732051",
+      "cellId": "cell-bd83a51c08de5473",
+      "split": "confirmatory",
+      "condition": "solution-path-highlighted",
+      "interventionDescription": "The valid S-to-G route is highlighted in blue.",
+      "failureModeId": "visual-maze-reachability",
+      "generator": "maze-reachability",
+      "seed": 1710004,
+      "difficulty": 0,
+      "variant": 104,
+      "artifact": "public/evaluations/maze-reachability-confirmatory-v1/mr-3e39470379732051-oracle.png",
+      "mimeType": "image/png",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "d6b1e050a7b847dbc0a9f1a14ab0a367c17c917978eee83924ad03aa3148d249",
+      "parameters": {
+        "mazeSize": 11,
+        "correctPanel": 0,
+        "visualVariant": 304
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "The valid route is highlighted. Return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "mr-995765ae686b0bab",
+      "cellId": "cell-bd83a51c08de5473",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "Four edge-count-matched mazes; one retains S-to-G connectivity.",
+      "failureModeId": "visual-maze-reachability",
+      "generator": "maze-reachability",
+      "seed": 1710005,
+      "difficulty": 55,
+      "variant": 5,
+      "artifact": "public/evaluations/maze-reachability-confirmatory-v1/mr-995765ae686b0bab.png",
+      "mimeType": "image/png",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "ec66aa6251e7aecdd017b8f47cb689edf0ddce8c11b97df87849be615097f2dc",
+      "parameters": {
+        "mazeSize": 11,
+        "correctPanel": 1,
+        "visualVariant": 305
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Trace maze connectivity from S to G. Return exactly one allowed panel letter and do not explain."
+    },
+    {
+      "candidateId": "mr-995765ae686b0bab",
+      "cellId": "cell-bd83a51c08de5473",
+      "split": "confirmatory",
+      "condition": "solution-path-highlighted",
+      "interventionDescription": "The valid S-to-G route is highlighted in blue.",
+      "failureModeId": "visual-maze-reachability",
+      "generator": "maze-reachability",
+      "seed": 1710005,
+      "difficulty": 0,
+      "variant": 105,
+      "artifact": "public/evaluations/maze-reachability-confirmatory-v1/mr-995765ae686b0bab-oracle.png",
+      "mimeType": "image/png",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "e5a5bfbe24442906f7fc053013996a679501e9e062d88a9d6e1299b170267bbc",
+      "parameters": {
+        "mazeSize": 11,
+        "correctPanel": 1,
+        "visualVariant": 305
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "The valid route is highlighted. Return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "mr-6f5f8f164156e5c1",
+      "cellId": "cell-bd83a51c08de5473",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "Four edge-count-matched mazes; one retains S-to-G connectivity.",
+      "failureModeId": "visual-maze-reachability",
+      "generator": "maze-reachability",
+      "seed": 1710006,
+      "difficulty": 55,
+      "variant": 6,
+      "artifact": "public/evaluations/maze-reachability-confirmatory-v1/mr-6f5f8f164156e5c1.png",
+      "mimeType": "image/png",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "2cee2f866c228e41deea3c3c043ebf21f00d5ee3e98dac8c9616b41414197d02",
+      "parameters": {
+        "mazeSize": 11,
+        "correctPanel": 2,
+        "visualVariant": 306
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Trace maze connectivity from S to G. Return exactly one allowed panel letter and do not explain."
+    },
+    {
+      "candidateId": "mr-6f5f8f164156e5c1",
+      "cellId": "cell-bd83a51c08de5473",
+      "split": "confirmatory",
+      "condition": "solution-path-highlighted",
+      "interventionDescription": "The valid S-to-G route is highlighted in blue.",
+      "failureModeId": "visual-maze-reachability",
+      "generator": "maze-reachability",
+      "seed": 1710006,
+      "difficulty": 0,
+      "variant": 106,
+      "artifact": "public/evaluations/maze-reachability-confirmatory-v1/mr-6f5f8f164156e5c1-oracle.png",
+      "mimeType": "image/png",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "cd90a0ae32c5316cd4943e831fc04461ae9ac4504e8bc9a050a956a98492658b",
+      "parameters": {
+        "mazeSize": 11,
+        "correctPanel": 2,
+        "visualVariant": 306
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "The valid route is highlighted. Return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "mr-e26c509a2d758344",
+      "cellId": "cell-bd83a51c08de5473",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "Four edge-count-matched mazes; one retains S-to-G connectivity.",
+      "failureModeId": "visual-maze-reachability",
+      "generator": "maze-reachability",
+      "seed": 1710007,
+      "difficulty": 55,
+      "variant": 7,
+      "artifact": "public/evaluations/maze-reachability-confirmatory-v1/mr-e26c509a2d758344.png",
+      "mimeType": "image/png",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "C",
+        "B",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "fc4fe7e8fc5c86ee5101b7d8eb9fb6d56e71f4baf8c8b8196681a966f0f5a30c",
+      "parameters": {
+        "mazeSize": 11,
+        "correctPanel": 3,
+        "visualVariant": 307
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Trace maze connectivity from S to G. Return exactly one allowed panel letter and do not explain."
+    },
+    {
+      "candidateId": "mr-e26c509a2d758344",
+      "cellId": "cell-bd83a51c08de5473",
+      "split": "confirmatory",
+      "condition": "solution-path-highlighted",
+      "interventionDescription": "The valid S-to-G route is highlighted in blue.",
+      "failureModeId": "visual-maze-reachability",
+      "generator": "maze-reachability",
+      "seed": 1710007,
+      "difficulty": 0,
+      "variant": 107,
+      "artifact": "public/evaluations/maze-reachability-confirmatory-v1/mr-e26c509a2d758344-oracle.png",
+      "mimeType": "image/png",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "C",
+        "B",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "7dc9aef9c5426e1013eaf4681eba5feb192b74168af9400c134dcccf924a66d2",
+      "parameters": {
+        "mazeSize": 11,
+        "correctPanel": 3,
+        "visualVariant": 307
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "The valid route is highlighted. Return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "mr-8cbe276f264fe6c3",
+      "cellId": "cell-bd83a51c08de5473",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "Four edge-count-matched mazes; one retains S-to-G connectivity.",
+      "failureModeId": "visual-maze-reachability",
+      "generator": "maze-reachability",
+      "seed": 1710008,
+      "difficulty": 55,
+      "variant": 8,
+      "artifact": "public/evaluations/maze-reachability-confirmatory-v1/mr-8cbe276f264fe6c3.png",
+      "mimeType": "image/png",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "4a0b12ea62523def2d5072500120f42cda1e7e4678b9c824541cf04604a62b07",
+      "parameters": {
+        "mazeSize": 11,
+        "correctPanel": 0,
+        "visualVariant": 308
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Trace maze connectivity from S to G. Return exactly one allowed panel letter and do not explain."
+    },
+    {
+      "candidateId": "mr-8cbe276f264fe6c3",
+      "cellId": "cell-bd83a51c08de5473",
+      "split": "confirmatory",
+      "condition": "solution-path-highlighted",
+      "interventionDescription": "The valid S-to-G route is highlighted in blue.",
+      "failureModeId": "visual-maze-reachability",
+      "generator": "maze-reachability",
+      "seed": 1710008,
+      "difficulty": 0,
+      "variant": 108,
+      "artifact": "public/evaluations/maze-reachability-confirmatory-v1/mr-8cbe276f264fe6c3-oracle.png",
+      "mimeType": "image/png",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "35055cec31443dd24f85fde1ff1870a5abba5d76d4bf474134a1eef69375ea4e",
+      "parameters": {
+        "mazeSize": 11,
+        "correctPanel": 0,
+        "visualVariant": 308
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "The valid route is highlighted. Return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "mr-4bc6c588f905a6a7",
+      "cellId": "cell-bd83a51c08de5473",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "Four edge-count-matched mazes; one retains S-to-G connectivity.",
+      "failureModeId": "visual-maze-reachability",
+      "generator": "maze-reachability",
+      "seed": 1710009,
+      "difficulty": 55,
+      "variant": 9,
+      "artifact": "public/evaluations/maze-reachability-confirmatory-v1/mr-4bc6c588f905a6a7.png",
+      "mimeType": "image/png",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "013c9b8525c5f9dc0331d650a0a0346b4090156c4991c856f043047c80c05c52",
+      "parameters": {
+        "mazeSize": 11,
+        "correctPanel": 1,
+        "visualVariant": 309
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Trace maze connectivity from S to G. Return exactly one allowed panel letter and do not explain."
+    },
+    {
+      "candidateId": "mr-4bc6c588f905a6a7",
+      "cellId": "cell-bd83a51c08de5473",
+      "split": "confirmatory",
+      "condition": "solution-path-highlighted",
+      "interventionDescription": "The valid S-to-G route is highlighted in blue.",
+      "failureModeId": "visual-maze-reachability",
+      "generator": "maze-reachability",
+      "seed": 1710009,
+      "difficulty": 0,
+      "variant": 109,
+      "artifact": "public/evaluations/maze-reachability-confirmatory-v1/mr-4bc6c588f905a6a7-oracle.png",
+      "mimeType": "image/png",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "9cae7c48b27947602ee879d4305a9412dabd2d7234020e46fde83b75e227acfe",
+      "parameters": {
+        "mazeSize": 11,
+        "correctPanel": 1,
+        "visualVariant": 309
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "The valid route is highlighted. Return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "mr-28a89f651428f5b9",
+      "cellId": "cell-bd83a51c08de5473",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "Four edge-count-matched mazes; one retains S-to-G connectivity.",
+      "failureModeId": "visual-maze-reachability",
+      "generator": "maze-reachability",
+      "seed": 1710010,
+      "difficulty": 55,
+      "variant": 10,
+      "artifact": "public/evaluations/maze-reachability-confirmatory-v1/mr-28a89f651428f5b9.png",
+      "mimeType": "image/png",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "2d65ae3e94b434ad551c1f3d6a4cb6aedb0427c4aaa181b87c3f15c82569d336",
+      "parameters": {
+        "mazeSize": 11,
+        "correctPanel": 2,
+        "visualVariant": 310
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Trace maze connectivity from S to G. Return exactly one allowed panel letter and do not explain."
+    },
+    {
+      "candidateId": "mr-28a89f651428f5b9",
+      "cellId": "cell-bd83a51c08de5473",
+      "split": "confirmatory",
+      "condition": "solution-path-highlighted",
+      "interventionDescription": "The valid S-to-G route is highlighted in blue.",
+      "failureModeId": "visual-maze-reachability",
+      "generator": "maze-reachability",
+      "seed": 1710010,
+      "difficulty": 0,
+      "variant": 110,
+      "artifact": "public/evaluations/maze-reachability-confirmatory-v1/mr-28a89f651428f5b9-oracle.png",
+      "mimeType": "image/png",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "96823c58d0d871321efbc69e22ae7147cb2634543d970d86328d5e3f64c19378",
+      "parameters": {
+        "mazeSize": 11,
+        "correctPanel": 2,
+        "visualVariant": 310
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "The valid route is highlighted. Return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "mr-e8d7a722e6f68b52",
+      "cellId": "cell-bd83a51c08de5473",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "Four edge-count-matched mazes; one retains S-to-G connectivity.",
+      "failureModeId": "visual-maze-reachability",
+      "generator": "maze-reachability",
+      "seed": 1710011,
+      "difficulty": 55,
+      "variant": 11,
+      "artifact": "public/evaluations/maze-reachability-confirmatory-v1/mr-e8d7a722e6f68b52.png",
+      "mimeType": "image/png",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "9ab544e69b197accd46ecb5ea676cf908d3678c0a51f6dd2d31860d127ff6040",
+      "parameters": {
+        "mazeSize": 11,
+        "correctPanel": 3,
+        "visualVariant": 311
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Trace maze connectivity from S to G. Return exactly one allowed panel letter and do not explain."
+    },
+    {
+      "candidateId": "mr-e8d7a722e6f68b52",
+      "cellId": "cell-bd83a51c08de5473",
+      "split": "confirmatory",
+      "condition": "solution-path-highlighted",
+      "interventionDescription": "The valid S-to-G route is highlighted in blue.",
+      "failureModeId": "visual-maze-reachability",
+      "generator": "maze-reachability",
+      "seed": 1710011,
+      "difficulty": 0,
+      "variant": 111,
+      "artifact": "public/evaluations/maze-reachability-confirmatory-v1/mr-e8d7a722e6f68b52-oracle.png",
+      "mimeType": "image/png",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "5d0a6189ebe1a01617898cb37942aea30f170efaffa5fce614132df3c8422152",
+      "parameters": {
+        "mazeSize": 11,
+        "correctPanel": 3,
+        "visualVariant": 311
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "The valid route is highlighted. Return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "mr-fef8d2a8eaced79a",
+      "cellId": "cell-bd83a51c08de5473",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "Four edge-count-matched mazes; one retains S-to-G connectivity.",
+      "failureModeId": "visual-maze-reachability",
+      "generator": "maze-reachability",
+      "seed": 1710012,
+      "difficulty": 55,
+      "variant": 12,
+      "artifact": "public/evaluations/maze-reachability-confirmatory-v1/mr-fef8d2a8eaced79a.png",
+      "mimeType": "image/png",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "C",
+        "A",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "f6f29bfadf570ff5ddb581f71bb0191d4b38da7fafa97e3c5c0c3881fe41c83d",
+      "parameters": {
+        "mazeSize": 11,
+        "correctPanel": 0,
+        "visualVariant": 312
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Trace maze connectivity from S to G. Return exactly one allowed panel letter and do not explain."
+    },
+    {
+      "candidateId": "mr-fef8d2a8eaced79a",
+      "cellId": "cell-bd83a51c08de5473",
+      "split": "confirmatory",
+      "condition": "solution-path-highlighted",
+      "interventionDescription": "The valid S-to-G route is highlighted in blue.",
+      "failureModeId": "visual-maze-reachability",
+      "generator": "maze-reachability",
+      "seed": 1710012,
+      "difficulty": 0,
+      "variant": 112,
+      "artifact": "public/evaluations/maze-reachability-confirmatory-v1/mr-fef8d2a8eaced79a-oracle.png",
+      "mimeType": "image/png",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "C",
+        "A",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "9eecc63b99bdf7f0df7f3db5d5e7ff430c6b7f342ff9b19c8041de18c581d546",
+      "parameters": {
+        "mazeSize": 11,
+        "correctPanel": 0,
+        "visualVariant": 312
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "The valid route is highlighted. Return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "mr-436e8383266c812c",
+      "cellId": "cell-bd83a51c08de5473",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "Four edge-count-matched mazes; one retains S-to-G connectivity.",
+      "failureModeId": "visual-maze-reachability",
+      "generator": "maze-reachability",
+      "seed": 1710013,
+      "difficulty": 55,
+      "variant": 13,
+      "artifact": "public/evaluations/maze-reachability-confirmatory-v1/mr-436e8383266c812c.png",
+      "mimeType": "image/png",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "57df54bded78b0052442ae21a11fabc01d8574f34a7d38d2a0d21eb04eee67c5",
+      "parameters": {
+        "mazeSize": 11,
+        "correctPanel": 1,
+        "visualVariant": 313
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Trace maze connectivity from S to G. Return exactly one allowed panel letter and do not explain."
+    },
+    {
+      "candidateId": "mr-436e8383266c812c",
+      "cellId": "cell-bd83a51c08de5473",
+      "split": "confirmatory",
+      "condition": "solution-path-highlighted",
+      "interventionDescription": "The valid S-to-G route is highlighted in blue.",
+      "failureModeId": "visual-maze-reachability",
+      "generator": "maze-reachability",
+      "seed": 1710013,
+      "difficulty": 0,
+      "variant": 113,
+      "artifact": "public/evaluations/maze-reachability-confirmatory-v1/mr-436e8383266c812c-oracle.png",
+      "mimeType": "image/png",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "9334d4952c7010275742124ae52565cf65756ea13d3a80d7675f98313f8048c4",
+      "parameters": {
+        "mazeSize": 11,
+        "correctPanel": 1,
+        "visualVariant": 313
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "The valid route is highlighted. Return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "mr-9c72e22d8b01381e",
+      "cellId": "cell-bd83a51c08de5473",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "Four edge-count-matched mazes; one retains S-to-G connectivity.",
+      "failureModeId": "visual-maze-reachability",
+      "generator": "maze-reachability",
+      "seed": 1710014,
+      "difficulty": 55,
+      "variant": 14,
+      "artifact": "public/evaluations/maze-reachability-confirmatory-v1/mr-9c72e22d8b01381e.png",
+      "mimeType": "image/png",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "215ad8d788ca6b8fbd46a85f646b5d649441d1c2cf39ac1a5dda1d5cdc77569e",
+      "parameters": {
+        "mazeSize": 11,
+        "correctPanel": 2,
+        "visualVariant": 314
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Trace maze connectivity from S to G. Return exactly one allowed panel letter and do not explain."
+    },
+    {
+      "candidateId": "mr-9c72e22d8b01381e",
+      "cellId": "cell-bd83a51c08de5473",
+      "split": "confirmatory",
+      "condition": "solution-path-highlighted",
+      "interventionDescription": "The valid S-to-G route is highlighted in blue.",
+      "failureModeId": "visual-maze-reachability",
+      "generator": "maze-reachability",
+      "seed": 1710014,
+      "difficulty": 0,
+      "variant": 114,
+      "artifact": "public/evaluations/maze-reachability-confirmatory-v1/mr-9c72e22d8b01381e-oracle.png",
+      "mimeType": "image/png",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "48415a6146486b848e2a6307bee9b803eb2257a3699ee3f01164e7132091a721",
+      "parameters": {
+        "mazeSize": 11,
+        "correctPanel": 2,
+        "visualVariant": 314
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "The valid route is highlighted. Return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "mr-3d1da2fa8f75fea3",
+      "cellId": "cell-bd83a51c08de5473",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "Four edge-count-matched mazes; one retains S-to-G connectivity.",
+      "failureModeId": "visual-maze-reachability",
+      "generator": "maze-reachability",
+      "seed": 1710015,
+      "difficulty": 55,
+      "variant": 15,
+      "artifact": "public/evaluations/maze-reachability-confirmatory-v1/mr-3d1da2fa8f75fea3.png",
+      "mimeType": "image/png",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "51eb84e7639930ad68faa258d87a21c7cded83eab8cd84c23503ab85db6025f4",
+      "parameters": {
+        "mazeSize": 11,
+        "correctPanel": 3,
+        "visualVariant": 315
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Trace maze connectivity from S to G. Return exactly one allowed panel letter and do not explain."
+    },
+    {
+      "candidateId": "mr-3d1da2fa8f75fea3",
+      "cellId": "cell-bd83a51c08de5473",
+      "split": "confirmatory",
+      "condition": "solution-path-highlighted",
+      "interventionDescription": "The valid S-to-G route is highlighted in blue.",
+      "failureModeId": "visual-maze-reachability",
+      "generator": "maze-reachability",
+      "seed": 1710015,
+      "difficulty": 0,
+      "variant": 115,
+      "artifact": "public/evaluations/maze-reachability-confirmatory-v1/mr-3d1da2fa8f75fea3-oracle.png",
+      "mimeType": "image/png",
+      "question": "In which panel is there an open route through the maze from S to G?",
+      "answerOptions": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "f8889c800a99f44920302807b050749f9f682ad36465ed0a31d17baf021ab1b5",
+      "parameters": {
+        "mazeSize": 11,
+        "correctPanel": 3,
+        "visualVariant": 315
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "The valid route is highlighted. Return exactly one allowed panel letter."
+    }
+  ]
+}
