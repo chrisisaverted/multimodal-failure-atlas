@@ -160,6 +160,45 @@ export function renderDiagnosticSvg(instance: DiagnosticInstance, playhead = 0) 
       );
       break;
     }
+    case "gated-frequency": {
+      const time = playhead * number(latent.videoDurationMs);
+      const eventCells = latent.eventCells as number[];
+      const eventGates = latent.eventGates as string[];
+      const localTime = time - 500;
+      const eventIndex = Math.floor(localTime / 500);
+      const active = eventIndex >= 0 && eventIndex < eventCells.length && localTime % 500 < 380;
+      const activeCell = active ? eventCells[eventIndex] : undefined;
+      const activeGate = active ? eventGates[eventIndex]! : String(latent.targetGate);
+      const gateColor = activeGate === "AMBER" ? "#d79d00" : "#1399ad";
+      const cells = Array.from({ length: 36 }, (_, cell) => {
+        const row = Math.floor(cell / 6);
+        const column = cell % 6;
+        const x = 31 + column * 13;
+        const y = 17 + row * 11.5;
+        const lit = activeCell === cell;
+        return `<rect x="${x}" y="${y}" width="11" height="9" rx="1" fill="${lit ? gateColor : "#f5f2e9"}" stroke="#4b4e48" stroke-width=".45"/><text x="${x + 5.5}" y="${y + 6.2}" text-anchor="middle" font-size="3.2" font-weight="700" fill="${lit ? "#fff" : "#4b4e48"}">${String.fromCharCode(65 + column)}${row + 1}</text>`;
+      }).join("");
+      body = `<rect width="140" height="100" fill="#e8e5da"/><text x="70" y="9" text-anchor="middle" font-size="5" font-weight="700">EXACTLY TWICE · ONLY ${String(latent.targetGate)}</text><rect x="27" y="13" width="86" height="78" rx="4" fill="#fffdf7" stroke="${gateColor}" stroke-width="3"/>${cells}`;
+      break;
+    }
+    case "gated-pair-collision": {
+      const time = playhead * number(latent.videoDurationMs);
+      const left = latent.eventLeft as string[];
+      const right = latent.eventRight as string[];
+      const gates = latent.eventGates as string[];
+      const localTime = time - 500;
+      const eventIndex = Math.floor(localTime / 500);
+      const phase = ((localTime % 500) + 500) % 500;
+      const active = eventIndex >= 0 && eventIndex < left.length && phase < 380;
+      const gate = active ? gates[eventIndex]! : String(latent.targetGate);
+      const gateColor = gate === "AMBER" ? "#d79d00" : "#1399ad";
+      const approach = active ? Math.sin((phase / 380) * Math.PI) : 0;
+      const event = active
+        ? `<circle cx="${42 + approach * 20}" cy="50" r="12" fill="#2356c7"/><circle cx="${98 - approach * 20}" cy="50" r="12" fill="#f04b32"/><text x="${42 + approach * 20}" y="54" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">${left[eventIndex]}</text><text x="${98 - approach * 20}" y="54" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">${right[eventIndex]}</text>`
+        : "";
+      body = `<rect width="140" height="100" fill="#e8e5da"/><text x="70" y="11" text-anchor="middle" font-size="5" font-weight="700">COUNT ${(latent.targetPair as string[]).join("+")} · ONLY ${String(latent.targetGate)}</text><rect x="10" y="17" width="120" height="67" rx="5" fill="#fffdf7" stroke="${gateColor}" stroke-width="4"/>${event}`;
+      break;
+    }
   }
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="700" height="500" viewBox="0 0 140 100">${body}</svg>`;

@@ -11,6 +11,8 @@ const videoKeys = new Set<GeneratorKey>([
   "event-order",
   "identity-occlusion",
   "event-counting",
+  "gated-frequency",
+  "gated-pair-collision",
 ]);
 
 export function DiagnosticLab({ generator, roomy = false }: { generator: GeneratorKey; roomy?: boolean }) {

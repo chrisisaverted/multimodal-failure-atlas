@@ -8,14 +8,15 @@ The atlas treats every failure as a falsifiable family rather than a spectacular
 
 - 52 mapped failure families across image, video, audiovisual, multi-image, and interleaved media
 - 20 strictly admitted frozen families: 10 image and 10 video
-- 8 deterministic interactive generators with construction-grounded answers
+- 10 deterministic interactive generators with construction-grounded answers
 - 38 primary or official technical sources with retrieval dates and scope notes
-- 68 statically prerendered routes
+- 71 statically prerendered routes
 - Evidence ladder separating behavior, interventions, representations, hypotheses, and speculation
 - Typed, provider-neutral evaluation contract
-- 2,880 unique genuine response records, including 1,936 requests in the admitted-family evidence set
+- 2,064 requests in the current admitted-family ledger, yielding 2,047 substantive answers
+- A separate 1,391-request canonical Seed/MiMo route-expansion audit, with every current family now confirmed on both routes
 - $25 default campaign cap, $25 protected reserve, and a $200 prepaid evaluation ceiling
-- 24 non-substantive admitted-family requests retained and excluded rather than scored as model failures
+- 17 non-substantive admitted-family requests retained and excluded rather than scored as model failures
 - A budgeted adaptive-discovery pipeline with disjoint 16-case confirmatory holdouts and paired native/control interventions
 
 ## Quick start
@@ -82,7 +83,8 @@ No external service is necessary to browse the atlas or generate public educatio
 
 The user funded a $200 prepaid OpenRouter balance and authorized no further deposits. Total project
 cash outlay must remain below $500; the code enforces a stricter $200 cumulative evaluation ceiling,
-a protected $25 reserve, and a $25 default campaign cap. Current usage is recorded in
+a protected $25 reserve, and a $25 default campaign cap. Reconciled unique-request model spend is
+$111.534871. Current usage is recorded in
 [docs/cost-ledger.csv](docs/cost-ledger.csv).
 
 ## Status

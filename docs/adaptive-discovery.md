@@ -130,6 +130,44 @@ operations must share one visual intermediate, (2) distractors exercise the same
 and (3) adjacent balanced answers make approximate magnitude insufficient. Easier cells remain in the
 atlas as controls rather than being discarded.
 
+## Route-expansion audit and repair loop
+
+A frozen Seed 2.1 Turbo and MiMo 2.5 audit tested whether the original 20 generators transferred beyond
+the three admission routes. Eighteen remained below half. Two crossed the threshold: Seed reached exactly
+8/16 on pair-only collision counting, and MiMo reached 9/16 on ungated temporal set cardinality. Those
+results were retained as negative replications; neither original family was silently relabeled.
+
+The successful pair repair makes two predicates jointly necessary. Each of 32 labeled events has an
+identity pair and a frame-color gate; the target pair also occurs six times under the wrong color, the
+target pair and target color both vary by case, and the answer counts only their conjunction. On a frozen
+16-case holdout, Gemini, Qwen, Kimi, Seed, and MiMo scored 3, 4, 5, 3, and 5 correct respectively. A control
+that exposes the running conjunctive count recovered to at least 12/16 on every route.
+
+The temporal repair demonstrates why a passed screen is still not evidence. A first color-gated visited-set
+design passed all five eight-case screens, but Kimi rose to 8/15 on unseen holdout cases, making rejection
+unavoidable. The second repair changed the sufficient statistic from a set to a conditional histogram:
+across 40 flashes, count how many labeled cells occur exactly twice under one designated frame color while
+eight target cells echo under the wrong color. The frozen scores were 2/16, 3/16, 2/16, 6/16, and 4/16;
+every visible-histogram control was 16/16.
+
+This yields a reusable black-box search recipe:
+
+1. Audit a passed family on new model lineages before calling its generator transferable.
+2. If one route crosses the threshold, identify the shortcut it could use and preserve that crossing as a
+   rejected result.
+3. Compose independently insufficient predicates around one shared intermediate state. Vary each predicate
+   by case and include distractors satisfying either predicate alone.
+4. Replace scalar counting with the smallest structured state that blocks the observed shortcut: identity
+   map, signed ledger, set, or per-location histogram.
+5. Externalize exactly that sufficient statistic in a matched control. Recovery supports a stage boundary;
+   failed recovery keeps the behavioral result but weakens attribution.
+6. Freeze disjoint seeds before screening, then require a new 16-case denominator from every route even when
+   an eight-case screen looked decisive.
+
+This recipe is not guaranteed to produce human-model separation. It deliberately optimizes cross-route
+hardness while keeping events legible; a blinded human study is still required to establish the other side
+of the separation.
+
 ## Objective and promotion
 
 For each cell, let a substantive answer be a verified, non-empty answer. The primary quantity is the

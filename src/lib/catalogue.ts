@@ -664,6 +664,7 @@ type ReproducedExtension = {
   disconfirmingTest: string;
   mitigations: string[];
   severity?: FailureMode["severity"];
+  generator?: FailureMode["generator"];
 };
 
 const reproducedExtensions: ReproducedExtension[] = [
@@ -946,6 +947,7 @@ const reproducedExtensions: ReproducedExtension[] = [
     disconfirmingTest:
       "Keep the sequence fixed while exposing pair matches, gate matches, their conjunction, or only the running conjunctive counter.",
     mitigations: ["Pairwise relation tracks", "Predicate-gated event streams", "Explicit counters"],
+    generator: "gated-pair-collision",
     severity: "foundational",
   },
   {
@@ -1042,6 +1044,7 @@ const reproducedExtensions: ReproducedExtension[] = [
       "Persistent per-cell histograms",
       "Question-conditioned event filtering",
     ],
+    generator: "gated-frequency",
     severity: "foundational",
   },
   {

@@ -4,7 +4,7 @@ Status: study-ready instrument, not a completed human baseline.
 
 ## Question
 
-At the exact frozen settings where all three admission routes scored below 50%, can attentive adult humans solve the native-media tasks reliably above chance?
+At the exact frozen settings where all five evaluated routes scored below 50%, can attentive adult humans solve the native-media tasks reliably above chance?
 
 ## Design
 

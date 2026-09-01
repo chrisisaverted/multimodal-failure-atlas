@@ -1,6 +1,6 @@
 import type { DiagnosticInstance, DiagnosticParams, GeneratorKey } from "./types";
 
-export const generatorVersion = "1.2.0";
+export const generatorVersion = "1.3.0";
 
 function mulberry32(seed: number) {
   let state = seed >>> 0;
@@ -192,6 +192,106 @@ export function generateInstance(generator: GeneratorKey, params: DiagnosticPara
         latent: { count, firstFlashAtMs, intervalMs, flashDurationMs, videoDurationMs },
         minimalPairDescription:
           "Count changes while total video duration, scene, flash appearance, and answer distribution remain controlled.",
+      };
+    }
+    case "gated-frequency": {
+      const qualifyingCount = 2 + ((params.seed + params.variant) % 4);
+      const targetGate = params.seed % 2 === 0 ? "AMBER" : "CYAN";
+      const otherGate = targetGate === "AMBER" ? "CYAN" : "AMBER";
+      const targetEventCount = Math.max(qualifyingCount * 2, 10 + Math.round(difficulty / 10));
+      const otherEventCount = Math.round(difficulty / 5);
+      const cells = shuffled(
+        Array.from({ length: 36 }, (_, index) => index),
+        random,
+      );
+      const qualifyingCells = cells.slice(0, qualifyingCount);
+      const singletonCells = cells.slice(
+        qualifyingCount,
+        qualifyingCount + targetEventCount - qualifyingCount * 2,
+      );
+      const targetCells = shuffled([...qualifyingCells, ...qualifyingCells, ...singletonCells], random);
+      const targetCellSet = new Set([...qualifyingCells, ...singletonCells]);
+      const wrongGateEchoCount = Math.min(8, otherEventCount, targetCellSet.size);
+      const echoedCells = shuffled([...targetCellSet], random).slice(0, wrongGateEchoCount);
+      const untouchedCells = cells.filter((cell) => !targetCellSet.has(cell));
+      const otherCells = [
+        ...echoedCells,
+        ...shuffled(untouchedCells, random).slice(0, otherEventCount - wrongGateEchoCount),
+      ];
+      const events = shuffled(
+        [
+          ...targetCells.map((cell) => ({ cell, gate: targetGate })),
+          ...otherCells.map((cell) => ({ cell, gate: otherGate })),
+        ],
+        random,
+      );
+      return {
+        ...base(generator, params),
+        question: `How many DIFFERENT grid cells flashed EXACTLY TWICE during ${targetGate} frames?`,
+        answer: String(qualifyingCount),
+        answerOptions: shuffled(["2", "3", "4", "5"], random),
+        latent: {
+          targetGate,
+          otherGate,
+          targetMultiplicity: 2,
+          qualifyingCount,
+          eventCells: events.map((event) => event.cell),
+          eventGates: events.map((event) => event.gate),
+          eventCount: events.length,
+          wrongGateEchoCount,
+          videoDurationMs: events.length * 500 + 1_000,
+        },
+        minimalPairDescription:
+          "Difficulty adds wrong-colour echoes and longer event streams while the target multiplicity, grid, labels, and exact oracle remain fixed.",
+      };
+    }
+    case "gated-pair-collision": {
+      const labels = ["A", "B", "C", "D"];
+      const pairs = [
+        ["A", "B"],
+        ["A", "C"],
+        ["A", "D"],
+        ["B", "C"],
+        ["B", "D"],
+        ["C", "D"],
+      ];
+      const targetPair = pairs[params.seed % pairs.length]!;
+      const targetGate = Math.floor(params.seed / pairs.length) % 2 === 0 ? "AMBER" : "CYAN";
+      const otherGate = targetGate === "AMBER" ? "CYAN" : "AMBER";
+      const targetCount = 3 + ((params.seed + params.variant) % 4);
+      const eventCount = 12 + Math.round((difficulty / 100) * 20);
+      const wrongGateTargetCount = Math.min(6, eventCount - targetCount, Math.round(difficulty * 0.06));
+      const distractorPairs = pairs.filter((pair) => pair.join("") !== targetPair.join(""));
+      const events = [
+        ...Array.from({ length: targetCount }, () => ({ pair: targetPair, gate: targetGate })),
+        ...Array.from({ length: wrongGateTargetCount }, () => ({ pair: targetPair, gate: otherGate })),
+      ];
+      while (events.length < eventCount) {
+        const pair = pick(distractorPairs, random);
+        const gate = events.length % 2 === 0 ? targetGate : otherGate;
+        events.push({ pair, gate });
+      }
+      const ordered = shuffled(events, random);
+      return {
+        ...base(generator, params),
+        question: `How many ${targetPair.join("+")} collisions occurred during ${targetGate} frames?`,
+        answer: String(targetCount),
+        answerOptions: shuffled(["3", "4", "5", "6"], random),
+        latent: {
+          targetPair,
+          targetGate,
+          otherGate,
+          targetCount,
+          eventLeft: ordered.map((event) => event.pair[0]!),
+          eventRight: ordered.map((event) => event.pair[1]!),
+          eventGates: ordered.map((event) => event.gate),
+          eventCount: ordered.length,
+          wrongGateTargetCount,
+          videoDurationMs: ordered.length * 500 + 1_000,
+          labels,
+        },
+        minimalPairDescription:
+          "Difficulty adds events and target-pair collisions under the wrong frame colour; pair identity, gate identity, and their conjunction remain construction-grounded.",
       };
     }
   }

@@ -57,7 +57,9 @@ export type GeneratorKey =
   | "brief-event"
   | "event-order"
   | "identity-occlusion"
-  | "event-counting";
+  | "event-counting"
+  | "gated-frequency"
+  | "gated-pair-collision";
 
 export interface Citation {
   id: string;
@@ -108,7 +110,7 @@ export interface DiagnosticInstance {
   question: string;
   answer: string;
   answerOptions?: string[];
-  latent: Record<string, string | number | boolean | string[]>;
+  latent: Record<string, string | number | boolean | string[] | number[]>;
   params: DiagnosticParams;
   minimalPairDescription: string;
 }

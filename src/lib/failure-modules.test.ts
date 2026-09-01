@@ -2,8 +2,8 @@ import { describe, expect, it } from "vitest";
 import { failureModules } from "./failure-modules";
 
 describe("failure module contract", () => {
-  it("registers all eight deep diagnostics", () => {
-    expect(failureModules).toHaveLength(8);
+  it("registers all ten deep diagnostics", () => {
+    expect(failureModules).toHaveLength(10);
   });
 
   for (const diagnostic of failureModules) {

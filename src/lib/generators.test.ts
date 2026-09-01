@@ -12,6 +12,8 @@ const keys: GeneratorKey[] = [
   "event-order",
   "identity-occlusion",
   "event-counting",
+  "gated-frequency",
+  "gated-pair-collision",
 ];
 
 describe("diagnostic generators", () => {
@@ -75,6 +77,63 @@ describe("diagnostic generators", () => {
         counts.set(answer, (counts.get(answer) ?? 0) + 1);
       }
       expect([...counts.values()]).toEqual([10, 10, 10, 10, 10, 10, 10]);
+    }
+  });
+
+  it("balances the four gated counting answers", () => {
+    for (const key of ["gated-frequency", "gated-pair-collision"] as const) {
+      const counts = new Map<string, number>();
+      for (let seed = 0; seed < 40; seed += 1) {
+        const answer = generateInstance(key, { seed, difficulty: 70, variant: 0 }).answer;
+        counts.set(answer, (counts.get(answer) ?? 0) + 1);
+      }
+      expect([...counts.values()]).toEqual([10, 10, 10, 10]);
+    }
+  });
+
+  it("constructs exact color-gated frequency answers", () => {
+    for (let seed = 0; seed < 24; seed += 1) {
+      for (const difficulty of [0, 50, 100]) {
+        const instance = generateInstance("gated-frequency", { seed, difficulty, variant: 0 });
+        const cells = instance.latent.eventCells as number[];
+        const gates = instance.latent.eventGates as string[];
+        const targetGate = String(instance.latent.targetGate);
+        const frequencies = new Map<number, number>();
+        for (let index = 0; index < cells.length; index += 1)
+          if (gates[index] === targetGate)
+            frequencies.set(cells[index]!, (frequencies.get(cells[index]!) ?? 0) + 1);
+        expect([...frequencies.values()].filter((count) => count === 2).length).toBe(Number(instance.answer));
+      }
+    }
+  });
+
+  it("constructs exact pair-and-gate collision answers", () => {
+    for (let seed = 0; seed < 24; seed += 1) {
+      for (const difficulty of [0, 50, 100]) {
+        const instance = generateInstance("gated-pair-collision", { seed, difficulty, variant: 0 });
+        const left = instance.latent.eventLeft as string[];
+        const right = instance.latent.eventRight as string[];
+        const gates = instance.latent.eventGates as string[];
+        const targetPair = instance.latent.targetPair as string[];
+        const targetGate = String(instance.latent.targetGate);
+        const count = left.filter(
+          (label, index) =>
+            gates[index] === targetGate &&
+            [label, right[index]!].sort().join("") === [...targetPair].sort().join(""),
+        ).length;
+        expect(count).toBe(Number(instance.answer));
+      }
+    }
+  });
+
+  it("adds independently insufficient gated distractors with difficulty", () => {
+    for (const key of ["gated-frequency", "gated-pair-collision"] as const) {
+      const easy = generateInstance(key, { seed: 8, difficulty: 0, variant: 0 });
+      const hard = generateInstance(key, { seed: 8, difficulty: 100, variant: 0 });
+      expect(Number(hard.latent.eventCount)).toBeGreaterThan(Number(easy.latent.eventCount));
+      const trapKey = key === "gated-frequency" ? "wrongGateEchoCount" : "wrongGateTargetCount";
+      expect(Number(easy.latent[trapKey])).toBe(0);
+      expect(Number(hard.latent[trapKey])).toBeGreaterThan(0);
     }
   });
 
