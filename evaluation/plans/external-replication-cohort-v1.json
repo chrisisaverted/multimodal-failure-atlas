@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "cohortId": "external-replication-v1-2026-09-01",
+  "frozenAt": "2026-09-01T11:12:00.000Z",
+  "analysisRole": "Untouched post-confirmatory route replication; never used for generator selection.",
+  "families": [
+    {
+      "catalogueId": "identity-conditioned-exact-counting",
+      "planId": "precision-wire-count-confirmatory-v1",
+      "planSha256": "fd36adf420ab39f566db1a538323a55ad486bdc232abf32e2b99c40a2db67f10",
+      "modality": "image"
+    },
+    {
+      "catalogueId": "topological-enclosure-depth",
+      "planId": "enclosure-panels-dense-confirmatory-v1",
+      "planSha256": "3b21d657f3e690cc339cd354bc77cec3daba2ce9d41628834aef48958b240b04",
+      "modality": "image"
+    },
+    {
+      "catalogueId": "rotation-invariant-visual-correspondence",
+      "planId": "rotation-correspondence-confirmatory-v1",
+      "planSha256": "e65351d21fe8b76a4af90aa992b99d777dc07b9b4125b60926ebc7ac8d5653eb",
+      "modality": "image"
+    },
+    {
+      "catalogueId": "global-bilateral-symmetry-verification",
+      "planId": "symmetry-confirmatory-v1",
+      "planSha256": "6aae55a0e28c9e8b0530fe72471a4195979ae09c46423e9954b29ea87093933f",
+      "modality": "image"
+    },
+    {
+      "catalogueId": "occluded-3d-cube-enumeration",
+      "planId": "cube-stack-confirmatory-v1",
+      "planSha256": "af4ab87804c994cfd508778b4965c3cf35d5a1998a77845195b0246237afb6a7",
+      "modality": "image"
+    },
+    {
+      "catalogueId": "dense-visual-boolean-composition",
+      "planId": "xor-composition-confirmatory-v2",
+      "planSha256": "4dec2a52e71ce5310649458e698064baba1c70b178e63bc64d90d114d093ce4d",
+      "modality": "image"
+    },
+    {
+      "catalogueId": "dense-cross-image-change-localization",
+      "planId": "change-localization-confirmatory-v2",
+      "planSha256": "a48003576cd1afdab136a06f170533a921161a8f807c4d7fdf46c883d2a49a4b",
+      "modality": "image"
+    },
+    {
+      "catalogueId": "visual-maze-reachability",
+      "planId": "maze-reachability-confirmatory-v1",
+      "planSha256": "aa0aba155a0747567964b3151a1518af3b4890664d10aaf7bf6997f1a7521a75",
+      "modality": "image"
+    },
+    {
+      "catalogueId": "visual-graph-degree-topology",
+      "planId": "euler-graph-confirmatory-v1",
+      "planSha256": "420a28c73f278871963cfd54f47ee4e10ef54de79922021763c2c98447e89f8d",
+      "modality": "image"
+    },
+    {
+      "catalogueId": "global-visual-parity-verification",
+      "planId": "parity-matrix-confirmatory-v3",
+      "planSha256": "c6ba7c6b9976378b364536859c1672dc89ae56570f951c64f21e294d1bc12fae",
+      "modality": "image"
+    },
+    {
+      "catalogueId": "identity-conditioned-spatial-transition-counting",
+      "planId": "zone-entry-confirmatory-v1",
+      "planSha256": "ac4225837eb4ab039ee7ca20b9a13b1b580f56ae5f4b269c939c944bad771e5e",
+      "modality": "video"
+    },
+    {
+      "catalogueId": "identity-pair-interaction-counting",
+      "planId": "pair-collision-confirmatory-v1",
+      "planSha256": "e7a0c377f0210aca0496c9c83261bd1ef00785cfc411419ca4cd35bbd6e7dd02",
+      "modality": "video"
+    },
+    {
+      "catalogueId": "sequential-identity-permutation",
+      "planId": "swap-tracking-confirmatory-v1",
+      "planSha256": "ed4b3b3d8231fcd73ff2be5bc1fbf09f529d507adc2e6994e72bee674ffff079",
+      "modality": "video"
+    },
+    {
+      "catalogueId": "identity-conditioned-temporal-event-counting",
+      "planId": "selective-flash-confirmatory-v3",
+      "planSha256": "0c38bd725afcbed6aaedf370df3604d6c4aa42cbc39c1464b4edb1905a7ea97f",
+      "modality": "video"
+    },
+    {
+      "catalogueId": "temporal-pattern-counting",
+      "planId": "transition-count-confirmatory-v1",
+      "planSha256": "d8067fa5d80da3f1c4fd7c36d7ff74cc9e1dffb4aa69fffd741a173d83386771",
+      "modality": "video"
+    },
+    {
+      "catalogueId": "temporal-set-cardinality",
+      "planId": "grid-activation-confirmatory-v3",
+      "planSha256": "5f96ab8c9ceb36ad95012a93a3f5a01e87f84e94b030d49e155ce812ebca7a3e",
+      "modality": "video"
+    },
+    {
+      "catalogueId": "dynamic-route-turn-integration",
+      "planId": "route-turn-confirmatory-v3",
+      "planSha256": "4407dba238ba7a1970e0f7fc728ba59c24887800b7c413d5dbbd1767680a68cc",
+      "modality": "video"
+    },
+    {
+      "catalogueId": "dynamic-conservation-ledger",
+      "planId": "conservation-confirmatory-v3",
+      "planSha256": "3d6c784fbc8de5a878fc55b0786adc121d3172fccf7081dbfe07b4155705548c",
+      "modality": "video"
+    },
+    {
+      "catalogueId": "dynamic-trajectory-topology",
+      "planId": "hidden-trail-intersections-confirmatory-v1",
+      "planSha256": "53f816bb4a130ebf9c4b5ec407fe2ee6416e4e51563ad601f410c637197d803b",
+      "modality": "video"
+    },
+    {
+      "catalogueId": "signed-temporal-state-accumulation",
+      "planId": "signed-accumulator-confirmatory-v2",
+      "planSha256": "426dfdf03f5e9218308e2bfc4e571629e36c62ad06116ae228e7e502cce463c5",
+      "modality": "video"
+    }
+  ]
+}

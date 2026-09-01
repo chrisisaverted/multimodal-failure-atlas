@@ -5,14 +5,16 @@ import { z } from "zod";
 const evidenceSchema = z.object({
   families: z.array(
     z.object({
+      catalogueId: z.string(),
       planId: z.string(),
       planSha256: z.string().regex(/^[a-f0-9]{64}$/),
+      modality: z.enum(["image", "video"]),
     }),
   ),
 });
 
 const evidence = evidenceSchema.parse(
-  JSON.parse(await readFile(resolve("src/data/admitted-families.json"), "utf8")),
+  JSON.parse(await readFile(resolve("evaluation/plans/external-replication-cohort-v1.json"), "utf8")),
 );
 const outputDirectory = resolve("evaluation/plans/replication-v1");
 await mkdir(outputDirectory, { recursive: true });

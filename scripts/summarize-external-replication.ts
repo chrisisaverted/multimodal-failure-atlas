@@ -6,12 +6,21 @@ import { evaluationRunSchema, type EvaluationRunRecord } from "../src/lib/evalua
 
 const cohort = ["bytedance-seed/seed-2-1-turbo", "xiaomi/mimo-v2.5"] as const;
 const requireComplete = process.argv.includes("--require-complete");
-const evidence = z
+const frozenCohort = z
   .object({
-    families: z.array(z.object({ catalogueId: z.string(), planId: z.string(), modality: z.string() })),
+    cohortId: z.literal("external-replication-v1-2026-09-01"),
+    families: z.array(
+      z.object({
+        catalogueId: z.string(),
+        planId: z.string(),
+        planSha256: z.string().regex(/^[a-f0-9]{64}$/),
+        modality: z.enum(["image", "video"]),
+      }),
+    ),
   })
-  .parse(JSON.parse(await readFile(resolve("src/data/admitted-families.json"), "utf8")));
+  .parse(JSON.parse(await readFile(resolve("evaluation/plans/external-replication-cohort-v1.json"), "utf8")));
 const manifestSchema = z.object({
+  planSha256: z.string().regex(/^[a-f0-9]{64}$/),
   cases: z.array(
     z.object({
       candidateId: z.string(),
@@ -93,10 +102,12 @@ const isCanonical = (run: EvaluationRunRecord) =>
 const canonicalRuns = uniqueRuns.filter(isCanonical);
 
 const families = [];
-for (const family of evidence.families) {
+for (const family of frozenCohort.families) {
   const manifest = manifestSchema.parse(
     JSON.parse(await readFile(resolve(`public/evaluations/${family.planId}/manifest.json`), "utf8")),
   );
+  if (manifest.planSha256 !== family.planSha256)
+    throw new Error(`${family.planId}: frozen replication plan digest mismatch`);
   const conditions = [...new Set(manifest.cases.map((candidate) => candidate.condition))];
   const nativeCondition = conditions.find((condition) => condition.startsWith("native"));
   const controlCondition = conditions.find((condition) => condition !== nativeCondition);
@@ -124,10 +135,7 @@ for (const family of evidence.families) {
           ? undefined
           : attempts
               .filter(
-                (run) =>
-                  run.status === "pending-review" &&
-                  !run.emptyResponse &&
-                  run.finishReason === "stop",
+                (run) => run.status === "pending-review" && !run.emptyResponse && run.finishReason === "stop",
               )
               .map((run) => ({
                 run,
@@ -135,10 +143,16 @@ for (const family of evidence.families) {
               }))
               .find((entry) => entry.decision);
         const selected = verified[0]
-          ? { run: verified[0], correct: verified[0].correct, adjudicated: false }
+          ? {
+              run: verified[0],
+              answer: verified[0].parsedAnswer,
+              correct: verified[0].correct,
+              adjudicated: false,
+            }
           : adjudicated?.decision
             ? {
                 run: adjudicated.run,
+                answer: adjudicated.decision.claimedAnswer,
                 correct:
                   adjudicated.decision.withinOptions &&
                   adjudicated.decision.claimedAnswer === candidate.expectedAnswer,
@@ -149,12 +163,18 @@ for (const family of evidence.families) {
       });
       const answered = perCase.flatMap((entry) => entry.selected ?? []);
       const correct = answered.filter((entry) => entry.correct).length;
+      const answerDistribution = Object.fromEntries(
+        [...new Set(answered.map((entry) => entry.answer))]
+          .sort()
+          .map((answer) => [answer, answered.filter((entry) => entry.answer === answer).length]),
+      );
       return {
         condition,
         plannedCases: cases.length,
         requests: perCase.reduce((sum, entry) => sum + entry.attempts.length, 0),
         substantiveAnswers: answered.length,
         correct,
+        answerDistribution,
         solveRate: answered.length ? correct / answered.length : null,
         ...wilson(correct, answered.length),
         missingCandidateIds: perCase
@@ -201,7 +221,7 @@ if (requireComplete && !families.every((family) => family.complete)) {
 
 const output = {
   schemaVersion: 1,
-  cohortId: "external-replication-v1-2026-09-01",
+  cohortId: frozenCohort.cohortId,
   generatedAt: uniqueRuns.at(-1)?.evaluatedAt ?? null,
   analysisRole: "Untouched post-confirmatory route replication; never used for generator selection.",
   analysisRule:

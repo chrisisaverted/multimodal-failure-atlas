@@ -6,7 +6,7 @@ import { routeExpansionModels } from "@/lib/external-replication";
 
 const percent = (value: number | null) => (value === null ? "—" : `${Math.round(value * 100)}%`);
 const modelName = (id: string) => id.split("/").at(-1)?.replaceAll("-", " ") ?? id;
-const outputDistribution = (summary: AdmittedFamilyEvidence["models"][number]["native"]) => {
+const outputDistribution = (summary: { answerDistribution?: Record<string, number> }) => {
   const entries = Object.entries(summary.answerDistribution ?? {});
   if (!entries.length || entries.some(([answer]) => answer.length > 8)) return undefined;
   return entries.map(([answer, count]) => `${answer}×${count}`).join(" · ");
@@ -102,7 +102,7 @@ export function AdmittedEvidencePanel({ evidence }: { evidence: AdmittedFamilyEv
                     95% Wilson {percent(model.native.lower95)}–{percent(model.native.upper95)} · control{" "}
                     {model.control.correct}/{model.control.substantiveAnswers}
                   </small>
-                  {"answerDistribution" in model.native && outputDistribution(model.native) ? (
+                  {outputDistribution(model.native) ? (
                     <small className="admitted-output-distribution">
                       Native outputs {outputDistribution(model.native)}
                     </small>

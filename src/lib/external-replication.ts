@@ -7,6 +7,7 @@ export interface ReplicationCondition {
   requests: number;
   substantiveAnswers: number;
   correct: number;
+  answerDistribution?: Record<string, number>;
   solveRate: number | null;
   lower95: number | null;
   upper95: number | null;
