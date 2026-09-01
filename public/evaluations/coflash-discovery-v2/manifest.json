@@ -1,0 +1,1297 @@
+{
+  "id": "coflash-discovery-v2",
+  "planSha256": "4f5dcee997e1c6893ec77f21b7aa42797ecda88801e824076bed0668492efe5a",
+  "generatorVersion": "distributed-coflash-counting-v2",
+  "renderer": "coflash-svg-raster-v1",
+  "fps": 30,
+  "cases": [
+    {
+      "candidateId": "cfh-cbcbf165cbf47834",
+      "cellId": "cell-thirty-distributed-coflashes",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Eighteen discrete beats each activate two of four labeled streams.",
+      "failureModeId": "distributed-temporal-cooccurrence-counting",
+      "generator": "coflash-counting",
+      "seed": 4400000,
+      "difficulty": 96,
+      "variant": 0,
+      "artifact": "public/evaluations/coflash-discovery-v2/cfh-cbcbf165cbf47834.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 14500,
+      "question": "Which listed pair flashes together exactly SEVEN times across the complete video? Count only simultaneous flashes within one beat.",
+      "answerOptions": [
+        "A+B",
+        "C+D",
+        "B+D",
+        "A+C"
+      ],
+      "expectedAnswer": "A+B",
+      "sha256": "ff8b52e93e05dcd3068f8e16a6abe4d2e856fb7e6be4e944c5235e7cea90857e",
+      "parameters": {
+        "targetPair": 0,
+        "beats": [
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "pairCounts": [
+          7,
+          4,
+          5,
+          3
+        ],
+        "targetCount": 7,
+        "videoDurationMs": 14500,
+        "fps": 30,
+        "visualVariant": 0
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count pairwise simultaneous flashes over all 30 beats. Return exactly one allowed pair and do not explain."
+    },
+    {
+      "candidateId": "cfh-a91ea054ab8f43b8",
+      "cellId": "cell-thirty-distributed-coflashes",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Eighteen discrete beats each activate two of four labeled streams.",
+      "failureModeId": "distributed-temporal-cooccurrence-counting",
+      "generator": "coflash-counting",
+      "seed": 4400001,
+      "difficulty": 96,
+      "variant": 1,
+      "artifact": "public/evaluations/coflash-discovery-v2/cfh-a91ea054ab8f43b8.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 14500,
+      "question": "Which listed pair flashes together exactly SEVEN times across the complete video? Count only simultaneous flashes within one beat.",
+      "answerOptions": [
+        "B+D",
+        "C+D",
+        "A+B",
+        "A+C"
+      ],
+      "expectedAnswer": "A+C",
+      "sha256": "02990c85056939c8828c58b357aa0b832739b837683e9bc5b718f201a1420ded",
+      "parameters": {
+        "targetPair": 1,
+        "beats": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "pairCounts": [
+          3,
+          7,
+          5,
+          4
+        ],
+        "targetCount": 7,
+        "videoDurationMs": 14500,
+        "fps": 30,
+        "visualVariant": 1
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count pairwise simultaneous flashes over all 30 beats. Return exactly one allowed pair and do not explain."
+    },
+    {
+      "candidateId": "cfh-9d317d6ed2014faf",
+      "cellId": "cell-thirty-distributed-coflashes",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Eighteen discrete beats each activate two of four labeled streams.",
+      "failureModeId": "distributed-temporal-cooccurrence-counting",
+      "generator": "coflash-counting",
+      "seed": 4400002,
+      "difficulty": 96,
+      "variant": 2,
+      "artifact": "public/evaluations/coflash-discovery-v2/cfh-9d317d6ed2014faf.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 14500,
+      "question": "Which listed pair flashes together exactly SEVEN times across the complete video? Count only simultaneous flashes within one beat.",
+      "answerOptions": [
+        "C+D",
+        "B+D",
+        "A+B",
+        "A+C"
+      ],
+      "expectedAnswer": "B+D",
+      "sha256": "9f3ed46a027e327c8833ca0744a532338b1025b3ab0ec96ecb1d8506e88569d0",
+      "parameters": {
+        "targetPair": 2,
+        "beats": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "pairCounts": [
+          3,
+          4,
+          7,
+          5
+        ],
+        "targetCount": 7,
+        "videoDurationMs": 14500,
+        "fps": 30,
+        "visualVariant": 2
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count pairwise simultaneous flashes over all 30 beats. Return exactly one allowed pair and do not explain."
+    },
+    {
+      "candidateId": "cfh-b0efa27a61a28f08",
+      "cellId": "cell-thirty-distributed-coflashes",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Eighteen discrete beats each activate two of four labeled streams.",
+      "failureModeId": "distributed-temporal-cooccurrence-counting",
+      "generator": "coflash-counting",
+      "seed": 4400003,
+      "difficulty": 96,
+      "variant": 3,
+      "artifact": "public/evaluations/coflash-discovery-v2/cfh-b0efa27a61a28f08.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 14500,
+      "question": "Which listed pair flashes together exactly SEVEN times across the complete video? Count only simultaneous flashes within one beat.",
+      "answerOptions": [
+        "C+D",
+        "B+D",
+        "A+B",
+        "A+C"
+      ],
+      "expectedAnswer": "C+D",
+      "sha256": "9e204e0ba7abbd0501d8625b19d65bd7c8e4078be803f5925072283736363550",
+      "parameters": {
+        "targetPair": 3,
+        "beats": [
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "pairCounts": [
+          3,
+          4,
+          5,
+          7
+        ],
+        "targetCount": 7,
+        "videoDurationMs": 14500,
+        "fps": 30,
+        "visualVariant": 3
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count pairwise simultaneous flashes over all 30 beats. Return exactly one allowed pair and do not explain."
+    },
+    {
+      "candidateId": "cfh-63e09bb7dbc554d2",
+      "cellId": "cell-thirty-distributed-coflashes",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Eighteen discrete beats each activate two of four labeled streams.",
+      "failureModeId": "distributed-temporal-cooccurrence-counting",
+      "generator": "coflash-counting",
+      "seed": 4400004,
+      "difficulty": 96,
+      "variant": 4,
+      "artifact": "public/evaluations/coflash-discovery-v2/cfh-63e09bb7dbc554d2.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 14500,
+      "question": "Which listed pair flashes together exactly SEVEN times across the complete video? Count only simultaneous flashes within one beat.",
+      "answerOptions": [
+        "B+D",
+        "C+D",
+        "A+B",
+        "A+C"
+      ],
+      "expectedAnswer": "A+B",
+      "sha256": "0606b47a77cbf4e1589b526a205aeca24d1f3d3c06b2835508047201473cf694",
+      "parameters": {
+        "targetPair": 0,
+        "beats": [
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "pairCounts": [
+          7,
+          4,
+          5,
+          3
+        ],
+        "targetCount": 7,
+        "videoDurationMs": 14500,
+        "fps": 30,
+        "visualVariant": 4
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count pairwise simultaneous flashes over all 30 beats. Return exactly one allowed pair and do not explain."
+    },
+    {
+      "candidateId": "cfh-bf500274ba83576a",
+      "cellId": "cell-thirty-distributed-coflashes",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Eighteen discrete beats each activate two of four labeled streams.",
+      "failureModeId": "distributed-temporal-cooccurrence-counting",
+      "generator": "coflash-counting",
+      "seed": 4400005,
+      "difficulty": 96,
+      "variant": 5,
+      "artifact": "public/evaluations/coflash-discovery-v2/cfh-bf500274ba83576a.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 14500,
+      "question": "Which listed pair flashes together exactly SEVEN times across the complete video? Count only simultaneous flashes within one beat.",
+      "answerOptions": [
+        "B+D",
+        "A+B",
+        "C+D",
+        "A+C"
+      ],
+      "expectedAnswer": "A+C",
+      "sha256": "9df58fcc9e0207464e87e16c2f989e2399cef58176512463bdaea561fe7d59ec",
+      "parameters": {
+        "targetPair": 1,
+        "beats": [
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "pairCounts": [
+          3,
+          7,
+          5,
+          4
+        ],
+        "targetCount": 7,
+        "videoDurationMs": 14500,
+        "fps": 30,
+        "visualVariant": 5
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count pairwise simultaneous flashes over all 30 beats. Return exactly one allowed pair and do not explain."
+    },
+    {
+      "candidateId": "cfh-6835c982c650c113",
+      "cellId": "cell-thirty-distributed-coflashes",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Eighteen discrete beats each activate two of four labeled streams.",
+      "failureModeId": "distributed-temporal-cooccurrence-counting",
+      "generator": "coflash-counting",
+      "seed": 4400006,
+      "difficulty": 96,
+      "variant": 6,
+      "artifact": "public/evaluations/coflash-discovery-v2/cfh-6835c982c650c113.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 14500,
+      "question": "Which listed pair flashes together exactly SEVEN times across the complete video? Count only simultaneous flashes within one beat.",
+      "answerOptions": [
+        "B+D",
+        "A+B",
+        "C+D",
+        "A+C"
+      ],
+      "expectedAnswer": "B+D",
+      "sha256": "7a42032329ee58dd9e1f039b0c0ab5fd8a490ad54c3e254f05cdc4f4509c7062",
+      "parameters": {
+        "targetPair": 2,
+        "beats": [
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "pairCounts": [
+          3,
+          4,
+          7,
+          5
+        ],
+        "targetCount": 7,
+        "videoDurationMs": 14500,
+        "fps": 30,
+        "visualVariant": 6
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count pairwise simultaneous flashes over all 30 beats. Return exactly one allowed pair and do not explain."
+    },
+    {
+      "candidateId": "cfh-58ddb733168c6205",
+      "cellId": "cell-thirty-distributed-coflashes",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Eighteen discrete beats each activate two of four labeled streams.",
+      "failureModeId": "distributed-temporal-cooccurrence-counting",
+      "generator": "coflash-counting",
+      "seed": 4400007,
+      "difficulty": 96,
+      "variant": 7,
+      "artifact": "public/evaluations/coflash-discovery-v2/cfh-58ddb733168c6205.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 14500,
+      "question": "Which listed pair flashes together exactly SEVEN times across the complete video? Count only simultaneous flashes within one beat.",
+      "answerOptions": [
+        "A+B",
+        "B+D",
+        "C+D",
+        "A+C"
+      ],
+      "expectedAnswer": "C+D",
+      "sha256": "e672e3030e8d06814c64f377985fc6119dbede029f83ab283f2172ac8adfe084",
+      "parameters": {
+        "targetPair": 3,
+        "beats": [
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "pairCounts": [
+          3,
+          4,
+          5,
+          7
+        ],
+        "targetCount": 7,
+        "videoDurationMs": 14500,
+        "fps": 30,
+        "visualVariant": 7
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count pairwise simultaneous flashes over all 30 beats. Return exactly one allowed pair and do not explain."
+    }
+  ]
+}

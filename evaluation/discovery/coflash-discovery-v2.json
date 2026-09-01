@@ -1,0 +1,1222 @@
+{
+  "id": "coflash-discovery-v2",
+  "generatorVersion": "distributed-coflash-counting-v2",
+  "status": "discovery-only",
+  "supersedes": "coflash-discovery-v1",
+  "selectedCell": {
+    "beats": 30,
+    "targetCount": 7,
+    "activeMs": 260
+  },
+  "hypothesis": "A denser and briefer stream exposes exact distributed temporal aggregation failures while events remain individually visible to humans.",
+  "candidates": [
+    {
+      "id": "cfh-cbcbf165cbf47834",
+      "cellId": "cell-thirty-distributed-coflashes",
+      "split": "discovery",
+      "seed": 4400000,
+      "failureModeId": "distributed-temporal-cooccurrence-counting",
+      "question": "Which listed pair flashes together exactly SEVEN times across the complete video? Count only simultaneous flashes within one beat.",
+      "answerOptions": [
+        "A+B",
+        "C+D",
+        "B+D",
+        "A+C"
+      ],
+      "expectedAnswer": "A+B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetPair": 0,
+        "beats": [
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "pairCounts": [
+          7,
+          4,
+          5,
+          3
+        ],
+        "targetCount": 7,
+        "videoDurationMs": 14500,
+        "fps": 30,
+        "visualVariant": 0
+      }
+    },
+    {
+      "id": "cfh-a91ea054ab8f43b8",
+      "cellId": "cell-thirty-distributed-coflashes",
+      "split": "discovery",
+      "seed": 4400001,
+      "failureModeId": "distributed-temporal-cooccurrence-counting",
+      "question": "Which listed pair flashes together exactly SEVEN times across the complete video? Count only simultaneous flashes within one beat.",
+      "answerOptions": [
+        "B+D",
+        "C+D",
+        "A+B",
+        "A+C"
+      ],
+      "expectedAnswer": "A+C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetPair": 1,
+        "beats": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "pairCounts": [
+          3,
+          7,
+          5,
+          4
+        ],
+        "targetCount": 7,
+        "videoDurationMs": 14500,
+        "fps": 30,
+        "visualVariant": 1
+      }
+    },
+    {
+      "id": "cfh-9d317d6ed2014faf",
+      "cellId": "cell-thirty-distributed-coflashes",
+      "split": "discovery",
+      "seed": 4400002,
+      "failureModeId": "distributed-temporal-cooccurrence-counting",
+      "question": "Which listed pair flashes together exactly SEVEN times across the complete video? Count only simultaneous flashes within one beat.",
+      "answerOptions": [
+        "C+D",
+        "B+D",
+        "A+B",
+        "A+C"
+      ],
+      "expectedAnswer": "B+D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetPair": 2,
+        "beats": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "pairCounts": [
+          3,
+          4,
+          7,
+          5
+        ],
+        "targetCount": 7,
+        "videoDurationMs": 14500,
+        "fps": 30,
+        "visualVariant": 2
+      }
+    },
+    {
+      "id": "cfh-b0efa27a61a28f08",
+      "cellId": "cell-thirty-distributed-coflashes",
+      "split": "discovery",
+      "seed": 4400003,
+      "failureModeId": "distributed-temporal-cooccurrence-counting",
+      "question": "Which listed pair flashes together exactly SEVEN times across the complete video? Count only simultaneous flashes within one beat.",
+      "answerOptions": [
+        "C+D",
+        "B+D",
+        "A+B",
+        "A+C"
+      ],
+      "expectedAnswer": "C+D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetPair": 3,
+        "beats": [
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "pairCounts": [
+          3,
+          4,
+          5,
+          7
+        ],
+        "targetCount": 7,
+        "videoDurationMs": 14500,
+        "fps": 30,
+        "visualVariant": 3
+      }
+    },
+    {
+      "id": "cfh-63e09bb7dbc554d2",
+      "cellId": "cell-thirty-distributed-coflashes",
+      "split": "discovery",
+      "seed": 4400004,
+      "failureModeId": "distributed-temporal-cooccurrence-counting",
+      "question": "Which listed pair flashes together exactly SEVEN times across the complete video? Count only simultaneous flashes within one beat.",
+      "answerOptions": [
+        "B+D",
+        "C+D",
+        "A+B",
+        "A+C"
+      ],
+      "expectedAnswer": "A+B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetPair": 0,
+        "beats": [
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "pairCounts": [
+          7,
+          4,
+          5,
+          3
+        ],
+        "targetCount": 7,
+        "videoDurationMs": 14500,
+        "fps": 30,
+        "visualVariant": 4
+      }
+    },
+    {
+      "id": "cfh-bf500274ba83576a",
+      "cellId": "cell-thirty-distributed-coflashes",
+      "split": "discovery",
+      "seed": 4400005,
+      "failureModeId": "distributed-temporal-cooccurrence-counting",
+      "question": "Which listed pair flashes together exactly SEVEN times across the complete video? Count only simultaneous flashes within one beat.",
+      "answerOptions": [
+        "B+D",
+        "A+B",
+        "C+D",
+        "A+C"
+      ],
+      "expectedAnswer": "A+C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetPair": 1,
+        "beats": [
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "pairCounts": [
+          3,
+          7,
+          5,
+          4
+        ],
+        "targetCount": 7,
+        "videoDurationMs": 14500,
+        "fps": 30,
+        "visualVariant": 5
+      }
+    },
+    {
+      "id": "cfh-6835c982c650c113",
+      "cellId": "cell-thirty-distributed-coflashes",
+      "split": "discovery",
+      "seed": 4400006,
+      "failureModeId": "distributed-temporal-cooccurrence-counting",
+      "question": "Which listed pair flashes together exactly SEVEN times across the complete video? Count only simultaneous flashes within one beat.",
+      "answerOptions": [
+        "B+D",
+        "A+B",
+        "C+D",
+        "A+C"
+      ],
+      "expectedAnswer": "B+D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetPair": 2,
+        "beats": [
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "pairCounts": [
+          3,
+          4,
+          7,
+          5
+        ],
+        "targetCount": 7,
+        "videoDurationMs": 14500,
+        "fps": 30,
+        "visualVariant": 6
+      }
+    },
+    {
+      "id": "cfh-58ddb733168c6205",
+      "cellId": "cell-thirty-distributed-coflashes",
+      "split": "discovery",
+      "seed": 4400007,
+      "failureModeId": "distributed-temporal-cooccurrence-counting",
+      "question": "Which listed pair flashes together exactly SEVEN times across the complete video? Count only simultaneous flashes within one beat.",
+      "answerOptions": [
+        "A+B",
+        "B+D",
+        "C+D",
+        "A+C"
+      ],
+      "expectedAnswer": "C+D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetPair": 3,
+        "beats": [
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "pairCounts": [
+          3,
+          4,
+          5,
+          7
+        ],
+        "targetCount": 7,
+        "videoDurationMs": 14500,
+        "fps": 30,
+        "visualVariant": 7
+      }
+    }
+  ]
+}

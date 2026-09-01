@@ -89,7 +89,7 @@ import { applyTransfers, createCausalTransferGrid } from "./causal-transfer";
 import { applyConservation, createConservationGrid } from "./conservation-ledger";
 import { createSymmetryGrid, createSymmetryHoldout, symmetryMatrix } from "./symmetry-search";
 import { applySwaps, createSwapTrackingGrid } from "./swap-tracking";
-import { coflashPairCounts, createCoflashGrid } from "./coflash-counting";
+import { coflashPairCounts, createCoflashGrid, createCoflashHardGrid } from "./coflash-counting";
 import { createXorGrid, xorMatrices } from "./xor-composition";
 import { applyInfection, createInfectionGrid } from "./infection-spread";
 import { createEulerGrid, graphDegrees } from "./euler-graph";
@@ -103,6 +103,15 @@ import { createParityGrid, parityMatrices, parityViolations } from "./parity-mat
 import { createZoneEntryGrid } from "./zone-entry-count";
 
 describe("adaptive multimodal discovery", () => {
+  it("raises coflash density while preserving a unique seven-count target", () => {
+    for (const candidate of createCoflashHardGrid()) {
+      const counts = coflashPairCounts(candidate.parameters.beats);
+      expect(candidate.parameters.beats).toHaveLength(30);
+      expect(counts[candidate.parameters.targetPair]).toBe(7);
+      expect(counts.filter(value => value === 7)).toHaveLength(1);
+    }
+  });
+
   it("binds periodic target motion to balanced exact zone-entry counts", () => {
     for (const candidate of createZoneEntryGrid()) {
       expect(candidate.parameters.entryCount).toBe(candidate.parameters.cycles * 2);
