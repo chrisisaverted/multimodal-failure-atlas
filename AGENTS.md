@@ -53,3 +53,6 @@ Before designing or running paid multimodal failure searches, read
 - A verbose response with running intermediate counts is not automatically ambiguous. Answer-key-blind
   adjudication may prioritize a clearly terminal standalone or labeled answer, but conflicting conclusions
   remain excluded and a prospective completion protocol is required when no unique conclusion exists.
+- A deterministic evaluation ID identifies the logical case/configuration and may recur on a prospective
+  retry. Cost reconciliation and request counts use the provider request ID; when no provider ID exists,
+  count each append-only source row conservatively. Never deduplicate spend by logical evaluation ID.

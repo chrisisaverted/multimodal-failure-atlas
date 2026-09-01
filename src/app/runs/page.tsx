@@ -137,8 +137,14 @@ export default function RunsPage() {
                         <dd>{run.generatorVersion}</dd>
                       </div>
                       <div>
-                        <dt>Run ID</dt>
+                        <dt>Logical evaluation key</dt>
                         <dd title={run.id}>{shortHash(run.id)}</dd>
+                      </div>
+                      <div>
+                        <dt>Provider request ID</dt>
+                        <dd title={run.requestId}>
+                          {run.requestId ? shortHash(run.requestId) : "not supplied"}
+                        </dd>
                       </div>
                       <div>
                         <dt>Evaluation plan</dt>

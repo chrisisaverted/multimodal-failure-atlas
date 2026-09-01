@@ -16,6 +16,12 @@ would enter the final $25 prepaid reserve. `ATLAS_RECORDED_SPEND_USD` carries us
 result store into every preflight. The runner waits between calls, appends each completed record
 immediately, and resumes by deterministic run ID after interruption.
 
+The deterministic run ID is a logical case/configuration key, not a billable-request identity. A
+prospectively authorized completion retry can reuse that logical key while receiving a new provider request
+ID. `npm run audit:budget` scans every JSONL row, deduplicates only exact provider request IDs, and fails the
+build on conflicting duplicates or spend above the declared project ceiling. Rows without a provider request
+ID are conservatively counted by append-only source location.
+
 ## Fixture smoke plan
 
 `npm run evaluate:fixture` performs a read-only preflight. Add `-- --execute` to exercise the append-only storage and resume path without contacting a model or spending money. Fixture records are always labelled `fixture` and must never enter model comparisons.

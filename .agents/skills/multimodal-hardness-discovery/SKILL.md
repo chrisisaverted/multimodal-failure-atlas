@@ -53,6 +53,11 @@ Preserve every artifact, content hash, prompt, raw response, route, endpoint rev
 and provider-reported cost. New evidence should refine this skill; do not generalize one route-specific
 failure into a universal rule.
 
+Keep logical evaluation identity separate from request identity. A prospective retry of the same frozen
+case can legitimately reuse its deterministic evaluation ID while receiving a new provider request ID.
+Deduplicate spend only by provider request ID; if a provider ID is absent, conservatively count every
+append-only source row. Treat conflicting copies of one provider request as an audit failure.
+
 Require at least 16 substantive native answers per route for publication. If a request exhausts its
 output allowance before emitting an answer, preserve it as non-substantive and use a prospective,
 case-specific completion plan to fill the denominator; never overwrite the first attempt. Confirm the
