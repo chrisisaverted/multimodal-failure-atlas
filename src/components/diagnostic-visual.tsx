@@ -204,6 +204,76 @@ export function DiagnosticVisual({
         </svg>
       );
     }
+    case "dense-xor": {
+      const gridSize = number(latent.gridSize);
+      const inputA = latent.inputA as number[];
+      const inputB = latent.inputB as number[];
+      const candidates = latent.candidateBits as number[];
+      const renderGrid = (bits: number[], originX: number, originY: number, side: number, key: string) => {
+        const cellSize = side / gridSize;
+        return (
+          <g key={key}>
+            <rect
+              x={originX - 0.7}
+              y={originY - 0.7}
+              width={side + 1.4}
+              height={side + 1.4}
+              fill="#fffdf7"
+              stroke="#4b4e48"
+              strokeWidth=".55"
+            />
+            {bits.map((value, index) =>
+              value ? (
+                <rect
+                  key={index}
+                  x={originX + (index % gridSize) * cellSize}
+                  y={originY + Math.floor(index / gridSize) * cellSize}
+                  width={cellSize + 0.04}
+                  height={cellSize + 0.04}
+                  fill={palette.cobalt}
+                />
+              ) : null,
+            )}
+          </g>
+        );
+      };
+      return (
+        <svg
+          className="diagnostic-svg"
+          viewBox="0 0 140 100"
+          role="img"
+          aria-label="Two input bit grids and four candidate XOR outputs"
+        >
+          <rect width="140" height="100" fill={palette.cream} />
+          <text x="40" y="6" textAnchor="middle" fontSize="4.5" fontWeight="700">
+            INPUT 1
+          </text>
+          <text x="100" y="6" textAnchor="middle" fontSize="4.5" fontWeight="700">
+            INPUT 2
+          </text>
+          {renderGrid(inputA, 28, 10, 24, "input-a")}
+          {renderGrid(inputB, 88, 10, 24, "input-b")}
+          <text x="70" y="26" textAnchor="middle" fontSize="10" fontWeight="700" fill={palette.vermillion}>
+            XOR
+          </text>
+          {["A", "B", "C", "D"].map((label, panel) => {
+            const originX = 6 + panel * 34;
+            const panelBits = candidates.slice(
+              panel * gridSize * gridSize,
+              (panel + 1) * gridSize * gridSize,
+            );
+            return (
+              <g key={label}>
+                <text x={originX + 12} y="56" textAnchor="middle" fontSize="5" fontWeight="700">
+                  {label}
+                </text>
+                {renderGrid(panelBits, originX, 61, 24, `candidate-${label}`)}
+              </g>
+            );
+          })}
+        </svg>
+      );
+    }
     case "brief-event": {
       const duration = number(latent.videoDurationMs);
       const time = playhead * duration;

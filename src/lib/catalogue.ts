@@ -802,6 +802,7 @@ const reproducedExtensions: ReproducedExtension[] = [
       "Iterative verification",
       "External matrix operations",
     ],
+    generator: "dense-xor",
     severity: "foundational",
   },
   {

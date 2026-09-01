@@ -13,6 +13,7 @@ const keys: GeneratorKey[] = [
   "identity-occlusion",
   "event-counting",
   "dense-symmetry",
+  "dense-xor",
   "gated-frequency",
   "gated-pair-collision",
 ];
@@ -92,6 +93,17 @@ describe("diagnostic generators", () => {
     }
   });
 
+  it("balances the four dense verification panels", () => {
+    for (const key of ["dense-symmetry", "dense-xor"] as const) {
+      const counts = new Map<string, number>();
+      for (let seed = 0; seed < 40; seed += 1) {
+        const answer = generateInstance(key, { seed, difficulty: 70, variant: 0 }).answer;
+        counts.set(answer, (counts.get(answer) ?? 0) + 1);
+      }
+      expect([...counts.values()]).toEqual([10, 10, 10, 10]);
+    }
+  });
+
   it("constructs exact color-gated frequency answers", () => {
     for (let seed = 0; seed < 24; seed += 1) {
       for (const difficulty of [0, 50, 100]) {
@@ -126,6 +138,25 @@ describe("diagnostic generators", () => {
           return true;
         });
         expect(symmetricPanels).toEqual([["A", "B", "C", "D"].indexOf(instance.answer)]);
+      }
+    }
+  });
+
+  it("constructs exactly one cell-wise XOR answer", () => {
+    for (let seed = 0; seed < 24; seed += 1) {
+      for (const difficulty of [0, 50, 100]) {
+        const instance = generateInstance("dense-xor", { seed, difficulty, variant: 0 });
+        const gridSize = Number(instance.latent.gridSize);
+        const inputA = instance.latent.inputA as number[];
+        const inputB = instance.latent.inputB as number[];
+        const candidates = instance.latent.candidateBits as number[];
+        const expected = inputA.map((value, index) => value ^ inputB[index]!);
+        const exactPanels = [0, 1, 2, 3].filter((panel) =>
+          candidates
+            .slice(panel * gridSize * gridSize, (panel + 1) * gridSize * gridSize)
+            .every((value, index) => value === expected[index]),
+        );
+        expect(exactPanels).toEqual([["A", "B", "C", "D"].indexOf(instance.answer)]);
       }
     }
   });
@@ -165,6 +196,13 @@ describe("diagnostic generators", () => {
     const hard = generateInstance("dense-symmetry", { seed: 8, difficulty: 100, variant: 0 });
     expect(Number(hard.latent.gridSize)).toBeGreaterThan(Number(easy.latent.gridSize));
     expect(Number(hard.latent.defectCount)).toBeLessThan(Number(easy.latent.defectCount));
+  });
+
+  it("makes XOR denser and distractors closer with difficulty", () => {
+    const easy = generateInstance("dense-xor", { seed: 8, difficulty: 0, variant: 0 });
+    const hard = generateInstance("dense-xor", { seed: 8, difficulty: 100, variant: 0 });
+    expect(Number(hard.latent.gridSize)).toBeGreaterThan(Number(easy.latent.gridSize));
+    expect(Number(hard.latent.distractorFlips)).toBeLessThan(Number(easy.latent.distractorFlips));
   });
 
   it("constructs true minimal pairs for brief events and attribute binding", () => {

@@ -8,7 +8,7 @@ The atlas treats every failure as a falsifiable family rather than a spectacular
 
 - 52 mapped failure families across image, video, audiovisual, multi-image, and interleaved media
 - 20 strictly admitted frozen families: 10 image and 10 video
-- 11 deterministic interactive generators with construction-grounded answers
+- 12 deterministic interactive generators with construction-grounded answers
 - 38 primary or official technical sources with retrieval dates and scope notes
 - 71 statically prerendered routes
 - Evidence ladder separating behavior, interventions, representations, hypotheses, and speculation

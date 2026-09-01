@@ -237,6 +237,41 @@ export function generateInstance(generator: GeneratorKey, params: DiagnosticPara
           "Difficulty increases the grid density and reduces each distractor to one sparse symmetry defect; panel labels and exact mirrored construction stay fixed.",
       };
     }
+    case "dense-xor": {
+      const gridSize = 8 + Math.floor(difficulty / 17) * 2;
+      const correctPanel = (params.seed + params.variant) % 4;
+      const distractorFlips = Math.max(1, 5 - Math.floor(difficulty / 25));
+      const inputA = Array.from({ length: gridSize * gridSize }, () => (random() < 0.45 ? 1 : 0));
+      const inputB = Array.from({ length: gridSize * gridSize }, () => (random() < 0.45 ? 1 : 0));
+      const xor = inputA.map((value, index) => value ^ inputB[index]!);
+      const candidates = Array.from({ length: 4 }, (_, panel) => {
+        const bits = [...xor];
+        if (panel !== correctPanel) {
+          const indices = shuffled(
+            Array.from({ length: bits.length }, (_, index) => index),
+            random,
+          ).slice(0, distractorFlips);
+          for (const index of indices) bits[index] = bits[index] === 1 ? 0 : 1;
+        }
+        return bits;
+      });
+      return {
+        ...base(generator, params),
+        question: "Which candidate grid is the cell-by-cell XOR of INPUT 1 and INPUT 2?",
+        answer: ["A", "B", "C", "D"][correctPanel]!,
+        answerOptions: shuffled(["A", "B", "C", "D"], random),
+        latent: {
+          gridSize,
+          correctPanel,
+          distractorFlips,
+          inputA,
+          inputB,
+          candidateBits: candidates.flat(),
+        },
+        minimalPairDescription:
+          "Difficulty increases grid density and reduces each wrong candidate toward a one-cell near miss; the Boolean rule and exact construction oracle do not change.",
+      };
+    }
     case "gated-frequency": {
       const qualifyingCount = 2 + ((params.seed + params.variant) % 4);
       const targetGate = params.seed % 2 === 0 ? "AMBER" : "CYAN";
