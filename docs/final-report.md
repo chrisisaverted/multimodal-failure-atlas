@@ -1,81 +1,130 @@
 # Build and evaluation report
 
-Release audit updated 2026-08-31.
+Release audit updated 1 September 2026.
 
-## Delivered
+## Current release
 
-- A static-first Next.js atlas deployed publicly on GitHub Pages
-- A multi-axis catalogue of 32 image, video, audiovisual, multi-image, and interleaved-media failure families
-- Eight deterministic interactive generators with construction-grounded answers and downloadable specimens
-- A frozen 64-case pilot: eight independently seeded cases across four image and four video families
-- 640 genuine responses from 10 distinct model families through pinned upstream providers
-- 192 adaptive screening responses and 80 frozen-holdout responses, including 40 paired native/slow-motion probes
-- Exact media, prompt, stimulus-plan, and evaluation-protocol hashes on every public response record
-- Raw answers, finish reasons, no-answer outcomes, token usage, cost, scorer decisions, and review states
-- A fail-closed evaluation runner with resumption, no provider fallback, denied data collection, and hard spending guards
+- Public static application: <https://chrisisaverted.github.io/multimodal-failure-atlas/>
+- 52 mapped image, video, audiovisual, multi-image, and interleaved-media failure families
+- 20 strictly admitted synthetic families: 10 image and 10 video
+- Three frozen admission routes: Gemini 3.7 Flash, Qwen 3.8 Max, and Kimi K3
+- Two frozen route-expansion routes: Seed 2.1 Turbo and MiMo 2.5
+- 12 deterministic browser generators with exact construction answers and family-local difficulty controls
+- 640 native/control artifacts in the admitted manifests, totaling 106,125,005 bytes
+- An answer-free human instrument with eight blocks, 40 trials per block, and all 320 native cases
+- A static response ledger, exact manifests, raw external-replication evidence, and rejected-search ledger
 
-## Frozen campaign result
+## Admission contract
 
-Protocol `openrouter-frontier-matrix-v2-2026-08-30` used one trial per case, temperature 0,
-minimal hidden reasoning, a 1,024-token answer ceiling, exact native PNG/MP4 inputs, and an
-exact-option scorer frozen before the final run.
+A family is admitted only when every prespecified admission route supplies at least 16 substantive answers
+on an untouched, seed-disjoint native-media holdout and every observed solve rate is strictly below 50%.
+Answer labels are balanced. Media, prompt, plan, protocol, route, scorer, and response identities are frozen
+and hashed. Silence, provider errors, empty responses, unsupported media, parser ambiguity, and output or
+reasoning exhaustion never count as model failures.
 
-| Model            | Correct | Verified denominator | Review | No answer | Reported cost |
-| ---------------- | ------: | -------------------: | -----: | --------: | ------------: |
-| Gemini 3.7 Flash |      59 |                   64 |      0 |         0 |       $0.0749 |
-| Qwen 3.8 Max     |      57 |                   64 |      0 |         1 |       $0.2259 |
-| Kimi K3          |      54 |                   64 |      0 |         0 |       $0.5184 |
-| Gemma 4 31B      |      53 |                   64 |      0 |         9 |       $0.0146 |
-| GLM 5.3 Flash    |      52 |                   64 |      0 |         6 |       $0.0074 |
-| MiMo V2.5        |      50 |                   62 |      2 |         4 |       $0.0107 |
-| Seed 2.1 Turbo   |      48 |                   64 |      0 |        12 |       $0.1191 |
-| Step 3.7 Flash   |      45 |                   64 |      0 |         8 |       $0.0262 |
-| MiniMax M3       |      44 |                   64 |      0 |         7 |       $0.0410 |
-| Nova 2 Lite      |      41 |                   56 |      8 |         6 |       $0.0865 |
+The current admitted ledger contains 2,064 requests and 2,047 substantive answers. Ten explicit terminal
+answers were recovered under an answer-key-blind declaration rule; 17 unresolved or empty requests remain
+visible and excluded. The publisher fails closed if a core or embedded expansion route lacks the required
+denominator or reaches 50%.
 
-The strongest shared failure was repeated-event counting: 17/80 verified correct (21.3%), with
-42 no-answer outcomes. Attribute binding was 80/80 on this pilot, showing that the set is
-diagnostic rather than uniformly difficult. Ten verbose responses remain `pending-review` because
-the precommitted parser found more than one answer option; they were not retroactively rescored.
+Observed below-half is a finite-holdout gate, not a population claim. Several 95% Wilson intervals cross
+50%. Human solvability is unverified until blinded participants are measured under the published protocol.
 
-## Verification and limits
+## Current findings
 
-- 640 unique run IDs; exactly 64 records per model
-- One stimulus-plan hash and one final-protocol hash across all published rows
-- Ten pinned upstreams; zero fallback-enabled records; data collection denied on every request
-- Final campaign usage: $1.1248; total OpenRouter usage including screening/debug calls: $1.1616
-- Eight samples per family and one trial are exploratory, not a stable leaderboard
-- “Easy for humans” is not claimed until a preregistered human baseline is collected
-- Closed-model mechanism explanations remain hypotheses unless a controlled intervention supports them
-- Provider-returned model IDs were aliases; dated endpoint revisions and quantization labels are the
-  OpenRouter endpoint snapshot resolved when the protocol was frozen
+The conservative hardness order uses the easiest core route, with pooled accuracy only as a tie-breaker.
+This prevents a weak route from hiding a stronger route.
 
-## Adaptive counting experiment
+The hardest observed image families are dense change localization and visual graph-degree topology, whose
+easiest core routes each score 5/16. Fixed-target enclosure depth and parity verification follow. Exact wire
+counting has the lowest pooled image score but one route reaches 7/16 and its weakest control is 13/16, so it
+is not the cleanest localized result.
 
-The reusable discovery pipeline generated 48 event-counting videos over a 12-cell timing grid and
-screened them against GLM, MiMo, Step, and a prespecified Gemma replacement. Its selection objective
-used the Wilson 95% lower bound on substantive wrong answers multiplied by substantive model coverage;
-no-answer and review outcomes had zero hardness weight. The two promoted timing cells were frozen
-before generating an untouched eight-case holdout with unseen even counts and visual seeds. Each
-holdout case has an exact-frame 4× slow-motion twin.
+The hardest observed video families are tied: dynamic route-turn integration scores 2/16, 2/16, and 3/16,
+while gated exact-frequency set cardinality scores 2/16, 3/16, and 2/16. Every matched control for both is
+16/16. The frequency task also scores 6/16 on Seed and 4/16 on MiMo. Selective flash counting follows at
+2/16, 4/16, and 2/16 with ceiling controls.
 
-The screen produced 192 records: 52 substantive answers, of which 35 were wrong, plus 133 no-answer
-and seven review outcomes. The confirmatory run produced 80 records from Gemini, Kimi, Qwen, GLM,
-and MiMo: 63 substantive answers, of which 39 were correct and 24 wrong, plus 15 no-answer and two
-review outcomes. Native video yielded 17/29 correct substantive answers; slow motion yielded 22/34.
-Seven of 40 paired native failures were recovered by slowing the identical frames. This is evidence
-of acquisition/timing sensitivity, not proof that sparse sampling is the sole causal mechanism;
-some pairs regressed and stronger models were not uniformly defeated.
+The strongest reusable image recipe is distributed exact verification: make the answer depend on a global
+invariant or one near-miss defect, balance adjacent answers, and expose the missing intermediate in a
+matched control. Symmetry, parity, XOR, graph degree, and path-conditioned counting instantiate distinct
+operations within this shape.
 
-Human solvability remains unverified. The included blinded local self-test is a demonstration and
-export tool, not a research-grade human baseline. The next defensible study step is preregistered
-human validation followed by a dense-frame or event-transcript oracle intervention.
+The strongest reusable video recipe is conditional sequential state: each event is locally legible, but the
+answer requires an exact identity map, signed ledger, direction state, set, or per-location histogram. A
+successful repair makes two predicates independently insufficient, includes distractors satisfying either
+predicate alone, varies both targets by case, and exposes only the conjunction's sufficient statistic in the
+control.
 
-## Operations
+Full scores, uncertainty, control denominators, and limitations are in
+[`verified-findings.md`](verified-findings.md).
 
-Hosting is GitHub Pages at zero recurring cost. The only cash outlay was a $200 prepaid OpenRouter
-credit purchase; no further deposits are authorized. As of the final audit, OpenRouter reported
-$3.009663 used and approximately $196.99 remaining. Published rows account for $2.999496; $0.010167
-is conservatively recorded as retry/aborted-request overhead. Code-level cumulative evaluation
-allowance is $200 with a protected $25 reserve and a $25 default campaign ceiling, stricter than the
-user’s $500 total-project limit.
+## Frozen route expansion and repairs
+
+The Seed/MiMo campaign was frozen after the original 20-family core campaign. It contains 1,408 attempts,
+of which 1,391 are canonical, and cost $1.561965. Eighteen original generators remained complete and below
+half on both routes.
+
+Two families crossed the threshold:
+
+- Seed solved exactly 8/16 pair-only collision-counting cases.
+- MiMo solved 9/16 ungated temporal set-cardinality cases.
+
+Neither result was hidden or retroactively rescored. Both original campaigns remain on the public
+replication page. New holdout reservations were made before repair screening.
+
+The gated pair repair uses 32 labeled events, a variable target pair, a variable target frame color, and six
+target-pair collisions under the wrong color. Gemini, Qwen, Kimi, Seed, and MiMo scored 3/16, 4/16, 5/16,
+3/16, and 5/16. Controls recovered to 16/16, 15/16, 16/16, 12/16, and 16/16.
+
+The first temporal repair—color-gated distinct-set cardinality—passed all five eight-case screens but was
+rejected when Kimi reached 8/15 on its untouched holdout. The second repair asks how many cells occur
+exactly twice under one target frame color across 40 flashes, with eight wrong-color target-cell echoes.
+Gemini, Qwen, Kimi, Seed, and MiMo scored 2/16, 3/16, 2/16, 6/16, and 4/16; every visible-histogram control
+was 16/16.
+
+These reversals are central evidence about the search process: an eight-case screen is a filter, not a
+finding, and a new route is a generator audit rather than another score to pool away.
+
+## Human validation
+
+Construction-grounded answers establish truth, not ease. The public human instrument contains every native
+holdout case exactly once across eight deterministic blocks. Each participant receives two cases from every
+family. Images remain visible until response; videos play once at 1× and unlock answers only after playback.
+The browser stores answer-free packets locally and never transmits them.
+
+The proposed confirmatory design uses 80 participants—10 per block—so each item receives 10 independent
+judgments. Ethics review or exemption, consent, recruitment, exclusion rules, and a crossed participant/item
+analysis must be fixed before collection. No human-accuracy claim is currently made.
+
+## Reproducibility and deployment
+
+`npm run check` runs type checking, linting, all unit and contract tests, admitted-manifest byte audits, and a
+production build. GitHub Pages repeats the source gate, static build, and internal link/media audit before
+deployment. Paid evaluation remains outside public request handlers, so site traffic cannot spend model
+credit or expose credentials.
+
+The public failure pages serve exact frozen PNG/MP4 artifacts, model denominators and Wilson intervals,
+plan hashes, response-level records, route-expansion confirmation, alternative explanations, and
+disconfirming tests. Selected admitted families also expose fresh educational generators. Their generated
+seeds are deliberately not added to scored evidence.
+
+## Cost and credential audit
+
+The user funded a $200 prepaid OpenRouter balance and authorized no further deposits. The repository retains
+a $200 cumulative ceiling, a protected $25 reserve, and a $25 default campaign cap. Across 7,799 unique
+recorded requests, reconciled model-evaluation spend is $111.534871. The public site and repository contain
+no provider credentials. Hosting remains GitHub Pages at zero recurring charge.
+
+The detailed reconciliation is in [`cost-ledger.csv`](cost-ledger.csv).
+
+## Remaining limits
+
+- Results apply to pinned hosted routes, not to all checkpoints or all preprocessing configurations.
+- Behavioral interventions do not identify hidden representations without open-model probing and activation
+  experiments.
+- One difficulty point per admitted family is confirmed; full monotonic psychometric curves are not yet
+  established.
+- Route-expansion results are a generator audit, not statistically independent samples from a population of
+  models.
+- Human-model separation remains a hypothesis until blinded human data are collected.

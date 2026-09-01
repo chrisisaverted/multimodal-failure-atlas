@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { admittedEvidence } from "./admitted-evidence";
 import { failureModesById } from "./catalogue";
+import { routeExpansionModels } from "./external-replication";
 
 describe("published admitted evidence", () => {
   it("contains ten strict image and ten strict video families", () => {
@@ -31,6 +32,19 @@ describe("published admitted evidence", () => {
         expect(model.native.correct, `${family.planId}: ${model.modelId}`).toBeLessThan(
           model.native.substantiveAnswers / 2,
         );
+      }
+    }
+  });
+
+  it("confirms every current family on two additional frozen routes", () => {
+    for (const family of admittedEvidence.families) {
+      const expansion = routeExpansionModels(family);
+      expect(expansion, family.planId).toHaveLength(2);
+      for (const model of expansion ?? []) {
+        expect(model.native.substantiveAnswers, `${family.planId}: ${model.modelId}`).toBe(16);
+        expect(model.native.solveRate, `${family.planId}: ${model.modelId}`).not.toBeNull();
+        expect(model.native.solveRate!, `${family.planId}: ${model.modelId}`).toBeLessThan(0.5);
+        expect(model.control.substantiveAnswers, `${family.planId}: ${model.modelId} control`).toBe(16);
       }
     }
   });

@@ -19,10 +19,6 @@ export default function VerifiedPage() {
   const ordered = orderByUniversalHardness(admittedEvidence.families);
   const imageCount = ordered.filter((family) => family.modality === "image").length;
   const videoCount = ordered.filter((family) => family.modality === "video").length;
-  const nativeAnswers = ordered.reduce(
-    (sum, family) => sum + family.models.reduce((inner, model) => inner + model.native.substantiveAnswers, 0),
-    0,
-  );
 
   return (
     <section className="section-shell page-section verified-page">
@@ -54,8 +50,8 @@ export default function VerifiedPage() {
           <span>Video families</span>
         </article>
         <article>
-          <strong>{nativeAnswers}</strong>
-          <span>Substantive native answers</span>
+          <strong>5</strong>
+          <span>Frozen routes per current family</span>
         </article>
       </div>
 

@@ -2,17 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle2, Download, FlaskConical, UsersRound } from "lucide-react";
 import type { AdmittedFamilyEvidence } from "@/lib/admitted-evidence";
-import { externalReplication } from "@/lib/external-replication";
+import { routeExpansionModels } from "@/lib/external-replication";
 
 const percent = (value: number | null) => (value === null ? "—" : `${Math.round(value * 100)}%`);
 const modelName = (id: string) => id.split("/").at(-1)?.replaceAll("-", " ") ?? id;
 
 export function AdmittedEvidencePanel({ evidence }: { evidence: AdmittedFamilyEvidence }) {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-  const frozenRouteExpansion = externalReplication.families.find(
-    (family) => family.planId === evidence.planId && family.replicatedBelowHalf,
-  );
-  const expandedModels = evidence.expandedModels ?? frozenRouteExpansion?.models;
+  const expandedModels = routeExpansionModels(evidence);
   return (
     <section className="section-shell admitted-evidence" aria-labelledby="admitted-evidence-title">
       <div className="admitted-evidence-copy">

@@ -1,4 +1,5 @@
 import rawReplication from "@/data/external-replication.json";
+import type { AdmittedFamilyEvidence } from "./admitted-evidence";
 
 export interface ReplicationCondition {
   condition: string;
@@ -70,4 +71,12 @@ export const externalReplication = rawReplication as ReplicationDocument;
 export function replicationStatus(family: ReplicationFamily) {
   if (!family.complete) return "incomplete" as const;
   return family.replicatedBelowHalf ? ("replicated" as const) : ("did-not-replicate" as const);
+}
+
+export function routeExpansionModels(family: AdmittedFamilyEvidence) {
+  if (family.expandedModels?.length) return family.expandedModels;
+  const frozen = externalReplication.families.find(
+    (candidate) => candidate.planId === family.planId && candidate.replicatedBelowHalf,
+  );
+  return frozen?.models;
 }
