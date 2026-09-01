@@ -4,30 +4,30 @@ The atlas uses a 0–100 difficulty control inside each generator. It is a famil
 
 ## Frozen admitted settings
 
-| Modality | Family                          |       Setting | Principal structural load at that setting                                  |
-| -------- | ------------------------------- | ------------: | -------------------------------------------------------------------------- |
-| image    | exact wire-crossing count       |           100 | 40 total crossings; trace one wire and choose among adjacent exact counts  |
-| image    | enclosure depth                 | 57–72 stratum | answers 9–12 counterbalance closed loop count; 12 open decoys remain fixed |
-| image    | rotation correspondence         |            46 | 9-vertex irregular reference; rotation versus near-reflection candidates   |
-| image    | bilateral symmetry              |            82 | dense 24×24 field with a near-symmetric defect                             |
-| image    | occluded cube enumeration       |            77 | solid columns totaling roughly 28 cubes under occlusion                    |
-| image    | visual XOR composition          |            98 | 20×20 paired grids; distractors differ by one output flip                  |
-| image    | change localization             |           100 | 42×42 paired grids with one answer-bearing local change                    |
-| image    | maze reachability               |            55 | four 11×11 mazes; exact start-to-goal connectivity                         |
-| image    | graph degree topology           |            87 | dense candidate graphs with one exact degree-pattern match                 |
-| image    | visual parity                   |            96 | 24×24 parity panels with near-miss candidates                              |
-| video    | identity-conditioned zone entry |            86 | track one identity through four cycles and eight entries                   |
-| video    | pair-specific collision count   |            91 | 24 collision events across six identities; count one pair only             |
-| video    | sequential identity permutation |            88 | maintain an identity across 12 swaps                                       |
-| video    | selective flash count           |            86 | eight target flashes among four distractor objects                         |
-| video    | target-transition count         |            94 | count an exact temporal pattern rather than state occupancy                |
-| video    | temporal set cardinality        |            98 | maintain a set of 21 uniquely activated locations                          |
-| video    | route-turn integration          |            96 | integrate 20 turns over a 41-position path                                 |
-| video    | conservation ledger             |            96 | update a target container across multiple transfers                        |
-| video    | hidden-trail topology           |            94 | retain a route and count true self-intersections                           |
-| video    | signed state accumulation       |            97 | integrate signed temporal updates to an exact final balance                |
+| Modality | Family                          | Setting | Principal structural load at that setting                                 |
+| -------- | ------------------------------- | ------: | ------------------------------------------------------------------------- |
+| image    | exact wire-crossing count       |     100 | 40 total crossings; trace one wire and choose among adjacent exact counts |
+| image    | enclosure depth                 |      92 | fixed query of 18 loops; adjacent straddling panels and 8 open decoys     |
+| image    | rotation correspondence         |      46 | 9-vertex irregular reference; rotation versus near-reflection candidates  |
+| image    | bilateral symmetry              |      82 | dense 24×24 field with a near-symmetric defect                            |
+| image    | occluded cube enumeration       |      77 | solid columns totaling roughly 28 cubes under occlusion                   |
+| image    | visual XOR composition          |      98 | 20×20 paired grids; distractors differ by one output flip                 |
+| image    | change localization             |     100 | 42×42 paired grids with one answer-bearing local change                   |
+| image    | maze reachability               |      55 | four 11×11 mazes; exact start-to-goal connectivity                        |
+| image    | graph degree topology           |      87 | dense candidate graphs with one exact degree-pattern match                |
+| image    | visual parity                   |      96 | 24×24 parity panels with near-miss candidates                             |
+| video    | identity-conditioned zone entry |      86 | track one identity through four cycles and eight entries                  |
+| video    | pair-specific collision count   |      91 | 24 collision events across six identities; count one pair only            |
+| video    | sequential identity permutation |      88 | maintain an identity across 12 swaps                                      |
+| video    | selective flash count           |      86 | eight target flashes among four distractor objects                        |
+| video    | target-transition count         |      94 | count an exact temporal pattern rather than state occupancy               |
+| video    | temporal set cardinality        |      98 | maintain a set of 21 uniquely activated locations                         |
+| video    | route-turn integration          |      96 | integrate 20 turns over a 41-position path                                |
+| video    | conservation ledger             |      96 | update a target container across multiple transfers                       |
+| video    | hidden-trail topology           |      94 | retain a route and count true self-intersections                          |
+| video    | signed state accumulation       |      97 | integrate signed temporal updates to an exact final balance               |
 
-The table describes the common structural load. Seeds change answer-bearing values, layouts, labels, and distractors while preserving the frozen setting. Exact case parameters and media hashes live in each public manifest. Enclosure depth is explicitly a four-value answer-balanced stratum—not one scalar point—because its answer is itself the number of enclosing loops. The site does not collapse that stratum to its first case.
+The table describes the common structural load. Seeds change answer-bearing values, layouts, labels, and distractors while preserving the frozen setting. Exact case parameters and media hashes live in each public manifest. The superseded enclosure campaign used an answer-balanced 57–72 stratum; its replacement fixes the query at 18 loops in every case, balances answer position, places distractor counts on both sides, and therefore supports a genuine scalar setting.
 
 ## Requirements for a useful slider
 

@@ -22,11 +22,11 @@ Human solvability remains unverified. The construction oracle proves the answer,
 human can recover it under the same display conditions.
 
 Every admitted page publishes the exact family-local difficulty setting used for its frozen holdout.
-Nineteen are scalar points; enclosure depth is disclosed as a 57–72 answer-balanced stratum because the
-answer itself changes loop count. These values control different generator parameters and are not a shared
-psychometric scale: 96 on route-turn integration is not intrinsically harder than 57 on enclosure depth.
-The admission claim is that at least one disclosed setting or predeclared stratum per family clears the
-below-half gate, not that every possible setting does.
+All 20 are now scalar points. The enclosure family was prospectively replaced after a confound audit: every
+new case asks for exactly 18 loops, balances answer position, and places distractor counts on both sides.
+These values control different generator parameters and are not a shared psychometric scale: 96 on
+route-turn integration is not intrinsically harder than 92 on enclosure depth. The admission claim is that
+at least one disclosed setting per family clears the below-half gate, not that every possible setting does.
 
 ## Image results
 
@@ -34,22 +34,22 @@ below-half gate, not that every possible setting does.
 | ----------------: | ----------------------------------------- | -----: | ---: | ---: | ------------: | -----: | --------------: |
 |                1= | Dense cross-image change localization     |   4/16 | 2/16 | 5/16 |          5/16 |  11/48 |            9/16 |
 |                1= | Visual graph-degree topology              |   4/16 | 5/16 | 2/16 |          5/16 |  11/48 |           16/16 |
-|                 3 | 2D parity-matrix verification             |   5/16 | 4/16 | 4/16 |          5/16 |  13/48 |           16/16 |
-|                 4 | Global bilateral symmetry verification    |   6/16 | 3/16 | 1/16 |          6/16 |  10/48 |           16/16 |
-|                5= | Rotation-invariant exact correspondence   |   6/16 | 5/16 | 2/16 |          6/16 |  13/48 |           14/16 |
-|                5= | Maze reachability                         |   6/16 | 3/16 | 4/16 |          6/16 |  13/48 |             9/9 |
-|                 7 | Occluded cube-stack enumeration           |   3/16 | 6/16 | 6/16 |          6/16 |  15/48 |           16/16 |
-|                 8 | Identity-conditioned exact crossing count |   7/16 | 0/16 | 1/16 |          7/16 |   8/48 |           13/16 |
-|                 9 | Dense visual XOR composition              |   4/16 | 2/16 | 7/16 |          7/16 |  13/48 |           15/15 |
-|                10 | Topological enclosure depth               |   6/16 | 7/16 | 5/16 |          7/16 |  18/48 |           10/16 |
+|                 3 | Topological enclosure depth               |   4/16 | 5/16 | 3/16 |          5/16 |  12/48 |           16/16 |
+|                 4 | 2D parity-matrix verification             |   5/16 | 4/16 | 4/16 |          5/16 |  13/48 |           16/16 |
+|                 5 | Global bilateral symmetry verification    |   6/16 | 3/16 | 1/16 |          6/16 |  10/48 |           16/16 |
+|                6= | Rotation-invariant exact correspondence   |   6/16 | 5/16 | 2/16 |          6/16 |  13/48 |           14/16 |
+|                6= | Maze reachability                         |   6/16 | 3/16 | 4/16 |          6/16 |  13/48 |             9/9 |
+|                 8 | Occluded cube-stack enumeration           |   3/16 | 6/16 | 6/16 |          6/16 |  15/48 |           16/16 |
+|                 9 | Identity-conditioned exact crossing count |   7/16 | 0/16 | 1/16 |          7/16 |   8/48 |           13/16 |
+|                10 | Dense visual XOR composition              |   4/16 | 2/16 | 7/16 |          7/16 |  13/48 |           15/15 |
 
 By the conservative easiest-route criterion, change localization and graph topology are the hardest
-observed image families; parity follows. The cleanest image localizations are bilateral symmetry, graph topology, parity, cube enumeration,
-and the fully answered maze controls: a simpler evidence-preserving presentation recovers strongly
+observed image families; fixed-target enclosure follows, then parity. The cleanest image localizations are
+bilateral symmetry, graph topology, enclosure, parity, cube enumeration, and the fully answered maze controls: a simpler evidence-preserving presentation recovers strongly
 while native accuracy remains low. Exact wire counting is the lowest pooled score, but Gemini is near
 the gate at 7/16 and the Kimi control reaches 13/16 rather than ceiling. The most cautious image claims
-are change localization and enclosure depth because their weakest controls recover only to 9/16 and
-10/16. Those results establish task difficulty but do not isolate a single causal bottleneck.
+is change localization because its weakest control recovers only to 9/16. That result establishes task
+difficulty but does not isolate a single causal bottleneck; the new enclosure count-badge control fully recovers.
 
 The strongest reusable image recipe is distributed exact verification. Render many locally legible
 elements, make the answer depend on a global invariant or one near-miss defect, balance four adjacent

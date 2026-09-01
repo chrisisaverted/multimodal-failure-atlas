@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-01T10:58:58.977Z",
+  "generatedAt": "2026-09-01T12:20:33.005Z",
   "admissionRule": "Every prespecified route has at least 16 substantive answers and an observed native solve rate strictly below 50%.",
   "families": [
     {
@@ -15,9 +15,7 @@
       "admitted": true,
       "humanSolvability": "unverified",
       "difficultySetting": {
-        "values": [
-          100
-        ],
+        "values": [100],
         "label": "100/100",
         "nativeCases": 16
       },
@@ -27,12 +25,7 @@
         "artifactPath": "/evaluations/precision-wire-count-confirmatory-v1/wc-bff0df82b40bdde3.png",
         "mimeType": "image/png",
         "question": "How many times does wire B cross another wire?",
-        "answerOptions": [
-          "7",
-          "8",
-          "9",
-          "10"
-        ],
+        "answerOptions": ["7", "8", "9", "10"],
         "expectedAnswer": "7",
         "difficulty": 100
       },
@@ -128,39 +121,29 @@
     },
     {
       "catalogueId": "topological-enclosure-depth",
-      "planId": "enclosure-depth-confirmatory-v1",
-      "planSha256": "4d7f540c4588b21b30e354384aa83738ab5f106ccec1f4ac03c5b8dfcfd1f2fc",
-      "generatorVersion": "enclosure-depth-v1",
-      "renderer": "enclosure-depth-svg-v1",
+      "planId": "enclosure-panels-dense-confirmatory-v1",
+      "planSha256": "3b21d657f3e690cc339cd354bc77cec3daba2ce9d41628834aef48958b240b04",
+      "generatorVersion": "enclosure-panels-dense-v1",
+      "renderer": "enclosure-panels-dense-svg-v1",
       "modality": "image",
       "nativeCondition": "native-image",
-      "controlCondition": "numbered-closed-boundaries",
+      "controlCondition": "exact-count-badges",
       "admitted": true,
       "humanSolvability": "unverified",
       "difficultySetting": {
-        "values": [
-          57,
-          62,
-          67,
-          72
-        ],
-        "label": "57–72/100 answer-balanced stratum",
+        "values": [92],
+        "label": "92/100",
         "nativeCases": 16
       },
       "sample": {
-        "candidateId": "ed-1eaa4c4f80172ce6",
-        "seed": 1200000,
-        "artifactPath": "/evaluations/enclosure-depth-confirmatory-v1/ed-1eaa4c4f80172ce6.png",
+        "candidateId": "epd-3ce498f7f4b2f20a",
+        "seed": 3110000,
+        "artifactPath": "/evaluations/enclosure-panels-dense-confirmatory-v1/epd-3ce498f7f4b2f20a.png",
         "mimeType": "image/png",
-        "question": "How many CLOSED boundaries must a path from the red dot cross to reach the outer margin?",
-        "answerOptions": [
-          "9",
-          "12",
-          "11",
-          "10"
-        ],
-        "expectedAnswer": "9",
-        "difficulty": 57
+        "question": "Which panel contains exactly 18 CLOSED boundaries around its red dot?",
+        "answerOptions": ["A", "B", "C", "D"],
+        "expectedAnswer": "A",
+        "difficulty": 92
       },
       "models": [
         {
@@ -171,16 +154,16 @@
             "condition": "native-image",
             "requests": 16,
             "substantiveAnswers": 16,
-            "correct": 6,
-            "solveRate": 0.375,
-            "lower95": 0.18481232558863633,
-            "upper95": 0.6135895945449727,
+            "correct": 4,
+            "solveRate": 0.25,
+            "lower95": 0.10182067491213048,
+            "upper95": 0.49498316535508774,
             "pendingReview": 0,
             "emptyResponses": 0,
-            "costUsd": 0.055941000000000005
+            "costUsd": 0.05541075000000001
           },
           "control": {
-            "condition": "numbered-closed-boundaries",
+            "condition": "exact-count-badges",
             "requests": 16,
             "substantiveAnswers": 16,
             "correct": 16,
@@ -189,7 +172,7 @@
             "upper95": 1,
             "pendingReview": 0,
             "emptyResponses": 0,
-            "costUsd": 0.022992000000000002
+            "costUsd": 0.019496999999999997
           }
         },
         {
@@ -200,16 +183,16 @@
             "condition": "native-image",
             "requests": 16,
             "substantiveAnswers": 16,
-            "correct": 7,
-            "solveRate": 0.4375,
-            "lower95": 0.23098652405492354,
-            "upper95": 0.6682144360118811,
+            "correct": 5,
+            "solveRate": 0.3125,
+            "lower95": 0.14164643854782039,
+            "upper95": 0.5559564416525933,
             "pendingReview": 0,
             "emptyResponses": 0,
-            "costUsd": 0.135212
+            "costUsd": 0.18774599999999997
           },
           "control": {
-            "condition": "numbered-closed-boundaries",
+            "condition": "exact-count-badges",
             "requests": 16,
             "substantiveAnswers": 16,
             "correct": 16,
@@ -218,7 +201,7 @@
             "upper95": 1,
             "pendingReview": 0,
             "emptyResponses": 0,
-            "costUsd": 0.10518399999999999
+            "costUsd": 0.136556
           }
         },
         {
@@ -229,25 +212,25 @@
             "condition": "native-image",
             "requests": 16,
             "substantiveAnswers": 16,
-            "correct": 5,
-            "solveRate": 0.3125,
-            "lower95": 0.14164643854782039,
-            "upper95": 0.5559564416525933,
+            "correct": 3,
+            "solveRate": 0.1875,
+            "lower95": 0.06591599071428142,
+            "upper95": 0.4300888096197414,
             "pendingReview": 0,
             "emptyResponses": 0,
-            "costUsd": 0.11937599999999997
+            "costUsd": 0.16881600000000005
           },
           "control": {
-            "condition": "numbered-closed-boundaries",
+            "condition": "exact-count-badges",
             "requests": 16,
             "substantiveAnswers": 16,
-            "correct": 10,
-            "solveRate": 0.625,
-            "lower95": 0.38641040545502714,
-            "upper95": 0.8151876744113636,
+            "correct": 16,
+            "solveRate": 1,
+            "lower95": 0.8063923194655637,
+            "upper95": 1,
             "pendingReview": 0,
             "emptyResponses": 0,
-            "costUsd": 0.11929200000000001
+            "costUsd": 0.16857599999999998
           }
         }
       ]
@@ -264,9 +247,7 @@
       "admitted": true,
       "humanSolvability": "unverified",
       "difficultySetting": {
-        "values": [
-          46
-        ],
+        "values": [46],
         "label": "46/100",
         "nativeCases": 16
       },
@@ -276,12 +257,7 @@
         "artifactPath": "/evaluations/rotation-correspondence-confirmatory-v1/rc-76531a0518827ee7.png",
         "mimeType": "image/png",
         "question": "Which candidate is EXACTLY the same connected shape as the reference after rotation only (no reflection)?",
-        "answerOptions": [
-          "A",
-          "D",
-          "B",
-          "C"
-        ],
+        "answerOptions": ["A", "D", "B", "C"],
         "expectedAnswer": "A",
         "difficulty": 46
       },
@@ -387,9 +363,7 @@
       "admitted": true,
       "humanSolvability": "unverified",
       "difficultySetting": {
-        "values": [
-          82
-        ],
+        "values": [82],
         "label": "82/100",
         "nativeCases": 16
       },
@@ -399,12 +373,7 @@
         "artifactPath": "/evaluations/symmetry-confirmatory-v1/sy-b19331d64a952848.png",
         "mimeType": "image/png",
         "question": "Which panel is PERFECTLY mirror-symmetric across its red vertical axis? The other three each contain one mismatched dot.",
-        "answerOptions": [
-          "B",
-          "D",
-          "A",
-          "C"
-        ],
+        "answerOptions": ["B", "D", "A", "C"],
         "expectedAnswer": "A",
         "difficulty": 82
       },
@@ -510,9 +479,7 @@
       "admitted": true,
       "humanSolvability": "unverified",
       "difficultySetting": {
-        "values": [
-          77
-        ],
+        "values": [77],
         "label": "77/100",
         "nativeCases": 16
       },
@@ -522,12 +489,7 @@
         "artifactPath": "/evaluations/cube-stack-confirmatory-v1/cs-ac34f4c0fce73230.png",
         "mimeType": "image/png",
         "question": "Which structure contains exactly 28 unit cubes? Every column is solid down to the floor.",
-        "answerOptions": [
-          "C",
-          "A",
-          "B",
-          "D"
-        ],
+        "answerOptions": ["C", "A", "B", "D"],
         "expectedAnswer": "A",
         "difficulty": 77
       },
@@ -633,9 +595,7 @@
       "admitted": true,
       "humanSolvability": "unverified",
       "difficultySetting": {
-        "values": [
-          98
-        ],
+        "values": [98],
         "label": "98/100",
         "nativeCases": 16
       },
@@ -645,12 +605,7 @@
         "artifactPath": "/evaluations/xor-composition-confirmatory-v2/xch-3ee36d1d9d79acc8.png",
         "mimeType": "image/png",
         "question": "Which option is the EXACT cell-by-cell XOR of INPUT 1 and INPUT 2? Each wrong option differs from the true XOR in only ONE cell.",
-        "answerOptions": [
-          "B",
-          "C",
-          "A",
-          "D"
-        ],
+        "answerOptions": ["B", "C", "A", "D"],
         "expectedAnswer": "A",
         "difficulty": 98
       },
@@ -756,9 +711,7 @@
       "admitted": true,
       "humanSolvability": "unverified",
       "difficultySetting": {
-        "values": [
-          100
-        ],
+        "values": [100],
         "label": "100/100",
         "nativeCases": 16
       },
@@ -768,12 +721,7 @@
         "artifactPath": "/evaluations/change-localization-confirmatory-v2/cl-ec30b9a7ecedcc86.png",
         "mimeType": "image/png",
         "question": "In which labeled quadrant of the RIGHT grid is the one rotated glyph?",
-        "answerOptions": [
-          "D",
-          "A",
-          "C",
-          "B"
-        ],
+        "answerOptions": ["D", "A", "C", "B"],
         "expectedAnswer": "A",
         "difficulty": 100
       },
@@ -879,9 +827,7 @@
       "admitted": true,
       "humanSolvability": "unverified",
       "difficultySetting": {
-        "values": [
-          55
-        ],
+        "values": [55],
         "label": "55/100",
         "nativeCases": 16
       },
@@ -891,12 +837,7 @@
         "artifactPath": "/evaluations/maze-reachability-confirmatory-v1/mr-2073131fc5f526e3.png",
         "mimeType": "image/png",
         "question": "In which panel is there an open route through the maze from S to G?",
-        "answerOptions": [
-          "A",
-          "C",
-          "B",
-          "D"
-        ],
+        "answerOptions": ["A", "C", "B", "D"],
         "expectedAnswer": "A",
         "difficulty": 55
       },
@@ -1002,9 +943,7 @@
       "admitted": true,
       "humanSolvability": "unverified",
       "difficultySetting": {
-        "values": [
-          87
-        ],
+        "values": [87],
         "label": "87/100",
         "nativeCases": 16
       },
@@ -1014,12 +953,7 @@
         "artifactPath": "/evaluations/euler-graph-confirmatory-v1/eg-4792dc1ee3e274d0.png",
         "mimeType": "image/png",
         "question": "Which graph has an Eulerian CIRCUIT: one closed route that uses every edge exactly once? Line crossings without a dot are not vertices.",
-        "answerOptions": [
-          "D",
-          "B",
-          "A",
-          "C"
-        ],
+        "answerOptions": ["D", "B", "A", "C"],
         "expectedAnswer": "A",
         "difficulty": 87
       },
@@ -1125,9 +1059,7 @@
       "admitted": true,
       "humanSolvability": "unverified",
       "difficultySetting": {
-        "values": [
-          96
-        ],
+        "values": [96],
         "label": "96/100",
         "nativeCases": 16
       },
@@ -1137,12 +1069,7 @@
         "artifactPath": "/evaluations/parity-matrix-confirmatory-v3/pmh-85e0a3c8999677a4-native-image.png",
         "mimeType": "image/png",
         "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
-        "answerOptions": [
-          "B",
-          "A",
-          "D",
-          "C"
-        ],
+        "answerOptions": ["B", "A", "D", "C"],
         "expectedAnswer": "A",
         "difficulty": 96
       },
@@ -1248,9 +1175,7 @@
       "admitted": true,
       "humanSolvability": "unverified",
       "difficultySetting": {
-        "values": [
-          86
-        ],
+        "values": [86],
         "label": "86/100",
         "nativeCases": 16
       },
@@ -1260,12 +1185,7 @@
         "artifactPath": "/evaluations/zone-entry-confirmatory-v1/ze-8d3249230c4181fc.mp4",
         "mimeType": "video/mp4",
         "question": "How many times does the RED-RINGED target disk ENTER the gold zone? Count each outside→inside transition and ignore every other disk.",
-        "answerOptions": [
-          "14",
-          "8",
-          "10",
-          "12"
-        ],
+        "answerOptions": ["14", "8", "10", "12"],
         "expectedAnswer": "8",
         "difficulty": 86
       },
@@ -1371,9 +1291,7 @@
       "admitted": true,
       "humanSolvability": "unverified",
       "difficultySetting": {
-        "values": [
-          91
-        ],
+        "values": [91],
         "label": "91/100",
         "nativeCases": 16
       },
@@ -1383,12 +1301,7 @@
         "artifactPath": "/evaluations/pair-collision-confirmatory-v1/pc-90189c05e3035355.mp4",
         "mimeType": "video/mp4",
         "question": "How many collision events involve the specific pair A AND B together? Ignore collisions involving any other pairing.",
-        "answerOptions": [
-          "7",
-          "6",
-          "5",
-          "8"
-        ],
+        "answerOptions": ["7", "6", "5", "8"],
         "expectedAnswer": "5",
         "difficulty": 91
       },
@@ -1494,9 +1407,7 @@
       "admitted": true,
       "humanSolvability": "unverified",
       "difficultySetting": {
-        "values": [
-          88
-        ],
+        "values": [88],
         "label": "88/100",
         "nativeCases": 16
       },
@@ -1506,12 +1417,7 @@
         "artifactPath": "/evaluations/swap-tracking-confirmatory-v1/st-829590aeca0bdadd.mp4",
         "mimeType": "video/mp4",
         "question": "The gold token is shown at the start, then all tokens become identical. After the 12 shown swaps, which numbered slot contains the original gold token?",
-        "answerOptions": [
-          "2",
-          "4",
-          "1",
-          "3"
-        ],
+        "answerOptions": ["2", "4", "1", "3"],
         "expectedAnswer": "1",
         "difficulty": 88
       },
@@ -1617,9 +1523,7 @@
       "admitted": true,
       "humanSolvability": "unverified",
       "difficultySetting": {
-        "values": [
-          86
-        ],
+        "values": [86],
         "label": "86/100",
         "nativeCases": 16
       },
@@ -1629,12 +1533,7 @@
         "artifactPath": "/evaluations/selective-flash-confirmatory-v3/sf-ec142abacbb28088.mp4",
         "mimeType": "video/mp4",
         "question": "How many times does the RED-RINGED target disk flash yellow? Ignore every other disk.",
-        "answerOptions": [
-          "8",
-          "9",
-          "10",
-          "11"
-        ],
+        "answerOptions": ["8", "9", "10", "11"],
         "expectedAnswer": "8",
         "difficulty": 86
       },
@@ -1740,9 +1639,7 @@
       "admitted": true,
       "humanSolvability": "unverified",
       "difficultySetting": {
-        "values": [
-          94
-        ],
+        "values": [94],
         "label": "94/100",
         "nativeCases": 16
       },
@@ -1752,12 +1649,7 @@
         "artifactPath": "/evaluations/transition-count-confirmatory-v1/tc-3137769a9ecfbeb2-native-1x.mp4",
         "mimeType": "video/mp4",
         "question": "How many times is a BLUE CIRCLE immediately followed by a RED SQUARE in the complete sequence? Count overlapping occurrences.",
-        "answerOptions": [
-          "4",
-          "6",
-          "3",
-          "5"
-        ],
+        "answerOptions": ["4", "6", "3", "5"],
         "expectedAnswer": "3",
         "difficulty": 94
       },
@@ -1863,9 +1755,7 @@
       "admitted": true,
       "humanSolvability": "unverified",
       "difficultySetting": {
-        "values": [
-          98
-        ],
+        "values": [98],
         "label": "98/100",
         "nativeCases": 16
       },
@@ -1875,12 +1765,7 @@
         "artifactPath": "/evaluations/grid-activation-confirmatory-v3/gax-f1cce6d6d9fb0073-native-1x.mp4",
         "mimeType": "video/mp4",
         "question": "How many DIFFERENT grid cells lit up at least once? Repeats count only once.",
-        "answerOptions": [
-          "24",
-          "22",
-          "23",
-          "21"
-        ],
+        "answerOptions": ["24", "22", "23", "21"],
         "expectedAnswer": "21",
         "difficulty": 98
       },
@@ -1986,9 +1871,7 @@
       "admitted": true,
       "humanSolvability": "unverified",
       "difficultySetting": {
-        "values": [
-          96
-        ],
+        "values": [96],
         "label": "96/100",
         "nativeCases": 16
       },
@@ -1998,12 +1881,7 @@
         "artifactPath": "/evaluations/route-turn-confirmatory-v3/rth-8d934be85c62ee08-native-1x.mp4",
         "mimeType": "video/mp4",
         "question": "How many times does the moving gold disk CHANGE DIRECTION during the complete route?",
-        "answerOptions": [
-          "22",
-          "21",
-          "23",
-          "20"
-        ],
+        "answerOptions": ["22", "21", "23", "20"],
         "expectedAnswer": "20",
         "difficulty": 96
       },
@@ -2109,9 +1987,7 @@
       "admitted": true,
       "humanSolvability": "unverified",
       "difficultySetting": {
-        "values": [
-          96
-        ],
+        "values": [96],
         "label": "96/100",
         "nativeCases": 16
       },
@@ -2121,12 +1997,7 @@
         "artifactPath": "/evaluations/conservation-confirmatory-v3/cvh-765e344babc69acc-native-1x.mp4",
         "mimeType": "video/mp4",
         "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
-        "answerOptions": [
-          "D",
-          "B",
-          "A",
-          "C"
-        ],
+        "answerOptions": ["D", "B", "A", "C"],
         "expectedAnswer": "A",
         "difficulty": 96
       },
@@ -2232,9 +2103,7 @@
       "admitted": true,
       "humanSolvability": "unverified",
       "difficultySetting": {
-        "values": [
-          94
-        ],
+        "values": [94],
         "label": "94/100",
         "nativeCases": 16
       },
@@ -2244,12 +2113,7 @@
         "artifactPath": "/evaluations/hidden-trail-intersections-confirmatory-v1/hti-64d2222b83d7ae18-native-1x.mp4",
         "mimeType": "video/mp4",
         "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
-        "answerOptions": [
-          "3",
-          "5",
-          "4",
-          "6"
-        ],
+        "answerOptions": ["3", "5", "4", "6"],
         "expectedAnswer": "3",
         "difficulty": 94
       },
@@ -2355,9 +2219,7 @@
       "admitted": true,
       "humanSolvability": "unverified",
       "difficultySetting": {
-        "values": [
-          97
-        ],
+        "values": [97],
         "label": "97/100",
         "nativeCases": 16
       },
@@ -2367,12 +2229,7 @@
         "artifactPath": "/evaluations/signed-accumulator-confirmatory-v2/sta2-3455cb887466ef6a-native-1x.mp4",
         "mimeType": "video/mp4",
         "question": "Starting from ZERO, where does the hidden counter end after every +1 and -1 event?",
-        "answerOptions": [
-          "+3",
-          "-3",
-          "+9",
-          "-9"
-        ],
+        "answerOptions": ["+3", "-3", "+9", "-9"],
         "expectedAnswer": "-9",
         "difficulty": 97
       },

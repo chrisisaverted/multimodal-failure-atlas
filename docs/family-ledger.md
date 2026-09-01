@@ -11,7 +11,7 @@ Wilson-qualified and human-validated are stricter, separately reported states.
 | Family                                    | State                   | Gemini | Qwen | Kimi | Control             | Human      |
 | ----------------------------------------- | ----------------------- | -----: | ---: | ---: | ------------------- | ---------- |
 | Identity-conditioned exact crossing count | observed holdout pass   |   7/16 | 0/16 | 1/16 | 16/16, 15/15, 13/16 | unverified |
-| Topological enclosure depth               | observed holdout pass   |   6/16 | 7/16 | 5/16 | 16/16, 16/16, 10/16 | unverified |
+| Topological enclosure depth               | observed holdout pass   |   4/16 | 5/16 | 3/16 | 16/16 each          | unverified |
 | Rotation-invariant exact correspondence   | observed holdout pass   |   6/16 | 5/16 | 2/16 | 16/16, 16/16, 14/16 | unverified |
 | Global bilateral symmetry verification    | observed holdout pass   |   6/16 | 3/16 | 1/16 | 16/16 each          | unverified |
 | Occluded cube-stack enumeration           | observed holdout pass   |   3/16 | 6/16 | 6/16 | 16/16 each          | unverified |
@@ -21,9 +21,11 @@ Wilson-qualified and human-validated are stricter, separately reported states.
 | Visual graph-degree topology              | observed holdout pass   |   4/16 | 5/16 | 2/16 | 16/16 each          | unverified |
 | 2D parity-matrix verification             | replicated holdout pass |   5/16 | 4/16 | 4/16 | 16/16 each          | unverified |
 
-The enclosure control only partially recovers Kimi, so it confirms behavioral difficulty but does not
-fully localize the mechanism. Rotation required two prospective Qwen reruns after length-exhausted
-responses; the final native denominator is 16 substantive answers from 18 requests.
+The published enclosure family is the fixed-target dense replacement: every case asks for 18 boundaries,
+the target is neither systematically smallest nor largest, and all three exact-count controls recover to
+16/16. The earlier answer-balanced 57–72 stratum remains preserved but is superseded. Rotation required
+two prospective Qwen reruns after length-exhausted responses; the final native denominator is 16
+substantive answers from 18 requests.
 
 ## Video families
 

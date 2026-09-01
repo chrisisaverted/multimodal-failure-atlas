@@ -7,7 +7,7 @@ const modelIds = ["google/gemini-3.7-flash", "qwen/qwen3.8-max", "moonshotai/kim
 
 const specs = [
   ["identity-conditioned-exact-counting", "precision-wire-count-confirmatory-v1"],
-  ["topological-enclosure-depth", "enclosure-depth-confirmatory-v1"],
+  ["topological-enclosure-depth", "enclosure-panels-dense-confirmatory-v1"],
   ["rotation-invariant-visual-correspondence", "rotation-correspondence-confirmatory-v1"],
   ["global-bilateral-symmetry-verification", "symmetry-confirmatory-v1"],
   ["occluded-3d-cube-enumeration", "cube-stack-confirmatory-v1"],

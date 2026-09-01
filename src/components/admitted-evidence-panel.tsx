@@ -39,7 +39,7 @@ export function AdmittedEvidencePanel({ evidence }: { evidence: AdmittedFamilyEv
             src={`${basePath}${evidence.sample.artifactPath}`}
             alt="Exact frozen holdout image"
             width={1800}
-            height={1000}
+            height={evidence.renderer.includes("enclosure-panels-dense") ? 1450 : 1000}
             unoptimized
           />
         )}
