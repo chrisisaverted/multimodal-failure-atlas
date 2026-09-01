@@ -1,0 +1,969 @@
+{
+  "id": "parity-matrix-confirmatory-v2",
+  "planSha256": "ff8a943168d610f7a2dab707d7c305c71df67b40f382184793be29c534e83006",
+  "generatorVersion": "two-dimensional-parity-matrix-v2",
+  "renderer": "parity-matrix-svg-raster-v2",
+  "fps": 0,
+  "cases": [
+    {
+      "candidateId": "pmh-3b87851ee51266bf-native-image",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "Four dense 24×24 matrices require exact row-and-column parity verification.",
+      "failureModeId": "global-visual-parity-verification",
+      "generator": "parity-matrix-hard",
+      "seed": 4210000,
+      "difficulty": 96,
+      "variant": 0,
+      "artifact": "public/evaluations/parity-matrix-confirmatory-v2/pmh-3b87851ee51266bf-native-image.png",
+      "mimeType": "image/png",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "C",
+        "A",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "2f7a57d37b1f56425471f58ecc23854cda4f635c2f5f8158b2142a002cdcb325",
+      "parameters": {
+        "correctPanel": 0,
+        "gridSize": 24,
+        "visualVariant": 100
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Verify two-dimensional parity and return exactly one panel letter."
+    },
+    {
+      "candidateId": "pmh-3b87851ee51266bf-parity-audit-control",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "condition": "parity-audit-control",
+      "interventionDescription": "Diagnostic control highlights every odd row and column and labels each panel's audit result.",
+      "failureModeId": "global-visual-parity-verification",
+      "generator": "parity-matrix-hard",
+      "seed": 4210000,
+      "difficulty": 15,
+      "variant": 0,
+      "artifact": "public/evaluations/parity-matrix-confirmatory-v2/pmh-3b87851ee51266bf-parity-audit-control.png",
+      "mimeType": "image/png",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "C",
+        "A",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "71bbe198a2a9a8cac6ad32495f27f92ca98bc605ffd51ac40ba4f744241f2be3",
+      "parameters": {
+        "correctPanel": 0,
+        "gridSize": 24,
+        "visualVariant": 100
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Verify two-dimensional parity and return exactly one panel letter."
+    },
+    {
+      "candidateId": "pmh-73c63f6c85e70bf4-native-image",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "Four dense 24×24 matrices require exact row-and-column parity verification.",
+      "failureModeId": "global-visual-parity-verification",
+      "generator": "parity-matrix-hard",
+      "seed": 4210001,
+      "difficulty": 96,
+      "variant": 1,
+      "artifact": "public/evaluations/parity-matrix-confirmatory-v2/pmh-73c63f6c85e70bf4-native-image.png",
+      "mimeType": "image/png",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "e0be52839917c3211c7552f19f6bc748fceb5b03ada6e042b981761cb4e6ab5c",
+      "parameters": {
+        "correctPanel": 1,
+        "gridSize": 24,
+        "visualVariant": 101
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Verify two-dimensional parity and return exactly one panel letter."
+    },
+    {
+      "candidateId": "pmh-73c63f6c85e70bf4-parity-audit-control",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "condition": "parity-audit-control",
+      "interventionDescription": "Diagnostic control highlights every odd row and column and labels each panel's audit result.",
+      "failureModeId": "global-visual-parity-verification",
+      "generator": "parity-matrix-hard",
+      "seed": 4210001,
+      "difficulty": 15,
+      "variant": 1,
+      "artifact": "public/evaluations/parity-matrix-confirmatory-v2/pmh-73c63f6c85e70bf4-parity-audit-control.png",
+      "mimeType": "image/png",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "3d84567d8a8d8e9a79fc33ba127153a728bc2ff43637d22e5c3b2152f42ddeb8",
+      "parameters": {
+        "correctPanel": 1,
+        "gridSize": 24,
+        "visualVariant": 101
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Verify two-dimensional parity and return exactly one panel letter."
+    },
+    {
+      "candidateId": "pmh-99dd990ad743db57-native-image",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "Four dense 24×24 matrices require exact row-and-column parity verification.",
+      "failureModeId": "global-visual-parity-verification",
+      "generator": "parity-matrix-hard",
+      "seed": 4210002,
+      "difficulty": 96,
+      "variant": 2,
+      "artifact": "public/evaluations/parity-matrix-confirmatory-v2/pmh-99dd990ad743db57-native-image.png",
+      "mimeType": "image/png",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "cb612b3ffef10f2d288a9035a99670a7a436c16d510bba6bddcca7736c649617",
+      "parameters": {
+        "correctPanel": 2,
+        "gridSize": 24,
+        "visualVariant": 102
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Verify two-dimensional parity and return exactly one panel letter."
+    },
+    {
+      "candidateId": "pmh-99dd990ad743db57-parity-audit-control",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "condition": "parity-audit-control",
+      "interventionDescription": "Diagnostic control highlights every odd row and column and labels each panel's audit result.",
+      "failureModeId": "global-visual-parity-verification",
+      "generator": "parity-matrix-hard",
+      "seed": 4210002,
+      "difficulty": 15,
+      "variant": 2,
+      "artifact": "public/evaluations/parity-matrix-confirmatory-v2/pmh-99dd990ad743db57-parity-audit-control.png",
+      "mimeType": "image/png",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "3bcbf1cfb518a724c3e408809642343129d19bfd657d64f3bb94dd1861723955",
+      "parameters": {
+        "correctPanel": 2,
+        "gridSize": 24,
+        "visualVariant": 102
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Verify two-dimensional parity and return exactly one panel letter."
+    },
+    {
+      "candidateId": "pmh-4bc33c2fd9405f5e-native-image",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "Four dense 24×24 matrices require exact row-and-column parity verification.",
+      "failureModeId": "global-visual-parity-verification",
+      "generator": "parity-matrix-hard",
+      "seed": 4210003,
+      "difficulty": 96,
+      "variant": 3,
+      "artifact": "public/evaluations/parity-matrix-confirmatory-v2/pmh-4bc33c2fd9405f5e-native-image.png",
+      "mimeType": "image/png",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "b2d2e5161bbb8ae303bd03761ad77d388ce0f6bf6b2ba2f36078b1138ee7de71",
+      "parameters": {
+        "correctPanel": 3,
+        "gridSize": 24,
+        "visualVariant": 103
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Verify two-dimensional parity and return exactly one panel letter."
+    },
+    {
+      "candidateId": "pmh-4bc33c2fd9405f5e-parity-audit-control",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "condition": "parity-audit-control",
+      "interventionDescription": "Diagnostic control highlights every odd row and column and labels each panel's audit result.",
+      "failureModeId": "global-visual-parity-verification",
+      "generator": "parity-matrix-hard",
+      "seed": 4210003,
+      "difficulty": 15,
+      "variant": 3,
+      "artifact": "public/evaluations/parity-matrix-confirmatory-v2/pmh-4bc33c2fd9405f5e-parity-audit-control.png",
+      "mimeType": "image/png",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "73f642272d09bd1e58c6a5ec6770619f093c139f2e15e70a23b6ad34977d8445",
+      "parameters": {
+        "correctPanel": 3,
+        "gridSize": 24,
+        "visualVariant": 103
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Verify two-dimensional parity and return exactly one panel letter."
+    },
+    {
+      "candidateId": "pmh-6b728a8af1a6c4b8-native-image",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "Four dense 24×24 matrices require exact row-and-column parity verification.",
+      "failureModeId": "global-visual-parity-verification",
+      "generator": "parity-matrix-hard",
+      "seed": 4210004,
+      "difficulty": 96,
+      "variant": 4,
+      "artifact": "public/evaluations/parity-matrix-confirmatory-v2/pmh-6b728a8af1a6c4b8-native-image.png",
+      "mimeType": "image/png",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "6897a3c0d83c48239114af5900b0d6263a7168f0ec7ae2dc4fcde00e9f86640a",
+      "parameters": {
+        "correctPanel": 0,
+        "gridSize": 24,
+        "visualVariant": 104
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Verify two-dimensional parity and return exactly one panel letter."
+    },
+    {
+      "candidateId": "pmh-6b728a8af1a6c4b8-parity-audit-control",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "condition": "parity-audit-control",
+      "interventionDescription": "Diagnostic control highlights every odd row and column and labels each panel's audit result.",
+      "failureModeId": "global-visual-parity-verification",
+      "generator": "parity-matrix-hard",
+      "seed": 4210004,
+      "difficulty": 15,
+      "variant": 4,
+      "artifact": "public/evaluations/parity-matrix-confirmatory-v2/pmh-6b728a8af1a6c4b8-parity-audit-control.png",
+      "mimeType": "image/png",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "947053f4c72b93cd9b01556d5a5fb4ae5c9b874679617f86910b7d5c3a9b9660",
+      "parameters": {
+        "correctPanel": 0,
+        "gridSize": 24,
+        "visualVariant": 104
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Verify two-dimensional parity and return exactly one panel letter."
+    },
+    {
+      "candidateId": "pmh-b9efad79375e8e8c-native-image",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "Four dense 24×24 matrices require exact row-and-column parity verification.",
+      "failureModeId": "global-visual-parity-verification",
+      "generator": "parity-matrix-hard",
+      "seed": 4210005,
+      "difficulty": 96,
+      "variant": 5,
+      "artifact": "public/evaluations/parity-matrix-confirmatory-v2/pmh-b9efad79375e8e8c-native-image.png",
+      "mimeType": "image/png",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "C",
+        "B",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "0f402e05ab0f3af5532e884bf380456f6bb9711f0d70eaee8c63ba3964584ada",
+      "parameters": {
+        "correctPanel": 1,
+        "gridSize": 24,
+        "visualVariant": 105
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Verify two-dimensional parity and return exactly one panel letter."
+    },
+    {
+      "candidateId": "pmh-b9efad79375e8e8c-parity-audit-control",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "condition": "parity-audit-control",
+      "interventionDescription": "Diagnostic control highlights every odd row and column and labels each panel's audit result.",
+      "failureModeId": "global-visual-parity-verification",
+      "generator": "parity-matrix-hard",
+      "seed": 4210005,
+      "difficulty": 15,
+      "variant": 5,
+      "artifact": "public/evaluations/parity-matrix-confirmatory-v2/pmh-b9efad79375e8e8c-parity-audit-control.png",
+      "mimeType": "image/png",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "C",
+        "B",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "974893bfa140e2fce94e5076d55b0e68d13e57a19afa7aad09ac12493975a8b4",
+      "parameters": {
+        "correctPanel": 1,
+        "gridSize": 24,
+        "visualVariant": 105
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Verify two-dimensional parity and return exactly one panel letter."
+    },
+    {
+      "candidateId": "pmh-0c060c944f77f6bc-native-image",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "Four dense 24×24 matrices require exact row-and-column parity verification.",
+      "failureModeId": "global-visual-parity-verification",
+      "generator": "parity-matrix-hard",
+      "seed": 4210006,
+      "difficulty": 96,
+      "variant": 6,
+      "artifact": "public/evaluations/parity-matrix-confirmatory-v2/pmh-0c060c944f77f6bc-native-image.png",
+      "mimeType": "image/png",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "C",
+        "B",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "bf73e27bdf992d9df5a8a84c8d431ae5b165ba2166c88f1ab04cc00608aff8f0",
+      "parameters": {
+        "correctPanel": 2,
+        "gridSize": 24,
+        "visualVariant": 106
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Verify two-dimensional parity and return exactly one panel letter."
+    },
+    {
+      "candidateId": "pmh-0c060c944f77f6bc-parity-audit-control",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "condition": "parity-audit-control",
+      "interventionDescription": "Diagnostic control highlights every odd row and column and labels each panel's audit result.",
+      "failureModeId": "global-visual-parity-verification",
+      "generator": "parity-matrix-hard",
+      "seed": 4210006,
+      "difficulty": 15,
+      "variant": 6,
+      "artifact": "public/evaluations/parity-matrix-confirmatory-v2/pmh-0c060c944f77f6bc-parity-audit-control.png",
+      "mimeType": "image/png",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "C",
+        "B",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "383bb1883bff8fb1ebca8d260b31f6a3fbe3ee4a4c83cb1ee74351a2b957f470",
+      "parameters": {
+        "correctPanel": 2,
+        "gridSize": 24,
+        "visualVariant": 106
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Verify two-dimensional parity and return exactly one panel letter."
+    },
+    {
+      "candidateId": "pmh-f6050281db300358-native-image",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "Four dense 24×24 matrices require exact row-and-column parity verification.",
+      "failureModeId": "global-visual-parity-verification",
+      "generator": "parity-matrix-hard",
+      "seed": 4210007,
+      "difficulty": 96,
+      "variant": 7,
+      "artifact": "public/evaluations/parity-matrix-confirmatory-v2/pmh-f6050281db300358-native-image.png",
+      "mimeType": "image/png",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "fd766c46b582db2c00fc70448b3991ca6d1d639083462427269bb19cbb764e8d",
+      "parameters": {
+        "correctPanel": 3,
+        "gridSize": 24,
+        "visualVariant": 107
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Verify two-dimensional parity and return exactly one panel letter."
+    },
+    {
+      "candidateId": "pmh-f6050281db300358-parity-audit-control",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "condition": "parity-audit-control",
+      "interventionDescription": "Diagnostic control highlights every odd row and column and labels each panel's audit result.",
+      "failureModeId": "global-visual-parity-verification",
+      "generator": "parity-matrix-hard",
+      "seed": 4210007,
+      "difficulty": 15,
+      "variant": 7,
+      "artifact": "public/evaluations/parity-matrix-confirmatory-v2/pmh-f6050281db300358-parity-audit-control.png",
+      "mimeType": "image/png",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "04764631405dd52fdfacd4bfdf85bd9c131157c3e623252338d68bfddc674e5d",
+      "parameters": {
+        "correctPanel": 3,
+        "gridSize": 24,
+        "visualVariant": 107
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Verify two-dimensional parity and return exactly one panel letter."
+    },
+    {
+      "candidateId": "pmh-66cdbb9df6076a7d-native-image",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "Four dense 24×24 matrices require exact row-and-column parity verification.",
+      "failureModeId": "global-visual-parity-verification",
+      "generator": "parity-matrix-hard",
+      "seed": 4210008,
+      "difficulty": 96,
+      "variant": 8,
+      "artifact": "public/evaluations/parity-matrix-confirmatory-v2/pmh-66cdbb9df6076a7d-native-image.png",
+      "mimeType": "image/png",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "0396aaf51db65b5f24d68b79c27884026fa6027a5cc3bf44c13a5b0ca2750997",
+      "parameters": {
+        "correctPanel": 0,
+        "gridSize": 24,
+        "visualVariant": 108
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Verify two-dimensional parity and return exactly one panel letter."
+    },
+    {
+      "candidateId": "pmh-66cdbb9df6076a7d-parity-audit-control",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "condition": "parity-audit-control",
+      "interventionDescription": "Diagnostic control highlights every odd row and column and labels each panel's audit result.",
+      "failureModeId": "global-visual-parity-verification",
+      "generator": "parity-matrix-hard",
+      "seed": 4210008,
+      "difficulty": 15,
+      "variant": 8,
+      "artifact": "public/evaluations/parity-matrix-confirmatory-v2/pmh-66cdbb9df6076a7d-parity-audit-control.png",
+      "mimeType": "image/png",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "1adab08de037ab13b220f7bccefd4bcaf99a53ca3419dcf69b8f24542ad2bdaf",
+      "parameters": {
+        "correctPanel": 0,
+        "gridSize": 24,
+        "visualVariant": 108
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Verify two-dimensional parity and return exactly one panel letter."
+    },
+    {
+      "candidateId": "pmh-0192521ca1b5713d-native-image",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "Four dense 24×24 matrices require exact row-and-column parity verification.",
+      "failureModeId": "global-visual-parity-verification",
+      "generator": "parity-matrix-hard",
+      "seed": 4210009,
+      "difficulty": 96,
+      "variant": 9,
+      "artifact": "public/evaluations/parity-matrix-confirmatory-v2/pmh-0192521ca1b5713d-native-image.png",
+      "mimeType": "image/png",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "6bd14129167f2cf6ef838cf37357e2db1b3f9f87d168fa92a366829c089cf582",
+      "parameters": {
+        "correctPanel": 1,
+        "gridSize": 24,
+        "visualVariant": 109
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Verify two-dimensional parity and return exactly one panel letter."
+    },
+    {
+      "candidateId": "pmh-0192521ca1b5713d-parity-audit-control",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "condition": "parity-audit-control",
+      "interventionDescription": "Diagnostic control highlights every odd row and column and labels each panel's audit result.",
+      "failureModeId": "global-visual-parity-verification",
+      "generator": "parity-matrix-hard",
+      "seed": 4210009,
+      "difficulty": 15,
+      "variant": 9,
+      "artifact": "public/evaluations/parity-matrix-confirmatory-v2/pmh-0192521ca1b5713d-parity-audit-control.png",
+      "mimeType": "image/png",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "237c2788cf48a66714b758bcc8c66ac81c8329d78746288258487dd22a204e9d",
+      "parameters": {
+        "correctPanel": 1,
+        "gridSize": 24,
+        "visualVariant": 109
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Verify two-dimensional parity and return exactly one panel letter."
+    },
+    {
+      "candidateId": "pmh-4a95b130115a8611-native-image",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "Four dense 24×24 matrices require exact row-and-column parity verification.",
+      "failureModeId": "global-visual-parity-verification",
+      "generator": "parity-matrix-hard",
+      "seed": 4210010,
+      "difficulty": 96,
+      "variant": 10,
+      "artifact": "public/evaluations/parity-matrix-confirmatory-v2/pmh-4a95b130115a8611-native-image.png",
+      "mimeType": "image/png",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "C",
+        "A",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "4cde5ad84d3067e52993d8fc02d3a1dee52674a8cb5bf6aeb55bc8d3c1e29c3a",
+      "parameters": {
+        "correctPanel": 2,
+        "gridSize": 24,
+        "visualVariant": 110
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Verify two-dimensional parity and return exactly one panel letter."
+    },
+    {
+      "candidateId": "pmh-4a95b130115a8611-parity-audit-control",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "condition": "parity-audit-control",
+      "interventionDescription": "Diagnostic control highlights every odd row and column and labels each panel's audit result.",
+      "failureModeId": "global-visual-parity-verification",
+      "generator": "parity-matrix-hard",
+      "seed": 4210010,
+      "difficulty": 15,
+      "variant": 10,
+      "artifact": "public/evaluations/parity-matrix-confirmatory-v2/pmh-4a95b130115a8611-parity-audit-control.png",
+      "mimeType": "image/png",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "C",
+        "A",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "f25d4d21f68ddbbc3351bf61ff6e3a96514c6c0b2f493e50abf7b18ddf690f22",
+      "parameters": {
+        "correctPanel": 2,
+        "gridSize": 24,
+        "visualVariant": 110
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Verify two-dimensional parity and return exactly one panel letter."
+    },
+    {
+      "candidateId": "pmh-6f55675eaf4c92f3-native-image",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "Four dense 24×24 matrices require exact row-and-column parity verification.",
+      "failureModeId": "global-visual-parity-verification",
+      "generator": "parity-matrix-hard",
+      "seed": 4210011,
+      "difficulty": 96,
+      "variant": 11,
+      "artifact": "public/evaluations/parity-matrix-confirmatory-v2/pmh-6f55675eaf4c92f3-native-image.png",
+      "mimeType": "image/png",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "b8e6ddc3b0ce07ee52a3234c478678b8821c8230200e91a3f83b2d5cfd6df44f",
+      "parameters": {
+        "correctPanel": 3,
+        "gridSize": 24,
+        "visualVariant": 111
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Verify two-dimensional parity and return exactly one panel letter."
+    },
+    {
+      "candidateId": "pmh-6f55675eaf4c92f3-parity-audit-control",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "condition": "parity-audit-control",
+      "interventionDescription": "Diagnostic control highlights every odd row and column and labels each panel's audit result.",
+      "failureModeId": "global-visual-parity-verification",
+      "generator": "parity-matrix-hard",
+      "seed": 4210011,
+      "difficulty": 15,
+      "variant": 11,
+      "artifact": "public/evaluations/parity-matrix-confirmatory-v2/pmh-6f55675eaf4c92f3-parity-audit-control.png",
+      "mimeType": "image/png",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "aa8336f1d61290d007d2c3eae794d7c0942d720f7a7809befc6d219db6903b58",
+      "parameters": {
+        "correctPanel": 3,
+        "gridSize": 24,
+        "visualVariant": 111
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Verify two-dimensional parity and return exactly one panel letter."
+    },
+    {
+      "candidateId": "pmh-ad2ad7471d586beb-native-image",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "Four dense 24×24 matrices require exact row-and-column parity verification.",
+      "failureModeId": "global-visual-parity-verification",
+      "generator": "parity-matrix-hard",
+      "seed": 4210012,
+      "difficulty": 96,
+      "variant": 12,
+      "artifact": "public/evaluations/parity-matrix-confirmatory-v2/pmh-ad2ad7471d586beb-native-image.png",
+      "mimeType": "image/png",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "8d1e0e9ed137e2d79ec54c09190162d41d15bb33f93bd1ba9d59c3ece8e52af1",
+      "parameters": {
+        "correctPanel": 0,
+        "gridSize": 24,
+        "visualVariant": 112
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Verify two-dimensional parity and return exactly one panel letter."
+    },
+    {
+      "candidateId": "pmh-ad2ad7471d586beb-parity-audit-control",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "condition": "parity-audit-control",
+      "interventionDescription": "Diagnostic control highlights every odd row and column and labels each panel's audit result.",
+      "failureModeId": "global-visual-parity-verification",
+      "generator": "parity-matrix-hard",
+      "seed": 4210012,
+      "difficulty": 15,
+      "variant": 12,
+      "artifact": "public/evaluations/parity-matrix-confirmatory-v2/pmh-ad2ad7471d586beb-parity-audit-control.png",
+      "mimeType": "image/png",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "9f216d026ccb3e06103c3af0aa69f651ccab194aab3483079d97d013d8f9ba58",
+      "parameters": {
+        "correctPanel": 0,
+        "gridSize": 24,
+        "visualVariant": 112
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Verify two-dimensional parity and return exactly one panel letter."
+    },
+    {
+      "candidateId": "pmh-f3581a717140fea0-native-image",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "Four dense 24×24 matrices require exact row-and-column parity verification.",
+      "failureModeId": "global-visual-parity-verification",
+      "generator": "parity-matrix-hard",
+      "seed": 4210013,
+      "difficulty": 96,
+      "variant": 13,
+      "artifact": "public/evaluations/parity-matrix-confirmatory-v2/pmh-f3581a717140fea0-native-image.png",
+      "mimeType": "image/png",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "a6fdd8f9df8045914e2b273d883e9c8ae715a15aec3982cf5b28b6670af616fd",
+      "parameters": {
+        "correctPanel": 1,
+        "gridSize": 24,
+        "visualVariant": 113
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Verify two-dimensional parity and return exactly one panel letter."
+    },
+    {
+      "candidateId": "pmh-f3581a717140fea0-parity-audit-control",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "condition": "parity-audit-control",
+      "interventionDescription": "Diagnostic control highlights every odd row and column and labels each panel's audit result.",
+      "failureModeId": "global-visual-parity-verification",
+      "generator": "parity-matrix-hard",
+      "seed": 4210013,
+      "difficulty": 15,
+      "variant": 13,
+      "artifact": "public/evaluations/parity-matrix-confirmatory-v2/pmh-f3581a717140fea0-parity-audit-control.png",
+      "mimeType": "image/png",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "40eb73a9237167fc401009a2568165fb5e080f44952330eb4a702a14eead8872",
+      "parameters": {
+        "correctPanel": 1,
+        "gridSize": 24,
+        "visualVariant": 113
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Verify two-dimensional parity and return exactly one panel letter."
+    },
+    {
+      "candidateId": "pmh-e224513f72210d62-native-image",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "Four dense 24×24 matrices require exact row-and-column parity verification.",
+      "failureModeId": "global-visual-parity-verification",
+      "generator": "parity-matrix-hard",
+      "seed": 4210014,
+      "difficulty": 96,
+      "variant": 14,
+      "artifact": "public/evaluations/parity-matrix-confirmatory-v2/pmh-e224513f72210d62-native-image.png",
+      "mimeType": "image/png",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "e3de5b39e5b2493116d7e906136cc93622ee9e14f90f8cdcc4f91e56bd234464",
+      "parameters": {
+        "correctPanel": 2,
+        "gridSize": 24,
+        "visualVariant": 114
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Verify two-dimensional parity and return exactly one panel letter."
+    },
+    {
+      "candidateId": "pmh-e224513f72210d62-parity-audit-control",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "condition": "parity-audit-control",
+      "interventionDescription": "Diagnostic control highlights every odd row and column and labels each panel's audit result.",
+      "failureModeId": "global-visual-parity-verification",
+      "generator": "parity-matrix-hard",
+      "seed": 4210014,
+      "difficulty": 15,
+      "variant": 14,
+      "artifact": "public/evaluations/parity-matrix-confirmatory-v2/pmh-e224513f72210d62-parity-audit-control.png",
+      "mimeType": "image/png",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "48a99ac68d9cc0bb12d8094709ca3189ebde47160fa690da72e314e84215d397",
+      "parameters": {
+        "correctPanel": 2,
+        "gridSize": 24,
+        "visualVariant": 114
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Verify two-dimensional parity and return exactly one panel letter."
+    },
+    {
+      "candidateId": "pmh-70dbeb3401135caf-native-image",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "Four dense 24×24 matrices require exact row-and-column parity verification.",
+      "failureModeId": "global-visual-parity-verification",
+      "generator": "parity-matrix-hard",
+      "seed": 4210015,
+      "difficulty": 96,
+      "variant": 15,
+      "artifact": "public/evaluations/parity-matrix-confirmatory-v2/pmh-70dbeb3401135caf-native-image.png",
+      "mimeType": "image/png",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "C",
+        "B",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "d58a934f29a0f3f0318f9870f3d55aac94d1899500a3dc75a454d0faf7b7fbce",
+      "parameters": {
+        "correctPanel": 3,
+        "gridSize": 24,
+        "visualVariant": 115
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Verify two-dimensional parity and return exactly one panel letter."
+    },
+    {
+      "candidateId": "pmh-70dbeb3401135caf-parity-audit-control",
+      "cellId": "cell-four-24x24-two-dimensional-parity",
+      "split": "confirmatory",
+      "condition": "parity-audit-control",
+      "interventionDescription": "Diagnostic control highlights every odd row and column and labels each panel's audit result.",
+      "failureModeId": "global-visual-parity-verification",
+      "generator": "parity-matrix-hard",
+      "seed": 4210015,
+      "difficulty": 15,
+      "variant": 15,
+      "artifact": "public/evaluations/parity-matrix-confirmatory-v2/pmh-70dbeb3401135caf-parity-audit-control.png",
+      "mimeType": "image/png",
+      "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
+      "answerOptions": [
+        "C",
+        "B",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "285b49c2ea652cb1f1efdbfe532af14e3d10acb8a7f2ae8807bea7376f83c5e5",
+      "parameters": {
+        "correctPanel": 3,
+        "gridSize": 24,
+        "visualVariant": 115
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Verify two-dimensional parity and return exactly one panel letter."
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "id": "symbol-sequence-discovery-v1",
+  "generatorVersion": "temporal-symbol-sequence-recall-v1",
+  "status": "discovery-only",
+  "hypothesis": "Video models fail exact ordered reconstruction of a rapidly presented symbol stream even when every atomic symbol is trivial.",
+  "candidates": [
+    {
+      "id": "ss-b79552229dfb2119",
+      "cellId": "cell-twelve-symbol-near-permutation",
+      "split": "discovery",
+      "seed": 5000000,
+      "failureModeId": "temporal-sequence-reconstruction",
+      "question": "Which option reproduces the COMPLETE twelve-symbol sequence in the exact order shown?",
+      "answerOptions": ["D", "C", "B", "A"],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 0,
+        "sequence": [0, 2, 0, 1, 2, 1, 0, 2, 1, 2, 3, 1],
+        "options": [
+          [0, 2, 0, 1, 2, 1, 0, 2, 1, 2, 3, 1],
+          [0, 2, 0, 1, 2, 1, 1, 2, 0, 2, 3, 1],
+          [0, 2, 0, 1, 2, 1, 0, 2, 3, 2, 1, 1],
+          [0, 2, 0, 1, 2, 1, 2, 0, 1, 2, 3, 1]
+        ],
+        "videoDurationMs": 11800,
+        "fps": 30,
+        "visualVariant": 0
+      }
+    },
+    {
+      "id": "ss-4611eb59094c2d10",
+      "cellId": "cell-twelve-symbol-near-permutation",
+      "split": "discovery",
+      "seed": 5000001,
+      "failureModeId": "temporal-sequence-reconstruction",
+      "question": "Which option reproduces the COMPLETE twelve-symbol sequence in the exact order shown?",
+      "answerOptions": ["C", "D", "B", "A"],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 1,
+        "sequence": [0, 2, 3, 0, 3, 0, 3, 0, 3, 2, 0, 2],
+        "options": [
+          [0, 2, 0, 0, 3, 3, 3, 0, 3, 2, 0, 2],
+          [0, 2, 3, 0, 3, 0, 3, 0, 3, 2, 0, 2],
+          [0, 2, 3, 0, 3, 0, 2, 0, 3, 3, 0, 2],
+          [0, 2, 3, 0, 3, 0, 3, 3, 0, 2, 0, 2]
+        ],
+        "videoDurationMs": 11800,
+        "fps": 30,
+        "visualVariant": 1
+      }
+    },
+    {
+      "id": "ss-ae20c3c99f955889",
+      "cellId": "cell-twelve-symbol-near-permutation",
+      "split": "discovery",
+      "seed": 5000002,
+      "failureModeId": "temporal-sequence-reconstruction",
+      "question": "Which option reproduces the COMPLETE twelve-symbol sequence in the exact order shown?",
+      "answerOptions": ["D", "C", "B", "A"],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 2,
+        "sequence": [0, 2, 1, 2, 3, 1, 0, 1, 2, 0, 3, 2],
+        "options": [
+          [0, 1, 2, 2, 3, 1, 0, 1, 2, 0, 3, 2],
+          [0, 2, 1, 2, 3, 1, 0, 1, 2, 0, 2, 3],
+          [0, 2, 1, 2, 3, 1, 0, 1, 2, 0, 3, 2],
+          [0, 2, 1, 2, 3, 1, 0, 2, 1, 0, 3, 2]
+        ],
+        "videoDurationMs": 11800,
+        "fps": 30,
+        "visualVariant": 2
+      }
+    },
+    {
+      "id": "ss-41d1b7c15fb0fde8",
+      "cellId": "cell-twelve-symbol-near-permutation",
+      "split": "discovery",
+      "seed": 5000003,
+      "failureModeId": "temporal-sequence-reconstruction",
+      "question": "Which option reproduces the COMPLETE twelve-symbol sequence in the exact order shown?",
+      "answerOptions": ["D", "B", "C", "A"],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 3,
+        "sequence": [0, 3, 0, 1, 2, 3, 0, 3, 2, 0, 1, 3],
+        "options": [
+          [0, 3, 0, 1, 2, 3, 0, 0, 2, 3, 1, 3],
+          [0, 3, 0, 1, 0, 3, 2, 3, 2, 0, 1, 3],
+          [0, 3, 0, 2, 1, 3, 0, 3, 2, 0, 1, 3],
+          [0, 3, 0, 1, 2, 3, 0, 3, 2, 0, 1, 3]
+        ],
+        "videoDurationMs": 11800,
+        "fps": 30,
+        "visualVariant": 3
+      }
+    },
+    {
+      "id": "ss-e7268c9a15e2420e",
+      "cellId": "cell-twelve-symbol-near-permutation",
+      "split": "discovery",
+      "seed": 5000004,
+      "failureModeId": "temporal-sequence-reconstruction",
+      "question": "Which option reproduces the COMPLETE twelve-symbol sequence in the exact order shown?",
+      "answerOptions": ["B", "D", "C", "A"],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 0,
+        "sequence": [0, 3, 1, 3, 1, 0, 3, 1, 2, 3, 1, 2],
+        "options": [
+          [0, 3, 1, 3, 1, 0, 3, 1, 2, 3, 1, 2],
+          [1, 3, 0, 3, 1, 0, 3, 1, 2, 3, 1, 2],
+          [0, 3, 1, 3, 1, 0, 3, 1, 2, 1, 3, 2],
+          [0, 3, 1, 1, 3, 0, 3, 1, 2, 3, 1, 2]
+        ],
+        "videoDurationMs": 11800,
+        "fps": 30,
+        "visualVariant": 4
+      }
+    },
+    {
+      "id": "ss-224755f846783bcf",
+      "cellId": "cell-twelve-symbol-near-permutation",
+      "split": "discovery",
+      "seed": 5000005,
+      "failureModeId": "temporal-sequence-reconstruction",
+      "question": "Which option reproduces the COMPLETE twelve-symbol sequence in the exact order shown?",
+      "answerOptions": ["D", "B", "C", "A"],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 1,
+        "sequence": [0, 3, 2, 1, 2, 0, 2, 3, 2, 1, 3, 1],
+        "options": [
+          [1, 3, 2, 0, 2, 0, 2, 3, 2, 1, 3, 1],
+          [0, 3, 2, 1, 2, 0, 2, 3, 2, 1, 3, 1],
+          [0, 3, 2, 2, 1, 0, 2, 3, 2, 1, 3, 1],
+          [0, 3, 0, 1, 2, 2, 2, 3, 2, 1, 3, 1]
+        ],
+        "videoDurationMs": 11800,
+        "fps": 30,
+        "visualVariant": 5
+      }
+    },
+    {
+      "id": "ss-31740501d21ddb67",
+      "cellId": "cell-twelve-symbol-near-permutation",
+      "split": "discovery",
+      "seed": 5000006,
+      "failureModeId": "temporal-sequence-reconstruction",
+      "question": "Which option reproduces the COMPLETE twelve-symbol sequence in the exact order shown?",
+      "answerOptions": ["C", "B", "D", "A"],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 2,
+        "sequence": [0, 1, 3, 0, 3, 1, 3, 2, 1, 3, 0, 3],
+        "options": [
+          [0, 1, 3, 0, 2, 1, 3, 3, 1, 3, 0, 3],
+          [0, 1, 3, 3, 0, 1, 3, 2, 1, 3, 0, 3],
+          [0, 1, 3, 0, 3, 1, 3, 2, 1, 3, 0, 3],
+          [0, 1, 3, 0, 3, 1, 3, 0, 1, 3, 2, 3]
+        ],
+        "videoDurationMs": 11800,
+        "fps": 30,
+        "visualVariant": 6
+      }
+    },
+    {
+      "id": "ss-c25da01a00b2b11f",
+      "cellId": "cell-twelve-symbol-near-permutation",
+      "split": "discovery",
+      "seed": 5000007,
+      "failureModeId": "temporal-sequence-reconstruction",
+      "question": "Which option reproduces the COMPLETE twelve-symbol sequence in the exact order shown?",
+      "answerOptions": ["B", "C", "D", "A"],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 3,
+        "sequence": [0, 3, 1, 3, 2, 3, 1, 3, 1, 2, 3, 1],
+        "options": [
+          [0, 3, 1, 3, 2, 1, 1, 3, 3, 2, 3, 1],
+          [0, 3, 1, 3, 2, 3, 1, 3, 3, 2, 1, 1],
+          [0, 3, 2, 3, 1, 3, 1, 3, 1, 2, 3, 1],
+          [0, 3, 1, 3, 2, 3, 1, 3, 1, 2, 3, 1]
+        ],
+        "videoDurationMs": 11800,
+        "fps": 30,
+        "visualVariant": 7
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "parity-matrix-confirmatory-v2-kimi-no-reasoning-2026-09-01",
+  "resolvedAt": "2026-09-01",
+  "gateway": "OpenRouter",
+  "evaluationPlanId": "parity-matrix-confirmatory-v2",
+  "evaluationPlanSha256": "ff8a943168d610f7a2dab707d7c305c71df67b40f382184793be29c534e83006",
+  "stage": "frozen-confirmatory-holdout-with-parity-audit-control",
+  "casesPerModel": 32,
+  "trials": 1,
+  "temperature": 0,
+  "maxOutputTokens": 1024,
+  "reasoning": { "effort": "none", "exclude": true },
+  "scorer": "terminal-option-v3",
+  "allowProviderFallbacks": false,
+  "dataCollection": "deny",
+  "campaignCostCeilingUsd": 10,
+  "models": [
+    { "modelId": "moonshotai/kimi-k3", "modelRevision": "moonshotai/kimi-k3-20260715", "upstreamProvider": "Moonshot AI" }
+  ]
+}

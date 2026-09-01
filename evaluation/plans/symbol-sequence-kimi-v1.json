@@ -1,0 +1,20 @@
+{
+  "id": "symbol-sequence-screen-v1-kimi-no-reasoning-2026-09-01",
+  "resolvedAt": "2026-09-01",
+  "gateway": "OpenRouter",
+  "evaluationPlanId": "symbol-sequence-discovery-v1",
+  "evaluationPlanSha256": "dfc11efb29362e40820d0f6835a5fcb48d30991526ffe5bf19bb7bb0728b113b",
+  "stage": "balanced-twelve-symbol-sequence-screen",
+  "casesPerModel": 8,
+  "trials": 1,
+  "temperature": 0,
+  "maxOutputTokens": 1024,
+  "reasoning": { "effort": "none", "exclude": true },
+  "scorer": "terminal-option-v3",
+  "allowProviderFallbacks": false,
+  "dataCollection": "deny",
+  "campaignCostCeilingUsd": 6,
+  "models": [
+    { "modelId": "moonshotai/kimi-k3", "modelRevision": "moonshotai/kimi-k3-20260715", "upstreamProvider": "Moonshot AI" }
+  ]
+}

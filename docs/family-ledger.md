@@ -17,9 +17,9 @@ Wilson-qualified and human-validated are stricter, separately reported states.
 | Occluded cube-stack enumeration           | observed holdout pass     |                 3/16 |                            6/16 | 6/16 | 16/16 each          | unverified |
 | Dense visual XOR composition              | observed holdout pass     |                 4/16 |                            2/16 | 7/16 | 16/16, 15/15, 16/16 | unverified |
 | Dense cross-image change localization     | observed holdout pass     |                 4/16 |                            2/16 | 5/16 | 16/16, 16/16, 9/16  | unverified |
-| Maze reachability                         | frozen holdout incomplete | incomplete after 429 | 3/16 native; control incomplete | 4/16 | 16/16 Kimi          | unverified |
-| Visual graph-degree topology              | frozen holdout running    |                  1/8 |                             2/8 |  1/8 | oracle ring queued  | unverified |
-| 2D parity-matrix verification             | screen incomplete         |                  4/8 |                         pending |  0/8 | pending             | unverified |
+| Maze reachability                         | observed holdout pass     |                 6/16 |                            3/16 | 4/16 | 16/16, 9/9, 16/16  | unverified |
+| Visual graph-degree topology              | observed holdout pass     |                 4/16 |                            5/16 | 2/16 | 16/16 each          | unverified |
+| 2D parity-matrix verification             | observed holdout pass     |                 5/16 |                            6/16 | 3/15 | 16/16, 16/16, 14/14 | unverified |
 
 The enclosure control only partially recovers Kimi, so it confirms behavioral difficulty but does not
 fully localize the mechanism. The rotation Qwen denominator excludes two non-substantive outputs.
@@ -35,9 +35,9 @@ holdouts finish.
 | Identity-conditioned spatial zone entries  | observed holdout pass       |        4/16 |             7/16 |        4/16 | 16/16 each                        | unverified |
 | Identity-pair collision counting           | observed holdout pass       |        4/16 |             3/16 |        3/16 | 16/16, 12/16, 16/16               | unverified |
 | Sequential identity permutation            | observed holdout pass       |        2/16 |             1/16 |        5/16 | 16/16, 13/16, 16/16               | unverified |
-| Identity-conditioned selective flash count | replacement holdout running | 4/16 native | 2/15 substantive | 2/16 native | persistent-answer control running | unverified |
-| Temporal set cardinality                   | screen running              |     pending |          pending |     pending | persistent-state control planned  | unverified |
-| Dynamic route turn integration             | screen running              |     pending |          pending |     pending | visible-trail control planned     | unverified |
+| Identity-conditioned selective flash count | observed holdout pass       |        2/16 |             4/16 |        2/16 | 16/16 each                        | unverified |
+| Temporal set cardinality                   | harder holdout queued       |         3/8 |              4/8 | 4/7 + pending | persistent-set control generated  | unverified |
+| Dynamic route turn integration             | harder holdout queued       |         2/8 |              2/8 | 4/7 + pending | running-counter control generated | unverified |
 
 ## Rejected or superseded searches
 
@@ -68,6 +68,7 @@ holdouts finish.
 | 20-event ordinal successor               | Kimi answered 4/6 substantive cases correctly; replaced by the 32-event cell.                                                                |
 | 32-event ordinal successor               | Kimi answered 5/6 substantive cases correctly after conservative terminal-sentence adjudication; two length-truncated outputs were excluded. |
 | Twelve-arrow hidden path integration     | Gemini solved 6/8.                                                                                                                           |
+| Twelve-symbol exact sequence             | Gemini solved 5/8 and Kimi solved 8/8; a faster, longer sequence requires a new screen.                                                      |
 | Identity-conditioned direction reversals | Gemini solved 7/7 substantive cases; one parser-pending response was excluded.                                                               |
 | Irregular cube-net folding               | Gemini solved all 8 discovery cases.                                                                                                         |
 

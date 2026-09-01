@@ -1,0 +1,249 @@
+{
+  "id": "symbol-sequence-discovery-v1",
+  "planSha256": "dfc11efb29362e40820d0f6835a5fcb48d30991526ffe5bf19bb7bb0728b113b",
+  "generatorVersion": "temporal-symbol-sequence-recall-v1",
+  "renderer": "symbol-sequence-svg-raster-v1",
+  "fps": 30,
+  "cases": [
+    {
+      "candidateId": "ss-b79552229dfb2119",
+      "cellId": "cell-twelve-symbol-near-permutation",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Twelve atomic symbols are shown serially before four near-permutation options appear.",
+      "failureModeId": "temporal-sequence-reconstruction",
+      "generator": "symbol-sequence-recall",
+      "seed": 5000000,
+      "difficulty": 91,
+      "variant": 0,
+      "artifact": "public/evaluations/symbol-sequence-discovery-v1/ss-b79552229dfb2119.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 11800,
+      "question": "Which option reproduces the COMPLETE twelve-symbol sequence in the exact order shown?",
+      "answerOptions": [
+        "D",
+        "C",
+        "B",
+        "A"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "03a3f978316120c31b7fc570d7c1527e65338804045b18085d74f45c63f7d339",
+      "parameters": {
+        "correctPanel": 0,
+        "visualVariant": 0
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Recover all twelve symbols in order, compare with the final options, and return exactly one option letter."
+    },
+    {
+      "candidateId": "ss-4611eb59094c2d10",
+      "cellId": "cell-twelve-symbol-near-permutation",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Twelve atomic symbols are shown serially before four near-permutation options appear.",
+      "failureModeId": "temporal-sequence-reconstruction",
+      "generator": "symbol-sequence-recall",
+      "seed": 5000001,
+      "difficulty": 91,
+      "variant": 1,
+      "artifact": "public/evaluations/symbol-sequence-discovery-v1/ss-4611eb59094c2d10.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 11800,
+      "question": "Which option reproduces the COMPLETE twelve-symbol sequence in the exact order shown?",
+      "answerOptions": [
+        "C",
+        "D",
+        "B",
+        "A"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "8b7c91f5c50ac48c0c176665d931b922667a75c81112ef094c4794b0de1070c8",
+      "parameters": {
+        "correctPanel": 1,
+        "visualVariant": 1
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Recover all twelve symbols in order, compare with the final options, and return exactly one option letter."
+    },
+    {
+      "candidateId": "ss-ae20c3c99f955889",
+      "cellId": "cell-twelve-symbol-near-permutation",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Twelve atomic symbols are shown serially before four near-permutation options appear.",
+      "failureModeId": "temporal-sequence-reconstruction",
+      "generator": "symbol-sequence-recall",
+      "seed": 5000002,
+      "difficulty": 91,
+      "variant": 2,
+      "artifact": "public/evaluations/symbol-sequence-discovery-v1/ss-ae20c3c99f955889.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 11800,
+      "question": "Which option reproduces the COMPLETE twelve-symbol sequence in the exact order shown?",
+      "answerOptions": [
+        "D",
+        "C",
+        "B",
+        "A"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "3a5410ad2772d1a72dfed560c827c2e2c24805163e02c6f785fbbea79cf63d70",
+      "parameters": {
+        "correctPanel": 2,
+        "visualVariant": 2
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Recover all twelve symbols in order, compare with the final options, and return exactly one option letter."
+    },
+    {
+      "candidateId": "ss-41d1b7c15fb0fde8",
+      "cellId": "cell-twelve-symbol-near-permutation",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Twelve atomic symbols are shown serially before four near-permutation options appear.",
+      "failureModeId": "temporal-sequence-reconstruction",
+      "generator": "symbol-sequence-recall",
+      "seed": 5000003,
+      "difficulty": 91,
+      "variant": 3,
+      "artifact": "public/evaluations/symbol-sequence-discovery-v1/ss-41d1b7c15fb0fde8.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 11800,
+      "question": "Which option reproduces the COMPLETE twelve-symbol sequence in the exact order shown?",
+      "answerOptions": [
+        "D",
+        "B",
+        "C",
+        "A"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "4c6159ecb74273db6f112824b3176cd1341d17784dd63366e987c9a6dbf3aa07",
+      "parameters": {
+        "correctPanel": 3,
+        "visualVariant": 3
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Recover all twelve symbols in order, compare with the final options, and return exactly one option letter."
+    },
+    {
+      "candidateId": "ss-e7268c9a15e2420e",
+      "cellId": "cell-twelve-symbol-near-permutation",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Twelve atomic symbols are shown serially before four near-permutation options appear.",
+      "failureModeId": "temporal-sequence-reconstruction",
+      "generator": "symbol-sequence-recall",
+      "seed": 5000004,
+      "difficulty": 91,
+      "variant": 4,
+      "artifact": "public/evaluations/symbol-sequence-discovery-v1/ss-e7268c9a15e2420e.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 11800,
+      "question": "Which option reproduces the COMPLETE twelve-symbol sequence in the exact order shown?",
+      "answerOptions": [
+        "B",
+        "D",
+        "C",
+        "A"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "698f9cd47d488c6cb7f5c929056f3cdf35ac531bca8414a2c1880b67ebe5e76c",
+      "parameters": {
+        "correctPanel": 0,
+        "visualVariant": 4
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Recover all twelve symbols in order, compare with the final options, and return exactly one option letter."
+    },
+    {
+      "candidateId": "ss-224755f846783bcf",
+      "cellId": "cell-twelve-symbol-near-permutation",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Twelve atomic symbols are shown serially before four near-permutation options appear.",
+      "failureModeId": "temporal-sequence-reconstruction",
+      "generator": "symbol-sequence-recall",
+      "seed": 5000005,
+      "difficulty": 91,
+      "variant": 5,
+      "artifact": "public/evaluations/symbol-sequence-discovery-v1/ss-224755f846783bcf.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 11800,
+      "question": "Which option reproduces the COMPLETE twelve-symbol sequence in the exact order shown?",
+      "answerOptions": [
+        "D",
+        "B",
+        "C",
+        "A"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "252c1e0f8b5e74c0ed263b6eef1a8a4d532f1c06ed932d05a068344f758adadb",
+      "parameters": {
+        "correctPanel": 1,
+        "visualVariant": 5
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Recover all twelve symbols in order, compare with the final options, and return exactly one option letter."
+    },
+    {
+      "candidateId": "ss-31740501d21ddb67",
+      "cellId": "cell-twelve-symbol-near-permutation",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Twelve atomic symbols are shown serially before four near-permutation options appear.",
+      "failureModeId": "temporal-sequence-reconstruction",
+      "generator": "symbol-sequence-recall",
+      "seed": 5000006,
+      "difficulty": 91,
+      "variant": 6,
+      "artifact": "public/evaluations/symbol-sequence-discovery-v1/ss-31740501d21ddb67.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 11800,
+      "question": "Which option reproduces the COMPLETE twelve-symbol sequence in the exact order shown?",
+      "answerOptions": [
+        "C",
+        "B",
+        "D",
+        "A"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "d2dc8c6700d0fb7c05de1af7655050ad0ec7962b003c3bd390032663b72ee918",
+      "parameters": {
+        "correctPanel": 2,
+        "visualVariant": 6
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Recover all twelve symbols in order, compare with the final options, and return exactly one option letter."
+    },
+    {
+      "candidateId": "ss-c25da01a00b2b11f",
+      "cellId": "cell-twelve-symbol-near-permutation",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Twelve atomic symbols are shown serially before four near-permutation options appear.",
+      "failureModeId": "temporal-sequence-reconstruction",
+      "generator": "symbol-sequence-recall",
+      "seed": 5000007,
+      "difficulty": 91,
+      "variant": 7,
+      "artifact": "public/evaluations/symbol-sequence-discovery-v1/ss-c25da01a00b2b11f.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 11800,
+      "question": "Which option reproduces the COMPLETE twelve-symbol sequence in the exact order shown?",
+      "answerOptions": [
+        "B",
+        "C",
+        "D",
+        "A"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "c00313bbc64aeece7b5fd1a5f99ef3274d4a39147b8471677d4ded72c93cfc44",
+      "parameters": {
+        "correctPanel": 3,
+        "visualVariant": 7
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Recover all twelve symbols in order, compare with the final options, and return exactly one option letter."
+    }
+  ]
+}
