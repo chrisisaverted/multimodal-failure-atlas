@@ -43,4 +43,20 @@ describe("terminal option scorer v2", () => {
     expect(scoreTerminalOption("Maybe 3, but after recounting:\n5", "5", ["3", "5"]).correct).toBe(true);
     expect(scoreTerminalOption("Either 3 or 5", "5", ["3", "5"]).needsReview).toBe(true);
   });
+
+  it("uses a markdown-wrapped correct-answer marker", () => {
+    expect(
+      scoreTerminalOption("Reasoning mentions A and C.\n**Correct Answer:** **B**", "B", [
+        "A",
+        "B",
+        "C",
+        "D",
+      ]),
+    ).toMatchObject({
+      parsedAnswer: "B",
+      correct: true,
+      needsReview: false,
+      method: "terminal-option-v2",
+    });
+  });
 });

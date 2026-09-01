@@ -67,7 +67,11 @@ export function scoreTerminalOption(
     const normalizedValue = normalize(value);
     return normalizedOptions.find(({ normalized }) => normalized === normalizedValue);
   };
-  const terminalMarkers = [...rawResponse.matchAll(/(?:^|\n)\s*(?:final\s+answer|answer)\s*:\s*([^\n]+)/giu)];
+  const terminalMarkers = [
+    ...rawResponse.matchAll(
+      /(?:^|\n)\s*[*_]*(?:final\s+answer|correct\s+answer|answer)[*_]*\s*:\s*([^\n]+)/giu,
+    ),
+  ];
   const marked = terminalMarkers.length
     ? resolveExact(terminalMarkers[terminalMarkers.length - 1]![1]!)
     : undefined;
