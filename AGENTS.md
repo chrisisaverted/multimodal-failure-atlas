@@ -42,3 +42,6 @@ Before designing or running paid multimodal failure searches, read
   control denominator and downgrade the mechanism claim instead of discarding or overexplaining it.
 - Evaluation plan conditions may be interleaved. Select shards by manifest condition, candidate ID, and
   route—not by assuming positional offsets correspond to native or control blocks.
+- Audit difficulty metadata against every native case. Publish answer-bearing count variation as a
+  disclosed stratum, test fixed-structure redesigns for ordinal shortcuts, and rank cross-model hardness
+  by the easiest route rather than a pooled average.

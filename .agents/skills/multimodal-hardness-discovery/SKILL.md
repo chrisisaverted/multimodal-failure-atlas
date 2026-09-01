@@ -42,6 +42,13 @@ a difficulty variable: adjacent balanced numeric options test exactness, while w
 may reward approximate magnitude. Never increase nominal difficulty by making evidence ambiguous or
 human-illegible.
 
+Audit whether the displayed difficulty coordinate is accidentally an answer-bearing variable. When an
+exact-count task must vary the count to balance labels, publish the tested values as an answer-balanced
+stratum rather than pretending every case used the first scalar value. A proposed fixed-structure repair
+must also be checked for ordinal shortcuts: if the four panels contain exactly the four queried counts,
+the lowest and highest questions reduce to picking the visually smallest or largest panel. Inspect rendered
+artifacts before the first paid call, and balance target rank independently of answer position.
+
 Preserve every artifact, content hash, prompt, raw response, route, endpoint revision, scorer decision,
 and provider-reported cost. New evidence should refine this skill; do not generalize one route-specific
 failure into a universal rule.
@@ -68,3 +75,8 @@ new cell—not a new failure family. Maintain separate image and video cohorts b
 modality routes are not negative evidence. A completion count includes only frozen holdouts that pass
 the declared observed bar; report separately whether their Wilson interval also clears the bar and
 whether a human baseline has been measured.
+
+Rank admitted families conservatively by the easiest target route. Pooled accuracy is a secondary
+descriptor or tie-breaker only; it must never make a family appear hard because one route is unusually
+weak. When one route reaches the rejection threshold during a sequential screen, stop unneeded remaining
+requests and preserve the partial records.
