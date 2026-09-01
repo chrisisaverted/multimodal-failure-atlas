@@ -1,0 +1,29 @@
+{
+  "id": "enclosure-depth-screen-v1-low-reasoning-2026-09-01",
+  "resolvedAt": "2026-09-01",
+  "gateway": "OpenRouter",
+  "evaluationPlanId": "enclosure-depth-discovery-v1",
+  "evaluationPlanSha256": "5c0d6515c81b4a80f00eeef6d175f97b91d576b6f37880cd95f4acc8374df940",
+  "stage": "balanced-adjacent-enclosure-depth-screen",
+  "casesPerModel": 16,
+  "trials": 1,
+  "temperature": 0,
+  "maxOutputTokens": 8192,
+  "reasoning": { "effort": "low", "exclude": true },
+  "scorer": "terminal-option-v2",
+  "allowProviderFallbacks": false,
+  "dataCollection": "deny",
+  "campaignCostCeilingUsd": 8,
+  "models": [
+    {
+      "modelId": "google/gemini-3.7-flash",
+      "modelRevision": "google/gemini-3.7-flash-20260813",
+      "upstreamProvider": "Google AI Studio"
+    },
+    {
+      "modelId": "qwen/qwen3.8-max",
+      "modelRevision": "qwen/qwen3.8-max-20260803",
+      "upstreamProvider": "Alibaba"
+    }
+  ]
+}

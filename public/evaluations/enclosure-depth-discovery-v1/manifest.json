@@ -1,0 +1,505 @@
+{
+  "id": "enclosure-depth-discovery-v1",
+  "planSha256": "5c0d6515c81b4a80f00eeef6d175f97b91d576b6f37880cd95f4acc8374df940",
+  "generatorVersion": "enclosure-depth-v1",
+  "renderer": "enclosure-depth-svg-v1",
+  "fps": 0,
+  "cases": [
+    {
+      "candidateId": "ed-738c2b1a3950d1bc",
+      "cellId": "cell-307acd43045653fa",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Closed loops and visually similar open contour fragments share the same scene.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-depth",
+      "seed": 1100000,
+      "difficulty": 57,
+      "variant": 0,
+      "artifact": "public/evaluations/enclosure-depth-discovery-v1/ed-738c2b1a3950d1bc.png",
+      "mimeType": "image/png",
+      "question": "How many CLOSED boundaries must a path from the red dot cross to reach the outer margin?",
+      "answerOptions": [
+        "9",
+        "12",
+        "10",
+        "11"
+      ],
+      "expectedAnswer": "9",
+      "sha256": "e0992470f72e56a6ecfcdb0e71787f7c0d032a4fe051fd5d345f68e52faee1e5",
+      "parameters": {
+        "enclosingLoops": 9,
+        "openDecoys": 12,
+        "irregularity": 0.45,
+        "visualVariant": 20
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Distinguish complete closed boundaries from open contour fragments. Return exactly one allowed answer without explanation."
+    },
+    {
+      "candidateId": "ed-d982438b859459af",
+      "cellId": "cell-307acd43045653fa",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Closed loops and visually similar open contour fragments share the same scene.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-depth",
+      "seed": 1100001,
+      "difficulty": 62,
+      "variant": 1,
+      "artifact": "public/evaluations/enclosure-depth-discovery-v1/ed-d982438b859459af.png",
+      "mimeType": "image/png",
+      "question": "How many CLOSED boundaries must a path from the red dot cross to reach the outer margin?",
+      "answerOptions": [
+        "9",
+        "12",
+        "10",
+        "11"
+      ],
+      "expectedAnswer": "10",
+      "sha256": "6ad9e73d008662e62ff0f323419896fdd6b547b431d753ded651ea658718f436",
+      "parameters": {
+        "enclosingLoops": 10,
+        "openDecoys": 12,
+        "irregularity": 0.45,
+        "visualVariant": 21
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Distinguish complete closed boundaries from open contour fragments. Return exactly one allowed answer without explanation."
+    },
+    {
+      "candidateId": "ed-9d11b5cdde9d5475",
+      "cellId": "cell-307acd43045653fa",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Closed loops and visually similar open contour fragments share the same scene.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-depth",
+      "seed": 1100002,
+      "difficulty": 67,
+      "variant": 2,
+      "artifact": "public/evaluations/enclosure-depth-discovery-v1/ed-9d11b5cdde9d5475.png",
+      "mimeType": "image/png",
+      "question": "How many CLOSED boundaries must a path from the red dot cross to reach the outer margin?",
+      "answerOptions": [
+        "12",
+        "9",
+        "10",
+        "11"
+      ],
+      "expectedAnswer": "11",
+      "sha256": "3d9346b02309915c89ef033067158e585dde3d2563bb6e3716859cc51ebd4dc9",
+      "parameters": {
+        "enclosingLoops": 11,
+        "openDecoys": 12,
+        "irregularity": 0.45,
+        "visualVariant": 22
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Distinguish complete closed boundaries from open contour fragments. Return exactly one allowed answer without explanation."
+    },
+    {
+      "candidateId": "ed-9893e791cc7cc231",
+      "cellId": "cell-307acd43045653fa",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Closed loops and visually similar open contour fragments share the same scene.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-depth",
+      "seed": 1100003,
+      "difficulty": 72,
+      "variant": 3,
+      "artifact": "public/evaluations/enclosure-depth-discovery-v1/ed-9893e791cc7cc231.png",
+      "mimeType": "image/png",
+      "question": "How many CLOSED boundaries must a path from the red dot cross to reach the outer margin?",
+      "answerOptions": [
+        "9",
+        "10",
+        "12",
+        "11"
+      ],
+      "expectedAnswer": "12",
+      "sha256": "494c12109cb36064519742a7c021adfca38844de4b66fb508b20b6c974e2f99f",
+      "parameters": {
+        "enclosingLoops": 12,
+        "openDecoys": 12,
+        "irregularity": 0.45,
+        "visualVariant": 23
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Distinguish complete closed boundaries from open contour fragments. Return exactly one allowed answer without explanation."
+    },
+    {
+      "candidateId": "ed-37e9c82a79b1e6aa",
+      "cellId": "cell-307acd43045653fa",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Closed loops and visually similar open contour fragments share the same scene.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-depth",
+      "seed": 1100004,
+      "difficulty": 57,
+      "variant": 4,
+      "artifact": "public/evaluations/enclosure-depth-discovery-v1/ed-37e9c82a79b1e6aa.png",
+      "mimeType": "image/png",
+      "question": "How many CLOSED boundaries must a path from the red dot cross to reach the outer margin?",
+      "answerOptions": [
+        "9",
+        "10",
+        "12",
+        "11"
+      ],
+      "expectedAnswer": "9",
+      "sha256": "146a6237669abe3f3d98770fa103abfcd55e9e2f9c3f82722379c052fedd42af",
+      "parameters": {
+        "enclosingLoops": 9,
+        "openDecoys": 12,
+        "irregularity": 0.45,
+        "visualVariant": 24
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Distinguish complete closed boundaries from open contour fragments. Return exactly one allowed answer without explanation."
+    },
+    {
+      "candidateId": "ed-ab950235ae6374d0",
+      "cellId": "cell-307acd43045653fa",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Closed loops and visually similar open contour fragments share the same scene.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-depth",
+      "seed": 1100005,
+      "difficulty": 62,
+      "variant": 5,
+      "artifact": "public/evaluations/enclosure-depth-discovery-v1/ed-ab950235ae6374d0.png",
+      "mimeType": "image/png",
+      "question": "How many CLOSED boundaries must a path from the red dot cross to reach the outer margin?",
+      "answerOptions": [
+        "10",
+        "9",
+        "12",
+        "11"
+      ],
+      "expectedAnswer": "10",
+      "sha256": "1cecd61cdbbcc3ce53e30604d04d49f1a32218d0ec5ba54032db92efa41a8936",
+      "parameters": {
+        "enclosingLoops": 10,
+        "openDecoys": 12,
+        "irregularity": 0.45,
+        "visualVariant": 25
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Distinguish complete closed boundaries from open contour fragments. Return exactly one allowed answer without explanation."
+    },
+    {
+      "candidateId": "ed-98f9bdd4b0b3f5f3",
+      "cellId": "cell-307acd43045653fa",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Closed loops and visually similar open contour fragments share the same scene.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-depth",
+      "seed": 1100006,
+      "difficulty": 67,
+      "variant": 6,
+      "artifact": "public/evaluations/enclosure-depth-discovery-v1/ed-98f9bdd4b0b3f5f3.png",
+      "mimeType": "image/png",
+      "question": "How many CLOSED boundaries must a path from the red dot cross to reach the outer margin?",
+      "answerOptions": [
+        "10",
+        "9",
+        "12",
+        "11"
+      ],
+      "expectedAnswer": "11",
+      "sha256": "43ca8ef324339a8165304eaef115b4e6ac152b21f8726674cc6dc5761c7d42c5",
+      "parameters": {
+        "enclosingLoops": 11,
+        "openDecoys": 12,
+        "irregularity": 0.45,
+        "visualVariant": 26
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Distinguish complete closed boundaries from open contour fragments. Return exactly one allowed answer without explanation."
+    },
+    {
+      "candidateId": "ed-62e315466fc77209",
+      "cellId": "cell-307acd43045653fa",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Closed loops and visually similar open contour fragments share the same scene.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-depth",
+      "seed": 1100007,
+      "difficulty": 72,
+      "variant": 7,
+      "artifact": "public/evaluations/enclosure-depth-discovery-v1/ed-62e315466fc77209.png",
+      "mimeType": "image/png",
+      "question": "How many CLOSED boundaries must a path from the red dot cross to reach the outer margin?",
+      "answerOptions": [
+        "12",
+        "10",
+        "9",
+        "11"
+      ],
+      "expectedAnswer": "12",
+      "sha256": "441879a5cfa85c6cfa824dbc9ee98e57e2a211ebace7c5221d8a07b7e880b194",
+      "parameters": {
+        "enclosingLoops": 12,
+        "openDecoys": 12,
+        "irregularity": 0.45,
+        "visualVariant": 27
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Distinguish complete closed boundaries from open contour fragments. Return exactly one allowed answer without explanation."
+    },
+    {
+      "candidateId": "ed-2ce728cb1fe880f3",
+      "cellId": "cell-51d965ab25f2f700",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Closed loops and visually similar open contour fragments share the same scene.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-depth",
+      "seed": 1100008,
+      "difficulty": 85,
+      "variant": 8,
+      "artifact": "public/evaluations/enclosure-depth-discovery-v1/ed-2ce728cb1fe880f3.png",
+      "mimeType": "image/png",
+      "question": "How many CLOSED boundaries must a path from the red dot cross to reach the outer margin?",
+      "answerOptions": [
+        "14",
+        "16",
+        "13",
+        "15"
+      ],
+      "expectedAnswer": "13",
+      "sha256": "3f0ef51082025196851489c3f3ac6595328cbbf8f9e45cf2c3fe98bde9005270",
+      "parameters": {
+        "enclosingLoops": 13,
+        "openDecoys": 20,
+        "irregularity": 0.65,
+        "visualVariant": 28
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Distinguish complete closed boundaries from open contour fragments. Return exactly one allowed answer without explanation."
+    },
+    {
+      "candidateId": "ed-0e1ef80d41fee0a6",
+      "cellId": "cell-51d965ab25f2f700",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Closed loops and visually similar open contour fragments share the same scene.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-depth",
+      "seed": 1100009,
+      "difficulty": 90,
+      "variant": 9,
+      "artifact": "public/evaluations/enclosure-depth-discovery-v1/ed-0e1ef80d41fee0a6.png",
+      "mimeType": "image/png",
+      "question": "How many CLOSED boundaries must a path from the red dot cross to reach the outer margin?",
+      "answerOptions": [
+        "14",
+        "16",
+        "13",
+        "15"
+      ],
+      "expectedAnswer": "14",
+      "sha256": "7b3b06ca185d6707a3d78771b04429ccd8883142f8e32b99831c75e301580c69",
+      "parameters": {
+        "enclosingLoops": 14,
+        "openDecoys": 20,
+        "irregularity": 0.65,
+        "visualVariant": 29
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Distinguish complete closed boundaries from open contour fragments. Return exactly one allowed answer without explanation."
+    },
+    {
+      "candidateId": "ed-a0452e04e46fc1cd",
+      "cellId": "cell-51d965ab25f2f700",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Closed loops and visually similar open contour fragments share the same scene.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-depth",
+      "seed": 1100010,
+      "difficulty": 95,
+      "variant": 10,
+      "artifact": "public/evaluations/enclosure-depth-discovery-v1/ed-a0452e04e46fc1cd.png",
+      "mimeType": "image/png",
+      "question": "How many CLOSED boundaries must a path from the red dot cross to reach the outer margin?",
+      "answerOptions": [
+        "16",
+        "14",
+        "13",
+        "15"
+      ],
+      "expectedAnswer": "15",
+      "sha256": "38deb4bc2097e4440c3b3ce529bb4abd98ace9ae565a53767923c9dd6991b8b5",
+      "parameters": {
+        "enclosingLoops": 15,
+        "openDecoys": 20,
+        "irregularity": 0.65,
+        "visualVariant": 30
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Distinguish complete closed boundaries from open contour fragments. Return exactly one allowed answer without explanation."
+    },
+    {
+      "candidateId": "ed-0aaa6c6f947f9f9c",
+      "cellId": "cell-51d965ab25f2f700",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Closed loops and visually similar open contour fragments share the same scene.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-depth",
+      "seed": 1100011,
+      "difficulty": 100,
+      "variant": 11,
+      "artifact": "public/evaluations/enclosure-depth-discovery-v1/ed-0aaa6c6f947f9f9c.png",
+      "mimeType": "image/png",
+      "question": "How many CLOSED boundaries must a path from the red dot cross to reach the outer margin?",
+      "answerOptions": [
+        "16",
+        "13",
+        "14",
+        "15"
+      ],
+      "expectedAnswer": "16",
+      "sha256": "b3cea77004ae7a9bd2b6db1b01a56d2dd5458874a292ea9d537ab2eecfeecd1f",
+      "parameters": {
+        "enclosingLoops": 16,
+        "openDecoys": 20,
+        "irregularity": 0.65,
+        "visualVariant": 31
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Distinguish complete closed boundaries from open contour fragments. Return exactly one allowed answer without explanation."
+    },
+    {
+      "candidateId": "ed-1dc22e28d00c440f",
+      "cellId": "cell-51d965ab25f2f700",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Closed loops and visually similar open contour fragments share the same scene.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-depth",
+      "seed": 1100012,
+      "difficulty": 85,
+      "variant": 12,
+      "artifact": "public/evaluations/enclosure-depth-discovery-v1/ed-1dc22e28d00c440f.png",
+      "mimeType": "image/png",
+      "question": "How many CLOSED boundaries must a path from the red dot cross to reach the outer margin?",
+      "answerOptions": [
+        "16",
+        "13",
+        "14",
+        "15"
+      ],
+      "expectedAnswer": "13",
+      "sha256": "0db06629c2e2f6739b5f9bff90d9b8b4b59f7b06c8671ff77947d4f6fdc5cbbd",
+      "parameters": {
+        "enclosingLoops": 13,
+        "openDecoys": 20,
+        "irregularity": 0.65,
+        "visualVariant": 32
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Distinguish complete closed boundaries from open contour fragments. Return exactly one allowed answer without explanation."
+    },
+    {
+      "candidateId": "ed-6024b99a7fac771a",
+      "cellId": "cell-51d965ab25f2f700",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Closed loops and visually similar open contour fragments share the same scene.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-depth",
+      "seed": 1100013,
+      "difficulty": 90,
+      "variant": 13,
+      "artifact": "public/evaluations/enclosure-depth-discovery-v1/ed-6024b99a7fac771a.png",
+      "mimeType": "image/png",
+      "question": "How many CLOSED boundaries must a path from the red dot cross to reach the outer margin?",
+      "answerOptions": [
+        "13",
+        "16",
+        "14",
+        "15"
+      ],
+      "expectedAnswer": "14",
+      "sha256": "7bed97492da32bf0ef6e0e0fc026b58c7b89af7b0ae52e49c40bc8ce3de49414",
+      "parameters": {
+        "enclosingLoops": 14,
+        "openDecoys": 20,
+        "irregularity": 0.65,
+        "visualVariant": 33
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Distinguish complete closed boundaries from open contour fragments. Return exactly one allowed answer without explanation."
+    },
+    {
+      "candidateId": "ed-aff1035e50dbe0f5",
+      "cellId": "cell-51d965ab25f2f700",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Closed loops and visually similar open contour fragments share the same scene.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-depth",
+      "seed": 1100014,
+      "difficulty": 95,
+      "variant": 14,
+      "artifact": "public/evaluations/enclosure-depth-discovery-v1/ed-aff1035e50dbe0f5.png",
+      "mimeType": "image/png",
+      "question": "How many CLOSED boundaries must a path from the red dot cross to reach the outer margin?",
+      "answerOptions": [
+        "13",
+        "14",
+        "16",
+        "15"
+      ],
+      "expectedAnswer": "15",
+      "sha256": "7d6b155d1af996fb43379f21027f7272f95eefa333129c3cb8118e1d7c2fa6d6",
+      "parameters": {
+        "enclosingLoops": 15,
+        "openDecoys": 20,
+        "irregularity": 0.65,
+        "visualVariant": 34
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Distinguish complete closed boundaries from open contour fragments. Return exactly one allowed answer without explanation."
+    },
+    {
+      "candidateId": "ed-1cf6fde12eebe352",
+      "cellId": "cell-51d965ab25f2f700",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Closed loops and visually similar open contour fragments share the same scene.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-depth",
+      "seed": 1100015,
+      "difficulty": 100,
+      "variant": 15,
+      "artifact": "public/evaluations/enclosure-depth-discovery-v1/ed-1cf6fde12eebe352.png",
+      "mimeType": "image/png",
+      "question": "How many CLOSED boundaries must a path from the red dot cross to reach the outer margin?",
+      "answerOptions": [
+        "14",
+        "13",
+        "16",
+        "15"
+      ],
+      "expectedAnswer": "16",
+      "sha256": "1f9f8ae331ba8215e9042e5a6e913ab6c3c97f49ba53912f28a507e575448b4f",
+      "parameters": {
+        "enclosingLoops": 16,
+        "openDecoys": 20,
+        "irregularity": 0.65,
+        "visualVariant": 35
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Distinguish complete closed boundaries from open contour fragments. Return exactly one allowed answer without explanation."
+    }
+  ]
+}

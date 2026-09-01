@@ -1,0 +1,280 @@
+{
+  "id": "enclosure-depth-discovery-v1",
+  "generatorVersion": "enclosure-depth-v1",
+  "status": "discovery-only",
+  "hypothesis": "Vision-language models approximate contour numerosity without reliably distinguishing topologically closed enclosing loops from open fragments.",
+  "candidates": [
+    {
+      "id": "ed-738c2b1a3950d1bc",
+      "cellId": "cell-307acd43045653fa",
+      "split": "discovery",
+      "seed": 1100000,
+      "failureModeId": "topological-enclosure-depth",
+      "question": "How many CLOSED boundaries must a path from the red dot cross to reach the outer margin?",
+      "answerOptions": ["9", "12", "10", "11"],
+      "expectedAnswer": "9",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "enclosingLoops": 9,
+        "openDecoys": 12,
+        "irregularity": 0.45,
+        "visualVariant": 20
+      }
+    },
+    {
+      "id": "ed-d982438b859459af",
+      "cellId": "cell-307acd43045653fa",
+      "split": "discovery",
+      "seed": 1100001,
+      "failureModeId": "topological-enclosure-depth",
+      "question": "How many CLOSED boundaries must a path from the red dot cross to reach the outer margin?",
+      "answerOptions": ["9", "12", "10", "11"],
+      "expectedAnswer": "10",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "enclosingLoops": 10,
+        "openDecoys": 12,
+        "irregularity": 0.45,
+        "visualVariant": 21
+      }
+    },
+    {
+      "id": "ed-9d11b5cdde9d5475",
+      "cellId": "cell-307acd43045653fa",
+      "split": "discovery",
+      "seed": 1100002,
+      "failureModeId": "topological-enclosure-depth",
+      "question": "How many CLOSED boundaries must a path from the red dot cross to reach the outer margin?",
+      "answerOptions": ["12", "9", "10", "11"],
+      "expectedAnswer": "11",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "enclosingLoops": 11,
+        "openDecoys": 12,
+        "irregularity": 0.45,
+        "visualVariant": 22
+      }
+    },
+    {
+      "id": "ed-9893e791cc7cc231",
+      "cellId": "cell-307acd43045653fa",
+      "split": "discovery",
+      "seed": 1100003,
+      "failureModeId": "topological-enclosure-depth",
+      "question": "How many CLOSED boundaries must a path from the red dot cross to reach the outer margin?",
+      "answerOptions": ["9", "10", "12", "11"],
+      "expectedAnswer": "12",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "enclosingLoops": 12,
+        "openDecoys": 12,
+        "irregularity": 0.45,
+        "visualVariant": 23
+      }
+    },
+    {
+      "id": "ed-37e9c82a79b1e6aa",
+      "cellId": "cell-307acd43045653fa",
+      "split": "discovery",
+      "seed": 1100004,
+      "failureModeId": "topological-enclosure-depth",
+      "question": "How many CLOSED boundaries must a path from the red dot cross to reach the outer margin?",
+      "answerOptions": ["9", "10", "12", "11"],
+      "expectedAnswer": "9",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "enclosingLoops": 9,
+        "openDecoys": 12,
+        "irregularity": 0.45,
+        "visualVariant": 24
+      }
+    },
+    {
+      "id": "ed-ab950235ae6374d0",
+      "cellId": "cell-307acd43045653fa",
+      "split": "discovery",
+      "seed": 1100005,
+      "failureModeId": "topological-enclosure-depth",
+      "question": "How many CLOSED boundaries must a path from the red dot cross to reach the outer margin?",
+      "answerOptions": ["10", "9", "12", "11"],
+      "expectedAnswer": "10",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "enclosingLoops": 10,
+        "openDecoys": 12,
+        "irregularity": 0.45,
+        "visualVariant": 25
+      }
+    },
+    {
+      "id": "ed-98f9bdd4b0b3f5f3",
+      "cellId": "cell-307acd43045653fa",
+      "split": "discovery",
+      "seed": 1100006,
+      "failureModeId": "topological-enclosure-depth",
+      "question": "How many CLOSED boundaries must a path from the red dot cross to reach the outer margin?",
+      "answerOptions": ["10", "9", "12", "11"],
+      "expectedAnswer": "11",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "enclosingLoops": 11,
+        "openDecoys": 12,
+        "irregularity": 0.45,
+        "visualVariant": 26
+      }
+    },
+    {
+      "id": "ed-62e315466fc77209",
+      "cellId": "cell-307acd43045653fa",
+      "split": "discovery",
+      "seed": 1100007,
+      "failureModeId": "topological-enclosure-depth",
+      "question": "How many CLOSED boundaries must a path from the red dot cross to reach the outer margin?",
+      "answerOptions": ["12", "10", "9", "11"],
+      "expectedAnswer": "12",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "enclosingLoops": 12,
+        "openDecoys": 12,
+        "irregularity": 0.45,
+        "visualVariant": 27
+      }
+    },
+    {
+      "id": "ed-2ce728cb1fe880f3",
+      "cellId": "cell-51d965ab25f2f700",
+      "split": "discovery",
+      "seed": 1100008,
+      "failureModeId": "topological-enclosure-depth",
+      "question": "How many CLOSED boundaries must a path from the red dot cross to reach the outer margin?",
+      "answerOptions": ["14", "16", "13", "15"],
+      "expectedAnswer": "13",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "enclosingLoops": 13,
+        "openDecoys": 20,
+        "irregularity": 0.65,
+        "visualVariant": 28
+      }
+    },
+    {
+      "id": "ed-0e1ef80d41fee0a6",
+      "cellId": "cell-51d965ab25f2f700",
+      "split": "discovery",
+      "seed": 1100009,
+      "failureModeId": "topological-enclosure-depth",
+      "question": "How many CLOSED boundaries must a path from the red dot cross to reach the outer margin?",
+      "answerOptions": ["14", "16", "13", "15"],
+      "expectedAnswer": "14",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "enclosingLoops": 14,
+        "openDecoys": 20,
+        "irregularity": 0.65,
+        "visualVariant": 29
+      }
+    },
+    {
+      "id": "ed-a0452e04e46fc1cd",
+      "cellId": "cell-51d965ab25f2f700",
+      "split": "discovery",
+      "seed": 1100010,
+      "failureModeId": "topological-enclosure-depth",
+      "question": "How many CLOSED boundaries must a path from the red dot cross to reach the outer margin?",
+      "answerOptions": ["16", "14", "13", "15"],
+      "expectedAnswer": "15",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "enclosingLoops": 15,
+        "openDecoys": 20,
+        "irregularity": 0.65,
+        "visualVariant": 30
+      }
+    },
+    {
+      "id": "ed-0aaa6c6f947f9f9c",
+      "cellId": "cell-51d965ab25f2f700",
+      "split": "discovery",
+      "seed": 1100011,
+      "failureModeId": "topological-enclosure-depth",
+      "question": "How many CLOSED boundaries must a path from the red dot cross to reach the outer margin?",
+      "answerOptions": ["16", "13", "14", "15"],
+      "expectedAnswer": "16",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "enclosingLoops": 16,
+        "openDecoys": 20,
+        "irregularity": 0.65,
+        "visualVariant": 31
+      }
+    },
+    {
+      "id": "ed-1dc22e28d00c440f",
+      "cellId": "cell-51d965ab25f2f700",
+      "split": "discovery",
+      "seed": 1100012,
+      "failureModeId": "topological-enclosure-depth",
+      "question": "How many CLOSED boundaries must a path from the red dot cross to reach the outer margin?",
+      "answerOptions": ["16", "13", "14", "15"],
+      "expectedAnswer": "13",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "enclosingLoops": 13,
+        "openDecoys": 20,
+        "irregularity": 0.65,
+        "visualVariant": 32
+      }
+    },
+    {
+      "id": "ed-6024b99a7fac771a",
+      "cellId": "cell-51d965ab25f2f700",
+      "split": "discovery",
+      "seed": 1100013,
+      "failureModeId": "topological-enclosure-depth",
+      "question": "How many CLOSED boundaries must a path from the red dot cross to reach the outer margin?",
+      "answerOptions": ["13", "16", "14", "15"],
+      "expectedAnswer": "14",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "enclosingLoops": 14,
+        "openDecoys": 20,
+        "irregularity": 0.65,
+        "visualVariant": 33
+      }
+    },
+    {
+      "id": "ed-aff1035e50dbe0f5",
+      "cellId": "cell-51d965ab25f2f700",
+      "split": "discovery",
+      "seed": 1100014,
+      "failureModeId": "topological-enclosure-depth",
+      "question": "How many CLOSED boundaries must a path from the red dot cross to reach the outer margin?",
+      "answerOptions": ["13", "14", "16", "15"],
+      "expectedAnswer": "15",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "enclosingLoops": 15,
+        "openDecoys": 20,
+        "irregularity": 0.65,
+        "visualVariant": 34
+      }
+    },
+    {
+      "id": "ed-1cf6fde12eebe352",
+      "cellId": "cell-51d965ab25f2f700",
+      "split": "discovery",
+      "seed": 1100015,
+      "failureModeId": "topological-enclosure-depth",
+      "question": "How many CLOSED boundaries must a path from the red dot cross to reach the outer margin?",
+      "answerOptions": ["14", "13", "16", "15"],
+      "expectedAnswer": "16",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "enclosingLoops": 16,
+        "openDecoys": 20,
+        "irregularity": 0.65,
+        "visualVariant": 35
+      }
+    }
+  ]
+}

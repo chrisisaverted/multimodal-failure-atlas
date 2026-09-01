@@ -37,41 +37,118 @@ import {
   crossingCountAnswers,
   precisionCrossingCountAnswers,
 } from "./wire-crossing-count";
+import { createEnclosureDepthDiscoveryGrid, renderEnclosureDepthSvg } from "./enclosure-depth";
+import {
+  correspondenceAnswers,
+  createRotationCorrespondenceDiscoveryGrid,
+  renderRotationCorrespondenceSvg,
+} from "./rotation-correspondence";
+import {
+  changeQuadrants,
+  createChangeLocalizationDiscoveryGrid,
+  renderChangeLocalizationSvg,
+} from "./change-localization";
 
 describe("adaptive multimodal discovery", () => {
+  it("balances dense change locations across all four quadrants", () => {
+    const candidates = createChangeLocalizationDiscoveryGrid();
+    expect(candidates).toHaveLength(16);
+    for (const cellId of new Set(candidates.map((candidate) => candidate.cellId))) {
+      expect(
+        candidates
+          .filter((candidate) => candidate.cellId === cellId)
+          .map((candidate) => candidate.expectedAnswer)
+          .sort(),
+      ).toEqual([...changeQuadrants, ...changeQuadrants].sort());
+    }
+    expect(renderChangeLocalizationSvg(candidates[0]!)).toBe(renderChangeLocalizationSvg(candidates[0]!));
+    expect(renderChangeLocalizationSvg(candidates[0]!, true)).toContain('stroke="#e23e31"');
+  });
+
+  it("balances exact rotation correspondence across candidate locations", () => {
+    const candidates = createRotationCorrespondenceDiscoveryGrid();
+    expect(candidates).toHaveLength(16);
+    for (const cellId of new Set(candidates.map((candidate) => candidate.cellId))) {
+      expect(
+        candidates
+          .filter((candidate) => candidate.cellId === cellId)
+          .map((candidate) => candidate.expectedAnswer)
+          .sort(),
+      ).toEqual([...correspondenceAnswers, ...correspondenceAnswers].sort());
+    }
+    expect(renderRotationCorrespondenceSvg(candidates[0]!)).toBe(
+      renderRotationCorrespondenceSvg(candidates[0]!),
+    );
+    expect(renderRotationCorrespondenceSvg(candidates[0]!, true)).toContain("#2466cc");
+  });
+
+  it("balances enclosure-depth labels within each difficulty cell", () => {
+    const candidates = createEnclosureDepthDiscoveryGrid();
+    expect(candidates).toHaveLength(16);
+    for (const cellId of new Set(candidates.map((candidate) => candidate.cellId))) {
+      const cell = candidates.filter((candidate) => candidate.cellId === cellId);
+      const frequencies = [...new Set(cell.map((candidate) => candidate.expectedAnswer))].map(
+        (answer) => cell.filter((candidate) => candidate.expectedAnswer === answer).length,
+      );
+      expect(frequencies).toEqual([2, 2, 2, 2]);
+    }
+    const first = candidates[0]!;
+    expect(renderEnclosureDepthSvg(first)).toBe(renderEnclosureDepthSvg(first));
+    expect(renderEnclosureDepthSvg(first, true)).toContain(">1</text>");
+  });
+
   it("constructs exact balanced wire-crossing counts and a disjoint holdout", () => {
     const candidates = createWireCrossingCountDiscoveryGrid();
     expect(candidates).toHaveLength(12);
     for (const cellId of new Set(candidates.map((candidate) => candidate.cellId))) {
-      expect(candidates.filter((candidate) => candidate.cellId === cellId).map((candidate) => candidate.expectedAnswer).sort()).toEqual([...crossingCountAnswers].sort());
+      expect(
+        candidates
+          .filter((candidate) => candidate.cellId === cellId)
+          .map((candidate) => candidate.expectedAnswer)
+          .sort(),
+      ).toEqual([...crossingCountAnswers].sort());
     }
-    for (const candidate of candidates) expect(countTargetCrossings(candidate)).toBe(candidate.parameters.targetCrossings);
+    for (const candidate of candidates)
+      expect(countTargetCrossings(candidate)).toBe(candidate.parameters.targetCrossings);
     const holdout = createWireCrossingCountHoldout(candidates[4]!);
     expect(holdout).toHaveLength(16);
     expect(holdout.every((candidate) => candidate.seed >= 940_000)).toBe(true);
-    for (const answer of crossingCountAnswers) expect(holdout.filter((candidate) => candidate.expectedAnswer === answer)).toHaveLength(4);
+    for (const answer of crossingCountAnswers)
+      expect(holdout.filter((candidate) => candidate.expectedAnswer === answer)).toHaveLength(4);
   });
 
   it("uses adjacent exact counts in every precision-search cell", () => {
     const candidates = createPrecisionWireCrossingCountDiscoveryGrid();
     expect(candidates).toHaveLength(12);
     for (const cellId of new Set(candidates.map((candidate) => candidate.cellId))) {
-      expect(candidates.filter((candidate) => candidate.cellId === cellId).map((candidate) => candidate.expectedAnswer).sort()).toEqual([...precisionCrossingCountAnswers].sort());
+      expect(
+        candidates
+          .filter((candidate) => candidate.cellId === cellId)
+          .map((candidate) => candidate.expectedAnswer)
+          .sort(),
+      ).toEqual([...precisionCrossingCountAnswers].sort());
     }
-    for (const candidate of candidates) expect(countTargetCrossings(candidate)).toBe(candidate.parameters.targetCrossings);
+    for (const candidate of candidates)
+      expect(countTargetCrossings(candidate)).toBe(candidate.parameters.targetCrossings);
     const holdout = createPrecisionWireCrossingCountHoldout(candidates[4]!);
     expect(holdout).toHaveLength(16);
     expect(holdout.every((candidate) => candidate.seed >= 950_000)).toBe(true);
-    for (const answer of precisionCrossingCountAnswers) expect(holdout.filter((candidate) => candidate.expectedAnswer === answer)).toHaveLength(4);
-    for (const candidate of holdout) expect(countTargetCrossings(candidate)).toBe(candidate.parameters.targetCrossings);
+    for (const answer of precisionCrossingCountAnswers)
+      expect(holdout.filter((candidate) => candidate.expectedAnswer === answer)).toHaveLength(4);
+    for (const candidate of holdout)
+      expect(countTargetCrossings(candidate)).toBe(candidate.parameters.targetCrossings);
   });
-
 
   it("balances wire endpoints and independently traces every exact answer", () => {
     const candidates = createWireTracingDiscoveryGrid();
     expect(candidates).toHaveLength(16);
     for (const cellId of new Set(candidates.map((candidate) => candidate.cellId))) {
-      expect(candidates.filter((candidate) => candidate.cellId === cellId).map((candidate) => candidate.expectedAnswer).sort()).toEqual([...wireAnswers].sort());
+      expect(
+        candidates
+          .filter((candidate) => candidate.cellId === cellId)
+          .map((candidate) => candidate.expectedAnswer)
+          .sort(),
+      ).toEqual([...wireAnswers].sort());
     }
     for (const candidate of candidates) {
       const endpoint = traceWireEndpoints(candidate)[candidate.parameters.sourceWire]!;
@@ -85,8 +162,11 @@ describe("adaptive multimodal discovery", () => {
     const holdout = createWireTracingHoldout(representative);
     expect(holdout).toHaveLength(16);
     expect(holdout.every((candidate) => candidate.seed >= 930_000)).toBe(true);
-    expect(holdout.every((candidate) => candidate.parameters.crossings === representative.parameters.crossings)).toBe(true);
-    for (const answer of wireAnswers) expect(holdout.filter((candidate) => candidate.expectedAnswer === answer)).toHaveLength(4);
+    expect(
+      holdout.every((candidate) => candidate.parameters.crossings === representative.parameters.crossings),
+    ).toBe(true);
+    for (const answer of wireAnswers)
+      expect(holdout.filter((candidate) => candidate.expectedAnswer === answer)).toHaveLength(4);
   });
 
   it("builds balanced compositional-counting cells with exact deterministic ground truth", () => {
@@ -94,12 +174,18 @@ describe("adaptive multimodal discovery", () => {
     expect(candidates).toHaveLength(24);
     expect(new Set(candidates.map((candidate) => candidate.cellId))).toHaveLength(6);
     for (const cellId of new Set(candidates.map((candidate) => candidate.cellId))) {
-      expect(candidates.filter((candidate) => candidate.cellId === cellId).map((candidate) => candidate.expectedAnswer).sort()).toEqual([...compositionalAnswers].sort());
+      expect(
+        candidates
+          .filter((candidate) => candidate.cellId === cellId)
+          .map((candidate) => candidate.expectedAnswer)
+          .sort(),
+      ).toEqual([...compositionalAnswers].sort());
     }
     for (const candidate of candidates) {
       const p = candidate.parameters;
       const matches = generateGlyphs(candidate).filter(
-        (glyph) => glyph.color === p.targetColor && glyph.shape === p.targetShape && glyph.fill === p.targetFill,
+        (glyph) =>
+          glyph.color === p.targetColor && glyph.shape === p.targetShape && glyph.fill === p.targetFill,
       );
       expect(matches).toHaveLength(p.targetCount);
       expect(generateGlyphs(candidate)).toEqual(generateGlyphs(candidate));

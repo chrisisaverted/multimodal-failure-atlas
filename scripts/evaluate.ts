@@ -18,7 +18,16 @@ const planSchema = z.object({
   cases: z.array(
     z.object({
       failureModeId: z.string().min(1),
-      generator: evaluationRequestSchema.shape.generator,
+      generator: z.enum([
+        "small-object",
+        "patch-phase",
+        "attribute-binding",
+        "numerosity-density",
+        "brief-event",
+        "event-order",
+        "identity-occlusion",
+        "event-counting",
+      ]),
       seed: z.number().int().nonnegative(),
       difficulty: z.number().min(0).max(100),
       variant: z.number().int().nonnegative(),

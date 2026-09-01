@@ -1,0 +1,505 @@
+{
+  "id": "rotation-correspondence-discovery-v1",
+  "planSha256": "1ee1e6a1d776ddb2a8aa162d6082648a939b27b8ab8d33c08f851d72ab940961",
+  "generatorVersion": "rotation-correspondence-v1",
+  "renderer": "rotation-correspondence-svg-v1",
+  "fps": 0,
+  "cases": [
+    {
+      "candidateId": "rc-ab910e59e72abd12",
+      "cellId": "cell-950947490e3b7ab6",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "One exact rotation match appears among reflection and vertex-perturbation distractors.",
+      "failureModeId": "rotation-invariant-visual-correspondence",
+      "generator": "rotation-correspondence",
+      "seed": 1300000,
+      "difficulty": 46,
+      "variant": 0,
+      "artifact": "public/evaluations/rotation-correspondence-discovery-v1/rc-ab910e59e72abd12.png",
+      "mimeType": "image/png",
+      "question": "Which candidate is EXACTLY the same connected shape as the reference after rotation only (no reflection)?",
+      "answerOptions": [
+        "B",
+        "D",
+        "C",
+        "A"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "ebcfac2cb10049682e1936c8db2ae5c7ad3df68b3d2ce7211b4bc46002c83ec7",
+      "parameters": {
+        "vertices": 9,
+        "perturbation": 0.15,
+        "correctSlot": 0,
+        "visualVariant": 29
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Compare exact shape geometry under rotation only. Return exactly one allowed answer without explanation."
+    },
+    {
+      "candidateId": "rc-a08c6c9d55c990c7",
+      "cellId": "cell-950947490e3b7ab6",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "One exact rotation match appears among reflection and vertex-perturbation distractors.",
+      "failureModeId": "rotation-invariant-visual-correspondence",
+      "generator": "rotation-correspondence",
+      "seed": 1300001,
+      "difficulty": 46,
+      "variant": 1,
+      "artifact": "public/evaluations/rotation-correspondence-discovery-v1/rc-a08c6c9d55c990c7.png",
+      "mimeType": "image/png",
+      "question": "Which candidate is EXACTLY the same connected shape as the reference after rotation only (no reflection)?",
+      "answerOptions": [
+        "D",
+        "B",
+        "C",
+        "A"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "d4251a8976e1a492cad4a0e76cab753f6fa126eb0a1913bb975c5ea8fdc64f13",
+      "parameters": {
+        "vertices": 9,
+        "perturbation": 0.15,
+        "correctSlot": 1,
+        "visualVariant": 30
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Compare exact shape geometry under rotation only. Return exactly one allowed answer without explanation."
+    },
+    {
+      "candidateId": "rc-634dca6c7a191d15",
+      "cellId": "cell-950947490e3b7ab6",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "One exact rotation match appears among reflection and vertex-perturbation distractors.",
+      "failureModeId": "rotation-invariant-visual-correspondence",
+      "generator": "rotation-correspondence",
+      "seed": 1300002,
+      "difficulty": 46,
+      "variant": 2,
+      "artifact": "public/evaluations/rotation-correspondence-discovery-v1/rc-634dca6c7a191d15.png",
+      "mimeType": "image/png",
+      "question": "Which candidate is EXACTLY the same connected shape as the reference after rotation only (no reflection)?",
+      "answerOptions": [
+        "D",
+        "B",
+        "C",
+        "A"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "87bc436807eb9fa1aab93294d21c8782fe887a336673017b98e78b3963a35beb",
+      "parameters": {
+        "vertices": 9,
+        "perturbation": 0.15,
+        "correctSlot": 2,
+        "visualVariant": 31
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Compare exact shape geometry under rotation only. Return exactly one allowed answer without explanation."
+    },
+    {
+      "candidateId": "rc-509b18e23e4265ed",
+      "cellId": "cell-950947490e3b7ab6",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "One exact rotation match appears among reflection and vertex-perturbation distractors.",
+      "failureModeId": "rotation-invariant-visual-correspondence",
+      "generator": "rotation-correspondence",
+      "seed": 1300003,
+      "difficulty": 46,
+      "variant": 3,
+      "artifact": "public/evaluations/rotation-correspondence-discovery-v1/rc-509b18e23e4265ed.png",
+      "mimeType": "image/png",
+      "question": "Which candidate is EXACTLY the same connected shape as the reference after rotation only (no reflection)?",
+      "answerOptions": [
+        "B",
+        "D",
+        "C",
+        "A"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "33bcada8805982e660a2fbe8993622f5a3a55db30441d5214ca07458420e2381",
+      "parameters": {
+        "vertices": 9,
+        "perturbation": 0.15,
+        "correctSlot": 3,
+        "visualVariant": 32
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Compare exact shape geometry under rotation only. Return exactly one allowed answer without explanation."
+    },
+    {
+      "candidateId": "rc-f5edb84e9ae40586",
+      "cellId": "cell-950947490e3b7ab6",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "One exact rotation match appears among reflection and vertex-perturbation distractors.",
+      "failureModeId": "rotation-invariant-visual-correspondence",
+      "generator": "rotation-correspondence",
+      "seed": 1300004,
+      "difficulty": 46,
+      "variant": 4,
+      "artifact": "public/evaluations/rotation-correspondence-discovery-v1/rc-f5edb84e9ae40586.png",
+      "mimeType": "image/png",
+      "question": "Which candidate is EXACTLY the same connected shape as the reference after rotation only (no reflection)?",
+      "answerOptions": [
+        "C",
+        "B",
+        "D",
+        "A"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "299949efeaada4d19b5bea8ff74eb168ca6aceba02d427f070319044df0d46e7",
+      "parameters": {
+        "vertices": 9,
+        "perturbation": 0.15,
+        "correctSlot": 0,
+        "visualVariant": 33
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Compare exact shape geometry under rotation only. Return exactly one allowed answer without explanation."
+    },
+    {
+      "candidateId": "rc-ed95cbcaa7e28d87",
+      "cellId": "cell-950947490e3b7ab6",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "One exact rotation match appears among reflection and vertex-perturbation distractors.",
+      "failureModeId": "rotation-invariant-visual-correspondence",
+      "generator": "rotation-correspondence",
+      "seed": 1300005,
+      "difficulty": 46,
+      "variant": 5,
+      "artifact": "public/evaluations/rotation-correspondence-discovery-v1/rc-ed95cbcaa7e28d87.png",
+      "mimeType": "image/png",
+      "question": "Which candidate is EXACTLY the same connected shape as the reference after rotation only (no reflection)?",
+      "answerOptions": [
+        "C",
+        "B",
+        "D",
+        "A"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "5b508ac6de158709ba579b13de24f0e7d20eb4047c07c60a85ddafa222d4dca2",
+      "parameters": {
+        "vertices": 9,
+        "perturbation": 0.15,
+        "correctSlot": 1,
+        "visualVariant": 34
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Compare exact shape geometry under rotation only. Return exactly one allowed answer without explanation."
+    },
+    {
+      "candidateId": "rc-605fd2a2dbbb0aef",
+      "cellId": "cell-950947490e3b7ab6",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "One exact rotation match appears among reflection and vertex-perturbation distractors.",
+      "failureModeId": "rotation-invariant-visual-correspondence",
+      "generator": "rotation-correspondence",
+      "seed": 1300006,
+      "difficulty": 46,
+      "variant": 6,
+      "artifact": "public/evaluations/rotation-correspondence-discovery-v1/rc-605fd2a2dbbb0aef.png",
+      "mimeType": "image/png",
+      "question": "Which candidate is EXACTLY the same connected shape as the reference after rotation only (no reflection)?",
+      "answerOptions": [
+        "B",
+        "C",
+        "D",
+        "A"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "0736a61a6fc589c2b2de6dbdabdb0bd39a64a9302f4b8906b97c12093c90e0b8",
+      "parameters": {
+        "vertices": 9,
+        "perturbation": 0.15,
+        "correctSlot": 2,
+        "visualVariant": 35
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Compare exact shape geometry under rotation only. Return exactly one allowed answer without explanation."
+    },
+    {
+      "candidateId": "rc-2c3ee09b5c2076a6",
+      "cellId": "cell-950947490e3b7ab6",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "One exact rotation match appears among reflection and vertex-perturbation distractors.",
+      "failureModeId": "rotation-invariant-visual-correspondence",
+      "generator": "rotation-correspondence",
+      "seed": 1300007,
+      "difficulty": 46,
+      "variant": 7,
+      "artifact": "public/evaluations/rotation-correspondence-discovery-v1/rc-2c3ee09b5c2076a6.png",
+      "mimeType": "image/png",
+      "question": "Which candidate is EXACTLY the same connected shape as the reference after rotation only (no reflection)?",
+      "answerOptions": [
+        "C",
+        "D",
+        "B",
+        "A"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "3ecf87ab96b206c6d244fc1721373582b05c90892412283687fca206f1146545",
+      "parameters": {
+        "vertices": 9,
+        "perturbation": 0.15,
+        "correctSlot": 3,
+        "visualVariant": 36
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Compare exact shape geometry under rotation only. Return exactly one allowed answer without explanation."
+    },
+    {
+      "candidateId": "rc-54bdac2aaa479bad",
+      "cellId": "cell-c8643568c202a391",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "One exact rotation match appears among reflection and vertex-perturbation distractors.",
+      "failureModeId": "rotation-invariant-visual-correspondence",
+      "generator": "rotation-correspondence",
+      "seed": 1300008,
+      "difficulty": 78,
+      "variant": 8,
+      "artifact": "public/evaluations/rotation-correspondence-discovery-v1/rc-54bdac2aaa479bad.png",
+      "mimeType": "image/png",
+      "question": "Which candidate is EXACTLY the same connected shape as the reference after rotation only (no reflection)?",
+      "answerOptions": [
+        "D",
+        "C",
+        "B",
+        "A"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "6f2a6cd3e8fa66b92a4911c1b2c2a392de040d81172e82ca2fb0d3ff61263d3c",
+      "parameters": {
+        "vertices": 13,
+        "perturbation": 0.07,
+        "correctSlot": 0,
+        "visualVariant": 37
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Compare exact shape geometry under rotation only. Return exactly one allowed answer without explanation."
+    },
+    {
+      "candidateId": "rc-5bb1bad35fdcd1d0",
+      "cellId": "cell-c8643568c202a391",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "One exact rotation match appears among reflection and vertex-perturbation distractors.",
+      "failureModeId": "rotation-invariant-visual-correspondence",
+      "generator": "rotation-correspondence",
+      "seed": 1300009,
+      "difficulty": 78,
+      "variant": 9,
+      "artifact": "public/evaluations/rotation-correspondence-discovery-v1/rc-5bb1bad35fdcd1d0.png",
+      "mimeType": "image/png",
+      "question": "Which candidate is EXACTLY the same connected shape as the reference after rotation only (no reflection)?",
+      "answerOptions": [
+        "C",
+        "D",
+        "B",
+        "A"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "6d23b31780acdef333a0a543ed7387e93d30c4d81314a772fd65144e7def3fe7",
+      "parameters": {
+        "vertices": 13,
+        "perturbation": 0.07,
+        "correctSlot": 1,
+        "visualVariant": 38
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Compare exact shape geometry under rotation only. Return exactly one allowed answer without explanation."
+    },
+    {
+      "candidateId": "rc-2e91e70b0111ddc6",
+      "cellId": "cell-c8643568c202a391",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "One exact rotation match appears among reflection and vertex-perturbation distractors.",
+      "failureModeId": "rotation-invariant-visual-correspondence",
+      "generator": "rotation-correspondence",
+      "seed": 1300010,
+      "difficulty": 78,
+      "variant": 10,
+      "artifact": "public/evaluations/rotation-correspondence-discovery-v1/rc-2e91e70b0111ddc6.png",
+      "mimeType": "image/png",
+      "question": "Which candidate is EXACTLY the same connected shape as the reference after rotation only (no reflection)?",
+      "answerOptions": [
+        "C",
+        "D",
+        "B",
+        "A"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "6cbe328bb21871afe014fc4e0c0ca75a478001ba2c6457d7a1e4e902cf922528",
+      "parameters": {
+        "vertices": 13,
+        "perturbation": 0.07,
+        "correctSlot": 2,
+        "visualVariant": 39
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Compare exact shape geometry under rotation only. Return exactly one allowed answer without explanation."
+    },
+    {
+      "candidateId": "rc-4bd92bb97d7ed3fd",
+      "cellId": "cell-c8643568c202a391",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "One exact rotation match appears among reflection and vertex-perturbation distractors.",
+      "failureModeId": "rotation-invariant-visual-correspondence",
+      "generator": "rotation-correspondence",
+      "seed": 1300011,
+      "difficulty": 78,
+      "variant": 11,
+      "artifact": "public/evaluations/rotation-correspondence-discovery-v1/rc-4bd92bb97d7ed3fd.png",
+      "mimeType": "image/png",
+      "question": "Which candidate is EXACTLY the same connected shape as the reference after rotation only (no reflection)?",
+      "answerOptions": [
+        "D",
+        "B",
+        "C",
+        "A"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "5c3a8e5565c5a7c5fffe9db265cf3ec5b9c7a4ab9d2b8b2156293b281282b3e7",
+      "parameters": {
+        "vertices": 13,
+        "perturbation": 0.07,
+        "correctSlot": 3,
+        "visualVariant": 40
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Compare exact shape geometry under rotation only. Return exactly one allowed answer without explanation."
+    },
+    {
+      "candidateId": "rc-e6cfe34966c714df",
+      "cellId": "cell-c8643568c202a391",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "One exact rotation match appears among reflection and vertex-perturbation distractors.",
+      "failureModeId": "rotation-invariant-visual-correspondence",
+      "generator": "rotation-correspondence",
+      "seed": 1300012,
+      "difficulty": 78,
+      "variant": 12,
+      "artifact": "public/evaluations/rotation-correspondence-discovery-v1/rc-e6cfe34966c714df.png",
+      "mimeType": "image/png",
+      "question": "Which candidate is EXACTLY the same connected shape as the reference after rotation only (no reflection)?",
+      "answerOptions": [
+        "B",
+        "D",
+        "C",
+        "A"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "2ec771ddb8dfdd4dc5fb5c11e411af1a5077beb5f8219a8b2c43f9471d2c2261",
+      "parameters": {
+        "vertices": 13,
+        "perturbation": 0.07,
+        "correctSlot": 0,
+        "visualVariant": 41
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Compare exact shape geometry under rotation only. Return exactly one allowed answer without explanation."
+    },
+    {
+      "candidateId": "rc-bb6dfdf60c47b734",
+      "cellId": "cell-c8643568c202a391",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "One exact rotation match appears among reflection and vertex-perturbation distractors.",
+      "failureModeId": "rotation-invariant-visual-correspondence",
+      "generator": "rotation-correspondence",
+      "seed": 1300013,
+      "difficulty": 78,
+      "variant": 13,
+      "artifact": "public/evaluations/rotation-correspondence-discovery-v1/rc-bb6dfdf60c47b734.png",
+      "mimeType": "image/png",
+      "question": "Which candidate is EXACTLY the same connected shape as the reference after rotation only (no reflection)?",
+      "answerOptions": [
+        "B",
+        "D",
+        "C",
+        "A"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "7a6fc9487cad4029b20016d750a88d31526ed5dba472172be1a027571836274a",
+      "parameters": {
+        "vertices": 13,
+        "perturbation": 0.07,
+        "correctSlot": 1,
+        "visualVariant": 42
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Compare exact shape geometry under rotation only. Return exactly one allowed answer without explanation."
+    },
+    {
+      "candidateId": "rc-9a71e14fe8bd5c04",
+      "cellId": "cell-c8643568c202a391",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "One exact rotation match appears among reflection and vertex-perturbation distractors.",
+      "failureModeId": "rotation-invariant-visual-correspondence",
+      "generator": "rotation-correspondence",
+      "seed": 1300014,
+      "difficulty": 78,
+      "variant": 14,
+      "artifact": "public/evaluations/rotation-correspondence-discovery-v1/rc-9a71e14fe8bd5c04.png",
+      "mimeType": "image/png",
+      "question": "Which candidate is EXACTLY the same connected shape as the reference after rotation only (no reflection)?",
+      "answerOptions": [
+        "D",
+        "B",
+        "C",
+        "A"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "d4a4a09714d5d520765f64c61bcf55c35c450e196514d05fbee77206ac774701",
+      "parameters": {
+        "vertices": 13,
+        "perturbation": 0.07,
+        "correctSlot": 2,
+        "visualVariant": 43
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Compare exact shape geometry under rotation only. Return exactly one allowed answer without explanation."
+    },
+    {
+      "candidateId": "rc-f7e7b667e5fe1b73",
+      "cellId": "cell-c8643568c202a391",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "One exact rotation match appears among reflection and vertex-perturbation distractors.",
+      "failureModeId": "rotation-invariant-visual-correspondence",
+      "generator": "rotation-correspondence",
+      "seed": 1300015,
+      "difficulty": 78,
+      "variant": 15,
+      "artifact": "public/evaluations/rotation-correspondence-discovery-v1/rc-f7e7b667e5fe1b73.png",
+      "mimeType": "image/png",
+      "question": "Which candidate is EXACTLY the same connected shape as the reference after rotation only (no reflection)?",
+      "answerOptions": [
+        "B",
+        "C",
+        "D",
+        "A"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "f460fb7345376adab3da03671266a2498f413bf1089380987ef1c1f39391977f",
+      "parameters": {
+        "vertices": 13,
+        "perturbation": 0.07,
+        "correctSlot": 3,
+        "visualVariant": 44
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Compare exact shape geometry under rotation only. Return exactly one allowed answer without explanation."
+    }
+  ]
+}

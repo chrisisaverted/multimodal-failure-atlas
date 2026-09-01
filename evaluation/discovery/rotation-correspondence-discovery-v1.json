@@ -1,0 +1,280 @@
+{
+  "id": "rotation-correspondence-discovery-v1",
+  "generatorVersion": "rotation-correspondence-v1",
+  "status": "discovery-only",
+  "hypothesis": "Compressed visual representations lose exact vertex-level correspondence under rotation and reflection distractors.",
+  "candidates": [
+    {
+      "id": "rc-ab910e59e72abd12",
+      "cellId": "cell-950947490e3b7ab6",
+      "split": "discovery",
+      "seed": 1300000,
+      "failureModeId": "rotation-invariant-visual-correspondence",
+      "question": "Which candidate is EXACTLY the same connected shape as the reference after rotation only (no reflection)?",
+      "answerOptions": ["B", "D", "C", "A"],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "vertices": 9,
+        "perturbation": 0.15,
+        "correctSlot": 0,
+        "visualVariant": 29
+      }
+    },
+    {
+      "id": "rc-a08c6c9d55c990c7",
+      "cellId": "cell-950947490e3b7ab6",
+      "split": "discovery",
+      "seed": 1300001,
+      "failureModeId": "rotation-invariant-visual-correspondence",
+      "question": "Which candidate is EXACTLY the same connected shape as the reference after rotation only (no reflection)?",
+      "answerOptions": ["D", "B", "C", "A"],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "vertices": 9,
+        "perturbation": 0.15,
+        "correctSlot": 1,
+        "visualVariant": 30
+      }
+    },
+    {
+      "id": "rc-634dca6c7a191d15",
+      "cellId": "cell-950947490e3b7ab6",
+      "split": "discovery",
+      "seed": 1300002,
+      "failureModeId": "rotation-invariant-visual-correspondence",
+      "question": "Which candidate is EXACTLY the same connected shape as the reference after rotation only (no reflection)?",
+      "answerOptions": ["D", "B", "C", "A"],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "vertices": 9,
+        "perturbation": 0.15,
+        "correctSlot": 2,
+        "visualVariant": 31
+      }
+    },
+    {
+      "id": "rc-509b18e23e4265ed",
+      "cellId": "cell-950947490e3b7ab6",
+      "split": "discovery",
+      "seed": 1300003,
+      "failureModeId": "rotation-invariant-visual-correspondence",
+      "question": "Which candidate is EXACTLY the same connected shape as the reference after rotation only (no reflection)?",
+      "answerOptions": ["B", "D", "C", "A"],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "vertices": 9,
+        "perturbation": 0.15,
+        "correctSlot": 3,
+        "visualVariant": 32
+      }
+    },
+    {
+      "id": "rc-f5edb84e9ae40586",
+      "cellId": "cell-950947490e3b7ab6",
+      "split": "discovery",
+      "seed": 1300004,
+      "failureModeId": "rotation-invariant-visual-correspondence",
+      "question": "Which candidate is EXACTLY the same connected shape as the reference after rotation only (no reflection)?",
+      "answerOptions": ["C", "B", "D", "A"],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "vertices": 9,
+        "perturbation": 0.15,
+        "correctSlot": 0,
+        "visualVariant": 33
+      }
+    },
+    {
+      "id": "rc-ed95cbcaa7e28d87",
+      "cellId": "cell-950947490e3b7ab6",
+      "split": "discovery",
+      "seed": 1300005,
+      "failureModeId": "rotation-invariant-visual-correspondence",
+      "question": "Which candidate is EXACTLY the same connected shape as the reference after rotation only (no reflection)?",
+      "answerOptions": ["C", "B", "D", "A"],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "vertices": 9,
+        "perturbation": 0.15,
+        "correctSlot": 1,
+        "visualVariant": 34
+      }
+    },
+    {
+      "id": "rc-605fd2a2dbbb0aef",
+      "cellId": "cell-950947490e3b7ab6",
+      "split": "discovery",
+      "seed": 1300006,
+      "failureModeId": "rotation-invariant-visual-correspondence",
+      "question": "Which candidate is EXACTLY the same connected shape as the reference after rotation only (no reflection)?",
+      "answerOptions": ["B", "C", "D", "A"],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "vertices": 9,
+        "perturbation": 0.15,
+        "correctSlot": 2,
+        "visualVariant": 35
+      }
+    },
+    {
+      "id": "rc-2c3ee09b5c2076a6",
+      "cellId": "cell-950947490e3b7ab6",
+      "split": "discovery",
+      "seed": 1300007,
+      "failureModeId": "rotation-invariant-visual-correspondence",
+      "question": "Which candidate is EXACTLY the same connected shape as the reference after rotation only (no reflection)?",
+      "answerOptions": ["C", "D", "B", "A"],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "vertices": 9,
+        "perturbation": 0.15,
+        "correctSlot": 3,
+        "visualVariant": 36
+      }
+    },
+    {
+      "id": "rc-54bdac2aaa479bad",
+      "cellId": "cell-c8643568c202a391",
+      "split": "discovery",
+      "seed": 1300008,
+      "failureModeId": "rotation-invariant-visual-correspondence",
+      "question": "Which candidate is EXACTLY the same connected shape as the reference after rotation only (no reflection)?",
+      "answerOptions": ["D", "C", "B", "A"],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "vertices": 13,
+        "perturbation": 0.07,
+        "correctSlot": 0,
+        "visualVariant": 37
+      }
+    },
+    {
+      "id": "rc-5bb1bad35fdcd1d0",
+      "cellId": "cell-c8643568c202a391",
+      "split": "discovery",
+      "seed": 1300009,
+      "failureModeId": "rotation-invariant-visual-correspondence",
+      "question": "Which candidate is EXACTLY the same connected shape as the reference after rotation only (no reflection)?",
+      "answerOptions": ["C", "D", "B", "A"],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "vertices": 13,
+        "perturbation": 0.07,
+        "correctSlot": 1,
+        "visualVariant": 38
+      }
+    },
+    {
+      "id": "rc-2e91e70b0111ddc6",
+      "cellId": "cell-c8643568c202a391",
+      "split": "discovery",
+      "seed": 1300010,
+      "failureModeId": "rotation-invariant-visual-correspondence",
+      "question": "Which candidate is EXACTLY the same connected shape as the reference after rotation only (no reflection)?",
+      "answerOptions": ["C", "D", "B", "A"],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "vertices": 13,
+        "perturbation": 0.07,
+        "correctSlot": 2,
+        "visualVariant": 39
+      }
+    },
+    {
+      "id": "rc-4bd92bb97d7ed3fd",
+      "cellId": "cell-c8643568c202a391",
+      "split": "discovery",
+      "seed": 1300011,
+      "failureModeId": "rotation-invariant-visual-correspondence",
+      "question": "Which candidate is EXACTLY the same connected shape as the reference after rotation only (no reflection)?",
+      "answerOptions": ["D", "B", "C", "A"],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "vertices": 13,
+        "perturbation": 0.07,
+        "correctSlot": 3,
+        "visualVariant": 40
+      }
+    },
+    {
+      "id": "rc-e6cfe34966c714df",
+      "cellId": "cell-c8643568c202a391",
+      "split": "discovery",
+      "seed": 1300012,
+      "failureModeId": "rotation-invariant-visual-correspondence",
+      "question": "Which candidate is EXACTLY the same connected shape as the reference after rotation only (no reflection)?",
+      "answerOptions": ["B", "D", "C", "A"],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "vertices": 13,
+        "perturbation": 0.07,
+        "correctSlot": 0,
+        "visualVariant": 41
+      }
+    },
+    {
+      "id": "rc-bb6dfdf60c47b734",
+      "cellId": "cell-c8643568c202a391",
+      "split": "discovery",
+      "seed": 1300013,
+      "failureModeId": "rotation-invariant-visual-correspondence",
+      "question": "Which candidate is EXACTLY the same connected shape as the reference after rotation only (no reflection)?",
+      "answerOptions": ["B", "D", "C", "A"],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "vertices": 13,
+        "perturbation": 0.07,
+        "correctSlot": 1,
+        "visualVariant": 42
+      }
+    },
+    {
+      "id": "rc-9a71e14fe8bd5c04",
+      "cellId": "cell-c8643568c202a391",
+      "split": "discovery",
+      "seed": 1300014,
+      "failureModeId": "rotation-invariant-visual-correspondence",
+      "question": "Which candidate is EXACTLY the same connected shape as the reference after rotation only (no reflection)?",
+      "answerOptions": ["D", "B", "C", "A"],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "vertices": 13,
+        "perturbation": 0.07,
+        "correctSlot": 2,
+        "visualVariant": 43
+      }
+    },
+    {
+      "id": "rc-f7e7b667e5fe1b73",
+      "cellId": "cell-c8643568c202a391",
+      "split": "discovery",
+      "seed": 1300015,
+      "failureModeId": "rotation-invariant-visual-correspondence",
+      "question": "Which candidate is EXACTLY the same connected shape as the reference after rotation only (no reflection)?",
+      "answerOptions": ["B", "C", "D", "A"],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "vertices": 13,
+        "perturbation": 0.07,
+        "correctSlot": 3,
+        "visualVariant": 44
+      }
+    }
+  ]
+}

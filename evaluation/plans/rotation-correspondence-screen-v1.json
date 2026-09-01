@@ -1,0 +1,29 @@
+{
+  "id": "rotation-correspondence-screen-v1-low-reasoning-2026-09-01",
+  "resolvedAt": "2026-09-01",
+  "gateway": "OpenRouter",
+  "evaluationPlanId": "rotation-correspondence-discovery-v1",
+  "evaluationPlanSha256": "1ee1e6a1d776ddb2a8aa162d6082648a939b27b8ab8d33c08f851d72ab940961",
+  "stage": "balanced-exact-rotation-correspondence-screen",
+  "casesPerModel": 16,
+  "trials": 1,
+  "temperature": 0,
+  "maxOutputTokens": 8192,
+  "reasoning": { "effort": "low", "exclude": true },
+  "scorer": "terminal-option-v2",
+  "allowProviderFallbacks": false,
+  "dataCollection": "deny",
+  "campaignCostCeilingUsd": 8,
+  "models": [
+    {
+      "modelId": "google/gemini-3.7-flash",
+      "modelRevision": "google/gemini-3.7-flash-20260813",
+      "upstreamProvider": "Google AI Studio"
+    },
+    {
+      "modelId": "qwen/qwen3.8-max",
+      "modelRevision": "qwen/qwen3.8-max-20260803",
+      "upstreamProvider": "Alibaba"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "id": "enclosure-depth-kimi-v1-no-reasoning-2026-09-01",
+  "resolvedAt": "2026-09-01",
+  "gateway": "OpenRouter",
+  "evaluationPlanId": "enclosure-depth-discovery-v1",
+  "evaluationPlanSha256": "5c0d6515c81b4a80f00eeef6d175f97b91d576b6f37880cd95f4acc8374df940",
+  "stage": "balanced-adjacent-enclosure-depth-screen",
+  "casesPerModel": 16,
+  "trials": 1,
+  "temperature": 0,
+  "maxOutputTokens": 512,
+  "reasoning": { "effort": "none", "exclude": true },
+  "scorer": "terminal-option-v2",
+  "allowProviderFallbacks": false,
+  "dataCollection": "deny",
+  "campaignCostCeilingUsd": 4,
+  "models": [
+    {
+      "modelId": "moonshotai/kimi-k3",
+      "modelRevision": "moonshotai/kimi-k3-20260715",
+      "upstreamProvider": "Moonshot AI"
+    }
+  ]
+}
