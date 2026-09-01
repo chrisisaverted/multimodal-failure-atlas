@@ -8,43 +8,43 @@ Wilson-qualified and human-validated are stricter, separately reported states.
 
 ## Image families
 
-| Family                                    | State                   | Gemini | Qwen | Kimi | Control             | Human      |
-| ----------------------------------------- | ----------------------- | -----: | ---: | ---: | ------------------- | ---------- |
-| Identity-conditioned exact crossing count | observed holdout pass   |   7/16 | 0/16 | 1/16 | 16/16, 15/15, 13/16 | unverified |
-| Topological enclosure depth               | observed holdout pass   |   4/16 | 5/16 | 3/16 | 16/16 each          | unverified |
-| Rotation-invariant exact correspondence   | observed holdout pass   |   6/16 | 5/16 | 2/16 | 16/16, 16/16, 14/16 | unverified |
-| Global bilateral symmetry verification    | observed holdout pass   |   6/16 | 3/16 | 1/16 | 16/16 each          | unverified |
-| Occluded cube-stack enumeration           | observed holdout pass   |   3/16 | 6/16 | 6/16 | 16/16 each          | unverified |
-| Dense visual XOR composition              | observed holdout pass   |   4/16 | 2/16 | 7/16 | 16/16, 15/15, 16/16 | unverified |
-| Dense cross-image change localization     | observed holdout pass   |   4/16 | 2/16 | 5/16 | 16/16, 16/16, 9/16  | unverified |
-| Maze reachability                         | observed holdout pass   |   6/16 | 3/16 | 4/16 | 16/16, 9/9, 16/16   | unverified |
-| Visual graph-degree topology              | observed holdout pass   |   4/16 | 5/16 | 2/16 | 16/16 each          | unverified |
-| 2D parity-matrix verification             | replicated holdout pass |   5/16 | 4/16 | 4/16 | 16/16 each          | unverified |
+| Family                                    | State                   | Gemini | Qwen | Kimi | Seed | MiMo | Weakest control | Human      |
+| ----------------------------------------- | ----------------------- | -----: | ---: | ---: | ---: | ---: | --------------: | ---------- |
+| Identity-conditioned exact crossing count | five-route holdout pass |   7/16 | 0/16 | 1/16 | 3/16 | 3/16 |           13/16 | unverified |
+| Topological enclosure depth               | five-route holdout pass |   4/16 | 5/16 | 3/16 | 2/16 | 6/16 |           15/16 | unverified |
+| Rotation-invariant exact correspondence   | five-route holdout pass |   6/16 | 5/16 | 2/16 | 1/16 | 3/16 |            1/16 | unverified |
+| Global bilateral symmetry verification    | five-route holdout pass |   6/16 | 3/16 | 1/16 | 4/16 | 7/16 |           16/16 | unverified |
+| Occluded cube-stack enumeration           | five-route holdout pass |   3/16 | 6/16 | 6/16 | 3/16 | 3/16 |           15/16 | unverified |
+| Dense visual XOR composition              | five-route holdout pass |   4/16 | 2/16 | 7/16 | 4/16 | 6/16 |           15/16 | unverified |
+| Dense cross-image change localization     | five-route holdout pass |   4/16 | 2/16 | 5/16 | 4/16 | 3/16 |            9/16 | unverified |
+| Maze reachability                         | five-route holdout pass |   6/16 | 3/16 | 4/16 | 5/16 | 5/16 |           14/16 | unverified |
+| Visual graph-degree topology              | five-route holdout pass |   4/16 | 5/16 | 2/16 | 3/16 | 5/16 |           11/16 | unverified |
+| 2D parity-matrix verification             | five-route holdout pass |   5/16 | 4/16 | 4/16 | 3/16 | 1/16 |           16/16 | unverified |
 
 The published enclosure family is the fixed-target dense replacement: every case asks for 18 boundaries,
 the target is neither systematically smallest nor largest, and all three exact-count controls recover to
-16/16. The earlier answer-balanced 57–72 stratum remains preserved but is superseded. Rotation required
+16/16; the two expansion controls recover to 15/16 and 16/16. The earlier answer-balanced 57–72 stratum
+remains preserved but is superseded. Rotation required
 two prospective Qwen reruns after length-exhausted responses; the final native denominator is 16
 substantive answers from 18 requests.
 
 ## Video families
 
-Gemini 3.7 Flash, Qwen 3.8 Max, and Kimi K3 are the initial cohort; all three routes have accepted the
-generated MP4 inputs. Several promising screens remain intentionally uncounted until their frozen
-holdouts finish.
+Gemini 3.7 Flash, Qwen 3.8 Max, and Kimi K3 are the core cohort; Seed 2.1 Turbo and MiMo 2.5 are the
+untouched expansion cohort. Every listed route accepted the generated MP4 inputs.
 
-| Family                                     | State                   | Gemini | Qwen | Kimi | Control             | Human      |
-| ------------------------------------------ | ----------------------- | -----: | ---: | ---: | ------------------- | ---------- |
-| Identity-conditioned spatial zone entries  | observed holdout pass   |   4/16 | 7/16 | 4/16 | 16/16 each          | unverified |
-| Gated identity-pair collision counting     | five-route holdout pass |   3/16 | 4/16 | 5/16 | 16/16, 15/16, 16/16 | unverified |
-| Sequential identity permutation            | observed holdout pass   |   2/16 | 1/16 | 5/16 | 16/16, 13/16, 16/16 | unverified |
-| Identity-conditioned selective flash count | observed holdout pass   |   2/16 | 4/16 | 2/16 | 16/16 each          | unverified |
-| Temporal target-transition counting        | observed holdout pass   |   3/16 | 5/16 | 3/16 | 16/16 each          | unverified |
-| Gated exact-frequency set cardinality      | five-route holdout pass |   2/16 | 3/16 | 2/16 | 16/16 each          | unverified |
-| Dynamic route turn integration             | replicated holdout pass |   2/16 | 2/16 | 3/16 | 16/16 each          | unverified |
-| Dynamic conservation ledger                | replicated holdout pass |   7/16 | 5/16 | 2/16 | 16/16 each          | unverified |
-| Hidden-trail trajectory topology           | observed holdout pass   |   4/16 | 5/16 | 6/16 | 6/16, 5/16, 4/15    | unverified |
-| Signed temporal state accumulation         | observed holdout pass   |   5/16 | 3/16 | 4/16 | 13/16, 14/16, 16/16 | unverified |
+| Family                                     | State                   | Gemini | Qwen | Kimi | Seed | MiMo | Weakest control | Human      |
+| ------------------------------------------ | ----------------------- | -----: | ---: | ---: | ---: | ---: | --------------: | ---------- |
+| Identity-conditioned spatial zone entries  | five-route holdout pass |   4/16 | 7/16 | 4/16 | 5/16 | 5/16 |           16/16 | unverified |
+| Gated identity-pair collision counting     | five-route holdout pass |   3/16 | 4/16 | 5/16 | 3/16 | 5/16 |           12/16 | unverified |
+| Sequential identity permutation            | five-route holdout pass |   2/16 | 1/16 | 5/16 | 4/16 | 4/16 |            2/16 | unverified |
+| Identity-conditioned selective flash count | five-route holdout pass |   2/16 | 4/16 | 2/16 | 4/16 | 4/16 |            6/16 | unverified |
+| Temporal target-transition counting        | five-route holdout pass |   3/16 | 5/16 | 3/16 | 4/16 | 6/16 |           11/16 | unverified |
+| Gated exact-frequency set cardinality      | five-route holdout pass |   2/16 | 3/16 | 2/16 | 6/16 | 4/16 |           16/16 | unverified |
+| Dynamic route turn integration             | five-route holdout pass |   2/16 | 2/16 | 3/16 | 5/16 | 5/16 |           16/16 | unverified |
+| Dynamic conservation ledger                | five-route holdout pass |   7/16 | 5/16 | 2/16 | 5/16 | 2/16 |           13/16 | unverified |
+| Hidden-trail trajectory topology           | five-route holdout pass |   4/16 | 5/16 | 6/16 | 3/16 | 5/16 |            3/16 | unverified |
+| Signed temporal state accumulation         | five-route holdout pass |   5/16 | 3/16 | 4/16 | 6/16 | 5/16 |           13/16 | unverified |
 
 The collision row is the preregistered gated replacement. Seed 2.1 Turbo scored 3/16 native versus
 12/16 control and MiMo 2.5 scored 5/16 versus 16/16 on the same untouched holdout, so all five

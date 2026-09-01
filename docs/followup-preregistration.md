@@ -13,8 +13,8 @@ faithful view of hidden computation.
 
 The study uses three already admitted but computationally distinct video families.
 
-1. **Route-turn integration:** scalar recurrent state (`previous direction`, `turn count`). Current core
-   scores are 2/16, 2/16, and 3/16 with 16/16 running-count controls.
+1. **Route-turn integration:** scalar recurrent state (`previous direction`, `turn count`). Current
+   five-route scores are 2/16, 2/16, 3/16, 5/16, and 5/16 with 16/16 running-count controls.
 2. **Gated exact-frequency set cardinality:** structured state (a target-color-conditioned 6×6 histogram,
    exact-twice predicate, and final cardinality). Current five-route scores are 2/16, 3/16, 2/16, 6/16, and
    4/16 with 16/16 histogram controls.

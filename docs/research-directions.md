@@ -7,8 +7,8 @@ Atlas findings motivate them but do not establish their mechanisms.
 ## 1. Sufficient-statistic intervention curves
 
 The cleanest video result, route-turn integration, asks a model to update only two latent variables:
-previous direction and turn count. Native accuracy is 7/48 pooled, while an on-screen running counter
-recovers to 48/48. That leaves several explanations entangled: motion acquisition, previous-direction
+previous direction and turn count. Native accuracy is 17/80 pooled across five routes, while an on-screen
+running counter recovers to 80/80. That leaves several explanations entangled: motion acquisition, previous-direction
 retention, comparison, and count update.
 
 Build a four-condition factorial family:
