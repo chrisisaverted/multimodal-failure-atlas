@@ -1,0 +1,505 @@
+{
+  "id": "cube-net-discovery-v1",
+  "planSha256": "63d9fc902693167dfa72bf568d61946f502104443a0ed56fff7b529a9c4128b0",
+  "generatorVersion": "irregular-cube-net-opposites-v1",
+  "renderer": "cube-net-svg-raster-v1",
+  "fps": 0,
+  "cases": [
+    {
+      "candidateId": "cn-6d13db28bfe5ef57",
+      "cellId": "cell-irregular-six-face-cube-net",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "An irregular valid six-square cube net has randomized labels and one query face.",
+      "failureModeId": "cube-net-mental-folding",
+      "generator": "cube-net",
+      "seed": 4000000,
+      "difficulty": 77,
+      "variant": 0,
+      "artifact": "public/evaluations/cube-net-discovery-v1/cn-6d13db28bfe5ef57.png",
+      "mimeType": "image/png",
+      "question": "When the net is folded into a cube, which labeled face is opposite the GOLD face D?",
+      "answerOptions": [
+        "C",
+        "A",
+        "F",
+        "E"
+      ],
+      "expectedAnswer": "F",
+      "sha256": "559951e125ca989ff488eb8da26c2d45e8dc801e29aa62bc024508014e71473a",
+      "parameters": {
+        "cells": [
+          {
+            "x": 1,
+            "y": 2,
+            "label": 3
+          },
+          {
+            "x": 1,
+            "y": 3,
+            "label": 1
+          },
+          {
+            "x": 1,
+            "y": 1,
+            "label": 0
+          },
+          {
+            "x": 1,
+            "y": 0,
+            "label": 5
+          },
+          {
+            "x": 2,
+            "y": 3,
+            "label": 4
+          },
+          {
+            "x": 0,
+            "y": 3,
+            "label": 2
+          }
+        ],
+        "targetCell": 0,
+        "oppositeCell": 3,
+        "visualVariant": 0
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Mentally fold the net and return exactly one allowed face label opposite the gold face."
+    },
+    {
+      "candidateId": "cn-7c6c91b1534a6bb0",
+      "cellId": "cell-irregular-six-face-cube-net",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "An irregular valid six-square cube net has randomized labels and one query face.",
+      "failureModeId": "cube-net-mental-folding",
+      "generator": "cube-net",
+      "seed": 4000001,
+      "difficulty": 77,
+      "variant": 1,
+      "artifact": "public/evaluations/cube-net-discovery-v1/cn-7c6c91b1534a6bb0.png",
+      "mimeType": "image/png",
+      "question": "When the net is folded into a cube, which labeled face is opposite the GOLD face F?",
+      "answerOptions": [
+        "C",
+        "D",
+        "A",
+        "B"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "6a26cdc0bf787e92e6db23ccde0e08f6a6f289a439d5f0147d6b59dbefa8164f",
+      "parameters": {
+        "cells": [
+          {
+            "x": 0,
+            "y": 0,
+            "label": 3
+          },
+          {
+            "x": 1,
+            "y": 0,
+            "label": 5
+          },
+          {
+            "x": 1,
+            "y": 1,
+            "label": 0
+          },
+          {
+            "x": 2,
+            "y": 1,
+            "label": 1
+          },
+          {
+            "x": 3,
+            "y": 1,
+            "label": 4
+          },
+          {
+            "x": 2,
+            "y": 2,
+            "label": 2
+          }
+        ],
+        "targetCell": 1,
+        "oppositeCell": 5,
+        "visualVariant": 1
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Mentally fold the net and return exactly one allowed face label opposite the gold face."
+    },
+    {
+      "candidateId": "cn-5f5a2503eed9f208",
+      "cellId": "cell-irregular-six-face-cube-net",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "An irregular valid six-square cube net has randomized labels and one query face.",
+      "failureModeId": "cube-net-mental-folding",
+      "generator": "cube-net",
+      "seed": 4000002,
+      "difficulty": 77,
+      "variant": 2,
+      "artifact": "public/evaluations/cube-net-discovery-v1/cn-5f5a2503eed9f208.png",
+      "mimeType": "image/png",
+      "question": "When the net is folded into a cube, which labeled face is opposite the GOLD face D?",
+      "answerOptions": [
+        "B",
+        "C",
+        "F",
+        "E"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "f166604d46fff9129a52be6b93abf6f25cbee22a1b56ef6a16f05f9203529751",
+      "parameters": {
+        "cells": [
+          {
+            "x": 2,
+            "y": 0,
+            "label": 1
+          },
+          {
+            "x": 2,
+            "y": 1,
+            "label": 5
+          },
+          {
+            "x": 2,
+            "y": 2,
+            "label": 3
+          },
+          {
+            "x": 3,
+            "y": 1,
+            "label": 4
+          },
+          {
+            "x": 1,
+            "y": 1,
+            "label": 0
+          },
+          {
+            "x": 0,
+            "y": 1,
+            "label": 2
+          }
+        ],
+        "targetCell": 2,
+        "oppositeCell": 0,
+        "visualVariant": 2
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Mentally fold the net and return exactly one allowed face label opposite the gold face."
+    },
+    {
+      "candidateId": "cn-4b4f1782bd721086",
+      "cellId": "cell-irregular-six-face-cube-net",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "An irregular valid six-square cube net has randomized labels and one query face.",
+      "failureModeId": "cube-net-mental-folding",
+      "generator": "cube-net",
+      "seed": 4000003,
+      "difficulty": 77,
+      "variant": 3,
+      "artifact": "public/evaluations/cube-net-discovery-v1/cn-4b4f1782bd721086.png",
+      "mimeType": "image/png",
+      "question": "When the net is folded into a cube, which labeled face is opposite the GOLD face D?",
+      "answerOptions": [
+        "F",
+        "E",
+        "A",
+        "C"
+      ],
+      "expectedAnswer": "E",
+      "sha256": "9663cc92a6522517fbece60d8a7eab6705925246533b95e36438f9f6f6e668b2",
+      "parameters": {
+        "cells": [
+          {
+            "x": 1,
+            "y": 2,
+            "label": 5
+          },
+          {
+            "x": 2,
+            "y": 2,
+            "label": 1
+          },
+          {
+            "x": 1,
+            "y": 1,
+            "label": 4
+          },
+          {
+            "x": 2,
+            "y": 3,
+            "label": 3
+          },
+          {
+            "x": 0,
+            "y": 1,
+            "label": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "label": 2
+          }
+        ],
+        "targetCell": 3,
+        "oppositeCell": 2,
+        "visualVariant": 3
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Mentally fold the net and return exactly one allowed face label opposite the gold face."
+    },
+    {
+      "candidateId": "cn-754da705e0bdb943",
+      "cellId": "cell-irregular-six-face-cube-net",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "An irregular valid six-square cube net has randomized labels and one query face.",
+      "failureModeId": "cube-net-mental-folding",
+      "generator": "cube-net",
+      "seed": 4000004,
+      "difficulty": 77,
+      "variant": 4,
+      "artifact": "public/evaluations/cube-net-discovery-v1/cn-754da705e0bdb943.png",
+      "mimeType": "image/png",
+      "question": "When the net is folded into a cube, which labeled face is opposite the GOLD face B?",
+      "answerOptions": [
+        "C",
+        "E",
+        "D",
+        "A"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "8ed302c7494581ab999de894e4997c49579fee796c77645d70a11ee9be06e8e6",
+      "parameters": {
+        "cells": [
+          {
+            "x": 1,
+            "y": 1,
+            "label": 5
+          },
+          {
+            "x": 0,
+            "y": 1,
+            "label": 0
+          },
+          {
+            "x": 2,
+            "y": 1,
+            "label": 3
+          },
+          {
+            "x": 3,
+            "y": 1,
+            "label": 4
+          },
+          {
+            "x": 2,
+            "y": 2,
+            "label": 1
+          },
+          {
+            "x": 1,
+            "y": 0,
+            "label": 2
+          }
+        ],
+        "targetCell": 4,
+        "oppositeCell": 5,
+        "visualVariant": 4
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Mentally fold the net and return exactly one allowed face label opposite the gold face."
+    },
+    {
+      "candidateId": "cn-90402834c0f4fede",
+      "cellId": "cell-irregular-six-face-cube-net",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "An irregular valid six-square cube net has randomized labels and one query face.",
+      "failureModeId": "cube-net-mental-folding",
+      "generator": "cube-net",
+      "seed": 4000005,
+      "difficulty": 77,
+      "variant": 5,
+      "artifact": "public/evaluations/cube-net-discovery-v1/cn-90402834c0f4fede.png",
+      "mimeType": "image/png",
+      "question": "When the net is folded into a cube, which labeled face is opposite the GOLD face C?",
+      "answerOptions": [
+        "F",
+        "D",
+        "A",
+        "E"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "c4673682a2d53586d51cd5c43748e9cbc428ba2ed789430034d2067217948fc0",
+      "parameters": {
+        "cells": [
+          {
+            "x": 1,
+            "y": 1,
+            "label": 5
+          },
+          {
+            "x": 2,
+            "y": 1,
+            "label": 3
+          },
+          {
+            "x": 3,
+            "y": 1,
+            "label": 4
+          },
+          {
+            "x": 1,
+            "y": 2,
+            "label": 0
+          },
+          {
+            "x": 3,
+            "y": 0,
+            "label": 1
+          },
+          {
+            "x": 0,
+            "y": 2,
+            "label": 2
+          }
+        ],
+        "targetCell": 5,
+        "oppositeCell": 1,
+        "visualVariant": 5
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Mentally fold the net and return exactly one allowed face label opposite the gold face."
+    },
+    {
+      "candidateId": "cn-4555f9a18d113680",
+      "cellId": "cell-irregular-six-face-cube-net",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "An irregular valid six-square cube net has randomized labels and one query face.",
+      "failureModeId": "cube-net-mental-folding",
+      "generator": "cube-net",
+      "seed": 4000006,
+      "difficulty": 77,
+      "variant": 6,
+      "artifact": "public/evaluations/cube-net-discovery-v1/cn-4555f9a18d113680.png",
+      "mimeType": "image/png",
+      "question": "When the net is folded into a cube, which labeled face is opposite the GOLD face A?",
+      "answerOptions": [
+        "F",
+        "C",
+        "E",
+        "B"
+      ],
+      "expectedAnswer": "F",
+      "sha256": "20c4605f3311663251122d21e8db7984ceef861c5d5eb402cf1541a2c7a92996",
+      "parameters": {
+        "cells": [
+          {
+            "x": 2,
+            "y": 1,
+            "label": 0
+          },
+          {
+            "x": 1,
+            "y": 1,
+            "label": 4
+          },
+          {
+            "x": 1,
+            "y": 2,
+            "label": 1
+          },
+          {
+            "x": 3,
+            "y": 1,
+            "label": 3
+          },
+          {
+            "x": 0,
+            "y": 2,
+            "label": 5
+          },
+          {
+            "x": 2,
+            "y": 0,
+            "label": 2
+          }
+        ],
+        "targetCell": 0,
+        "oppositeCell": 4,
+        "visualVariant": 6
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Mentally fold the net and return exactly one allowed face label opposite the gold face."
+    },
+    {
+      "candidateId": "cn-127e336c78e1730d",
+      "cellId": "cell-irregular-six-face-cube-net",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "An irregular valid six-square cube net has randomized labels and one query face.",
+      "failureModeId": "cube-net-mental-folding",
+      "generator": "cube-net",
+      "seed": 4000007,
+      "difficulty": 77,
+      "variant": 7,
+      "artifact": "public/evaluations/cube-net-discovery-v1/cn-127e336c78e1730d.png",
+      "mimeType": "image/png",
+      "question": "When the net is folded into a cube, which labeled face is opposite the GOLD face A?",
+      "answerOptions": [
+        "F",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "911be160651c82a9f3aadce5d1bffe1198fabda1f926c0893c57f6f0feaf8ce8",
+      "parameters": {
+        "cells": [
+          {
+            "x": 2,
+            "y": 1,
+            "label": 3
+          },
+          {
+            "x": 1,
+            "y": 1,
+            "label": 0
+          },
+          {
+            "x": 3,
+            "y": 1,
+            "label": 1
+          },
+          {
+            "x": 0,
+            "y": 1,
+            "label": 4
+          },
+          {
+            "x": 3,
+            "y": 0,
+            "label": 5
+          },
+          {
+            "x": 2,
+            "y": 2,
+            "label": 2
+          }
+        ],
+        "targetCell": 1,
+        "oppositeCell": 2,
+        "visualVariant": 7
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Mentally fold the net and return exactly one allowed face label opposite the gold face."
+    }
+  ]
+}

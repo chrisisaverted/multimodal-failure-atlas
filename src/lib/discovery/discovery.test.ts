@@ -96,8 +96,25 @@ import { createEulerGrid, graphDegrees } from "./euler-graph";
 import { createOrdinalGrid, ordinalSuccessor } from "./ordinal-successor";
 import { createCollisionGrid } from "./collision-timing";
 import { containmentCounts, createIntervalGrid } from "./interval-containment";
+import { createTrajectoryGrid } from "./occluded-trajectory";
+import { createCubeNetGrid, cubeFaceAnswers, foldNet } from "./cube-net";
 
 describe("adaptive multimodal discovery", () => {
+  it("generates valid cube nets with six normals and exact opposite labels", () => {
+    for (const candidate of createCubeNetGrid()) {
+      const folded = foldNet(candidate.parameters.cells); expect(folded).not.toBeNull();
+      expect(new Set(folded!.map(face => face.normal.join(","))).size).toBe(6);
+      expect(cubeFaceAnswers[candidate.parameters.cells[candidate.parameters.oppositeCell]!.label]).toBe(candidate.expectedAnswer);
+    }
+  });
+
+  it("binds balanced occluded target trajectories to permutation exits", () => {
+    for (const candidate of createTrajectoryGrid()) {
+      expect(new Set(candidate.parameters.exitPermutation).size).toBe(4);
+      expect(candidate.parameters.exitPermutation[candidate.parameters.targetIdentity]).toBe(candidate.parameters.targetExit);
+    }
+  });
+
   it("places one interval that strictly contains exactly two others", () => {
     for (const candidate of createIntervalGrid()) {
       const counts = containmentCounts(candidate.parameters.intervals);

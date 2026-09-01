@@ -1,0 +1,432 @@
+{
+  "id": "cube-net-discovery-v1",
+  "generatorVersion": "irregular-cube-net-opposites-v1",
+  "status": "discovery-only",
+  "hypothesis": "Models fail to derive 3D opposite-face relations from irregular 2D nets.",
+  "candidates": [
+    {
+      "id": "cn-6d13db28bfe5ef57",
+      "cellId": "cell-irregular-six-face-cube-net",
+      "split": "discovery",
+      "seed": 4000000,
+      "failureModeId": "cube-net-mental-folding",
+      "question": "When the net is folded into a cube, which labeled face is opposite the GOLD face D?",
+      "answerOptions": [
+        "C",
+        "A",
+        "F",
+        "E"
+      ],
+      "expectedAnswer": "F",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "cells": [
+          {
+            "x": 1,
+            "y": 2,
+            "label": 3
+          },
+          {
+            "x": 1,
+            "y": 3,
+            "label": 1
+          },
+          {
+            "x": 1,
+            "y": 1,
+            "label": 0
+          },
+          {
+            "x": 1,
+            "y": 0,
+            "label": 5
+          },
+          {
+            "x": 2,
+            "y": 3,
+            "label": 4
+          },
+          {
+            "x": 0,
+            "y": 3,
+            "label": 2
+          }
+        ],
+        "targetCell": 0,
+        "oppositeCell": 3,
+        "visualVariant": 0
+      }
+    },
+    {
+      "id": "cn-7c6c91b1534a6bb0",
+      "cellId": "cell-irregular-six-face-cube-net",
+      "split": "discovery",
+      "seed": 4000001,
+      "failureModeId": "cube-net-mental-folding",
+      "question": "When the net is folded into a cube, which labeled face is opposite the GOLD face F?",
+      "answerOptions": [
+        "C",
+        "D",
+        "A",
+        "B"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "cells": [
+          {
+            "x": 0,
+            "y": 0,
+            "label": 3
+          },
+          {
+            "x": 1,
+            "y": 0,
+            "label": 5
+          },
+          {
+            "x": 1,
+            "y": 1,
+            "label": 0
+          },
+          {
+            "x": 2,
+            "y": 1,
+            "label": 1
+          },
+          {
+            "x": 3,
+            "y": 1,
+            "label": 4
+          },
+          {
+            "x": 2,
+            "y": 2,
+            "label": 2
+          }
+        ],
+        "targetCell": 1,
+        "oppositeCell": 5,
+        "visualVariant": 1
+      }
+    },
+    {
+      "id": "cn-5f5a2503eed9f208",
+      "cellId": "cell-irregular-six-face-cube-net",
+      "split": "discovery",
+      "seed": 4000002,
+      "failureModeId": "cube-net-mental-folding",
+      "question": "When the net is folded into a cube, which labeled face is opposite the GOLD face D?",
+      "answerOptions": [
+        "B",
+        "C",
+        "F",
+        "E"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "cells": [
+          {
+            "x": 2,
+            "y": 0,
+            "label": 1
+          },
+          {
+            "x": 2,
+            "y": 1,
+            "label": 5
+          },
+          {
+            "x": 2,
+            "y": 2,
+            "label": 3
+          },
+          {
+            "x": 3,
+            "y": 1,
+            "label": 4
+          },
+          {
+            "x": 1,
+            "y": 1,
+            "label": 0
+          },
+          {
+            "x": 0,
+            "y": 1,
+            "label": 2
+          }
+        ],
+        "targetCell": 2,
+        "oppositeCell": 0,
+        "visualVariant": 2
+      }
+    },
+    {
+      "id": "cn-4b4f1782bd721086",
+      "cellId": "cell-irregular-six-face-cube-net",
+      "split": "discovery",
+      "seed": 4000003,
+      "failureModeId": "cube-net-mental-folding",
+      "question": "When the net is folded into a cube, which labeled face is opposite the GOLD face D?",
+      "answerOptions": [
+        "F",
+        "E",
+        "A",
+        "C"
+      ],
+      "expectedAnswer": "E",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "cells": [
+          {
+            "x": 1,
+            "y": 2,
+            "label": 5
+          },
+          {
+            "x": 2,
+            "y": 2,
+            "label": 1
+          },
+          {
+            "x": 1,
+            "y": 1,
+            "label": 4
+          },
+          {
+            "x": 2,
+            "y": 3,
+            "label": 3
+          },
+          {
+            "x": 0,
+            "y": 1,
+            "label": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "label": 2
+          }
+        ],
+        "targetCell": 3,
+        "oppositeCell": 2,
+        "visualVariant": 3
+      }
+    },
+    {
+      "id": "cn-754da705e0bdb943",
+      "cellId": "cell-irregular-six-face-cube-net",
+      "split": "discovery",
+      "seed": 4000004,
+      "failureModeId": "cube-net-mental-folding",
+      "question": "When the net is folded into a cube, which labeled face is opposite the GOLD face B?",
+      "answerOptions": [
+        "C",
+        "E",
+        "D",
+        "A"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "cells": [
+          {
+            "x": 1,
+            "y": 1,
+            "label": 5
+          },
+          {
+            "x": 0,
+            "y": 1,
+            "label": 0
+          },
+          {
+            "x": 2,
+            "y": 1,
+            "label": 3
+          },
+          {
+            "x": 3,
+            "y": 1,
+            "label": 4
+          },
+          {
+            "x": 2,
+            "y": 2,
+            "label": 1
+          },
+          {
+            "x": 1,
+            "y": 0,
+            "label": 2
+          }
+        ],
+        "targetCell": 4,
+        "oppositeCell": 5,
+        "visualVariant": 4
+      }
+    },
+    {
+      "id": "cn-90402834c0f4fede",
+      "cellId": "cell-irregular-six-face-cube-net",
+      "split": "discovery",
+      "seed": 4000005,
+      "failureModeId": "cube-net-mental-folding",
+      "question": "When the net is folded into a cube, which labeled face is opposite the GOLD face C?",
+      "answerOptions": [
+        "F",
+        "D",
+        "A",
+        "E"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "cells": [
+          {
+            "x": 1,
+            "y": 1,
+            "label": 5
+          },
+          {
+            "x": 2,
+            "y": 1,
+            "label": 3
+          },
+          {
+            "x": 3,
+            "y": 1,
+            "label": 4
+          },
+          {
+            "x": 1,
+            "y": 2,
+            "label": 0
+          },
+          {
+            "x": 3,
+            "y": 0,
+            "label": 1
+          },
+          {
+            "x": 0,
+            "y": 2,
+            "label": 2
+          }
+        ],
+        "targetCell": 5,
+        "oppositeCell": 1,
+        "visualVariant": 5
+      }
+    },
+    {
+      "id": "cn-4555f9a18d113680",
+      "cellId": "cell-irregular-six-face-cube-net",
+      "split": "discovery",
+      "seed": 4000006,
+      "failureModeId": "cube-net-mental-folding",
+      "question": "When the net is folded into a cube, which labeled face is opposite the GOLD face A?",
+      "answerOptions": [
+        "F",
+        "C",
+        "E",
+        "B"
+      ],
+      "expectedAnswer": "F",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "cells": [
+          {
+            "x": 2,
+            "y": 1,
+            "label": 0
+          },
+          {
+            "x": 1,
+            "y": 1,
+            "label": 4
+          },
+          {
+            "x": 1,
+            "y": 2,
+            "label": 1
+          },
+          {
+            "x": 3,
+            "y": 1,
+            "label": 3
+          },
+          {
+            "x": 0,
+            "y": 2,
+            "label": 5
+          },
+          {
+            "x": 2,
+            "y": 0,
+            "label": 2
+          }
+        ],
+        "targetCell": 0,
+        "oppositeCell": 4,
+        "visualVariant": 6
+      }
+    },
+    {
+      "id": "cn-127e336c78e1730d",
+      "cellId": "cell-irregular-six-face-cube-net",
+      "split": "discovery",
+      "seed": 4000007,
+      "failureModeId": "cube-net-mental-folding",
+      "question": "When the net is folded into a cube, which labeled face is opposite the GOLD face A?",
+      "answerOptions": [
+        "F",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "cells": [
+          {
+            "x": 2,
+            "y": 1,
+            "label": 3
+          },
+          {
+            "x": 1,
+            "y": 1,
+            "label": 0
+          },
+          {
+            "x": 3,
+            "y": 1,
+            "label": 1
+          },
+          {
+            "x": 0,
+            "y": 1,
+            "label": 4
+          },
+          {
+            "x": 3,
+            "y": 0,
+            "label": 5
+          },
+          {
+            "x": 2,
+            "y": 2,
+            "label": 2
+          }
+        ],
+        "targetCell": 1,
+        "oppositeCell": 2,
+        "visualVariant": 7
+      }
+    }
+  ]
+}
