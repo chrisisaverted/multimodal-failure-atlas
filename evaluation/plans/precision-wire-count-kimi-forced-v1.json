@@ -1,0 +1,20 @@
+{
+  "id": "precision-wire-count-kimi-forced-v1-2026-09-01",
+  "resolvedAt": "2026-09-01",
+  "gateway": "OpenRouter",
+  "evaluationPlanId": "precision-wire-count-discovery-v1",
+  "evaluationPlanSha256": "9d2357edafc3254dd73a175174de4c50cdd45cdb5811a51c101b6f391e7dd657",
+  "stage": "model-native-forced-choice-diagnostic",
+  "casesPerModel": 12,
+  "trials": 1,
+  "temperature": 0,
+  "maxOutputTokens": 512,
+  "reasoning": { "effort": "none", "exclude": true },
+  "scorer": "terminal-option-v2",
+  "allowProviderFallbacks": false,
+  "dataCollection": "deny",
+  "campaignCostCeilingUsd": 2,
+  "models": [
+    { "modelId": "moonshotai/kimi-k3", "modelRevision": "moonshotai/kimi-k3-20260715", "upstreamProvider": "Moonshot AI" }
+  ]
+}

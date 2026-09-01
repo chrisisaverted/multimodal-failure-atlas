@@ -31,6 +31,7 @@
     "freeze:wires": "tsx scripts/freeze-wire-tracing-holdout.ts",
     "plan:wire-count": "tsx scripts/plan-wire-crossing-count.ts",
     "generate:wire-count": "tsx scripts/materialize-wire-crossing-count.ts",
+    "plan:precision-wire-count": "tsx scripts/plan-precision-wire-count.ts",
     "publish:adaptive": "tsx scripts/publish-adaptive-results.ts",
     "evaluate": "tsx scripts/evaluate.ts",
     "evaluate:fixture": "tsx scripts/evaluate.ts evaluation/plans/fixture-smoke.json",

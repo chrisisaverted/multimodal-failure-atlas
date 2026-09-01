@@ -3,11 +3,13 @@ import { sha256 } from "../evaluation/hash";
 
 export const wireCrossingCountVersion = "wire-crossing-count-v1";
 export const crossingCountAnswers = ["4", "6", "8", "10"] as const;
+export const precisionCrossingCountVersion = "wire-crossing-count-v2-precision";
+export const precisionCrossingCountAnswers = ["7", "8", "9", "10"] as const;
 
 export const wireCrossingCountCandidateSchema = z.object({
   id: z.string(), cellId: z.string(), split: z.enum(["discovery", "confirmatory"]), seed: z.number().int(),
   failureModeId: z.literal("identity-through-occlusion"), question: z.string(),
-  answerOptions: z.array(z.enum(crossingCountAnswers)).length(4), expectedAnswer: z.enum(crossingCountAnswers),
+  answerOptions: z.array(z.string().regex(/^\d+$/)).length(4), expectedAnswer: z.string().regex(/^\d+$/),
   humanSolvability: z.literal("unverified"),
   parameters: z.object({ totalCrossings: z.number().int().min(12).max(64), targetCrossings: z.number().int().min(2).max(20), targetWire: z.number().int().min(0).max(3), visualVariant: z.number().int().nonnegative() }),
 });
@@ -17,15 +19,28 @@ function stableId(prefix: string, value: unknown) { return `${prefix}-${sha256(J
 function rotate<T>(values: readonly T[], n: number) { return values.map((_, i) => values[(i + n) % values.length]!); }
 function rng(seed: number) { let s = seed >>> 0; return () => { s = (Math.imul(s, 1664525) + 1013904223) >>> 0; return s / 0x1_0000_0000; }; }
 
-export function createWireCrossingCountCandidate(input: { split: "discovery" | "confirmatory"; seed: number; totalCrossings: number; targetCrossings: (typeof crossingCountAnswers)[number]; targetWire: number; visualVariant?: number }) {
+export function createWireCrossingCountCandidate(input: { split: "discovery" | "confirmatory"; seed: number; totalCrossings: number; targetCrossings: string; targetWire: number; answerSet?: readonly string[]; visualVariant?: number }) {
   const visualVariant = input.visualVariant ?? input.seed % 19;
+  const answerSet = input.answerSet ?? crossingCountAnswers;
+  if (answerSet.length !== 4 || !answerSet.includes(input.targetCrossings)) throw new Error("A four-value answer set must contain the target count.");
   return wireCrossingCountCandidateSchema.parse({
     id: stableId("wc", { ...input, visualVariant }), cellId: stableId("cell", { totalCrossings: input.totalCrossings }),
     split: input.split, seed: input.seed, failureModeId: "identity-through-occlusion",
     question: `How many times does wire ${String.fromCharCode(65 + input.targetWire)} cross another wire?`,
-    answerOptions: rotate(crossingCountAnswers, input.seed % 4), expectedAnswer: input.targetCrossings,
-    humanSolvability: "unverified", parameters: { ...input, targetCrossings: Number(input.targetCrossings), visualVariant },
+    answerOptions: rotate(answerSet, input.seed % 4), expectedAnswer: input.targetCrossings,
+    humanSolvability: "unverified", parameters: { totalCrossings: input.totalCrossings, targetCrossings: Number(input.targetCrossings), targetWire: input.targetWire, visualVariant },
   });
+}
+
+export function createPrecisionWireCrossingCountDiscoveryGrid() {
+  const candidates: WireCrossingCountCandidate[] = []; let seed = 820_000; let cell = 0;
+  for (const totalCrossings of [28, 40, 52]) {
+    for (const [index, targetCrossings] of precisionCrossingCountAnswers.entries()) {
+      candidates.push(createWireCrossingCountCandidate({ split: "discovery", seed, totalCrossings, targetCrossings, targetWire: (index + cell) % 4, answerSet: precisionCrossingCountAnswers })); seed += 1;
+    }
+    cell += 1;
+  }
+  return candidates;
 }
 
 export function createWireCrossingCountDiscoveryGrid() {

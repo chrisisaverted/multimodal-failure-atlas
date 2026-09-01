@@ -1,0 +1,3 @@
+import { mkdir, writeFile } from "node:fs/promises"; import { dirname, resolve } from "node:path";
+import { createPrecisionWireCrossingCountDiscoveryGrid, precisionCrossingCountVersion } from "../src/lib/discovery/wire-crossing-count";
+const output=resolve("evaluation/discovery/precision-wire-count-discovery-v1.json"),candidates=createPrecisionWireCrossingCountDiscoveryGrid();await mkdir(dirname(output),{recursive:true});await writeFile(output,`${JSON.stringify({id:"precision-wire-count-discovery-v1",generatorVersion:precisionCrossingCountVersion,status:"discovery-only",hypothesis:"Adjacent exact-count options remove approximate-magnitude shortcuts from identity-conditioned crossing counts.",candidates},null,2)}\n`);console.log({output,candidates:candidates.length});

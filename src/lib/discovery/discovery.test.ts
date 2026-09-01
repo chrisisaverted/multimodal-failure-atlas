@@ -32,7 +32,9 @@ import {
   countTargetCrossings,
   createWireCrossingCountDiscoveryGrid,
   createWireCrossingCountHoldout,
+  createPrecisionWireCrossingCountDiscoveryGrid,
   crossingCountAnswers,
+  precisionCrossingCountAnswers,
 } from "./wire-crossing-count";
 
 describe("adaptive multimodal discovery", () => {
@@ -48,6 +50,16 @@ describe("adaptive multimodal discovery", () => {
     expect(holdout.every((candidate) => candidate.seed >= 940_000)).toBe(true);
     for (const answer of crossingCountAnswers) expect(holdout.filter((candidate) => candidate.expectedAnswer === answer)).toHaveLength(4);
   });
+
+  it("uses adjacent exact counts in every precision-search cell", () => {
+    const candidates = createPrecisionWireCrossingCountDiscoveryGrid();
+    expect(candidates).toHaveLength(12);
+    for (const cellId of new Set(candidates.map((candidate) => candidate.cellId))) {
+      expect(candidates.filter((candidate) => candidate.cellId === cellId).map((candidate) => candidate.expectedAnswer).sort()).toEqual([...precisionCrossingCountAnswers].sort());
+    }
+    for (const candidate of candidates) expect(countTargetCrossings(candidate)).toBe(candidate.parameters.targetCrossings);
+  });
+
 
   it("balances wire endpoints and independently traces every exact answer", () => {
     const candidates = createWireTracingDiscoveryGrid();
