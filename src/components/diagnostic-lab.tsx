@@ -2,37 +2,26 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Check, Copy, Download, ImageDown, Pause, Play, RefreshCw, RotateCcw } from "lucide-react";
-import { defaultDiagnosticParams, generateInstance, generatorVersion } from "@/lib/generators";
+import {
+  defaultDiagnosticParams,
+  diagnosticBurdenSummary,
+  generateInstance,
+  generatorVersion,
+  isVideoGenerator,
+} from "@/lib/generators";
 import type { GeneratorKey } from "@/lib/types";
 import { DiagnosticVisual } from "./diagnostic-visual";
-
-const videoKeys = new Set<GeneratorKey>([
-  "brief-event",
-  "event-order",
-  "identity-occlusion",
-  "event-counting",
-  "gated-frequency",
-  "gated-pair-collision",
-  "route-turn-integration",
-  "target-transition-count",
-  "sequential-swap-tracking",
-  "signed-state-accumulation",
-  "zone-entry-count",
-  "selective-flash-count",
-  "conservation-ledger",
-  "trajectory-intersections",
-]);
 
 export function DiagnosticLab({ generator, roomy = false }: { generator: GeneratorKey; roomy?: boolean }) {
   const [params, setParams] = useState(defaultDiagnosticParams);
   const [revealed, setRevealed] = useState(false);
-  const [playing, setPlaying] = useState(videoKeys.has(generator));
+  const [playing, setPlaying] = useState(isVideoGenerator(generator));
   const [playhead, setPlayhead] = useState(0);
   const playheadRef = useRef(0);
   const canvasRef = useRef<HTMLDivElement>(null);
   const [copied, setCopied] = useState(false);
   const instance = useMemo(() => generateInstance(generator, params), [generator, params]);
-  const isVideo = videoKeys.has(generator);
+  const isVideo = isVideoGenerator(generator);
 
   useEffect(() => {
     if (!isVideo || !playing) return;
@@ -146,6 +135,7 @@ export function DiagnosticLab({ generator, roomy = false }: { generator: Generat
               setParams((current) => ({ ...current, difficulty: Number(event.target.value) }))
             }
           />
+          <small>{diagnosticBurdenSummary(instance)}</small>
         </label>
         <label>
           <span>

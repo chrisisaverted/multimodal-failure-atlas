@@ -764,6 +764,12 @@ select {
   accent-color: var(--vermillion);
   width: 100%;
 }
+.lab-controls label small {
+  min-height: 2.4em;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.2;
+}
 .control-buttons {
   display: flex;
   gap: 7px;

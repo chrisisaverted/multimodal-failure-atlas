@@ -1,38 +1,15 @@
 import { describe, expect, it } from "vitest";
 import { renderDiagnosticSvg } from "./evaluation/render";
-import { generateInstance } from "./generators";
+import {
+  allGeneratorKeys,
+  diagnosticBurdenSummary,
+  generateInstance,
+  isVideoGenerator,
+  videoGeneratorKeys,
+} from "./generators";
 import type { GeneratorKey } from "./types";
 
-const keys: GeneratorKey[] = [
-  "small-object",
-  "patch-phase",
-  "attribute-binding",
-  "numerosity-density",
-  "brief-event",
-  "event-order",
-  "identity-occlusion",
-  "event-counting",
-  "dense-symmetry",
-  "dense-xor",
-  "gated-frequency",
-  "gated-pair-collision",
-  "route-turn-integration",
-  "target-transition-count",
-  "sequential-swap-tracking",
-  "signed-state-accumulation",
-  "parity-verification",
-  "change-localization",
-  "maze-reachability",
-  "rotation-correspondence",
-  "wire-crossing-count",
-  "enclosure-depth",
-  "cube-stack-count",
-  "graph-degree-topology",
-  "zone-entry-count",
-  "selective-flash-count",
-  "conservation-ledger",
-  "trajectory-intersections",
-];
+const keys: GeneratorKey[] = [...allGeneratorKeys];
 
 function countDirectionChanges(path: number[]) {
   let turns = 0;
@@ -128,6 +105,13 @@ function countIntersections(path: number[]) {
 }
 
 describe("diagnostic generators", () => {
+  it("has one canonical registry with an even image-video split", () => {
+    expect(keys).toHaveLength(28);
+    expect(new Set(keys).size).toBe(28);
+    expect(videoGeneratorKeys).toHaveLength(14);
+    expect(keys.filter(isVideoGenerator)).toEqual(videoGeneratorKeys);
+  });
+
   for (const key of keys) {
     it(`${key} is deterministic`, () => {
       const params = { seed: 421, difficulty: 63, variant: 2 };
@@ -547,6 +531,15 @@ describe("diagnostic generators", () => {
       const renderSweep = (instance: typeof easy) =>
         Array.from({ length: 31 }, (_, index) => renderDiagnosticSvg(instance, index / 30)).join("\n");
       expect(renderSweep(easy)).not.toBe(renderSweep(hard));
+    }
+  });
+
+  it("explains the concrete burden behind every difficulty value", () => {
+    for (const key of keys) {
+      const easy = generateInstance(key, { seed: 4, difficulty: 0, variant: 0 });
+      const hard = generateInstance(key, { seed: 4, difficulty: 100, variant: 0 });
+      expect(diagnosticBurdenSummary(easy).length).toBeGreaterThan(8);
+      expect(diagnosticBurdenSummary(hard)).not.toBe(diagnosticBurdenSummary(easy));
     }
   });
 });

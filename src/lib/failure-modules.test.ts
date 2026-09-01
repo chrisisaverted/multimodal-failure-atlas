@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import admittedFamilies from "@/data/admitted-families.json";
 import { failureModules } from "./failure-modules";
+import { isVideoGenerator } from "./generators";
 
 describe("failure module contract", () => {
   it("registers all twenty admitted families plus eight exploratory diagnostics", () => {
@@ -8,6 +9,10 @@ describe("failure module contract", () => {
     const ids = new Set(failureModules.map((module) => module.id));
     expect(ids.size).toBe(28);
     expect(admittedFamilies.families.every((family) => ids.has(family.catalogueId))).toBe(true);
+    for (const family of admittedFamilies.families) {
+      const diagnostic = failureModules.find((module) => module.id === family.catalogueId)!;
+      expect(isVideoGenerator(diagnostic.metadata.generator!)).toBe(family.modality === "video");
+    }
   });
 
   for (const diagnostic of failureModules) {

@@ -2,6 +2,60 @@ import type { DiagnosticInstance, DiagnosticParams, GeneratorKey } from "./types
 
 export const generatorVersion = "2.0.0";
 
+export const allGeneratorKeys = [
+  "small-object",
+  "patch-phase",
+  "attribute-binding",
+  "numerosity-density",
+  "brief-event",
+  "event-order",
+  "identity-occlusion",
+  "event-counting",
+  "dense-symmetry",
+  "dense-xor",
+  "gated-frequency",
+  "gated-pair-collision",
+  "route-turn-integration",
+  "target-transition-count",
+  "sequential-swap-tracking",
+  "signed-state-accumulation",
+  "parity-verification",
+  "change-localization",
+  "maze-reachability",
+  "rotation-correspondence",
+  "wire-crossing-count",
+  "enclosure-depth",
+  "cube-stack-count",
+  "graph-degree-topology",
+  "zone-entry-count",
+  "selective-flash-count",
+  "conservation-ledger",
+  "trajectory-intersections",
+] as const satisfies readonly GeneratorKey[];
+
+export const videoGeneratorKeys = [
+  "brief-event",
+  "event-order",
+  "identity-occlusion",
+  "event-counting",
+  "gated-frequency",
+  "gated-pair-collision",
+  "route-turn-integration",
+  "target-transition-count",
+  "sequential-swap-tracking",
+  "signed-state-accumulation",
+  "zone-entry-count",
+  "selective-flash-count",
+  "conservation-ledger",
+  "trajectory-intersections",
+] as const satisfies readonly GeneratorKey[];
+
+const videoGeneratorSet = new Set<GeneratorKey>(videoGeneratorKeys);
+
+export function isVideoGenerator(generator: GeneratorKey) {
+  return videoGeneratorSet.has(generator);
+}
+
 function mulberry32(seed: number) {
   let state = seed >>> 0;
   return () => {
@@ -1045,6 +1099,68 @@ export function generateInstance(generator: GeneratorKey, params: DiagnosticPara
           "Difficulty lengthens the invisible orthogonal route; the oracle exhaustively tests every nonadjacent horizontal–vertical segment pair.",
       };
     }
+  }
+}
+
+export function diagnosticBurdenSummary(instance: DiagnosticInstance) {
+  const latent = instance.latent;
+  switch (instance.generator) {
+    case "small-object":
+      return `${latent.size}px target among ${latent.distractors} marks`;
+    case "patch-phase":
+      return `${latent.strokeWidth}px outlines at patch phase ${latent.offset}`;
+    case "attribute-binding":
+      return `${latent.itemSize}px objects across four bindings`;
+    case "numerosity-density":
+      return `${latent.count} objects in ${latent.spread}px spread at fixed visual mass`;
+    case "brief-event":
+      return `${latent.durationMs}ms answer-bearing event`;
+    case "event-order":
+      return `${latent.eventGapMs}ms between ordered events`;
+    case "identity-occlusion":
+      return `${latent.occlusionMs}ms identity occlusion`;
+    case "event-counting":
+      return `${latent.count} flashes, ${latent.intervalMs}ms apart`;
+    case "dense-symmetry":
+      return `${latent.gridSize}×${latent.gridSize} panels, ${latent.defectCount} defect(s) per distractor`;
+    case "dense-xor":
+      return `${latent.gridSize}×${latent.gridSize} XOR, ${latent.distractorFlips} near-miss bit(s)`;
+    case "gated-frequency":
+      return `${latent.eventCount} gated flashes across 36 cells`;
+    case "gated-pair-collision":
+      return `${latent.eventCount} collisions with ${latent.wrongGateTargetCount} wrong-gate trap(s)`;
+    case "route-turn-integration":
+      return `${latent.stepCount} invisible route moves`;
+    case "target-transition-count":
+      return `${latent.eventCount} symbols requiring adjacent-state updates`;
+    case "sequential-swap-tracking":
+      return `${latent.swapCount} identity permutation updates`;
+    case "signed-state-accumulation":
+      return `${latent.eventCount} signed counter updates`;
+    case "parity-verification":
+      return `${latent.gridSize}×${latent.gridSize} matrices, ${latent.defectCount} flipped bit(s)`;
+    case "change-localization":
+      return `one change among ${Number(latent.gridSize) ** 2} registered glyphs`;
+    case "maze-reachability":
+      return `${Number(latent.gridSize) ** 2}-cell disconnected maze graph`;
+    case "rotation-correspondence":
+      return `${latent.pointCount}-point constellation, ${latent.defectCount}-point near misses`;
+    case "wire-crossing-count":
+      return `${latent.crossingCount} target crossings amid ${latent.distractorCount} clutter lines`;
+    case "enclosure-depth":
+      return `${latent.targetDepth} nested boundaries plus ${latent.clutterCount} clutter contours`;
+    case "cube-stack-count":
+      return `3×3 hidden columns up to height ${latent.maximumHeight}`;
+    case "graph-degree-topology":
+      return `${latent.nodeCount}-node endpoint-degree audit`;
+    case "zone-entry-count":
+      return `${latent.entryCount} target entries among ${latent.distractorCount} distractors`;
+    case "selective-flash-count":
+      return `${latent.flashDurationMs}ms flashes among ${latent.distractorCount} distractors`;
+    case "conservation-ledger":
+      return `${latent.transferCount} conserved register transfers`;
+    case "trajectory-intersections":
+      return `${latent.segmentCount}-segment invisible geometric path`;
   }
 }
 
