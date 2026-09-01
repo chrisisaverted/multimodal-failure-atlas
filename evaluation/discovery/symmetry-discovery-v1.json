@@ -1,0 +1,176 @@
+{
+  "id": "symmetry-discovery-v1",
+  "generatorVersion": "symmetry-search-v1",
+  "status": "discovery-only",
+  "hypothesis": "Models fail global exact symmetry verification when near-symmetric distractors each contain one local defect.",
+  "candidates": [
+    {
+      "id": "sy-a173066a6703f60b",
+      "cellId": "cell-24x24-single-defect",
+      "split": "discovery",
+      "seed": 3100000,
+      "failureModeId": "global-bilateral-symmetry-verification",
+      "question": "Which panel is PERFECTLY mirror-symmetric across its red vertical axis? The other three each contain one mismatched dot.",
+      "answerOptions": [
+        "B",
+        "D",
+        "A",
+        "C"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 0,
+        "gridSize": 24,
+        "visualVariant": 0
+      }
+    },
+    {
+      "id": "sy-bad81aa42a3e7f53",
+      "cellId": "cell-24x24-single-defect",
+      "split": "discovery",
+      "seed": 3100001,
+      "failureModeId": "global-bilateral-symmetry-verification",
+      "question": "Which panel is PERFECTLY mirror-symmetric across its red vertical axis? The other three each contain one mismatched dot.",
+      "answerOptions": [
+        "B",
+        "D",
+        "A",
+        "C"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 1,
+        "gridSize": 24,
+        "visualVariant": 1
+      }
+    },
+    {
+      "id": "sy-ba1eec5ffba899bc",
+      "cellId": "cell-24x24-single-defect",
+      "split": "discovery",
+      "seed": 3100002,
+      "failureModeId": "global-bilateral-symmetry-verification",
+      "question": "Which panel is PERFECTLY mirror-symmetric across its red vertical axis? The other three each contain one mismatched dot.",
+      "answerOptions": [
+        "D",
+        "B",
+        "A",
+        "C"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 2,
+        "gridSize": 24,
+        "visualVariant": 2
+      }
+    },
+    {
+      "id": "sy-3e8bcb2cf91fb35f",
+      "cellId": "cell-24x24-single-defect",
+      "split": "discovery",
+      "seed": 3100003,
+      "failureModeId": "global-bilateral-symmetry-verification",
+      "question": "Which panel is PERFECTLY mirror-symmetric across its red vertical axis? The other three each contain one mismatched dot.",
+      "answerOptions": [
+        "B",
+        "D",
+        "A",
+        "C"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 3,
+        "gridSize": 24,
+        "visualVariant": 3
+      }
+    },
+    {
+      "id": "sy-6c8b0e4376dd2262",
+      "cellId": "cell-24x24-single-defect",
+      "split": "discovery",
+      "seed": 3100004,
+      "failureModeId": "global-bilateral-symmetry-verification",
+      "question": "Which panel is PERFECTLY mirror-symmetric across its red vertical axis? The other three each contain one mismatched dot.",
+      "answerOptions": [
+        "D",
+        "A",
+        "B",
+        "C"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 0,
+        "gridSize": 24,
+        "visualVariant": 4
+      }
+    },
+    {
+      "id": "sy-99405c50b0c1d12f",
+      "cellId": "cell-24x24-single-defect",
+      "split": "discovery",
+      "seed": 3100005,
+      "failureModeId": "global-bilateral-symmetry-verification",
+      "question": "Which panel is PERFECTLY mirror-symmetric across its red vertical axis? The other three each contain one mismatched dot.",
+      "answerOptions": [
+        "A",
+        "D",
+        "B",
+        "C"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 1,
+        "gridSize": 24,
+        "visualVariant": 5
+      }
+    },
+    {
+      "id": "sy-6c20528947321267",
+      "cellId": "cell-24x24-single-defect",
+      "split": "discovery",
+      "seed": 3100006,
+      "failureModeId": "global-bilateral-symmetry-verification",
+      "question": "Which panel is PERFECTLY mirror-symmetric across its red vertical axis? The other three each contain one mismatched dot.",
+      "answerOptions": [
+        "D",
+        "A",
+        "B",
+        "C"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 2,
+        "gridSize": 24,
+        "visualVariant": 6
+      }
+    },
+    {
+      "id": "sy-3130fb47b9c0e2cd",
+      "cellId": "cell-24x24-single-defect",
+      "split": "discovery",
+      "seed": 3100007,
+      "failureModeId": "global-bilateral-symmetry-verification",
+      "question": "Which panel is PERFECTLY mirror-symmetric across its red vertical axis? The other three each contain one mismatched dot.",
+      "answerOptions": [
+        "D",
+        "A",
+        "B",
+        "C"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 3,
+        "gridSize": 24,
+        "visualVariant": 7
+      }
+    }
+  ]
+}

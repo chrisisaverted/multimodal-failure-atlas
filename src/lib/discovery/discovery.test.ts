@@ -82,13 +82,24 @@ import { createMotDiscoveryGrid, motEndpointAssignment, renderMotSvg } from "./m
 import { createDynamicStateDiscoveryGrid, createDynamicStateHoldout, dynamicFinalState, renderDynamicStateSvg } from "./dynamic-state";
 import { createPaperFoldingDiscoveryGrid, paperOptionPatterns, unfoldPunches } from "./paper-folding";
 import { createPeriodicAnomalyGrid, periodicLaneStarts } from "./periodic-anomaly";
-import { createCubeStackGrid, cubeHeights } from "./cube-stack";
+import { createCubeStackGrid, createCubeStackHoldout, cubeHeights } from "./cube-stack";
 import { bindingSequences, createBindingGrid } from "./temporal-binding";
 import { createMirrorRayGrid, createMirrorRayHardGrid, traceMirrorRay } from "./mirror-ray";
 import { applyTransfers, createCausalTransferGrid } from "./causal-transfer";
 import { applyConservation, createConservationGrid } from "./conservation-ledger";
+import { createSymmetryGrid, symmetryMatrix } from "./symmetry-search";
 
 describe("adaptive multimodal discovery", () => {
+  it("places exactly one perfectly bilateral field in each symmetry case", () => {
+    for (const candidate of createSymmetryGrid()) {
+      const symmetric = Array.from({ length: 4 }, (_, panel) =>
+        symmetryMatrix(candidate, panel).every((row) => row.every((value, x) => value === row[23 - x])),
+      );
+      expect(symmetric.filter(Boolean)).toHaveLength(1);
+      expect(symmetric[candidate.parameters.correctPanel]).toBe(true);
+    }
+  });
+
   it("conserves tokens and balances unique final maxima", () => {
     const candidates = createConservationGrid();
     expect(candidates).toHaveLength(8);
@@ -143,6 +154,14 @@ describe("adaptive multimodal discovery", () => {
       );
       expect(totals.filter((total) => total === candidate.parameters.targetTotal)).toHaveLength(1);
     }
+  });
+
+  it("reserves a balanced disjoint cube-stack holdout", () => {
+    const holdout = createCubeStackHoldout();
+    expect(holdout).toHaveLength(16);
+    expect(holdout.every((candidate) => candidate.seed >= 2_610_000)).toBe(true);
+    for (const answer of ["A", "B", "C", "D"])
+      expect(holdout.filter((candidate) => candidate.expectedAnswer === answer)).toHaveLength(4);
   });
 
   it("balances exactly one omitted beat across periodic lanes", () => {

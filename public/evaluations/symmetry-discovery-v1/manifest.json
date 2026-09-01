@@ -1,0 +1,249 @@
+{
+  "id": "symmetry-discovery-v1",
+  "planSha256": "d24c3a82872cb1402572fa35293be592690ec755c32eeed4bbd52bb9f8f0856e",
+  "generatorVersion": "symmetry-search-v1",
+  "renderer": "symmetry-dot-field-svg-v1",
+  "fps": 0,
+  "cases": [
+    {
+      "candidateId": "sy-a173066a6703f60b",
+      "cellId": "cell-24x24-single-defect",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four 24×24 dot fields; three contain exactly one bilateral mismatch.",
+      "failureModeId": "global-bilateral-symmetry-verification",
+      "generator": "symmetry-search",
+      "seed": 3100000,
+      "difficulty": 82,
+      "variant": 0,
+      "artifact": "public/evaluations/symmetry-discovery-v1/sy-a173066a6703f60b.png",
+      "mimeType": "image/png",
+      "question": "Which panel is PERFECTLY mirror-symmetric across its red vertical axis? The other three each contain one mismatched dot.",
+      "answerOptions": [
+        "B",
+        "D",
+        "A",
+        "C"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "7f3f8ec52b8d2b043ba23afc2fa2a2cd11508da72028e522fd11541f875421f9",
+      "parameters": {
+        "correctPanel": 0,
+        "gridSize": 24,
+        "visualVariant": 0
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Verify bilateral symmetry across the red axis and return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "sy-bad81aa42a3e7f53",
+      "cellId": "cell-24x24-single-defect",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four 24×24 dot fields; three contain exactly one bilateral mismatch.",
+      "failureModeId": "global-bilateral-symmetry-verification",
+      "generator": "symmetry-search",
+      "seed": 3100001,
+      "difficulty": 82,
+      "variant": 1,
+      "artifact": "public/evaluations/symmetry-discovery-v1/sy-bad81aa42a3e7f53.png",
+      "mimeType": "image/png",
+      "question": "Which panel is PERFECTLY mirror-symmetric across its red vertical axis? The other three each contain one mismatched dot.",
+      "answerOptions": [
+        "B",
+        "D",
+        "A",
+        "C"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "1d1df6fcae8c65f9521be934cb64a0a1efd0640b42c30b579683480ef3a1686d",
+      "parameters": {
+        "correctPanel": 1,
+        "gridSize": 24,
+        "visualVariant": 1
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Verify bilateral symmetry across the red axis and return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "sy-ba1eec5ffba899bc",
+      "cellId": "cell-24x24-single-defect",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four 24×24 dot fields; three contain exactly one bilateral mismatch.",
+      "failureModeId": "global-bilateral-symmetry-verification",
+      "generator": "symmetry-search",
+      "seed": 3100002,
+      "difficulty": 82,
+      "variant": 2,
+      "artifact": "public/evaluations/symmetry-discovery-v1/sy-ba1eec5ffba899bc.png",
+      "mimeType": "image/png",
+      "question": "Which panel is PERFECTLY mirror-symmetric across its red vertical axis? The other three each contain one mismatched dot.",
+      "answerOptions": [
+        "D",
+        "B",
+        "A",
+        "C"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "2f4cbad2b793afbe2e09033b7d50ff3e0eec68fb2400c049aa3a6119278e916f",
+      "parameters": {
+        "correctPanel": 2,
+        "gridSize": 24,
+        "visualVariant": 2
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Verify bilateral symmetry across the red axis and return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "sy-3e8bcb2cf91fb35f",
+      "cellId": "cell-24x24-single-defect",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four 24×24 dot fields; three contain exactly one bilateral mismatch.",
+      "failureModeId": "global-bilateral-symmetry-verification",
+      "generator": "symmetry-search",
+      "seed": 3100003,
+      "difficulty": 82,
+      "variant": 3,
+      "artifact": "public/evaluations/symmetry-discovery-v1/sy-3e8bcb2cf91fb35f.png",
+      "mimeType": "image/png",
+      "question": "Which panel is PERFECTLY mirror-symmetric across its red vertical axis? The other three each contain one mismatched dot.",
+      "answerOptions": [
+        "B",
+        "D",
+        "A",
+        "C"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "4ed2c62bef58857f05ca854d2a5c3082a312dd6c62fad4d6c1eb2df66bc51351",
+      "parameters": {
+        "correctPanel": 3,
+        "gridSize": 24,
+        "visualVariant": 3
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Verify bilateral symmetry across the red axis and return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "sy-6c8b0e4376dd2262",
+      "cellId": "cell-24x24-single-defect",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four 24×24 dot fields; three contain exactly one bilateral mismatch.",
+      "failureModeId": "global-bilateral-symmetry-verification",
+      "generator": "symmetry-search",
+      "seed": 3100004,
+      "difficulty": 82,
+      "variant": 4,
+      "artifact": "public/evaluations/symmetry-discovery-v1/sy-6c8b0e4376dd2262.png",
+      "mimeType": "image/png",
+      "question": "Which panel is PERFECTLY mirror-symmetric across its red vertical axis? The other three each contain one mismatched dot.",
+      "answerOptions": [
+        "D",
+        "A",
+        "B",
+        "C"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "a1e969e61a093b1dd1f546b292c19adfe93a974375da06fe1187473c4889ff89",
+      "parameters": {
+        "correctPanel": 0,
+        "gridSize": 24,
+        "visualVariant": 4
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Verify bilateral symmetry across the red axis and return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "sy-99405c50b0c1d12f",
+      "cellId": "cell-24x24-single-defect",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four 24×24 dot fields; three contain exactly one bilateral mismatch.",
+      "failureModeId": "global-bilateral-symmetry-verification",
+      "generator": "symmetry-search",
+      "seed": 3100005,
+      "difficulty": 82,
+      "variant": 5,
+      "artifact": "public/evaluations/symmetry-discovery-v1/sy-99405c50b0c1d12f.png",
+      "mimeType": "image/png",
+      "question": "Which panel is PERFECTLY mirror-symmetric across its red vertical axis? The other three each contain one mismatched dot.",
+      "answerOptions": [
+        "A",
+        "D",
+        "B",
+        "C"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "e8773948c729baa51ef43583391b50a428abbbdff313c98e3550ed17a4a25ad9",
+      "parameters": {
+        "correctPanel": 1,
+        "gridSize": 24,
+        "visualVariant": 5
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Verify bilateral symmetry across the red axis and return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "sy-6c20528947321267",
+      "cellId": "cell-24x24-single-defect",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four 24×24 dot fields; three contain exactly one bilateral mismatch.",
+      "failureModeId": "global-bilateral-symmetry-verification",
+      "generator": "symmetry-search",
+      "seed": 3100006,
+      "difficulty": 82,
+      "variant": 6,
+      "artifact": "public/evaluations/symmetry-discovery-v1/sy-6c20528947321267.png",
+      "mimeType": "image/png",
+      "question": "Which panel is PERFECTLY mirror-symmetric across its red vertical axis? The other three each contain one mismatched dot.",
+      "answerOptions": [
+        "D",
+        "A",
+        "B",
+        "C"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "d39b514cc6b6d32f4502bffb478c8f3659e5005ae2be8a396260ae7b2303fc66",
+      "parameters": {
+        "correctPanel": 2,
+        "gridSize": 24,
+        "visualVariant": 6
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Verify bilateral symmetry across the red axis and return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "sy-3130fb47b9c0e2cd",
+      "cellId": "cell-24x24-single-defect",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four 24×24 dot fields; three contain exactly one bilateral mismatch.",
+      "failureModeId": "global-bilateral-symmetry-verification",
+      "generator": "symmetry-search",
+      "seed": 3100007,
+      "difficulty": 82,
+      "variant": 7,
+      "artifact": "public/evaluations/symmetry-discovery-v1/sy-3130fb47b9c0e2cd.png",
+      "mimeType": "image/png",
+      "question": "Which panel is PERFECTLY mirror-symmetric across its red vertical axis? The other three each contain one mismatched dot.",
+      "answerOptions": [
+        "D",
+        "A",
+        "B",
+        "C"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "fd43eb35c0fd0cc76c52367c975fcacfc37360b889bd50be8c85351b7bea50ee",
+      "parameters": {
+        "correctPanel": 3,
+        "gridSize": 24,
+        "visualVariant": 7
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Verify bilateral symmetry across the red axis and return exactly one allowed panel letter."
+    }
+  ]
+}
