@@ -1,0 +1,24 @@
+{
+  "id": "visual-circuit-screen-v1-kimi-no-reasoning-2026-09-01",
+  "resolvedAt": "2026-09-01",
+  "gateway": "OpenRouter",
+  "evaluationPlanId": "visual-circuit-discovery-v1",
+  "evaluationPlanSha256": "f2b56193d2c7004c9abfd573a3b178b9778fcc28b84a81e939de7be7f15350e0",
+  "stage": "fixed-scalar-balanced-visual-circuit-screen",
+  "casesPerModel": 8,
+  "trials": 1,
+  "temperature": 0,
+  "maxOutputTokens": 512,
+  "reasoning": { "effort": "none", "exclude": true },
+  "scorer": "terminal-option-v3",
+  "allowProviderFallbacks": false,
+  "dataCollection": "deny",
+  "campaignCostCeilingUsd": 4,
+  "models": [
+    {
+      "modelId": "moonshotai/kimi-k3",
+      "modelRevision": "moonshotai/kimi-k3-20260715",
+      "upstreamProvider": "Moonshot AI"
+    }
+  ]
+}

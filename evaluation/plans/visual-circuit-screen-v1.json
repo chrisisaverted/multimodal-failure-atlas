@@ -1,0 +1,29 @@
+{
+  "id": "visual-circuit-screen-v1-low-reasoning-2026-09-01",
+  "resolvedAt": "2026-09-01",
+  "gateway": "OpenRouter",
+  "evaluationPlanId": "visual-circuit-discovery-v1",
+  "evaluationPlanSha256": "f2b56193d2c7004c9abfd573a3b178b9778fcc28b84a81e939de7be7f15350e0",
+  "stage": "fixed-scalar-balanced-visual-circuit-screen",
+  "casesPerModel": 8,
+  "trials": 1,
+  "temperature": 0,
+  "maxOutputTokens": 8192,
+  "reasoning": { "effort": "low", "exclude": true },
+  "scorer": "terminal-option-v3",
+  "allowProviderFallbacks": false,
+  "dataCollection": "deny",
+  "campaignCostCeilingUsd": 4,
+  "models": [
+    {
+      "modelId": "google/gemini-3.7-flash",
+      "modelRevision": "google/gemini-3.7-flash-20260813",
+      "upstreamProvider": "Google AI Studio"
+    },
+    {
+      "modelId": "qwen/qwen3.8-max",
+      "modelRevision": "qwen/qwen3.8-max-20260803",
+      "upstreamProvider": "Alibaba"
+    }
+  ]
+}
