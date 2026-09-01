@@ -1,0 +1,24 @@
+{
+  "id": "pair-collision-hard-screen-seed-v1-no-reasoning-2026-09-01",
+  "resolvedAt": "2026-09-01",
+  "gateway": "OpenRouter",
+  "evaluationPlanId": "pair-collision-hard-discovery-v1",
+  "evaluationPlanSha256": "6a91c41a0b30925a6eb4a9b4cbdc765b2e8eb09e102cd3c2cca4444df36d6574",
+  "stage": "five-route-variable-target-pair-screen",
+  "casesPerModel": 8,
+  "trials": 1,
+  "temperature": 0,
+  "maxOutputTokens": 4096,
+  "reasoning": { "effort": "none", "exclude": true },
+  "scorer": "terminal-option-v3",
+  "allowProviderFallbacks": false,
+  "dataCollection": "deny",
+  "campaignCostCeilingUsd": 5,
+  "models": [
+    {
+      "modelId": "bytedance-seed/seed-2-1-turbo",
+      "modelRevision": "bytedance-seed/seed-2-1-turbo-20260810",
+      "upstreamProvider": "Seed"
+    }
+  ]
+}
