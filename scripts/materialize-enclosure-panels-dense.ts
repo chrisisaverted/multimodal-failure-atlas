@@ -34,9 +34,9 @@ for (const candidate of plan.candidates) {
       candidateId: candidate.id,
       cellId: candidate.cellId,
       split: candidate.split,
-      condition: oracle ? "numbered-closed-boundaries" : "native-image",
+      condition: oracle ? "exact-count-badges" : "native-image",
       interventionDescription: oracle
-        ? "Every closed boundary in every panel is highlighted and numbered."
+        ? "Closed boundaries are recolored blue and every panel receives its exact count badge."
         : "All panels retain identical structural load, while the target depth stays fixed at 18.",
       failureModeId: candidate.failureModeId,
       generator: "enclosure-panels-dense",
@@ -52,7 +52,7 @@ for (const candidate of plan.candidates) {
       parameters: candidate.parameters,
       humanSolvability: candidate.humanSolvability,
       systemMessage: oracle
-        ? "Use the numbered boundary markers. Return exactly one allowed panel letter."
+        ? "Use the exact count badges. Return exactly one allowed panel letter."
         : "Count only complete closed boundaries in each panel. Return exactly one allowed panel letter without explanation.",
     });
   }

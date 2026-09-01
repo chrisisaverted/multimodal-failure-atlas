@@ -44,6 +44,7 @@
     "generate:enclosure-panels": "tsx scripts/materialize-enclosure-panels.ts",
     "plan:enclosure-panels:dense": "tsx scripts/plan-enclosure-panels-dense.ts",
     "generate:enclosure-panels:dense": "tsx scripts/materialize-enclosure-panels-dense.ts",
+    "freeze:enclosure-panels:dense": "tsx scripts/freeze-enclosure-panels-dense.ts",
     "plan:visual-circuit": "tsx scripts/plan-visual-circuit.ts",
     "generate:visual-circuit": "tsx scripts/materialize-visual-circuit.ts",
     "plan:rotation-correspondence": "tsx scripts/plan-rotation-correspondence.ts",

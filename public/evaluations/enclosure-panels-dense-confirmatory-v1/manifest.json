@@ -1,0 +1,1257 @@
+{
+  "id": "enclosure-panels-dense-confirmatory-v1",
+  "planSha256": "3b21d657f3e690cc339cd354bc77cec3daba2ce9d41628834aef48958b240b04",
+  "generatorVersion": "enclosure-panels-dense-v1",
+  "renderer": "enclosure-panels-dense-svg-v1",
+  "fps": 0,
+  "cases": [
+    {
+      "candidateId": "epd-3ce498f7f4b2f20a",
+      "cellId": "cell-debef8e174639214",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "All panels retain identical structural load, while the target depth stays fixed at 18.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-panels-dense",
+      "seed": 3110000,
+      "difficulty": 92,
+      "variant": 1100,
+      "artifact": "public/evaluations/enclosure-panels-dense-confirmatory-v1/epd-3ce498f7f4b2f20a.png",
+      "mimeType": "image/png",
+      "question": "Which panel contains exactly 18 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "9711c30fd234f2cc893dd1b84f4fef0e22b3f01fee442830b6e7910e09423e77",
+      "parameters": {
+        "targetDepth": 18,
+        "panelDepths": [
+          18,
+          19,
+          16,
+          17
+        ],
+        "targetSlot": 0,
+        "templateVariant": 0,
+        "openDecoysPerPanel": 8,
+        "irregularity": 0.35,
+        "visualVariant": 1100
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count only complete closed boundaries in each panel. Return exactly one allowed panel letter without explanation."
+    },
+    {
+      "candidateId": "epd-3ce498f7f4b2f20a",
+      "cellId": "cell-debef8e174639214",
+      "split": "confirmatory",
+      "condition": "exact-count-badges",
+      "interventionDescription": "Closed boundaries are recolored blue and every panel receives its exact count badge.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-panels-dense",
+      "seed": 3110000,
+      "difficulty": 92,
+      "variant": 2100,
+      "artifact": "public/evaluations/enclosure-panels-dense-confirmatory-v1/epd-3ce498f7f4b2f20a-oracle.png",
+      "mimeType": "image/png",
+      "question": "Which panel contains exactly 18 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "e02870b0a2d21b3098e8a2a0a204145d50557ad6f29abdf67437789ad2f0b3f9",
+      "parameters": {
+        "targetDepth": 18,
+        "panelDepths": [
+          18,
+          19,
+          16,
+          17
+        ],
+        "targetSlot": 0,
+        "templateVariant": 0,
+        "openDecoysPerPanel": 8,
+        "irregularity": 0.35,
+        "visualVariant": 1100
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Use the exact count badges. Return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "epd-bf06f82a78c5adef",
+      "cellId": "cell-debef8e174639214",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "All panels retain identical structural load, while the target depth stays fixed at 18.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-panels-dense",
+      "seed": 3110001,
+      "difficulty": 92,
+      "variant": 1101,
+      "artifact": "public/evaluations/enclosure-panels-dense-confirmatory-v1/epd-bf06f82a78c5adef.png",
+      "mimeType": "image/png",
+      "question": "Which panel contains exactly 18 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "918c453ec6f4877145e9d69c63ef1f05fa16c32b9ff16cbb978aa5896f7e57e1",
+      "parameters": {
+        "targetDepth": 18,
+        "panelDepths": [
+          16,
+          18,
+          19,
+          17
+        ],
+        "targetSlot": 1,
+        "templateVariant": 0,
+        "openDecoysPerPanel": 8,
+        "irregularity": 0.35,
+        "visualVariant": 1101
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count only complete closed boundaries in each panel. Return exactly one allowed panel letter without explanation."
+    },
+    {
+      "candidateId": "epd-bf06f82a78c5adef",
+      "cellId": "cell-debef8e174639214",
+      "split": "confirmatory",
+      "condition": "exact-count-badges",
+      "interventionDescription": "Closed boundaries are recolored blue and every panel receives its exact count badge.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-panels-dense",
+      "seed": 3110001,
+      "difficulty": 92,
+      "variant": 2101,
+      "artifact": "public/evaluations/enclosure-panels-dense-confirmatory-v1/epd-bf06f82a78c5adef-oracle.png",
+      "mimeType": "image/png",
+      "question": "Which panel contains exactly 18 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "69329acd9b9de15486ab306f01a1be7eeabd6d573e101231c05fe3c3240c8ef1",
+      "parameters": {
+        "targetDepth": 18,
+        "panelDepths": [
+          16,
+          18,
+          19,
+          17
+        ],
+        "targetSlot": 1,
+        "templateVariant": 0,
+        "openDecoysPerPanel": 8,
+        "irregularity": 0.35,
+        "visualVariant": 1101
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Use the exact count badges. Return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "epd-a4ca605d56b6aad1",
+      "cellId": "cell-debef8e174639214",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "All panels retain identical structural load, while the target depth stays fixed at 18.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-panels-dense",
+      "seed": 3110002,
+      "difficulty": 92,
+      "variant": 1102,
+      "artifact": "public/evaluations/enclosure-panels-dense-confirmatory-v1/epd-a4ca605d56b6aad1.png",
+      "mimeType": "image/png",
+      "question": "Which panel contains exactly 18 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "f39ae74b6b6106ec1b7dc7e457c9523043571c688df569b8d7da7347bb493e8a",
+      "parameters": {
+        "targetDepth": 18,
+        "panelDepths": [
+          19,
+          16,
+          18,
+          17
+        ],
+        "targetSlot": 2,
+        "templateVariant": 0,
+        "openDecoysPerPanel": 8,
+        "irregularity": 0.35,
+        "visualVariant": 1102
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count only complete closed boundaries in each panel. Return exactly one allowed panel letter without explanation."
+    },
+    {
+      "candidateId": "epd-a4ca605d56b6aad1",
+      "cellId": "cell-debef8e174639214",
+      "split": "confirmatory",
+      "condition": "exact-count-badges",
+      "interventionDescription": "Closed boundaries are recolored blue and every panel receives its exact count badge.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-panels-dense",
+      "seed": 3110002,
+      "difficulty": 92,
+      "variant": 2102,
+      "artifact": "public/evaluations/enclosure-panels-dense-confirmatory-v1/epd-a4ca605d56b6aad1-oracle.png",
+      "mimeType": "image/png",
+      "question": "Which panel contains exactly 18 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "46c90b4746ede63ca7743273aad4c08ce9f5efde17de236c3e950883c57a0c87",
+      "parameters": {
+        "targetDepth": 18,
+        "panelDepths": [
+          19,
+          16,
+          18,
+          17
+        ],
+        "targetSlot": 2,
+        "templateVariant": 0,
+        "openDecoysPerPanel": 8,
+        "irregularity": 0.35,
+        "visualVariant": 1102
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Use the exact count badges. Return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "epd-aa661d1c93254dd6",
+      "cellId": "cell-debef8e174639214",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "All panels retain identical structural load, while the target depth stays fixed at 18.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-panels-dense",
+      "seed": 3110003,
+      "difficulty": 92,
+      "variant": 1103,
+      "artifact": "public/evaluations/enclosure-panels-dense-confirmatory-v1/epd-aa661d1c93254dd6.png",
+      "mimeType": "image/png",
+      "question": "Which panel contains exactly 18 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "20e34d4a9d5f0b987c5eeca4a6b002b1a7417d2fadc6962aeb1c01aae563b42c",
+      "parameters": {
+        "targetDepth": 18,
+        "panelDepths": [
+          16,
+          19,
+          17,
+          18
+        ],
+        "targetSlot": 3,
+        "templateVariant": 0,
+        "openDecoysPerPanel": 8,
+        "irregularity": 0.35,
+        "visualVariant": 1103
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count only complete closed boundaries in each panel. Return exactly one allowed panel letter without explanation."
+    },
+    {
+      "candidateId": "epd-aa661d1c93254dd6",
+      "cellId": "cell-debef8e174639214",
+      "split": "confirmatory",
+      "condition": "exact-count-badges",
+      "interventionDescription": "Closed boundaries are recolored blue and every panel receives its exact count badge.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-panels-dense",
+      "seed": 3110003,
+      "difficulty": 92,
+      "variant": 2103,
+      "artifact": "public/evaluations/enclosure-panels-dense-confirmatory-v1/epd-aa661d1c93254dd6-oracle.png",
+      "mimeType": "image/png",
+      "question": "Which panel contains exactly 18 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "429021cb3a62305d771c8bdf985cb1314158c62e708a3452849cc97ebe2bc8d6",
+      "parameters": {
+        "targetDepth": 18,
+        "panelDepths": [
+          16,
+          19,
+          17,
+          18
+        ],
+        "targetSlot": 3,
+        "templateVariant": 0,
+        "openDecoysPerPanel": 8,
+        "irregularity": 0.35,
+        "visualVariant": 1103
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Use the exact count badges. Return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "epd-d293a2334e149419",
+      "cellId": "cell-debef8e174639214",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "All panels retain identical structural load, while the target depth stays fixed at 18.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-panels-dense",
+      "seed": 3110004,
+      "difficulty": 92,
+      "variant": 1104,
+      "artifact": "public/evaluations/enclosure-panels-dense-confirmatory-v1/epd-d293a2334e149419.png",
+      "mimeType": "image/png",
+      "question": "Which panel contains exactly 18 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "e487b0dc499b768364056b3239cc84a9cedb821d9cf0ac7248cb13e63c53bf1e",
+      "parameters": {
+        "targetDepth": 18,
+        "panelDepths": [
+          18,
+          17,
+          19,
+          20
+        ],
+        "targetSlot": 0,
+        "templateVariant": 1,
+        "openDecoysPerPanel": 8,
+        "irregularity": 0.35,
+        "visualVariant": 1104
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count only complete closed boundaries in each panel. Return exactly one allowed panel letter without explanation."
+    },
+    {
+      "candidateId": "epd-d293a2334e149419",
+      "cellId": "cell-debef8e174639214",
+      "split": "confirmatory",
+      "condition": "exact-count-badges",
+      "interventionDescription": "Closed boundaries are recolored blue and every panel receives its exact count badge.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-panels-dense",
+      "seed": 3110004,
+      "difficulty": 92,
+      "variant": 2104,
+      "artifact": "public/evaluations/enclosure-panels-dense-confirmatory-v1/epd-d293a2334e149419-oracle.png",
+      "mimeType": "image/png",
+      "question": "Which panel contains exactly 18 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "69e7114b993f62c19ecd2f5c0ed3d1100ba943b6dd8a70c97bd70fbd84fc6f98",
+      "parameters": {
+        "targetDepth": 18,
+        "panelDepths": [
+          18,
+          17,
+          19,
+          20
+        ],
+        "targetSlot": 0,
+        "templateVariant": 1,
+        "openDecoysPerPanel": 8,
+        "irregularity": 0.35,
+        "visualVariant": 1104
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Use the exact count badges. Return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "epd-d38620bc98cd0ba8",
+      "cellId": "cell-debef8e174639214",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "All panels retain identical structural load, while the target depth stays fixed at 18.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-panels-dense",
+      "seed": 3110005,
+      "difficulty": 92,
+      "variant": 1105,
+      "artifact": "public/evaluations/enclosure-panels-dense-confirmatory-v1/epd-d38620bc98cd0ba8.png",
+      "mimeType": "image/png",
+      "question": "Which panel contains exactly 18 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "49364064cfd2a23abdf4e20201416772f22a3cb0969ba891321f8ceef1928378",
+      "parameters": {
+        "targetDepth": 18,
+        "panelDepths": [
+          19,
+          18,
+          17,
+          20
+        ],
+        "targetSlot": 1,
+        "templateVariant": 1,
+        "openDecoysPerPanel": 8,
+        "irregularity": 0.35,
+        "visualVariant": 1105
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count only complete closed boundaries in each panel. Return exactly one allowed panel letter without explanation."
+    },
+    {
+      "candidateId": "epd-d38620bc98cd0ba8",
+      "cellId": "cell-debef8e174639214",
+      "split": "confirmatory",
+      "condition": "exact-count-badges",
+      "interventionDescription": "Closed boundaries are recolored blue and every panel receives its exact count badge.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-panels-dense",
+      "seed": 3110005,
+      "difficulty": 92,
+      "variant": 2105,
+      "artifact": "public/evaluations/enclosure-panels-dense-confirmatory-v1/epd-d38620bc98cd0ba8-oracle.png",
+      "mimeType": "image/png",
+      "question": "Which panel contains exactly 18 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "e8d11f052595276ee0c4636c333db8134b5182002d386c1068460bfda4e5e2ff",
+      "parameters": {
+        "targetDepth": 18,
+        "panelDepths": [
+          19,
+          18,
+          17,
+          20
+        ],
+        "targetSlot": 1,
+        "templateVariant": 1,
+        "openDecoysPerPanel": 8,
+        "irregularity": 0.35,
+        "visualVariant": 1105
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Use the exact count badges. Return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "epd-071e00a724a97278",
+      "cellId": "cell-debef8e174639214",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "All panels retain identical structural load, while the target depth stays fixed at 18.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-panels-dense",
+      "seed": 3110006,
+      "difficulty": 92,
+      "variant": 1106,
+      "artifact": "public/evaluations/enclosure-panels-dense-confirmatory-v1/epd-071e00a724a97278.png",
+      "mimeType": "image/png",
+      "question": "Which panel contains exactly 18 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "b2455211ad75bdfc8b8915549993ec71bea32b1c7ac5151e4865e3f867060bf1",
+      "parameters": {
+        "targetDepth": 18,
+        "panelDepths": [
+          17,
+          19,
+          18,
+          20
+        ],
+        "targetSlot": 2,
+        "templateVariant": 1,
+        "openDecoysPerPanel": 8,
+        "irregularity": 0.35,
+        "visualVariant": 1106
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count only complete closed boundaries in each panel. Return exactly one allowed panel letter without explanation."
+    },
+    {
+      "candidateId": "epd-071e00a724a97278",
+      "cellId": "cell-debef8e174639214",
+      "split": "confirmatory",
+      "condition": "exact-count-badges",
+      "interventionDescription": "Closed boundaries are recolored blue and every panel receives its exact count badge.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-panels-dense",
+      "seed": 3110006,
+      "difficulty": 92,
+      "variant": 2106,
+      "artifact": "public/evaluations/enclosure-panels-dense-confirmatory-v1/epd-071e00a724a97278-oracle.png",
+      "mimeType": "image/png",
+      "question": "Which panel contains exactly 18 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "ee44edeb0db3dc8e2832fe532b5a08b86928bddd62da7e56be6496c0c25039fd",
+      "parameters": {
+        "targetDepth": 18,
+        "panelDepths": [
+          17,
+          19,
+          18,
+          20
+        ],
+        "targetSlot": 2,
+        "templateVariant": 1,
+        "openDecoysPerPanel": 8,
+        "irregularity": 0.35,
+        "visualVariant": 1106
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Use the exact count badges. Return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "epd-cc19bfa28164ef67",
+      "cellId": "cell-debef8e174639214",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "All panels retain identical structural load, while the target depth stays fixed at 18.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-panels-dense",
+      "seed": 3110007,
+      "difficulty": 92,
+      "variant": 1107,
+      "artifact": "public/evaluations/enclosure-panels-dense-confirmatory-v1/epd-cc19bfa28164ef67.png",
+      "mimeType": "image/png",
+      "question": "Which panel contains exactly 18 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "613c76f5ec24d47962d131d09ac9cdd14da292ae174e292bf235c213251526d8",
+      "parameters": {
+        "targetDepth": 18,
+        "panelDepths": [
+          19,
+          17,
+          20,
+          18
+        ],
+        "targetSlot": 3,
+        "templateVariant": 1,
+        "openDecoysPerPanel": 8,
+        "irregularity": 0.35,
+        "visualVariant": 1107
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count only complete closed boundaries in each panel. Return exactly one allowed panel letter without explanation."
+    },
+    {
+      "candidateId": "epd-cc19bfa28164ef67",
+      "cellId": "cell-debef8e174639214",
+      "split": "confirmatory",
+      "condition": "exact-count-badges",
+      "interventionDescription": "Closed boundaries are recolored blue and every panel receives its exact count badge.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-panels-dense",
+      "seed": 3110007,
+      "difficulty": 92,
+      "variant": 2107,
+      "artifact": "public/evaluations/enclosure-panels-dense-confirmatory-v1/epd-cc19bfa28164ef67-oracle.png",
+      "mimeType": "image/png",
+      "question": "Which panel contains exactly 18 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "2c822c38fd9fdaf86efcce8c8646e39bdfd2fccfa28ef618e754f9c3f9de0052",
+      "parameters": {
+        "targetDepth": 18,
+        "panelDepths": [
+          19,
+          17,
+          20,
+          18
+        ],
+        "targetSlot": 3,
+        "templateVariant": 1,
+        "openDecoysPerPanel": 8,
+        "irregularity": 0.35,
+        "visualVariant": 1107
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Use the exact count badges. Return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "epd-4c878568a1953a00",
+      "cellId": "cell-debef8e174639214",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "All panels retain identical structural load, while the target depth stays fixed at 18.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-panels-dense",
+      "seed": 3110008,
+      "difficulty": 92,
+      "variant": 1108,
+      "artifact": "public/evaluations/enclosure-panels-dense-confirmatory-v1/epd-4c878568a1953a00.png",
+      "mimeType": "image/png",
+      "question": "Which panel contains exactly 18 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "a446f42149491ca28c1c8c38462d4074c77c1c6bb7ad446cad3d4fae5df09eb4",
+      "parameters": {
+        "targetDepth": 18,
+        "panelDepths": [
+          18,
+          17,
+          19,
+          16
+        ],
+        "targetSlot": 0,
+        "templateVariant": 0,
+        "openDecoysPerPanel": 8,
+        "irregularity": 0.35,
+        "visualVariant": 1108
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count only complete closed boundaries in each panel. Return exactly one allowed panel letter without explanation."
+    },
+    {
+      "candidateId": "epd-4c878568a1953a00",
+      "cellId": "cell-debef8e174639214",
+      "split": "confirmatory",
+      "condition": "exact-count-badges",
+      "interventionDescription": "Closed boundaries are recolored blue and every panel receives its exact count badge.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-panels-dense",
+      "seed": 3110008,
+      "difficulty": 92,
+      "variant": 2108,
+      "artifact": "public/evaluations/enclosure-panels-dense-confirmatory-v1/epd-4c878568a1953a00-oracle.png",
+      "mimeType": "image/png",
+      "question": "Which panel contains exactly 18 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "16f542d25b915aeffb3de1b1bb311ac1467c0aacc4f5a483e948ee7c728ecca0",
+      "parameters": {
+        "targetDepth": 18,
+        "panelDepths": [
+          18,
+          17,
+          19,
+          16
+        ],
+        "targetSlot": 0,
+        "templateVariant": 0,
+        "openDecoysPerPanel": 8,
+        "irregularity": 0.35,
+        "visualVariant": 1108
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Use the exact count badges. Return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "epd-d4e595be5d8f2b3a",
+      "cellId": "cell-debef8e174639214",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "All panels retain identical structural load, while the target depth stays fixed at 18.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-panels-dense",
+      "seed": 3110009,
+      "difficulty": 92,
+      "variant": 1109,
+      "artifact": "public/evaluations/enclosure-panels-dense-confirmatory-v1/epd-d4e595be5d8f2b3a.png",
+      "mimeType": "image/png",
+      "question": "Which panel contains exactly 18 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "184b3cf83353d6dcf81659cc30ff1b487be5bd5798415b4862d181516191932f",
+      "parameters": {
+        "targetDepth": 18,
+        "panelDepths": [
+          19,
+          18,
+          17,
+          16
+        ],
+        "targetSlot": 1,
+        "templateVariant": 0,
+        "openDecoysPerPanel": 8,
+        "irregularity": 0.35,
+        "visualVariant": 1109
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count only complete closed boundaries in each panel. Return exactly one allowed panel letter without explanation."
+    },
+    {
+      "candidateId": "epd-d4e595be5d8f2b3a",
+      "cellId": "cell-debef8e174639214",
+      "split": "confirmatory",
+      "condition": "exact-count-badges",
+      "interventionDescription": "Closed boundaries are recolored blue and every panel receives its exact count badge.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-panels-dense",
+      "seed": 3110009,
+      "difficulty": 92,
+      "variant": 2109,
+      "artifact": "public/evaluations/enclosure-panels-dense-confirmatory-v1/epd-d4e595be5d8f2b3a-oracle.png",
+      "mimeType": "image/png",
+      "question": "Which panel contains exactly 18 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "528e4c7d31aecfda38a86dc52ea31828aa36c37b6b2bdb9ccb88cbcf0ee9cc02",
+      "parameters": {
+        "targetDepth": 18,
+        "panelDepths": [
+          19,
+          18,
+          17,
+          16
+        ],
+        "targetSlot": 1,
+        "templateVariant": 0,
+        "openDecoysPerPanel": 8,
+        "irregularity": 0.35,
+        "visualVariant": 1109
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Use the exact count badges. Return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "epd-25fd591466c6be76",
+      "cellId": "cell-debef8e174639214",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "All panels retain identical structural load, while the target depth stays fixed at 18.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-panels-dense",
+      "seed": 3110010,
+      "difficulty": 92,
+      "variant": 1110,
+      "artifact": "public/evaluations/enclosure-panels-dense-confirmatory-v1/epd-25fd591466c6be76.png",
+      "mimeType": "image/png",
+      "question": "Which panel contains exactly 18 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "727911c05effd7747c3cbfea5772b1d74447138125f60cc3842e80c3f2804b1a",
+      "parameters": {
+        "targetDepth": 18,
+        "panelDepths": [
+          17,
+          19,
+          18,
+          16
+        ],
+        "targetSlot": 2,
+        "templateVariant": 0,
+        "openDecoysPerPanel": 8,
+        "irregularity": 0.35,
+        "visualVariant": 1110
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count only complete closed boundaries in each panel. Return exactly one allowed panel letter without explanation."
+    },
+    {
+      "candidateId": "epd-25fd591466c6be76",
+      "cellId": "cell-debef8e174639214",
+      "split": "confirmatory",
+      "condition": "exact-count-badges",
+      "interventionDescription": "Closed boundaries are recolored blue and every panel receives its exact count badge.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-panels-dense",
+      "seed": 3110010,
+      "difficulty": 92,
+      "variant": 2110,
+      "artifact": "public/evaluations/enclosure-panels-dense-confirmatory-v1/epd-25fd591466c6be76-oracle.png",
+      "mimeType": "image/png",
+      "question": "Which panel contains exactly 18 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "747570d98504bf41bd264ec0eabacf6fad8b2692346ee39e37932d9a33d17af9",
+      "parameters": {
+        "targetDepth": 18,
+        "panelDepths": [
+          17,
+          19,
+          18,
+          16
+        ],
+        "targetSlot": 2,
+        "templateVariant": 0,
+        "openDecoysPerPanel": 8,
+        "irregularity": 0.35,
+        "visualVariant": 1110
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Use the exact count badges. Return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "epd-c5ac20aa6889890a",
+      "cellId": "cell-debef8e174639214",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "All panels retain identical structural load, while the target depth stays fixed at 18.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-panels-dense",
+      "seed": 3110011,
+      "difficulty": 92,
+      "variant": 1111,
+      "artifact": "public/evaluations/enclosure-panels-dense-confirmatory-v1/epd-c5ac20aa6889890a.png",
+      "mimeType": "image/png",
+      "question": "Which panel contains exactly 18 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "89c59d35cd70f4253059bdbad57b2b92d1f4797651312a9bce02a88bbd05b888",
+      "parameters": {
+        "targetDepth": 18,
+        "panelDepths": [
+          19,
+          17,
+          16,
+          18
+        ],
+        "targetSlot": 3,
+        "templateVariant": 0,
+        "openDecoysPerPanel": 8,
+        "irregularity": 0.35,
+        "visualVariant": 1111
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count only complete closed boundaries in each panel. Return exactly one allowed panel letter without explanation."
+    },
+    {
+      "candidateId": "epd-c5ac20aa6889890a",
+      "cellId": "cell-debef8e174639214",
+      "split": "confirmatory",
+      "condition": "exact-count-badges",
+      "interventionDescription": "Closed boundaries are recolored blue and every panel receives its exact count badge.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-panels-dense",
+      "seed": 3110011,
+      "difficulty": 92,
+      "variant": 2111,
+      "artifact": "public/evaluations/enclosure-panels-dense-confirmatory-v1/epd-c5ac20aa6889890a-oracle.png",
+      "mimeType": "image/png",
+      "question": "Which panel contains exactly 18 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "d836394c93dbde4fb5200bf7c5af2b2999101cf3c71421d2d6b20d35cd11d239",
+      "parameters": {
+        "targetDepth": 18,
+        "panelDepths": [
+          19,
+          17,
+          16,
+          18
+        ],
+        "targetSlot": 3,
+        "templateVariant": 0,
+        "openDecoysPerPanel": 8,
+        "irregularity": 0.35,
+        "visualVariant": 1111
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Use the exact count badges. Return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "epd-601bbb69816a9183",
+      "cellId": "cell-debef8e174639214",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "All panels retain identical structural load, while the target depth stays fixed at 18.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-panels-dense",
+      "seed": 3110012,
+      "difficulty": 92,
+      "variant": 1112,
+      "artifact": "public/evaluations/enclosure-panels-dense-confirmatory-v1/epd-601bbb69816a9183.png",
+      "mimeType": "image/png",
+      "question": "Which panel contains exactly 18 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "711a15fb7452c41446e05b064d4384cd9796e3e85863dd733be90c120527d669",
+      "parameters": {
+        "targetDepth": 18,
+        "panelDepths": [
+          18,
+          20,
+          19,
+          17
+        ],
+        "targetSlot": 0,
+        "templateVariant": 1,
+        "openDecoysPerPanel": 8,
+        "irregularity": 0.35,
+        "visualVariant": 1112
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count only complete closed boundaries in each panel. Return exactly one allowed panel letter without explanation."
+    },
+    {
+      "candidateId": "epd-601bbb69816a9183",
+      "cellId": "cell-debef8e174639214",
+      "split": "confirmatory",
+      "condition": "exact-count-badges",
+      "interventionDescription": "Closed boundaries are recolored blue and every panel receives its exact count badge.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-panels-dense",
+      "seed": 3110012,
+      "difficulty": 92,
+      "variant": 2112,
+      "artifact": "public/evaluations/enclosure-panels-dense-confirmatory-v1/epd-601bbb69816a9183-oracle.png",
+      "mimeType": "image/png",
+      "question": "Which panel contains exactly 18 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "61fe722c22e132a09161fa09711ad3bb9440837e224a2773c4b0f92d8e355672",
+      "parameters": {
+        "targetDepth": 18,
+        "panelDepths": [
+          18,
+          20,
+          19,
+          17
+        ],
+        "targetSlot": 0,
+        "templateVariant": 1,
+        "openDecoysPerPanel": 8,
+        "irregularity": 0.35,
+        "visualVariant": 1112
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Use the exact count badges. Return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "epd-9e4bfc5c46049f1d",
+      "cellId": "cell-debef8e174639214",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "All panels retain identical structural load, while the target depth stays fixed at 18.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-panels-dense",
+      "seed": 3110013,
+      "difficulty": 92,
+      "variant": 1113,
+      "artifact": "public/evaluations/enclosure-panels-dense-confirmatory-v1/epd-9e4bfc5c46049f1d.png",
+      "mimeType": "image/png",
+      "question": "Which panel contains exactly 18 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "46602b2ff011bd9a64afa294d4055ed5eb514156fdbcb5f80df2c09df6af4f0b",
+      "parameters": {
+        "targetDepth": 18,
+        "panelDepths": [
+          20,
+          18,
+          17,
+          19
+        ],
+        "targetSlot": 1,
+        "templateVariant": 1,
+        "openDecoysPerPanel": 8,
+        "irregularity": 0.35,
+        "visualVariant": 1113
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count only complete closed boundaries in each panel. Return exactly one allowed panel letter without explanation."
+    },
+    {
+      "candidateId": "epd-9e4bfc5c46049f1d",
+      "cellId": "cell-debef8e174639214",
+      "split": "confirmatory",
+      "condition": "exact-count-badges",
+      "interventionDescription": "Closed boundaries are recolored blue and every panel receives its exact count badge.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-panels-dense",
+      "seed": 3110013,
+      "difficulty": 92,
+      "variant": 2113,
+      "artifact": "public/evaluations/enclosure-panels-dense-confirmatory-v1/epd-9e4bfc5c46049f1d-oracle.png",
+      "mimeType": "image/png",
+      "question": "Which panel contains exactly 18 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "c7474cfdf4d8bb1c1a57969d9db42f275a7fc8950b80d5b37882f3a3dd2e3404",
+      "parameters": {
+        "targetDepth": 18,
+        "panelDepths": [
+          20,
+          18,
+          17,
+          19
+        ],
+        "targetSlot": 1,
+        "templateVariant": 1,
+        "openDecoysPerPanel": 8,
+        "irregularity": 0.35,
+        "visualVariant": 1113
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Use the exact count badges. Return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "epd-9fdfc83eac8561c1",
+      "cellId": "cell-debef8e174639214",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "All panels retain identical structural load, while the target depth stays fixed at 18.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-panels-dense",
+      "seed": 3110014,
+      "difficulty": 92,
+      "variant": 1114,
+      "artifact": "public/evaluations/enclosure-panels-dense-confirmatory-v1/epd-9fdfc83eac8561c1.png",
+      "mimeType": "image/png",
+      "question": "Which panel contains exactly 18 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "b69ad0f2c15fc1a225977dd08d92310a6070d6121480f0324a0299577b77d650",
+      "parameters": {
+        "targetDepth": 18,
+        "panelDepths": [
+          17,
+          20,
+          18,
+          19
+        ],
+        "targetSlot": 2,
+        "templateVariant": 1,
+        "openDecoysPerPanel": 8,
+        "irregularity": 0.35,
+        "visualVariant": 1114
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count only complete closed boundaries in each panel. Return exactly one allowed panel letter without explanation."
+    },
+    {
+      "candidateId": "epd-9fdfc83eac8561c1",
+      "cellId": "cell-debef8e174639214",
+      "split": "confirmatory",
+      "condition": "exact-count-badges",
+      "interventionDescription": "Closed boundaries are recolored blue and every panel receives its exact count badge.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-panels-dense",
+      "seed": 3110014,
+      "difficulty": 92,
+      "variant": 2114,
+      "artifact": "public/evaluations/enclosure-panels-dense-confirmatory-v1/epd-9fdfc83eac8561c1-oracle.png",
+      "mimeType": "image/png",
+      "question": "Which panel contains exactly 18 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "b548b7fcfc9729381b8b7ef7a7445dbb6fe8595573e277057f09d64d134bd71a",
+      "parameters": {
+        "targetDepth": 18,
+        "panelDepths": [
+          17,
+          20,
+          18,
+          19
+        ],
+        "targetSlot": 2,
+        "templateVariant": 1,
+        "openDecoysPerPanel": 8,
+        "irregularity": 0.35,
+        "visualVariant": 1114
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Use the exact count badges. Return exactly one allowed panel letter."
+    },
+    {
+      "candidateId": "epd-76b19b5344e3da80",
+      "cellId": "cell-debef8e174639214",
+      "split": "confirmatory",
+      "condition": "native-image",
+      "interventionDescription": "All panels retain identical structural load, while the target depth stays fixed at 18.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-panels-dense",
+      "seed": 3110015,
+      "difficulty": 92,
+      "variant": 1115,
+      "artifact": "public/evaluations/enclosure-panels-dense-confirmatory-v1/epd-76b19b5344e3da80.png",
+      "mimeType": "image/png",
+      "question": "Which panel contains exactly 18 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "f71d021ee8047e18e5984c01fc63bf3dc2ae89e62954347edee9baacab77a83b",
+      "parameters": {
+        "targetDepth": 18,
+        "panelDepths": [
+          20,
+          17,
+          19,
+          18
+        ],
+        "targetSlot": 3,
+        "templateVariant": 1,
+        "openDecoysPerPanel": 8,
+        "irregularity": 0.35,
+        "visualVariant": 1115
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count only complete closed boundaries in each panel. Return exactly one allowed panel letter without explanation."
+    },
+    {
+      "candidateId": "epd-76b19b5344e3da80",
+      "cellId": "cell-debef8e174639214",
+      "split": "confirmatory",
+      "condition": "exact-count-badges",
+      "interventionDescription": "Closed boundaries are recolored blue and every panel receives its exact count badge.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-panels-dense",
+      "seed": 3110015,
+      "difficulty": 92,
+      "variant": 2115,
+      "artifact": "public/evaluations/enclosure-panels-dense-confirmatory-v1/epd-76b19b5344e3da80-oracle.png",
+      "mimeType": "image/png",
+      "question": "Which panel contains exactly 18 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "fa2ebfed77512f32203a1eaf41f31b95a5145f1ad41ca123c35f36fd2a448994",
+      "parameters": {
+        "targetDepth": 18,
+        "panelDepths": [
+          20,
+          17,
+          19,
+          18
+        ],
+        "targetSlot": 3,
+        "templateVariant": 1,
+        "openDecoysPerPanel": 8,
+        "irregularity": 0.35,
+        "visualVariant": 1115
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Use the exact count badges. Return exactly one allowed panel letter."
+    }
+  ]
+}

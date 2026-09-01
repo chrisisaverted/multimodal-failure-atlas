@@ -144,10 +144,7 @@ export function renderEnclosurePanelsDenseSvg(candidate: EnclosurePanelsDenseCan
     const loops = Array.from({ length: depth }, (_, index) => {
       const radius = minRadius + (index * (maxRadius - minRadius)) / Math.max(1, depth - 1);
       const path = closedLoopPath(cx, cy, radius, random() * Math.PI * 2);
-      const marker = oracle
-        ? `<circle cx="${(cx + radius * 1.08).toFixed(1)}" cy="${cy}" r="13" fill="#ffe13b" stroke="#202322" stroke-width="1.5"/><text x="${(cx + radius * 1.08).toFixed(1)}" y="${cy + 4}" text-anchor="middle" font-family="Arial" font-size="12" font-weight="700">${index + 1}</text>`
-        : "";
-      return `<path d="${path}" fill="none" stroke="${oracle ? "#2466cc" : "#252928"}" stroke-width="3"/>${marker}`;
+      return `<path d="${path}" fill="none" stroke="${oracle ? "#2466cc" : "#252928"}" stroke-width="3"/>`;
     }).join("");
     const decoys = Array.from({ length: 8 }, (_, index) => {
       const radius = 65 + (index / 7) * 170;
@@ -155,7 +152,10 @@ export function renderEnclosurePanelsDenseSvg(candidate: EnclosurePanelsDenseCan
       const span = Math.PI * (0.13 + random() * 0.18);
       return `<path d="${openArcPath(cx, cy, radius, start, span, random() * 5)}" fill="none" stroke="#858b88" stroke-width="2.2" stroke-linecap="round"/>`;
     }).join("");
-    return `<g><rect x="${x0}" y="${y0}" width="${panelWidth}" height="${panelHeight}" rx="5" fill="#faf9f4" stroke="#a9aaa4" stroke-width="2"/><text x="${x0 + 22}" y="${y0 + 44}" font-family="Arial" font-size="32" font-weight="700">${labels[slot]}</text>${decoys}${loops}<circle cx="${cx}" cy="${cy}" r="16" fill="#e23e31" stroke="#fff" stroke-width="4"/></g>`;
+    const oracleBadge = oracle
+      ? `<rect x="${x0 + panelWidth - 190}" y="${y0 + 18}" width="166" height="44" rx="22" fill="#ffe13b" stroke="#202322" stroke-width="2"/><text x="${x0 + panelWidth - 107}" y="${y0 + 47}" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700">COUNT ${depth}</text>`
+      : "";
+    return `<g><rect x="${x0}" y="${y0}" width="${panelWidth}" height="${panelHeight}" rx="5" fill="#faf9f4" stroke="#a9aaa4" stroke-width="2"/><text x="${x0 + 22}" y="${y0 + 44}" font-family="Arial" font-size="32" font-weight="700">${labels[slot]}</text>${decoys}${loops}<circle cx="${cx}" cy="${cy}" r="16" fill="#e23e31" stroke="#fff" stroke-width="4"/>${oracleBadge}</g>`;
   });
   return `<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1450"><rect width="100%" height="100%" fill="#f2efe5"/><text x="60" y="62" font-family="Arial" font-size="34" font-weight="700">FIND THE REQUESTED ENCLOSURE DEPTH</text><text x="60" y="105" font-family="Arial" font-size="22" fill="#555b58">Count complete dark boundaries. Lighter open fragments do not enclose the dot.</text>${panels.join("")}</svg>`;
 }
