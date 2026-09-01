@@ -86,6 +86,7 @@ holdouts finish.
 | 28-instruction visual stack program        | Gemini solved 5/8 discovery cases, so the LIFO family did not advance to a frozen holdout.                                                                 |
 | Fixed-structure four-panel enclosure depth | The shortcut-controlled replacement was rejected when Gemini reached exactly 4/8; Kimi scored 1/8 and the remaining Qwen screen was stopped prospectively. |
 | Nine-gate visual Boolean circuit           | Gemini solved all 8/8 balanced discovery cases; Kimi scored 3/8 and Qwen was stopped after five requests once rejection was certain.                       |
+| 32-event variable-target pair collisions   | The stricter five-route replacement improved Seed, Gemini, and Kimi to 2/8 each, but Qwen reached exactly 4/8; MiMo was not queried after rejection.        |
 
 Discovery screens are cheap filters, not claims. A family moves above only after a precommitted,
 seed-disjoint holdout replicates across every route and non-substantive outcomes have been rerun or

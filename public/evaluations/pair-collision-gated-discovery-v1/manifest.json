@@ -1,0 +1,2121 @@
+{
+  "id": "pair-collision-gated-discovery-v1",
+  "planSha256": "c4767b019b2c2a71e44b74216be5402a2b01b896b23435bcd2ef6052494cee27",
+  "generatorVersion": "identity-pair-collision-gated-v1",
+  "renderer": "pair-collision-gated-svg-raster-v1",
+  "fps": 30,
+  "cases": [
+    {
+      "candidateId": "pcg-3d48faecbedc10f7",
+      "cellId": "cell-gated-variable-target-pair-collisions",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Thirty-two events balance frame colors and include six target-pair traps under the wrong color.",
+      "failureModeId": "identity-pair-interaction-counting",
+      "generator": "pair-collision-gated",
+      "seed": 5300000,
+      "difficulty": 98,
+      "variant": 0,
+      "artifact": "public/evaluations/pair-collision-gated-discovery-v1/pcg-3d48faecbedc10f7.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18000,
+      "question": "How many A+B collisions occurred during AMBER frames? Count only events satisfying BOTH the pair and frame-color conditions.",
+      "answerOptions": [
+        "8",
+        "5",
+        "7",
+        "6"
+      ],
+      "expectedAnswer": "5",
+      "sha256": "67c3f2f6c1864d77801d8c45309e0cbdfc36cf121d9d825c348be212d59601d9",
+      "parameters": {
+        "targetCount": 5,
+        "targetPair": [
+          0,
+          1
+        ],
+        "targetGate": "AMBER",
+        "events": [
+          {
+            "pair": [
+              3,
+              5
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              2,
+              4
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              0,
+              4
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              0,
+              3
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              2,
+              5
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              0,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              0,
+              3
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              2,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              0,
+              5
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              0,
+              2
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              4,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              3,
+              4
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              2,
+              4
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              2,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              0,
+              4
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "gate": "AMBER"
+          }
+        ],
+        "wrongGateTargetPairEvents": 6,
+        "videoDurationMs": 18000,
+        "fps": 30,
+        "visualVariant": 300
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count only collisions satisfying both the displayed target-pair and target-frame-color conditions. Return exactly one allowed count."
+    },
+    {
+      "candidateId": "pcg-c41220b56392ba54",
+      "cellId": "cell-gated-variable-target-pair-collisions",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Thirty-two events balance frame colors and include six target-pair traps under the wrong color.",
+      "failureModeId": "identity-pair-interaction-counting",
+      "generator": "pair-collision-gated",
+      "seed": 5300001,
+      "difficulty": 98,
+      "variant": 1,
+      "artifact": "public/evaluations/pair-collision-gated-discovery-v1/pcg-c41220b56392ba54.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18000,
+      "question": "How many C+E collisions occurred during CYAN frames? Count only events satisfying BOTH the pair and frame-color conditions.",
+      "answerOptions": [
+        "5",
+        "8",
+        "7",
+        "6"
+      ],
+      "expectedAnswer": "6",
+      "sha256": "4d70e9a33324183c0d3b33add4b3f4f04db7741b825a4ca35b597e1e5f597999",
+      "parameters": {
+        "targetCount": 6,
+        "targetPair": [
+          2,
+          4
+        ],
+        "targetGate": "CYAN",
+        "events": [
+          {
+            "pair": [
+              0,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              2,
+              4
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              0,
+              4
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              2,
+              4
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              2,
+              4
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              2,
+              4
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              2,
+              4
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              2,
+              5
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              2,
+              4
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              2,
+              4
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              4,
+              5
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              3,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              3,
+              4
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              2,
+              4
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              0,
+              2
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              2,
+              4
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              2,
+              4
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              0,
+              3
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              0,
+              3
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              2,
+              5
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              2,
+              4
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              2,
+              5
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              2,
+              4
+            ],
+            "gate": "AMBER"
+          }
+        ],
+        "wrongGateTargetPairEvents": 6,
+        "videoDurationMs": 18000,
+        "fps": 30,
+        "visualVariant": 301
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count only collisions satisfying both the displayed target-pair and target-frame-color conditions. Return exactly one allowed count."
+    },
+    {
+      "candidateId": "pcg-76795f90a455a166",
+      "cellId": "cell-gated-variable-target-pair-collisions",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Thirty-two events balance frame colors and include six target-pair traps under the wrong color.",
+      "failureModeId": "identity-pair-interaction-counting",
+      "generator": "pair-collision-gated",
+      "seed": 5300002,
+      "difficulty": 98,
+      "variant": 2,
+      "artifact": "public/evaluations/pair-collision-gated-discovery-v1/pcg-76795f90a455a166.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18000,
+      "question": "How many D+F collisions occurred during AMBER frames? Count only events satisfying BOTH the pair and frame-color conditions.",
+      "answerOptions": [
+        "5",
+        "8",
+        "7",
+        "6"
+      ],
+      "expectedAnswer": "7",
+      "sha256": "26bf48e961732a38599d7b8184d9ed328323eae617fae8ca16c60cdbc30e188e",
+      "parameters": {
+        "targetCount": 7,
+        "targetPair": [
+          3,
+          5
+        ],
+        "targetGate": "AMBER",
+        "events": [
+          {
+            "pair": [
+              3,
+              5
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              2,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              2,
+              4
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              3,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              0,
+              3
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              3,
+              5
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              3,
+              5
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              3,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              4,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              3,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              3,
+              5
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              0,
+              5
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              0,
+              2
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              3,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              0,
+              5
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              2,
+              4
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              3,
+              5
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              3,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              1,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              3,
+              5
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              1,
+              5
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              3,
+              5
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              0,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              3,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              3,
+              4
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              4,
+              5
+            ],
+            "gate": "CYAN"
+          }
+        ],
+        "wrongGateTargetPairEvents": 6,
+        "videoDurationMs": 18000,
+        "fps": 30,
+        "visualVariant": 302
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count only collisions satisfying both the displayed target-pair and target-frame-color conditions. Return exactly one allowed count."
+    },
+    {
+      "candidateId": "pcg-71a85df1d799a9b4",
+      "cellId": "cell-gated-variable-target-pair-collisions",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Thirty-two events balance frame colors and include six target-pair traps under the wrong color.",
+      "failureModeId": "identity-pair-interaction-counting",
+      "generator": "pair-collision-gated",
+      "seed": 5300003,
+      "difficulty": 98,
+      "variant": 3,
+      "artifact": "public/evaluations/pair-collision-gated-discovery-v1/pcg-71a85df1d799a9b4.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18000,
+      "question": "How many B+E collisions occurred during CYAN frames? Count only events satisfying BOTH the pair and frame-color conditions.",
+      "answerOptions": [
+        "8",
+        "5",
+        "7",
+        "6"
+      ],
+      "expectedAnswer": "8",
+      "sha256": "cb26bb078fe9dc6d21d4f5f02fe8a6b45beb44e1763e9922488740588498a1d4",
+      "parameters": {
+        "targetCount": 8,
+        "targetPair": [
+          1,
+          4
+        ],
+        "targetGate": "CYAN",
+        "events": [
+          {
+            "pair": [
+              0,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              3,
+              4
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              1,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              0,
+              4
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              2,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              3,
+              4
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              4,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              0,
+              4
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              2,
+              5
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              4,
+              5
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              3,
+              4
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              0,
+              4
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              4,
+              5
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "gate": "CYAN"
+          }
+        ],
+        "wrongGateTargetPairEvents": 6,
+        "videoDurationMs": 18000,
+        "fps": 30,
+        "visualVariant": 303
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count only collisions satisfying both the displayed target-pair and target-frame-color conditions. Return exactly one allowed count."
+    },
+    {
+      "candidateId": "pcg-bc08d5073cdb1278",
+      "cellId": "cell-gated-variable-target-pair-collisions",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Thirty-two events balance frame colors and include six target-pair traps under the wrong color.",
+      "failureModeId": "identity-pair-interaction-counting",
+      "generator": "pair-collision-gated",
+      "seed": 5300004,
+      "difficulty": 98,
+      "variant": 4,
+      "artifact": "public/evaluations/pair-collision-gated-discovery-v1/pcg-bc08d5073cdb1278.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18000,
+      "question": "How many A+F collisions occurred during CYAN frames? Count only events satisfying BOTH the pair and frame-color conditions.",
+      "answerOptions": [
+        "8",
+        "7",
+        "5",
+        "6"
+      ],
+      "expectedAnswer": "5",
+      "sha256": "018bed912399eef5ea01296025e12c619459ce6576f160d6f1e78842d9c45ec9",
+      "parameters": {
+        "targetCount": 5,
+        "targetPair": [
+          0,
+          5
+        ],
+        "targetGate": "CYAN",
+        "events": [
+          {
+            "pair": [
+              0,
+              3
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              0,
+              5
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              0,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              0,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              0,
+              3
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              0,
+              5
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              0,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              0,
+              5
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              4,
+              5
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              0,
+              3
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              3,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              0,
+              2
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              4,
+              5
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              2,
+              5
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              0,
+              2
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              0,
+              5
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              2,
+              4
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              0,
+              5
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              1,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              0,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              0,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              0,
+              5
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              3,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              2,
+              4
+            ],
+            "gate": "AMBER"
+          }
+        ],
+        "wrongGateTargetPairEvents": 6,
+        "videoDurationMs": 18000,
+        "fps": 30,
+        "visualVariant": 304
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count only collisions satisfying both the displayed target-pair and target-frame-color conditions. Return exactly one allowed count."
+    },
+    {
+      "candidateId": "pcg-18b975f55858a197",
+      "cellId": "cell-gated-variable-target-pair-collisions",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Thirty-two events balance frame colors and include six target-pair traps under the wrong color.",
+      "failureModeId": "identity-pair-interaction-counting",
+      "generator": "pair-collision-gated",
+      "seed": 5300005,
+      "difficulty": 98,
+      "variant": 5,
+      "artifact": "public/evaluations/pair-collision-gated-discovery-v1/pcg-18b975f55858a197.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18000,
+      "question": "How many C+D collisions occurred during AMBER frames? Count only events satisfying BOTH the pair and frame-color conditions.",
+      "answerOptions": [
+        "7",
+        "8",
+        "5",
+        "6"
+      ],
+      "expectedAnswer": "6",
+      "sha256": "7314995be15f2cdf2440b1d25a07de50a01e80128633264ab8cb909e4a12c001",
+      "parameters": {
+        "targetCount": 6,
+        "targetPair": [
+          2,
+          3
+        ],
+        "targetGate": "AMBER",
+        "events": [
+          {
+            "pair": [
+              0,
+              2
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              0,
+              2
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              3,
+              4
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              2,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              0,
+              4
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              0,
+              5
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              0,
+              3
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              3,
+              4
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              2,
+              4
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              0,
+              3
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              1,
+              5
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              2,
+              4
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "gate": "CYAN"
+          }
+        ],
+        "wrongGateTargetPairEvents": 6,
+        "videoDurationMs": 18000,
+        "fps": 30,
+        "visualVariant": 305
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count only collisions satisfying both the displayed target-pair and target-frame-color conditions. Return exactly one allowed count."
+    },
+    {
+      "candidateId": "pcg-feb07f67628ea20e",
+      "cellId": "cell-gated-variable-target-pair-collisions",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Thirty-two events balance frame colors and include six target-pair traps under the wrong color.",
+      "failureModeId": "identity-pair-interaction-counting",
+      "generator": "pair-collision-gated",
+      "seed": 5300006,
+      "difficulty": 98,
+      "variant": 6,
+      "artifact": "public/evaluations/pair-collision-gated-discovery-v1/pcg-feb07f67628ea20e.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18000,
+      "question": "How many B+F collisions occurred during CYAN frames? Count only events satisfying BOTH the pair and frame-color conditions.",
+      "answerOptions": [
+        "8",
+        "7",
+        "5",
+        "6"
+      ],
+      "expectedAnswer": "7",
+      "sha256": "677593e50813c3047fa2f80db99f348446a0195d62c0fe3d5f497d994766a522",
+      "parameters": {
+        "targetCount": 7,
+        "targetPair": [
+          1,
+          5
+        ],
+        "targetGate": "CYAN",
+        "events": [
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              3,
+              5
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              1,
+              5
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              1,
+              5
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              3,
+              5
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              4,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              0,
+              3
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              1,
+              5
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              1,
+              5
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              1,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              0,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              1,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              1,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              1,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              1,
+              5
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              1,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              1,
+              3
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              1,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              1,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              3,
+              4
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              0,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              1,
+              5
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "gate": "CYAN"
+          }
+        ],
+        "wrongGateTargetPairEvents": 6,
+        "videoDurationMs": 18000,
+        "fps": 30,
+        "visualVariant": 306
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count only collisions satisfying both the displayed target-pair and target-frame-color conditions. Return exactly one allowed count."
+    },
+    {
+      "candidateId": "pcg-5dcbefc89bca0ac1",
+      "cellId": "cell-gated-variable-target-pair-collisions",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Thirty-two events balance frame colors and include six target-pair traps under the wrong color.",
+      "failureModeId": "identity-pair-interaction-counting",
+      "generator": "pair-collision-gated",
+      "seed": 5300007,
+      "difficulty": 98,
+      "variant": 7,
+      "artifact": "public/evaluations/pair-collision-gated-discovery-v1/pcg-5dcbefc89bca0ac1.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 18000,
+      "question": "How many A+D collisions occurred during AMBER frames? Count only events satisfying BOTH the pair and frame-color conditions.",
+      "answerOptions": [
+        "8",
+        "7",
+        "5",
+        "6"
+      ],
+      "expectedAnswer": "8",
+      "sha256": "35bc5a14e85101d2484fdd55b6d763ac22c2f4d8c81f14734e93f3759275a5af",
+      "parameters": {
+        "targetCount": 8,
+        "targetPair": [
+          0,
+          3
+        ],
+        "targetGate": "AMBER",
+        "events": [
+          {
+            "pair": [
+              0,
+              3
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              2,
+              5
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              0,
+              3
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              0,
+              3
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              0,
+              3
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              0,
+              3
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              3,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              0,
+              3
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              2,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              0,
+              3
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              0,
+              2
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              0,
+              3
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              0,
+              3
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              3,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              0,
+              3
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              0,
+              3
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              3,
+              5
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              0,
+              4
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              0,
+              3
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              1,
+              4
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              0,
+              4
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              3,
+              5
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              0,
+              3
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              0,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              3,
+              4
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              3,
+              5
+            ],
+            "gate": "CYAN"
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              0,
+              4
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              0,
+              3
+            ],
+            "gate": "AMBER"
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "gate": "CYAN"
+          }
+        ],
+        "wrongGateTargetPairEvents": 6,
+        "videoDurationMs": 18000,
+        "fps": 30,
+        "visualVariant": 307
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count only collisions satisfying both the displayed target-pair and target-frame-color conditions. Return exactly one allowed count."
+    }
+  ]
+}
