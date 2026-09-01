@@ -1,0 +1,25 @@
+{
+  "id": "gated-grid-set-screen-kimi-completion-v1-2026-09-01",
+  "resolvedAt": "2026-09-01",
+  "gateway": "OpenRouter",
+  "evaluationPlanId": "gated-grid-set-discovery-v1",
+  "evaluationPlanSha256": "19607e8a98940bf19ae4d50b9098a49532b007e9f062f4c4d300fe93769c3231",
+  "stage": "five-route-color-gated-set-screen-completion",
+  "casesPerModel": 1,
+  "trials": 1,
+  "temperature": 0,
+  "maxOutputTokens": 4096,
+  "reasoning": { "effort": "none", "exclude": true },
+  "scorer": "terminal-option-v3",
+  "allowProviderFallbacks": false,
+  "dataCollection": "deny",
+  "campaignCostCeilingUsd": 8,
+  "amendmentReason": "Seed 5400003 exhausted the frozen 1024-token output allowance during substantive frame-by-frame analysis without declaring an answer. The original attempt remains immutable and receives no hardness credit; this prospective completion changes only the output allowance.",
+  "models": [
+    {
+      "modelId": "moonshotai/kimi-k3",
+      "modelRevision": "moonshotai/kimi-k3-20260715",
+      "upstreamProvider": "Moonshot AI"
+    }
+  ]
+}

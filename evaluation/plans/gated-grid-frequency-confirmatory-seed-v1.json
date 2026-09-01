@@ -1,0 +1,20 @@
+{
+  "id": "gated-grid-frequency-confirmatory-seed-v1-no-reasoning-2026-09-01",
+  "resolvedAt": "2026-09-01",
+  "gateway": "OpenRouter",
+  "evaluationPlanId": "gated-grid-frequency-confirmatory-v1",
+  "evaluationPlanSha256": "66c44c5fe267a22e710c2747bfae94accbbed290285dbe3f08388ec622dccb7e",
+  "stage": "frozen-five-route-color-gated-frequency-holdout-with-visible-histogram-control",
+  "casesPerModel": 32,
+  "trials": 1,
+  "temperature": 0,
+  "maxOutputTokens": 4096,
+  "reasoning": { "effort": "none", "exclude": true },
+  "scorer": "terminal-option-v3",
+  "allowProviderFallbacks": false,
+  "dataCollection": "deny",
+  "campaignCostCeilingUsd": 20,
+  "models": [
+    { "modelId": "bytedance-seed/seed-2-1-turbo", "modelRevision": "bytedance-seed/seed-2-1-turbo-20260810", "upstreamProvider": "Seed" }
+  ]
+}

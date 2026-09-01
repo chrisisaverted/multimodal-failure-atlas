@@ -1,0 +1,24 @@
+{
+  "id": "pair-collision-gated-confirmatory-seed-v1-no-reasoning-2026-09-01",
+  "resolvedAt": "2026-09-01",
+  "gateway": "OpenRouter",
+  "evaluationPlanId": "pair-collision-gated-confirmatory-v1",
+  "evaluationPlanSha256": "d6c42d28954ed3a5aff3af4d6730add998018393638f37216437631eb50d9548",
+  "stage": "frozen-five-route-confirmatory-holdout-with-visible-match-counter-control",
+  "casesPerModel": 32,
+  "trials": 1,
+  "temperature": 0,
+  "maxOutputTokens": 4096,
+  "reasoning": { "effort": "none", "exclude": true },
+  "scorer": "terminal-option-v3",
+  "allowProviderFallbacks": false,
+  "dataCollection": "deny",
+  "campaignCostCeilingUsd": 20,
+  "models": [
+    {
+      "modelId": "bytedance-seed/seed-2-1-turbo",
+      "modelRevision": "bytedance-seed/seed-2-1-turbo-20260810",
+      "upstreamProvider": "Seed"
+    }
+  ]
+}

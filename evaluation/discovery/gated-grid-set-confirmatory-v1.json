@@ -1,0 +1,3086 @@
+{
+  "id": "gated-grid-set-confirmatory-v1",
+  "generatorVersion": "gated-grid-set-cardinality-v1",
+  "status": "frozen-confirmatory-holdout",
+  "frozenAt": "2026-09-01T14:05:00.000Z",
+  "derivedFrom": {
+    "discoveryPlanSha256": "19607e8a98940bf19ae4d50b9098a49532b007e9f062f4c4d300fe93769c3231",
+    "reservationSha256": "94c57e78fb837c12de05f72d366a4d885afff81fafb58ae1cb201325f093ee63",
+    "discoveryEvidence": [
+      {
+        "modelId": "google/gemini-3.7-flash",
+        "files": [
+          {
+            "path": "evaluation/results/gated-grid-set-discovery-v1-gemini.jsonl",
+            "sha256": "5d44b2e4a18bddfe088fb076785a0cc75036a4e8fdcebfc0da356682884e4e39"
+          }
+        ],
+        "requests": 8,
+        "substantiveAnswers": 8,
+        "correct": 1,
+        "answerKeyBlindAdjudications": 0
+      },
+      {
+        "modelId": "qwen/qwen3.8-max",
+        "files": [
+          {
+            "path": "evaluation/results/gated-grid-set-discovery-v1-qwen.jsonl",
+            "sha256": "58e4427a3aac81f6aa852bdd2c46710bf103ddf72b630f59e08b5c68fdd76392"
+          }
+        ],
+        "requests": 8,
+        "substantiveAnswers": 8,
+        "correct": 1,
+        "answerKeyBlindAdjudications": 0
+      },
+      {
+        "modelId": "moonshotai/kimi-k3",
+        "files": [
+          {
+            "path": "evaluation/results/gated-grid-set-discovery-v1-kimi.jsonl",
+            "sha256": "7733c91cc3da1f7c45cf240f34870fb3e11a57b62ada7acaff87847cf40efa00"
+          },
+          {
+            "path": "evaluation/results/gated-grid-set-discovery-v1-kimi-completion.jsonl",
+            "sha256": "b699833db21376a3735823768bdaa324c7a80cd1cfa3abbca2e60d8261677e36"
+          }
+        ],
+        "requests": 9,
+        "substantiveAnswers": 8,
+        "correct": 3,
+        "answerKeyBlindAdjudications": 0
+      },
+      {
+        "modelId": "bytedance-seed/seed-2-1-turbo",
+        "files": [
+          {
+            "path": "evaluation/results/gated-grid-set-discovery-v1-seed.jsonl",
+            "sha256": "93b4a6446e230ca5edb9c00da0151255ab80b3b83ce4edff004d7526899b32a1"
+          }
+        ],
+        "requests": 8,
+        "substantiveAnswers": 8,
+        "correct": 2,
+        "answerKeyBlindAdjudications": 0
+      },
+      {
+        "modelId": "xiaomi/mimo-v2.5",
+        "files": [
+          {
+            "path": "evaluation/results/gated-grid-set-discovery-v1-mimo.jsonl",
+            "sha256": "d4634a37bfe6c72cfe49f6d9809e773983c2d08f06526dff3250095d2f193737"
+          }
+        ],
+        "requests": 8,
+        "substantiveAnswers": 8,
+        "correct": 3,
+        "answerKeyBlindAdjudications": 0
+      }
+    ]
+  },
+  "holdoutSeparation": "Exactly the 16 seed-disjoint, answer-balanced cases reserved before the five-route screen; no cell, target color, event ordering, wrong-gate echo, answer position, or visual phase was selected after model responses.",
+  "interventions": [
+    {
+      "id": "native-video",
+      "description": "Forty flashes require a conditionally updated duplicate-suppressed spatial set."
+    },
+    {
+      "id": "persistent-target-set-control",
+      "description": "Only target-gate cells persist and their exact running set size is displayed."
+    }
+  ],
+  "candidates": [
+    {
+      "id": "ggs-cc45a142927e19db",
+      "cellId": "cell-color-gated-grid-set-cardinality",
+      "split": "confirmatory",
+      "seed": 5410000,
+      "failureModeId": "temporal-set-cardinality",
+      "question": "How many DIFFERENT grid cells flashed during AMBER frames? Count repeats once and ignore every CYAN frame.",
+      "answerOptions": [
+        "11",
+        "10",
+        "9",
+        "12"
+      ],
+      "expectedAnswer": "9",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "uniqueTargetCount": 9,
+        "targetGate": "AMBER",
+        "events": [
+          {
+            "cell": 7,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 34,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 24,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 21,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 20,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 24,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 24,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 32,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 34,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 4,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 22,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 8,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 21,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 20,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 7,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 24,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 7,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 3,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 27,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 16,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 1,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 26,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 25,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 7,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 19,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 22,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 34,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 27,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 9,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 30,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 21,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 28,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 28,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 33,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 35,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 27,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 28,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 21,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 24,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 34,
+            "gate": "AMBER"
+          }
+        ],
+        "targetGateEvents": 20,
+        "wrongGateEchoes": 8,
+        "videoDurationMs": 20000,
+        "fps": 30,
+        "visualVariant": 800
+      }
+    },
+    {
+      "id": "ggs-88c1ad2744a022bb",
+      "cellId": "cell-color-gated-grid-set-cardinality",
+      "split": "confirmatory",
+      "seed": 5410001,
+      "failureModeId": "temporal-set-cardinality",
+      "question": "How many DIFFERENT grid cells flashed during CYAN frames? Count repeats once and ignore every AMBER frame.",
+      "answerOptions": [
+        "11",
+        "9",
+        "10",
+        "12"
+      ],
+      "expectedAnswer": "10",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "uniqueTargetCount": 10,
+        "targetGate": "CYAN",
+        "events": [
+          {
+            "cell": 6,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 22,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 7,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 2,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 35,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 11,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 23,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 5,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 6,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 2,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 2,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 29,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 18,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 14,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 12,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 15,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 28,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 11,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 20,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 23,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 19,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 20,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 0,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 6,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 7,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 17,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 27,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 12,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 7,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 32,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 12,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 6,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 20,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 23,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 17,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 17,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 20,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 29,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 9,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 21,
+            "gate": "AMBER"
+          }
+        ],
+        "targetGateEvents": 20,
+        "wrongGateEchoes": 8,
+        "videoDurationMs": 20000,
+        "fps": 30,
+        "visualVariant": 801
+      }
+    },
+    {
+      "id": "ggs-970d56f78fbd48c2",
+      "cellId": "cell-color-gated-grid-set-cardinality",
+      "split": "confirmatory",
+      "seed": 5410002,
+      "failureModeId": "temporal-set-cardinality",
+      "question": "How many DIFFERENT grid cells flashed during AMBER frames? Count repeats once and ignore every CYAN frame.",
+      "answerOptions": [
+        "9",
+        "11",
+        "10",
+        "12"
+      ],
+      "expectedAnswer": "11",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "uniqueTargetCount": 11,
+        "targetGate": "AMBER",
+        "events": [
+          {
+            "cell": 4,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 12,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 26,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 7,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 7,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 12,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 23,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 13,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 0,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 14,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 34,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 17,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 10,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 17,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 13,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 0,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 17,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 20,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 9,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 13,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 3,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 18,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 24,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 8,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 4,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 12,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 7,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 18,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 15,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 5,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 32,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 34,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 19,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 11,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 9,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 32,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 1,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 24,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 9,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 32,
+            "gate": "CYAN"
+          }
+        ],
+        "targetGateEvents": 20,
+        "wrongGateEchoes": 8,
+        "videoDurationMs": 20000,
+        "fps": 30,
+        "visualVariant": 802
+      }
+    },
+    {
+      "id": "ggs-6da42451b44164d6",
+      "cellId": "cell-color-gated-grid-set-cardinality",
+      "split": "confirmatory",
+      "seed": 5410003,
+      "failureModeId": "temporal-set-cardinality",
+      "question": "How many DIFFERENT grid cells flashed during CYAN frames? Count repeats once and ignore every AMBER frame.",
+      "answerOptions": [
+        "9",
+        "11",
+        "10",
+        "12"
+      ],
+      "expectedAnswer": "12",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "uniqueTargetCount": 12,
+        "targetGate": "CYAN",
+        "events": [
+          {
+            "cell": 33,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 8,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 22,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 11,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 11,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 18,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 18,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 1,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 3,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 13,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 33,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 30,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 11,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 28,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 21,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 15,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 3,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 33,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 12,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 35,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 8,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 4,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 27,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 3,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 12,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 22,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 33,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 23,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 12,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 27,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 0,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 20,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 31,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 35,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 11,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 11,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 24,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 2,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 16,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 29,
+            "gate": "AMBER"
+          }
+        ],
+        "targetGateEvents": 20,
+        "wrongGateEchoes": 8,
+        "videoDurationMs": 20000,
+        "fps": 30,
+        "visualVariant": 803
+      }
+    },
+    {
+      "id": "ggs-19fbdce568635c38",
+      "cellId": "cell-color-gated-grid-set-cardinality",
+      "split": "confirmatory",
+      "seed": 5410004,
+      "failureModeId": "temporal-set-cardinality",
+      "question": "How many DIFFERENT grid cells flashed during CYAN frames? Count repeats once and ignore every AMBER frame.",
+      "answerOptions": [
+        "11",
+        "9",
+        "10",
+        "12"
+      ],
+      "expectedAnswer": "9",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "uniqueTargetCount": 9,
+        "targetGate": "CYAN",
+        "events": [
+          {
+            "cell": 22,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 3,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 14,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 5,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 25,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 13,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 4,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 27,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 10,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 35,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 31,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 35,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 35,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 27,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 20,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 14,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 16,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 4,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 9,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 14,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 25,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 22,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 33,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 35,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 16,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 2,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 13,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 16,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 4,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 32,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 4,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 33,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 35,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 22,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 11,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 13,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 12,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 0,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 35,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 6,
+            "gate": "AMBER"
+          }
+        ],
+        "targetGateEvents": 20,
+        "wrongGateEchoes": 8,
+        "videoDurationMs": 20000,
+        "fps": 30,
+        "visualVariant": 804
+      }
+    },
+    {
+      "id": "ggs-a6679331bcf137ad",
+      "cellId": "cell-color-gated-grid-set-cardinality",
+      "split": "confirmatory",
+      "seed": 5410005,
+      "failureModeId": "temporal-set-cardinality",
+      "question": "How many DIFFERENT grid cells flashed during AMBER frames? Count repeats once and ignore every CYAN frame.",
+      "answerOptions": [
+        "9",
+        "10",
+        "11",
+        "12"
+      ],
+      "expectedAnswer": "10",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "uniqueTargetCount": 10,
+        "targetGate": "AMBER",
+        "events": [
+          {
+            "cell": 0,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 25,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 21,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 15,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 3,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 5,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 14,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 21,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 29,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 34,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 22,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 22,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 28,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 21,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 16,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 22,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 25,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 11,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 13,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 28,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 26,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 15,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 25,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 9,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 2,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 9,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 14,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 15,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 10,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 24,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 13,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 35,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 29,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 12,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 21,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 9,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 29,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 25,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 26,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 31,
+            "gate": "CYAN"
+          }
+        ],
+        "targetGateEvents": 20,
+        "wrongGateEchoes": 8,
+        "videoDurationMs": 20000,
+        "fps": 30,
+        "visualVariant": 805
+      }
+    },
+    {
+      "id": "ggs-b069dea10b9ad531",
+      "cellId": "cell-color-gated-grid-set-cardinality",
+      "split": "confirmatory",
+      "seed": 5410006,
+      "failureModeId": "temporal-set-cardinality",
+      "question": "How many DIFFERENT grid cells flashed during CYAN frames? Count repeats once and ignore every AMBER frame.",
+      "answerOptions": [
+        "9",
+        "10",
+        "11",
+        "12"
+      ],
+      "expectedAnswer": "11",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "uniqueTargetCount": 11,
+        "targetGate": "CYAN",
+        "events": [
+          {
+            "cell": 29,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 32,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 30,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 18,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 17,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 1,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 13,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 3,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 14,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 14,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 0,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 2,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 26,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 17,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 18,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 30,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 22,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 31,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 14,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 18,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 34,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 25,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 19,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 14,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 26,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 17,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 25,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 31,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 20,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 0,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 31,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 8,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 10,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 6,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 26,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 19,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 33,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 19,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 15,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 32,
+            "gate": "AMBER"
+          }
+        ],
+        "targetGateEvents": 20,
+        "wrongGateEchoes": 8,
+        "videoDurationMs": 20000,
+        "fps": 30,
+        "visualVariant": 806
+      }
+    },
+    {
+      "id": "ggs-eb340bb0d42a554c",
+      "cellId": "cell-color-gated-grid-set-cardinality",
+      "split": "confirmatory",
+      "seed": 5410007,
+      "failureModeId": "temporal-set-cardinality",
+      "question": "How many DIFFERENT grid cells flashed during AMBER frames? Count repeats once and ignore every CYAN frame.",
+      "answerOptions": [
+        "10",
+        "9",
+        "11",
+        "12"
+      ],
+      "expectedAnswer": "12",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "uniqueTargetCount": 12,
+        "targetGate": "AMBER",
+        "events": [
+          {
+            "cell": 34,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 15,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 34,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 0,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 24,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 24,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 35,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 19,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 26,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 23,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 20,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 12,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 34,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 28,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 26,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 1,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 21,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 2,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 11,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 11,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 23,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 9,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 31,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 12,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 11,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 16,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 11,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 1,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 23,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 10,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 24,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 11,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 27,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 32,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 15,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 1,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 26,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 8,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 29,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 33,
+            "gate": "CYAN"
+          }
+        ],
+        "targetGateEvents": 20,
+        "wrongGateEchoes": 8,
+        "videoDurationMs": 20000,
+        "fps": 30,
+        "visualVariant": 807
+      }
+    },
+    {
+      "id": "ggs-936afea5fb6b4385",
+      "cellId": "cell-color-gated-grid-set-cardinality",
+      "split": "confirmatory",
+      "seed": 5410008,
+      "failureModeId": "temporal-set-cardinality",
+      "question": "How many DIFFERENT grid cells flashed during AMBER frames? Count repeats once and ignore every CYAN frame.",
+      "answerOptions": [
+        "10",
+        "9",
+        "11",
+        "12"
+      ],
+      "expectedAnswer": "9",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "uniqueTargetCount": 9,
+        "targetGate": "AMBER",
+        "events": [
+          {
+            "cell": 6,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 9,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 18,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 18,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 22,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 30,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 25,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 0,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 8,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 0,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 11,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 25,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 20,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 4,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 14,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 1,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 14,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 1,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 0,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 23,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 18,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 15,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 27,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 5,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 27,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 0,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 16,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 5,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 5,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 15,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 12,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 10,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 18,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 27,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 17,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 15,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 18,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 27,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 5,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 27,
+            "gate": "AMBER"
+          }
+        ],
+        "targetGateEvents": 20,
+        "wrongGateEchoes": 8,
+        "videoDurationMs": 20000,
+        "fps": 30,
+        "visualVariant": 808
+      }
+    },
+    {
+      "id": "ggs-c87404526d615628",
+      "cellId": "cell-color-gated-grid-set-cardinality",
+      "split": "confirmatory",
+      "seed": 5410009,
+      "failureModeId": "temporal-set-cardinality",
+      "question": "How many DIFFERENT grid cells flashed during CYAN frames? Count repeats once and ignore every AMBER frame.",
+      "answerOptions": [
+        "11",
+        "10",
+        "9",
+        "12"
+      ],
+      "expectedAnswer": "10",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "uniqueTargetCount": 10,
+        "targetGate": "CYAN",
+        "events": [
+          {
+            "cell": 17,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 13,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 13,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 24,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 21,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 15,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 24,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 25,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 15,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 1,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 25,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 11,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 31,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 34,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 8,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 20,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 20,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 1,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 35,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 24,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 6,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 24,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 8,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 17,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 29,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 26,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 24,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 30,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 0,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 4,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 4,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 29,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 2,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 4,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 20,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 1,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 4,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 10,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 32,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 1,
+            "gate": "CYAN"
+          }
+        ],
+        "targetGateEvents": 20,
+        "wrongGateEchoes": 8,
+        "videoDurationMs": 20000,
+        "fps": 30,
+        "visualVariant": 809
+      }
+    },
+    {
+      "id": "ggs-acc16c9fb259874a",
+      "cellId": "cell-color-gated-grid-set-cardinality",
+      "split": "confirmatory",
+      "seed": 5410010,
+      "failureModeId": "temporal-set-cardinality",
+      "question": "How many DIFFERENT grid cells flashed during AMBER frames? Count repeats once and ignore every CYAN frame.",
+      "answerOptions": [
+        "10",
+        "11",
+        "9",
+        "12"
+      ],
+      "expectedAnswer": "11",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "uniqueTargetCount": 11,
+        "targetGate": "AMBER",
+        "events": [
+          {
+            "cell": 32,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 15,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 14,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 8,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 24,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 26,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 7,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 11,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 20,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 18,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 30,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 31,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 35,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 1,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 3,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 9,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 9,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 5,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 7,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 28,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 33,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 30,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 3,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 18,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 30,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 35,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 21,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 33,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 24,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 21,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 26,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 7,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 24,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 13,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 0,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 9,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 25,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 35,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 9,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 18,
+            "gate": "AMBER"
+          }
+        ],
+        "targetGateEvents": 20,
+        "wrongGateEchoes": 8,
+        "videoDurationMs": 20000,
+        "fps": 30,
+        "visualVariant": 810
+      }
+    },
+    {
+      "id": "ggs-4697fe8281a7c234",
+      "cellId": "cell-color-gated-grid-set-cardinality",
+      "split": "confirmatory",
+      "seed": 5410011,
+      "failureModeId": "temporal-set-cardinality",
+      "question": "How many DIFFERENT grid cells flashed during CYAN frames? Count repeats once and ignore every AMBER frame.",
+      "answerOptions": [
+        "10",
+        "11",
+        "9",
+        "12"
+      ],
+      "expectedAnswer": "12",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "uniqueTargetCount": 12,
+        "targetGate": "CYAN",
+        "events": [
+          {
+            "cell": 23,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 27,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 12,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 31,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 17,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 18,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 5,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 27,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 4,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 34,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 12,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 2,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 28,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 16,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 1,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 24,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 6,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 31,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 23,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 16,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 33,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 35,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 8,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 35,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 26,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 27,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 6,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 9,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 24,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 5,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 1,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 6,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 8,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 7,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 13,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 5,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 1,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 12,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 14,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 10,
+            "gate": "AMBER"
+          }
+        ],
+        "targetGateEvents": 20,
+        "wrongGateEchoes": 8,
+        "videoDurationMs": 20000,
+        "fps": 30,
+        "visualVariant": 811
+      }
+    },
+    {
+      "id": "ggs-bbf9d7aec573d33c",
+      "cellId": "cell-color-gated-grid-set-cardinality",
+      "split": "confirmatory",
+      "seed": 5410012,
+      "failureModeId": "temporal-set-cardinality",
+      "question": "How many DIFFERENT grid cells flashed during CYAN frames? Count repeats once and ignore every AMBER frame.",
+      "answerOptions": [
+        "9",
+        "11",
+        "10",
+        "12"
+      ],
+      "expectedAnswer": "9",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "uniqueTargetCount": 9,
+        "targetGate": "CYAN",
+        "events": [
+          {
+            "cell": 24,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 27,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 27,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 29,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 31,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 28,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 32,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 27,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 35,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 27,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 31,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 27,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 10,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 13,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 0,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 13,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 13,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 29,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 21,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 2,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 35,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 31,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 12,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 22,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 20,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 31,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 25,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 35,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 13,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 27,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 7,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 23,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 31,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 15,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 31,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 9,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 6,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 22,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 2,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 6,
+            "gate": "AMBER"
+          }
+        ],
+        "targetGateEvents": 20,
+        "wrongGateEchoes": 8,
+        "videoDurationMs": 20000,
+        "fps": 30,
+        "visualVariant": 812
+      }
+    },
+    {
+      "id": "ggs-611d46cf270a7a72",
+      "cellId": "cell-color-gated-grid-set-cardinality",
+      "split": "confirmatory",
+      "seed": 5410013,
+      "failureModeId": "temporal-set-cardinality",
+      "question": "How many DIFFERENT grid cells flashed during AMBER frames? Count repeats once and ignore every CYAN frame.",
+      "answerOptions": [
+        "11",
+        "9",
+        "10",
+        "12"
+      ],
+      "expectedAnswer": "10",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "uniqueTargetCount": 10,
+        "targetGate": "AMBER",
+        "events": [
+          {
+            "cell": 4,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 1,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 28,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 23,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 1,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 7,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 8,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 35,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 5,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 18,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 18,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 17,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 7,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 23,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 5,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 30,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 13,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 29,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 5,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 33,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 35,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 11,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 8,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 18,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 26,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 33,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 24,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 11,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 23,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 35,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 15,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 16,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 24,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 33,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 14,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 18,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 32,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 0,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 23,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 8,
+            "gate": "AMBER"
+          }
+        ],
+        "targetGateEvents": 20,
+        "wrongGateEchoes": 8,
+        "videoDurationMs": 20000,
+        "fps": 30,
+        "visualVariant": 813
+      }
+    },
+    {
+      "id": "ggs-bb42d4ed3fbc11ce",
+      "cellId": "cell-color-gated-grid-set-cardinality",
+      "split": "confirmatory",
+      "seed": 5410014,
+      "failureModeId": "temporal-set-cardinality",
+      "question": "How many DIFFERENT grid cells flashed during CYAN frames? Count repeats once and ignore every AMBER frame.",
+      "answerOptions": [
+        "11",
+        "9",
+        "10",
+        "12"
+      ],
+      "expectedAnswer": "11",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "uniqueTargetCount": 11,
+        "targetGate": "CYAN",
+        "events": [
+          {
+            "cell": 1,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 25,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 11,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 16,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 33,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 7,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 6,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 4,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 24,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 32,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 21,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 13,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 10,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 25,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 7,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 9,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 7,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 31,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 12,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 12,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 23,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 29,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 19,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 27,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 1,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 32,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 21,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 19,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 32,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 9,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 33,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 33,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 19,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 21,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 18,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 25,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 25,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 8,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 7,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 5,
+            "gate": "AMBER"
+          }
+        ],
+        "targetGateEvents": 20,
+        "wrongGateEchoes": 8,
+        "videoDurationMs": 20000,
+        "fps": 30,
+        "visualVariant": 814
+      }
+    },
+    {
+      "id": "ggs-c7db10559910ceca",
+      "cellId": "cell-color-gated-grid-set-cardinality",
+      "split": "confirmatory",
+      "seed": 5410015,
+      "failureModeId": "temporal-set-cardinality",
+      "question": "How many DIFFERENT grid cells flashed during AMBER frames? Count repeats once and ignore every CYAN frame.",
+      "answerOptions": [
+        "9",
+        "11",
+        "10",
+        "12"
+      ],
+      "expectedAnswer": "12",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "uniqueTargetCount": 12,
+        "targetGate": "AMBER",
+        "events": [
+          {
+            "cell": 19,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 2,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 32,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 3,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 1,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 28,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 16,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 24,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 16,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 3,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 31,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 28,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 34,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 33,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 20,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 24,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 18,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 26,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 21,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 29,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 29,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 4,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 35,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 16,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 33,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 22,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 26,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 2,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 8,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 30,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 6,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 2,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 16,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 22,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 14,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 7,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 32,
+            "gate": "CYAN"
+          },
+          {
+            "cell": 21,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 22,
+            "gate": "AMBER"
+          },
+          {
+            "cell": 21,
+            "gate": "AMBER"
+          }
+        ],
+        "targetGateEvents": 20,
+        "wrongGateEchoes": 8,
+        "videoDurationMs": 20000,
+        "fps": 30,
+        "visualVariant": 815
+      }
+    }
+  ]
+}

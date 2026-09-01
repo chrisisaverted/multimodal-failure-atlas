@@ -22,10 +22,16 @@ function optionClaims(value: string, options: string[]) {
   });
 }
 
-function outsideAtomicClaim(value: string) {
+function outsideAtomicClaim(value: string, options: string[]) {
   const markdownToken = value.match(/[*_`]{1,3}\s*([\p{L}\p{N}'-]+)\s*[*_`]{1,3}/u)?.[1];
-  if (markdownToken) return markdownToken;
-  return value.match(/^\s*(?:approximately\s+|about\s+)?([\p{L}\p{N}'-]+)/iu)?.[1];
+  const candidate =
+    markdownToken ?? value.match(/^\s*(?:approximately\s+|about\s+)?([\p{L}\p{N}'-]+)/iu)?.[1];
+  if (!candidate) return undefined;
+  if (options.every((option) => /^[+-]?\d+(?:\.\d+)?$/u.test(option.trim())))
+    return /^[+-]?\d+(?:\.\d+)?$/u.test(candidate) ? candidate : undefined;
+  if (options.every((option) => /^\p{L}$/u.test(option.trim())))
+    return /^\p{L}$/u.test(candidate) ? candidate : undefined;
+  return candidate;
 }
 
 /**
@@ -39,6 +45,68 @@ export function adjudicateExplicitDeclaration(
 ): DeclaredAnswerAdjudication | undefined {
   const ambiguity =
     /\b(?:either|maybe|possibly|probably|approximately|about|unclear|unknown|cannot determine|can't determine)\b/iu;
+  const lines = rawResponse.split(/\r?\n/u).filter((line) => line.trim().length > 0);
+  const terminal = lines.at(-1)?.trim() ?? "";
+  const terminalMarkedAnswer = terminal.match(
+    /^\s*\*{0,3}\s*(?:(?:correct|final)\s+)?answer\s*[:=-]\s*\*{0,3}\s*\*{1,3}\s*([\p{L}\p{N}'+.-]+)\s*\*{1,3}/iu,
+  )?.[1];
+  if (terminalMarkedAnswer && !ambiguity.test(terminalMarkedAnswer)) {
+    const option = options.find(
+      (candidate) => normalize(candidate) === normalize(terminalMarkedAnswer),
+    );
+    if (option)
+      return { claimedAnswer: option, basis: "terminal-standalone", withinOptions: true };
+  }
+  const terminalLabel = terminal.match(
+    /^\s*[*_`]{0,3}\s*(?:(?:correct|final)\s+)?answer\s*[:=-]\s*[*_`]{0,3}\s*[*_`]{0,3}\s*([^.!?\n]+?)\s*[*_`]{0,3}\s*[.!]?\s*$/iu,
+  )?.[1];
+  if (terminalLabel && !ambiguity.test(terminalLabel)) {
+    const leadingMarked = terminalLabel.match(/^\s*[*_`]{1,3}\s*([\p{L}\p{N}'+.-]+)\s*[*_`]{1,3}/u)?.[1];
+    const leadingOption = leadingMarked
+      ? options.find((option) => normalize(option) === normalize(leadingMarked))
+      : undefined;
+    if (leadingOption)
+      return { claimedAnswer: leadingOption, basis: "terminal-standalone", withinOptions: true };
+    const matches = optionClaims(terminalLabel, options);
+    if (matches.length === 1)
+      return { claimedAnswer: matches[0]!, basis: "terminal-standalone", withinOptions: true };
+    if (matches.length === 0) {
+      const outside = outsideAtomicClaim(terminalLabel, options);
+      if (outside)
+        return { claimedAnswer: outside, basis: "terminal-standalone", withinOptions: false };
+    }
+  }
+  if (terminal && terminal.length <= 48 && !ambiguity.test(terminal)) {
+    const terminalOptions = optionClaims(terminal, options);
+    if (terminalOptions.length === 1)
+      return {
+        claimedAnswer: terminalOptions[0]!,
+        basis: "terminal-standalone",
+        withinOptions: true,
+      };
+    if (terminalOptions.length === 0) {
+      const outside = terminal.match(
+        /^\s*[*_`]{0,3}\s*([\p{L}\p{N}'-]+)\s*[*_`]{0,3}\s*[.!]?\s*$/u,
+      )?.[1];
+      if (outside)
+        return { claimedAnswer: outside, basis: "terminal-standalone", withinOptions: false };
+    }
+  }
+  if (options.every((option) => /^[+-]?\d+(?:\.\d+)?$/u.test(option.trim()))) {
+    const recentNumericClaims = lines.slice(-4).flatMap((line) => {
+      const match = line.match(
+        /^\s*[*_`]{1,3}\s*([+-]?\d+(?:\.\d+)?)\s*[*_`]{1,3}(?:\s+(?:different\s+)?cells?\b.*)?\s*[.!]?\s*$/iu,
+      );
+      return match ? [match[1]!] : [];
+    });
+    const uniqueRecentClaims = [...new Set(recentNumericClaims)];
+    if (uniqueRecentClaims.length === 1)
+      return {
+        claimedAnswer: uniqueRecentClaims[0]!,
+        basis: "terminal-standalone",
+        withinOptions: options.includes(uniqueRecentClaims[0]!),
+      };
+  }
   const claims: DeclaredAnswerAdjudication[] = [];
   const declarations = [
     /(?:the\s+)?(?:correct|final)\s+(?:answer|panel|graph|option|choice|letter|count|number|output|value|quadrant|structure)\s*(?:is|:)\s*([^.!?\n]+)/giu,
@@ -56,7 +124,7 @@ export function adjudicateExplicitDeclaration(
       if (matches.length === 1) {
         claims.push({ claimedAnswer: matches[0]!, basis: "explicit-declaration", withinOptions: true });
       } else if (matches.length === 0) {
-        const outside = outsideAtomicClaim(clause);
+        const outside = outsideAtomicClaim(clause, options);
         if (outside)
           claims.push({ claimedAnswer: outside, basis: "explicit-declaration", withinOptions: false });
       }
@@ -67,8 +135,6 @@ export function adjudicateExplicitDeclaration(
   if (claims.length > 0 && normalizedClaims.size === 1) return claims[0];
   if (normalizedClaims.size > 1) return undefined;
 
-  const lines = rawResponse.split(/\r?\n/u).filter((line) => line.trim().length > 0);
-  const terminal = lines.at(-1)?.trim() ?? "";
   if (!terminal || terminal.length > 48 || ambiguity.test(terminal)) return undefined;
   const terminalOptions = optionClaims(terminal, options);
   if (terminalOptions.length === 1)

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-01T12:20:33.005Z",
+  "generatedAt": "2026-09-01T15:01:09.546Z",
   "admissionRule": "Every prespecified route has at least 16 substantive answers and an observed native solve rate strictly below 50%.",
   "families": [
     {
@@ -15,7 +15,9 @@
       "admitted": true,
       "humanSolvability": "unverified",
       "difficultySetting": {
-        "values": [100],
+        "values": [
+          100
+        ],
         "label": "100/100",
         "nativeCases": 16
       },
@@ -25,7 +27,12 @@
         "artifactPath": "/evaluations/precision-wire-count-confirmatory-v1/wc-bff0df82b40bdde3.png",
         "mimeType": "image/png",
         "question": "How many times does wire B cross another wire?",
-        "answerOptions": ["7", "8", "9", "10"],
+        "answerOptions": [
+          "7",
+          "8",
+          "9",
+          "10"
+        ],
         "expectedAnswer": "7",
         "difficulty": 100
       },
@@ -38,6 +45,7 @@
             "condition": "native-image",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 7,
             "solveRate": 0.4375,
             "lower95": 0.23098652405492354,
@@ -50,6 +58,7 @@
             "condition": "oracle-highlighted-numbered-path",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
@@ -67,6 +76,7 @@
             "condition": "native-image",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 0,
             "solveRate": 0,
             "lower95": 0,
@@ -78,12 +88,13 @@
           "control": {
             "condition": "oracle-highlighted-numbered-path",
             "requests": 16,
-            "substantiveAnswers": 15,
-            "correct": 15,
+            "substantiveAnswers": 16,
+            "adjudicatedAnswers": 1,
+            "correct": 16,
             "solveRate": 1,
-            "lower95": 0.7961166989641515,
+            "lower95": 0.8063923194655637,
             "upper95": 1,
-            "pendingReview": 1,
+            "pendingReview": 0,
             "emptyResponses": 0,
             "costUsd": 0.09647599999999999
           }
@@ -96,6 +107,7 @@
             "condition": "native-image",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 1,
             "solveRate": 0.0625,
             "lower95": 0.01111934476464252,
@@ -108,6 +120,7 @@
             "condition": "oracle-highlighted-numbered-path",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 13,
             "solveRate": 0.8125,
             "lower95": 0.5699111903802586,
@@ -131,7 +144,9 @@
       "admitted": true,
       "humanSolvability": "unverified",
       "difficultySetting": {
-        "values": [92],
+        "values": [
+          92
+        ],
         "label": "92/100",
         "nativeCases": 16
       },
@@ -141,7 +156,12 @@
         "artifactPath": "/evaluations/enclosure-panels-dense-confirmatory-v1/epd-3ce498f7f4b2f20a.png",
         "mimeType": "image/png",
         "question": "Which panel contains exactly 18 CLOSED boundaries around its red dot?",
-        "answerOptions": ["A", "B", "C", "D"],
+        "answerOptions": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
         "expectedAnswer": "A",
         "difficulty": 92
       },
@@ -154,6 +174,7 @@
             "condition": "native-image",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 4,
             "solveRate": 0.25,
             "lower95": 0.10182067491213048,
@@ -166,6 +187,7 @@
             "condition": "exact-count-badges",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
@@ -183,6 +205,7 @@
             "condition": "native-image",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 5,
             "solveRate": 0.3125,
             "lower95": 0.14164643854782039,
@@ -195,6 +218,7 @@
             "condition": "exact-count-badges",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
@@ -212,6 +236,7 @@
             "condition": "native-image",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 3,
             "solveRate": 0.1875,
             "lower95": 0.06591599071428142,
@@ -224,6 +249,7 @@
             "condition": "exact-count-badges",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
@@ -247,7 +273,9 @@
       "admitted": true,
       "humanSolvability": "unverified",
       "difficultySetting": {
-        "values": [46],
+        "values": [
+          46
+        ],
         "label": "46/100",
         "nativeCases": 16
       },
@@ -257,7 +285,12 @@
         "artifactPath": "/evaluations/rotation-correspondence-confirmatory-v1/rc-76531a0518827ee7.png",
         "mimeType": "image/png",
         "question": "Which candidate is EXACTLY the same connected shape as the reference after rotation only (no reflection)?",
-        "answerOptions": ["A", "D", "B", "C"],
+        "answerOptions": [
+          "A",
+          "D",
+          "B",
+          "C"
+        ],
         "expectedAnswer": "A",
         "difficulty": 46
       },
@@ -270,6 +303,7 @@
             "condition": "native-image",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 6,
             "solveRate": 0.375,
             "lower95": 0.18481232558863633,
@@ -282,6 +316,7 @@
             "condition": "correct-candidate-highlighted",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
@@ -299,6 +334,7 @@
             "condition": "native-image",
             "requests": 18,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 5,
             "solveRate": 0.3125,
             "lower95": 0.14164643854782039,
@@ -311,6 +347,7 @@
             "condition": "correct-candidate-highlighted",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
@@ -328,6 +365,7 @@
             "condition": "native-image",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 2,
             "solveRate": 0.125,
             "lower95": 0.03497748774324047,
@@ -340,6 +378,7 @@
             "condition": "correct-candidate-highlighted",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 14,
             "solveRate": 0.875,
             "lower95": 0.639771727342413,
@@ -363,7 +402,9 @@
       "admitted": true,
       "humanSolvability": "unverified",
       "difficultySetting": {
-        "values": [82],
+        "values": [
+          82
+        ],
         "label": "82/100",
         "nativeCases": 16
       },
@@ -373,7 +414,12 @@
         "artifactPath": "/evaluations/symmetry-confirmatory-v1/sy-b19331d64a952848.png",
         "mimeType": "image/png",
         "question": "Which panel is PERFECTLY mirror-symmetric across its red vertical axis? The other three each contain one mismatched dot.",
-        "answerOptions": ["B", "D", "A", "C"],
+        "answerOptions": [
+          "B",
+          "D",
+          "A",
+          "C"
+        ],
         "expectedAnswer": "A",
         "difficulty": 82
       },
@@ -386,6 +432,7 @@
             "condition": "native-image",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 6,
             "solveRate": 0.375,
             "lower95": 0.18481232558863633,
@@ -398,6 +445,7 @@
             "condition": "oracle-marked-control",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
@@ -415,6 +463,7 @@
             "condition": "native-image",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 3,
             "solveRate": 0.1875,
             "lower95": 0.06591599071428142,
@@ -427,6 +476,7 @@
             "condition": "oracle-marked-control",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
@@ -444,6 +494,7 @@
             "condition": "native-image",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 1,
             "solveRate": 0.0625,
             "lower95": 0.01111934476464252,
@@ -456,6 +507,7 @@
             "condition": "oracle-marked-control",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
@@ -479,7 +531,9 @@
       "admitted": true,
       "humanSolvability": "unverified",
       "difficultySetting": {
-        "values": [77],
+        "values": [
+          77
+        ],
         "label": "77/100",
         "nativeCases": 16
       },
@@ -489,7 +543,12 @@
         "artifactPath": "/evaluations/cube-stack-confirmatory-v1/cs-ac34f4c0fce73230.png",
         "mimeType": "image/png",
         "question": "Which structure contains exactly 28 unit cubes? Every column is solid down to the floor.",
-        "answerOptions": ["C", "A", "B", "D"],
+        "answerOptions": [
+          "C",
+          "A",
+          "B",
+          "D"
+        ],
         "expectedAnswer": "A",
         "difficulty": 77
       },
@@ -502,6 +561,7 @@
             "condition": "native-image",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 3,
             "solveRate": 0.1875,
             "lower95": 0.06591599071428142,
@@ -514,6 +574,7 @@
             "condition": "panel-totals-annotated",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
@@ -531,6 +592,7 @@
             "condition": "native-image",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 6,
             "solveRate": 0.375,
             "lower95": 0.18481232558863633,
@@ -543,6 +605,7 @@
             "condition": "panel-totals-annotated",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
@@ -560,6 +623,7 @@
             "condition": "native-image",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 6,
             "solveRate": 0.375,
             "lower95": 0.18481232558863633,
@@ -572,6 +636,7 @@
             "condition": "panel-totals-annotated",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
@@ -595,7 +660,9 @@
       "admitted": true,
       "humanSolvability": "unverified",
       "difficultySetting": {
-        "values": [98],
+        "values": [
+          98
+        ],
         "label": "98/100",
         "nativeCases": 16
       },
@@ -605,7 +672,12 @@
         "artifactPath": "/evaluations/xor-composition-confirmatory-v2/xch-3ee36d1d9d79acc8.png",
         "mimeType": "image/png",
         "question": "Which option is the EXACT cell-by-cell XOR of INPUT 1 and INPUT 2? Each wrong option differs from the true XOR in only ONE cell.",
-        "answerOptions": ["B", "C", "A", "D"],
+        "answerOptions": [
+          "B",
+          "C",
+          "A",
+          "D"
+        ],
         "expectedAnswer": "A",
         "difficulty": 98
       },
@@ -618,6 +690,7 @@
             "condition": "native-image",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 4,
             "solveRate": 0.25,
             "lower95": 0.10182067491213048,
@@ -630,6 +703,7 @@
             "condition": "oracle-boxed-control",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
@@ -647,6 +721,7 @@
             "condition": "native-image",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 2,
             "solveRate": 0.125,
             "lower95": 0.03497748774324047,
@@ -658,12 +733,13 @@
           "control": {
             "condition": "oracle-boxed-control",
             "requests": 16,
-            "substantiveAnswers": 15,
-            "correct": 15,
+            "substantiveAnswers": 16,
+            "adjudicatedAnswers": 1,
+            "correct": 16,
             "solveRate": 1,
-            "lower95": 0.7961166989641515,
+            "lower95": 0.8063923194655637,
             "upper95": 1,
-            "pendingReview": 1,
+            "pendingReview": 0,
             "emptyResponses": 0,
             "costUsd": 0.05001
           }
@@ -676,6 +752,7 @@
             "condition": "native-image",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 7,
             "solveRate": 0.4375,
             "lower95": 0.23098652405492354,
@@ -688,6 +765,7 @@
             "condition": "oracle-boxed-control",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
@@ -711,7 +789,9 @@
       "admitted": true,
       "humanSolvability": "unverified",
       "difficultySetting": {
-        "values": [100],
+        "values": [
+          100
+        ],
         "label": "100/100",
         "nativeCases": 16
       },
@@ -721,7 +801,12 @@
         "artifactPath": "/evaluations/change-localization-confirmatory-v2/cl-ec30b9a7ecedcc86.png",
         "mimeType": "image/png",
         "question": "In which labeled quadrant of the RIGHT grid is the one rotated glyph?",
-        "answerOptions": ["D", "A", "C", "B"],
+        "answerOptions": [
+          "D",
+          "A",
+          "C",
+          "B"
+        ],
         "expectedAnswer": "A",
         "difficulty": 100
       },
@@ -734,6 +819,7 @@
             "condition": "native-image",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 4,
             "solveRate": 0.25,
             "lower95": 0.10182067491213048,
@@ -746,6 +832,7 @@
             "condition": "changed-glyph-circled",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
@@ -763,6 +850,7 @@
             "condition": "native-image",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 2,
             "solveRate": 0.125,
             "lower95": 0.03497748774324047,
@@ -775,6 +863,7 @@
             "condition": "changed-glyph-circled",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
@@ -792,6 +881,7 @@
             "condition": "native-image",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 5,
             "solveRate": 0.3125,
             "lower95": 0.14164643854782039,
@@ -804,6 +894,7 @@
             "condition": "changed-glyph-circled",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 9,
             "solveRate": 0.5625,
             "lower95": 0.331785563988119,
@@ -827,7 +918,9 @@
       "admitted": true,
       "humanSolvability": "unverified",
       "difficultySetting": {
-        "values": [55],
+        "values": [
+          55
+        ],
         "label": "55/100",
         "nativeCases": 16
       },
@@ -837,7 +930,12 @@
         "artifactPath": "/evaluations/maze-reachability-confirmatory-v1/mr-2073131fc5f526e3.png",
         "mimeType": "image/png",
         "question": "In which panel is there an open route through the maze from S to G?",
-        "answerOptions": ["A", "C", "B", "D"],
+        "answerOptions": [
+          "A",
+          "C",
+          "B",
+          "D"
+        ],
         "expectedAnswer": "A",
         "difficulty": 55
       },
@@ -850,6 +948,7 @@
             "condition": "native-image",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 6,
             "solveRate": 0.375,
             "lower95": 0.18481232558863633,
@@ -862,6 +961,7 @@
             "condition": "solution-path-highlighted",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
@@ -879,6 +979,7 @@
             "condition": "native-image",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 3,
             "solveRate": 0.1875,
             "lower95": 0.06591599071428142,
@@ -890,12 +991,13 @@
           "control": {
             "condition": "solution-path-highlighted",
             "requests": 16,
-            "substantiveAnswers": 9,
-            "correct": 9,
+            "substantiveAnswers": 16,
+            "adjudicatedAnswers": 7,
+            "correct": 16,
             "solveRate": 1,
-            "lower95": 0.7008549515804559,
+            "lower95": 0.8063923194655637,
             "upper95": 1,
-            "pendingReview": 7,
+            "pendingReview": 0,
             "emptyResponses": 0,
             "costUsd": 0.068758
           }
@@ -908,6 +1010,7 @@
             "condition": "native-image",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 4,
             "solveRate": 0.25,
             "lower95": 0.10182067491213048,
@@ -920,6 +1023,7 @@
             "condition": "solution-path-highlighted",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
@@ -943,7 +1047,9 @@
       "admitted": true,
       "humanSolvability": "unverified",
       "difficultySetting": {
-        "values": [87],
+        "values": [
+          87
+        ],
         "label": "87/100",
         "nativeCases": 16
       },
@@ -953,7 +1059,12 @@
         "artifactPath": "/evaluations/euler-graph-confirmatory-v1/eg-4792dc1ee3e274d0.png",
         "mimeType": "image/png",
         "question": "Which graph has an Eulerian CIRCUIT: one closed route that uses every edge exactly once? Line crossings without a dot are not vertices.",
-        "answerOptions": ["D", "B", "A", "C"],
+        "answerOptions": [
+          "D",
+          "B",
+          "A",
+          "C"
+        ],
         "expectedAnswer": "A",
         "difficulty": 87
       },
@@ -966,6 +1077,7 @@
             "condition": "native-image",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 4,
             "solveRate": 0.25,
             "lower95": 0.10182067491213048,
@@ -978,6 +1090,7 @@
             "condition": "correct-graph-ringed",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
@@ -995,6 +1108,7 @@
             "condition": "native-image",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 5,
             "solveRate": 0.3125,
             "lower95": 0.14164643854782039,
@@ -1007,6 +1121,7 @@
             "condition": "correct-graph-ringed",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
@@ -1024,6 +1139,7 @@
             "condition": "native-image",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 2,
             "solveRate": 0.125,
             "lower95": 0.03497748774324047,
@@ -1036,6 +1152,7 @@
             "condition": "correct-graph-ringed",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
@@ -1059,7 +1176,9 @@
       "admitted": true,
       "humanSolvability": "unverified",
       "difficultySetting": {
-        "values": [96],
+        "values": [
+          96
+        ],
         "label": "96/100",
         "nativeCases": 16
       },
@@ -1069,7 +1188,12 @@
         "artifactPath": "/evaluations/parity-matrix-confirmatory-v3/pmh-85e0a3c8999677a4-native-image.png",
         "mimeType": "image/png",
         "question": "Which panel has an EVEN number of black dots in EVERY row AND EVERY column? Each other panel has exactly one odd row and one odd column.",
-        "answerOptions": ["B", "A", "D", "C"],
+        "answerOptions": [
+          "B",
+          "A",
+          "D",
+          "C"
+        ],
         "expectedAnswer": "A",
         "difficulty": 96
       },
@@ -1082,6 +1206,7 @@
             "condition": "native-image",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 5,
             "solveRate": 0.3125,
             "lower95": 0.14164643854782039,
@@ -1094,6 +1219,7 @@
             "condition": "parity-audit-control",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
@@ -1111,6 +1237,7 @@
             "condition": "native-image",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 4,
             "solveRate": 0.25,
             "lower95": 0.10182067491213048,
@@ -1123,6 +1250,7 @@
             "condition": "parity-audit-control",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
@@ -1140,6 +1268,7 @@
             "condition": "native-image",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 4,
             "solveRate": 0.25,
             "lower95": 0.10182067491213048,
@@ -1152,6 +1281,7 @@
             "condition": "parity-audit-control",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
@@ -1175,7 +1305,9 @@
       "admitted": true,
       "humanSolvability": "unverified",
       "difficultySetting": {
-        "values": [86],
+        "values": [
+          86
+        ],
         "label": "86/100",
         "nativeCases": 16
       },
@@ -1185,7 +1317,12 @@
         "artifactPath": "/evaluations/zone-entry-confirmatory-v1/ze-8d3249230c4181fc.mp4",
         "mimeType": "video/mp4",
         "question": "How many times does the RED-RINGED target disk ENTER the gold zone? Count each outside→inside transition and ignore every other disk.",
-        "answerOptions": ["14", "8", "10", "12"],
+        "answerOptions": [
+          "14",
+          "8",
+          "10",
+          "12"
+        ],
         "expectedAnswer": "8",
         "difficulty": 86
       },
@@ -1198,6 +1335,7 @@
             "condition": "native-1x",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 4,
             "solveRate": 0.25,
             "lower95": 0.10182067491213048,
@@ -1210,6 +1348,7 @@
             "condition": "oracle-counter-control",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
@@ -1227,6 +1366,7 @@
             "condition": "native-1x",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 7,
             "solveRate": 0.4375,
             "lower95": 0.23098652405492354,
@@ -1239,6 +1379,7 @@
             "condition": "oracle-counter-control",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
@@ -1256,6 +1397,7 @@
             "condition": "native-1x",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 4,
             "solveRate": 0.25,
             "lower95": 0.10182067491213048,
@@ -1268,6 +1410,7 @@
             "condition": "oracle-counter-control",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
@@ -1281,29 +1424,36 @@
     },
     {
       "catalogueId": "identity-pair-interaction-counting",
-      "planId": "pair-collision-confirmatory-v1",
-      "planSha256": "e7a0c377f0210aca0496c9c83261bd1ef00785cfc411419ca4cd35bbd6e7dd02",
-      "generatorVersion": "identity-pair-collision-count-v1",
-      "renderer": "pair-collision-svg-raster-v1",
+      "planId": "pair-collision-gated-confirmatory-v1",
+      "planSha256": "d6c42d28954ed3a5aff3af4d6730add998018393638f37216437631eb50d9548",
+      "generatorVersion": "identity-pair-collision-gated-v1",
+      "renderer": "pair-collision-gated-svg-raster-v1",
       "modality": "video",
       "nativeCondition": "native-1x",
       "controlCondition": "oracle-counter-control",
       "admitted": true,
       "humanSolvability": "unverified",
       "difficultySetting": {
-        "values": [91],
-        "label": "91/100",
+        "values": [
+          98
+        ],
+        "label": "98/100",
         "nativeCases": 16
       },
       "sample": {
-        "candidateId": "pc-90189c05e3035355",
-        "seed": 4610000,
-        "artifactPath": "/evaluations/pair-collision-confirmatory-v1/pc-90189c05e3035355.mp4",
+        "candidateId": "pcg-eb032a25f5c6cfc0",
+        "seed": 5310000,
+        "artifactPath": "/evaluations/pair-collision-gated-confirmatory-v1/pcg-eb032a25f5c6cfc0.mp4",
         "mimeType": "video/mp4",
-        "question": "How many collision events involve the specific pair A AND B together? Ignore collisions involving any other pairing.",
-        "answerOptions": ["7", "6", "5", "8"],
+        "question": "How many C+D collisions occurred during AMBER frames? Count only events satisfying BOTH the pair and frame-color conditions.",
+        "answerOptions": [
+          "6",
+          "8",
+          "7",
+          "5"
+        ],
         "expectedAnswer": "5",
-        "difficulty": 91
+        "difficulty": 98
       },
       "models": [
         {
@@ -1314,25 +1464,27 @@
             "condition": "native-1x",
             "requests": 16,
             "substantiveAnswers": 16,
-            "correct": 4,
-            "solveRate": 0.25,
-            "lower95": 0.10182067491213048,
-            "upper95": 0.49498316535508774,
+            "adjudicatedAnswers": 0,
+            "correct": 3,
+            "solveRate": 0.1875,
+            "lower95": 0.06591599071428142,
+            "upper95": 0.4300888096197414,
             "pendingReview": 0,
             "emptyResponses": 0,
-            "costUsd": 0.08052150000000001
+            "costUsd": 0.09748650000000003
           },
           "control": {
             "condition": "oracle-counter-control",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
             "upper95": 1,
             "pendingReview": 0,
             "emptyResponses": 0,
-            "costUsd": 0.0138
+            "costUsd": 0.017050499999999996
           }
         },
         {
@@ -1343,25 +1495,27 @@
             "condition": "native-1x",
             "requests": 16,
             "substantiveAnswers": 16,
-            "correct": 3,
-            "solveRate": 0.1875,
-            "lower95": 0.06591599071428142,
-            "upper95": 0.4300888096197414,
+            "adjudicatedAnswers": 0,
+            "correct": 4,
+            "solveRate": 0.25,
+            "lower95": 0.10182067491213048,
+            "upper95": 0.49498316535508774,
             "pendingReview": 0,
             "emptyResponses": 0,
-            "costUsd": 0.441696
+            "costUsd": 0.6151
           },
           "control": {
             "condition": "oracle-counter-control",
             "requests": 16,
             "substantiveAnswers": 16,
-            "correct": 12,
-            "solveRate": 0.75,
-            "lower95": 0.5050168346449122,
-            "upper95": 0.8981793250878696,
+            "adjudicatedAnswers": 0,
+            "correct": 15,
+            "solveRate": 0.9375,
+            "lower95": 0.7167126242970107,
+            "upper95": 0.9888806552353576,
             "pendingReview": 0,
             "emptyResponses": 0,
-            "costUsd": 0.22099199999999997
+            "costUsd": 0.279196
           }
         },
         {
@@ -1372,25 +1526,91 @@
             "condition": "native-1x",
             "requests": 16,
             "substantiveAnswers": 16,
-            "correct": 3,
-            "solveRate": 0.1875,
-            "lower95": 0.06591599071428142,
-            "upper95": 0.4300888096197414,
+            "adjudicatedAnswers": 0,
+            "correct": 5,
+            "solveRate": 0.3125,
+            "lower95": 0.14164643854782039,
+            "upper95": 0.5559564416525933,
             "pendingReview": 0,
             "emptyResponses": 0,
-            "costUsd": 0.885408
+            "costUsd": 1.097688
           },
           "control": {
             "condition": "oracle-counter-control",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
             "upper95": 1,
             "pendingReview": 0,
             "emptyResponses": 0,
-            "costUsd": 0.8852639999999998
+            "costUsd": 1.0971408000000002
+          }
+        }
+      ],
+      "expandedModels": [
+        {
+          "modelId": "bytedance-seed/seed-2-1-turbo",
+          "modelVersion": "bytedance-seed/seed-2-1-turbo",
+          "upstreamProvider": "Seed",
+          "native": {
+            "condition": "native-1x",
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
+            "correct": 3,
+            "solveRate": 0.1875,
+            "lower95": 0.06591599071428142,
+            "upper95": 0.4300888096197414,
+            "pendingReview": 0,
+            "emptyResponses": 0,
+            "costUsd": 0.038455
+          },
+          "control": {
+            "condition": "oracle-counter-control",
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
+            "correct": 12,
+            "solveRate": 0.75,
+            "lower95": 0.5050168346449122,
+            "upper95": 0.8981793250878696,
+            "pendingReview": 0,
+            "emptyResponses": 0,
+            "costUsd": 0.038415
+          }
+        },
+        {
+          "modelId": "xiaomi/mimo-v2.5",
+          "modelVersion": "xiaomi/mimo-v2.5",
+          "upstreamProvider": "Xiaomi",
+          "native": {
+            "condition": "native-1x",
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
+            "correct": 5,
+            "solveRate": 0.3125,
+            "lower95": 0.14164643854782039,
+            "upper95": 0.5559564416525933,
+            "pendingReview": 0,
+            "emptyResponses": 0,
+            "costUsd": 0.012123440000000001
+          },
+          "control": {
+            "condition": "oracle-counter-control",
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
+            "correct": 16,
+            "solveRate": 1,
+            "lower95": 0.8063923194655637,
+            "upper95": 1,
+            "pendingReview": 0,
+            "emptyResponses": 0,
+            "costUsd": 0.012123440000000001
           }
         }
       ]
@@ -1407,7 +1627,9 @@
       "admitted": true,
       "humanSolvability": "unverified",
       "difficultySetting": {
-        "values": [88],
+        "values": [
+          88
+        ],
         "label": "88/100",
         "nativeCases": 16
       },
@@ -1417,7 +1639,12 @@
         "artifactPath": "/evaluations/swap-tracking-confirmatory-v1/st-829590aeca0bdadd.mp4",
         "mimeType": "video/mp4",
         "question": "The gold token is shown at the start, then all tokens become identical. After the 12 shown swaps, which numbered slot contains the original gold token?",
-        "answerOptions": ["2", "4", "1", "3"],
+        "answerOptions": [
+          "2",
+          "4",
+          "1",
+          "3"
+        ],
         "expectedAnswer": "1",
         "difficulty": 88
       },
@@ -1430,6 +1657,7 @@
             "condition": "native-1x",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 2,
             "solveRate": 0.125,
             "lower95": 0.03497748774324047,
@@ -1442,6 +1670,7 @@
             "condition": "visible-identity-control",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
@@ -1459,6 +1688,7 @@
             "condition": "native-1x",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 1,
             "solveRate": 0.0625,
             "lower95": 0.01111934476464252,
@@ -1471,6 +1701,7 @@
             "condition": "visible-identity-control",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 13,
             "solveRate": 0.8125,
             "lower95": 0.5699111903802586,
@@ -1488,6 +1719,7 @@
             "condition": "native-1x",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 5,
             "solveRate": 0.3125,
             "lower95": 0.14164643854782039,
@@ -1500,6 +1732,7 @@
             "condition": "visible-identity-control",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
@@ -1523,7 +1756,9 @@
       "admitted": true,
       "humanSolvability": "unverified",
       "difficultySetting": {
-        "values": [86],
+        "values": [
+          86
+        ],
         "label": "86/100",
         "nativeCases": 16
       },
@@ -1533,7 +1768,12 @@
         "artifactPath": "/evaluations/selective-flash-confirmatory-v3/sf-ec142abacbb28088.mp4",
         "mimeType": "video/mp4",
         "question": "How many times does the RED-RINGED target disk flash yellow? Ignore every other disk.",
-        "answerOptions": ["8", "9", "10", "11"],
+        "answerOptions": [
+          "8",
+          "9",
+          "10",
+          "11"
+        ],
         "expectedAnswer": "8",
         "difficulty": 86
       },
@@ -1546,6 +1786,7 @@
             "condition": "native-1x",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 2,
             "solveRate": 0.125,
             "lower95": 0.03497748774324047,
@@ -1558,6 +1799,7 @@
             "condition": "persistent-answer-control",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
@@ -1575,6 +1817,7 @@
             "condition": "native-1x",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 4,
             "solveRate": 0.25,
             "lower95": 0.10182067491213048,
@@ -1587,6 +1830,7 @@
             "condition": "persistent-answer-control",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
@@ -1604,6 +1848,7 @@
             "condition": "native-1x",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 2,
             "solveRate": 0.125,
             "lower95": 0.03497748774324047,
@@ -1616,6 +1861,7 @@
             "condition": "persistent-answer-control",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
@@ -1639,7 +1885,9 @@
       "admitted": true,
       "humanSolvability": "unverified",
       "difficultySetting": {
-        "values": [94],
+        "values": [
+          94
+        ],
         "label": "94/100",
         "nativeCases": 16
       },
@@ -1649,7 +1897,12 @@
         "artifactPath": "/evaluations/transition-count-confirmatory-v1/tc-3137769a9ecfbeb2-native-1x.mp4",
         "mimeType": "video/mp4",
         "question": "How many times is a BLUE CIRCLE immediately followed by a RED SQUARE in the complete sequence? Count overlapping occurrences.",
-        "answerOptions": ["4", "6", "3", "5"],
+        "answerOptions": [
+          "4",
+          "6",
+          "3",
+          "5"
+        ],
         "expectedAnswer": "3",
         "difficulty": 94
       },
@@ -1662,6 +1915,7 @@
             "condition": "native-1x",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 3,
             "solveRate": 0.1875,
             "lower95": 0.06591599071428142,
@@ -1674,6 +1928,7 @@
             "condition": "running-transition-counter-control",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
@@ -1691,6 +1946,7 @@
             "condition": "native-1x",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 5,
             "solveRate": 0.3125,
             "lower95": 0.14164643854782039,
@@ -1703,6 +1959,7 @@
             "condition": "running-transition-counter-control",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
@@ -1720,6 +1977,7 @@
             "condition": "native-1x",
             "requests": 19,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 3,
             "solveRate": 0.1875,
             "lower95": 0.06591599071428142,
@@ -1732,6 +1990,7 @@
             "condition": "running-transition-counter-control",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
@@ -1745,29 +2004,36 @@
     },
     {
       "catalogueId": "temporal-set-cardinality",
-      "planId": "grid-activation-confirmatory-v3",
-      "planSha256": "5f96ab8c9ceb36ad95012a93a3f5a01e87f84e94b030d49e155ce812ebca7a3e",
-      "generatorVersion": "unique-grid-activation-memory-v3",
-      "renderer": "grid-activation-svg-raster-v4",
+      "planId": "gated-grid-frequency-confirmatory-v1",
+      "planSha256": "66c44c5fe267a22e710c2747bfae94accbbed290285dbe3f08388ec622dccb7e",
+      "generatorVersion": "gated-grid-exact-frequency-v1",
+      "renderer": "gated-grid-frequency-svg-raster-v1",
       "modality": "video",
       "nativeCondition": "native-1x",
-      "controlCondition": "persistent-set-control",
+      "controlCondition": "visible-target-histogram-control",
       "admitted": true,
       "humanSolvability": "unverified",
       "difficultySetting": {
-        "values": [98],
-        "label": "98/100",
+        "values": [
+          99
+        ],
+        "label": "99/100",
         "nativeCases": 16
       },
       "sample": {
-        "candidateId": "gax-f1cce6d6d9fb0073-native-1x",
-        "seed": 4830000,
-        "artifactPath": "/evaluations/grid-activation-confirmatory-v3/gax-f1cce6d6d9fb0073-native-1x.mp4",
+        "candidateId": "ggf-e9a165dddd798a95",
+        "seed": 5430000,
+        "artifactPath": "/evaluations/gated-grid-frequency-confirmatory-v1/ggf-e9a165dddd798a95.mp4",
         "mimeType": "video/mp4",
-        "question": "How many DIFFERENT grid cells lit up at least once? Repeats count only once.",
-        "answerOptions": ["24", "22", "23", "21"],
-        "expectedAnswer": "21",
-        "difficulty": 98
+        "question": "How many DIFFERENT grid cells flashed EXACTLY TWICE during AMBER frames? Ignore every CYAN frame.",
+        "answerOptions": [
+          "3",
+          "4",
+          "6",
+          "5"
+        ],
+        "expectedAnswer": "3",
+        "difficulty": 99
       },
       "models": [
         {
@@ -1778,25 +2044,27 @@
             "condition": "native-1x",
             "requests": 16,
             "substantiveAnswers": 16,
-            "correct": 5,
-            "solveRate": 0.3125,
-            "lower95": 0.14164643854782039,
-            "upper95": 0.5559564416525933,
+            "adjudicatedAnswers": 1,
+            "correct": 2,
+            "solveRate": 0.125,
+            "lower95": 0.03497748774324047,
+            "upper95": 0.36022827265758695,
             "pendingReview": 0,
             "emptyResponses": 0,
-            "costUsd": 0.06617925
+            "costUsd": 0.1309005
           },
           "control": {
-            "condition": "persistent-set-control",
+            "condition": "visible-target-histogram-control",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
             "upper95": 1,
             "pendingReview": 0,
             "emptyResponses": 0,
-            "costUsd": 0.026549249999999996
+            "costUsd": 0.01895625
           }
         },
         {
@@ -1807,25 +2075,27 @@
             "condition": "native-1x",
             "requests": 16,
             "substantiveAnswers": 16,
-            "correct": 4,
-            "solveRate": 0.25,
-            "lower95": 0.10182067491213048,
-            "upper95": 0.49498316535508774,
+            "adjudicatedAnswers": 0,
+            "correct": 3,
+            "solveRate": 0.1875,
+            "lower95": 0.06591599071428142,
+            "upper95": 0.4300888096197414,
             "pendingReview": 0,
             "emptyResponses": 0,
-            "costUsd": 0.658868
+            "costUsd": 0.6935659999999999
           },
           "control": {
-            "condition": "persistent-set-control",
+            "condition": "visible-target-histogram-control",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
             "upper95": 1,
             "pendingReview": 0,
             "emptyResponses": 0,
-            "costUsd": 0.38289799999999996
+            "costUsd": 0.35502599999999995
           }
         },
         {
@@ -1836,25 +2106,91 @@
             "condition": "native-1x",
             "requests": 16,
             "substantiveAnswers": 16,
-            "correct": 4,
-            "solveRate": 0.25,
-            "lower95": 0.10182067491213048,
-            "upper95": 0.49498316535508774,
+            "adjudicatedAnswers": 0,
+            "correct": 2,
+            "solveRate": 0.125,
+            "lower95": 0.03497748774324047,
+            "upper95": 0.36022827265758695,
             "pendingReview": 0,
             "emptyResponses": 0,
-            "costUsd": 1.4258400000000004
+            "costUsd": 1.2199199999999997
           },
           "control": {
-            "condition": "persistent-set-control",
+            "condition": "visible-target-histogram-control",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
             "upper95": 1,
             "pendingReview": 0,
             "emptyResponses": 0,
-            "costUsd": 1.4258400000000004
+            "costUsd": 1.2199199999999997
+          }
+        }
+      ],
+      "expandedModels": [
+        {
+          "modelId": "bytedance-seed/seed-2-1-turbo",
+          "modelVersion": "bytedance-seed/seed-2-1-turbo",
+          "upstreamProvider": "Seed",
+          "native": {
+            "condition": "native-1x",
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
+            "correct": 6,
+            "solveRate": 0.375,
+            "lower95": 0.18481232558863633,
+            "upper95": 0.6135895945449727,
+            "pendingReview": 0,
+            "emptyResponses": 0,
+            "costUsd": 0.05657650000000001
+          },
+          "control": {
+            "condition": "visible-target-histogram-control",
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
+            "correct": 16,
+            "solveRate": 1,
+            "lower95": 0.8063923194655637,
+            "upper95": 1,
+            "pendingReview": 0,
+            "emptyResponses": 0,
+            "costUsd": 0.042615999999999994
+          }
+        },
+        {
+          "modelId": "xiaomi/mimo-v2.5",
+          "modelVersion": "xiaomi/mimo-v2.5",
+          "upstreamProvider": "Xiaomi",
+          "native": {
+            "condition": "native-1x",
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
+            "correct": 4,
+            "solveRate": 0.25,
+            "lower95": 0.10182067491213048,
+            "upper95": 0.49498316535508774,
+            "pendingReview": 0,
+            "emptyResponses": 0,
+            "costUsd": 0.013442239999999996
+          },
+          "control": {
+            "condition": "visible-target-histogram-control",
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
+            "correct": 16,
+            "solveRate": 1,
+            "lower95": 0.8063923194655637,
+            "upper95": 1,
+            "pendingReview": 0,
+            "emptyResponses": 0,
+            "costUsd": 0.013442239999999996
           }
         }
       ]
@@ -1871,7 +2207,9 @@
       "admitted": true,
       "humanSolvability": "unverified",
       "difficultySetting": {
-        "values": [96],
+        "values": [
+          96
+        ],
         "label": "96/100",
         "nativeCases": 16
       },
@@ -1881,7 +2219,12 @@
         "artifactPath": "/evaluations/route-turn-confirmatory-v3/rth-8d934be85c62ee08-native-1x.mp4",
         "mimeType": "video/mp4",
         "question": "How many times does the moving gold disk CHANGE DIRECTION during the complete route?",
-        "answerOptions": ["22", "21", "23", "20"],
+        "answerOptions": [
+          "22",
+          "21",
+          "23",
+          "20"
+        ],
         "expectedAnswer": "20",
         "difficulty": 96
       },
@@ -1894,6 +2237,7 @@
             "condition": "native-1x",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 2,
             "solveRate": 0.125,
             "lower95": 0.03497748774324047,
@@ -1906,6 +2250,7 @@
             "condition": "running-turn-counter-control",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
@@ -1923,6 +2268,7 @@
             "condition": "native-1x",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 2,
             "solveRate": 0.125,
             "lower95": 0.03497748774324047,
@@ -1935,6 +2281,7 @@
             "condition": "running-turn-counter-control",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
@@ -1952,6 +2299,7 @@
             "condition": "native-1x",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 3,
             "solveRate": 0.1875,
             "lower95": 0.06591599071428142,
@@ -1964,6 +2312,7 @@
             "condition": "running-turn-counter-control",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
@@ -1987,7 +2336,9 @@
       "admitted": true,
       "humanSolvability": "unverified",
       "difficultySetting": {
-        "values": [96],
+        "values": [
+          96
+        ],
         "label": "96/100",
         "nativeCases": 16
       },
@@ -1997,7 +2348,12 @@
         "artifactPath": "/evaluations/conservation-confirmatory-v3/cvh-765e344babc69acc-native-1x.mp4",
         "mimeType": "video/mp4",
         "question": "Which labeled box contains the MOST tokens after all twenty one-token transfers? Initial counts are shown only at the beginning.",
-        "answerOptions": ["D", "B", "A", "C"],
+        "answerOptions": [
+          "D",
+          "B",
+          "A",
+          "C"
+        ],
         "expectedAnswer": "A",
         "difficulty": 96
       },
@@ -2010,6 +2366,7 @@
             "condition": "native-1x",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 7,
             "solveRate": 0.4375,
             "lower95": 0.23098652405492354,
@@ -2022,6 +2379,7 @@
             "condition": "visible-ledger-control",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
@@ -2039,6 +2397,7 @@
             "condition": "native-1x",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 5,
             "solveRate": 0.3125,
             "lower95": 0.14164643854782039,
@@ -2051,6 +2410,7 @@
             "condition": "visible-ledger-control",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
@@ -2068,6 +2428,7 @@
             "condition": "native-1x",
             "requests": 25,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 2,
             "solveRate": 0.125,
             "lower95": 0.03497748774324047,
@@ -2080,6 +2441,7 @@
             "condition": "visible-ledger-control",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,
@@ -2103,7 +2465,9 @@
       "admitted": true,
       "humanSolvability": "unverified",
       "difficultySetting": {
-        "values": [94],
+        "values": [
+          94
+        ],
         "label": "94/100",
         "nativeCases": 16
       },
@@ -2113,7 +2477,12 @@
         "artifactPath": "/evaluations/hidden-trail-intersections-confirmatory-v1/hti-64d2222b83d7ae18-native-1x.mp4",
         "mimeType": "video/mp4",
         "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
-        "answerOptions": ["3", "5", "4", "6"],
+        "answerOptions": [
+          "3",
+          "5",
+          "4",
+          "6"
+        ],
         "expectedAnswer": "3",
         "difficulty": 94
       },
@@ -2126,6 +2495,7 @@
             "condition": "native-1x",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 4,
             "solveRate": 0.25,
             "lower95": 0.10182067491213048,
@@ -2138,6 +2508,7 @@
             "condition": "visible-trail-control",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 6,
             "solveRate": 0.375,
             "lower95": 0.18481232558863633,
@@ -2155,6 +2526,7 @@
             "condition": "native-1x",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 5,
             "solveRate": 0.3125,
             "lower95": 0.14164643854782039,
@@ -2167,6 +2539,7 @@
             "condition": "visible-trail-control",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 5,
             "solveRate": 0.3125,
             "lower95": 0.14164643854782039,
@@ -2184,6 +2557,7 @@
             "condition": "native-1x",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 6,
             "solveRate": 0.375,
             "lower95": 0.18481232558863633,
@@ -2196,6 +2570,7 @@
             "condition": "visible-trail-control",
             "requests": 16,
             "substantiveAnswers": 15,
+            "adjudicatedAnswers": 0,
             "correct": 4,
             "solveRate": 0.26666666666666666,
             "lower95": 0.10897453325692374,
@@ -2219,7 +2594,9 @@
       "admitted": true,
       "humanSolvability": "unverified",
       "difficultySetting": {
-        "values": [97],
+        "values": [
+          97
+        ],
         "label": "97/100",
         "nativeCases": 16
       },
@@ -2229,7 +2606,12 @@
         "artifactPath": "/evaluations/signed-accumulator-confirmatory-v2/sta2-3455cb887466ef6a-native-1x.mp4",
         "mimeType": "video/mp4",
         "question": "Starting from ZERO, where does the hidden counter end after every +1 and -1 event?",
-        "answerOptions": ["+3", "-3", "+9", "-9"],
+        "answerOptions": [
+          "+3",
+          "-3",
+          "+9",
+          "-9"
+        ],
         "expectedAnswer": "-9",
         "difficulty": 97
       },
@@ -2242,6 +2624,7 @@
             "condition": "native-1x",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 5,
             "solveRate": 0.3125,
             "lower95": 0.14164643854782039,
@@ -2254,6 +2637,7 @@
             "condition": "running-total-control",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 13,
             "solveRate": 0.8125,
             "lower95": 0.5699111903802586,
@@ -2271,6 +2655,7 @@
             "condition": "native-1x",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 3,
             "solveRate": 0.1875,
             "lower95": 0.06591599071428142,
@@ -2283,6 +2668,7 @@
             "condition": "running-total-control",
             "requests": 17,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 14,
             "solveRate": 0.875,
             "lower95": 0.639771727342413,
@@ -2300,6 +2686,7 @@
             "condition": "native-1x",
             "requests": 17,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 4,
             "solveRate": 0.25,
             "lower95": 0.10182067491213048,
@@ -2312,6 +2699,7 @@
             "condition": "running-total-control",
             "requests": 16,
             "substantiveAnswers": 16,
+            "adjudicatedAnswers": 0,
             "correct": 16,
             "solveRate": 1,
             "lower95": 0.8063923194655637,

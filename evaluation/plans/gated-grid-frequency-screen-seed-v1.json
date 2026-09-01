@@ -1,0 +1,20 @@
+{
+  "id": "gated-grid-frequency-screen-seed-v1-no-reasoning-2026-09-01",
+  "resolvedAt": "2026-09-01",
+  "gateway": "OpenRouter",
+  "evaluationPlanId": "gated-grid-frequency-discovery-v1",
+  "evaluationPlanSha256": "572d6f5a49c8b1cce985d67a9cbdda78759d07e052e653d15714c6e9ea27c010",
+  "stage": "five-route-color-gated-frequency-screen",
+  "casesPerModel": 8,
+  "trials": 1,
+  "temperature": 0,
+  "maxOutputTokens": 4096,
+  "reasoning": { "effort": "none", "exclude": true },
+  "scorer": "terminal-option-v3",
+  "allowProviderFallbacks": false,
+  "dataCollection": "deny",
+  "campaignCostCeilingUsd": 8,
+  "models": [
+    { "modelId": "bytedance-seed/seed-2-1-turbo", "modelRevision": "bytedance-seed/seed-2-1-turbo-20260810", "upstreamProvider": "Seed" }
+  ]
+}

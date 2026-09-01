@@ -1,6 +1,7 @@
 import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { z } from "zod";
+import { adjudicateExplicitDeclaration } from "../src/lib/evaluation/adjudication";
 import { evaluationRunSchema } from "../src/lib/evaluation/schema";
 
 const manifestPath = resolve(process.argv[2] ?? "");
@@ -20,6 +21,8 @@ const manifest = z
         cellId: z.string(),
         condition: z.string(),
         seed: z.number().int(),
+        answerOptions: z.array(z.string()),
+        expectedAnswer: z.string(),
       }),
     ),
   })
@@ -39,6 +42,8 @@ const conditionOf = (run: z.infer<typeof evaluationRunSchema>) =>
 const cellForRun = (run: z.infer<typeof evaluationRunSchema>) =>
   manifest.cases.find((candidate) => candidate.seed === run.seed && candidate.condition === conditionOf(run))
     ?.cellId;
+const candidateForRun = (run: z.infer<typeof evaluationRunSchema>) =>
+  manifest.cases.find((candidate) => candidate.seed === run.seed && candidate.condition === conditionOf(run));
 const cells = [...new Set(manifest.cases.map((candidate) => candidate.cellId))];
 const conditions = [...new Set(manifest.cases.map((candidate) => candidate.condition))];
 
@@ -56,18 +61,65 @@ const models = [...groupedRuns.entries()].map(([modelId, { paths, runs: rawRuns 
   const summaries = cells.flatMap((cellId) =>
     conditions.map((condition) => {
       const selected = runs.filter((run) => cellForRun(run) === cellId && conditionOf(run) === condition);
-      const substantive = selected.filter((run) => run.status === "verified" && !run.emptyResponse);
+      const bySeed = new Map<number, typeof selected>();
+      for (const run of selected) bySeed.set(run.seed, [...(bySeed.get(run.seed) ?? []), run]);
+      const substantive = [...bySeed.values()].flatMap((attempts) => {
+        const verified = attempts.filter((run) => run.status === "verified" && !run.emptyResponse);
+        if (verified.length > 1)
+          throw new Error(`${modelId}: duplicate substantive answers for seed ${attempts[0]?.seed}`);
+        if (verified.length === 1)
+          return [
+            {
+              run: verified[0]!,
+              answer: verified[0]!.parsedAnswer,
+              correct: verified[0]!.correct,
+              adjudicated: false,
+            },
+          ];
+        const adjudicated = attempts.flatMap((run) => {
+          if (run.status !== "pending-review" || run.emptyResponse || run.finishReason !== "stop") return [];
+          const candidate = candidateForRun(run);
+          if (!candidate) throw new Error(`Missing manifest candidate for seed ${run.seed}`);
+          const decision = adjudicateExplicitDeclaration(run.rawResponse, candidate.answerOptions);
+          return decision
+            ? [
+                {
+                  run,
+                  answer: decision.claimedAnswer,
+                  correct: decision.claimedAnswer === candidate.expectedAnswer,
+                  adjudicated: true,
+                },
+              ]
+            : [];
+        });
+        if (adjudicated.length > 1)
+          throw new Error(`${modelId}: duplicate adjudicable answers for seed ${attempts[0]?.seed}`);
+        return adjudicated;
+      });
+      const answerDistribution = Object.fromEntries(
+        [...new Set(substantive.map(({ answer }) => answer))]
+          .sort()
+          .map((answer) => [answer, substantive.filter((entry) => entry.answer === answer).length]),
+      );
+      const adjudicatedRunIds = new Set(
+        substantive.filter((entry) => entry.adjudicated).map((entry) => entry.run.id),
+      );
       return {
         cellId,
         condition,
         requests: selected.length,
         substantiveAnswers: substantive.length,
-        correct: substantive.filter((run) => run.correct).length,
+        correct: substantive.filter((entry) => entry.correct).length,
         solveRate: substantive.length
-          ? substantive.filter((run) => run.correct).length / substantive.length
+          ? substantive.filter((entry) => entry.correct).length / substantive.length
           : null,
+        adjudicatedAnswers: substantive.filter((entry) => entry.adjudicated).length,
+        answerDistribution,
+        excludedRequests: selected.length - substantive.length,
         noAnswer: selected.filter((run) => run.emptyResponse).length,
-        pendingReview: selected.filter((run) => run.status === "pending-review").length,
+        pendingReview: selected.filter(
+          (run) => run.status === "pending-review" && !adjudicatedRunIds.has(run.id),
+        ).length,
         costUsd: selected.reduce((sum, run) => sum + run.costUsd, 0),
       };
     }),

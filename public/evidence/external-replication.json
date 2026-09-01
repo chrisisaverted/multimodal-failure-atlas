@@ -1,0 +1,1643 @@
+{
+  "schemaVersion": 1,
+  "cohortId": "external-replication-v1-2026-09-01",
+  "generatedAt": "2026-09-01T12:54:32.610Z",
+  "analysisRole": "Untouched post-confirmatory route replication; never used for generator selection.",
+  "analysisRule": "A family externally replicates only when both untouched routes provide 16 substantive native answers and each observed native solve rate is strictly below 50%. Frozen scorer-pending responses are included only when the answer-key-blind explicit-declaration adjudicator recovers one unambiguous claim; ambiguous responses remain excluded.",
+  "canonicalCohort": [
+    {
+      "modelId": "bytedance-seed/seed-2-1-turbo",
+      "protocolSuffixes": [
+        "external-replication-v1-no-reasoning"
+      ],
+      "canonicalRequests": 672,
+      "substantiveAnswers": 671,
+      "costUsd": 1.0637319999999963
+    },
+    {
+      "modelId": "xiaomi/mimo-v2.5",
+      "protocolSuffixes": [
+        "external-replication-v1-mimo-declared-answer",
+        "external-replication-v1-mimo-completion"
+      ],
+      "canonicalRequests": 719,
+      "substantiveAnswers": 670,
+      "costUsd": 0.3430583072000009
+    }
+  ],
+  "audit": {
+    "allAttemptRequests": 1408,
+    "canonicalRequests": 1391,
+    "noncanonicalAttempts": 17,
+    "allAttemptCostUsd": 1.5619646857999947,
+    "canonicalCostUsd": 1.4067903071999954,
+    "attemptedModels": [
+      {
+        "modelId": "z-ai/glm-5.3-flash",
+        "requests": 5,
+        "substantiveAnswers": 3,
+        "pendingReview": 0,
+        "emptyResponses": 2,
+        "costUsd": 0.007692425
+      },
+      {
+        "modelId": "bytedance-seed/seed-2-1-turbo",
+        "requests": 679,
+        "substantiveAnswers": 673,
+        "pendingReview": 1,
+        "emptyResponses": 5,
+        "costUsd": 1.2086409999999967
+      },
+      {
+        "modelId": "xiaomi/mimo-v2.5",
+        "requests": 724,
+        "substantiveAnswers": 673,
+        "pendingReview": 51,
+        "emptyResponses": 0,
+        "costUsd": 0.345631260800001
+      }
+    ]
+  },
+  "families": [
+    {
+      "catalogueId": "identity-conditioned-exact-counting",
+      "planId": "precision-wire-count-confirmatory-v1",
+      "modality": "image",
+      "models": [
+        {
+          "modelId": "bytedance-seed/seed-2-1-turbo",
+          "modelVersion": "bytedance-seed/seed-2-1-turbo",
+          "upstreamProvider": "Seed",
+          "native": {
+            "condition": "native-image",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 3,
+            "solveRate": 0.1875,
+            "lower95": 0.06591599071428142,
+            "upper95": 0.4300888096197414,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.010903999999999999
+          },
+          "control": {
+            "condition": "oracle-highlighted-numbered-path",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 16,
+            "solveRate": 1,
+            "lower95": 0.8063923194655637,
+            "upper95": 1,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.012709000000000002
+          },
+          "complete": true,
+          "observedBelowHalf": true
+        },
+        {
+          "modelId": "xiaomi/mimo-v2.5",
+          "modelVersion": "xiaomi/mimo-v2.5",
+          "upstreamProvider": "Xiaomi",
+          "native": {
+            "condition": "native-image",
+            "plannedCases": 16,
+            "requests": 18,
+            "substantiveAnswers": 16,
+            "correct": 3,
+            "solveRate": 0.1875,
+            "lower95": 0.06591599071428142,
+            "upper95": 0.4300888096197414,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 2,
+            "costUsd": 0.007383319999999999
+          },
+          "control": {
+            "condition": "oracle-highlighted-numbered-path",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 16,
+            "solveRate": 1,
+            "lower95": 0.8063923194655637,
+            "upper95": 1,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.00438424
+          },
+          "complete": true,
+          "observedBelowHalf": true
+        }
+      ],
+      "complete": true,
+      "replicatedBelowHalf": true
+    },
+    {
+      "catalogueId": "topological-enclosure-depth",
+      "planId": "enclosure-panels-dense-confirmatory-v1",
+      "modality": "image",
+      "models": [
+        {
+          "modelId": "bytedance-seed/seed-2-1-turbo",
+          "modelVersion": "bytedance-seed/seed-2-1-turbo",
+          "upstreamProvider": "Seed",
+          "native": {
+            "condition": "native-image",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 2,
+            "solveRate": 0.125,
+            "lower95": 0.03497748774324047,
+            "upper95": 0.36022827265758695,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.010919999999999996
+          },
+          "control": {
+            "condition": "exact-count-badges",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 16,
+            "solveRate": 1,
+            "lower95": 0.8063923194655637,
+            "upper95": 1,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.01088
+          },
+          "complete": true,
+          "observedBelowHalf": true
+        },
+        {
+          "modelId": "xiaomi/mimo-v2.5",
+          "modelVersion": "xiaomi/mimo-v2.5",
+          "upstreamProvider": "Xiaomi",
+          "native": {
+            "condition": "native-image",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 6,
+            "solveRate": 0.375,
+            "lower95": 0.18481232558863633,
+            "upper95": 0.6135895945449727,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.0064512
+          },
+          "control": {
+            "condition": "exact-count-badges",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 15,
+            "solveRate": 0.9375,
+            "lower95": 0.7167126242970107,
+            "upper95": 0.9888806552353576,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.006557039999999999
+          },
+          "complete": true,
+          "observedBelowHalf": true
+        }
+      ],
+      "complete": true,
+      "replicatedBelowHalf": true
+    },
+    {
+      "catalogueId": "rotation-invariant-visual-correspondence",
+      "planId": "rotation-correspondence-confirmatory-v1",
+      "modality": "image",
+      "models": [
+        {
+          "modelId": "bytedance-seed/seed-2-1-turbo",
+          "modelVersion": "bytedance-seed/seed-2-1-turbo",
+          "upstreamProvider": "Seed",
+          "native": {
+            "condition": "native-image",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 1,
+            "solveRate": 0.0625,
+            "lower95": 0.01111934476464252,
+            "upper95": 0.28328737570298945,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.011072
+          },
+          "control": {
+            "condition": "correct-candidate-highlighted",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 1,
+            "solveRate": 0.0625,
+            "lower95": 0.01111934476464252,
+            "upper95": 0.28328737570298945,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.017589
+          },
+          "complete": true,
+          "observedBelowHalf": true
+        },
+        {
+          "modelId": "xiaomi/mimo-v2.5",
+          "modelVersion": "xiaomi/mimo-v2.5",
+          "upstreamProvider": "Xiaomi",
+          "native": {
+            "condition": "native-image",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 3,
+            "solveRate": 0.1875,
+            "lower95": 0.06591599071428142,
+            "upper95": 0.4300888096197414,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.00561652
+          },
+          "control": {
+            "condition": "correct-candidate-highlighted",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 12,
+            "solveRate": 0.75,
+            "lower95": 0.5050168346449122,
+            "upper95": 0.8981793250878696,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.00554848
+          },
+          "complete": true,
+          "observedBelowHalf": true
+        }
+      ],
+      "complete": true,
+      "replicatedBelowHalf": true
+    },
+    {
+      "catalogueId": "global-bilateral-symmetry-verification",
+      "planId": "symmetry-confirmatory-v1",
+      "modality": "image",
+      "models": [
+        {
+          "modelId": "bytedance-seed/seed-2-1-turbo",
+          "modelVersion": "bytedance-seed/seed-2-1-turbo",
+          "upstreamProvider": "Seed",
+          "native": {
+            "condition": "native-image",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 4,
+            "solveRate": 0.25,
+            "lower95": 0.10182067491213048,
+            "upper95": 0.49498316535508774,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.016639500000000005
+          },
+          "control": {
+            "condition": "oracle-marked-control",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 16,
+            "solveRate": 1,
+            "lower95": 0.8063923194655637,
+            "upper95": 1,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.011183999999999996
+          },
+          "complete": true,
+          "observedBelowHalf": true
+        },
+        {
+          "modelId": "xiaomi/mimo-v2.5",
+          "modelVersion": "xiaomi/mimo-v2.5",
+          "upstreamProvider": "Xiaomi",
+          "native": {
+            "condition": "native-image",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 7,
+            "solveRate": 0.4375,
+            "lower95": 0.23098652405492354,
+            "upper95": 0.6682144360118811,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.0037315599999999997
+          },
+          "control": {
+            "condition": "oracle-marked-control",
+            "plannedCases": 16,
+            "requests": 17,
+            "substantiveAnswers": 16,
+            "correct": 16,
+            "solveRate": 1,
+            "lower95": 0.8063923194655637,
+            "upper95": 1,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 1,
+            "costUsd": 0.00364672
+          },
+          "complete": true,
+          "observedBelowHalf": true
+        }
+      ],
+      "complete": true,
+      "replicatedBelowHalf": true
+    },
+    {
+      "catalogueId": "occluded-3d-cube-enumeration",
+      "planId": "cube-stack-confirmatory-v1",
+      "modality": "image",
+      "models": [
+        {
+          "modelId": "bytedance-seed/seed-2-1-turbo",
+          "modelVersion": "bytedance-seed/seed-2-1-turbo",
+          "upstreamProvider": "Seed",
+          "native": {
+            "condition": "native-image",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 3,
+            "solveRate": 0.1875,
+            "lower95": 0.06591599071428142,
+            "upper95": 0.4300888096197414,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.0206575
+          },
+          "control": {
+            "condition": "panel-totals-annotated",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 16,
+            "solveRate": 1,
+            "lower95": 0.8063923194655637,
+            "upper95": 1,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.011064
+          },
+          "complete": true,
+          "observedBelowHalf": true
+        },
+        {
+          "modelId": "xiaomi/mimo-v2.5",
+          "modelVersion": "xiaomi/mimo-v2.5",
+          "upstreamProvider": "Xiaomi",
+          "native": {
+            "condition": "native-image",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 3,
+            "solveRate": 0.1875,
+            "lower95": 0.06591599071428142,
+            "upper95": 0.4300888096197414,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.00596568
+          },
+          "control": {
+            "condition": "panel-totals-annotated",
+            "plannedCases": 16,
+            "requests": 17,
+            "substantiveAnswers": 16,
+            "correct": 15,
+            "solveRate": 0.9375,
+            "lower95": 0.7167126242970107,
+            "upper95": 0.9888806552353576,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 1,
+            "costUsd": 0.0053110399999999995
+          },
+          "complete": true,
+          "observedBelowHalf": true
+        }
+      ],
+      "complete": true,
+      "replicatedBelowHalf": true
+    },
+    {
+      "catalogueId": "dense-visual-boolean-composition",
+      "planId": "xor-composition-confirmatory-v2",
+      "modality": "image",
+      "models": [
+        {
+          "modelId": "bytedance-seed/seed-2-1-turbo",
+          "modelVersion": "bytedance-seed/seed-2-1-turbo",
+          "upstreamProvider": "Seed",
+          "native": {
+            "condition": "native-image",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 4,
+            "solveRate": 0.25,
+            "lower95": 0.10182067491213048,
+            "upper95": 0.49498316535508774,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.011048
+          },
+          "control": {
+            "condition": "oracle-boxed-control",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 16,
+            "solveRate": 1,
+            "lower95": 0.8063923194655637,
+            "upper95": 1,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.011024000000000004
+          },
+          "complete": true,
+          "observedBelowHalf": true
+        },
+        {
+          "modelId": "xiaomi/mimo-v2.5",
+          "modelVersion": "xiaomi/mimo-v2.5",
+          "upstreamProvider": "Xiaomi",
+          "native": {
+            "condition": "native-image",
+            "plannedCases": 16,
+            "requests": 18,
+            "substantiveAnswers": 16,
+            "correct": 6,
+            "solveRate": 0.375,
+            "lower95": 0.18481232558863633,
+            "upper95": 0.6135895945449727,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 2,
+            "costUsd": 0.0033233200000000007
+          },
+          "control": {
+            "condition": "oracle-boxed-control",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 15,
+            "solveRate": 0.9375,
+            "lower95": 0.7167126242970107,
+            "upper95": 0.9888806552353576,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.0026798799999999995
+          },
+          "complete": true,
+          "observedBelowHalf": true
+        }
+      ],
+      "complete": true,
+      "replicatedBelowHalf": true
+    },
+    {
+      "catalogueId": "dense-cross-image-change-localization",
+      "planId": "change-localization-confirmatory-v2",
+      "modality": "image",
+      "models": [
+        {
+          "modelId": "bytedance-seed/seed-2-1-turbo",
+          "modelVersion": "bytedance-seed/seed-2-1-turbo",
+          "upstreamProvider": "Seed",
+          "native": {
+            "condition": "native-image",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 4,
+            "solveRate": 0.25,
+            "lower95": 0.10182067491213048,
+            "upper95": 0.49498316535508774,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.011039999999999996
+          },
+          "control": {
+            "condition": "changed-glyph-circled",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 15,
+            "solveRate": 0.9375,
+            "lower95": 0.7167126242970107,
+            "upper95": 0.9888806552353576,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.011007999999999999
+          },
+          "complete": true,
+          "observedBelowHalf": true
+        },
+        {
+          "modelId": "xiaomi/mimo-v2.5",
+          "modelVersion": "xiaomi/mimo-v2.5",
+          "upstreamProvider": "Xiaomi",
+          "native": {
+            "condition": "native-image",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 3,
+            "solveRate": 0.1875,
+            "lower95": 0.06591599071428142,
+            "upper95": 0.4300888096197414,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.004877320000000001
+          },
+          "control": {
+            "condition": "changed-glyph-circled",
+            "plannedCases": 16,
+            "requests": 18,
+            "substantiveAnswers": 16,
+            "correct": 14,
+            "solveRate": 0.875,
+            "lower95": 0.639771727342413,
+            "upper95": 0.9650225122567595,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 2,
+            "costUsd": 0.007885080000000001
+          },
+          "complete": true,
+          "observedBelowHalf": true
+        }
+      ],
+      "complete": true,
+      "replicatedBelowHalf": true
+    },
+    {
+      "catalogueId": "visual-maze-reachability",
+      "planId": "maze-reachability-confirmatory-v1",
+      "modality": "image",
+      "models": [
+        {
+          "modelId": "bytedance-seed/seed-2-1-turbo",
+          "modelVersion": "bytedance-seed/seed-2-1-turbo",
+          "upstreamProvider": "Seed",
+          "native": {
+            "condition": "native-image",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 5,
+            "solveRate": 0.3125,
+            "lower95": 0.14164643854782039,
+            "upper95": 0.5559564416525933,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.010727999999999996
+          },
+          "control": {
+            "condition": "solution-path-highlighted",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 14,
+            "solveRate": 0.875,
+            "lower95": 0.639771727342413,
+            "upper95": 0.9650225122567595,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.011004999999999997
+          },
+          "complete": true,
+          "observedBelowHalf": true
+        },
+        {
+          "modelId": "xiaomi/mimo-v2.5",
+          "modelVersion": "xiaomi/mimo-v2.5",
+          "upstreamProvider": "Xiaomi",
+          "native": {
+            "condition": "native-image",
+            "plannedCases": 16,
+            "requests": 17,
+            "substantiveAnswers": 16,
+            "correct": 5,
+            "solveRate": 0.3125,
+            "lower95": 0.14164643854782039,
+            "upper95": 0.5559564416525933,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 1,
+            "costUsd": 0.0038367
+          },
+          "control": {
+            "condition": "solution-path-highlighted",
+            "plannedCases": 16,
+            "requests": 30,
+            "substantiveAnswers": 16,
+            "correct": 16,
+            "solveRate": 1,
+            "lower95": 0.8063923194655637,
+            "upper95": 1,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 14,
+            "costUsd": 0.006472200000000001
+          },
+          "complete": true,
+          "observedBelowHalf": true
+        }
+      ],
+      "complete": true,
+      "replicatedBelowHalf": true
+    },
+    {
+      "catalogueId": "visual-graph-degree-topology",
+      "planId": "euler-graph-confirmatory-v1",
+      "modality": "image",
+      "models": [
+        {
+          "modelId": "bytedance-seed/seed-2-1-turbo",
+          "modelVersion": "bytedance-seed/seed-2-1-turbo",
+          "upstreamProvider": "Seed",
+          "native": {
+            "condition": "native-image",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 3,
+            "solveRate": 0.1875,
+            "lower95": 0.06591599071428142,
+            "upper95": 0.4300888096197414,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.019347500000000004
+          },
+          "control": {
+            "condition": "correct-graph-ringed",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 11,
+            "solveRate": 0.6875,
+            "lower95": 0.44404355834740666,
+            "upper95": 0.8583535614521796,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.0180865
+          },
+          "complete": true,
+          "observedBelowHalf": true
+        },
+        {
+          "modelId": "xiaomi/mimo-v2.5",
+          "modelVersion": "xiaomi/mimo-v2.5",
+          "upstreamProvider": "Xiaomi",
+          "native": {
+            "condition": "native-image",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 5,
+            "solveRate": 0.3125,
+            "lower95": 0.14164643854782039,
+            "upper95": 0.5559564416525933,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.00281232
+          },
+          "control": {
+            "condition": "correct-graph-ringed",
+            "plannedCases": 16,
+            "requests": 19,
+            "substantiveAnswers": 16,
+            "correct": 13,
+            "solveRate": 0.8125,
+            "lower95": 0.5699111903802586,
+            "upper95": 0.9340840092857187,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 3,
+            "costUsd": 0.0033144999999999997
+          },
+          "complete": true,
+          "observedBelowHalf": true
+        }
+      ],
+      "complete": true,
+      "replicatedBelowHalf": true
+    },
+    {
+      "catalogueId": "global-visual-parity-verification",
+      "planId": "parity-matrix-confirmatory-v3",
+      "modality": "image",
+      "models": [
+        {
+          "modelId": "bytedance-seed/seed-2-1-turbo",
+          "modelVersion": "bytedance-seed/seed-2-1-turbo",
+          "upstreamProvider": "Seed",
+          "native": {
+            "condition": "native-image",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 3,
+            "solveRate": 0.1875,
+            "lower95": 0.06591599071428142,
+            "upper95": 0.4300888096197414,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.0139985
+          },
+          "control": {
+            "condition": "parity-audit-control",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 16,
+            "solveRate": 1,
+            "lower95": 0.8063923194655637,
+            "upper95": 1,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.011095999999999996
+          },
+          "complete": true,
+          "observedBelowHalf": true
+        },
+        {
+          "modelId": "xiaomi/mimo-v2.5",
+          "modelVersion": "xiaomi/mimo-v2.5",
+          "upstreamProvider": "Xiaomi",
+          "native": {
+            "condition": "native-image",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 1,
+            "solveRate": 0.0625,
+            "lower95": 0.01111934476464252,
+            "upper95": 0.28328737570298945,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.00249676
+          },
+          "control": {
+            "condition": "parity-audit-control",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 16,
+            "solveRate": 1,
+            "lower95": 0.8063923194655637,
+            "upper95": 1,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.0025090800000000003
+          },
+          "complete": true,
+          "observedBelowHalf": true
+        }
+      ],
+      "complete": true,
+      "replicatedBelowHalf": true
+    },
+    {
+      "catalogueId": "identity-conditioned-spatial-transition-counting",
+      "planId": "zone-entry-confirmatory-v1",
+      "modality": "video",
+      "models": [
+        {
+          "modelId": "bytedance-seed/seed-2-1-turbo",
+          "modelVersion": "bytedance-seed/seed-2-1-turbo",
+          "upstreamProvider": "Seed",
+          "native": {
+            "condition": "native-1x",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 5,
+            "solveRate": 0.3125,
+            "lower95": 0.14164643854782039,
+            "upper95": 0.5559564416525933,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 1,
+            "excludedRequests": 0,
+            "costUsd": 0.036476999999999996
+          },
+          "control": {
+            "condition": "oracle-counter-control",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 16,
+            "solveRate": 1,
+            "lower95": 0.8063923194655637,
+            "upper95": 1,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.036461999999999994
+          },
+          "complete": true,
+          "observedBelowHalf": true
+        },
+        {
+          "modelId": "xiaomi/mimo-v2.5",
+          "modelVersion": "xiaomi/mimo-v2.5",
+          "upstreamProvider": "Xiaomi",
+          "native": {
+            "condition": "native-1x",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 5,
+            "solveRate": 0.3125,
+            "lower95": 0.14164643854782039,
+            "upper95": 0.5559564416525933,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.00902664
+          },
+          "control": {
+            "condition": "oracle-counter-control",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 16,
+            "solveRate": 1,
+            "lower95": 0.8063923194655637,
+            "upper95": 1,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.008309279999999999
+          },
+          "complete": true,
+          "observedBelowHalf": true
+        }
+      ],
+      "complete": true,
+      "replicatedBelowHalf": true
+    },
+    {
+      "catalogueId": "identity-pair-interaction-counting",
+      "planId": "pair-collision-confirmatory-v1",
+      "modality": "video",
+      "models": [
+        {
+          "modelId": "bytedance-seed/seed-2-1-turbo",
+          "modelVersion": "bytedance-seed/seed-2-1-turbo",
+          "upstreamProvider": "Seed",
+          "native": {
+            "condition": "native-1x",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 8,
+            "solveRate": 0.5,
+            "lower95": 0.27999563610326017,
+            "upper95": 0.7200043638967398,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.0342
+          },
+          "control": {
+            "condition": "oracle-counter-control",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 16,
+            "solveRate": 1,
+            "lower95": 0.8063923194655637,
+            "upper95": 1,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.03417599999999999
+          },
+          "complete": true,
+          "observedBelowHalf": false
+        },
+        {
+          "modelId": "xiaomi/mimo-v2.5",
+          "modelVersion": "xiaomi/mimo-v2.5",
+          "upstreamProvider": "Xiaomi",
+          "native": {
+            "condition": "native-1x",
+            "plannedCases": 16,
+            "requests": 23,
+            "substantiveAnswers": 16,
+            "correct": 2,
+            "solveRate": 0.125,
+            "lower95": 0.03497748774324047,
+            "upper95": 0.36022827265758695,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 7,
+            "costUsd": 0.015358
+          },
+          "control": {
+            "condition": "oracle-counter-control",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 11,
+            "solveRate": 0.6875,
+            "lower95": 0.44404355834740666,
+            "upper95": 0.8583535614521796,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.011054959999999997
+          },
+          "complete": true,
+          "observedBelowHalf": true
+        }
+      ],
+      "complete": true,
+      "replicatedBelowHalf": false
+    },
+    {
+      "catalogueId": "sequential-identity-permutation",
+      "planId": "swap-tracking-confirmatory-v1",
+      "modality": "video",
+      "models": [
+        {
+          "modelId": "bytedance-seed/seed-2-1-turbo",
+          "modelVersion": "bytedance-seed/seed-2-1-turbo",
+          "upstreamProvider": "Seed",
+          "native": {
+            "condition": "native-1x",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 4,
+            "solveRate": 0.25,
+            "lower95": 0.10182067491213048,
+            "upper95": 0.49498316535508774,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.032119999999999996
+          },
+          "control": {
+            "condition": "visible-identity-control",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 16,
+            "solveRate": 1,
+            "lower95": 0.8063923194655637,
+            "upper95": 1,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.032071999999999996
+          },
+          "complete": true,
+          "observedBelowHalf": true
+        },
+        {
+          "modelId": "xiaomi/mimo-v2.5",
+          "modelVersion": "xiaomi/mimo-v2.5",
+          "upstreamProvider": "Xiaomi",
+          "native": {
+            "condition": "native-1x",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 4,
+            "solveRate": 0.25,
+            "lower95": 0.10182067491213048,
+            "upper95": 0.49498316535508774,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.01038912
+          },
+          "control": {
+            "condition": "visible-identity-control",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 2,
+            "solveRate": 0.125,
+            "lower95": 0.03497748774324047,
+            "upper95": 0.36022827265758695,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.010679479999999998
+          },
+          "complete": true,
+          "observedBelowHalf": true
+        }
+      ],
+      "complete": true,
+      "replicatedBelowHalf": true
+    },
+    {
+      "catalogueId": "identity-conditioned-temporal-event-counting",
+      "planId": "selective-flash-confirmatory-v3",
+      "modality": "video",
+      "models": [
+        {
+          "modelId": "bytedance-seed/seed-2-1-turbo",
+          "modelVersion": "bytedance-seed/seed-2-1-turbo",
+          "upstreamProvider": "Seed",
+          "native": {
+            "condition": "native-1x",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 4,
+            "solveRate": 0.25,
+            "lower95": 0.10182067491213048,
+            "upper95": 0.49498316535508774,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.025623999999999994
+          },
+          "control": {
+            "condition": "persistent-answer-control",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 9,
+            "solveRate": 0.5625,
+            "lower95": 0.331785563988119,
+            "upper95": 0.7690134759450765,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.025479499999999995
+          },
+          "complete": true,
+          "observedBelowHalf": true
+        },
+        {
+          "modelId": "xiaomi/mimo-v2.5",
+          "modelVersion": "xiaomi/mimo-v2.5",
+          "upstreamProvider": "Xiaomi",
+          "native": {
+            "condition": "native-1x",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 4,
+            "solveRate": 0.25,
+            "lower95": 0.10182067491213048,
+            "upper95": 0.49498316535508774,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.008297520000000003
+          },
+          "control": {
+            "condition": "persistent-answer-control",
+            "plannedCases": 16,
+            "requests": 19,
+            "substantiveAnswers": 16,
+            "correct": 6,
+            "solveRate": 0.375,
+            "lower95": 0.18481232558863633,
+            "upper95": 0.6135895945449727,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 3,
+            "costUsd": 0.011667599999999998
+          },
+          "complete": true,
+          "observedBelowHalf": true
+        }
+      ],
+      "complete": true,
+      "replicatedBelowHalf": true
+    },
+    {
+      "catalogueId": "temporal-pattern-counting",
+      "planId": "transition-count-confirmatory-v1",
+      "modality": "video",
+      "models": [
+        {
+          "modelId": "bytedance-seed/seed-2-1-turbo",
+          "modelVersion": "bytedance-seed/seed-2-1-turbo",
+          "upstreamProvider": "Seed",
+          "native": {
+            "condition": "native-1x",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 4,
+            "solveRate": 0.25,
+            "lower95": 0.10182067491213048,
+            "upper95": 0.49498316535508774,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.03420800000000001
+          },
+          "control": {
+            "condition": "running-transition-counter-control",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 16,
+            "solveRate": 1,
+            "lower95": 0.8063923194655637,
+            "upper95": 1,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.03420800000000001
+          },
+          "complete": true,
+          "observedBelowHalf": true
+        },
+        {
+          "modelId": "xiaomi/mimo-v2.5",
+          "modelVersion": "xiaomi/mimo-v2.5",
+          "upstreamProvider": "Xiaomi",
+          "native": {
+            "condition": "native-1x",
+            "plannedCases": 16,
+            "requests": 23,
+            "substantiveAnswers": 16,
+            "correct": 6,
+            "solveRate": 0.375,
+            "lower95": 0.18481232558863633,
+            "upper95": 0.6135895945449727,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 7,
+            "costUsd": 0.015980859999999996
+          },
+          "control": {
+            "condition": "running-transition-counter-control",
+            "plannedCases": 16,
+            "requests": 18,
+            "substantiveAnswers": 16,
+            "correct": 11,
+            "solveRate": 0.6875,
+            "lower95": 0.44404355834740666,
+            "upper95": 0.8583535614521796,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 2,
+            "costUsd": 0.012800760000000001
+          },
+          "complete": true,
+          "observedBelowHalf": true
+        }
+      ],
+      "complete": true,
+      "replicatedBelowHalf": true
+    },
+    {
+      "catalogueId": "temporal-set-cardinality",
+      "planId": "grid-activation-confirmatory-v3",
+      "modality": "video",
+      "models": [
+        {
+          "modelId": "bytedance-seed/seed-2-1-turbo",
+          "modelVersion": "bytedance-seed/seed-2-1-turbo",
+          "upstreamProvider": "Seed",
+          "native": {
+            "condition": "native-1x",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 2,
+            "solveRate": 0.125,
+            "lower95": 0.03497748774324047,
+            "upper95": 0.36022827265758695,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.05202399999999999
+          },
+          "control": {
+            "condition": "persistent-set-control",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 16,
+            "solveRate": 1,
+            "lower95": 0.8063923194655637,
+            "upper95": 1,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.05202399999999999
+          },
+          "complete": true,
+          "observedBelowHalf": true
+        },
+        {
+          "modelId": "xiaomi/mimo-v2.5",
+          "modelVersion": "xiaomi/mimo-v2.5",
+          "upstreamProvider": "Xiaomi",
+          "native": {
+            "condition": "native-1x",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 9,
+            "solveRate": 0.5625,
+            "lower95": 0.331785563988119,
+            "upper95": 0.7690134759450765,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.015579199999999998
+          },
+          "control": {
+            "condition": "persistent-set-control",
+            "plannedCases": 16,
+            "requests": 17,
+            "substantiveAnswers": 16,
+            "correct": 16,
+            "solveRate": 1,
+            "lower95": 0.8063923194655637,
+            "upper95": 1,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 1,
+            "costUsd": 0.0170261
+          },
+          "complete": true,
+          "observedBelowHalf": false
+        }
+      ],
+      "complete": true,
+      "replicatedBelowHalf": false
+    },
+    {
+      "catalogueId": "dynamic-route-turn-integration",
+      "planId": "route-turn-confirmatory-v3",
+      "modality": "video",
+      "models": [
+        {
+          "modelId": "bytedance-seed/seed-2-1-turbo",
+          "modelVersion": "bytedance-seed/seed-2-1-turbo",
+          "upstreamProvider": "Seed",
+          "native": {
+            "condition": "native-1x",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 5,
+            "solveRate": 0.3125,
+            "lower95": 0.14164643854782039,
+            "upper95": 0.5559564416525933,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.043064
+          },
+          "control": {
+            "condition": "running-turn-counter-control",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 16,
+            "solveRate": 1,
+            "lower95": 0.8063923194655637,
+            "upper95": 1,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.043064
+          },
+          "complete": true,
+          "observedBelowHalf": true
+        },
+        {
+          "modelId": "xiaomi/mimo-v2.5",
+          "modelVersion": "xiaomi/mimo-v2.5",
+          "upstreamProvider": "Xiaomi",
+          "native": {
+            "condition": "native-1x",
+            "plannedCases": 16,
+            "requests": 17,
+            "substantiveAnswers": 16,
+            "correct": 5,
+            "solveRate": 0.3125,
+            "lower95": 0.14164643854782039,
+            "upper95": 0.5559564416525933,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 1,
+            "costUsd": 0.012685153599999999
+          },
+          "control": {
+            "condition": "running-turn-counter-control",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 16,
+            "solveRate": 1,
+            "lower95": 0.8063923194655637,
+            "upper95": 1,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.011513633599999998
+          },
+          "complete": true,
+          "observedBelowHalf": true
+        }
+      ],
+      "complete": true,
+      "replicatedBelowHalf": true
+    },
+    {
+      "catalogueId": "dynamic-conservation-ledger",
+      "planId": "conservation-confirmatory-v3",
+      "modality": "video",
+      "models": [
+        {
+          "modelId": "bytedance-seed/seed-2-1-turbo",
+          "modelVersion": "bytedance-seed/seed-2-1-turbo",
+          "upstreamProvider": "Seed",
+          "native": {
+            "condition": "native-1x",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 5,
+            "solveRate": 0.3125,
+            "lower95": 0.14164643854782039,
+            "upper95": 0.5559564416525933,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.05528
+          },
+          "control": {
+            "condition": "visible-ledger-control",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 16,
+            "solveRate": 1,
+            "lower95": 0.8063923194655637,
+            "upper95": 1,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.04629250000000001
+          },
+          "complete": true,
+          "observedBelowHalf": true
+        },
+        {
+          "modelId": "xiaomi/mimo-v2.5",
+          "modelVersion": "xiaomi/mimo-v2.5",
+          "upstreamProvider": "Xiaomi",
+          "native": {
+            "condition": "native-1x",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 2,
+            "solveRate": 0.125,
+            "lower95": 0.03497748774324047,
+            "upper95": 0.36022827265758695,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.012817279999999997
+          },
+          "control": {
+            "condition": "visible-ledger-control",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 13,
+            "solveRate": 0.8125,
+            "lower95": 0.5699111903802586,
+            "upper95": 0.9340840092857187,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.012817279999999997
+          },
+          "complete": true,
+          "observedBelowHalf": true
+        }
+      ],
+      "complete": true,
+      "replicatedBelowHalf": true
+    },
+    {
+      "catalogueId": "dynamic-trajectory-topology",
+      "planId": "hidden-trail-intersections-confirmatory-v1",
+      "modality": "video",
+      "models": [
+        {
+          "modelId": "bytedance-seed/seed-2-1-turbo",
+          "modelVersion": "bytedance-seed/seed-2-1-turbo",
+          "upstreamProvider": "Seed",
+          "native": {
+            "condition": "native-1x",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 3,
+            "solveRate": 0.1875,
+            "lower95": 0.06591599071428142,
+            "upper95": 0.4300888096197414,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.036344
+          },
+          "control": {
+            "condition": "visible-trail-control",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 6,
+            "solveRate": 0.375,
+            "lower95": 0.18481232558863633,
+            "upper95": 0.6135895945449727,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.036344
+          },
+          "complete": true,
+          "observedBelowHalf": true
+        },
+        {
+          "modelId": "xiaomi/mimo-v2.5",
+          "modelVersion": "xiaomi/mimo-v2.5",
+          "upstreamProvider": "Xiaomi",
+          "native": {
+            "condition": "native-1x",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 5,
+            "solveRate": 0.3125,
+            "lower95": 0.14164643854782039,
+            "upper95": 0.5559564416525933,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.0091126
+          },
+          "control": {
+            "condition": "visible-trail-control",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 3,
+            "solveRate": 0.1875,
+            "lower95": 0.06591599071428142,
+            "upper95": 0.4300888096197414,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.00897792
+          },
+          "complete": true,
+          "observedBelowHalf": true
+        }
+      ],
+      "complete": true,
+      "replicatedBelowHalf": true
+    },
+    {
+      "catalogueId": "signed-temporal-state-accumulation",
+      "planId": "signed-accumulator-confirmatory-v2",
+      "modality": "video",
+      "models": [
+        {
+          "modelId": "bytedance-seed/seed-2-1-turbo",
+          "modelVersion": "bytedance-seed/seed-2-1-turbo",
+          "upstreamProvider": "Seed",
+          "native": {
+            "condition": "native-1x",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 6,
+            "solveRate": 0.375,
+            "lower95": 0.18481232558863633,
+            "upper95": 0.6135895945449727,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.046911999999999995
+          },
+          "control": {
+            "condition": "running-total-control",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 16,
+            "solveRate": 1,
+            "lower95": 0.8063923194655637,
+            "upper95": 1,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.03941950000000001
+          },
+          "complete": true,
+          "observedBelowHalf": true
+        },
+        {
+          "modelId": "xiaomi/mimo-v2.5",
+          "modelVersion": "xiaomi/mimo-v2.5",
+          "upstreamProvider": "Xiaomi",
+          "native": {
+            "condition": "native-1x",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 5,
+            "solveRate": 0.3125,
+            "lower95": 0.14164643854782039,
+            "upper95": 0.5559564416525933,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.011457600000000004
+          },
+          "control": {
+            "condition": "running-total-control",
+            "plannedCases": 16,
+            "requests": 16,
+            "substantiveAnswers": 16,
+            "correct": 16,
+            "solveRate": 1,
+            "lower95": 0.8063923194655637,
+            "upper95": 1,
+            "missingCandidateIds": [],
+            "adjudicatedAnswers": 0,
+            "excludedRequests": 0,
+            "costUsd": 0.011457600000000004
+          },
+          "complete": true,
+          "observedBelowHalf": true
+        }
+      ],
+      "complete": true,
+      "replicatedBelowHalf": true
+    }
+  ]
+}

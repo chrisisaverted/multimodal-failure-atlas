@@ -1,0 +1,21 @@
+{
+  "id": "gated-grid-frequency-confirmatory-v1-low-reasoning-2026-09-01",
+  "resolvedAt": "2026-09-01",
+  "gateway": "OpenRouter",
+  "evaluationPlanId": "gated-grid-frequency-confirmatory-v1",
+  "evaluationPlanSha256": "66c44c5fe267a22e710c2747bfae94accbbed290285dbe3f08388ec622dccb7e",
+  "stage": "frozen-five-route-color-gated-frequency-holdout-with-visible-histogram-control",
+  "casesPerModel": 32,
+  "trials": 1,
+  "temperature": 0,
+  "maxOutputTokens": 8192,
+  "reasoning": { "effort": "low", "exclude": true },
+  "scorer": "terminal-option-v3",
+  "allowProviderFallbacks": false,
+  "dataCollection": "deny",
+  "campaignCostCeilingUsd": 20,
+  "models": [
+    { "modelId": "google/gemini-3.7-flash", "modelRevision": "google/gemini-3.7-flash-20260813", "upstreamProvider": "Google AI Studio" },
+    { "modelId": "qwen/qwen3.8-max", "modelRevision": "qwen/qwen3.8-max-20260803", "upstreamProvider": "Alibaba" }
+  ]
+}

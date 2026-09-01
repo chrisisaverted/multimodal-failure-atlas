@@ -4,6 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 const links = [
   ["Atlas", "/taxonomy"],
   ["Verified", "/verified"],
+  ["Replication", "/replication"],
   ["Human test", "/human-study"],
   ["Live lab", "/lab"],
   ["Models", "/models"],

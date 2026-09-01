@@ -1,0 +1,24 @@
+{
+  "id": "gated-grid-set-confirmatory-seed-v1-no-reasoning-2026-09-01",
+  "resolvedAt": "2026-09-01",
+  "gateway": "OpenRouter",
+  "evaluationPlanId": "gated-grid-set-confirmatory-v1",
+  "evaluationPlanSha256": "d1335889ab37c4eb4e4e048c9883ed069353682811d865c84b4418e3da4a21ae",
+  "stage": "frozen-five-route-color-gated-set-holdout-with-persistent-set-control",
+  "casesPerModel": 32,
+  "trials": 1,
+  "temperature": 0,
+  "maxOutputTokens": 4096,
+  "reasoning": { "effort": "none", "exclude": true },
+  "scorer": "terminal-option-v3",
+  "allowProviderFallbacks": false,
+  "dataCollection": "deny",
+  "campaignCostCeilingUsd": 25,
+  "models": [
+    {
+      "modelId": "bytedance-seed/seed-2-1-turbo",
+      "modelRevision": "bytedance-seed/seed-2-1-turbo-20260810",
+      "upstreamProvider": "Seed"
+    }
+  ]
+}

@@ -17,11 +17,11 @@ The atlas uses a 0–100 difficulty control inside each generator. It is a famil
 | image    | graph degree topology           |      87 | dense candidate graphs with one exact degree-pattern match                |
 | image    | visual parity                   |      96 | 24×24 parity panels with near-miss candidates                             |
 | video    | identity-conditioned zone entry |      86 | track one identity through four cycles and eight entries                  |
-| video    | pair-specific collision count   |      91 | 24 collision events across six identities; count one pair only            |
+| video    | gated pair-collision count      |      98 | 32 events; variable pair and frame-color gate with six wrong-gate traps   |
 | video    | sequential identity permutation |      88 | maintain an identity across 12 swaps                                      |
 | video    | selective flash count           |      86 | eight target flashes among four distractor objects                        |
 | video    | target-transition count         |      94 | count an exact temporal pattern rather than state occupancy               |
-| video    | temporal set cardinality        |      98 | maintain a set of 21 uniquely activated locations                         |
+| video    | gated frequency-set cardinality |      99 | 40 flashes; color-conditioned per-cell histogram and exact-twice query    |
 | video    | route-turn integration          |      96 | integrate 20 turns over a 41-position path                                |
 | video    | conservation ledger             |      96 | update a target container across multiple transfers                       |
 | video    | hidden-trail topology           |      94 | retain a route and count true self-intersections                          |

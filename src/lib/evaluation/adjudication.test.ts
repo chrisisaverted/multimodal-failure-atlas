@@ -37,6 +37,11 @@ describe("answer-key-blind explicit declaration adjudication", () => {
     });
   });
 
+  it("does not treat arbitrary words as outside numeric or letter answers", () => {
+    expect(adjudicateExplicitDeclaration("The answer is frame by frame.", ["3", "4", "5", "6"])).toBeUndefined();
+    expect(adjudicateExplicitDeclaration("The final answer is unknown-token.", ["A", "B", "C", "D"])).toBeUndefined();
+  });
+
   it("leaves hedged and conflicting declarations unresolved", () => {
     expect(
       adjudicateExplicitDeclaration("The answer is either A or B.", ["A", "B", "C", "D"]),
@@ -49,5 +54,38 @@ describe("answer-key-blind explicit declaration adjudication", () => {
         "D",
       ]),
     ).toBeUndefined();
+  });
+
+  it("uses a clearly terminal answer label instead of intermediate running counts", () => {
+    expect(
+      adjudicateExplicitDeclaration(
+        "Collision one. Count: 1.\nCollision two. Count: 2.\n\n**Answer:** 10",
+        ["5", "6", "7", "8"],
+      ),
+    ).toEqual({
+      claimedAnswer: "10",
+      basis: "terminal-standalone",
+      withinOptions: false,
+    });
+  });
+
+  it("recovers a recent bold numeric conclusion followed by supporting cell labels", () => {
+    expect(
+      adjudicateExplicitDeclaration(
+        "Frame audit.\n\n**5** cells flashed exactly twice.\n\nThose cells are: **A1, D4, E1, E3, E5**",
+        ["3", "4", "5", "6"],
+      ),
+    ).toEqual({ claimedAnswer: "5", basis: "terminal-standalone", withinOptions: true });
+  });
+
+  it("uses the leading marked answer before a parenthetical option recap", () => {
+    expect(
+      adjudicateExplicitDeclaration("**Correct Answer:** **3** (options: **3**, **4**, **5**, **6**)", [
+        "3",
+        "4",
+        "5",
+        "6",
+      ]),
+    ).toEqual({ claimedAnswer: "3", basis: "terminal-standalone", withinOptions: true });
   });
 });

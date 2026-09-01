@@ -2,12 +2,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle2, Download, FlaskConical, UsersRound } from "lucide-react";
 import type { AdmittedFamilyEvidence } from "@/lib/admitted-evidence";
+import { externalReplication } from "@/lib/external-replication";
 
 const percent = (value: number | null) => (value === null ? "—" : `${Math.round(value * 100)}%`);
 const modelName = (id: string) => id.split("/").at(-1)?.replaceAll("-", " ") ?? id;
 
 export function AdmittedEvidencePanel({ evidence }: { evidence: AdmittedFamilyEvidence }) {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+  const frozenRouteExpansion = externalReplication.families.find(
+    (family) => family.planId === evidence.planId && family.replicatedBelowHalf,
+  );
+  const expandedModels = evidence.expandedModels ?? frozenRouteExpansion?.models;
   return (
     <section className="section-shell admitted-evidence" aria-labelledby="admitted-evidence-title">
       <div className="admitted-evidence-copy">
@@ -69,9 +74,35 @@ export function AdmittedEvidencePanel({ evidence }: { evidence: AdmittedFamilyEv
               {model.native.pendingReview ? (
                 <em>{model.native.pendingReview} non-substantive request(s), excluded</em>
               ) : null}
+              {model.native.adjudicatedAnswers ? (
+                <em>{model.native.adjudicatedAnswers} explicit answer(s) recovered answer-key-blind</em>
+              ) : null}
             </article>
           ))}
         </div>
+        {expandedModels?.length ? (
+          <>
+            <p className="admitted-expanded-label">Frozen route-expansion confirmation</p>
+            <div className="admitted-model-grid admitted-expanded-grid">
+              {expandedModels.map((model) => (
+                <article key={model.modelId}>
+                  <span>{modelName(model.modelId)}</span>
+                  <strong>{percent(model.native.solveRate)}</strong>
+                  <p>
+                    {model.native.correct}/{model.native.substantiveAnswers} native
+                  </p>
+                  <small>
+                    95% Wilson {percent(model.native.lower95)}–{percent(model.native.upper95)} · control{" "}
+                    {model.control.correct}/{model.control.substantiveAnswers}
+                  </small>
+                  {model.native.adjudicatedAnswers ? (
+                    <em>{model.native.adjudicatedAnswers} explicit answer(s) recovered answer-key-blind</em>
+                  ) : null}
+                </article>
+              ))}
+            </div>
+          </>
+        ) : null}
         <div className="admitted-evidence-notes">
           <p>
             <FlaskConical size={17} /> Observed below-half is the admission rule; the Wilson intervals remain

@@ -2489,6 +2489,19 @@ select {
   margin-top: 30px;
   border: 1px solid #55534e;
 }
+
+.admitted-expanded-label {
+  margin: 1.15rem 0 0.6rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.admitted-expanded-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
 .admitted-model-grid article {
   min-height: 180px;
   padding: 22px;
@@ -2853,9 +2866,121 @@ select {
   line-height: 1.6;
 }
 .verified-caveat a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
   border-bottom: 1px solid currentColor;
   font: 9px monospace;
   text-transform: uppercase;
+}
+
+.replication-route-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  margin-bottom: 72px;
+  background: var(--ink);
+  border: 1px solid var(--ink);
+}
+.replication-route-grid article {
+  min-width: 0;
+  padding: 27px;
+  background: var(--paper-light);
+}
+.replication-route-grid span,
+.replication-route-grid small {
+  color: var(--muted);
+  font: 9px monospace;
+  text-transform: uppercase;
+}
+.replication-route-grid h2 {
+  margin: 9px 0 20px;
+  font: 31px/1 var(--serif);
+}
+.replication-route-grid strong {
+  display: block;
+  color: var(--cobalt);
+  font: 55px/1 var(--serif);
+}
+.replication-route-grid p {
+  margin: 7px 0 24px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.replication-list {
+  border-top: 1px solid var(--ink);
+}
+.replication-family {
+  display: grid;
+  grid-template-columns: 54px minmax(230px, 0.9fr) minmax(420px, 1.2fr) 135px;
+  gap: 24px;
+  align-items: center;
+  min-height: 160px;
+  border-bottom: 1px solid var(--line);
+}
+.replication-family h2 {
+  margin: 8px 0 5px;
+  font: 25px/1 var(--serif);
+}
+.replication-family p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.4;
+}
+.replication-models {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid var(--line);
+}
+.replication-models > div {
+  min-width: 0;
+  padding: 14px;
+  border-right: 1px solid var(--line);
+}
+.replication-models > div:last-child {
+  border-right: 0;
+}
+.replication-models span,
+.replication-models strong,
+.replication-models small {
+  display: block;
+}
+.replication-models span,
+.replication-models small {
+  overflow: hidden;
+  font: 8px monospace;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+.replication-models span,
+.replication-models small {
+  color: var(--muted);
+}
+.replication-models strong {
+  margin: 8px 0 3px;
+  font: 24px/1 var(--serif);
+}
+.replication-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  justify-self: end;
+  font: 8px monospace;
+  text-transform: uppercase;
+}
+.replication-status.replicated {
+  color: #176c4a;
+}
+.replication-status.did-not-replicate {
+  color: var(--vermillion);
+}
+.replication-status.incomplete {
+  color: var(--muted);
+}
+.replication-audit {
+  margin-top: 55px;
 }
 
 .research-agenda-link {
@@ -3007,6 +3132,13 @@ select {
   }
   .verified-family {
     grid-template-columns: 45px minmax(0, 1fr) 90px;
+  }
+  .replication-family {
+    grid-template-columns: 45px minmax(0, 1fr) 135px;
+  }
+  .replication-models {
+    grid-column: 2 / -1;
+    margin: -10px 0 22px;
   }
   .direction-grid {
     grid-template-columns: 1fr;
@@ -3449,6 +3581,35 @@ select {
     border-bottom: 0;
   }
   .verified-family > a {
+    grid-column: 2;
+    justify-self: start;
+    margin-bottom: 24px;
+  }
+  .replication-route-grid {
+    grid-template-columns: 1fr;
+  }
+  .replication-family {
+    grid-template-columns: 35px minmax(0, 1fr);
+    gap: 15px;
+    padding-top: 22px;
+  }
+  .replication-family .verified-rank {
+    grid-row: 1 / 4;
+  }
+  .replication-models {
+    grid-column: 2;
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin: 0;
+  }
+  .replication-models > div {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .replication-models > div:last-child {
+    border-bottom: 0;
+  }
+  .replication-status {
     grid-column: 2;
     justify-self: start;
     margin-bottom: 24px;

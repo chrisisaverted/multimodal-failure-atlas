@@ -45,3 +45,11 @@ Before designing or running paid multimodal failure searches, read
 - Audit difficulty metadata against every native case. Publish answer-bearing count variation as a
   disclosed stratum, test fixed-structure redesigns for ordinal shortcuts, and rank cross-model hardness
   by the easiest route rather than a pooled average.
+- Treat untouched route replication as a generator audit. If one new route reaches the threshold, retain
+  that negative result and start a new reservation-backed search; do not quietly redefine the cohort.
+- Conjunctive temporal generators must make both predicates independently insufficient. Balance the gate,
+  include target events under the wrong gate, vary the target predicate by case, and add a control that
+  exposes only the conjunction's sufficient statistic.
+- A verbose response with running intermediate counts is not automatically ambiguous. Answer-key-blind
+  adjudication may prioritize a clearly terminal standalone or labeled answer, but conflicting conclusions
+  remain excluded and a prospective completion protocol is required when no unique conclusion exists.

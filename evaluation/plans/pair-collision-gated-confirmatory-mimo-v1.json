@@ -1,0 +1,25 @@
+{
+  "id": "pair-collision-gated-confirmatory-mimo-v1-declared-answer-2026-09-01",
+  "resolvedAt": "2026-09-01",
+  "gateway": "OpenRouter",
+  "evaluationPlanId": "pair-collision-gated-confirmatory-v1",
+  "evaluationPlanSha256": "d6c42d28954ed3a5aff3af4d6730add998018393638f37216437631eb50d9548",
+  "stage": "frozen-five-route-confirmatory-holdout-with-visible-match-counter-control",
+  "casesPerModel": 32,
+  "trials": 1,
+  "temperature": 0,
+  "maxOutputTokens": 4096,
+  "reasoning": { "effort": "none", "exclude": true },
+  "scorer": "declared-answer-v4",
+  "systemMessage": "This is a forced-choice visual diagnostic. Inspect only the supplied media. Return exactly one answer copied verbatim from the allowed-answer list, even if uncertain. Do not explain and do not return any answer outside that list.",
+  "allowProviderFallbacks": false,
+  "dataCollection": "deny",
+  "campaignCostCeilingUsd": 20,
+  "models": [
+    {
+      "modelId": "xiaomi/mimo-v2.5",
+      "modelRevision": "xiaomi/mimo-v2.5-20260422",
+      "upstreamProvider": "Xiaomi"
+    }
+  ]
+}

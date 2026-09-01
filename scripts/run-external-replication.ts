@@ -119,6 +119,7 @@ for (const [familyIndex, { planId }] of evidence.families.entries()) {
         (run.status === "verified" && !run.emptyResponse) ||
         (run.status === "pending-review" &&
           !run.emptyResponse &&
+          run.finishReason === "stop" &&
           Boolean(adjudicateExplicitDeclaration(run.rawResponse, candidate.answerOptions))),
     );
     return answered ? [] : [index];

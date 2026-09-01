@@ -1,0 +1,22 @@
+{
+  "id": "gated-grid-frequency-screen-kimi-declaration-v1-2026-09-01",
+  "resolvedAt": "2026-09-01",
+  "gateway": "OpenRouter",
+  "evaluationPlanId": "gated-grid-frequency-discovery-v1",
+  "evaluationPlanSha256": "572d6f5a49c8b1cce985d67a9cbdda78759d07e052e653d15714c6e9ea27c010",
+  "stage": "five-route-color-gated-frequency-screen-declaration-completion",
+  "casesPerModel": 1,
+  "trials": 1,
+  "temperature": 0,
+  "maxOutputTokens": 4096,
+  "reasoning": { "effort": "none", "exclude": true },
+  "scorer": "declared-answer-v4",
+  "systemMessage": "This is a forced-choice visual diagnostic. Inspect only the supplied video. Return exactly one answer copied verbatim from the allowed-answer list, even if uncertain. Do not explain and do not output any other text.",
+  "allowProviderFallbacks": false,
+  "dataCollection": "deny",
+  "campaignCostCeilingUsd": 8,
+  "amendmentReason": "Seed 5420003 exhausted both the original 4096-token allowance and an 8192-token completion while narrating frames without declaring an answer. Both attempts remain immutable and receive no hardness credit; this prospective completion adds only an exact forced-choice response contract.",
+  "models": [
+    { "modelId": "moonshotai/kimi-k3", "modelRevision": "moonshotai/kimi-k3-20260715", "upstreamProvider": "Moonshot AI" }
+  ]
+}

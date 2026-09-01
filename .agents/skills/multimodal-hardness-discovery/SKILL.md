@@ -69,6 +69,19 @@ Controls govern attribution, not behavioral admission. A native task may remain 
 its control is also hard, but the result then cannot localize the bottleneck that control was meant to
 isolate. Report every control denominator and name the surviving alternatives explicitly.
 
+Use untouched route replication as a generator audit. A family that passes the original cohort but reaches
+the rejection threshold on a new route remains a valid result for the named original cohort, but it is not
+cross-route robust. Preserve the negative replication and begin a new reservation-backed cycle rather than
+retrofitting the old holdout. A useful repair is often conjunctive gating: make every event locally legible,
+vary two target predicates by case, balance each predicate, and include events satisfying either predicate
+alone so neither shortcut is sufficient. Pair it with a control that exposes only the conjunction's running
+sufficient statistic.
+
+For answer-key-blind recovery, distinguish intermediate work from a terminal declaration. A clearly labeled
+or standalone final line may be substantive even when earlier prose contains running counts. Do not infer an
+answer from a partial analysis, and leave genuinely conflicting or hedged conclusions excluded. If no unique
+terminal claim exists, preserve the attempt and use a prospective exact-answer completion protocol.
+
 When a project asks for several modes, maintain a family ledger keyed by the latent capability being
 tested. Changing only density, duration, count range, visual skin, prompt, or answer spacing creates a
 new cell—not a new failure family. Maintain separate image and video cohorts because unsupported

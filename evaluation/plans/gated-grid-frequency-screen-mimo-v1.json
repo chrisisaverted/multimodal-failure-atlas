@@ -1,0 +1,21 @@
+{
+  "id": "gated-grid-frequency-screen-mimo-v1-declared-answer-2026-09-01",
+  "resolvedAt": "2026-09-01",
+  "gateway": "OpenRouter",
+  "evaluationPlanId": "gated-grid-frequency-discovery-v1",
+  "evaluationPlanSha256": "572d6f5a49c8b1cce985d67a9cbdda78759d07e052e653d15714c6e9ea27c010",
+  "stage": "five-route-color-gated-frequency-screen",
+  "casesPerModel": 8,
+  "trials": 1,
+  "temperature": 0,
+  "maxOutputTokens": 4096,
+  "reasoning": { "effort": "none", "exclude": true },
+  "scorer": "declared-answer-v4",
+  "systemMessage": "This is a forced-choice visual diagnostic. Inspect only the supplied media. Return exactly one answer copied verbatim from the allowed-answer list, even if uncertain. Do not explain and do not return any answer outside that list.",
+  "allowProviderFallbacks": false,
+  "dataCollection": "deny",
+  "campaignCostCeilingUsd": 8,
+  "models": [
+    { "modelId": "xiaomi/mimo-v2.5", "modelRevision": "xiaomi/mimo-v2.5-20260422", "upstreamProvider": "Xiaomi" }
+  ]
+}

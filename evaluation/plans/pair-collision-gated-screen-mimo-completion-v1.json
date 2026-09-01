@@ -1,0 +1,26 @@
+{
+  "id": "pair-collision-gated-screen-mimo-completion-v1-2026-09-01",
+  "resolvedAt": "2026-09-01",
+  "gateway": "OpenRouter",
+  "evaluationPlanId": "pair-collision-gated-discovery-v1",
+  "evaluationPlanSha256": "c4767b019b2c2a71e44b74216be5402a2b01b896b23435bcd2ef6052494cee27",
+  "stage": "five-route-gated-target-pair-screen-completion",
+  "casesPerModel": 1,
+  "trials": 1,
+  "temperature": 0,
+  "maxOutputTokens": 4096,
+  "reasoning": { "effort": "none", "exclude": true },
+  "scorer": "terminal-option-v3",
+  "systemMessage": "Inspect the supplied video and answer the forced-choice question. Your entire response must be exactly one item copied from the allowed-answer list. Do not include analysis or any other text.",
+  "allowProviderFallbacks": false,
+  "dataCollection": "deny",
+  "campaignCostCeilingUsd": 5,
+  "amendmentReason": "Seed 5300004 contained a substantive numeric conclusion outside the allowed set, but intermediate running-count declarations made answer-key-blind adjudication ambiguous. The original attempt remains immutable and receives no hardness credit unless this prospective exact-answer completion produces a scorable response.",
+  "models": [
+    {
+      "modelId": "xiaomi/mimo-v2.5",
+      "modelRevision": "xiaomi/mimo-v2.5-20260422",
+      "upstreamProvider": "Xiaomi"
+    }
+  ]
+}

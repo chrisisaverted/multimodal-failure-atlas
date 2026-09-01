@@ -2,7 +2,9 @@
 
 Generated from the frozen Atlas evidence on 1 September 2026. This report describes 20 admitted
 synthetic families evaluated through three hosted frontier routes: Gemini 3.7 Flash, Qwen 3.8 Max,
-and Kimi K3.
+and Kimi K3. Every current family also has a frozen below-half confirmation on Seed 2.1 Turbo and
+MiMo 2.5: 18 survived the original route-expansion campaign, while the two threshold crossings were
+repaired with newly preregistered gated holdouts that passed all five routes.
 
 ## What “admitted” means
 
@@ -61,22 +63,27 @@ this useful generator shape.
 
 | Conservative rank | Family                                     | Gemini | Qwen | Kimi | Easiest route | Pooled | Weakest control |
 | ----------------: | ------------------------------------------ | -----: | ---: | ---: | ------------: | -----: | --------------: |
-|                 1 | Dynamic route-turn integration             |   2/16 | 2/16 | 3/16 |          3/16 |   7/48 |           16/16 |
-|                 2 | Identity-conditioned selective flash count |   2/16 | 4/16 | 2/16 |          4/16 |   8/48 |           16/16 |
-|                 3 | Identity-pair collision counting           |   4/16 | 3/16 | 3/16 |          4/16 |  10/48 |           12/16 |
+|                1= | Dynamic route-turn integration             |   2/16 | 2/16 | 3/16 |          3/16 |   7/48 |           16/16 |
+|                1= | Gated exact-frequency set cardinality      |   2/16 | 3/16 | 2/16 |          3/16 |   7/48 |           16/16 |
+|                 3 | Identity-conditioned selective flash count |   2/16 | 4/16 | 2/16 |          4/16 |   8/48 |           16/16 |
 |                 4 | Sequential identity permutation            |   2/16 | 1/16 | 5/16 |          5/16 |   8/48 |           13/16 |
 |                 5 | Temporal target-transition counting        |   3/16 | 5/16 | 3/16 |          5/16 |  11/48 |           16/16 |
-|                 6 | Signed temporal state accumulation         |   5/16 | 3/16 | 4/16 |          5/16 |  12/48 |           13/16 |
-|                 7 | Temporal set cardinality                   |   5/16 | 4/16 | 4/16 |          5/16 |  13/48 |           16/16 |
+|                6= | Gated identity-pair collision counting     |   3/16 | 4/16 | 5/16 |          5/16 |  12/48 |           15/16 |
+|                6= | Signed temporal state accumulation         |   5/16 | 3/16 | 4/16 |          5/16 |  12/48 |           13/16 |
 |                 8 | Hidden-trail trajectory topology           |   4/16 | 5/16 | 6/16 |          6/16 |  15/48 |            4/15 |
 |                 9 | Dynamic conservation ledger                |   7/16 | 5/16 | 2/16 |          7/16 |  14/48 |           16/16 |
 |                10 | Identity-conditioned spatial zone entries  |   4/16 | 7/16 | 4/16 |          7/16 |  15/48 |           16/16 |
 
-Route-turn integration is the strongest current result: all three routes are at or below 3/16 and the
-explicit running-counter control is 16/16 throughout. Selective flash counting and transition counting
-also combine low native accuracy with ceiling controls. Sequential swaps and pair-specific collisions
-show strong but incomplete control recovery, so identity maintenance is a plausible boundary rather
-than a uniquely identified cause.
+Route-turn integration and gated exact-frequency set cardinality are tied as the strongest current
+results: every core route is at or below 3/16 and every matched control is 16/16. The frequency task also
+holds on Seed at 6/16 and MiMo at 4/16. Its wrong answers are not one shared off-by-one pattern: Gemini
+and Kimi concentrate on 4, MiMo on 5, and Qwen on 3–4 despite balanced truths. That route-specific
+collapse, paired with ceiling controls, is consistent with approximate temporal compression but does not
+by itself localize an internal mechanism. Selective flash counting and transition counting
+also combine low native accuracy with ceiling controls. Sequential swaps show incomplete control
+recovery, so identity maintenance is a plausible boundary rather than a uniquely identified cause. The
+gated collision replacement is cleaner: all five routes are below half on native video, while its exact
+conjunctive-event counter recovers to at least 12/16.
 
 Hidden-trail topology is behaviorally hard but mechanistically weak. Drawing the trail does not recover
 performance; the weakest route is only 4/15 on the control. This directly rules out presenting it as a
@@ -86,7 +93,7 @@ prominent.
 
 The most reusable video recipe is sequential state compression. Present a series of individually simple
 events while requiring an exact latent state to be updated after each event: current identity mapping,
-previous direction, a signed counter, a set of visited locations, or a multi-container ledger. Then
+previous direction, a signed counter, a gated per-location histogram, or a multi-container ledger. Then
 externalize that state in a matched control. This attacks the gap between recognizing local frames and
 retaining a task-relevant sufficient statistic over the complete clip.
 

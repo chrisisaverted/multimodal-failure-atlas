@@ -671,173 +671,483 @@ const reproducedExtensions: ReproducedExtension[] = [
     id: "topological-enclosure-depth",
     title: "Count the walls around the point",
     shortTitle: "Topological enclosure depth",
-    subtitle: "Dense nested boundaries defeat exact inside/outside depth even when every boundary is visible.",
-    modalities: ["image"], stages: ["vision-encoding", "context-integration", "reasoning"], capabilities: ["spatial-relations", "counting", "cross-region-integration"], sourceIds: ["dynasolidgeo", "perceptionbench"],
-    trigger: "Place a marked point inside a balanced field of nested and distracting closed curves and ask for its exact enclosure depth.", symptom: "The model selects a nearby depth while numbered-boundary controls recover much of the loss.",
-    mechanism: "The task requires a global topological nesting representation rather than local edge detection. Control recovery is consistent with failure to convert visible contours into an exact containment hierarchy, but it does not identify the internal stage responsible.",
-    alternatives: ["Boundary crossings are visually missed", "The marked point is localized incorrectly", "The answer is approximately counted"], disconfirmingTest: "Preserve the geometry while successively numbering boundaries, highlighting only closed contours, and supplying an explicit containment tree.", mitigations: ["Topology-aware visual representations", "Iterative contour tracing", "External geometry tools"], severity: "foundational",
+    subtitle:
+      "Dense nested boundaries defeat exact inside/outside depth even when every boundary is visible.",
+    modalities: ["image"],
+    stages: ["vision-encoding", "context-integration", "reasoning"],
+    capabilities: ["spatial-relations", "counting", "cross-region-integration"],
+    sourceIds: ["dynasolidgeo", "perceptionbench"],
+    trigger:
+      "Place a marked point inside a balanced field of nested and distracting closed curves and ask for its exact enclosure depth.",
+    symptom: "The model selects a nearby depth while numbered-boundary controls recover much of the loss.",
+    mechanism:
+      "The task requires a global topological nesting representation rather than local edge detection. Control recovery is consistent with failure to convert visible contours into an exact containment hierarchy, but it does not identify the internal stage responsible.",
+    alternatives: [
+      "Boundary crossings are visually missed",
+      "The marked point is localized incorrectly",
+      "The answer is approximately counted",
+    ],
+    disconfirmingTest:
+      "Preserve the geometry while successively numbering boundaries, highlighting only closed contours, and supplying an explicit containment tree.",
+    mitigations: [
+      "Topology-aware visual representations",
+      "Iterative contour tracing",
+      "External geometry tools",
+    ],
+    severity: "foundational",
   },
   {
     id: "rotation-invariant-visual-correspondence",
     title: "The same constellation, turned",
     shortTitle: "Rotation-invariant correspondence",
-    subtitle: "A dense target constellation becomes difficult to match after rotation among near-miss candidates.",
-    modalities: ["image"], stages: ["vision-encoding", "context-integration", "reasoning"], capabilities: ["comparison", "spatial-relations", "cross-region-integration"], sourceIds: ["perceptionbench", "dynasolidgeo"],
-    trigger: "Rotate one irregular marked constellation and surround it with candidates that differ by only one or two relations.", symptom: "Answers approach the balanced-choice floor while highlighting the correct candidate sharply improves performance.",
-    mechanism: "Exact matching requires a transformation-invariant relational code that preserves every local relation. The behavioral evidence cannot distinguish lossy encoding from a failure to search over rotations.", alternatives: ["Rotation is estimated inaccurately", "A small marker is missed", "Panel comparison order biases the choice"], disconfirmingTest: "Sweep rotation continuously and compare against an equivalent task with canonicalized orientation and aligned correspondences.", mitigations: ["Equivariant encoders", "Canonical orientation", "Explicit point-set matching"], severity: "foundational",
+    subtitle:
+      "A dense target constellation becomes difficult to match after rotation among near-miss candidates.",
+    modalities: ["image"],
+    stages: ["vision-encoding", "context-integration", "reasoning"],
+    capabilities: ["comparison", "spatial-relations", "cross-region-integration"],
+    sourceIds: ["perceptionbench", "dynasolidgeo"],
+    trigger:
+      "Rotate one irregular marked constellation and surround it with candidates that differ by only one or two relations.",
+    symptom:
+      "Answers approach the balanced-choice floor while highlighting the correct candidate sharply improves performance.",
+    mechanism:
+      "Exact matching requires a transformation-invariant relational code that preserves every local relation. The behavioral evidence cannot distinguish lossy encoding from a failure to search over rotations.",
+    alternatives: [
+      "Rotation is estimated inaccurately",
+      "A small marker is missed",
+      "Panel comparison order biases the choice",
+    ],
+    disconfirmingTest:
+      "Sweep rotation continuously and compare against an equivalent task with canonicalized orientation and aligned correspondences.",
+    mitigations: ["Equivariant encoders", "Canonical orientation", "Explicit point-set matching"],
+    severity: "foundational",
   },
   {
     id: "global-bilateral-symmetry-verification",
     title: "One defect in a field of mirrors",
     shortTitle: "Global symmetry verification",
     subtitle: "Dense patterns with a single symmetry violation expose weak global correspondence checks.",
-    modalities: ["image"], stages: ["vision-encoding", "context-integration", "reasoning"], capabilities: ["comparison", "cross-region-integration", "localization"], sourceIds: ["perceptionbench", "eyes-wide-shut"],
-    trigger: "Present several dense panels where exactly one is bilaterally symmetric and the others contain sparse balanced defects.", symptom: "The correct panel is rarely selected until the decisive correspondence is marked.",
-    mechanism: "The answer is a conjunction over many mirrored pairs; a compressed global impression of symmetry is insufficient. Oracle marking localizes the behavioral bottleneck to finding or integrating the decisive pair.", alternatives: ["The axis is misidentified", "A defect is below effective resolution", "The model uses texture similarity"], disconfirmingTest: "Hold density fixed while varying defect count, distance from the axis, and explicit pair markings.", mitigations: ["Pairwise correspondence attention", "Multi-scale inspection", "Symmetry-specific verification passes"], severity: "high",
+    modalities: ["image"],
+    stages: ["vision-encoding", "context-integration", "reasoning"],
+    capabilities: ["comparison", "cross-region-integration", "localization"],
+    sourceIds: ["perceptionbench", "eyes-wide-shut"],
+    trigger:
+      "Present several dense panels where exactly one is bilaterally symmetric and the others contain sparse balanced defects.",
+    symptom: "The correct panel is rarely selected until the decisive correspondence is marked.",
+    mechanism:
+      "The answer is a conjunction over many mirrored pairs; a compressed global impression of symmetry is insufficient. Oracle marking localizes the behavioral bottleneck to finding or integrating the decisive pair.",
+    alternatives: [
+      "The axis is misidentified",
+      "A defect is below effective resolution",
+      "The model uses texture similarity",
+    ],
+    disconfirmingTest:
+      "Hold density fixed while varying defect count, distance from the axis, and explicit pair markings.",
+    mitigations: [
+      "Pairwise correspondence attention",
+      "Multi-scale inspection",
+      "Symmetry-specific verification passes",
+    ],
+    severity: "high",
   },
   {
     id: "occluded-3d-cube-enumeration",
     title: "Count what the stack conceals",
     shortTitle: "Occluded cube-stack enumeration",
     subtitle: "Exact totals require completing hidden support cubes rather than counting visible faces.",
-    modalities: ["image"], stages: ["vision-encoding", "object-state-representation", "reasoning"], capabilities: ["counting", "depth-viewpoint", "spatial-relations"], sourceIds: ["dynasolidgeo", "perceptionbench"],
-    trigger: "Render several isometric stacks with identical-looking surface density but different hidden support totals.", symptom: "Models choose visible-cube-like totals; annotated per-column totals restore the answer.",
-    mechanism: "The latent variable is a 3D occupancy structure. Surface features do not uniquely encode the hidden support count without object completion and exact summation.", alternatives: ["Perspective conventions are misread", "Occluded support assumptions differ", "Arithmetic fails after correct reconstruction"], disconfirmingTest: "Compare exploded views, transparent stacks, height maps, and annotated column totals for the same occupancy grid.", mitigations: ["Explicit 3D scene graphs", "Depth-aware object completion", "Programmatic counting tools"], severity: "foundational",
+    modalities: ["image"],
+    stages: ["vision-encoding", "object-state-representation", "reasoning"],
+    capabilities: ["counting", "depth-viewpoint", "spatial-relations"],
+    sourceIds: ["dynasolidgeo", "perceptionbench"],
+    trigger:
+      "Render several isometric stacks with identical-looking surface density but different hidden support totals.",
+    symptom: "Models choose visible-cube-like totals; annotated per-column totals restore the answer.",
+    mechanism:
+      "The latent variable is a 3D occupancy structure. Surface features do not uniquely encode the hidden support count without object completion and exact summation.",
+    alternatives: [
+      "Perspective conventions are misread",
+      "Occluded support assumptions differ",
+      "Arithmetic fails after correct reconstruction",
+    ],
+    disconfirmingTest:
+      "Compare exploded views, transparent stacks, height maps, and annotated column totals for the same occupancy grid.",
+    mitigations: ["Explicit 3D scene graphs", "Depth-aware object completion", "Programmatic counting tools"],
+    severity: "foundational",
   },
   {
     id: "dense-visual-boolean-composition",
     title: "XOR every cell, then choose",
     shortTitle: "Dense visual XOR composition",
     subtitle: "Models fail a distributed Boolean operation even when every input bit is plainly rendered.",
-    modalities: ["image"], stages: ["vision-encoding", "context-integration", "reasoning"], capabilities: ["comparison", "cross-region-integration"], sourceIds: ["revelio", "perceptionbench"],
-    trigger: "Show two dense binary matrices and four near-miss outputs; ask which output is their cellwise XOR.", symptom: "Selections are near floor until mismatching cells in candidates are explicitly boxed.",
-    mechanism: "Correctness requires preserving coordinate bindings across three panels and satisfying the rule at every cell. Local successes cannot compensate for one missed mismatch.", alternatives: ["The XOR rule is misunderstood", "Panel coordinates drift", "One-bit defects are visually missed"], disconfirmingTest: "Factor matrix size, defect count, alignment guides, and a text-provided XOR intermediate independently.", mitigations: ["Coordinate-addressable visual memory", "Iterative verification", "External matrix operations"], severity: "foundational",
+    modalities: ["image"],
+    stages: ["vision-encoding", "context-integration", "reasoning"],
+    capabilities: ["comparison", "cross-region-integration"],
+    sourceIds: ["revelio", "perceptionbench"],
+    trigger:
+      "Show two dense binary matrices and four near-miss outputs; ask which output is their cellwise XOR.",
+    symptom: "Selections are near floor until mismatching cells in candidates are explicitly boxed.",
+    mechanism:
+      "Correctness requires preserving coordinate bindings across three panels and satisfying the rule at every cell. Local successes cannot compensate for one missed mismatch.",
+    alternatives: [
+      "The XOR rule is misunderstood",
+      "Panel coordinates drift",
+      "One-bit defects are visually missed",
+    ],
+    disconfirmingTest:
+      "Factor matrix size, defect count, alignment guides, and a text-provided XOR intermediate independently.",
+    mitigations: [
+      "Coordinate-addressable visual memory",
+      "Iterative verification",
+      "External matrix operations",
+    ],
+    severity: "foundational",
   },
   {
     id: "dense-cross-image-change-localization",
     title: "Find the one glyph that changed",
     shortTitle: "Dense change localization",
     subtitle: "A single answer-bearing change disappears when two dense images must be aligned globally.",
-    modalities: ["multi-image"], stages: ["vision-encoding", "context-integration", "reasoning"], capabilities: ["comparison", "localization", "cross-region-integration"], sourceIds: ["perceptionbench", "eyes-wide-shut"],
-    trigger: "Present two large glyph grids with exactly one changed glyph and adjacent answer regions.", symptom: "The model selects the wrong region despite strong recovery when the changed glyph is circled.",
-    mechanism: "The task requires exhaustive correspondence over many locations; lossy image summaries can preserve overall sameness while dropping the sole discriminative coordinate.", alternatives: ["The glyph distinction is not encoded", "Grid alignment is lost", "Search terminates early"], disconfirmingTest: "Vary only grid size, glyph contrast, registration guides, and an oracle circle around the changed coordinate.", mitigations: ["Difference-map computation", "Tiled high-resolution inspection", "Learned visual search"], severity: "foundational",
+    modalities: ["multi-image"],
+    stages: ["vision-encoding", "context-integration", "reasoning"],
+    capabilities: ["comparison", "localization", "cross-region-integration"],
+    sourceIds: ["perceptionbench", "eyes-wide-shut"],
+    trigger: "Present two large glyph grids with exactly one changed glyph and adjacent answer regions.",
+    symptom: "The model selects the wrong region despite strong recovery when the changed glyph is circled.",
+    mechanism:
+      "The task requires exhaustive correspondence over many locations; lossy image summaries can preserve overall sameness while dropping the sole discriminative coordinate.",
+    alternatives: [
+      "The glyph distinction is not encoded",
+      "Grid alignment is lost",
+      "Search terminates early",
+    ],
+    disconfirmingTest:
+      "Vary only grid size, glyph contrast, registration guides, and an oracle circle around the changed coordinate.",
+    mitigations: ["Difference-map computation", "Tiled high-resolution inspection", "Learned visual search"],
+    severity: "foundational",
   },
   {
     id: "visual-maze-reachability",
     title: "A path exists only globally",
     shortTitle: "Maze reachability",
     subtitle: "Local corridor visibility does not yield reliable end-to-end connectivity judgments.",
-    modalities: ["image"], stages: ["vision-encoding", "context-integration", "reasoning"], capabilities: ["spatial-relations", "cross-region-integration"], sourceIds: ["traversalbench", "dynasolidgeo"],
-    trigger: "Ask which endpoint is connected to a start in a dense maze with balanced near-miss branches.", symptom: "Models choose plausible nearby exits; highlighting the complete solution path strongly recovers accuracy.",
-    mechanism: "Reachability is a transitive global property. Patch-local corridor features must be composed without losing branch state across many steps.", alternatives: ["A wall gap is missed", "Endpoint labels are confused", "The traversal policy revisits branches poorly"], disconfirmingTest: "Hold pixels fixed while adding breadcrumb states, a highlighted path, or an explicit adjacency graph.", mitigations: ["Neural algorithmic traversal", "External search", "Hierarchical spatial memory"], severity: "foundational",
+    modalities: ["image"],
+    stages: ["vision-encoding", "context-integration", "reasoning"],
+    capabilities: ["spatial-relations", "cross-region-integration"],
+    sourceIds: ["traversalbench", "dynasolidgeo"],
+    trigger: "Ask which endpoint is connected to a start in a dense maze with balanced near-miss branches.",
+    symptom:
+      "Models choose plausible nearby exits; highlighting the complete solution path strongly recovers accuracy.",
+    mechanism:
+      "Reachability is a transitive global property. Patch-local corridor features must be composed without losing branch state across many steps.",
+    alternatives: [
+      "A wall gap is missed",
+      "Endpoint labels are confused",
+      "The traversal policy revisits branches poorly",
+    ],
+    disconfirmingTest:
+      "Hold pixels fixed while adding breadcrumb states, a highlighted path, or an explicit adjacency graph.",
+    mitigations: ["Neural algorithmic traversal", "External search", "Hierarchical spatial memory"],
+    severity: "foundational",
   },
   {
     id: "visual-graph-degree-topology",
     title: "Read the graph, not the drawing",
     shortTitle: "Visual graph-degree topology",
-    subtitle: "Crossings, bends, and clutter obscure the degree structure needed for a global graph property.",
-    modalities: ["image"], stages: ["vision-encoding", "object-state-representation", "reasoning"], capabilities: ["counting", "spatial-relations", "cross-region-integration"], sourceIds: ["traversalbench", "dynasolidgeo"],
-    trigger: "Render several visually similar graphs and ask which satisfies a degree-parity property.", symptom: "Models select by drawing appearance rather than exact node degree; ringing the oracle graph recovers the choice.",
-    mechanism: "The required invariant lives in discrete connectivity, not image texture. It demands reliable edge endpoint binding and an exact degree audit at every node.", alternatives: ["Edge crossings are treated as vertices", "Endpoints are missed", "The graph theorem is misapplied"], disconfirmingTest: "Compare identical abstract graphs under different layouts, explicit node-edge lists, and marked edge endpoints.", mitigations: ["Graph extraction", "Topology-aware encoders", "Symbolic degree verification"], severity: "foundational",
+    subtitle:
+      "Crossings, bends, and clutter obscure the degree structure needed for a global graph property.",
+    modalities: ["image"],
+    stages: ["vision-encoding", "object-state-representation", "reasoning"],
+    capabilities: ["counting", "spatial-relations", "cross-region-integration"],
+    sourceIds: ["traversalbench", "dynasolidgeo"],
+    trigger: "Render several visually similar graphs and ask which satisfies a degree-parity property.",
+    symptom:
+      "Models select by drawing appearance rather than exact node degree; ringing the oracle graph recovers the choice.",
+    mechanism:
+      "The required invariant lives in discrete connectivity, not image texture. It demands reliable edge endpoint binding and an exact degree audit at every node.",
+    alternatives: [
+      "Edge crossings are treated as vertices",
+      "Endpoints are missed",
+      "The graph theorem is misapplied",
+    ],
+    disconfirmingTest:
+      "Compare identical abstract graphs under different layouts, explicit node-edge lists, and marked edge endpoints.",
+    mitigations: ["Graph extraction", "Topology-aware encoders", "Symbolic degree verification"],
+    severity: "foundational",
   },
   {
     id: "global-visual-parity-verification",
     title: "Every row and every column",
     shortTitle: "2D parity verification",
     subtitle: "One-bit corruptions defeat a global parity audit across dense binary matrices.",
-    modalities: ["image"], stages: ["vision-encoding", "context-integration", "reasoning"], capabilities: ["counting", "cross-region-integration", "comparison"], sourceIds: ["revelio", "perceptionbench"],
-    trigger: "Ask which dense binary matrix has even parity in every row and column while each distractor differs by one bit.", symptom: "All tested routes remain below half while row-and-column audit annotations recover perfectly.",
-    mechanism: "The decision is a high-order conjunction over distributed exact counts. Approximate numerosity or a few sampled rows cannot certify the whole matrix.", alternatives: ["A single bit is missed", "Counts are approximate", "Row and column results are not jointly retained"], disconfirmingTest: "Sweep matrix size and expose row parities, column parities, or both as orthogonal controls.", mitigations: ["Structured visual scratchpads", "Exact external counting", "Constraint-checking decoders"], severity: "foundational",
+    modalities: ["image"],
+    stages: ["vision-encoding", "context-integration", "reasoning"],
+    capabilities: ["counting", "cross-region-integration", "comparison"],
+    sourceIds: ["revelio", "perceptionbench"],
+    trigger:
+      "Ask which dense binary matrix has even parity in every row and column while each distractor differs by one bit.",
+    symptom: "All tested routes remain below half while row-and-column audit annotations recover perfectly.",
+    mechanism:
+      "The decision is a high-order conjunction over distributed exact counts. Approximate numerosity or a few sampled rows cannot certify the whole matrix.",
+    alternatives: [
+      "A single bit is missed",
+      "Counts are approximate",
+      "Row and column results are not jointly retained",
+    ],
+    disconfirmingTest:
+      "Sweep matrix size and expose row parities, column parities, or both as orthogonal controls.",
+    mitigations: ["Structured visual scratchpads", "Exact external counting", "Constraint-checking decoders"],
+    severity: "foundational",
   },
   {
     id: "identity-conditioned-spatial-transition-counting",
     title: "Count only one object’s entries",
     shortTitle: "Identity-conditioned zone entries",
-    subtitle: "A moving target must retain identity while its entries into one region are counted among distractors.",
-    modalities: ["video"], stages: ["object-state-representation", "temporal-memory", "reasoning"], capabilities: ["identity-persistence", "tracking", "counting", "state-transitions"], sourceIds: ["video-mme-logical", "temporalbench"],
-    trigger: "Move several similar objects through a marked zone and ask for entries made only by one initially labeled target.", symptom: "Counts collapse until an oracle running counter is overlaid.",
-    mechanism: "The computation composes identity tracking, boundary-transition detection, and an exact accumulator. Losing any binding produces a plausible but wrong count.", alternatives: ["The zone boundary is ambiguous", "Re-entry conventions differ", "The target identity is swapped"], disconfirmingTest: "Independently expose target identity, entry events, and the cumulative count while preserving trajectories.", mitigations: ["Object-centric trackers", "Event counters", "Persistent identity labels"], severity: "foundational",
+    subtitle:
+      "A moving target must retain identity while its entries into one region are counted among distractors.",
+    modalities: ["video"],
+    stages: ["object-state-representation", "temporal-memory", "reasoning"],
+    capabilities: ["identity-persistence", "tracking", "counting", "state-transitions"],
+    sourceIds: ["video-mme-logical", "temporalbench"],
+    trigger:
+      "Move several similar objects through a marked zone and ask for entries made only by one initially labeled target.",
+    symptom: "Counts collapse until an oracle running counter is overlaid.",
+    mechanism:
+      "The computation composes identity tracking, boundary-transition detection, and an exact accumulator. Losing any binding produces a plausible but wrong count.",
+    alternatives: [
+      "The zone boundary is ambiguous",
+      "Re-entry conventions differ",
+      "The target identity is swapped",
+    ],
+    disconfirmingTest:
+      "Independently expose target identity, entry events, and the cumulative count while preserving trajectories.",
+    mitigations: ["Object-centric trackers", "Event counters", "Persistent identity labels"],
+    severity: "foundational",
   },
   {
     id: "identity-pair-interaction-counting",
-    title: "Which collisions belong to this pair?",
-    shortTitle: "Identity-pair collision counting",
-    subtitle: "Models see collisions yet fail to count only interactions between a specified pair.",
-    modalities: ["video"], stages: ["object-state-representation", "temporal-memory", "reasoning"], capabilities: ["identity-persistence", "tracking", "counting", "attribute-binding"], sourceIds: ["video-mme-logical", "temporalbench"],
-    trigger: "Animate many collisions but score only contacts between two initially designated identities.", symptom: "Responses reflect total collision activity rather than the exact designated-pair count.",
-    mechanism: "The model must preserve two identities and bind each local contact event to that unordered pair before incrementing an exact counter.", alternatives: ["Near misses are treated as contacts", "Identity swaps occur", "All collisions are pooled"], disconfirmingTest: "Keep motion fixed while highlighting the pair, then highlighting only pair contacts, then exposing the counter.", mitigations: ["Pairwise relation tracks", "Contact-event extraction", "Explicit counters"], severity: "foundational",
+    title: "Which collisions satisfy both rules?",
+    shortTitle: "Gated identity-pair collision counting",
+    subtitle: "Models see labeled collisions yet fail to count only one pair under one frame-color gate.",
+    modalities: ["video"],
+    stages: ["object-state-representation", "temporal-memory", "reasoning"],
+    capabilities: ["identity-persistence", "tracking", "counting", "attribute-binding"],
+    sourceIds: ["video-mme-logical", "temporalbench"],
+    trigger:
+      "Animate 32 labeled collisions and count only events where both a case-variable identity pair and a case-variable frame color match.",
+    symptom:
+      "All five evaluated routes remain below half while an exact matched-event counter recovers to at least 12/16 and usually 16/16.",
+    mechanism:
+      "Each local contact must be bound to an unordered identity pair, gated by frame color, and conditionally accumulated. Six wrong-color target-pair collisions make either predicate alone insufficient.",
+    alternatives: [
+      "Frame color is ignored",
+      "The pair predicate is ignored",
+      "Qualified events are not accumulated exactly",
+    ],
+    disconfirmingTest:
+      "Keep the sequence fixed while exposing pair matches, gate matches, their conjunction, or only the running conjunctive counter.",
+    mitigations: ["Pairwise relation tracks", "Predicate-gated event streams", "Explicit counters"],
+    severity: "foundational",
   },
   {
     id: "sequential-identity-permutation",
     title: "Follow the label through every swap",
     shortTitle: "Sequential identity permutation",
     subtitle: "Repeated pairwise swaps erase the mapping between starting identities and final positions.",
-    modalities: ["video"], stages: ["object-state-representation", "temporal-memory"], capabilities: ["identity-persistence", "tracking", "attribute-binding"], sourceIds: ["mvbench", "video-mme-logical"],
-    trigger: "Label objects briefly, hide the labels, and execute a balanced sequence of pairwise swaps.", symptom: "Final identity assignments approach chance while persistent labels recover strongly.",
-    mechanism: "Each swap composes a permutation update; a single lost update irreversibly corrupts the final identity map. Frame-wise recognition alone is insufficient.", alternatives: ["One swap is visually missed", "Objects become locally indistinguishable", "The final position is mislocalized"], disconfirmingTest: "Sweep swap count and reveal labels during only selected swaps to locate where the permutation state is lost.", mitigations: ["Persistent object files", "Permutation-state scratchpads", "Trajectory tracking"], severity: "foundational",
+    modalities: ["video"],
+    stages: ["object-state-representation", "temporal-memory"],
+    capabilities: ["identity-persistence", "tracking", "attribute-binding"],
+    sourceIds: ["mvbench", "video-mme-logical"],
+    trigger: "Label objects briefly, hide the labels, and execute a balanced sequence of pairwise swaps.",
+    symptom: "Final identity assignments approach chance while persistent labels recover strongly.",
+    mechanism:
+      "Each swap composes a permutation update; a single lost update irreversibly corrupts the final identity map. Frame-wise recognition alone is insufficient.",
+    alternatives: [
+      "One swap is visually missed",
+      "Objects become locally indistinguishable",
+      "The final position is mislocalized",
+    ],
+    disconfirmingTest:
+      "Sweep swap count and reveal labels during only selected swaps to locate where the permutation state is lost.",
+    mitigations: ["Persistent object files", "Permutation-state scratchpads", "Trajectory tracking"],
+    severity: "foundational",
   },
   {
     id: "identity-conditioned-temporal-event-counting",
     title: "Count flashes from the right source",
     shortTitle: "Selective flash counting",
     subtitle: "Brief repeated events must be assigned to one identity before they can be counted exactly.",
-    modalities: ["video"], stages: ["frame-sampling", "object-state-representation", "temporal-memory"], capabilities: ["brief-event-detection", "attribute-binding", "counting"], sourceIds: ["synflash", "frame-sampling-matters", "tempcompass"],
-    trigger: "Interleave short flashes from several objects and ask for the count emitted by one designated identity.", symptom: "All routes remain below half while a persistent-answer intervention recovers perfectly.",
-    mechanism: "The computation requires event acquisition, source binding, and exact accumulation. The persistent-answer control proves response access but does not by itself separate sampling from binding loss.", alternatives: ["Flashes are not sampled", "Sources are misbound", "Repeated events are compressed"], disconfirmingTest: "Cross event duration with source isolation, persistent event markers, and a final explicit count.", mitigations: ["Adaptive frame sampling", "Event-source tracks", "Persistent counters"], severity: "foundational",
+    modalities: ["video"],
+    stages: ["frame-sampling", "object-state-representation", "temporal-memory"],
+    capabilities: ["brief-event-detection", "attribute-binding", "counting"],
+    sourceIds: ["synflash", "frame-sampling-matters", "tempcompass"],
+    trigger:
+      "Interleave short flashes from several objects and ask for the count emitted by one designated identity.",
+    symptom: "All routes remain below half while a persistent-answer intervention recovers perfectly.",
+    mechanism:
+      "The computation requires event acquisition, source binding, and exact accumulation. The persistent-answer control proves response access but does not by itself separate sampling from binding loss.",
+    alternatives: ["Flashes are not sampled", "Sources are misbound", "Repeated events are compressed"],
+    disconfirmingTest:
+      "Cross event duration with source isolation, persistent event markers, and a final explicit count.",
+    mitigations: ["Adaptive frame sampling", "Event-source tracks", "Persistent counters"],
+    severity: "foundational",
   },
   {
     id: "temporal-pattern-counting",
     title: "Count a transition, not a symbol",
     shortTitle: "Target-transition counting",
     subtitle: "Exact counts of one adjacent event pair fail in a rapid symbolic stream.",
-    modalities: ["video"], stages: ["temporal-memory", "reasoning"], capabilities: ["temporal-order", "state-transitions", "counting"], sourceIds: ["tempcompass", "video-mme-logical"],
-    trigger: "Present a long symbol stream and ask how often one ordered adjacent pair occurs.", symptom: "Models recognize symbols but miss the exact pair count; an on-screen running transition counter yields 16/16 on every route.",
-    mechanism: "Unlike symbol frequency, the state update depends on both the previous and current event. The task probes a minimal order-sensitive finite-state computation.", alternatives: ["Individual symbols are missed", "Direction of the pair is reversed", "Counts are approximate"], disconfirmingTest: "Compare symbol counts, unordered co-occurrence counts, ordered pair counts, and a running-counter intervention on the same streams.", mitigations: ["Order-aware temporal tokens", "Finite-state scratchpads", "External event parsing"], severity: "foundational",
+    modalities: ["video"],
+    stages: ["temporal-memory", "reasoning"],
+    capabilities: ["temporal-order", "state-transitions", "counting"],
+    sourceIds: ["tempcompass", "video-mme-logical"],
+    trigger: "Present a long symbol stream and ask how often one ordered adjacent pair occurs.",
+    symptom:
+      "Models recognize symbols but miss the exact pair count; an on-screen running transition counter yields 16/16 on every route.",
+    mechanism:
+      "Unlike symbol frequency, the state update depends on both the previous and current event. The task probes a minimal order-sensitive finite-state computation.",
+    alternatives: [
+      "Individual symbols are missed",
+      "Direction of the pair is reversed",
+      "Counts are approximate",
+    ],
+    disconfirmingTest:
+      "Compare symbol counts, unordered co-occurrence counts, ordered pair counts, and a running-counter intervention on the same streams.",
+    mitigations: ["Order-aware temporal tokens", "Finite-state scratchpads", "External event parsing"],
+    severity: "foundational",
   },
   {
     id: "temporal-set-cardinality",
-    title: "How many places were ever active?",
-    shortTitle: "Temporal set cardinality",
-    subtitle: "A dense stream of repeated locations defeats exact counting of unique positions.",
-    modalities: ["video"], stages: ["temporal-memory", "object-state-representation", "reasoning"], capabilities: ["localization", "counting", "state-transitions"], sourceIds: ["video-mme-logical", "temporalbench"],
-    trigger: "Flash dozens of positions with repeats and ask for the number of distinct grid cells ever activated.", symptom: "All routes remain at or below 5/16 while a persistent visited-set display restores 16/16.",
-    mechanism: "The latent state is a set, not a scalar event count. Each event requires location binding, membership testing, and an idempotent update that ignores repeats.", alternatives: ["Locations are misread", "Repeated events are double counted", "Early locations are forgotten"], disconfirmingTest: "Vary repeat rate independently of event count and expose either visited locations or only the running cardinality.", mitigations: ["External spatial memory", "Persistent visited maps", "Set-valued recurrent state"], severity: "foundational",
+    title: "Which places occurred exactly twice?",
+    shortTitle: "Gated frequency-set cardinality",
+    subtitle: "A color-gated stream defeats exact per-location frequency tracking and set construction.",
+    modalities: ["video"],
+    stages: ["temporal-memory", "object-state-representation", "reasoning"],
+    capabilities: ["localization", "counting", "state-transitions"],
+    sourceIds: ["video-mme-logical", "temporalbench"],
+    trigger:
+      "Flash 40 labeled locations under alternating frame colors and ask how many cells occurred exactly twice under one designated color.",
+    symptom:
+      "All five routes remain below half while a visible target-color histogram restores every control to 16/16.",
+    mechanism:
+      "The sufficient state is a color-conditioned histogram followed by an exact-frequency predicate and a set cardinality. Each event requires gate selection, location binding, a per-cell update, and a final multiplicity query.",
+    alternatives: [
+      "The frame-color gate is ignored",
+      "Locations are misbound",
+      "Counts are compressed to a coarse frequency summary",
+    ],
+    disconfirmingTest:
+      "Cross the color gate with event rate and separately expose accepted events, per-cell counts, or only the final qualifying set.",
+    mitigations: [
+      "Event-conditioned spatial memory",
+      "Persistent per-cell histograms",
+      "Question-conditioned event filtering",
+    ],
+    severity: "foundational",
   },
   {
     id: "dynamic-route-turn-integration",
     title: "Count turns along an invisible trail",
     shortTitle: "Dynamic route-turn integration",
     subtitle: "Successive movements must be integrated and compared to detect each direction change.",
-    modalities: ["video"], stages: ["temporal-memory", "object-state-representation", "reasoning"], capabilities: ["tracking", "temporal-order", "counting"], sourceIds: ["video-mme-logical", "tempcompass"],
-    trigger: "Move a marker through a long axis-aligned route that leaves no trail and ask for its exact turn count.", symptom: "Seed-disjoint replication yields 2/16, 2/16, and 3/16; an explicit running turn counter yields 16/16 throughout.",
-    mechanism: "Every segment must update a previous-direction state and increment only on changes. Sparse or lossy trajectory summaries preserve motion without the exact transition sequence.", alternatives: ["Short segments are missed", "Pauses are counted as turns", "Direction changes are not retained"], disconfirmingTest: "Expose the trail, the current direction, or only the running turn count as separate controls.", mitigations: ["Trajectory extraction", "Directional state machines", "Question-conditioned temporal sampling"], severity: "foundational",
+    modalities: ["video"],
+    stages: ["temporal-memory", "object-state-representation", "reasoning"],
+    capabilities: ["tracking", "temporal-order", "counting"],
+    sourceIds: ["video-mme-logical", "tempcompass"],
+    trigger:
+      "Move a marker through a long axis-aligned route that leaves no trail and ask for its exact turn count.",
+    symptom:
+      "Seed-disjoint replication yields 2/16, 2/16, and 3/16; an explicit running turn counter yields 16/16 throughout.",
+    mechanism:
+      "Every segment must update a previous-direction state and increment only on changes. Sparse or lossy trajectory summaries preserve motion without the exact transition sequence.",
+    alternatives: [
+      "Short segments are missed",
+      "Pauses are counted as turns",
+      "Direction changes are not retained",
+    ],
+    disconfirmingTest:
+      "Expose the trail, the current direction, or only the running turn count as separate controls.",
+    mitigations: [
+      "Trajectory extraction",
+      "Directional state machines",
+      "Question-conditioned temporal sampling",
+    ],
+    severity: "foundational",
   },
   {
     id: "dynamic-conservation-ledger",
     title: "Keep four quantities conserved",
     shortTitle: "Dynamic conservation ledger",
-    subtitle: "A sequence of visible transfers defeats exact latent quantity updates across several containers.",
-    modalities: ["video"], stages: ["temporal-memory", "reasoning"], capabilities: ["state-transitions", "counting", "causality"], sourceIds: ["video-mme-logical", "ec-bench"],
-    trigger: "Initialize several container counts, perform many directed transfers, and ask which container ends largest.", symptom: "Native performance remains below half while a visible ledger makes the same final comparison easy.",
-    mechanism: "The task is a conserved multi-register program: each transfer decrements one bound state and increments another. One missed or misbound update contaminates every later state.", alternatives: ["Source and destination are swapped", "Transfer magnitude is missed", "Final comparison rather than updating fails"], disconfirmingTest: "Expose arrows, transfer magnitudes, individual register values, and the complete running ledger in successive interventions.", mitigations: ["Explicit state tables", "Tool-assisted arithmetic", "Structured recurrent memory"], severity: "foundational",
+    subtitle:
+      "A sequence of visible transfers defeats exact latent quantity updates across several containers.",
+    modalities: ["video"],
+    stages: ["temporal-memory", "reasoning"],
+    capabilities: ["state-transitions", "counting", "causality"],
+    sourceIds: ["video-mme-logical", "ec-bench"],
+    trigger:
+      "Initialize several container counts, perform many directed transfers, and ask which container ends largest.",
+    symptom:
+      "Native performance remains below half while a visible ledger makes the same final comparison easy.",
+    mechanism:
+      "The task is a conserved multi-register program: each transfer decrements one bound state and increments another. One missed or misbound update contaminates every later state.",
+    alternatives: [
+      "Source and destination are swapped",
+      "Transfer magnitude is missed",
+      "Final comparison rather than updating fails",
+    ],
+    disconfirmingTest:
+      "Expose arrows, transfer magnitudes, individual register values, and the complete running ledger in successive interventions.",
+    mitigations: ["Explicit state tables", "Tool-assisted arithmetic", "Structured recurrent memory"],
+    severity: "foundational",
   },
   {
     id: "dynamic-trajectory-topology",
     title: "Remember where the path crossed itself",
     shortTitle: "Trajectory self-intersections",
     subtitle: "A moving marker’s route must be integrated geometrically to count true self-crossings.",
-    modalities: ["video"], stages: ["temporal-memory", "object-state-representation", "reasoning"], capabilities: ["tracking", "spatial-relations", "counting"], sourceIds: ["video-mme-logical", "traversalbench"],
-    trigger: "Animate an orthogonal route without a trail and ask for the number of proper crossings with earlier segments.", symptom: "Native self-crossing counts remain below half; even a visible-trail control remains difficult for some routes.",
-    mechanism: "The answer requires building a geometric path and testing new segments against earlier nonadjacent segments. Because the visible-trail control does not fully recover, current evidence does not localize the failure specifically to temporal memory.", alternatives: ["The route is not retained", "Turns are mistaken for crossings", "Static crossing enumeration itself fails"], disconfirmingTest: "Compare no trail, persistent trail, marked crossing points, and a final static path using identical geometry.", mitigations: ["Persistent trajectory maps", "Segment-intersection tools", "Geometry-aware memory"], severity: "foundational",
+    modalities: ["video"],
+    stages: ["temporal-memory", "object-state-representation", "reasoning"],
+    capabilities: ["tracking", "spatial-relations", "counting"],
+    sourceIds: ["video-mme-logical", "traversalbench"],
+    trigger:
+      "Animate an orthogonal route without a trail and ask for the number of proper crossings with earlier segments.",
+    symptom:
+      "Native self-crossing counts remain below half; even a visible-trail control remains difficult for some routes.",
+    mechanism:
+      "The answer requires building a geometric path and testing new segments against earlier nonadjacent segments. Because the visible-trail control does not fully recover, current evidence does not localize the failure specifically to temporal memory.",
+    alternatives: [
+      "The route is not retained",
+      "Turns are mistaken for crossings",
+      "Static crossing enumeration itself fails",
+    ],
+    disconfirmingTest:
+      "Compare no trail, persistent trail, marked crossing points, and a final static path using identical geometry.",
+    mitigations: ["Persistent trajectory maps", "Segment-intersection tools", "Geometry-aware memory"],
+    severity: "foundational",
   },
   {
     id: "signed-temporal-state-accumulation",
     title: "Add every plus, subtract every minus",
     shortTitle: "Signed temporal accumulation",
     subtitle: "A long stream of +1 and −1 events defeats an exact one-register state update.",
-    modalities: ["video"], stages: ["temporal-memory", "reasoning"], capabilities: ["state-transitions", "counting"], sourceIds: ["video-mme-logical", "tempcompass"],
-    trigger: "Start a hidden counter at zero, show a balanced sequence of signed unit events, and ask for the exact final value.", symptom: "The frozen 61-event holdout yields 5/16, 3/16, and 4/16 while an explicit running-total control recovers strongly.",
-    mechanism: "The sufficient state is only one signed integer, but every acquired event must update it in the correct direction. The task removes world knowledge and object identity while retaining exact online state maintenance.", alternatives: ["Some events are not acquired", "Minus signs are misread", "The sequence is summarized by rough color frequency"], disconfirmingTest: "Sweep event rate and length while separately exposing sampled events, positive and negative subtotals, or the exact running total.", mitigations: ["Explicit recurrent counters", "Event-level temporal tokens", "External tally tools"], severity: "foundational",
+    modalities: ["video"],
+    stages: ["temporal-memory", "reasoning"],
+    capabilities: ["state-transitions", "counting"],
+    sourceIds: ["video-mme-logical", "tempcompass"],
+    trigger:
+      "Start a hidden counter at zero, show a balanced sequence of signed unit events, and ask for the exact final value.",
+    symptom:
+      "The frozen 61-event holdout yields 5/16, 3/16, and 4/16 while an explicit running-total control recovers strongly.",
+    mechanism:
+      "The sufficient state is only one signed integer, but every acquired event must update it in the correct direction. The task removes world knowledge and object identity while retaining exact online state maintenance.",
+    alternatives: [
+      "Some events are not acquired",
+      "Minus signs are misread",
+      "The sequence is summarized by rough color frequency",
+    ],
+    disconfirmingTest:
+      "Sweep event rate and length while separately exposing sampled events, positive and negative subtotals, or the exact running total.",
+    mitigations: ["Explicit recurrent counters", "Event-level temporal tokens", "External tally tools"],
+    severity: "foundational",
   },
 ];
 
@@ -846,8 +1156,10 @@ for (const definition of reproducedExtensions) {
     ...definition,
     index: entries.length + 1,
     evidence: "reproduced-here",
-    violatedExpectation: "A deterministic, fully visible construction with a construction-derived answer should support reliable exact inference at an appropriate difficulty setting.",
-    affectedModels: "Evaluated in the atlas on pinned 2026-09-01 OpenRouter routes for Gemini 3.7 Flash, Qwen 3.8 Max, and Kimi K3; see the frozen run evidence for exact denominators and controls.",
+    violatedExpectation:
+      "A deterministic, fully visible construction with a construction-derived answer should support reliable exact inference at an appropriate difficulty setting.",
+    affectedModels:
+      "Evaluated in the atlas on pinned 2026-09-01 OpenRouter routes for Gemini 3.7 Flash, Qwen 3.8 Max, and Kimi K3; see the frozen run evidence for exact denominators and controls.",
     severity: definition.severity ?? "high",
     reproducibility: "high",
     accent: (["vermillion", "cobalt", "citron", "violet", "teal"] as const)[entries.length % 5],

@@ -5,6 +5,7 @@ export interface ConditionSummary {
   condition: string;
   requests: number;
   substantiveAnswers: number;
+  adjudicatedAnswers?: number;
   correct: number;
   solveRate: number | null;
   lower95: number | null;
@@ -41,6 +42,13 @@ export interface AdmittedFamilyEvidence {
     difficulty: number;
   };
   models: Array<{
+    modelId: string;
+    modelVersion: string;
+    upstreamProvider?: string;
+    native: ConditionSummary;
+    control: ConditionSummary;
+  }>;
+  expandedModels?: Array<{
     modelId: string;
     modelVersion: string;
     upstreamProvider?: string;

@@ -1,0 +1,21 @@
+{
+  "id": "gated-grid-frequency-screen-kimi-completion-v1-2026-09-01",
+  "resolvedAt": "2026-09-01",
+  "gateway": "OpenRouter",
+  "evaluationPlanId": "gated-grid-frequency-discovery-v1",
+  "evaluationPlanSha256": "572d6f5a49c8b1cce985d67a9cbdda78759d07e052e653d15714c6e9ea27c010",
+  "stage": "five-route-color-gated-frequency-screen-completion",
+  "casesPerModel": 2,
+  "trials": 1,
+  "temperature": 0,
+  "maxOutputTokens": 8192,
+  "reasoning": { "effort": "none", "exclude": true },
+  "scorer": "terminal-option-v3",
+  "allowProviderFallbacks": false,
+  "dataCollection": "deny",
+  "campaignCostCeilingUsd": 8,
+  "amendmentReason": "Seeds 5420001 and 5420003 exhausted the frozen 4096-token allowance during frame-by-frame analysis without declaring an answer. Original attempts remain immutable and receive no hardness credit; this prospective completion changes only the output allowance.",
+  "models": [
+    { "modelId": "moonshotai/kimi-k3", "modelRevision": "moonshotai/kimi-k3-20260715", "upstreamProvider": "Moonshot AI" }
+  ]
+}

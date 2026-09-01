@@ -1,0 +1,25 @@
+{
+  "id": "gated-grid-set-screen-mimo-v1-declared-answer-2026-09-01",
+  "resolvedAt": "2026-09-01",
+  "gateway": "OpenRouter",
+  "evaluationPlanId": "gated-grid-set-discovery-v1",
+  "evaluationPlanSha256": "19607e8a98940bf19ae4d50b9098a49532b007e9f062f4c4d300fe93769c3231",
+  "stage": "five-route-color-gated-set-screen",
+  "casesPerModel": 8,
+  "trials": 1,
+  "temperature": 0,
+  "maxOutputTokens": 4096,
+  "reasoning": { "effort": "none", "exclude": true },
+  "scorer": "declared-answer-v4",
+  "systemMessage": "This is a forced-choice visual diagnostic. Inspect only the supplied media. Return exactly one answer copied verbatim from the allowed-answer list, even if uncertain. Do not explain and do not return any answer outside that list.",
+  "allowProviderFallbacks": false,
+  "dataCollection": "deny",
+  "campaignCostCeilingUsd": 8,
+  "models": [
+    {
+      "modelId": "xiaomi/mimo-v2.5",
+      "modelRevision": "xiaomi/mimo-v2.5-20260422",
+      "upstreamProvider": "Xiaomi"
+    }
+  ]
+}

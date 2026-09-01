@@ -35,7 +35,8 @@ export default function VerifiedPage() {
         </h1>
         <p>
           Twenty synthetic families met the same preregistered admission rule across three strong frontier
-          routes. These are observed behavioral results—not proof of a particular internal mechanism.
+          routes, and every current family also passed a frozen two-route expansion. These are observed
+          behavioral results—not proof of a particular internal mechanism.
         </p>
       </header>
 
@@ -121,6 +122,7 @@ export default function VerifiedPage() {
         </p>
         <Link href="/methods">Read the evidence standard</Link>
         <Link href="/human-study">Open the human study instrument</Link>
+        <Link href="/replication">Inspect untouched route replication</Link>
         <a href="https://github.com/chrisisaverted/multimodal-failure-atlas/blob/main/docs/difficulty-contract.md">
           Read the difficulty-setting contract
         </a>

@@ -123,7 +123,12 @@ for (const family of evidence.families) {
         const adjudicated = verified.length
           ? undefined
           : attempts
-              .filter((run) => run.status === "pending-review" && !run.emptyResponse)
+              .filter(
+                (run) =>
+                  run.status === "pending-review" &&
+                  !run.emptyResponse &&
+                  run.finishReason === "stop",
+              )
               .map((run) => ({
                 run,
                 decision: adjudicateExplicitDeclaration(run.rawResponse, candidate.answerOptions),

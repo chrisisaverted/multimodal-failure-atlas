@@ -8,3 +8,5 @@ date,category,vendor,description,cash_outlay_usd,credit_consumed_usd,status
 2026-08-31,model-evaluation,OpenRouter,Frozen 80-response paired confirmatory holdout,0.00,1.608498,consumed-from-prepaid
 2026-08-31,model-evaluation,OpenRouter,Conservative reconciliation for retries and aborted requests,0.00,0.010167,consumed-from-prepaid
 2026-09-01,model-evaluation,OpenRouter,Additional recorded requests through the 20-family strict campaign; reconciled to 94.235047 cumulative JSONL spend,0.00,91.225384,consumed-from-prepaid
+2026-09-01,model-evaluation,OpenRouter,Frozen Seed and MiMo route-expansion campaign including noncanonical attempts,0.00,1.561965,consumed-from-prepaid
+2026-09-01,model-evaluation,OpenRouter,Repair screens and frozen gated pair and exact-frequency holdouts; reconciled to 111.534871 cumulative unique-request JSONL spend,0.00,15.737859,consumed-from-prepaid
