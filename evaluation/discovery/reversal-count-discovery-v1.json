@@ -1,0 +1,200 @@
+{
+  "id": "reversal-count-discovery-v1",
+  "generatorVersion": "identity-conditioned-motion-reversal-count-v1",
+  "status": "discovery-only",
+  "hypothesis": "Video models fail exact identity-conditioned counting of kinematic derivative sign changes.",
+  "candidates": [
+    {
+      "id": "rv-a5d73a04b6374c96",
+      "cellId": "cell-ringed-target-direction-reversals",
+      "split": "discovery",
+      "seed": 4800000,
+      "failureModeId": "identity-conditioned-kinematic-event-counting",
+      "question": "How many times does the RED-RINGED target disk reverse horizontal direction? Count only left↔right reversals and ignore every other disk.",
+      "answerOptions": [
+        "7",
+        "8",
+        "10",
+        "9"
+      ],
+      "expectedAnswer": "7",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "reversalCount": 7,
+        "activeStartMs": 900,
+        "activeEndMs": 12400,
+        "videoDurationMs": 13800,
+        "fps": 30,
+        "visualVariant": 0
+      }
+    },
+    {
+      "id": "rv-285b29cd3212976b",
+      "cellId": "cell-ringed-target-direction-reversals",
+      "split": "discovery",
+      "seed": 4800001,
+      "failureModeId": "identity-conditioned-kinematic-event-counting",
+      "question": "How many times does the RED-RINGED target disk reverse horizontal direction? Count only left↔right reversals and ignore every other disk.",
+      "answerOptions": [
+        "8",
+        "10",
+        "7",
+        "9"
+      ],
+      "expectedAnswer": "8",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "reversalCount": 8,
+        "activeStartMs": 900,
+        "activeEndMs": 12400,
+        "videoDurationMs": 13800,
+        "fps": 30,
+        "visualVariant": 1
+      }
+    },
+    {
+      "id": "rv-638c1872419bef12",
+      "cellId": "cell-ringed-target-direction-reversals",
+      "split": "discovery",
+      "seed": 4800002,
+      "failureModeId": "identity-conditioned-kinematic-event-counting",
+      "question": "How many times does the RED-RINGED target disk reverse horizontal direction? Count only left↔right reversals and ignore every other disk.",
+      "answerOptions": [
+        "10",
+        "8",
+        "7",
+        "9"
+      ],
+      "expectedAnswer": "9",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "reversalCount": 9,
+        "activeStartMs": 900,
+        "activeEndMs": 12400,
+        "videoDurationMs": 13800,
+        "fps": 30,
+        "visualVariant": 2
+      }
+    },
+    {
+      "id": "rv-b636da7d5ca5e5ce",
+      "cellId": "cell-ringed-target-direction-reversals",
+      "split": "discovery",
+      "seed": 4800003,
+      "failureModeId": "identity-conditioned-kinematic-event-counting",
+      "question": "How many times does the RED-RINGED target disk reverse horizontal direction? Count only left↔right reversals and ignore every other disk.",
+      "answerOptions": [
+        "10",
+        "8",
+        "7",
+        "9"
+      ],
+      "expectedAnswer": "10",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "reversalCount": 10,
+        "activeStartMs": 900,
+        "activeEndMs": 12400,
+        "videoDurationMs": 13800,
+        "fps": 30,
+        "visualVariant": 3
+      }
+    },
+    {
+      "id": "rv-22343bc661f2d0fc",
+      "cellId": "cell-ringed-target-direction-reversals",
+      "split": "discovery",
+      "seed": 4800004,
+      "failureModeId": "identity-conditioned-kinematic-event-counting",
+      "question": "How many times does the RED-RINGED target disk reverse horizontal direction? Count only left↔right reversals and ignore every other disk.",
+      "answerOptions": [
+        "10",
+        "7",
+        "8",
+        "9"
+      ],
+      "expectedAnswer": "7",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "reversalCount": 7,
+        "activeStartMs": 900,
+        "activeEndMs": 12400,
+        "videoDurationMs": 13800,
+        "fps": 30,
+        "visualVariant": 4
+      }
+    },
+    {
+      "id": "rv-1065f90711ea5af8",
+      "cellId": "cell-ringed-target-direction-reversals",
+      "split": "discovery",
+      "seed": 4800005,
+      "failureModeId": "identity-conditioned-kinematic-event-counting",
+      "question": "How many times does the RED-RINGED target disk reverse horizontal direction? Count only left↔right reversals and ignore every other disk.",
+      "answerOptions": [
+        "7",
+        "10",
+        "8",
+        "9"
+      ],
+      "expectedAnswer": "8",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "reversalCount": 8,
+        "activeStartMs": 900,
+        "activeEndMs": 12400,
+        "videoDurationMs": 13800,
+        "fps": 30,
+        "visualVariant": 5
+      }
+    },
+    {
+      "id": "rv-d5df25a9854e0a8c",
+      "cellId": "cell-ringed-target-direction-reversals",
+      "split": "discovery",
+      "seed": 4800006,
+      "failureModeId": "identity-conditioned-kinematic-event-counting",
+      "question": "How many times does the RED-RINGED target disk reverse horizontal direction? Count only left↔right reversals and ignore every other disk.",
+      "answerOptions": [
+        "7",
+        "10",
+        "8",
+        "9"
+      ],
+      "expectedAnswer": "9",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "reversalCount": 9,
+        "activeStartMs": 900,
+        "activeEndMs": 12400,
+        "videoDurationMs": 13800,
+        "fps": 30,
+        "visualVariant": 6
+      }
+    },
+    {
+      "id": "rv-c0a05b080076d5c6",
+      "cellId": "cell-ringed-target-direction-reversals",
+      "split": "discovery",
+      "seed": 4800007,
+      "failureModeId": "identity-conditioned-kinematic-event-counting",
+      "question": "How many times does the RED-RINGED target disk reverse horizontal direction? Count only left↔right reversals and ignore every other disk.",
+      "answerOptions": [
+        "10",
+        "7",
+        "8",
+        "9"
+      ],
+      "expectedAnswer": "10",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "reversalCount": 10,
+        "activeStartMs": 900,
+        "activeEndMs": 12400,
+        "videoDurationMs": 13800,
+        "fps": 30,
+        "visualVariant": 7
+      }
+    }
+  ]
+}

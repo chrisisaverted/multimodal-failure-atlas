@@ -102,8 +102,13 @@ import { applyArrowPath, createArrowPathGrid } from "./arrow-path";
 import { createParityGrid, parityMatrices, parityViolations } from "./parity-matrix";
 import { createZoneEntryGrid } from "./zone-entry-count";
 import { countTargetPair, createPairCollisionGrid } from "./pair-collision-count";
+import { createReversalGrid } from "./reversal-count";
 
 describe("adaptive multimodal discovery", () => {
+  it("binds target trajectories to balanced direction-reversal counts", () => {
+    for (const candidate of createReversalGrid()) expect(candidate.expectedAnswer).toBe(String(candidate.parameters.reversalCount));
+  });
+
   it("creates one exact 20x20 XOR and three one-bit near misses", () => {
     for (const candidate of createXorHardGrid()) {
       const { truth, panels } = xorMatrices(candidate);
