@@ -151,6 +151,109 @@ export function renderDiagnosticSvg(instance: DiagnosticInstance, playhead = 0) 
         .join("")}`;
       break;
     }
+    case "parity-verification": {
+      const gridSize = number(latent.gridSize);
+      const bits = latent.panelBits as number[];
+      const cellSize = 35 / gridSize;
+      body = `<rect width="140" height="100" fill="${palette.cream}"/>${["A", "B", "C", "D"]
+        .map((label, panel) => {
+          const x = panel % 2 === 0 ? 19 : 86,
+            y = panel < 2 ? 5 : 54;
+          const cells = bits
+            .slice(panel * gridSize * gridSize, (panel + 1) * gridSize * gridSize)
+            .map((value, index) =>
+              value
+                ? `<circle cx="${x + ((index % gridSize) + 0.5) * cellSize}" cy="${y + (Math.floor(index / gridSize) + 0.5) * cellSize}" r="${cellSize * 0.31}" fill="#252821"/>`
+                : "",
+            )
+            .join("");
+          return `<text x="${x - 8}" y="${y + 20}" font-size="7" font-weight="700">${label}</text><rect x="${x - 1}" y="${y - 1}" width="37" height="37" fill="#fffdf7" stroke="#4b4e48" stroke-width=".6"/>${cells}`;
+        })
+        .join("")}`;
+      break;
+    }
+    case "change-localization": {
+      const gridSize = number(latent.gridSize),
+        side = 52,
+        cell = side / gridSize;
+      const glyph = (value: number, x: number, y: number) =>
+        value === 0
+          ? `<circle cx="${x}" cy="${y}" r="${Math.max(0.45, cell * 0.27)}" fill="#2356c7"/>`
+          : value === 1
+            ? `<rect x="${x - Math.max(0.45, cell * 0.27)}" y="${y - Math.max(0.45, cell * 0.27)}" width="${Math.max(0.9, cell * 0.54)}" height="${Math.max(0.9, cell * 0.54)}" fill="#f04b32"/>`
+            : value === 2
+              ? `<path d="M${x - cell * 0.27} ${y}H${x + cell * 0.27}" stroke="#168e88" stroke-width=".55"/>`
+              : `<path d="M${x} ${y - cell * 0.27}V${y + cell * 0.27}" stroke="#8062d6" stroke-width=".55"/>`;
+      body = `<rect width="140" height="100" fill="${palette.cream}"/>${[
+        latent.glyphA as number[],
+        latent.glyphB as number[],
+      ]
+        .map((values, grid) => {
+          const x = grid === 0 ? 8 : 80,
+            y = 24;
+          const marks = values
+            .map((value, index) =>
+              glyph(
+                value,
+                x + ((index % gridSize) + 0.5) * cell,
+                y + (Math.floor(index / gridSize) + 0.5) * cell,
+              ),
+            )
+            .join("");
+          const labels = grid
+            ? ["A", "B", "C", "D"]
+                .map(
+                  (label, region) =>
+                    `<text x="${x + 4 + (region % 2) * (side - 8)}" y="${y + 7 + Math.floor(region / 2) * (side - 9)}" font-size="5" font-weight="800">${label}</text>`,
+                )
+                .join("")
+            : "";
+          return `<text x="${x + side / 2}" y="13" text-anchor="middle" font-size="6" font-weight="700">${grid ? "RIGHT" : "LEFT"}</text><rect x="${x}" y="${y}" width="${side}" height="${side}" fill="#fffdf7" stroke="#252821" stroke-width=".6"/>${marks}<line x1="${x + side / 2}" x2="${x + side / 2}" y1="${y}" y2="${y + side}" stroke="#252821" opacity=".3"/><line x1="${x}" x2="${x + side}" y1="${y + side / 2}" y2="${y + side / 2}" stroke="#252821" opacity=".3"/>${labels}`;
+        })
+        .join("")}`;
+      break;
+    }
+    case "maze-reachability": {
+      const gridSize = number(latent.gridSize),
+        openRight = latent.openRight as number[],
+        openDown = latent.openDown as number[],
+        endpoints = latent.endpointCells as number[],
+        start = number(latent.startCell),
+        originX = 29,
+        originY = 6,
+        side = 82,
+        cell = side / gridSize;
+      const walls = Array.from({ length: gridSize * gridSize }, (_, index) => {
+        const row = Math.floor(index / gridSize),
+          column = index % gridSize;
+        return `${column + 1 < gridSize && !openRight[index] ? `<line x1="${originX + (column + 1) * cell}" x2="${originX + (column + 1) * cell}" y1="${originY + row * cell}" y2="${originY + (row + 1) * cell}" stroke="#252821" stroke-width=".75"/>` : ""}${row + 1 < gridSize && !openDown[index] ? `<line x1="${originX + column * cell}" x2="${originX + (column + 1) * cell}" y1="${originY + (row + 1) * cell}" y2="${originY + (row + 1) * cell}" stroke="#252821" stroke-width=".75"/>` : ""}`;
+      }).join("");
+      const marker = (cellIndex: number, label: string, fill: string) =>
+        `<text x="${originX + ((cellIndex % gridSize) + 0.5) * cell}" y="${originY + (Math.floor(cellIndex / gridSize) + 0.68) * cell}" text-anchor="middle" font-size="${Math.max(3.2, cell * 0.45)}" font-weight="800" fill="${fill}">${label}</text>`;
+      body = `<rect width="140" height="100" fill="${palette.cream}"/><rect x="${originX}" y="${originY}" width="${side}" height="${side}" fill="#fffdf7" stroke="#252821" stroke-width="1.2"/>${walls}${marker(start, "S", "#171915")}${endpoints.map((endpoint, index) => marker(endpoint, ["A", "B", "C", "D"][index]!, "#f04b32")).join("")}`;
+      break;
+    }
+    case "rotation-correspondence": {
+      const side = number(latent.side),
+        pointCount = number(latent.pointCount),
+        source = latent.sourcePoints as number[],
+        candidates = latent.candidatePoints as number[];
+      const constellation = (points: number[], x: number, y: number, box: number) =>
+        `<rect x="${x}" y="${y}" width="${box}" height="${box}" fill="#fffdf7" stroke="#4b4e48" stroke-width=".6"/>${points.map((point, index) => `<circle cx="${x + (((point % side) + 0.5) * box) / side}" cy="${y + ((Math.floor(point / side) + 0.5) * box) / side}" r="${Math.max(1, (box / side) * 0.23)}" fill="${index % 3 === 0 ? "#f04b32" : "#2356c7"}"/>`).join("")}`;
+      body = `<rect width="140" height="100" fill="${palette.cream}"/><text x="28" y="8" text-anchor="middle" font-size="5" font-weight="700">SOURCE</text>${constellation(source, 8, 12, 40)}<path d="M57 31h13l-4-4m4 4-4 4" fill="none" stroke="#f04b32" stroke-width="1.3"/>${[
+        "A",
+        "B",
+        "C",
+        "D",
+      ]
+        .map((label, panel) => {
+          const x = 76 + (panel % 2) * 31,
+            y = 8 + Math.floor(panel / 2) * 45;
+          return `<text x="${x - 5}" y="${y + 16}" font-size="6" font-weight="800">${label}</text>${constellation(candidates.slice(panel * pointCount, (panel + 1) * pointCount), x, y, 26)}`;
+        })
+        .join("")}`;
+      break;
+    }
     case "brief-event": {
       const duration = number(latent.videoDurationMs);
       const time = playhead * duration;
@@ -247,6 +350,85 @@ export function renderDiagnosticSvg(instance: DiagnosticInstance, playhead = 0) 
         ? `<circle cx="${42 + approach * 20}" cy="50" r="12" fill="#2356c7"/><circle cx="${98 - approach * 20}" cy="50" r="12" fill="#f04b32"/><text x="${42 + approach * 20}" y="54" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">${left[eventIndex]}</text><text x="${98 - approach * 20}" y="54" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">${right[eventIndex]}</text>`
         : "";
       body = `<rect width="140" height="100" fill="#e8e5da"/><text x="70" y="11" text-anchor="middle" font-size="5" font-weight="700">COUNT ${(latent.targetPair as string[]).join("+")} · ONLY ${String(latent.targetGate)}</text><rect x="10" y="17" width="120" height="67" rx="5" fill="#fffdf7" stroke="${gateColor}" stroke-width="4"/>${event}`;
+      break;
+    }
+    case "route-turn-integration": {
+      const time = playhead * number(latent.videoDurationMs);
+      const path = latent.path as number[];
+      const stepCount = number(latent.stepCount);
+      const localTime = time - 800;
+      const step = Math.floor(localTime / 400);
+      const bounded = Math.max(0, Math.min(stepCount - 1, step));
+      const progress = Math.max(0, Math.min(1, (localTime - step * 400) / 320));
+      const x = 22 + (path[bounded * 2]! + (path[(bounded + 1) * 2]! - path[bounded * 2]!) * progress) * 6.4;
+      const y =
+        17 +
+        (path[bounded * 2 + 1]! + (path[(bounded + 1) * 2 + 1]! - path[bounded * 2 + 1]!) * progress) * 4.55;
+      const grid = Array.from(
+        { length: 16 },
+        (_, index) =>
+          `<line x1="${22 + index * 6.4}" x2="${22 + index * 6.4}" y1="15" y2="87" stroke="#171915" opacity=".16"/><line x1="20" x2="120" y1="${17 + index * 4.55}" y2="${17 + index * 4.55}" stroke="#171915" opacity=".16"/>`,
+      ).join("");
+      body = `<rect width="140" height="100" fill="#e8e5da"/><text x="70" y="8" text-anchor="middle" font-size="5" font-weight="700">COUNT DIRECTION CHANGES</text><rect x="18" y="13" width="104" height="76" fill="#fffdf7" stroke="#252821" stroke-width="1.2"/>${grid}<circle cx="${x}" cy="${y}" r="3.8" fill="#f4d934" stroke="#252821" stroke-width="1"/>`;
+      break;
+    }
+    case "target-transition-count": {
+      const time = playhead * number(latent.videoDurationMs);
+      const sequence = latent.sequence as number[];
+      const localTime = time - 800;
+      const eventIndex = Math.floor(localTime / 360);
+      const active = eventIndex >= 0 && eventIndex < sequence.length && localTime % 360 < 280;
+      const value = active ? sequence[eventIndex] : -1;
+      const symbol =
+        value === 0
+          ? `<circle cx="70" cy="57" r="15" fill="#2466cc"/>`
+          : value === 1
+            ? `<polygon points="70,40 53,72 87,72" fill="#f4d934"/>`
+            : value === 2
+              ? `<rect x="55" y="42" width="30" height="30" rx="2" fill="#df3c30"/>`
+              : value === 3
+                ? `<path d="M54 57H86M70 41V73" stroke="#9146c7" stroke-width="8"/>`
+                : "";
+      body = `<rect width="140" height="100" fill="#e8e5da"/><text x="70" y="8" text-anchor="middle" font-size="5" font-weight="700">COUNT BLUE CIRCLE → RED SQUARE</text>${symbol}<text x="70" y="91" text-anchor="middle" font-size="4.5" font-weight="700">${eventIndex < 0 ? "GET READY" : eventIndex < sequence.length ? `SYMBOL ${eventIndex + 1} / ${sequence.length}` : "SEQUENCE COMPLETE"}</text>`;
+      break;
+    }
+    case "sequential-swap-tracking": {
+      const time = playhead * number(latent.videoDurationMs);
+      const left = latent.swapLeft as number[];
+      const right = latent.swapRight as number[];
+      const localTime = time - 900;
+      const activeIndex = Math.floor(localTime / 950);
+      const phase = Math.max(0, Math.min(1, (localTime - activeIndex * 950) / 800));
+      const eased = phase * phase * (3 - 2 * phase);
+      const positions = [0, 1, 2, 3];
+      for (let index = 0; index < Math.min(left.length, Math.max(0, activeIndex)); index += 1)
+        [positions[left[index]!], positions[right[index]!]] = [
+          positions[right[index]!]!,
+          positions[left[index]!]!,
+        ];
+      const activeLeft = activeIndex >= 0 && activeIndex < left.length ? left[activeIndex]! : -1;
+      const activeRight = activeIndex >= 0 && activeIndex < right.length ? right[activeIndex]! : -1;
+      const slotX = [26, 55, 85, 114];
+      const tokens = positions
+        .map((identity, slot) => {
+          const other = slot === activeLeft ? activeRight : slot === activeRight ? activeLeft : -1;
+          const x = other < 0 ? slotX[slot]! : slotX[slot]! + (slotX[other]! - slotX[slot]!) * eased;
+          const y = other < 0 ? 57 : 57 - Math.sin(Math.PI * eased) * (slot === activeLeft ? 13 : -9);
+          const fill = identity === number(latent.initialTarget) && time < 900 ? "#e0a600" : "#59605d";
+          return `<circle cx="${x}" cy="${y}" r="7" fill="${fill}" stroke="#252821" stroke-width="1"/>`;
+        })
+        .join("");
+      body = `<rect width="140" height="100" fill="#e8e5da"/><text x="70" y="9" text-anchor="middle" font-size="5" font-weight="700">TRACK THE ORIGINAL GOLD TOKEN</text><line x1="13" x2="127" y1="71" y2="71" stroke="#252821" stroke-width="1.2"/>${tokens}${slotX.map((x, index) => `<text x="${x}" y="84" text-anchor="middle" font-size="7" font-weight="700">${index + 1}</text>`).join("")}`;
+      break;
+    }
+    case "signed-state-accumulation": {
+      const time = playhead * number(latent.videoDurationMs);
+      const events = latent.events as number[];
+      const localTime = time - 800;
+      const eventIndex = Math.floor(localTime / 260);
+      const active = eventIndex >= 0 && eventIndex < events.length && localTime % 260 < 210;
+      const value = active ? events[eventIndex] : 0;
+      body = `<rect width="140" height="100" fill="#e8e5da"/><text x="70" y="10" text-anchor="middle" font-size="5" font-weight="700">START AT ZERO · UPDATE EVERY EVENT</text><text x="70" y="63" text-anchor="middle" font-size="32" font-weight="800" fill="${value > 0 ? "#1d9b5f" : "#df3c30"}">${value > 0 ? "+1" : value < 0 ? "−1" : ""}</text><text x="70" y="90" text-anchor="middle" font-size="4.5" font-weight="700">${eventIndex < 0 ? "START AT 0" : eventIndex < events.length ? `EVENT ${eventIndex + 1} / ${events.length}` : "SEQUENCE COMPLETE"}</text>`;
       break;
     }
   }

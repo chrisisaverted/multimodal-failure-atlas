@@ -61,7 +61,15 @@ export type GeneratorKey =
   | "dense-symmetry"
   | "dense-xor"
   | "gated-frequency"
-  | "gated-pair-collision";
+  | "gated-pair-collision"
+  | "route-turn-integration"
+  | "target-transition-count"
+  | "sequential-swap-tracking"
+  | "signed-state-accumulation"
+  | "parity-verification"
+  | "change-localization"
+  | "maze-reachability"
+  | "rotation-correspondence";
 
 export interface Citation {
   id: string;

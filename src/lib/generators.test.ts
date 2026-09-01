@@ -16,7 +16,83 @@ const keys: GeneratorKey[] = [
   "dense-xor",
   "gated-frequency",
   "gated-pair-collision",
+  "route-turn-integration",
+  "target-transition-count",
+  "sequential-swap-tracking",
+  "signed-state-accumulation",
+  "parity-verification",
+  "change-localization",
+  "maze-reachability",
+  "rotation-correspondence",
 ];
+
+function countDirectionChanges(path: number[]) {
+  let turns = 0;
+  for (let index = 4; index < path.length; index += 2) {
+    const previous = [path[index - 2]! - path[index - 4]!, path[index - 1]! - path[index - 3]!];
+    const current = [path[index]! - path[index - 2]!, path[index + 1]! - path[index - 1]!];
+    if (previous[0] !== current[0] || previous[1] !== current[1]) turns += 1;
+  }
+  return turns;
+}
+
+function countBlueToRedTransitions(sequence: number[]) {
+  return sequence.slice(1).filter((value, index) => sequence[index] === 0 && value === 2).length;
+}
+
+function applySwapLedger(instance: ReturnType<typeof generateInstance>) {
+  let position = Number(instance.latent.initialTarget);
+  const left = instance.latent.swapLeft as number[];
+  const right = instance.latent.swapRight as number[];
+  for (let index = 0; index < left.length; index += 1) {
+    if (position === left[index]) position = right[index]!;
+    else if (position === right[index]) position = left[index]!;
+  }
+  return position;
+}
+
+function parityValid(bits: number[], gridSize: number) {
+  for (let row = 0; row < gridSize; row += 1)
+    if (bits.slice(row * gridSize, (row + 1) * gridSize).reduce((sum, bit) => sum + bit, 0) % 2) return false;
+  for (let column = 0; column < gridSize; column += 1) {
+    let total = 0;
+    for (let row = 0; row < gridSize; row += 1) total += bits[row * gridSize + column]!;
+    if (total % 2) return false;
+  }
+  return true;
+}
+
+function reachableCells(instance: ReturnType<typeof generateInstance>) {
+  const gridSize = Number(instance.latent.gridSize);
+  const openRight = instance.latent.openRight as number[];
+  const openDown = instance.latent.openDown as number[];
+  const seen = new Set([Number(instance.latent.startCell)]);
+  const queue = [...seen];
+  while (queue.length) {
+    const cell = queue.shift()!;
+    const row = Math.floor(cell / gridSize);
+    const column = cell % gridSize;
+    const neighbours = [
+      column + 1 < gridSize && openRight[cell] ? cell + 1 : -1,
+      column > 0 && openRight[cell - 1] ? cell - 1 : -1,
+      row + 1 < gridSize && openDown[cell] ? cell + gridSize : -1,
+      row > 0 && openDown[cell - gridSize] ? cell - gridSize : -1,
+    ];
+    for (const neighbour of neighbours)
+      if (neighbour >= 0 && !seen.has(neighbour)) {
+        seen.add(neighbour);
+        queue.push(neighbour);
+      }
+  }
+  return seen;
+}
+
+function rotatePoint(index: number, side: number, quarterTurns: number) {
+  let x = index % side;
+  let y = Math.floor(index / side);
+  for (let turn = 0; turn < quarterTurns; turn += 1) [x, y] = [side - 1 - y, x];
+  return y * side + x;
+}
 
 describe("diagnostic generators", () => {
   for (const key of keys) {
@@ -188,6 +264,103 @@ describe("diagnostic generators", () => {
       const trapKey = key === "gated-frequency" ? "wrongGateEchoCount" : "wrongGateTargetCount";
       expect(Number(easy.latent[trapKey])).toBe(0);
       expect(Number(hard.latent[trapKey])).toBeGreaterThan(0);
+    }
+  });
+
+  it("constructs exact live temporal programs at every difficulty boundary", () => {
+    for (let seed = 0; seed < 24; seed += 1) {
+      for (const difficulty of [0, 50, 100]) {
+        const route = generateInstance("route-turn-integration", { seed, difficulty, variant: 0 });
+        expect(countDirectionChanges(route.latent.path as number[])).toBe(Number(route.answer));
+
+        const transition = generateInstance("target-transition-count", { seed, difficulty, variant: 0 });
+        expect(countBlueToRedTransitions(transition.latent.sequence as number[])).toBe(
+          Number(transition.answer),
+        );
+
+        const swaps = generateInstance("sequential-swap-tracking", { seed, difficulty, variant: 0 });
+        expect(applySwapLedger(swaps)).toBe(Number(swaps.answer) - 1);
+
+        const accumulator = generateInstance("signed-state-accumulation", { seed, difficulty, variant: 0 });
+        expect((accumulator.latent.events as number[]).reduce((sum, value) => sum + value, 0)).toBe(
+          Number(accumulator.answer),
+        );
+      }
+    }
+  });
+
+  it("increases the temporal state-update burden with difficulty", () => {
+    for (const key of [
+      "route-turn-integration",
+      "target-transition-count",
+      "sequential-swap-tracking",
+      "signed-state-accumulation",
+    ] as const) {
+      const easy = generateInstance(key, { seed: 8, difficulty: 0, variant: 0 });
+      const hard = generateInstance(key, { seed: 8, difficulty: 100, variant: 0 });
+      const measure =
+        key === "route-turn-integration"
+          ? "stepCount"
+          : key === "sequential-swap-tracking"
+            ? "swapCount"
+            : "eventCount";
+      expect(Number(hard.latent[measure])).toBeGreaterThan(Number(easy.latent[measure]));
+    }
+  });
+
+  it("constructs exact live image programs at every difficulty boundary", () => {
+    for (let seed = 0; seed < 24; seed += 1) {
+      for (const difficulty of [0, 50, 100]) {
+        const parity = generateInstance("parity-verification", { seed, difficulty, variant: 0 });
+        const gridSize = Number(parity.latent.gridSize);
+        const panels = parity.latent.panelBits as number[];
+        const validPanels = [0, 1, 2, 3].filter((panel) =>
+          parityValid(panels.slice(panel * gridSize * gridSize, (panel + 1) * gridSize * gridSize), gridSize),
+        );
+        expect(validPanels).toEqual([["A", "B", "C", "D"].indexOf(parity.answer)]);
+
+        const change = generateInstance("change-localization", { seed, difficulty, variant: 0 });
+        const before = change.latent.glyphA as number[];
+        const after = change.latent.glyphB as number[];
+        const changed = before.flatMap((value, index) => (value === after[index] ? [] : [index]));
+        expect(changed).toEqual([Number(change.latent.changedIndex)]);
+
+        const maze = generateInstance("maze-reachability", { seed, difficulty, variant: 0 });
+        const reachable = reachableCells(maze);
+        const reachableAnswers = (maze.latent.endpointCells as number[]).flatMap((cell, index) =>
+          reachable.has(cell) ? [["A", "B", "C", "D"][index]!] : [],
+        );
+        expect(reachableAnswers).toEqual([maze.answer]);
+
+        const rotation = generateInstance("rotation-correspondence", { seed, difficulty, variant: 0 });
+        const side = Number(rotation.latent.side);
+        const pointCount = Number(rotation.latent.pointCount);
+        const source = rotation.latent.sourcePoints as number[];
+        const turns = Number(rotation.latent.quarterTurns);
+        const expected = source.map((point) => rotatePoint(point, side, turns)).sort((a, b) => a - b);
+        const candidates = rotation.latent.candidatePoints as number[];
+        const exact = [0, 1, 2, 3].filter((panel) =>
+          candidates
+            .slice(panel * pointCount, (panel + 1) * pointCount)
+            .sort((a, b) => a - b)
+            .every((point, index) => point === expected[index]),
+        );
+        expect(exact).toEqual([["A", "B", "C", "D"].indexOf(rotation.answer)]);
+      }
+    }
+  });
+
+  it("increases live image search burden with difficulty", () => {
+    const measurements = [
+      ["parity-verification", "gridSize"],
+      ["change-localization", "gridSize"],
+      ["maze-reachability", "gridSize"],
+      ["rotation-correspondence", "pointCount"],
+    ] as const;
+    for (const [key, measure] of measurements) {
+      const easy = generateInstance(key, { seed: 8, difficulty: 0, variant: 0 });
+      const hard = generateInstance(key, { seed: 8, difficulty: 100, variant: 0 });
+      expect(Number(hard.latent[measure])).toBeGreaterThan(Number(easy.latent[measure]));
     }
   });
 

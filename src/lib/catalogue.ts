@@ -721,6 +721,7 @@ const reproducedExtensions: ReproducedExtension[] = [
     disconfirmingTest:
       "Sweep rotation continuously and compare against an equivalent task with canonicalized orientation and aligned correspondences.",
     mitigations: ["Equivariant encoders", "Canonical orientation", "Explicit point-set matching"],
+    generator: "rotation-correspondence",
     severity: "foundational",
   },
   {
@@ -826,6 +827,7 @@ const reproducedExtensions: ReproducedExtension[] = [
     disconfirmingTest:
       "Vary only grid size, glyph contrast, registration guides, and an oracle circle around the changed coordinate.",
     mitigations: ["Difference-map computation", "Tiled high-resolution inspection", "Learned visual search"],
+    generator: "change-localization",
     severity: "foundational",
   },
   {
@@ -850,6 +852,7 @@ const reproducedExtensions: ReproducedExtension[] = [
     disconfirmingTest:
       "Hold pixels fixed while adding breadcrumb states, a highlighted path, or an explicit adjacency graph.",
     mitigations: ["Neural algorithmic traversal", "External search", "Hierarchical spatial memory"],
+    generator: "maze-reachability",
     severity: "foundational",
   },
   {
@@ -899,6 +902,7 @@ const reproducedExtensions: ReproducedExtension[] = [
     disconfirmingTest:
       "Sweep matrix size and expose row parities, column parities, or both as orthogonal controls.",
     mitigations: ["Structured visual scratchpads", "Exact external counting", "Constraint-checking decoders"],
+    generator: "parity-verification",
     severity: "foundational",
   },
   {
@@ -973,6 +977,7 @@ const reproducedExtensions: ReproducedExtension[] = [
     disconfirmingTest:
       "Sweep swap count and reveal labels during only selected swaps to locate where the permutation state is lost.",
     mitigations: ["Persistent object files", "Permutation-state scratchpads", "Trajectory tracking"],
+    generator: "sequential-swap-tracking",
     severity: "foundational",
   },
   {
@@ -1017,6 +1022,7 @@ const reproducedExtensions: ReproducedExtension[] = [
     disconfirmingTest:
       "Compare symbol counts, unordered co-occurrence counts, ordered pair counts, and a running-counter intervention on the same streams.",
     mitigations: ["Order-aware temporal tokens", "Finite-state scratchpads", "External event parsing"],
+    generator: "target-transition-count",
     severity: "foundational",
   },
   {
@@ -1076,6 +1082,7 @@ const reproducedExtensions: ReproducedExtension[] = [
       "Directional state machines",
       "Question-conditioned temporal sampling",
     ],
+    generator: "route-turn-integration",
     severity: "foundational",
   },
   {
@@ -1152,6 +1159,7 @@ const reproducedExtensions: ReproducedExtension[] = [
     disconfirmingTest:
       "Sweep event rate and length while separately exposing sampled events, positive and negative subtotals, or the exact running total.",
     mitigations: ["Explicit recurrent counters", "Event-level temporal tokens", "External tally tools"],
+    generator: "signed-state-accumulation",
     severity: "foundational",
   },
 ];
