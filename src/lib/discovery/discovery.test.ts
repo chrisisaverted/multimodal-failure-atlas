@@ -92,8 +92,18 @@ import { applySwaps, createSwapTrackingGrid } from "./swap-tracking";
 import { coflashPairCounts, createCoflashGrid } from "./coflash-counting";
 import { createXorGrid, xorMatrices } from "./xor-composition";
 import { applyInfection, createInfectionGrid } from "./infection-spread";
+import { createEulerGrid, graphDegrees } from "./euler-graph";
 
 describe("adaptive multimodal discovery", () => {
+  it("places one all-even graph among three exactly-two-odd distractors", () => {
+    for (const candidate of createEulerGrid()) {
+      const oddCounts = candidate.parameters.panels.map(edges => graphDegrees(edges).filter(degree => degree % 2).length);
+      expect(oddCounts[candidate.parameters.correctPanel]).toBe(0);
+      expect(oddCounts.filter(count => count === 0)).toHaveLength(1);
+      expect(oddCounts.filter(count => count === 2)).toHaveLength(3);
+    }
+  });
+
   it("binds hidden infection videos to all four final set sizes", () => {
     const candidates = createInfectionGrid();
     expect(candidates).toHaveLength(8);

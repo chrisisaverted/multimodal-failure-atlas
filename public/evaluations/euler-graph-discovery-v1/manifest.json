@@ -1,0 +1,241 @@
+{
+  "id": "euler-graph-discovery-v1",
+  "planSha256": "e7d5d03c2f39f59e9cd467aee38e63198dffa5db74edf072f75caf6be66cdb02",
+  "generatorVersion": "dense-euler-graph-v1",
+  "renderer": "euler-graph-svg-raster-v1",
+  "fps": 0,
+  "cases": [
+    {
+      "candidateId": "eg-3ef272dd99799d19",
+      "cellId": "cell-four-ten-node-euler-graphs",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four independently rendered dense graphs differ in degree parity; edge crossings are non-vertices.",
+      "failureModeId": "visual-graph-degree-topology",
+      "generator": "euler-graph",
+      "seed": 3500000,
+      "difficulty": 87,
+      "variant": 0,
+      "artifact": "public/evaluations/euler-graph-discovery-v1/eg-3ef272dd99799d19.png",
+      "mimeType": "image/png",
+      "question": "Which graph has an Eulerian CIRCUIT: one closed route that uses every edge exactly once? Line crossings without a dot are not vertices.",
+      "answerOptions": [
+        "D",
+        "B",
+        "A",
+        "C"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "20c289152f2601839d5659ee3d54644cd49f45f0a6bbed056470f5ce923ca30d",
+      "parameters": {
+        "correctPanel": 0,
+        "visualVariant": 0
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "An undirected connected graph has an Eulerian circuit exactly when every vertex has even degree. Inspect the drawn edges, treating only dots as vertices. Return one option letter."
+    },
+    {
+      "candidateId": "eg-8cb24fd05d288b2f",
+      "cellId": "cell-four-ten-node-euler-graphs",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four independently rendered dense graphs differ in degree parity; edge crossings are non-vertices.",
+      "failureModeId": "visual-graph-degree-topology",
+      "generator": "euler-graph",
+      "seed": 3500001,
+      "difficulty": 87,
+      "variant": 1,
+      "artifact": "public/evaluations/euler-graph-discovery-v1/eg-8cb24fd05d288b2f.png",
+      "mimeType": "image/png",
+      "question": "Which graph has an Eulerian CIRCUIT: one closed route that uses every edge exactly once? Line crossings without a dot are not vertices.",
+      "answerOptions": [
+        "B",
+        "D",
+        "A",
+        "C"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "5e59070b197c4cdc94431b4e30847c6fe0b3f8526772aaf3539e06fc0b6889bc",
+      "parameters": {
+        "correctPanel": 1,
+        "visualVariant": 1
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "An undirected connected graph has an Eulerian circuit exactly when every vertex has even degree. Inspect the drawn edges, treating only dots as vertices. Return one option letter."
+    },
+    {
+      "candidateId": "eg-5709b3ecb080c7fc",
+      "cellId": "cell-four-ten-node-euler-graphs",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four independently rendered dense graphs differ in degree parity; edge crossings are non-vertices.",
+      "failureModeId": "visual-graph-degree-topology",
+      "generator": "euler-graph",
+      "seed": 3500002,
+      "difficulty": 87,
+      "variant": 2,
+      "artifact": "public/evaluations/euler-graph-discovery-v1/eg-5709b3ecb080c7fc.png",
+      "mimeType": "image/png",
+      "question": "Which graph has an Eulerian CIRCUIT: one closed route that uses every edge exactly once? Line crossings without a dot are not vertices.",
+      "answerOptions": [
+        "D",
+        "B",
+        "A",
+        "C"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "7b015085c3e9f63ab272c35f4147c89ea586408388c2249ae7e9f903ffedb9e8",
+      "parameters": {
+        "correctPanel": 2,
+        "visualVariant": 2
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "An undirected connected graph has an Eulerian circuit exactly when every vertex has even degree. Inspect the drawn edges, treating only dots as vertices. Return one option letter."
+    },
+    {
+      "candidateId": "eg-e33cf3cbf0b8fefe",
+      "cellId": "cell-four-ten-node-euler-graphs",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four independently rendered dense graphs differ in degree parity; edge crossings are non-vertices.",
+      "failureModeId": "visual-graph-degree-topology",
+      "generator": "euler-graph",
+      "seed": 3500003,
+      "difficulty": 87,
+      "variant": 3,
+      "artifact": "public/evaluations/euler-graph-discovery-v1/eg-e33cf3cbf0b8fefe.png",
+      "mimeType": "image/png",
+      "question": "Which graph has an Eulerian CIRCUIT: one closed route that uses every edge exactly once? Line crossings without a dot are not vertices.",
+      "answerOptions": [
+        "A",
+        "D",
+        "B",
+        "C"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "dc650997573a4d660a7ec06262d5c6db9e4714895616c3f8315773b0b4605e52",
+      "parameters": {
+        "correctPanel": 3,
+        "visualVariant": 3
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "An undirected connected graph has an Eulerian circuit exactly when every vertex has even degree. Inspect the drawn edges, treating only dots as vertices. Return one option letter."
+    },
+    {
+      "candidateId": "eg-813089f30149111d",
+      "cellId": "cell-four-ten-node-euler-graphs",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four independently rendered dense graphs differ in degree parity; edge crossings are non-vertices.",
+      "failureModeId": "visual-graph-degree-topology",
+      "generator": "euler-graph",
+      "seed": 3500004,
+      "difficulty": 87,
+      "variant": 4,
+      "artifact": "public/evaluations/euler-graph-discovery-v1/eg-813089f30149111d.png",
+      "mimeType": "image/png",
+      "question": "Which graph has an Eulerian CIRCUIT: one closed route that uses every edge exactly once? Line crossings without a dot are not vertices.",
+      "answerOptions": [
+        "D",
+        "A",
+        "B",
+        "C"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "dc261e6a8206a849b19a732fba1d7f630701461fad5330d77529e6374023802b",
+      "parameters": {
+        "correctPanel": 0,
+        "visualVariant": 4
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "An undirected connected graph has an Eulerian circuit exactly when every vertex has even degree. Inspect the drawn edges, treating only dots as vertices. Return one option letter."
+    },
+    {
+      "candidateId": "eg-feb99cb3a413be16",
+      "cellId": "cell-four-ten-node-euler-graphs",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four independently rendered dense graphs differ in degree parity; edge crossings are non-vertices.",
+      "failureModeId": "visual-graph-degree-topology",
+      "generator": "euler-graph",
+      "seed": 3500005,
+      "difficulty": 87,
+      "variant": 5,
+      "artifact": "public/evaluations/euler-graph-discovery-v1/eg-feb99cb3a413be16.png",
+      "mimeType": "image/png",
+      "question": "Which graph has an Eulerian CIRCUIT: one closed route that uses every edge exactly once? Line crossings without a dot are not vertices.",
+      "answerOptions": [
+        "D",
+        "A",
+        "B",
+        "C"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "4c6d1ad30f3666dd9fc36e64f3f4cec95329fd4043e525a9ee6674672b513267",
+      "parameters": {
+        "correctPanel": 1,
+        "visualVariant": 5
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "An undirected connected graph has an Eulerian circuit exactly when every vertex has even degree. Inspect the drawn edges, treating only dots as vertices. Return one option letter."
+    },
+    {
+      "candidateId": "eg-bce438a006c95e8b",
+      "cellId": "cell-four-ten-node-euler-graphs",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four independently rendered dense graphs differ in degree parity; edge crossings are non-vertices.",
+      "failureModeId": "visual-graph-degree-topology",
+      "generator": "euler-graph",
+      "seed": 3500006,
+      "difficulty": 87,
+      "variant": 6,
+      "artifact": "public/evaluations/euler-graph-discovery-v1/eg-bce438a006c95e8b.png",
+      "mimeType": "image/png",
+      "question": "Which graph has an Eulerian CIRCUIT: one closed route that uses every edge exactly once? Line crossings without a dot are not vertices.",
+      "answerOptions": [
+        "A",
+        "D",
+        "B",
+        "C"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "195f5bb334be5a53084f523464bbb7a79302bd4523fff47daa578f0d32c58330",
+      "parameters": {
+        "correctPanel": 2,
+        "visualVariant": 6
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "An undirected connected graph has an Eulerian circuit exactly when every vertex has even degree. Inspect the drawn edges, treating only dots as vertices. Return one option letter."
+    },
+    {
+      "candidateId": "eg-767fc7c808248bf0",
+      "cellId": "cell-four-ten-node-euler-graphs",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four independently rendered dense graphs differ in degree parity; edge crossings are non-vertices.",
+      "failureModeId": "visual-graph-degree-topology",
+      "generator": "euler-graph",
+      "seed": 3500007,
+      "difficulty": 87,
+      "variant": 7,
+      "artifact": "public/evaluations/euler-graph-discovery-v1/eg-767fc7c808248bf0.png",
+      "mimeType": "image/png",
+      "question": "Which graph has an Eulerian CIRCUIT: one closed route that uses every edge exactly once? Line crossings without a dot are not vertices.",
+      "answerOptions": [
+        "B",
+        "A",
+        "D",
+        "C"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "ef03d8c2ab098ec126b2822fa6e5e73c7a6f28b0b6717075978b4d384e95a370",
+      "parameters": {
+        "correctPanel": 3,
+        "visualVariant": 7
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "An undirected connected graph has an Eulerian circuit exactly when every vertex has even degree. Inspect the drawn edges, treating only dots as vertices. Return one option letter."
+    }
+  ]
+}
