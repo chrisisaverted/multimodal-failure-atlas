@@ -83,6 +83,7 @@ holdouts finish.
 | 41-event signed temporal accumulator       | Qwen finished the balanced discovery screen at exactly 4/8, so the cell did not satisfy the strict below-half promotion rule.                              |
 | 28-instruction visual stack program        | Gemini solved 5/8 discovery cases, so the LIFO family did not advance to a frozen holdout.                                                                 |
 | Fixed-structure four-panel enclosure depth | The shortcut-controlled replacement was rejected when Gemini reached exactly 4/8; Kimi scored 1/8 and the remaining Qwen screen was stopped prospectively. |
+| Nine-gate visual Boolean circuit           | Gemini solved all 8/8 balanced discovery cases; Kimi scored 3/8 and Qwen was stopped after five requests once rejection was certain.                       |
 
 Discovery screens are cheap filters, not claims. A family moves above only after a precommitted,
 seed-disjoint holdout replicates across every route and non-substantive outcomes have been rerun or
