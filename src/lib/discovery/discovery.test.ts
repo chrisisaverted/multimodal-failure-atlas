@@ -87,14 +87,27 @@ import { bindingSequences, createBindingGrid } from "./temporal-binding";
 import { createMirrorRayGrid, createMirrorRayHardGrid, traceMirrorRay } from "./mirror-ray";
 import { applyTransfers, createCausalTransferGrid } from "./causal-transfer";
 import { applyConservation, createConservationGrid } from "./conservation-ledger";
-import { createSymmetryGrid, symmetryMatrix } from "./symmetry-search";
+import { createSymmetryGrid, createSymmetryHoldout, symmetryMatrix } from "./symmetry-search";
 import { applySwaps, createSwapTrackingGrid } from "./swap-tracking";
 import { coflashPairCounts, createCoflashGrid } from "./coflash-counting";
 import { createXorGrid, xorMatrices } from "./xor-composition";
 import { applyInfection, createInfectionGrid } from "./infection-spread";
 import { createEulerGrid, graphDegrees } from "./euler-graph";
+import { createOrdinalGrid, ordinalSuccessor } from "./ordinal-successor";
 
 describe("adaptive multimodal discovery", () => {
+  it("freezes sixteen balanced symmetry holdout cases on disjoint seeds", () => {
+    const holdout = createSymmetryHoldout();
+    expect(holdout).toHaveLength(16);
+    expect(new Set(holdout.map(candidate => candidate.seed)).size).toBe(16);
+    for (const answer of ["A", "B", "C", "D"]) expect(holdout.filter(candidate => candidate.expectedAnswer === answer)).toHaveLength(4);
+  });
+
+  it("balances and binds immediate successors of the third target event", () => {
+    const candidates = createOrdinalGrid(); expect(candidates).toHaveLength(8);
+    for (const candidate of candidates) expect(ordinalSuccessor(candidate.parameters.sequence)).toBe(candidate.expectedAnswer);
+  });
+
   it("places one all-even graph among three exactly-two-odd distractors", () => {
     for (const candidate of createEulerGrid()) {
       const oddCounts = candidate.parameters.panels.map(edges => graphDegrees(edges).filter(degree => degree % 2).length);

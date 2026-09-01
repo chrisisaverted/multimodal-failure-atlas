@@ -1,0 +1,349 @@
+{
+  "id": "symmetry-confirmatory-v1",
+  "generatorVersion": "symmetry-search-v1",
+  "status": "frozen-confirmatory-holdout",
+  "frozenAt": "2026-09-01",
+  "selectedFromDiscovery": "symmetry-discovery-v1",
+  "selectedCell": {
+    "gridSize": 24,
+    "defectsPerDistractor": 1
+  },
+  "candidates": [
+    {
+      "id": "sy-b19331d64a952848",
+      "cellId": "cell-24x24-single-defect",
+      "split": "confirmatory",
+      "seed": 3110000,
+      "failureModeId": "global-bilateral-symmetry-verification",
+      "question": "Which panel is PERFECTLY mirror-symmetric across its red vertical axis? The other three each contain one mismatched dot.",
+      "answerOptions": [
+        "B",
+        "D",
+        "A",
+        "C"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 0,
+        "gridSize": 24,
+        "visualVariant": 300
+      }
+    },
+    {
+      "id": "sy-18636e94eae95843",
+      "cellId": "cell-24x24-single-defect",
+      "split": "confirmatory",
+      "seed": 3110001,
+      "failureModeId": "global-bilateral-symmetry-verification",
+      "question": "Which panel is PERFECTLY mirror-symmetric across its red vertical axis? The other three each contain one mismatched dot.",
+      "answerOptions": [
+        "B",
+        "D",
+        "A",
+        "C"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 1,
+        "gridSize": 24,
+        "visualVariant": 301
+      }
+    },
+    {
+      "id": "sy-b86c67cfafc1ea72",
+      "cellId": "cell-24x24-single-defect",
+      "split": "confirmatory",
+      "seed": 3110002,
+      "failureModeId": "global-bilateral-symmetry-verification",
+      "question": "Which panel is PERFECTLY mirror-symmetric across its red vertical axis? The other three each contain one mismatched dot.",
+      "answerOptions": [
+        "D",
+        "B",
+        "A",
+        "C"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 2,
+        "gridSize": 24,
+        "visualVariant": 302
+      }
+    },
+    {
+      "id": "sy-9f56020315b704b2",
+      "cellId": "cell-24x24-single-defect",
+      "split": "confirmatory",
+      "seed": 3110003,
+      "failureModeId": "global-bilateral-symmetry-verification",
+      "question": "Which panel is PERFECTLY mirror-symmetric across its red vertical axis? The other three each contain one mismatched dot.",
+      "answerOptions": [
+        "D",
+        "A",
+        "B",
+        "C"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 3,
+        "gridSize": 24,
+        "visualVariant": 303
+      }
+    },
+    {
+      "id": "sy-7fdb3fe5cdc1b6ea",
+      "cellId": "cell-24x24-single-defect",
+      "split": "confirmatory",
+      "seed": 3110004,
+      "failureModeId": "global-bilateral-symmetry-verification",
+      "question": "Which panel is PERFECTLY mirror-symmetric across its red vertical axis? The other three each contain one mismatched dot.",
+      "answerOptions": [
+        "D",
+        "A",
+        "B",
+        "C"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 0,
+        "gridSize": 24,
+        "visualVariant": 304
+      }
+    },
+    {
+      "id": "sy-4f3b48efdfbc883f",
+      "cellId": "cell-24x24-single-defect",
+      "split": "confirmatory",
+      "seed": 3110005,
+      "failureModeId": "global-bilateral-symmetry-verification",
+      "question": "Which panel is PERFECTLY mirror-symmetric across its red vertical axis? The other three each contain one mismatched dot.",
+      "answerOptions": [
+        "A",
+        "D",
+        "B",
+        "C"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 1,
+        "gridSize": 24,
+        "visualVariant": 305
+      }
+    },
+    {
+      "id": "sy-0265b1a49e543fa8",
+      "cellId": "cell-24x24-single-defect",
+      "split": "confirmatory",
+      "seed": 3110006,
+      "failureModeId": "global-bilateral-symmetry-verification",
+      "question": "Which panel is PERFECTLY mirror-symmetric across its red vertical axis? The other three each contain one mismatched dot.",
+      "answerOptions": [
+        "A",
+        "D",
+        "B",
+        "C"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 2,
+        "gridSize": 24,
+        "visualVariant": 306
+      }
+    },
+    {
+      "id": "sy-8af5111eadf93a32",
+      "cellId": "cell-24x24-single-defect",
+      "split": "confirmatory",
+      "seed": 3110007,
+      "failureModeId": "global-bilateral-symmetry-verification",
+      "question": "Which panel is PERFECTLY mirror-symmetric across its red vertical axis? The other three each contain one mismatched dot.",
+      "answerOptions": [
+        "B",
+        "A",
+        "D",
+        "C"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 3,
+        "gridSize": 24,
+        "visualVariant": 307
+      }
+    },
+    {
+      "id": "sy-7e77367221c7e25a",
+      "cellId": "cell-24x24-single-defect",
+      "split": "confirmatory",
+      "seed": 3110008,
+      "failureModeId": "global-bilateral-symmetry-verification",
+      "question": "Which panel is PERFECTLY mirror-symmetric across its red vertical axis? The other three each contain one mismatched dot.",
+      "answerOptions": [
+        "A",
+        "B",
+        "D",
+        "C"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 0,
+        "gridSize": 24,
+        "visualVariant": 308
+      }
+    },
+    {
+      "id": "sy-ff47cb82f6e41640",
+      "cellId": "cell-24x24-single-defect",
+      "split": "confirmatory",
+      "seed": 3110009,
+      "failureModeId": "global-bilateral-symmetry-verification",
+      "question": "Which panel is PERFECTLY mirror-symmetric across its red vertical axis? The other three each contain one mismatched dot.",
+      "answerOptions": [
+        "A",
+        "B",
+        "D",
+        "C"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 1,
+        "gridSize": 24,
+        "visualVariant": 309
+      }
+    },
+    {
+      "id": "sy-961317b8491c2fa7",
+      "cellId": "cell-24x24-single-defect",
+      "split": "confirmatory",
+      "seed": 3110010,
+      "failureModeId": "global-bilateral-symmetry-verification",
+      "question": "Which panel is PERFECTLY mirror-symmetric across its red vertical axis? The other three each contain one mismatched dot.",
+      "answerOptions": [
+        "B",
+        "A",
+        "D",
+        "C"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 2,
+        "gridSize": 24,
+        "visualVariant": 310
+      }
+    },
+    {
+      "id": "sy-65571deb20032adc",
+      "cellId": "cell-24x24-single-defect",
+      "split": "confirmatory",
+      "seed": 3110011,
+      "failureModeId": "global-bilateral-symmetry-verification",
+      "question": "Which panel is PERFECTLY mirror-symmetric across its red vertical axis? The other three each contain one mismatched dot.",
+      "answerOptions": [
+        "D",
+        "B",
+        "A",
+        "C"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 3,
+        "gridSize": 24,
+        "visualVariant": 311
+      }
+    },
+    {
+      "id": "sy-0eaf031b0e59a3d9",
+      "cellId": "cell-24x24-single-defect",
+      "split": "confirmatory",
+      "seed": 3110012,
+      "failureModeId": "global-bilateral-symmetry-verification",
+      "question": "Which panel is PERFECTLY mirror-symmetric across its red vertical axis? The other three each contain one mismatched dot.",
+      "answerOptions": [
+        "D",
+        "B",
+        "A",
+        "C"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 0,
+        "gridSize": 24,
+        "visualVariant": 312
+      }
+    },
+    {
+      "id": "sy-9c769c848be9f84d",
+      "cellId": "cell-24x24-single-defect",
+      "split": "confirmatory",
+      "seed": 3110013,
+      "failureModeId": "global-bilateral-symmetry-verification",
+      "question": "Which panel is PERFECTLY mirror-symmetric across its red vertical axis? The other three each contain one mismatched dot.",
+      "answerOptions": [
+        "B",
+        "D",
+        "A",
+        "C"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 1,
+        "gridSize": 24,
+        "visualVariant": 313
+      }
+    },
+    {
+      "id": "sy-5cbb9cfe7515145f",
+      "cellId": "cell-24x24-single-defect",
+      "split": "confirmatory",
+      "seed": 3110014,
+      "failureModeId": "global-bilateral-symmetry-verification",
+      "question": "Which panel is PERFECTLY mirror-symmetric across its red vertical axis? The other three each contain one mismatched dot.",
+      "answerOptions": [
+        "D",
+        "A",
+        "B",
+        "C"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 2,
+        "gridSize": 24,
+        "visualVariant": 314
+      }
+    },
+    {
+      "id": "sy-124406f01932f51c",
+      "cellId": "cell-24x24-single-defect",
+      "split": "confirmatory",
+      "seed": 3110015,
+      "failureModeId": "global-bilateral-symmetry-verification",
+      "question": "Which panel is PERFECTLY mirror-symmetric across its red vertical axis? The other three each contain one mismatched dot.",
+      "answerOptions": [
+        "A",
+        "D",
+        "B",
+        "C"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 3,
+        "gridSize": 24,
+        "visualVariant": 315
+      }
+    }
+  ]
+}

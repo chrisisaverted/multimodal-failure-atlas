@@ -1,1 +1,67 @@
-import{mkdir,readFile,writeFile}from"node:fs/promises";import{join,resolve}from"node:path";import sharp from"sharp";import{z}from"zod";import{renderSymmetrySvg,symmetryCandidateSchema,symmetryMatrix,symmetryVersion}from"../src/lib/discovery/symmetry-search";import{sha256}from"../src/lib/evaluation/hash";const planPath=resolve(process.argv[2]??"evaluation/discovery/symmetry-discovery-v1.json"),bytes=await readFile(planPath),plan=z.object({id:z.string(),generatorVersion:z.literal(symmetryVersion),status:z.string(),candidates:z.array(symmetryCandidateSchema)}).parse(JSON.parse(bytes.toString())),output=resolve(process.argv[3]??`public/evaluations/${plan.id}`);await mkdir(output,{recursive:true});const cases=[];for(const[index,c]of plan.candidates.entries()){const symmetric=Array.from({length:4},(_,p)=>symmetryMatrix(c,p).every(row=>row.every((v,x)=>v===row[23-x])));if(symmetric.filter(Boolean).length!==1||!symmetric[c.parameters.correctPanel])throw new Error("Symmetry oracle mismatch");const artifact=join(output,`${c.id}.png`);await sharp(Buffer.from(renderSymmetrySvg(c))).png().toFile(artifact);cases.push({candidateId:c.id,cellId:c.cellId,split:c.split,condition:"native-image",interventionDescription:"Four 24×24 dot fields; three contain exactly one bilateral mismatch.",failureModeId:c.failureModeId,generator:"symmetry-search",seed:c.seed,difficulty:82,variant:index,artifact:artifact.slice(resolve(".").length+1),mimeType:"image/png",question:c.question,answerOptions:c.answerOptions,expectedAnswer:c.expectedAnswer,sha256:sha256(new Uint8Array(await readFile(artifact))),parameters:c.parameters,humanSolvability:c.humanSolvability,systemMessage:"Verify bilateral symmetry across the red axis and return exactly one allowed panel letter."});}await writeFile(join(output,"manifest.json"),`${JSON.stringify({id:plan.id,planSha256:sha256(bytes),generatorVersion:plan.generatorVersion,renderer:"symmetry-dot-field-svg-v1",fps:0,cases},null,2)}\n`);console.log({output,cases:cases.length});
+import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { join, resolve } from "node:path";
+import sharp from "sharp";
+import { z } from "zod";
+import {
+  renderSymmetrySvg,
+  symmetryCandidateSchema,
+  symmetryMatrix,
+  symmetryVersion,
+} from "../src/lib/discovery/symmetry-search";
+import { sha256 } from "../src/lib/evaluation/hash";
+const planPath = resolve(process.argv[2] ?? "evaluation/discovery/symmetry-discovery-v1.json"),
+  bytes = await readFile(planPath),
+  plan = z
+    .object({
+      id: z.string(),
+      generatorVersion: z.literal(symmetryVersion),
+      status: z.string(),
+      candidates: z.array(symmetryCandidateSchema),
+    })
+    .parse(JSON.parse(bytes.toString())),
+  output = resolve(process.argv[3] ?? `public/evaluations/${plan.id}`);
+await mkdir(output, { recursive: true });
+const cases = [];
+for (const [index, c] of plan.candidates.entries()) {
+  const symmetric = Array.from({ length: 4 }, (_, p) =>
+    symmetryMatrix(c, p).every((row) => row.every((v, x) => v === row[23 - x])),
+  );
+  if (symmetric.filter(Boolean).length !== 1 || !symmetric[c.parameters.correctPanel])
+    throw new Error("Symmetry oracle mismatch");
+  for (const control of plan.status === "frozen-confirmatory-holdout" ? [false, true] : [false]) {
+    const artifact = join(output, `${c.id}${control ? "-control" : ""}.png`);
+    await sharp(Buffer.from(renderSymmetrySvg(c, control)))
+      .png()
+      .toFile(artifact);
+    cases.push({
+    candidateId: c.id,
+    cellId: c.cellId,
+    split: c.split,
+    condition: control ? "oracle-marked-control" : "native-image",
+    interventionDescription: control
+      ? "The correct panel is boxed in green and each mismatch is circled in red."
+      : "Four 24×24 dot fields; three contain exactly one bilateral mismatch.",
+    failureModeId: c.failureModeId,
+    generator: "symmetry-search",
+    seed: c.seed,
+    difficulty: control ? 0 : 82,
+    variant: index + (control ? 100 : 0),
+    artifact: artifact.slice(resolve(".").length + 1),
+    mimeType: "image/png",
+    question: c.question,
+    answerOptions: c.answerOptions,
+    expectedAnswer: c.expectedAnswer,
+    sha256: sha256(new Uint8Array(await readFile(artifact))),
+    parameters: c.parameters,
+    humanSolvability: c.humanSolvability,
+    systemMessage: control
+      ? "The correct panel is explicitly boxed in green. Return its letter."
+      : "Verify bilateral symmetry across the red axis and return exactly one allowed panel letter.",
+    });
+  }
+}
+await writeFile(
+  join(output, "manifest.json"),
+  `${JSON.stringify({ id: plan.id, planSha256: sha256(bytes), generatorVersion: plan.generatorVersion, renderer: plan.status === "frozen-confirmatory-holdout" ? "symmetry-dot-field-svg-v1-with-oracle-control" : "symmetry-dot-field-svg-v1", fps: 0, cases }, null, 2)}\n`,
+);
+console.log({ output, cases: cases.length });
