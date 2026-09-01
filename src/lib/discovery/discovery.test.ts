@@ -33,6 +33,7 @@ import {
   createWireCrossingCountDiscoveryGrid,
   createWireCrossingCountHoldout,
   createPrecisionWireCrossingCountDiscoveryGrid,
+  createPrecisionWireCrossingCountHoldout,
   crossingCountAnswers,
   precisionCrossingCountAnswers,
 } from "./wire-crossing-count";
@@ -58,6 +59,11 @@ describe("adaptive multimodal discovery", () => {
       expect(candidates.filter((candidate) => candidate.cellId === cellId).map((candidate) => candidate.expectedAnswer).sort()).toEqual([...precisionCrossingCountAnswers].sort());
     }
     for (const candidate of candidates) expect(countTargetCrossings(candidate)).toBe(candidate.parameters.targetCrossings);
+    const holdout = createPrecisionWireCrossingCountHoldout(candidates[4]!);
+    expect(holdout).toHaveLength(16);
+    expect(holdout.every((candidate) => candidate.seed >= 950_000)).toBe(true);
+    for (const answer of precisionCrossingCountAnswers) expect(holdout.filter((candidate) => candidate.expectedAnswer === answer)).toHaveLength(4);
+    for (const candidate of holdout) expect(countTargetCrossings(candidate)).toBe(candidate.parameters.targetCrossings);
   });
 
 

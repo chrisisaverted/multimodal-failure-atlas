@@ -62,6 +62,14 @@ export function createWireCrossingCountHoldout(representative: WireCrossingCount
   return candidates;
 }
 
+export function createPrecisionWireCrossingCountHoldout(representative: WireCrossingCountCandidate) {
+  const candidates: WireCrossingCountCandidate[] = []; let seed = 950_000;
+  for (let replicate = 0; replicate < 4; replicate += 1) for (const [index, targetCrossings] of precisionCrossingCountAnswers.entries()) {
+    candidates.push(createWireCrossingCountCandidate({ split: "confirmatory", seed, totalCrossings: representative.parameters.totalCrossings, targetCrossings, targetWire: (index + replicate + 1) % 4, answerSet: precisionCrossingCountAnswers, visualVariant: 60 + replicate * 4 + index })); seed += 1;
+  }
+  return candidates;
+}
+
 export function crossingSequence(candidate: WireCrossingCountCandidate) {
   const p = candidate.parameters; const random = rng(candidate.seed + p.visualVariant * 65537);
   const targetSteps = new Set<number>();

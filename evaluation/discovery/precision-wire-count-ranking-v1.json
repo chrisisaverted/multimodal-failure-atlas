@@ -1,0 +1,198 @@
+{
+  "id": "precision-wire-count-ranking-v1",
+  "status": "discovery-not-confirmatory",
+  "planSha256": "9d2357edafc3254dd73a175174de4c50cdd45cdb5811a51c101b6f391e7dd657",
+  "targetModelIds": [
+    "google/gemini-3.7-flash",
+    "moonshotai/kimi-k3",
+    "qwen/qwen3.8-max"
+  ],
+  "protocols": [
+    "precision-wire-count-screen-v1-low-reasoning-2026-09-01",
+    "precision-wire-count-kimi-forced-v1-2026-09-01"
+  ],
+  "policy": {
+    "maximumSolveRateExclusive": 0.5,
+    "minimumSubstantiveAnswersPerModel": 4,
+    "confidenceZ": 1.96
+  },
+  "records": 32,
+  "totalCostUsd": 0.353247,
+  "selectionRule": "easiest target route below 50% with four substantive balanced answers; Kimi forced-choice is a separately declared route-native condition",
+  "cells": [
+    {
+      "cellId": "cell-6ea5e3b21bced64f",
+      "models": [
+        {
+          "modelId": "google/gemini-3.7-flash",
+          "requests": 4,
+          "substantiveAnswers": 4,
+          "correct": 1,
+          "incorrect": 3,
+          "noAnswers": 0,
+          "reviewOrErrors": 0,
+          "operationalSolveRate": 0.25,
+          "substantiveSolveRate": 0.25,
+          "solveRateWilsonUpper": 0.6993639475573634,
+          "evidenceSufficient": true,
+          "observedBelowBar": true,
+          "confidenceBelowBar": false
+        },
+        {
+          "modelId": "moonshotai/kimi-k3",
+          "requests": 4,
+          "substantiveAnswers": 4,
+          "correct": 0,
+          "incorrect": 4,
+          "noAnswers": 0,
+          "reviewOrErrors": 0,
+          "operationalSolveRate": 0,
+          "substantiveSolveRate": 0,
+          "solveRateWilsonUpper": 0.48990002040399916,
+          "evidenceSufficient": true,
+          "observedBelowBar": true,
+          "confidenceBelowBar": true
+        },
+        {
+          "modelId": "qwen/qwen3.8-max",
+          "requests": 4,
+          "substantiveAnswers": 4,
+          "correct": 1,
+          "incorrect": 3,
+          "noAnswers": 0,
+          "reviewOrErrors": 0,
+          "operationalSolveRate": 0.25,
+          "substantiveSolveRate": 0.25,
+          "solveRateWilsonUpper": 0.6993639475573634,
+          "evidenceSufficient": true,
+          "observedBelowBar": true,
+          "confidenceBelowBar": false
+        }
+      ],
+      "evidenceComplete": true,
+      "observedAdmitted": true,
+      "confidenceAdmitted": false,
+      "worstModelSolveRate": 0.25,
+      "worstModelWilsonUpper": 0.6993639475573634,
+      "noAnswerRate": 0,
+      "rankScore": 0.3006360524426366,
+      "totalCrossings": 40
+    },
+    {
+      "cellId": "cell-8c64c8ef925f4cf7",
+      "models": [
+        {
+          "modelId": "google/gemini-3.7-flash",
+          "requests": 4,
+          "substantiveAnswers": 4,
+          "correct": 2,
+          "incorrect": 2,
+          "noAnswers": 0,
+          "reviewOrErrors": 0,
+          "operationalSolveRate": 0.5,
+          "substantiveSolveRate": 0.5,
+          "solveRateWilsonUpper": 0.8499642911798285,
+          "evidenceSufficient": true,
+          "observedBelowBar": false,
+          "confidenceBelowBar": false
+        },
+        {
+          "modelId": "moonshotai/kimi-k3",
+          "requests": 4,
+          "substantiveAnswers": 4,
+          "correct": 0,
+          "incorrect": 4,
+          "noAnswers": 0,
+          "reviewOrErrors": 0,
+          "operationalSolveRate": 0,
+          "substantiveSolveRate": 0,
+          "solveRateWilsonUpper": 0.48990002040399916,
+          "evidenceSufficient": true,
+          "observedBelowBar": true,
+          "confidenceBelowBar": true
+        },
+        {
+          "modelId": "qwen/qwen3.8-max",
+          "requests": 4,
+          "substantiveAnswers": 4,
+          "correct": 0,
+          "incorrect": 4,
+          "noAnswers": 0,
+          "reviewOrErrors": 0,
+          "operationalSolveRate": 0,
+          "substantiveSolveRate": 0,
+          "solveRateWilsonUpper": 0.48990002040399916,
+          "evidenceSufficient": true,
+          "observedBelowBar": true,
+          "confidenceBelowBar": true
+        }
+      ],
+      "evidenceComplete": true,
+      "observedAdmitted": false,
+      "confidenceAdmitted": false,
+      "worstModelSolveRate": 0.5,
+      "worstModelWilsonUpper": 0.8499642911798285,
+      "noAnswerRate": 0,
+      "rankScore": 0.15003570882017148,
+      "totalCrossings": 28
+    },
+    {
+      "cellId": "cell-9433e9ac6b03228d",
+      "models": [
+        {
+          "modelId": "google/gemini-3.7-flash",
+          "requests": 4,
+          "substantiveAnswers": 4,
+          "correct": 2,
+          "incorrect": 2,
+          "noAnswers": 0,
+          "reviewOrErrors": 0,
+          "operationalSolveRate": 0.5,
+          "substantiveSolveRate": 0.5,
+          "solveRateWilsonUpper": 0.8499642911798285,
+          "evidenceSufficient": true,
+          "observedBelowBar": false,
+          "confidenceBelowBar": false
+        },
+        {
+          "modelId": "moonshotai/kimi-k3",
+          "requests": 4,
+          "substantiveAnswers": 4,
+          "correct": 1,
+          "incorrect": 3,
+          "noAnswers": 0,
+          "reviewOrErrors": 0,
+          "operationalSolveRate": 0.25,
+          "substantiveSolveRate": 0.25,
+          "solveRateWilsonUpper": 0.6993639475573634,
+          "evidenceSufficient": true,
+          "observedBelowBar": true,
+          "confidenceBelowBar": false
+        },
+        {
+          "modelId": "qwen/qwen3.8-max",
+          "requests": 0,
+          "substantiveAnswers": 0,
+          "correct": 0,
+          "incorrect": 0,
+          "noAnswers": 0,
+          "reviewOrErrors": 0,
+          "operationalSolveRate": 1,
+          "substantiveSolveRate": 1,
+          "solveRateWilsonUpper": 1,
+          "evidenceSufficient": false,
+          "observedBelowBar": false,
+          "confidenceBelowBar": false
+        }
+      ],
+      "evidenceComplete": false,
+      "observedAdmitted": false,
+      "confidenceAdmitted": false,
+      "worstModelSolveRate": 1,
+      "worstModelWilsonUpper": 1,
+      "noAnswerRate": 0,
+      "rankScore": 0,
+      "totalCrossings": 52
+    }
+  ]
+}

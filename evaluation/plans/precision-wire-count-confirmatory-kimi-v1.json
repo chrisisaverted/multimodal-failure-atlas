@@ -1,0 +1,31 @@
+{
+  "id": "precision-wire-count-confirmatory-kimi-v1-2026-09-01",
+  "resolvedAt": "2026-09-01",
+  "gateway": "OpenRouter",
+  "evaluationPlanId": "precision-wire-count-confirmatory-v1",
+  "evaluationPlanSha256": "fd36adf420ab39f566db1a538323a55ad486bdc232abf32e2b99c40a2db67f10",
+  "stage": "frozen-confirmatory-model-native-forced-choice",
+  "casesPerModel": 32,
+  "primaryNativeCasesPerModel": 16,
+  "oracleCasesPerModel": 16,
+  "trials": 1,
+  "temperature": 0,
+  "maxOutputTokens": 512,
+  "reasoning": { "effort": "none", "exclude": true },
+  "scorer": "terminal-option-v2",
+  "allowProviderFallbacks": false,
+  "dataCollection": "deny",
+  "campaignCostCeilingUsd": 3,
+  "admission": {
+    "primaryCondition": "native-image",
+    "maximumSubstantiveSolveRateExclusive": 0.5,
+    "minimumSubstantiveNativeAnswers": 16,
+    "oracleCondition": "oracle-highlighted-numbered-path",
+    "minimumOracleSolveRate": 0.75,
+    "inferenceCondition": "reasoning disabled because the route advertises reasoning as optional; reported separately from mandatory-reasoning routes",
+    "humanSolvability": "unverified"
+  },
+  "models": [
+    { "modelId": "moonshotai/kimi-k3", "modelRevision": "moonshotai/kimi-k3-20260715", "upstreamProvider": "Moonshot AI" }
+  ]
+}

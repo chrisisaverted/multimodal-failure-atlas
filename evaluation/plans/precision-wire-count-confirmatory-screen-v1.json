@@ -1,0 +1,31 @@
+{
+  "id": "precision-wire-count-confirmatory-screen-v1-2026-09-01",
+  "resolvedAt": "2026-09-01",
+  "gateway": "OpenRouter",
+  "evaluationPlanId": "precision-wire-count-confirmatory-v1",
+  "evaluationPlanSha256": "fd36adf420ab39f566db1a538323a55ad486bdc232abf32e2b99c40a2db67f10",
+  "stage": "frozen-confirmatory-holdout-with-numbered-oracle",
+  "casesPerModel": 32,
+  "primaryNativeCasesPerModel": 16,
+  "oracleCasesPerModel": 16,
+  "trials": 1,
+  "temperature": 0,
+  "maxOutputTokens": 8192,
+  "reasoning": { "effort": "low", "exclude": true },
+  "scorer": "terminal-option-v2",
+  "allowProviderFallbacks": false,
+  "dataCollection": "deny",
+  "campaignCostCeilingUsd": 16,
+  "admission": {
+    "primaryCondition": "native-image",
+    "maximumSubstantiveSolveRateExclusiveForEveryModel": 0.5,
+    "minimumSubstantiveNativeAnswersPerModel": 16,
+    "oracleCondition": "oracle-highlighted-numbered-path",
+    "minimumOracleSolveRate": 0.75,
+    "humanSolvability": "unverified"
+  },
+  "models": [
+    { "modelId": "google/gemini-3.7-flash", "modelRevision": "google/gemini-3.7-flash-20260813", "upstreamProvider": "Google AI Studio" },
+    { "modelId": "qwen/qwen3.8-max", "modelRevision": "qwen/qwen3.8-max-20260803", "upstreamProvider": "Alibaba" }
+  ]
+}
