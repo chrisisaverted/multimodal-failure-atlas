@@ -1,0 +1,313 @@
+{
+  "id": "collision-timing-discovery-v1",
+  "planSha256": "3d5cc1ba252d358e19a641552ab4fb817e75d130203cd9616da63553f05eb66d",
+  "generatorVersion": "spatiotemporal-collision-disambiguation-v1",
+  "renderer": "collision-timing-svg-raster-v1",
+  "fps": 30,
+  "cases": [
+    {
+      "candidateId": "cl-95204e5a87b88f9c",
+      "cellId": "cell-four-crossing-trials-one-collision",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four pairwise path-crossing trials differ only in whether center arrival times coincide.",
+      "failureModeId": "spatiotemporal-collision-disambiguation",
+      "generator": "collision-timing",
+      "seed": 3700000,
+      "difficulty": 76,
+      "variant": 0,
+      "artifact": "public/evaluations/collision-timing-discovery-v1/cl-95204e5a87b88f9c.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 11200,
+      "question": "Which labeled pair actually COLLIDES (occupies the center at the same time)? The other pairs cross the same spatial point at different times.",
+      "answerOptions": [
+        "B+D",
+        "A+C",
+        "C+D",
+        "A+B"
+      ],
+      "expectedAnswer": "A+B",
+      "sha256": "1daa9422267dcdb6bd080be3cc666cd632ab0ac6d25e1cd0fd0ad17aa0dd241e",
+      "parameters": {
+        "collidingPair": 0,
+        "offsetsMs": [
+          0,
+          -507,
+          -509,
+          619
+        ],
+        "videoDurationMs": 11200,
+        "fps": 30,
+        "visualVariant": 0
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Distinguish spatial path crossing from simultaneous physical overlap. Return exactly one listed pair."
+    },
+    {
+      "candidateId": "cl-379a6369154164ab",
+      "cellId": "cell-four-crossing-trials-one-collision",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four pairwise path-crossing trials differ only in whether center arrival times coincide.",
+      "failureModeId": "spatiotemporal-collision-disambiguation",
+      "generator": "collision-timing",
+      "seed": 3700001,
+      "difficulty": 76,
+      "variant": 1,
+      "artifact": "public/evaluations/collision-timing-discovery-v1/cl-379a6369154164ab.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 11200,
+      "question": "Which labeled pair actually COLLIDES (occupies the center at the same time)? The other pairs cross the same spatial point at different times.",
+      "answerOptions": [
+        "B+D",
+        "A+C",
+        "C+D",
+        "A+B"
+      ],
+      "expectedAnswer": "A+C",
+      "sha256": "e77a804d5f29a57ae5985aec8bbb2d32719f5885c6a58a11b50406ebadbb716c",
+      "parameters": {
+        "collidingPair": 1,
+        "offsetsMs": [
+          -524,
+          0,
+          -516,
+          -573
+        ],
+        "videoDurationMs": 11200,
+        "fps": 30,
+        "visualVariant": 1
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Distinguish spatial path crossing from simultaneous physical overlap. Return exactly one listed pair."
+    },
+    {
+      "candidateId": "cl-383a2bf1f77a938d",
+      "cellId": "cell-four-crossing-trials-one-collision",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four pairwise path-crossing trials differ only in whether center arrival times coincide.",
+      "failureModeId": "spatiotemporal-collision-disambiguation",
+      "generator": "collision-timing",
+      "seed": 3700002,
+      "difficulty": 76,
+      "variant": 2,
+      "artifact": "public/evaluations/collision-timing-discovery-v1/cl-383a2bf1f77a938d.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 11200,
+      "question": "Which labeled pair actually COLLIDES (occupies the center at the same time)? The other pairs cross the same spatial point at different times.",
+      "answerOptions": [
+        "A+C",
+        "B+D",
+        "C+D",
+        "A+B"
+      ],
+      "expectedAnswer": "B+D",
+      "sha256": "9bf85e4bf7b5af2e8e023532bca0ae89abc04c957908a5b32e63da02022ab757",
+      "parameters": {
+        "collidingPair": 2,
+        "offsetsMs": [
+          -540,
+          523,
+          0,
+          528
+        ],
+        "videoDurationMs": 11200,
+        "fps": 30,
+        "visualVariant": 2
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Distinguish spatial path crossing from simultaneous physical overlap. Return exactly one listed pair."
+    },
+    {
+      "candidateId": "cl-03988e044e04753c",
+      "cellId": "cell-four-crossing-trials-one-collision",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four pairwise path-crossing trials differ only in whether center arrival times coincide.",
+      "failureModeId": "spatiotemporal-collision-disambiguation",
+      "generator": "collision-timing",
+      "seed": 3700003,
+      "difficulty": 76,
+      "variant": 3,
+      "artifact": "public/evaluations/collision-timing-discovery-v1/cl-03988e044e04753c.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 11200,
+      "question": "Which labeled pair actually COLLIDES (occupies the center at the same time)? The other pairs cross the same spatial point at different times.",
+      "answerOptions": [
+        "C+D",
+        "B+D",
+        "A+C",
+        "A+B"
+      ],
+      "expectedAnswer": "C+D",
+      "sha256": "5468cbb98565745726675eed128510cf9df8b487ced45e8588f4596282811c87",
+      "parameters": {
+        "collidingPair": 3,
+        "offsetsMs": [
+          -556,
+          -529,
+          483,
+          0
+        ],
+        "videoDurationMs": 11200,
+        "fps": 30,
+        "visualVariant": 3
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Distinguish spatial path crossing from simultaneous physical overlap. Return exactly one listed pair."
+    },
+    {
+      "candidateId": "cl-4ec84f42fffdc3ca",
+      "cellId": "cell-four-crossing-trials-one-collision",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four pairwise path-crossing trials differ only in whether center arrival times coincide.",
+      "failureModeId": "spatiotemporal-collision-disambiguation",
+      "generator": "collision-timing",
+      "seed": 3700004,
+      "difficulty": 76,
+      "variant": 4,
+      "artifact": "public/evaluations/collision-timing-discovery-v1/cl-4ec84f42fffdc3ca.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 11200,
+      "question": "Which labeled pair actually COLLIDES (occupies the center at the same time)? The other pairs cross the same spatial point at different times.",
+      "answerOptions": [
+        "C+D",
+        "B+D",
+        "A+C",
+        "A+B"
+      ],
+      "expectedAnswer": "A+B",
+      "sha256": "30f97e24b4ef9de60def715b04b8a6b300e4b773b441487a8ff6e6325cd1b714",
+      "parameters": {
+        "collidingPair": 0,
+        "offsetsMs": [
+          0,
+          -573,
+          -536,
+          -617
+        ],
+        "videoDurationMs": 11200,
+        "fps": 30,
+        "visualVariant": 4
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Distinguish spatial path crossing from simultaneous physical overlap. Return exactly one listed pair."
+    },
+    {
+      "candidateId": "cl-30c599f757f91343",
+      "cellId": "cell-four-crossing-trials-one-collision",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four pairwise path-crossing trials differ only in whether center arrival times coincide.",
+      "failureModeId": "spatiotemporal-collision-disambiguation",
+      "generator": "collision-timing",
+      "seed": 3700005,
+      "difficulty": 76,
+      "variant": 5,
+      "artifact": "public/evaluations/collision-timing-discovery-v1/cl-30c599f757f91343.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 11200,
+      "question": "Which labeled pair actually COLLIDES (occupies the center at the same time)? The other pairs cross the same spatial point at different times.",
+      "answerOptions": [
+        "B+D",
+        "C+D",
+        "A+C",
+        "A+B"
+      ],
+      "expectedAnswer": "A+C",
+      "sha256": "9d164f43fb898dbd408dca8f4a92684e2d47798f5be74a143771975baaf41d19",
+      "parameters": {
+        "collidingPair": 1,
+        "offsetsMs": [
+          -589,
+          0,
+          543,
+          572
+        ],
+        "videoDurationMs": 11200,
+        "fps": 30,
+        "visualVariant": 5
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Distinguish spatial path crossing from simultaneous physical overlap. Return exactly one listed pair."
+    },
+    {
+      "candidateId": "cl-3d3cca5090f0dc86",
+      "cellId": "cell-four-crossing-trials-one-collision",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four pairwise path-crossing trials differ only in whether center arrival times coincide.",
+      "failureModeId": "spatiotemporal-collision-disambiguation",
+      "generator": "collision-timing",
+      "seed": 3700006,
+      "difficulty": 76,
+      "variant": 6,
+      "artifact": "public/evaluations/collision-timing-discovery-v1/cl-3d3cca5090f0dc86.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 11200,
+      "question": "Which labeled pair actually COLLIDES (occupies the center at the same time)? The other pairs cross the same spatial point at different times.",
+      "answerOptions": [
+        "C+D",
+        "B+D",
+        "A+C",
+        "A+B"
+      ],
+      "expectedAnswer": "B+D",
+      "sha256": "44ba0b3e1e637d6d54d7ff1fb7ca9a3750282c8f3f83bee14ee1147d8abc4402",
+      "parameters": {
+        "collidingPair": 2,
+        "offsetsMs": [
+          -605,
+          549,
+          0,
+          526
+        ],
+        "videoDurationMs": 11200,
+        "fps": 30,
+        "visualVariant": 6
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Distinguish spatial path crossing from simultaneous physical overlap. Return exactly one listed pair."
+    },
+    {
+      "candidateId": "cl-6250a2089b78883b",
+      "cellId": "cell-four-crossing-trials-one-collision",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four pairwise path-crossing trials differ only in whether center arrival times coincide.",
+      "failureModeId": "spatiotemporal-collision-disambiguation",
+      "generator": "collision-timing",
+      "seed": 3700007,
+      "difficulty": 76,
+      "variant": 7,
+      "artifact": "public/evaluations/collision-timing-discovery-v1/cl-6250a2089b78883b.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 11200,
+      "question": "Which labeled pair actually COLLIDES (occupies the center at the same time)? The other pairs cross the same spatial point at different times.",
+      "answerOptions": [
+        "C+D",
+        "A+C",
+        "B+D",
+        "A+B"
+      ],
+      "expectedAnswer": "C+D",
+      "sha256": "1dc1e2e702a00886617713e9160cb070a695e8ac651dc4ec5b9e9f6c9104e975",
+      "parameters": {
+        "collidingPair": 3,
+        "offsetsMs": [
+          -622,
+          -556,
+          -481,
+          0
+        ],
+        "videoDurationMs": 11200,
+        "fps": 30,
+        "visualVariant": 7
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Distinguish spatial path crossing from simultaneous physical overlap. Return exactly one listed pair."
+    }
+  ]
+}

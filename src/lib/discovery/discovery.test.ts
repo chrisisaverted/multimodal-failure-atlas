@@ -94,8 +94,25 @@ import { createXorGrid, xorMatrices } from "./xor-composition";
 import { applyInfection, createInfectionGrid } from "./infection-spread";
 import { createEulerGrid, graphDegrees } from "./euler-graph";
 import { createOrdinalGrid, ordinalSuccessor } from "./ordinal-successor";
+import { createCollisionGrid } from "./collision-timing";
+import { containmentCounts, createIntervalGrid } from "./interval-containment";
 
 describe("adaptive multimodal discovery", () => {
+  it("places one interval that strictly contains exactly two others", () => {
+    for (const candidate of createIntervalGrid()) {
+      const counts = containmentCounts(candidate.parameters.intervals);
+      expect(counts[candidate.parameters.targetLane]).toBe(2);
+      expect(counts.filter(value => value === 2)).toHaveLength(1);
+    }
+  });
+
+  it("places exactly one synchronous center crossing in every collision video", () => {
+    for (const candidate of createCollisionGrid()) {
+      expect(candidate.parameters.offsetsMs.filter(value => value === 0)).toHaveLength(1);
+      expect(candidate.parameters.offsetsMs[candidate.parameters.collidingPair]).toBe(0);
+    }
+  });
+
   it("freezes sixteen balanced symmetry holdout cases on disjoint seeds", () => {
     const holdout = createSymmetryHoldout();
     expect(holdout).toHaveLength(16);

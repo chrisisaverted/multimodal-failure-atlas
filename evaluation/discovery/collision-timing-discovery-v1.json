@@ -1,0 +1,232 @@
+{
+  "id": "collision-timing-discovery-v1",
+  "generatorVersion": "spatiotemporal-collision-disambiguation-v1",
+  "status": "discovery-only",
+  "hypothesis": "Video models conflate spatial path intersection with true temporal collision.",
+  "candidates": [
+    {
+      "id": "cl-95204e5a87b88f9c",
+      "cellId": "cell-four-crossing-trials-one-collision",
+      "split": "discovery",
+      "seed": 3700000,
+      "failureModeId": "spatiotemporal-collision-disambiguation",
+      "question": "Which labeled pair actually COLLIDES (occupies the center at the same time)? The other pairs cross the same spatial point at different times.",
+      "answerOptions": [
+        "B+D",
+        "A+C",
+        "C+D",
+        "A+B"
+      ],
+      "expectedAnswer": "A+B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "collidingPair": 0,
+        "offsetsMs": [
+          0,
+          -507,
+          -509,
+          619
+        ],
+        "videoDurationMs": 11200,
+        "fps": 30,
+        "visualVariant": 0
+      }
+    },
+    {
+      "id": "cl-379a6369154164ab",
+      "cellId": "cell-four-crossing-trials-one-collision",
+      "split": "discovery",
+      "seed": 3700001,
+      "failureModeId": "spatiotemporal-collision-disambiguation",
+      "question": "Which labeled pair actually COLLIDES (occupies the center at the same time)? The other pairs cross the same spatial point at different times.",
+      "answerOptions": [
+        "B+D",
+        "A+C",
+        "C+D",
+        "A+B"
+      ],
+      "expectedAnswer": "A+C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "collidingPair": 1,
+        "offsetsMs": [
+          -524,
+          0,
+          -516,
+          -573
+        ],
+        "videoDurationMs": 11200,
+        "fps": 30,
+        "visualVariant": 1
+      }
+    },
+    {
+      "id": "cl-383a2bf1f77a938d",
+      "cellId": "cell-four-crossing-trials-one-collision",
+      "split": "discovery",
+      "seed": 3700002,
+      "failureModeId": "spatiotemporal-collision-disambiguation",
+      "question": "Which labeled pair actually COLLIDES (occupies the center at the same time)? The other pairs cross the same spatial point at different times.",
+      "answerOptions": [
+        "A+C",
+        "B+D",
+        "C+D",
+        "A+B"
+      ],
+      "expectedAnswer": "B+D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "collidingPair": 2,
+        "offsetsMs": [
+          -540,
+          523,
+          0,
+          528
+        ],
+        "videoDurationMs": 11200,
+        "fps": 30,
+        "visualVariant": 2
+      }
+    },
+    {
+      "id": "cl-03988e044e04753c",
+      "cellId": "cell-four-crossing-trials-one-collision",
+      "split": "discovery",
+      "seed": 3700003,
+      "failureModeId": "spatiotemporal-collision-disambiguation",
+      "question": "Which labeled pair actually COLLIDES (occupies the center at the same time)? The other pairs cross the same spatial point at different times.",
+      "answerOptions": [
+        "C+D",
+        "B+D",
+        "A+C",
+        "A+B"
+      ],
+      "expectedAnswer": "C+D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "collidingPair": 3,
+        "offsetsMs": [
+          -556,
+          -529,
+          483,
+          0
+        ],
+        "videoDurationMs": 11200,
+        "fps": 30,
+        "visualVariant": 3
+      }
+    },
+    {
+      "id": "cl-4ec84f42fffdc3ca",
+      "cellId": "cell-four-crossing-trials-one-collision",
+      "split": "discovery",
+      "seed": 3700004,
+      "failureModeId": "spatiotemporal-collision-disambiguation",
+      "question": "Which labeled pair actually COLLIDES (occupies the center at the same time)? The other pairs cross the same spatial point at different times.",
+      "answerOptions": [
+        "C+D",
+        "B+D",
+        "A+C",
+        "A+B"
+      ],
+      "expectedAnswer": "A+B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "collidingPair": 0,
+        "offsetsMs": [
+          0,
+          -573,
+          -536,
+          -617
+        ],
+        "videoDurationMs": 11200,
+        "fps": 30,
+        "visualVariant": 4
+      }
+    },
+    {
+      "id": "cl-30c599f757f91343",
+      "cellId": "cell-four-crossing-trials-one-collision",
+      "split": "discovery",
+      "seed": 3700005,
+      "failureModeId": "spatiotemporal-collision-disambiguation",
+      "question": "Which labeled pair actually COLLIDES (occupies the center at the same time)? The other pairs cross the same spatial point at different times.",
+      "answerOptions": [
+        "B+D",
+        "C+D",
+        "A+C",
+        "A+B"
+      ],
+      "expectedAnswer": "A+C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "collidingPair": 1,
+        "offsetsMs": [
+          -589,
+          0,
+          543,
+          572
+        ],
+        "videoDurationMs": 11200,
+        "fps": 30,
+        "visualVariant": 5
+      }
+    },
+    {
+      "id": "cl-3d3cca5090f0dc86",
+      "cellId": "cell-four-crossing-trials-one-collision",
+      "split": "discovery",
+      "seed": 3700006,
+      "failureModeId": "spatiotemporal-collision-disambiguation",
+      "question": "Which labeled pair actually COLLIDES (occupies the center at the same time)? The other pairs cross the same spatial point at different times.",
+      "answerOptions": [
+        "C+D",
+        "B+D",
+        "A+C",
+        "A+B"
+      ],
+      "expectedAnswer": "B+D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "collidingPair": 2,
+        "offsetsMs": [
+          -605,
+          549,
+          0,
+          526
+        ],
+        "videoDurationMs": 11200,
+        "fps": 30,
+        "visualVariant": 6
+      }
+    },
+    {
+      "id": "cl-6250a2089b78883b",
+      "cellId": "cell-four-crossing-trials-one-collision",
+      "split": "discovery",
+      "seed": 3700007,
+      "failureModeId": "spatiotemporal-collision-disambiguation",
+      "question": "Which labeled pair actually COLLIDES (occupies the center at the same time)? The other pairs cross the same spatial point at different times.",
+      "answerOptions": [
+        "C+D",
+        "A+C",
+        "B+D",
+        "A+B"
+      ],
+      "expectedAnswer": "C+D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "collidingPair": 3,
+        "offsetsMs": [
+          -622,
+          -556,
+          -481,
+          0
+        ],
+        "videoDurationMs": 11200,
+        "fps": 30,
+        "visualVariant": 7
+      }
+    }
+  ]
+}
