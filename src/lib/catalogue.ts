@@ -749,6 +749,7 @@ const reproducedExtensions: ReproducedExtension[] = [
       "Multi-scale inspection",
       "Symmetry-specific verification passes",
     ],
+    generator: "dense-symmetry",
     severity: "high",
   },
   {

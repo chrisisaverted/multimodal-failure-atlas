@@ -56,7 +56,26 @@ export default async function FailurePage({ params }: FailurePageProps) {
       </header>
 
       {admittedEvidence ? (
-        <AdmittedEvidencePanel evidence={admittedEvidence} />
+        <>
+          <AdmittedEvidencePanel evidence={admittedEvidence} />
+          {mode.generator ? (
+            <section className="section-shell exhibit-lab-section">
+              <div className="section-intro">
+                <p className="eyebrow">Generate a fresh educational specimen</p>
+                <h2>
+                  Move beyond the
+                  <br />
+                  frozen holdout.
+                </h2>
+                <p>
+                  Change the family-local difficulty, create a new deterministic seed, and inspect the exact
+                  construction answer. These live specimens are deliberately not added to the scored evidence.
+                </p>
+              </div>
+              <DiagnosticLab generator={mode.generator} roomy />
+            </section>
+          ) : null}
+        </>
       ) : mode.id === "identity-conditioned-exact-counting" ? (
         <PrecisionWireResultsPanel />
       ) : mode.generator ? (
@@ -133,8 +152,8 @@ export default async function FailurePage({ params }: FailurePageProps) {
               But “where?”
             </h2>
             <p>
-              Scored runs report frozen sample counts and confidence intervals. The current pilot measures
-              one fixed difficulty point; the curve remains illustrative until a precommitted sweep exists.
+              Scored runs report frozen sample counts and confidence intervals. The current pilot measures one
+              fixed difficulty point; the curve remains illustrative until a precommitted sweep exists.
             </p>
           </div>
           <CapabilityCurve color={mode.accent === "cobalt" ? "#2356c7" : "#f04b32"} />

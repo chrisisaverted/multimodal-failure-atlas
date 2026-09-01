@@ -101,6 +101,27 @@ export function renderDiagnosticSvg(instance: DiagnosticInstance, playhead = 0) 
       ).join("")}`;
       break;
     }
+    case "dense-symmetry": {
+      const gridSize = number(latent.gridSize);
+      const bits = latent.panelBits as number[];
+      const cellSize = 36 / gridSize;
+      body = `<rect width="140" height="100" fill="${palette.cream}"/>${["A", "B", "C", "D"]
+        .map((label, panel) => {
+          const originX = panel % 2 === 0 ? 18 : 86;
+          const originY = panel < 2 ? 5 : 54;
+          const panelBits = bits.slice(panel * gridSize * gridSize, (panel + 1) * gridSize * gridSize);
+          const cells = panelBits
+            .map((value, index) =>
+              value
+                ? `<rect x="${originX + (index % gridSize) * cellSize}" y="${originY + Math.floor(index / gridSize) * cellSize}" width="${cellSize + 0.05}" height="${cellSize + 0.05}" fill="${panel % 2 === 0 ? palette.cobalt : palette.violet}"/>`
+                : "",
+            )
+            .join("");
+          return `<text x="${originX - 7}" y="${originY + 21}" font-size="7" font-weight="700">${label}</text><rect x="${originX - 1}" y="${originY - 1}" width="38" height="38" fill="#fffdf7" stroke="#4b4e48" stroke-width=".6"/>${cells}<line x1="${originX + 18}" x2="${originX + 18}" y1="${originY - 1}" y2="${originY + 37}" stroke="#f04b32" stroke-width=".45" opacity=".75"/>`;
+        })
+        .join("")}`;
+      break;
+    }
     case "brief-event": {
       const duration = number(latent.videoDurationMs);
       const time = playhead * duration;

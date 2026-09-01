@@ -12,6 +12,7 @@ const keys: GeneratorKey[] = [
   "event-order",
   "identity-occlusion",
   "event-counting",
+  "dense-symmetry",
   "gated-frequency",
   "gated-pair-collision",
 ];
@@ -107,6 +108,28 @@ describe("diagnostic generators", () => {
     }
   });
 
+  it("constructs exactly one bilateral symmetry answer", () => {
+    for (let seed = 0; seed < 24; seed += 1) {
+      for (const difficulty of [0, 50, 100]) {
+        const instance = generateInstance("dense-symmetry", { seed, difficulty, variant: 0 });
+        const gridSize = Number(instance.latent.gridSize);
+        const bits = instance.latent.panelBits as number[];
+        const symmetricPanels = [0, 1, 2, 3].filter((panel) => {
+          const start = panel * gridSize * gridSize;
+          for (let row = 0; row < gridSize; row += 1)
+            for (let column = 0; column < gridSize / 2; column += 1)
+              if (
+                bits[start + row * gridSize + column] !==
+                bits[start + row * gridSize + (gridSize - 1 - column)]
+              )
+                return false;
+          return true;
+        });
+        expect(symmetricPanels).toEqual([["A", "B", "C", "D"].indexOf(instance.answer)]);
+      }
+    }
+  });
+
   it("constructs exact pair-and-gate collision answers", () => {
     for (let seed = 0; seed < 24; seed += 1) {
       for (const difficulty of [0, 50, 100]) {
@@ -135,6 +158,13 @@ describe("diagnostic generators", () => {
       expect(Number(easy.latent[trapKey])).toBe(0);
       expect(Number(hard.latent[trapKey])).toBeGreaterThan(0);
     }
+  });
+
+  it("makes symmetry denser and defects sparser with difficulty", () => {
+    const easy = generateInstance("dense-symmetry", { seed: 8, difficulty: 0, variant: 0 });
+    const hard = generateInstance("dense-symmetry", { seed: 8, difficulty: 100, variant: 0 });
+    expect(Number(hard.latent.gridSize)).toBeGreaterThan(Number(easy.latent.gridSize));
+    expect(Number(hard.latent.defectCount)).toBeLessThan(Number(easy.latent.defectCount));
   });
 
   it("constructs true minimal pairs for brief events and attribute binding", () => {

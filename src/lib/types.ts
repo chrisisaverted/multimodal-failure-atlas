@@ -58,6 +58,7 @@ export type GeneratorKey =
   | "event-order"
   | "identity-occlusion"
   | "event-counting"
+  | "dense-symmetry"
   | "gated-frequency"
   | "gated-pair-collision";
 

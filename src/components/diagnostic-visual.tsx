@@ -146,6 +146,64 @@ export function DiagnosticVisual({
         </svg>
       );
     }
+    case "dense-symmetry": {
+      const gridSize = number(latent.gridSize);
+      const bits = latent.panelBits as number[];
+      const labels = ["A", "B", "C", "D"];
+      const cellSize = 36 / gridSize;
+      return (
+        <svg
+          className="diagnostic-svg"
+          viewBox="0 0 140 100"
+          role="img"
+          aria-label="Four dense panels for exact bilateral symmetry comparison"
+        >
+          <rect width="140" height="100" fill={palette.cream} />
+          {labels.map((label, panel) => {
+            const originX = panel % 2 === 0 ? 18 : 86;
+            const originY = panel < 2 ? 5 : 54;
+            const panelBits = bits.slice(panel * gridSize * gridSize, (panel + 1) * gridSize * gridSize);
+            return (
+              <g key={label}>
+                <text x={originX - 7} y={originY + 21} fontSize="7" fontWeight="700" fill="#171915">
+                  {label}
+                </text>
+                <rect
+                  x={originX - 1}
+                  y={originY - 1}
+                  width="38"
+                  height="38"
+                  fill="#fffdf7"
+                  stroke="#4b4e48"
+                  strokeWidth=".6"
+                />
+                {panelBits.map((value, index) =>
+                  value ? (
+                    <rect
+                      key={index}
+                      x={originX + (index % gridSize) * cellSize}
+                      y={originY + Math.floor(index / gridSize) * cellSize}
+                      width={cellSize + 0.05}
+                      height={cellSize + 0.05}
+                      fill={panel % 2 === 0 ? palette.cobalt : palette.violet}
+                    />
+                  ) : null,
+                )}
+                <line
+                  x1={originX + 18}
+                  x2={originX + 18}
+                  y1={originY - 1}
+                  y2={originY + 37}
+                  stroke="#f04b32"
+                  strokeWidth=".45"
+                  opacity=".75"
+                />
+              </g>
+            );
+          })}
+        </svg>
+      );
+    }
     case "brief-event": {
       const duration = number(latent.videoDurationMs);
       const time = playhead * duration;

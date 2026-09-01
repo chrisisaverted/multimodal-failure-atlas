@@ -194,6 +194,49 @@ export function generateInstance(generator: GeneratorKey, params: DiagnosticPara
           "Count changes while total video duration, scene, flash appearance, and answer distribution remain controlled.",
       };
     }
+    case "dense-symmetry": {
+      const gridSize = 8 + Math.floor(difficulty / 20) * 2;
+      const correctPanel = (params.seed + params.variant) % 4;
+      const defectCount = Math.max(1, 4 - Math.floor(difficulty / 34));
+      const panels: number[][] = [];
+      for (let panel = 0; panel < 4; panel += 1) {
+        const bits = Array.from({ length: gridSize * gridSize }, () => 0);
+        for (let row = 0; row < gridSize; row += 1)
+          for (let column = 0; column < gridSize / 2; column += 1) {
+            const value = random() < 0.38 ? 1 : 0;
+            bits[row * gridSize + column] = value;
+            bits[row * gridSize + (gridSize - 1 - column)] = value;
+          }
+        if (panel !== correctPanel) {
+          const available = shuffled(
+            Array.from({ length: gridSize * (gridSize / 2) }, (_, index) => ({
+              row: Math.floor(index / (gridSize / 2)),
+              column: gridSize / 2 + (index % (gridSize / 2)),
+            })),
+            random,
+          );
+          for (const { row, column } of available.slice(0, defectCount)) {
+            const index = row * gridSize + column;
+            bits[index] = bits[index] === 1 ? 0 : 1;
+          }
+        }
+        panels.push(bits);
+      }
+      return {
+        ...base(generator, params),
+        question: "Which panel is EXACTLY symmetric across its vertical center line?",
+        answer: ["A", "B", "C", "D"][correctPanel]!,
+        answerOptions: shuffled(["A", "B", "C", "D"], random),
+        latent: {
+          gridSize,
+          correctPanel,
+          defectCount,
+          panelBits: panels.flat(),
+        },
+        minimalPairDescription:
+          "Difficulty increases the grid density and reduces each distractor to one sparse symmetry defect; panel labels and exact mirrored construction stay fixed.",
+      };
+    }
     case "gated-frequency": {
       const qualifyingCount = 2 + ((params.seed + params.variant) % 4);
       const targetGate = params.seed % 2 === 0 ? "AMBER" : "CYAN";
