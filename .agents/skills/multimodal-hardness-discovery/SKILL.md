@@ -45,3 +45,10 @@ human-illegible.
 Preserve every artifact, content hash, prompt, raw response, route, endpoint revision, scorer decision,
 and provider-reported cost. New evidence should refine this skill; do not generalize one route-specific
 failure into a universal rule.
+
+When a project asks for several modes, maintain a family ledger keyed by the latent capability being
+tested. Changing only density, duration, count range, visual skin, prompt, or answer spacing creates a
+new cell—not a new failure family. Maintain separate image and video cohorts because unsupported
+modality routes are not negative evidence. A completion count includes only frozen holdouts that pass
+the declared observed bar; report separately whether their Wilson interval also clears the bar and
+whether a human baseline has been measured.

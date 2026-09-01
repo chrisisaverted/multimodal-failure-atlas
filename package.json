@@ -33,6 +33,7 @@
     "generate:wire-count": "tsx scripts/materialize-wire-crossing-count.ts",
     "plan:precision-wire-count": "tsx scripts/plan-precision-wire-count.ts",
     "rank:precision-wire-count": "tsx scripts/rank-precision-wire-count.ts",
+    "summarize:family": "tsx scripts/summarize-family-results.ts",
     "freeze:precision-wire-count": "tsx scripts/freeze-precision-wire-count.ts",
     "plan:enclosure-depth": "tsx scripts/plan-enclosure-depth.ts",
     "generate:enclosure-depth": "tsx scripts/materialize-enclosure-depth.ts",

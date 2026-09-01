@@ -27,3 +27,9 @@ Before designing or running paid multimodal failure searches, read
   a blinded baseline reports accuracy, exclusions, display conditions, and response times.
 - Use only existing prepaid provider credit. Never add funds, enable provider fallback, or publish a
   credential.
+- A publication quota counts distinct capability mechanisms, not cosmetic variants, alternate prompts,
+  answer ranges, or multiple difficulty cells from one generator. Image and video quotas are tracked
+  separately against modality-capable prespecified cohorts.
+- Never reinterpret a multi-family completion target as “find at least one.” Keep the active goal open
+  until every requested family count, modality count, minimum work duration, build gate, and public
+  verification requirement is satisfied.
