@@ -124,6 +124,7 @@ export default function VerifiedPage() {
           Read the difficulty-setting contract
         </a>
         <Link href="/runs">Open the response ledger</Link>
+        <Link href="/evidence/five-route-matrix.json">Download the five-route evidence matrix</Link>
       </div>
     </section>
   );

@@ -5,6 +5,7 @@ Release audit updated 1 September 2026.
 ## Current release
 
 - Public static application: <https://chrisisaverted.github.io/multimodal-failure-atlas/>
+- Machine-readable five-route matrix: <https://chrisisaverted.github.io/multimodal-failure-atlas/evidence/five-route-matrix.json>
 - 52 mapped image, video, audiovisual, multi-image, and interleaved-media failure families
 - 20 strictly admitted synthetic families: 10 image and 10 video
 - Three frozen admission routes: Gemini 3.7 Flash, Qwen 3.8 Max, and Kimi K3
