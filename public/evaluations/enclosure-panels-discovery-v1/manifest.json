@@ -1,0 +1,321 @@
+{
+  "id": "enclosure-panels-discovery-v1",
+  "planSha256": "43e836f920658b85eb755d8fd27aff97931c90c070314b389be0a456bd3824f2",
+  "generatorVersion": "enclosure-panels-v1",
+  "renderer": "enclosure-panels-svg-v1",
+  "fps": 0,
+  "cases": [
+    {
+      "candidateId": "ep-e9d8428dc0f3efe7",
+      "cellId": "cell-812f954d9212d624",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Every panel contains the same four depth values across the scene, plus open fragments.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-panels",
+      "seed": 2900000,
+      "difficulty": 84,
+      "variant": 500,
+      "artifact": "public/evaluations/enclosure-panels-discovery-v1/ep-e9d8428dc0f3efe7.png",
+      "mimeType": "image/png",
+      "question": "Which panel contains exactly 11 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "e5876de96412f823a2e3c8f23d794d5aaee9ad856466595d65352da575d3f080",
+      "parameters": {
+        "targetDepth": 11,
+        "panelDepths": [
+          11,
+          8,
+          14,
+          13
+        ],
+        "targetSlot": 0,
+        "templateVariant": 0,
+        "openDecoysPerPanel": 9,
+        "irregularity": 0.48,
+        "visualVariant": 500
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count only complete closed boundaries in each panel. Return exactly one allowed panel letter without explanation."
+    },
+    {
+      "candidateId": "ep-3d4bc02ab9389aaa",
+      "cellId": "cell-812f954d9212d624",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Every panel contains the same four depth values across the scene, plus open fragments.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-panels",
+      "seed": 2900001,
+      "difficulty": 84,
+      "variant": 501,
+      "artifact": "public/evaluations/enclosure-panels-discovery-v1/ep-3d4bc02ab9389aaa.png",
+      "mimeType": "image/png",
+      "question": "Which panel contains exactly 12 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "1f895fa1d814edc69d9a50f23e45e7fd2a6b4089451ff5b9b477da1a5f14305d",
+      "parameters": {
+        "targetDepth": 12,
+        "panelDepths": [
+          13,
+          9,
+          12,
+          14
+        ],
+        "targetSlot": 2,
+        "templateVariant": 0,
+        "openDecoysPerPanel": 9,
+        "irregularity": 0.48,
+        "visualVariant": 501
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count only complete closed boundaries in each panel. Return exactly one allowed panel letter without explanation."
+    },
+    {
+      "candidateId": "ep-bdf38000b3093aeb",
+      "cellId": "cell-812f954d9212d624",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Every panel contains the same four depth values across the scene, plus open fragments.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-panels",
+      "seed": 2900002,
+      "difficulty": 84,
+      "variant": 502,
+      "artifact": "public/evaluations/enclosure-panels-discovery-v1/ep-bdf38000b3093aeb.png",
+      "mimeType": "image/png",
+      "question": "Which panel contains exactly 11 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "2efa0e011546eddee84ce360aad2b5cbdd52f55edbff0223658f58459cf8faaa",
+      "parameters": {
+        "targetDepth": 11,
+        "panelDepths": [
+          9,
+          11,
+          10,
+          16
+        ],
+        "targetSlot": 1,
+        "templateVariant": 1,
+        "openDecoysPerPanel": 9,
+        "irregularity": 0.48,
+        "visualVariant": 502
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count only complete closed boundaries in each panel. Return exactly one allowed panel letter without explanation."
+    },
+    {
+      "candidateId": "ep-f83579249d0bc5cb",
+      "cellId": "cell-812f954d9212d624",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Every panel contains the same four depth values across the scene, plus open fragments.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-panels",
+      "seed": 2900003,
+      "difficulty": 84,
+      "variant": 503,
+      "artifact": "public/evaluations/enclosure-panels-discovery-v1/ep-f83579249d0bc5cb.png",
+      "mimeType": "image/png",
+      "question": "Which panel contains exactly 12 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "3a2e324c74a0a33afa014d9eab27985a8240eea114fbdbcdba055f74f8486d04",
+      "parameters": {
+        "targetDepth": 12,
+        "panelDepths": [
+          10,
+          11,
+          15,
+          12
+        ],
+        "targetSlot": 3,
+        "templateVariant": 1,
+        "openDecoysPerPanel": 9,
+        "irregularity": 0.48,
+        "visualVariant": 503
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count only complete closed boundaries in each panel. Return exactly one allowed panel letter without explanation."
+    },
+    {
+      "candidateId": "ep-a723e363eaaac779",
+      "cellId": "cell-812f954d9212d624",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Every panel contains the same four depth values across the scene, plus open fragments.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-panels",
+      "seed": 2900004,
+      "difficulty": 84,
+      "variant": 504,
+      "artifact": "public/evaluations/enclosure-panels-discovery-v1/ep-a723e363eaaac779.png",
+      "mimeType": "image/png",
+      "question": "Which panel contains exactly 11 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "d3ece750e6baa2847e2bd83d80e7ab3bcd39224b51f50fb2ceb0bb7c023322f3",
+      "parameters": {
+        "targetDepth": 11,
+        "panelDepths": [
+          13,
+          8,
+          11,
+          14
+        ],
+        "targetSlot": 2,
+        "templateVariant": 0,
+        "openDecoysPerPanel": 9,
+        "irregularity": 0.48,
+        "visualVariant": 504
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count only complete closed boundaries in each panel. Return exactly one allowed panel letter without explanation."
+    },
+    {
+      "candidateId": "ep-dfef99a064ce450b",
+      "cellId": "cell-812f954d9212d624",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Every panel contains the same four depth values across the scene, plus open fragments.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-panels",
+      "seed": 2900005,
+      "difficulty": 84,
+      "variant": 505,
+      "artifact": "public/evaluations/enclosure-panels-discovery-v1/ep-dfef99a064ce450b.png",
+      "mimeType": "image/png",
+      "question": "Which panel contains exactly 12 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "659e47ee938ec920721153545c84a51f604c3f038bb4eb20956afca4c2b64765",
+      "parameters": {
+        "targetDepth": 12,
+        "panelDepths": [
+          12,
+          9,
+          13,
+          14
+        ],
+        "targetSlot": 0,
+        "templateVariant": 0,
+        "openDecoysPerPanel": 9,
+        "irregularity": 0.48,
+        "visualVariant": 505
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count only complete closed boundaries in each panel. Return exactly one allowed panel letter without explanation."
+    },
+    {
+      "candidateId": "ep-bb653614422cade5",
+      "cellId": "cell-812f954d9212d624",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Every panel contains the same four depth values across the scene, plus open fragments.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-panels",
+      "seed": 2900006,
+      "difficulty": 84,
+      "variant": 506,
+      "artifact": "public/evaluations/enclosure-panels-discovery-v1/ep-bb653614422cade5.png",
+      "mimeType": "image/png",
+      "question": "Which panel contains exactly 11 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "27fd17f17d73263b1a1c8485955c80681e425abd9c05dcbb8682558100baa07d",
+      "parameters": {
+        "targetDepth": 11,
+        "panelDepths": [
+          16,
+          10,
+          9,
+          11
+        ],
+        "targetSlot": 3,
+        "templateVariant": 1,
+        "openDecoysPerPanel": 9,
+        "irregularity": 0.48,
+        "visualVariant": 506
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count only complete closed boundaries in each panel. Return exactly one allowed panel letter without explanation."
+    },
+    {
+      "candidateId": "ep-817457b092718b3d",
+      "cellId": "cell-812f954d9212d624",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Every panel contains the same four depth values across the scene, plus open fragments.",
+      "failureModeId": "topological-enclosure-depth",
+      "generator": "enclosure-panels",
+      "seed": 2900007,
+      "difficulty": 84,
+      "variant": 507,
+      "artifact": "public/evaluations/enclosure-panels-discovery-v1/ep-817457b092718b3d.png",
+      "mimeType": "image/png",
+      "question": "Which panel contains exactly 12 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "271ec4ed9e44dd8fba40faba318f4bb3357443911e662396c8f48e1709b73508",
+      "parameters": {
+        "targetDepth": 12,
+        "panelDepths": [
+          11,
+          12,
+          15,
+          10
+        ],
+        "targetSlot": 1,
+        "templateVariant": 1,
+        "openDecoysPerPanel": 9,
+        "irregularity": 0.48,
+        "visualVariant": 507
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count only complete closed boundaries in each panel. Return exactly one allowed panel letter without explanation."
+    }
+  ]
+}

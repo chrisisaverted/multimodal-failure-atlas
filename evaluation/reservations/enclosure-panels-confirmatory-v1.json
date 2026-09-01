@@ -1,0 +1,489 @@
+{
+  "id": "enclosure-panels-confirmatory-v1",
+  "generatorVersion": "enclosure-panels-v1",
+  "status": "reserved-untouched-confirmatory-candidates",
+  "frozenAt": "2026-09-01T11:50:00.000Z",
+  "separation": "Seeds 2910000+, visual variants 700+, two target depths at each answer slot twice and two ordinal-rank templates; reserved before any discovery response.",
+  "candidates": [
+    {
+      "id": "ep-3795ccd595222c57",
+      "cellId": "cell-812f954d9212d624",
+      "split": "confirmatory",
+      "seed": 2910000,
+      "failureModeId": "topological-enclosure-depth",
+      "question": "Which panel contains exactly 11 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetDepth": 11,
+        "panelDepths": [
+          11,
+          13,
+          14,
+          8
+        ],
+        "targetSlot": 0,
+        "templateVariant": 0,
+        "openDecoysPerPanel": 9,
+        "irregularity": 0.48,
+        "visualVariant": 700
+      }
+    },
+    {
+      "id": "ep-13262c6ae7d1ec30",
+      "cellId": "cell-812f954d9212d624",
+      "split": "confirmatory",
+      "seed": 2910001,
+      "failureModeId": "topological-enclosure-depth",
+      "question": "Which panel contains exactly 12 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetDepth": 12,
+        "panelDepths": [
+          9,
+          14,
+          12,
+          13
+        ],
+        "targetSlot": 2,
+        "templateVariant": 0,
+        "openDecoysPerPanel": 9,
+        "irregularity": 0.48,
+        "visualVariant": 701
+      }
+    },
+    {
+      "id": "ep-4c29d9a44eb36226",
+      "cellId": "cell-812f954d9212d624",
+      "split": "confirmatory",
+      "seed": 2910002,
+      "failureModeId": "topological-enclosure-depth",
+      "question": "Which panel contains exactly 11 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetDepth": 11,
+        "panelDepths": [
+          16,
+          11,
+          9,
+          10
+        ],
+        "targetSlot": 1,
+        "templateVariant": 1,
+        "openDecoysPerPanel": 9,
+        "irregularity": 0.48,
+        "visualVariant": 702
+      }
+    },
+    {
+      "id": "ep-c085989ada15c42e",
+      "cellId": "cell-812f954d9212d624",
+      "split": "confirmatory",
+      "seed": 2910003,
+      "failureModeId": "topological-enclosure-depth",
+      "question": "Which panel contains exactly 12 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetDepth": 12,
+        "panelDepths": [
+          10,
+          15,
+          11,
+          12
+        ],
+        "targetSlot": 3,
+        "templateVariant": 1,
+        "openDecoysPerPanel": 9,
+        "irregularity": 0.48,
+        "visualVariant": 703
+      }
+    },
+    {
+      "id": "ep-ccbb5961b894741f",
+      "cellId": "cell-812f954d9212d624",
+      "split": "confirmatory",
+      "seed": 2910004,
+      "failureModeId": "topological-enclosure-depth",
+      "question": "Which panel contains exactly 11 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetDepth": 11,
+        "panelDepths": [
+          8,
+          14,
+          11,
+          13
+        ],
+        "targetSlot": 2,
+        "templateVariant": 0,
+        "openDecoysPerPanel": 9,
+        "irregularity": 0.48,
+        "visualVariant": 704
+      }
+    },
+    {
+      "id": "ep-a370826eb4c0702e",
+      "cellId": "cell-812f954d9212d624",
+      "split": "confirmatory",
+      "seed": 2910005,
+      "failureModeId": "topological-enclosure-depth",
+      "question": "Which panel contains exactly 12 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetDepth": 12,
+        "panelDepths": [
+          12,
+          13,
+          9,
+          14
+        ],
+        "targetSlot": 0,
+        "templateVariant": 0,
+        "openDecoysPerPanel": 9,
+        "irregularity": 0.48,
+        "visualVariant": 705
+      }
+    },
+    {
+      "id": "ep-f67d3005257adf4a",
+      "cellId": "cell-812f954d9212d624",
+      "split": "confirmatory",
+      "seed": 2910006,
+      "failureModeId": "topological-enclosure-depth",
+      "question": "Which panel contains exactly 11 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetDepth": 11,
+        "panelDepths": [
+          9,
+          10,
+          16,
+          11
+        ],
+        "targetSlot": 3,
+        "templateVariant": 1,
+        "openDecoysPerPanel": 9,
+        "irregularity": 0.48,
+        "visualVariant": 706
+      }
+    },
+    {
+      "id": "ep-9ffef4887e615d1e",
+      "cellId": "cell-812f954d9212d624",
+      "split": "confirmatory",
+      "seed": 2910007,
+      "failureModeId": "topological-enclosure-depth",
+      "question": "Which panel contains exactly 12 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetDepth": 12,
+        "panelDepths": [
+          11,
+          12,
+          10,
+          15
+        ],
+        "targetSlot": 1,
+        "templateVariant": 1,
+        "openDecoysPerPanel": 9,
+        "irregularity": 0.48,
+        "visualVariant": 707
+      }
+    },
+    {
+      "id": "ep-eabb6a9671d2197d",
+      "cellId": "cell-812f954d9212d624",
+      "split": "confirmatory",
+      "seed": 2910008,
+      "failureModeId": "topological-enclosure-depth",
+      "question": "Which panel contains exactly 11 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetDepth": 11,
+        "panelDepths": [
+          11,
+          13,
+          8,
+          14
+        ],
+        "targetSlot": 0,
+        "templateVariant": 0,
+        "openDecoysPerPanel": 9,
+        "irregularity": 0.48,
+        "visualVariant": 708
+      }
+    },
+    {
+      "id": "ep-4872b614727bd47f",
+      "cellId": "cell-812f954d9212d624",
+      "split": "confirmatory",
+      "seed": 2910009,
+      "failureModeId": "topological-enclosure-depth",
+      "question": "Which panel contains exactly 12 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetDepth": 12,
+        "panelDepths": [
+          9,
+          13,
+          12,
+          14
+        ],
+        "targetSlot": 2,
+        "templateVariant": 0,
+        "openDecoysPerPanel": 9,
+        "irregularity": 0.48,
+        "visualVariant": 709
+      }
+    },
+    {
+      "id": "ep-a65a2b827b46886d",
+      "cellId": "cell-812f954d9212d624",
+      "split": "confirmatory",
+      "seed": 2910010,
+      "failureModeId": "topological-enclosure-depth",
+      "question": "Which panel contains exactly 11 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetDepth": 11,
+        "panelDepths": [
+          10,
+          11,
+          16,
+          9
+        ],
+        "targetSlot": 1,
+        "templateVariant": 1,
+        "openDecoysPerPanel": 9,
+        "irregularity": 0.48,
+        "visualVariant": 710
+      }
+    },
+    {
+      "id": "ep-365d5ee3b8c5aa0f",
+      "cellId": "cell-812f954d9212d624",
+      "split": "confirmatory",
+      "seed": 2910011,
+      "failureModeId": "topological-enclosure-depth",
+      "question": "Which panel contains exactly 12 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetDepth": 12,
+        "panelDepths": [
+          15,
+          11,
+          10,
+          12
+        ],
+        "targetSlot": 3,
+        "templateVariant": 1,
+        "openDecoysPerPanel": 9,
+        "irregularity": 0.48,
+        "visualVariant": 711
+      }
+    },
+    {
+      "id": "ep-2930cf2472bb5825",
+      "cellId": "cell-812f954d9212d624",
+      "split": "confirmatory",
+      "seed": 2910012,
+      "failureModeId": "topological-enclosure-depth",
+      "question": "Which panel contains exactly 11 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetDepth": 11,
+        "panelDepths": [
+          14,
+          13,
+          11,
+          8
+        ],
+        "targetSlot": 2,
+        "templateVariant": 0,
+        "openDecoysPerPanel": 9,
+        "irregularity": 0.48,
+        "visualVariant": 712
+      }
+    },
+    {
+      "id": "ep-b12970287938e002",
+      "cellId": "cell-812f954d9212d624",
+      "split": "confirmatory",
+      "seed": 2910013,
+      "failureModeId": "topological-enclosure-depth",
+      "question": "Which panel contains exactly 12 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetDepth": 12,
+        "panelDepths": [
+          12,
+          13,
+          14,
+          9
+        ],
+        "targetSlot": 0,
+        "templateVariant": 0,
+        "openDecoysPerPanel": 9,
+        "irregularity": 0.48,
+        "visualVariant": 713
+      }
+    },
+    {
+      "id": "ep-7b04b5b6b8d2e1e4",
+      "cellId": "cell-812f954d9212d624",
+      "split": "confirmatory",
+      "seed": 2910014,
+      "failureModeId": "topological-enclosure-depth",
+      "question": "Which panel contains exactly 11 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetDepth": 11,
+        "panelDepths": [
+          16,
+          10,
+          9,
+          11
+        ],
+        "targetSlot": 3,
+        "templateVariant": 1,
+        "openDecoysPerPanel": 9,
+        "irregularity": 0.48,
+        "visualVariant": 714
+      }
+    },
+    {
+      "id": "ep-5ec4aed0c6b20cc2",
+      "cellId": "cell-812f954d9212d624",
+      "split": "confirmatory",
+      "seed": 2910015,
+      "failureModeId": "topological-enclosure-depth",
+      "question": "Which panel contains exactly 12 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetDepth": 12,
+        "panelDepths": [
+          15,
+          12,
+          10,
+          11
+        ],
+        "targetSlot": 1,
+        "templateVariant": 1,
+        "openDecoysPerPanel": 9,
+        "irregularity": 0.48,
+        "visualVariant": 715
+      }
+    }
+  ]
+}
