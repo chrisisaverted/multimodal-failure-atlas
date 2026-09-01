@@ -32,6 +32,7 @@ const sourceManifestSchema = z.object({
       candidateId: z.string(),
       condition: z.string(),
       expectedAnswer: z.string(),
+      answerOptions: z.array(z.string()),
       sha256: z.string(),
     }),
   ),
@@ -60,7 +61,10 @@ const allowPartial = process.argv.includes("--allow-partial");
 if (!inputDirectory) throw new Error("Usage: npm run score:human-study -- --input <packet-directory>");
 
 const blockById = new Map(study.blocks.map((block) => [block.blockId, block]));
-const sourceByCandidate = new Map<string, { expectedAnswer: string; mediaSha256: string }>();
+const sourceByCandidate = new Map<
+  string,
+  { expectedAnswer: string; mediaSha256: string; answerOptions: string[] }
+>();
 for (const family of admitted.families) {
   const source = sourceManifestSchema.parse(
     JSON.parse(await readFile(resolve(`public/evaluations/${family.planId}/manifest.json`), "utf8")),
@@ -69,6 +73,7 @@ for (const family of admitted.families) {
     sourceByCandidate.set(candidate.candidateId, {
       expectedAnswer: candidate.expectedAnswer,
       mediaSha256: candidate.sha256,
+      answerOptions: candidate.answerOptions,
     });
 }
 
@@ -101,6 +106,8 @@ const scored = packets.flatMap(({ name, packet }) => {
     const source = sourceByCandidate.get(response.candidateId);
     if (!source || source.mediaSha256 !== response.mediaSha256)
       throw new Error(`${name}: source binding mismatch for ${response.studyCaseId}`);
+    if (!source.answerOptions.includes(response.selectedAnswer))
+      throw new Error(`${name}: selected answer is outside the assigned forced-choice set`);
     return {
       sessionId: session.sessionId,
       blockId: session.blockId,
