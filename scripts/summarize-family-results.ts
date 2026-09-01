@@ -86,7 +86,7 @@ const admissionByCell = cells.map((cellId) => {
     observedEveryModelBelowHalf:
       Boolean(nativeCondition) &&
       rows.every(
-        (row) => row && row.substantiveAnswers >= 8 && row.solveRate !== null && row.solveRate < 0.5,
+        (row) => row && row.substantiveAnswers >= 16 && row.solveRate !== null && row.solveRate < 0.5,
       ),
   };
 });

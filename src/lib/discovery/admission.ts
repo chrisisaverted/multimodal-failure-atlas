@@ -36,7 +36,7 @@ export interface AdmissionPolicy {
 
 export const frontierAdmissionPolicy: AdmissionPolicy = {
   maximumSolveRateExclusive: 0.5,
-  minimumSubstantiveAnswersPerModel: 8,
+  minimumSubstantiveAnswersPerModel: 16,
   confidenceZ: 1.96,
 };
 
