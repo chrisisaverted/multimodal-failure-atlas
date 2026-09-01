@@ -1,4 +1,4 @@
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { access, mkdir, readFile, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { z } from "zod";
 
@@ -16,6 +16,8 @@ const evidence = evidenceSchema.parse(
 );
 const outputDirectory = resolve("evaluation/plans/replication-v1");
 await mkdir(outputDirectory, { recursive: true });
+const completionOutputDirectory = resolve("evaluation/plans/replication-v1-completion");
+await mkdir(completionOutputDirectory, { recursive: true });
 
 const cohort = [
   {
@@ -33,34 +35,56 @@ const cohort = [
 ] as const;
 
 for (const family of evidence.families) {
-  const protocol = {
-    id: `${family.planId}-external-replication-v1`,
+  const common = {
     cohortId: "external-replication-v1-2026-09-01",
-    frozenAt: "2026-09-01T11:12:00.000Z",
     analysisRole: "Untouched post-confirmatory route replication; never used for generator selection.",
     evaluationPlanId: family.planId,
     evaluationPlanSha256: family.planSha256,
     temperature: 0,
-    maxOutputTokens: 4096,
     reasoning: { effort: "minimal", exclude: true },
     scorer: "terminal-option-v3",
     allowProviderFallbacks: false,
     dataCollection: "deny",
-    campaignCostCeilingUsd: 2,
     substantiveMinimumPerNativeCondition: 16,
+    models: cohort,
+  } as const;
+  const protocol = {
+    ...common,
+    id: `${family.planId}-external-replication-v1`,
+    frozenAt: "2026-09-01T11:12:00.000Z",
+    maxOutputTokens: 4096,
+    campaignCostCeilingUsd: 2,
     canaryPolicy: {
       cases: [0, 1],
       requireNativeAndControlSubstantiveBeforeFullRun: true,
     },
-    models: cohort,
   };
+  const completionProtocol = {
+    ...common,
+    id: `${family.planId}-external-replication-v1-completion`,
+    frozenAt: "2026-09-01T11:18:00.000Z",
+    amendmentReason:
+      "Native canaries exhausted the 4,096-token allowance entirely on hidden reasoning. The original records remain immutable and non-substantive; this prospective protocol raises only the output allowance.",
+    maxOutputTokens: 16384,
+    campaignCostCeilingUsd: 5,
+  };
+  const protocolPath = resolve(outputDirectory, `${family.planId}.json`);
+  try {
+    await access(protocolPath);
+  } catch {
+    await writeFile(protocolPath, `${JSON.stringify(protocol, null, 2)}\n`, "utf8");
+  }
   await writeFile(
-    resolve(outputDirectory, `${family.planId}.json`),
-    `${JSON.stringify(protocol, null, 2)}\n`,
+    resolve(completionOutputDirectory, `${family.planId}.json`),
+    `${JSON.stringify(completionProtocol, null, 2)}\n`,
     "utf8",
   );
 }
 
 console.log(
-  JSON.stringify({ protocols: evidence.families.length, cohort: cohort.map(({ modelId }) => modelId) }),
+  JSON.stringify({
+    protocols: evidence.families.length,
+    completionProtocols: evidence.families.length,
+    cohort: cohort.map(({ modelId }) => modelId),
+  }),
 );
