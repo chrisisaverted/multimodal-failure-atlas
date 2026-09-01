@@ -89,8 +89,19 @@ import { applyTransfers, createCausalTransferGrid } from "./causal-transfer";
 import { applyConservation, createConservationGrid } from "./conservation-ledger";
 import { createSymmetryGrid, symmetryMatrix } from "./symmetry-search";
 import { applySwaps, createSwapTrackingGrid } from "./swap-tracking";
+import { coflashPairCounts, createCoflashGrid } from "./coflash-counting";
 
 describe("adaptive multimodal discovery", () => {
+  it("binds a unique exactly-four coflash pair in each balanced video", () => {
+    const candidates = createCoflashGrid();
+    expect(candidates).toHaveLength(8);
+    for (const candidate of candidates) {
+      const counts = coflashPairCounts(candidate.parameters.beats);
+      expect(counts[candidate.parameters.targetPair]).toBe(4);
+      expect(counts.filter(value => value === 4)).toHaveLength(1);
+    }
+  });
+
   it("binds every sequential swap case to its balanced target slot", () => {
     const candidates = createSwapTrackingGrid();
     expect(candidates).toHaveLength(8);

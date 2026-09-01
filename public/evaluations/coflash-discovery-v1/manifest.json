@@ -1,0 +1,905 @@
+{
+  "id": "coflash-discovery-v1",
+  "planSha256": "da5922e0c84a54213be5bbdfb7e6b57cba2f7bec0f298626f6f594d347349c1d",
+  "generatorVersion": "distributed-coflash-counting-v1",
+  "renderer": "coflash-svg-raster-v1",
+  "fps": 30,
+  "cases": [
+    {
+      "candidateId": "cf-c52229fe87102e21",
+      "cellId": "cell-eighteen-distributed-coflashes",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Eighteen discrete beats each activate two of four labeled streams.",
+      "failureModeId": "distributed-temporal-cooccurrence-counting",
+      "generator": "coflash-counting",
+      "seed": 3200000,
+      "difficulty": 90,
+      "variant": 0,
+      "artifact": "public/evaluations/coflash-discovery-v1/cf-c52229fe87102e21.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 12800,
+      "question": "Which listed pair flashes together exactly FOUR times across the complete video? Count only simultaneous flashes within one beat.",
+      "answerOptions": [
+        "B+D",
+        "A+B",
+        "C+D",
+        "A+C"
+      ],
+      "expectedAnswer": "A+B",
+      "sha256": "769a10c5324926b90cb5ddc95f362834b4617b924fa7e8dd32f05e44f78c5e8c",
+      "parameters": {
+        "targetPair": 0,
+        "beats": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "pairCounts": [
+          4,
+          2,
+          3,
+          1
+        ],
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 0
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count pairwise simultaneous flashes over all eighteen beats. Return exactly one allowed pair and do not explain."
+    },
+    {
+      "candidateId": "cf-a97ffe89100638c2",
+      "cellId": "cell-eighteen-distributed-coflashes",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Eighteen discrete beats each activate two of four labeled streams.",
+      "failureModeId": "distributed-temporal-cooccurrence-counting",
+      "generator": "coflash-counting",
+      "seed": 3200001,
+      "difficulty": 90,
+      "variant": 1,
+      "artifact": "public/evaluations/coflash-discovery-v1/cf-a97ffe89100638c2.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 12800,
+      "question": "Which listed pair flashes together exactly FOUR times across the complete video? Count only simultaneous flashes within one beat.",
+      "answerOptions": [
+        "A+B",
+        "B+D",
+        "C+D",
+        "A+C"
+      ],
+      "expectedAnswer": "A+C",
+      "sha256": "90e926ddfac4b7c47d0c272793c8c6eb09405240748078b7d4dc735b7d3b5da6",
+      "parameters": {
+        "targetPair": 1,
+        "beats": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "pairCounts": [
+          1,
+          4,
+          3,
+          2
+        ],
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 1
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count pairwise simultaneous flashes over all eighteen beats. Return exactly one allowed pair and do not explain."
+    },
+    {
+      "candidateId": "cf-7e5a8f9459f633fe",
+      "cellId": "cell-eighteen-distributed-coflashes",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Eighteen discrete beats each activate two of four labeled streams.",
+      "failureModeId": "distributed-temporal-cooccurrence-counting",
+      "generator": "coflash-counting",
+      "seed": 3200002,
+      "difficulty": 90,
+      "variant": 2,
+      "artifact": "public/evaluations/coflash-discovery-v1/cf-7e5a8f9459f633fe.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 12800,
+      "question": "Which listed pair flashes together exactly FOUR times across the complete video? Count only simultaneous flashes within one beat.",
+      "answerOptions": [
+        "B+D",
+        "A+B",
+        "C+D",
+        "A+C"
+      ],
+      "expectedAnswer": "B+D",
+      "sha256": "dc8f800fa90b45f9d6f25cd7560b18829c515d515cc061cead7f72e8bf0b6994",
+      "parameters": {
+        "targetPair": 2,
+        "beats": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "pairCounts": [
+          1,
+          2,
+          4,
+          3
+        ],
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 2
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count pairwise simultaneous flashes over all eighteen beats. Return exactly one allowed pair and do not explain."
+    },
+    {
+      "candidateId": "cf-5d749d1bd13da65e",
+      "cellId": "cell-eighteen-distributed-coflashes",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Eighteen discrete beats each activate two of four labeled streams.",
+      "failureModeId": "distributed-temporal-cooccurrence-counting",
+      "generator": "coflash-counting",
+      "seed": 3200003,
+      "difficulty": 90,
+      "variant": 3,
+      "artifact": "public/evaluations/coflash-discovery-v1/cf-5d749d1bd13da65e.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 12800,
+      "question": "Which listed pair flashes together exactly FOUR times across the complete video? Count only simultaneous flashes within one beat.",
+      "answerOptions": [
+        "C+D",
+        "A+B",
+        "B+D",
+        "A+C"
+      ],
+      "expectedAnswer": "C+D",
+      "sha256": "3ec3a38754ce52519f689fea27005d377715d30fa775a28403e6c18bfdf4bb3b",
+      "parameters": {
+        "targetPair": 3,
+        "beats": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "pairCounts": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 3
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count pairwise simultaneous flashes over all eighteen beats. Return exactly one allowed pair and do not explain."
+    },
+    {
+      "candidateId": "cf-0e2f0f907a4b8545",
+      "cellId": "cell-eighteen-distributed-coflashes",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Eighteen discrete beats each activate two of four labeled streams.",
+      "failureModeId": "distributed-temporal-cooccurrence-counting",
+      "generator": "coflash-counting",
+      "seed": 3200004,
+      "difficulty": 90,
+      "variant": 4,
+      "artifact": "public/evaluations/coflash-discovery-v1/cf-0e2f0f907a4b8545.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 12800,
+      "question": "Which listed pair flashes together exactly FOUR times across the complete video? Count only simultaneous flashes within one beat.",
+      "answerOptions": [
+        "A+B",
+        "C+D",
+        "B+D",
+        "A+C"
+      ],
+      "expectedAnswer": "A+B",
+      "sha256": "96238d1e9eb4b0b1294c8195525c3cf92a3399112eab49a4c860ed786b84e712",
+      "parameters": {
+        "targetPair": 0,
+        "beats": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "pairCounts": [
+          4,
+          2,
+          3,
+          1
+        ],
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 4
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count pairwise simultaneous flashes over all eighteen beats. Return exactly one allowed pair and do not explain."
+    },
+    {
+      "candidateId": "cf-360b06938db662ef",
+      "cellId": "cell-eighteen-distributed-coflashes",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Eighteen discrete beats each activate two of four labeled streams.",
+      "failureModeId": "distributed-temporal-cooccurrence-counting",
+      "generator": "coflash-counting",
+      "seed": 3200005,
+      "difficulty": 90,
+      "variant": 5,
+      "artifact": "public/evaluations/coflash-discovery-v1/cf-360b06938db662ef.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 12800,
+      "question": "Which listed pair flashes together exactly FOUR times across the complete video? Count only simultaneous flashes within one beat.",
+      "answerOptions": [
+        "C+D",
+        "A+B",
+        "B+D",
+        "A+C"
+      ],
+      "expectedAnswer": "A+C",
+      "sha256": "b2297ef3752108e454ab4357cc92b0d5df82ea0400c0a5e0212287b6b07fddf7",
+      "parameters": {
+        "targetPair": 1,
+        "beats": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "pairCounts": [
+          1,
+          4,
+          3,
+          2
+        ],
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 5
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count pairwise simultaneous flashes over all eighteen beats. Return exactly one allowed pair and do not explain."
+    },
+    {
+      "candidateId": "cf-f2dec36a206d99f6",
+      "cellId": "cell-eighteen-distributed-coflashes",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Eighteen discrete beats each activate two of four labeled streams.",
+      "failureModeId": "distributed-temporal-cooccurrence-counting",
+      "generator": "coflash-counting",
+      "seed": 3200006,
+      "difficulty": 90,
+      "variant": 6,
+      "artifact": "public/evaluations/coflash-discovery-v1/cf-f2dec36a206d99f6.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 12800,
+      "question": "Which listed pair flashes together exactly FOUR times across the complete video? Count only simultaneous flashes within one beat.",
+      "answerOptions": [
+        "C+D",
+        "A+B",
+        "B+D",
+        "A+C"
+      ],
+      "expectedAnswer": "B+D",
+      "sha256": "e1c526f48419827b366df326837f0e5b2ce3c615691bebb7d6b4e134968dcc1f",
+      "parameters": {
+        "targetPair": 2,
+        "beats": [
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "pairCounts": [
+          1,
+          2,
+          4,
+          3
+        ],
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 6
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count pairwise simultaneous flashes over all eighteen beats. Return exactly one allowed pair and do not explain."
+    },
+    {
+      "candidateId": "cf-5017e916d7d71ed2",
+      "cellId": "cell-eighteen-distributed-coflashes",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Eighteen discrete beats each activate two of four labeled streams.",
+      "failureModeId": "distributed-temporal-cooccurrence-counting",
+      "generator": "coflash-counting",
+      "seed": 3200007,
+      "difficulty": 90,
+      "variant": 7,
+      "artifact": "public/evaluations/coflash-discovery-v1/cf-5017e916d7d71ed2.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 12800,
+      "question": "Which listed pair flashes together exactly FOUR times across the complete video? Count only simultaneous flashes within one beat.",
+      "answerOptions": [
+        "B+D",
+        "C+D",
+        "A+B",
+        "A+C"
+      ],
+      "expectedAnswer": "C+D",
+      "sha256": "b7c1dba192ea5608c6d71d7a8efb6f4006a6f59b629e09930d05c12cdf8819d5",
+      "parameters": {
+        "targetPair": 3,
+        "beats": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "pairCounts": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 7
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count pairwise simultaneous flashes over all eighteen beats. Return exactly one allowed pair and do not explain."
+    }
+  ]
+}

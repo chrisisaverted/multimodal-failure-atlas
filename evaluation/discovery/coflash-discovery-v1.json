@@ -1,0 +1,824 @@
+{
+  "id": "coflash-discovery-v1",
+  "generatorVersion": "distributed-coflash-counting-v1",
+  "status": "discovery-only",
+  "hypothesis": "Video models fail to aggregate exact pairwise temporal co-occurrences across distributed streams.",
+  "candidates": [
+    {
+      "id": "cf-c52229fe87102e21",
+      "cellId": "cell-eighteen-distributed-coflashes",
+      "split": "discovery",
+      "seed": 3200000,
+      "failureModeId": "distributed-temporal-cooccurrence-counting",
+      "question": "Which listed pair flashes together exactly FOUR times across the complete video? Count only simultaneous flashes within one beat.",
+      "answerOptions": [
+        "B+D",
+        "A+B",
+        "C+D",
+        "A+C"
+      ],
+      "expectedAnswer": "A+B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetPair": 0,
+        "beats": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "pairCounts": [
+          4,
+          2,
+          3,
+          1
+        ],
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 0
+      }
+    },
+    {
+      "id": "cf-a97ffe89100638c2",
+      "cellId": "cell-eighteen-distributed-coflashes",
+      "split": "discovery",
+      "seed": 3200001,
+      "failureModeId": "distributed-temporal-cooccurrence-counting",
+      "question": "Which listed pair flashes together exactly FOUR times across the complete video? Count only simultaneous flashes within one beat.",
+      "answerOptions": [
+        "A+B",
+        "B+D",
+        "C+D",
+        "A+C"
+      ],
+      "expectedAnswer": "A+C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetPair": 1,
+        "beats": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "pairCounts": [
+          1,
+          4,
+          3,
+          2
+        ],
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 1
+      }
+    },
+    {
+      "id": "cf-7e5a8f9459f633fe",
+      "cellId": "cell-eighteen-distributed-coflashes",
+      "split": "discovery",
+      "seed": 3200002,
+      "failureModeId": "distributed-temporal-cooccurrence-counting",
+      "question": "Which listed pair flashes together exactly FOUR times across the complete video? Count only simultaneous flashes within one beat.",
+      "answerOptions": [
+        "B+D",
+        "A+B",
+        "C+D",
+        "A+C"
+      ],
+      "expectedAnswer": "B+D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetPair": 2,
+        "beats": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "pairCounts": [
+          1,
+          2,
+          4,
+          3
+        ],
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 2
+      }
+    },
+    {
+      "id": "cf-5d749d1bd13da65e",
+      "cellId": "cell-eighteen-distributed-coflashes",
+      "split": "discovery",
+      "seed": 3200003,
+      "failureModeId": "distributed-temporal-cooccurrence-counting",
+      "question": "Which listed pair flashes together exactly FOUR times across the complete video? Count only simultaneous flashes within one beat.",
+      "answerOptions": [
+        "C+D",
+        "A+B",
+        "B+D",
+        "A+C"
+      ],
+      "expectedAnswer": "C+D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetPair": 3,
+        "beats": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "pairCounts": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 3
+      }
+    },
+    {
+      "id": "cf-0e2f0f907a4b8545",
+      "cellId": "cell-eighteen-distributed-coflashes",
+      "split": "discovery",
+      "seed": 3200004,
+      "failureModeId": "distributed-temporal-cooccurrence-counting",
+      "question": "Which listed pair flashes together exactly FOUR times across the complete video? Count only simultaneous flashes within one beat.",
+      "answerOptions": [
+        "A+B",
+        "C+D",
+        "B+D",
+        "A+C"
+      ],
+      "expectedAnswer": "A+B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetPair": 0,
+        "beats": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "pairCounts": [
+          4,
+          2,
+          3,
+          1
+        ],
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 4
+      }
+    },
+    {
+      "id": "cf-360b06938db662ef",
+      "cellId": "cell-eighteen-distributed-coflashes",
+      "split": "discovery",
+      "seed": 3200005,
+      "failureModeId": "distributed-temporal-cooccurrence-counting",
+      "question": "Which listed pair flashes together exactly FOUR times across the complete video? Count only simultaneous flashes within one beat.",
+      "answerOptions": [
+        "C+D",
+        "A+B",
+        "B+D",
+        "A+C"
+      ],
+      "expectedAnswer": "A+C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetPair": 1,
+        "beats": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "pairCounts": [
+          1,
+          4,
+          3,
+          2
+        ],
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 5
+      }
+    },
+    {
+      "id": "cf-f2dec36a206d99f6",
+      "cellId": "cell-eighteen-distributed-coflashes",
+      "split": "discovery",
+      "seed": 3200006,
+      "failureModeId": "distributed-temporal-cooccurrence-counting",
+      "question": "Which listed pair flashes together exactly FOUR times across the complete video? Count only simultaneous flashes within one beat.",
+      "answerOptions": [
+        "C+D",
+        "A+B",
+        "B+D",
+        "A+C"
+      ],
+      "expectedAnswer": "B+D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetPair": 2,
+        "beats": [
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "pairCounts": [
+          1,
+          2,
+          4,
+          3
+        ],
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 6
+      }
+    },
+    {
+      "id": "cf-5017e916d7d71ed2",
+      "cellId": "cell-eighteen-distributed-coflashes",
+      "split": "discovery",
+      "seed": 3200007,
+      "failureModeId": "distributed-temporal-cooccurrence-counting",
+      "question": "Which listed pair flashes together exactly FOUR times across the complete video? Count only simultaneous flashes within one beat.",
+      "answerOptions": [
+        "B+D",
+        "C+D",
+        "A+B",
+        "A+C"
+      ],
+      "expectedAnswer": "C+D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetPair": 3,
+        "beats": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "pairCounts": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 7
+      }
+    }
+  ]
+}
