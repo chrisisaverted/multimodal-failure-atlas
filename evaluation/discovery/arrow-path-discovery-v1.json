@@ -1,0 +1,296 @@
+{
+  "id": "arrow-path-discovery-v1",
+  "generatorVersion": "temporal-arrow-path-integration-v1",
+  "status": "discovery-only",
+  "hypothesis": "Video models fail to integrate a temporally distributed visuospatial path into a final location.",
+  "candidates": [
+    {
+      "id": "ap-995e23de93aba86a",
+      "cellId": "cell-twelve-arrow-hidden-grid-path",
+      "split": "discovery",
+      "seed": 4100000,
+      "failureModeId": "temporal-visuospatial-path-integration",
+      "question": "Start at C3. Apply all 12 arrows in order, moving one grid cell per arrow. Which corner cell do you finish on?",
+      "answerOptions": [
+        "E1",
+        "A5",
+        "E5",
+        "A1"
+      ],
+      "expectedAnswer": "A1",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetCorner": 0,
+        "moves": [
+          "LEFT",
+          "RIGHT",
+          "UP",
+          "DOWN",
+          "UP",
+          "UP",
+          "LEFT",
+          "RIGHT",
+          "LEFT",
+          "RIGHT",
+          "LEFT",
+          "LEFT"
+        ],
+        "videoDurationMs": 9800,
+        "fps": 30,
+        "visualVariant": 0
+      }
+    },
+    {
+      "id": "ap-b5ba59b0a168da49",
+      "cellId": "cell-twelve-arrow-hidden-grid-path",
+      "split": "discovery",
+      "seed": 4100001,
+      "failureModeId": "temporal-visuospatial-path-integration",
+      "question": "Start at C3. Apply all 12 arrows in order, moving one grid cell per arrow. Which corner cell do you finish on?",
+      "answerOptions": [
+        "A5",
+        "E1",
+        "E5",
+        "A1"
+      ],
+      "expectedAnswer": "E1",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetCorner": 1,
+        "moves": [
+          "LEFT",
+          "RIGHT",
+          "RIGHT",
+          "RIGHT",
+          "LEFT",
+          "UP",
+          "RIGHT",
+          "LEFT",
+          "UP",
+          "DOWN",
+          "UP",
+          "RIGHT"
+        ],
+        "videoDurationMs": 9800,
+        "fps": 30,
+        "visualVariant": 1
+      }
+    },
+    {
+      "id": "ap-394b861e9a3584f4",
+      "cellId": "cell-twelve-arrow-hidden-grid-path",
+      "split": "discovery",
+      "seed": 4100002,
+      "failureModeId": "temporal-visuospatial-path-integration",
+      "question": "Start at C3. Apply all 12 arrows in order, moving one grid cell per arrow. Which corner cell do you finish on?",
+      "answerOptions": [
+        "A5",
+        "E1",
+        "E5",
+        "A1"
+      ],
+      "expectedAnswer": "A5",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetCorner": 2,
+        "moves": [
+          "LEFT",
+          "RIGHT",
+          "DOWN",
+          "UP",
+          "DOWN",
+          "LEFT",
+          "UP",
+          "DOWN",
+          "DOWN",
+          "UP",
+          "DOWN",
+          "LEFT"
+        ],
+        "videoDurationMs": 9800,
+        "fps": 30,
+        "visualVariant": 2
+      }
+    },
+    {
+      "id": "ap-198f7d0686384e79",
+      "cellId": "cell-twelve-arrow-hidden-grid-path",
+      "split": "discovery",
+      "seed": 4100003,
+      "failureModeId": "temporal-visuospatial-path-integration",
+      "question": "Start at C3. Apply all 12 arrows in order, moving one grid cell per arrow. Which corner cell do you finish on?",
+      "answerOptions": [
+        "A5",
+        "E5",
+        "E1",
+        "A1"
+      ],
+      "expectedAnswer": "E5",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetCorner": 3,
+        "moves": [
+          "LEFT",
+          "RIGHT",
+          "RIGHT",
+          "DOWN",
+          "UP",
+          "DOWN",
+          "LEFT",
+          "RIGHT",
+          "DOWN",
+          "RIGHT",
+          "LEFT",
+          "RIGHT"
+        ],
+        "videoDurationMs": 9800,
+        "fps": 30,
+        "visualVariant": 3
+      }
+    },
+    {
+      "id": "ap-5b66c1f3b1741e59",
+      "cellId": "cell-twelve-arrow-hidden-grid-path",
+      "split": "discovery",
+      "seed": 4100004,
+      "failureModeId": "temporal-visuospatial-path-integration",
+      "question": "Start at C3. Apply all 12 arrows in order, moving one grid cell per arrow. Which corner cell do you finish on?",
+      "answerOptions": [
+        "E5",
+        "A5",
+        "E1",
+        "A1"
+      ],
+      "expectedAnswer": "A1",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetCorner": 0,
+        "moves": [
+          "LEFT",
+          "RIGHT",
+          "LEFT",
+          "RIGHT",
+          "LEFT",
+          "UP",
+          "DOWN",
+          "UP",
+          "UP",
+          "LEFT",
+          "RIGHT",
+          "LEFT"
+        ],
+        "videoDurationMs": 9800,
+        "fps": 30,
+        "visualVariant": 4
+      }
+    },
+    {
+      "id": "ap-600ecd6939a4357d",
+      "cellId": "cell-twelve-arrow-hidden-grid-path",
+      "split": "discovery",
+      "seed": 4100005,
+      "failureModeId": "temporal-visuospatial-path-integration",
+      "question": "Start at C3. Apply all 12 arrows in order, moving one grid cell per arrow. Which corner cell do you finish on?",
+      "answerOptions": [
+        "E5",
+        "A5",
+        "E1",
+        "A1"
+      ],
+      "expectedAnswer": "E1",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetCorner": 1,
+        "moves": [
+          "LEFT",
+          "RIGHT",
+          "UP",
+          "UP",
+          "DOWN",
+          "RIGHT",
+          "RIGHT",
+          "LEFT",
+          "UP",
+          "RIGHT",
+          "LEFT",
+          "RIGHT"
+        ],
+        "videoDurationMs": 9800,
+        "fps": 30,
+        "visualVariant": 5
+      }
+    },
+    {
+      "id": "ap-5cce5e2b81eb5249",
+      "cellId": "cell-twelve-arrow-hidden-grid-path",
+      "split": "discovery",
+      "seed": 4100006,
+      "failureModeId": "temporal-visuospatial-path-integration",
+      "question": "Start at C3. Apply all 12 arrows in order, moving one grid cell per arrow. Which corner cell do you finish on?",
+      "answerOptions": [
+        "A5",
+        "E5",
+        "E1",
+        "A1"
+      ],
+      "expectedAnswer": "A5",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetCorner": 2,
+        "moves": [
+          "UP",
+          "DOWN",
+          "LEFT",
+          "DOWN",
+          "UP",
+          "DOWN",
+          "UP",
+          "DOWN",
+          "DOWN",
+          "LEFT",
+          "RIGHT",
+          "LEFT"
+        ],
+        "videoDurationMs": 9800,
+        "fps": 30,
+        "visualVariant": 6
+      }
+    },
+    {
+      "id": "ap-3a262143fe14ce3c",
+      "cellId": "cell-twelve-arrow-hidden-grid-path",
+      "split": "discovery",
+      "seed": 4100007,
+      "failureModeId": "temporal-visuospatial-path-integration",
+      "question": "Start at C3. Apply all 12 arrows in order, moving one grid cell per arrow. Which corner cell do you finish on?",
+      "answerOptions": [
+        "E5",
+        "E1",
+        "A5",
+        "A1"
+      ],
+      "expectedAnswer": "E5",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetCorner": 3,
+        "moves": [
+          "UP",
+          "DOWN",
+          "RIGHT",
+          "RIGHT",
+          "LEFT",
+          "DOWN",
+          "LEFT",
+          "RIGHT",
+          "DOWN",
+          "UP",
+          "DOWN",
+          "RIGHT"
+        ],
+        "videoDurationMs": 9800,
+        "fps": 30,
+        "visualVariant": 7
+      }
+    }
+  ]
+}

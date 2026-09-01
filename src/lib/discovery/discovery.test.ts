@@ -98,8 +98,13 @@ import { createCollisionGrid } from "./collision-timing";
 import { containmentCounts, createIntervalGrid } from "./interval-containment";
 import { createTrajectoryGrid } from "./occluded-trajectory";
 import { createCubeNetGrid, cubeFaceAnswers, foldNet } from "./cube-net";
+import { applyArrowPath, createArrowPathGrid } from "./arrow-path";
 
 describe("adaptive multimodal discovery", () => {
+  it("binds twelve-arrow video paths to balanced corner endpoints", () => {
+    for (const candidate of createArrowPathGrid()) expect(applyArrowPath(candidate.parameters.moves).label).toBe(candidate.expectedAnswer);
+  });
+
   it("generates valid cube nets with six normals and exact opposite labels", () => {
     for (const candidate of createCubeNetGrid()) {
       const folded = foldNet(candidate.parameters.cells); expect(folded).not.toBeNull();

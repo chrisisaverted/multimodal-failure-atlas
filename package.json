@@ -106,6 +106,8 @@
     "generate:occluded-trajectory": "tsx scripts/materialize-occluded-trajectory.ts",
     "plan:cube-net": "tsx scripts/plan-cube-net.ts",
     "generate:cube-net": "tsx scripts/materialize-cube-net.ts",
+    "plan:arrow-path": "tsx scripts/plan-arrow-path.ts",
+    "generate:arrow-path": "tsx scripts/materialize-arrow-path.ts",
     "publish:adaptive": "tsx scripts/publish-adaptive-results.ts",
     "publish:precision-wire": "tsx scripts/publish-precision-wire-results.ts",
     "evaluate": "tsx scripts/evaluate.ts",
