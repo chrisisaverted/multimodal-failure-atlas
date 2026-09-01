@@ -18,6 +18,8 @@ const outputDirectory = resolve("evaluation/plans/replication-v1");
 await mkdir(outputDirectory, { recursive: true });
 const completionOutputDirectory = resolve("evaluation/plans/replication-v1-completion");
 await mkdir(completionOutputDirectory, { recursive: true });
+const answerOutputDirectory = resolve("evaluation/plans/replication-v1-no-reasoning");
+await mkdir(answerOutputDirectory, { recursive: true });
 
 const cohort = [
   {
@@ -68,6 +70,16 @@ for (const family of evidence.families) {
     maxOutputTokens: 16384,
     campaignCostCeilingUsd: 5,
   };
+  const answerProtocol = {
+    ...common,
+    id: `${family.planId}-external-replication-v1-no-reasoning`,
+    frozenAt: "2026-09-01T11:27:00.000Z",
+    amendmentReason:
+      "Both added routes exhausted 16,384 hidden-reasoning tokens on native canaries without emitting an answer. Their non-substantive attempts remain immutable; this route-specific repair disables hidden reasoning, matching the answer-emission repair used for Kimi in the original cohort.",
+    maxOutputTokens: 4096,
+    reasoning: { effort: "none", exclude: true },
+    campaignCostCeilingUsd: 2,
+  };
   const protocolPath = resolve(outputDirectory, `${family.planId}.json`);
   try {
     await access(protocolPath);
@@ -79,12 +91,18 @@ for (const family of evidence.families) {
     `${JSON.stringify(completionProtocol, null, 2)}\n`,
     "utf8",
   );
+  await writeFile(
+    resolve(answerOutputDirectory, `${family.planId}.json`),
+    `${JSON.stringify(answerProtocol, null, 2)}\n`,
+    "utf8",
+  );
 }
 
 console.log(
   JSON.stringify({
     protocols: evidence.families.length,
     completionProtocols: evidence.families.length,
+    noReasoningProtocols: evidence.families.length,
     cohort: cohort.map(({ modelId }) => modelId),
   }),
 );
