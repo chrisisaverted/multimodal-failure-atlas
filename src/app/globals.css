@@ -1732,6 +1732,15 @@ select {
   font-size: 64px;
   font-weight: 420;
 }
+.baseline-reset {
+  margin: 22px auto 0;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
 .prose-columns {
   columns: 2;
   column-gap: 50px;
@@ -2551,6 +2560,75 @@ select {
   text-transform: uppercase;
 }
 
+.research-agenda-link {
+  margin-bottom: 45px;
+  border-top: 1px solid var(--ink);
+}
+.direction-priority {
+  display: grid;
+  grid-template-columns: 56px minmax(0, 760px);
+  gap: 22px;
+  margin-bottom: 70px;
+  padding: 35px;
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  color: var(--paper);
+}
+.direction-priority svg {
+  color: var(--citron);
+}
+.direction-priority h2 {
+  margin: 10px 0 14px;
+  color: var(--citron);
+  font: 45px/1 var(--serif);
+}
+.direction-priority p:not(.eyebrow) {
+  margin: 0;
+  color: #c8c4ba;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.direction-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 1px solid var(--ink);
+  border-left: 1px solid var(--line);
+}
+.direction-grid article {
+  min-height: 330px;
+  padding: 30px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.direction-grid article > span {
+  color: var(--vermillion);
+  font: 10px monospace;
+}
+.direction-grid h2 {
+  margin: 25px 0 15px;
+  font: 36px/1 var(--serif);
+  letter-spacing: -0.035em;
+}
+.direction-grid h3 {
+  max-width: 470px;
+  margin: 0 0 22px;
+  font-size: 15px;
+  line-height: 1.45;
+}
+.direction-grid p {
+  max-width: 480px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+.direction-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-top: 50px;
+}
+
 @media (max-width: 1000px) {
   .site-header {
     grid-template-columns: 160px 1fr 70px;
@@ -2631,6 +2709,9 @@ select {
   }
   .verified-family {
     grid-template-columns: 45px minmax(0, 1fr) 90px;
+  }
+  .direction-grid {
+    grid-template-columns: 1fr;
   }
   .verified-route-grid {
     grid-column: 2 / -1;
@@ -2960,6 +3041,21 @@ select {
     align-items: flex-start;
     flex-direction: column;
     padding-block: 52px;
+  }
+  .direction-priority {
+    grid-template-columns: 1fr;
+    padding: 25px;
+  }
+  .direction-priority h2 {
+    font-size: 38px;
+  }
+  .direction-grid article {
+    min-height: 0;
+    padding: 25px;
+  }
+  .direction-links {
+    align-items: flex-start;
+    flex-direction: column;
   }
   .verified-callout h2 {
     font-size: 43px;

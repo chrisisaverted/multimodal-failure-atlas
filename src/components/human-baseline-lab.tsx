@@ -19,10 +19,12 @@ interface BaselineResponse {
   expectedAnswer: string;
   correct: boolean;
   responseTimeMs: number;
+  seekEvents: number;
+  playbackRateChanges: number;
   recordedAt: string;
 }
 
-const storageKey = "failure-atlas-human-self-test-v2";
+const storageKey = "failure-atlas-human-self-test-strict20-v3";
 
 export function HumanBaselineLab({ cases, basePath }: { cases: BaselineCase[]; basePath: string }) {
   const [index, setIndex] = useState(0);
@@ -30,6 +32,8 @@ export function HumanBaselineLab({ cases, basePath }: { cases: BaselineCase[]; b
   const [selected, setSelected] = useState<string>();
   const [mediaComplete, setMediaComplete] = useState(false);
   const startedAt = useRef(0);
+  const seekEvents = useRef(0);
+  const playbackRateChanges = useRef(0);
   const current = cases[index];
 
   useEffect(() => {
@@ -37,7 +41,10 @@ export function HumanBaselineLab({ cases, basePath }: { cases: BaselineCase[]; b
       try {
         const stored = localStorage.getItem(storageKey);
         if (!stored) return;
-        const restored = JSON.parse(stored) as BaselineResponse[];
+        const candidateIds = new Set(cases.map((candidate) => candidate.candidateId));
+        const restored = (JSON.parse(stored) as BaselineResponse[]).filter((response) =>
+          candidateIds.has(response.candidateId),
+        );
         setResponses(restored);
         const answered = new Set(restored.map((response) => response.candidateId));
         const firstUnanswered = cases.findIndex((candidate) => !answered.has(candidate.candidateId));
@@ -62,6 +69,8 @@ export function HumanBaselineLab({ cases, basePath }: { cases: BaselineCase[]; b
       expectedAnswer: current.expectedAnswer,
       correct: value === current.expectedAnswer,
       responseTimeMs: Math.max(0, Math.round(eventTimeStamp - startedAt.current)),
+      seekEvents: seekEvents.current,
+      playbackRateChanges: playbackRateChanges.current,
       recordedAt: new Date().toISOString(),
     };
     const next = [...responses.filter((item) => item.candidateId !== current.candidateId), response];
@@ -79,14 +88,16 @@ export function HumanBaselineLab({ cases, basePath }: { cases: BaselineCase[]; b
     setSelected(undefined);
     setMediaComplete(false);
     startedAt.current = 0;
+    seekEvents.current = 0;
+    playbackRateChanges.current = 0;
   }
 
   function exportSession() {
     const payload = {
-      protocol: "human-self-test-v2",
+      protocol: "human-self-test-strict20-v3",
       disclaimer: "Local self-test; not an aggregated or research-grade human baseline.",
       displayProtocol:
-        "Native browser media controls; video answers unlock only after the ended event; one response per specimen; truth revealed after response.",
+        "Native browser media controls; video answers unlock only after the ended event; seek and playback-rate events are recorded; one response per specimen; truth revealed after response.",
       userAgent: navigator.userAgent,
       responses,
     };
@@ -100,6 +111,21 @@ export function HumanBaselineLab({ cases, basePath }: { cases: BaselineCase[]; b
     URL.revokeObjectURL(url);
   }
 
+  function resetSession() {
+    try {
+      localStorage.removeItem(storageKey);
+    } catch {
+      // In-memory reset still works when persistence is unavailable.
+    }
+    setResponses([]);
+    setIndex(0);
+    setSelected(undefined);
+    setMediaComplete(false);
+    startedAt.current = 0;
+    seekEvents.current = 0;
+    playbackRateChanges.current = 0;
+  }
+
   if (!current) {
     return (
       <div className="baseline-complete">
@@ -111,6 +137,9 @@ export function HumanBaselineLab({ cases, basePath }: { cases: BaselineCase[]; b
         </p>
         <button className="button-primary" type="button" onClick={exportSession}>
           Download session JSON
+        </button>
+        <button className="text-link baseline-reset" type="button" onClick={resetSession}>
+          Start a fresh local session
         </button>
       </div>
     );
@@ -149,6 +178,12 @@ export function HumanBaselineLab({ cases, basePath }: { cases: BaselineCase[]; b
           }}
           onEnded={() => {
             setMediaComplete(true);
+          }}
+          onSeeking={() => {
+            seekEvents.current += 1;
+          }}
+          onRateChange={() => {
+            playbackRateChanges.current += 1;
           }}
           aria-label={`Counting specimen ${index + 1}`}
         >

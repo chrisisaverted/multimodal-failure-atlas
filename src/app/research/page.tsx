@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { citations } from "@/lib/sources";
 
@@ -19,6 +20,10 @@ export default function ResearchPage() {
           retrieval dates make every atlas claim traceable.
         </p>
       </header>
+      <Link className="wide-link research-agenda-link" href="/directions">
+        <span>Open the experiment agenda derived from the first 20 strict families</span>
+        <ArrowUpRight size={21} />
+      </Link>
       <div className="research-list">
         {citations
           .sort((a, b) => b.year - a.year)

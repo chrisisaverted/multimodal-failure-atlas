@@ -49,7 +49,8 @@ protocol, route, media hash, and cost ceiling pass validation.
 See [docs/architecture.md](docs/architecture.md), [docs/methods.md](docs/methods.md),
 [docs/adaptive-discovery.md](docs/adaptive-discovery.md), [docs/evaluation.md](docs/evaluation.md),
 [docs/bibliography.md](docs/bibliography.md), [docs/provider-landscape.md](docs/provider-landscape.md),
-[docs/verified-findings.md](docs/verified-findings.md), and [docs/hosting.md](docs/hosting.md).
+[docs/verified-findings.md](docs/verified-findings.md), [docs/research-directions.md](docs/research-directions.md),
+and [docs/hosting.md](docs/hosting.md).
 
 ## Evaluation smoke test
 
