@@ -33,3 +33,12 @@ Before designing or running paid multimodal failure searches, read
 - Never reinterpret a multi-family completion target as “find at least one.” Keep the active goal open
   until every requested family count, modality count, minimum work duration, build gate, and public
   verification requirement is satisfied.
+- Published admission requires at least 16 substantive native answers per route. Preserve and exclude
+  every exhausted, empty, errored, or parser-pending request; fill missing denominators only with a
+  prospective case-specific completion plan that leaves the original record intact.
+- A successful discovery screen is not a finding. Record rejected seed-disjoint holdouts in the family
+  ledger, including reversals where a route rises to or above the threshold.
+- Weak oracle-control recovery limits attribution but does not manufacture native difficulty. Report the
+  control denominator and downgrade the mechanism claim instead of discarding or overexplaining it.
+- Evaluation plan conditions may be interleaved. Select shards by manifest condition, candidate ID, and
+  route—not by assuming positional offsets correspond to native or control blocks.

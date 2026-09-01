@@ -46,6 +46,22 @@ Preserve every artifact, content hash, prompt, raw response, route, endpoint rev
 and provider-reported cost. New evidence should refine this skill; do not generalize one route-specific
 failure into a universal rule.
 
+Require at least 16 substantive native answers per route for publication. If a request exhausts its
+output allowance before emitting an answer, preserve it as non-substantive and use a prospective,
+case-specific completion plan to fill the denominator; never overwrite the first attempt. Confirm the
+completed case uses the same frozen stimulus, prompt, scorer, route, and sampling settings apart from the
+predeclared larger output allowance.
+
+Treat discovery-to-holdout transfer as a first-class failure risk. A strong 8-case screen can reverse on
+16 new seeds, so never describe the screen as a model weakness after the holdout rejects it. Keep rejected
+families and their rejection threshold in the ledger. When sharding an interleaved plan, inspect the
+manifest condition attached to each case; positional offsets do not imply an all-native or all-control
+shard.
+
+Controls govern attribution, not behavioral admission. A native task may remain a valid hard family when
+its control is also hard, but the result then cannot localize the bottleneck that control was meant to
+isolate. Report every control denominator and name the surviving alternatives explicitly.
+
 When a project asks for several modes, maintain a family ledger keyed by the latent capability being
 tested. Changing only density, duration, count range, visual skin, prompt, or answer spacing creates a
 new cell—not a new failure family. Maintain separate image and video cohorts because unsupported

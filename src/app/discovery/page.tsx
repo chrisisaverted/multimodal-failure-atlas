@@ -5,6 +5,7 @@ import precisionManifest from "../../../public/evaluations/precision-wire-count-
 import { HumanBaselineLab } from "@/components/human-baseline-lab";
 import { AdaptiveResultsPanel } from "@/components/adaptive-results-panel";
 import { PrecisionWireResultsPanel } from "@/components/precision-wire-results-panel";
+import { admittedEvidence } from "@/lib/admitted-evidence";
 
 export const metadata: Metadata = { title: "Adaptive discovery" };
 
@@ -31,6 +32,16 @@ const precisionSelfTestCases = precisionManifest.cases
     count: item.expectedAnswer,
     mediaType: "image" as const,
   }));
+
+const admittedSelfTestCases = admittedEvidence.families.map((family) => ({
+  candidateId: family.sample.candidateId,
+  artifactPath: family.sample.artifactPath,
+  question: family.sample.question,
+  answerOptions: family.sample.answerOptions,
+  expectedAnswer: family.sample.expectedAnswer,
+  count: family.sample.expectedAnswer,
+  mediaType: family.modality,
+}));
 
 export default function DiscoveryPage() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
@@ -111,12 +122,12 @@ export default function DiscoveryPage() {
             </h2>
           </div>
           <p>
-            Try eight confirmatory specimens before seeing their answers. Results stay in your browser and can
-            be exported. This checks the instrument; it is not yet a research-grade human baseline.
+            Try one frozen specimen from each admitted family before seeing its answer. Results stay in your
+            browser and can be exported. This checks the instrument; it is not yet a research-grade human baseline.
           </p>
         </div>
         <HumanBaselineLab
-          cases={precisionSelfTestCases.length ? precisionSelfTestCases : selfTestCases}
+          cases={admittedSelfTestCases.length ? admittedSelfTestCases : precisionSelfTestCases.length ? precisionSelfTestCases : selfTestCases}
           basePath={basePath}
         />
       </section>

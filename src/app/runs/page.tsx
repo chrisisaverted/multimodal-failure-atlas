@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight, Database, ShieldCheck } from "lucide-react";
 import { failureModesById } from "@/lib/catalogue";
-import { groupRunSummaries, publishedRuns } from "@/lib/published-results";
+import { catalogueIdForRun, groupRunSummaries, publishedRuns } from "@/lib/published-results";
 
 export const metadata: Metadata = { title: "Run ledger" };
 
@@ -12,6 +12,7 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export default function RunsPage() {
   const summaries = groupRunSummaries(publishedRuns);
+  const visibleRuns = [...publishedRuns].reverse().slice(0, 200);
 
   return (
     <section className="section-shell page-section run-ledger-page">
@@ -43,9 +44,12 @@ export default function RunsPage() {
             <div>
               <b>{publishedRuns.length} genuine responses with frozen provenance.</b>
               <p>
-                This is a small diagnostic pilot, not a leaderboard. Open any row to inspect the complete
-                human-readable record.
+                Showing the latest {visibleRuns.length} below. The complete append-only JSON ledger remains
+                downloadable and is not reduced to the visible table.
               </p>
+              <a className="ledger-download" href={`${basePath}/evidence/admitted-runs.json`}>
+                Download all admitted run records
+              </a>
             </div>
           </div>
 
@@ -67,8 +71,9 @@ export default function RunsPage() {
           </div>
 
           <div className="run-record-list">
-            {publishedRuns.map((run, index) => {
-              const mode = failureModesById.get(run.failureModeId);
+            {visibleRuns.map((run, index) => {
+              const catalogueId = catalogueIdForRun(run);
+              const mode = failureModesById.get(catalogueId);
               return (
                 <details className="run-record" key={run.id}>
                   <summary>
@@ -210,7 +215,7 @@ export default function RunsPage() {
                           Open exact stimulus <ArrowUpRight size={14} />
                         </a>
                       ) : null}
-                      <Link href={`/failure/${run.failureModeId}`}>Open failure-mode exhibit</Link>
+                      <Link href={`/failure/${catalogueId}`}>Open failure-mode exhibit</Link>
                     </div>
                     <p className="run-preprocessing">Preprocessing: {run.preprocessingNotes.join(" · ")}</p>
                   </div>

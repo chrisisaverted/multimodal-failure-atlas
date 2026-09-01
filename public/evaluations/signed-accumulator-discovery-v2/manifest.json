@@ -1,0 +1,249 @@
+{
+  "id": "signed-accumulator-discovery-v2",
+  "planSha256": "777fdd1c6bcfb723d2bb890cf489acd80d0ba9c31ea870ce1ff0b8d18823270b",
+  "generatorVersion": "signed-temporal-accumulator-v2",
+  "renderer": "signed-accumulator-svg-raster-v2",
+  "fps": 30,
+  "cases": [
+    {
+      "candidateId": "sta2-2b9ead0d44aef25b",
+      "cellId": "cell-sixty-one-event-signed-balance",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "A 61-event signed stream requires exact scalar-state accumulation.",
+      "failureModeId": "signed-temporal-state-accumulation",
+      "generator": "signed-accumulator-hard",
+      "seed": 5620000,
+      "difficulty": 97,
+      "variant": 0,
+      "artifact": "public/evaluations/signed-accumulator-discovery-v2/sta2-2b9ead0d44aef25b.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 17000,
+      "question": "Starting from ZERO, where does the hidden counter end after every +1 and -1 event?",
+      "answerOptions": [
+        "+3",
+        "+9",
+        "-9",
+        "-3"
+      ],
+      "expectedAnswer": "-9",
+      "sha256": "12b4d99010835b32530895846a3e62e2688dd61c368ea2e502c03320c30946fc",
+      "parameters": {
+        "finalBalance": -9,
+        "visualVariant": 0
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Update the signed counter after every visible event and return exactly one allowed final value."
+    },
+    {
+      "candidateId": "sta2-eb5ef1ff944be167",
+      "cellId": "cell-sixty-one-event-signed-balance",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "A 61-event signed stream requires exact scalar-state accumulation.",
+      "failureModeId": "signed-temporal-state-accumulation",
+      "generator": "signed-accumulator-hard",
+      "seed": 5620001,
+      "difficulty": 97,
+      "variant": 1,
+      "artifact": "public/evaluations/signed-accumulator-discovery-v2/sta2-eb5ef1ff944be167.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 17000,
+      "question": "Starting from ZERO, where does the hidden counter end after every +1 and -1 event?",
+      "answerOptions": [
+        "+3",
+        "-9",
+        "+9",
+        "-3"
+      ],
+      "expectedAnswer": "-3",
+      "sha256": "a838d66613d40e0d0409a9093ccac4d85d3a24fa8c92b944150e840e1d917581",
+      "parameters": {
+        "finalBalance": -3,
+        "visualVariant": 1
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Update the signed counter after every visible event and return exactly one allowed final value."
+    },
+    {
+      "candidateId": "sta2-3768a6eef334e020",
+      "cellId": "cell-sixty-one-event-signed-balance",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "A 61-event signed stream requires exact scalar-state accumulation.",
+      "failureModeId": "signed-temporal-state-accumulation",
+      "generator": "signed-accumulator-hard",
+      "seed": 5620002,
+      "difficulty": 97,
+      "variant": 2,
+      "artifact": "public/evaluations/signed-accumulator-discovery-v2/sta2-3768a6eef334e020.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 17000,
+      "question": "Starting from ZERO, where does the hidden counter end after every +1 and -1 event?",
+      "answerOptions": [
+        "-9",
+        "+3",
+        "+9",
+        "-3"
+      ],
+      "expectedAnswer": "+3",
+      "sha256": "9c17a097a0e84b369a6b7b6345589cc1caf097baeb5c9c0026ac6b2826f2d73b",
+      "parameters": {
+        "finalBalance": 3,
+        "visualVariant": 2
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Update the signed counter after every visible event and return exactly one allowed final value."
+    },
+    {
+      "candidateId": "sta2-93714a8bb802b535",
+      "cellId": "cell-sixty-one-event-signed-balance",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "A 61-event signed stream requires exact scalar-state accumulation.",
+      "failureModeId": "signed-temporal-state-accumulation",
+      "generator": "signed-accumulator-hard",
+      "seed": 5620003,
+      "difficulty": 97,
+      "variant": 3,
+      "artifact": "public/evaluations/signed-accumulator-discovery-v2/sta2-93714a8bb802b535.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 17000,
+      "question": "Starting from ZERO, where does the hidden counter end after every +1 and -1 event?",
+      "answerOptions": [
+        "-9",
+        "+3",
+        "+9",
+        "-3"
+      ],
+      "expectedAnswer": "+9",
+      "sha256": "7a6d7744083c427f1590df798d4ed5620e53a82b90d9df45632ee846cfc49d41",
+      "parameters": {
+        "finalBalance": 9,
+        "visualVariant": 3
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Update the signed counter after every visible event and return exactly one allowed final value."
+    },
+    {
+      "candidateId": "sta2-6bfd0f852673991e",
+      "cellId": "cell-sixty-one-event-signed-balance",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "A 61-event signed stream requires exact scalar-state accumulation.",
+      "failureModeId": "signed-temporal-state-accumulation",
+      "generator": "signed-accumulator-hard",
+      "seed": 5620004,
+      "difficulty": 97,
+      "variant": 4,
+      "artifact": "public/evaluations/signed-accumulator-discovery-v2/sta2-6bfd0f852673991e.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 17000,
+      "question": "Starting from ZERO, where does the hidden counter end after every +1 and -1 event?",
+      "answerOptions": [
+        "+3",
+        "-9",
+        "+9",
+        "-3"
+      ],
+      "expectedAnswer": "-9",
+      "sha256": "c17ae974179ca663456bf4b432cf947203c0fc0137dfaec3adc025aa7ef95a54",
+      "parameters": {
+        "finalBalance": -9,
+        "visualVariant": 4
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Update the signed counter after every visible event and return exactly one allowed final value."
+    },
+    {
+      "candidateId": "sta2-42c2ffc37e80d066",
+      "cellId": "cell-sixty-one-event-signed-balance",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "A 61-event signed stream requires exact scalar-state accumulation.",
+      "failureModeId": "signed-temporal-state-accumulation",
+      "generator": "signed-accumulator-hard",
+      "seed": 5620005,
+      "difficulty": 97,
+      "variant": 5,
+      "artifact": "public/evaluations/signed-accumulator-discovery-v2/sta2-42c2ffc37e80d066.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 17000,
+      "question": "Starting from ZERO, where does the hidden counter end after every +1 and -1 event?",
+      "answerOptions": [
+        "-9",
+        "+9",
+        "+3",
+        "-3"
+      ],
+      "expectedAnswer": "-3",
+      "sha256": "c1f1815ff36f9984e15ecc71716c73e3a8c93245c09c2f1eb69546eda3be7232",
+      "parameters": {
+        "finalBalance": -3,
+        "visualVariant": 5
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Update the signed counter after every visible event and return exactly one allowed final value."
+    },
+    {
+      "candidateId": "sta2-f0949ffeae8db1c6",
+      "cellId": "cell-sixty-one-event-signed-balance",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "A 61-event signed stream requires exact scalar-state accumulation.",
+      "failureModeId": "signed-temporal-state-accumulation",
+      "generator": "signed-accumulator-hard",
+      "seed": 5620006,
+      "difficulty": 97,
+      "variant": 6,
+      "artifact": "public/evaluations/signed-accumulator-discovery-v2/sta2-f0949ffeae8db1c6.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 17000,
+      "question": "Starting from ZERO, where does the hidden counter end after every +1 and -1 event?",
+      "answerOptions": [
+        "-9",
+        "+9",
+        "+3",
+        "-3"
+      ],
+      "expectedAnswer": "+3",
+      "sha256": "3ff41a119d35736bed205df1a5740b5868693ba3633a89d82c278e9aabb5c7a1",
+      "parameters": {
+        "finalBalance": 3,
+        "visualVariant": 6
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Update the signed counter after every visible event and return exactly one allowed final value."
+    },
+    {
+      "candidateId": "sta2-4f24604376fe36e2",
+      "cellId": "cell-sixty-one-event-signed-balance",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "A 61-event signed stream requires exact scalar-state accumulation.",
+      "failureModeId": "signed-temporal-state-accumulation",
+      "generator": "signed-accumulator-hard",
+      "seed": 5620007,
+      "difficulty": 97,
+      "variant": 7,
+      "artifact": "public/evaluations/signed-accumulator-discovery-v2/sta2-4f24604376fe36e2.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 17000,
+      "question": "Starting from ZERO, where does the hidden counter end after every +1 and -1 event?",
+      "answerOptions": [
+        "+9",
+        "-9",
+        "+3",
+        "-3"
+      ],
+      "expectedAnswer": "+9",
+      "sha256": "42e580ec1b2feb26595db5ddcdef47cc9a0101e9b34bc6f0482d55b7561390c2",
+      "parameters": {
+        "finalBalance": 9,
+        "visualVariant": 7
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Update the signed counter after every visible event and return exactly one allowed final value."
+    }
+  ]
+}

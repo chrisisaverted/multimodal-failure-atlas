@@ -1,0 +1,4 @@
+{
+  "id": "signed-accumulator-confirmatory-v2-qwen-completion-2026-09-01", "resolvedAt": "2026-09-01", "gateway": "OpenRouter", "evaluationPlanId": "signed-accumulator-confirmatory-v2", "evaluationPlanSha256": "426dfdf03f5e9218308e2bfc4e571629e36c62ad06116ae228e7e502cce463c5", "stage": "prospective-non-substantive-completion", "casesPerModel": 1, "trials": 1, "temperature": 0, "maxOutputTokens": 16384, "reasoning": { "effort": "low", "exclude": true }, "scorer": "terminal-option-v3", "allowProviderFallbacks": false, "dataCollection": "deny", "campaignCostCeilingUsd": 4,
+  "models": [{ "modelId": "qwen/qwen3.8-max", "modelRevision": "qwen/qwen3.8-max-20260803", "upstreamProvider": "Alibaba" }]
+}

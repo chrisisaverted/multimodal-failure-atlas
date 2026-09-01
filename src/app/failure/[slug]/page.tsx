@@ -10,6 +10,8 @@ import { PipelineMap } from "@/components/pipeline-map";
 import { CapabilityCurve } from "@/components/capability-curve";
 import { ResultMatrix } from "@/components/result-matrix";
 import { PrecisionWireResultsPanel } from "@/components/precision-wire-results-panel";
+import { AdmittedEvidencePanel } from "@/components/admitted-evidence-panel";
+import { admittedFamilyByCatalogueId } from "@/lib/admitted-evidence";
 
 type FailurePageProps = { params: Promise<{ slug: string }> };
 
@@ -28,6 +30,7 @@ export default async function FailurePage({ params }: FailurePageProps) {
   const mode = failureModesById.get(slug);
   if (!mode) notFound();
   const sources = mode.sourceIds.map((id) => citationsById.get(id)).filter(Boolean);
+  const admittedEvidence = admittedFamilyByCatalogueId.get(mode.id);
 
   return (
     <article className={`exhibit accent-${mode.accent}`}>
@@ -52,7 +55,9 @@ export default async function FailurePage({ params }: FailurePageProps) {
         </div>
       </header>
 
-      {mode.id === "identity-conditioned-exact-counting" ? (
+      {admittedEvidence ? (
+        <AdmittedEvidencePanel evidence={admittedEvidence} />
+      ) : mode.id === "identity-conditioned-exact-counting" ? (
         <PrecisionWireResultsPanel />
       ) : mode.generator ? (
         <section className="section-shell exhibit-lab-section">

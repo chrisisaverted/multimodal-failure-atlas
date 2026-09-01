@@ -1,0 +1,249 @@
+{
+  "id": "temporal-stack-discovery-v1",
+  "planSha256": "a7fed520855704e827ad02453b78872c49fa2b8764143736c3eb0572dcc7e96f",
+  "generatorVersion": "temporal-visual-stack-v1",
+  "renderer": "temporal-stack-svg-raster-v1",
+  "fps": 30,
+  "cases": [
+    {
+      "candidateId": "tst-95c91bc5a8a2733d",
+      "cellId": "cell-twenty-eight-event-visual-stack",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "A 28-instruction visual program manipulates a hidden last-in-first-out stack.",
+      "failureModeId": "temporal-stack-state-manipulation",
+      "generator": "temporal-stack",
+      "seed": 5700000,
+      "difficulty": 94,
+      "variant": 0,
+      "artifact": "public/evaluations/temporal-stack-discovery-v1/tst-95c91bc5a8a2733d.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "After executing every PUSH and POP in order, what color is on TOP of the stack?",
+      "answerOptions": [
+        "RED",
+        "BLUE",
+        "PURPLE",
+        "GREEN"
+      ],
+      "expectedAnswer": "BLUE",
+      "sha256": "2300240f7e130e64421a21771c3c7647804d055035c17ac80c5b3b79bcf09170",
+      "parameters": {
+        "targetColor": 0,
+        "visualVariant": 0
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Execute every push and pop in order, then return exactly one allowed color for the top of the stack."
+    },
+    {
+      "candidateId": "tst-08cd571919296a26",
+      "cellId": "cell-twenty-eight-event-visual-stack",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "A 28-instruction visual program manipulates a hidden last-in-first-out stack.",
+      "failureModeId": "temporal-stack-state-manipulation",
+      "generator": "temporal-stack",
+      "seed": 5700001,
+      "difficulty": 94,
+      "variant": 1,
+      "artifact": "public/evaluations/temporal-stack-discovery-v1/tst-08cd571919296a26.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "After executing every PUSH and POP in order, what color is on TOP of the stack?",
+      "answerOptions": [
+        "BLUE",
+        "RED",
+        "PURPLE",
+        "GREEN"
+      ],
+      "expectedAnswer": "GREEN",
+      "sha256": "e666b336d60b564d52cadbb50ae1d47a0662526bad92a95905210761240599f5",
+      "parameters": {
+        "targetColor": 1,
+        "visualVariant": 1
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Execute every push and pop in order, then return exactly one allowed color for the top of the stack."
+    },
+    {
+      "candidateId": "tst-d70737e3c978e4a4",
+      "cellId": "cell-twenty-eight-event-visual-stack",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "A 28-instruction visual program manipulates a hidden last-in-first-out stack.",
+      "failureModeId": "temporal-stack-state-manipulation",
+      "generator": "temporal-stack",
+      "seed": 5700002,
+      "difficulty": 94,
+      "variant": 2,
+      "artifact": "public/evaluations/temporal-stack-discovery-v1/tst-d70737e3c978e4a4.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "After executing every PUSH and POP in order, what color is on TOP of the stack?",
+      "answerOptions": [
+        "RED",
+        "BLUE",
+        "PURPLE",
+        "GREEN"
+      ],
+      "expectedAnswer": "RED",
+      "sha256": "74250028d4d7e84663af2e20d352b9a8f62bfa01dd6054274475aefdb595c263",
+      "parameters": {
+        "targetColor": 2,
+        "visualVariant": 2
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Execute every push and pop in order, then return exactly one allowed color for the top of the stack."
+    },
+    {
+      "candidateId": "tst-721765b8e0b8e7f2",
+      "cellId": "cell-twenty-eight-event-visual-stack",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "A 28-instruction visual program manipulates a hidden last-in-first-out stack.",
+      "failureModeId": "temporal-stack-state-manipulation",
+      "generator": "temporal-stack",
+      "seed": 5700003,
+      "difficulty": 94,
+      "variant": 3,
+      "artifact": "public/evaluations/temporal-stack-discovery-v1/tst-721765b8e0b8e7f2.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "After executing every PUSH and POP in order, what color is on TOP of the stack?",
+      "answerOptions": [
+        "PURPLE",
+        "BLUE",
+        "RED",
+        "GREEN"
+      ],
+      "expectedAnswer": "PURPLE",
+      "sha256": "e45ced353d5bddcae29ed277b977fc8a8583b348ec6ae6584b8253daf293555f",
+      "parameters": {
+        "targetColor": 3,
+        "visualVariant": 3
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Execute every push and pop in order, then return exactly one allowed color for the top of the stack."
+    },
+    {
+      "candidateId": "tst-2fcde0a3512bb146",
+      "cellId": "cell-twenty-eight-event-visual-stack",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "A 28-instruction visual program manipulates a hidden last-in-first-out stack.",
+      "failureModeId": "temporal-stack-state-manipulation",
+      "generator": "temporal-stack",
+      "seed": 5700004,
+      "difficulty": 94,
+      "variant": 4,
+      "artifact": "public/evaluations/temporal-stack-discovery-v1/tst-2fcde0a3512bb146.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "After executing every PUSH and POP in order, what color is on TOP of the stack?",
+      "answerOptions": [
+        "BLUE",
+        "PURPLE",
+        "RED",
+        "GREEN"
+      ],
+      "expectedAnswer": "BLUE",
+      "sha256": "fe3d988fc3d4e5cec7decf74cf07c0e13a81a1768fdef619ff9a08679c420893",
+      "parameters": {
+        "targetColor": 0,
+        "visualVariant": 4
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Execute every push and pop in order, then return exactly one allowed color for the top of the stack."
+    },
+    {
+      "candidateId": "tst-0cf6dfb835e4dca0",
+      "cellId": "cell-twenty-eight-event-visual-stack",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "A 28-instruction visual program manipulates a hidden last-in-first-out stack.",
+      "failureModeId": "temporal-stack-state-manipulation",
+      "generator": "temporal-stack",
+      "seed": 5700005,
+      "difficulty": 94,
+      "variant": 5,
+      "artifact": "public/evaluations/temporal-stack-discovery-v1/tst-0cf6dfb835e4dca0.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "After executing every PUSH and POP in order, what color is on TOP of the stack?",
+      "answerOptions": [
+        "PURPLE",
+        "BLUE",
+        "RED",
+        "GREEN"
+      ],
+      "expectedAnswer": "GREEN",
+      "sha256": "1a3e0756943c838c554a5bbc9441fcd9a873cfa17d1089c380f6e873af319031",
+      "parameters": {
+        "targetColor": 1,
+        "visualVariant": 5
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Execute every push and pop in order, then return exactly one allowed color for the top of the stack."
+    },
+    {
+      "candidateId": "tst-db3afaa4f1fdeb18",
+      "cellId": "cell-twenty-eight-event-visual-stack",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "A 28-instruction visual program manipulates a hidden last-in-first-out stack.",
+      "failureModeId": "temporal-stack-state-manipulation",
+      "generator": "temporal-stack",
+      "seed": 5700006,
+      "difficulty": 94,
+      "variant": 6,
+      "artifact": "public/evaluations/temporal-stack-discovery-v1/tst-db3afaa4f1fdeb18.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "After executing every PUSH and POP in order, what color is on TOP of the stack?",
+      "answerOptions": [
+        "PURPLE",
+        "RED",
+        "BLUE",
+        "GREEN"
+      ],
+      "expectedAnswer": "RED",
+      "sha256": "b55f23695d00a941ac3992b1ebd6925930f9f380c0b251a7efedba9f977cf7a5",
+      "parameters": {
+        "targetColor": 2,
+        "visualVariant": 6
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Execute every push and pop in order, then return exactly one allowed color for the top of the stack."
+    },
+    {
+      "candidateId": "tst-f19bd067e274c6e6",
+      "cellId": "cell-twenty-eight-event-visual-stack",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "A 28-instruction visual program manipulates a hidden last-in-first-out stack.",
+      "failureModeId": "temporal-stack-state-manipulation",
+      "generator": "temporal-stack",
+      "seed": 5700007,
+      "difficulty": 94,
+      "variant": 7,
+      "artifact": "public/evaluations/temporal-stack-discovery-v1/tst-f19bd067e274c6e6.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "After executing every PUSH and POP in order, what color is on TOP of the stack?",
+      "answerOptions": [
+        "RED",
+        "PURPLE",
+        "BLUE",
+        "GREEN"
+      ],
+      "expectedAnswer": "PURPLE",
+      "sha256": "6512a61ec2b0ec6364ac980f721d12f45da7f6ddf17f83e4618149b677c6ef75",
+      "parameters": {
+        "targetColor": 3,
+        "visualVariant": 7
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Execute every push and pop in order, then return exactly one allowed color for the top of the stack."
+    }
+  ]
+}

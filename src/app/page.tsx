@@ -4,15 +4,18 @@ import { failureModes } from "@/lib/catalogue";
 import { citations } from "@/lib/sources";
 import { FailureCard } from "@/components/failure-card";
 import { DiagnosticLab } from "@/components/diagnostic-lab";
+import { admittedEvidence, admittedRunCount } from "@/lib/admitted-evidence";
 
 export default function Home() {
   const featured = failureModes.filter((mode) => mode.featured).slice(0, 4);
+  const admittedImages = admittedEvidence.families.filter((family) => family.modality === "image").length;
+  const admittedVideos = admittedEvidence.families.filter((family) => family.modality === "video").length;
   return (
     <>
       <section className="hero section-shell">
         <div className="hero-label">
           <span>Field note № 001</span>
-          <span>Updated 30 August 2026</span>
+          <span>Updated 1 September 2026</span>
         </div>
         <div className="hero-copy">
           <p className="eyebrow">An atlas of machine perception</p>
@@ -59,20 +62,22 @@ export default function Home() {
         </div>
         <div className="hero-stats">
           <div>
-            <strong>{failureModes.length}</strong>
-            <span>Mapped failure families</span>
+            <strong>{admittedEvidence.families.length}</strong>
+            <span>Strictly admitted families</span>
           </div>
           <div>
-            <strong>{failureModes.filter((mode) => mode.generator).length}</strong>
-            <span>Executable generators</span>
+            <strong>
+              {admittedImages} + {admittedVideos}
+            </strong>
+            <span>Image + video holdouts</span>
           </div>
           <div>
             <strong>{citations.length}</strong>
             <span>Primary sources</span>
           </div>
           <div>
-            <strong>0</strong>
-            <span>Fabricated model results</span>
+            <strong>{admittedRunCount.toLocaleString("en-US")}</strong>
+            <span>Published response records</span>
           </div>
         </div>
       </section>
@@ -81,6 +86,20 @@ export default function Home() {
         <span>Not a leaderboard.</span>
         <span>Not a gotcha reel.</span>
         <span>A map of where representation breaks.</span>
+      </section>
+
+      <section className="section-shell verified-callout">
+        <div>
+          <p className="eyebrow">Strict cross-model evidence</p>
+          <h2>Twenty families survived the holdout.</h2>
+          <p>
+            For each family, Gemini, Qwen, and Kimi supplied at least 16 substantive native-media answers.
+            Every observed solve rate stayed strictly below 50%; non-answers were excluded.
+          </p>
+        </div>
+        <Link className="button-primary" href="/verified">
+          Inspect all 20 results <ArrowRight size={17} />
+        </Link>
       </section>
 
       <section className="section-shell featured-section">

@@ -831,13 +831,13 @@ const reproducedExtensions: ReproducedExtension[] = [
     mechanism: "The answer requires building a geometric path and testing new segments against earlier nonadjacent segments. Because the visible-trail control does not fully recover, current evidence does not localize the failure specifically to temporal memory.", alternatives: ["The route is not retained", "Turns are mistaken for crossings", "Static crossing enumeration itself fails"], disconfirmingTest: "Compare no trail, persistent trail, marked crossing points, and a final static path using identical geometry.", mitigations: ["Persistent trajectory maps", "Segment-intersection tools", "Geometry-aware memory"], severity: "foundational",
   },
   {
-    id: "temporal-run-length-extrema",
-    title: "Remember the longest run",
-    shortTitle: "Temporal run-length maximum",
-    subtitle: "A rapid binary stream defeats the simple online computation of current run and maximum run.",
-    modalities: ["video"], stages: ["temporal-memory", "reasoning"], capabilities: ["state-transitions", "counting", "temporal-order"], sourceIds: ["tempcompass", "video-mme-logical"],
-    trigger: "Show a balanced red/blue stream and ask for the longest uninterrupted run of red events.", symptom: "The discovery screen leaves every route near the four-choice floor; a frozen holdout tests seed-disjoint replication.",
-    mechanism: "The sufficient statistic is only two integers—current run and maximum so far—yet both must be updated exactly at every event. This isolates online temporal state maintenance from broad world knowledge.", alternatives: ["Events are skipped", "Run resets are missed", "The maximum is overwritten by the current run"], disconfirmingTest: "Expose current run and maximum independently, then jointly, while varying event rate and sequence length.", mitigations: ["Explicit recurrent counters", "Event segmentation", "Visual scratchpads"], severity: "foundational",
+    id: "signed-temporal-state-accumulation",
+    title: "Add every plus, subtract every minus",
+    shortTitle: "Signed temporal accumulation",
+    subtitle: "A long stream of +1 and −1 events defeats an exact one-register state update.",
+    modalities: ["video"], stages: ["temporal-memory", "reasoning"], capabilities: ["state-transitions", "counting"], sourceIds: ["video-mme-logical", "tempcompass"],
+    trigger: "Start a hidden counter at zero, show a balanced sequence of signed unit events, and ask for the exact final value.", symptom: "The frozen 61-event holdout yields 5/16, 3/16, and 4/16 while an explicit running-total control recovers strongly.",
+    mechanism: "The sufficient state is only one signed integer, but every acquired event must update it in the correct direction. The task removes world knowledge and object identity while retaining exact online state maintenance.", alternatives: ["Some events are not acquired", "Minus signs are misread", "The sequence is summarized by rough color frequency"], disconfirmingTest: "Sweep event rate and length while separately exposing sampled events, positive and negative subtotals, or the exact running total.", mitigations: ["Explicit recurrent counters", "Event-level temporal tokens", "External tally tools"], severity: "foundational",
   },
 ];
 

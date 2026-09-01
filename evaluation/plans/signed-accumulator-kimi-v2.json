@@ -1,0 +1,4 @@
+{
+  "id": "signed-accumulator-screen-v2-kimi-compact-2026-09-01", "resolvedAt": "2026-09-01", "gateway": "OpenRouter", "evaluationPlanId": "signed-accumulator-discovery-v2", "evaluationPlanSha256": "777fdd1c6bcfb723d2bb890cf489acd80d0ba9c31ea870ce1ff0b8d18823270b", "stage": "balanced-long-signed-state-screen", "casesPerModel": 8, "trials": 1, "temperature": 0, "maxOutputTokens": 4096, "reasoning": { "effort": "none", "exclude": true }, "scorer": "terminal-option-v3", "allowProviderFallbacks": false, "dataCollection": "deny", "campaignCostCeilingUsd": 6,
+  "models": [{ "modelId": "moonshotai/kimi-k3", "modelRevision": "moonshotai/kimi-k3-20260715", "upstreamProvider": "Moonshot AI" }]
+}

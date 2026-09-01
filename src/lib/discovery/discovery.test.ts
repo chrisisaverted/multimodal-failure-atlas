@@ -116,6 +116,16 @@ import {
   createSignedAccumulatorHoldout,
   signedAccumulatorTotal,
 } from "./signed-accumulator";
+import {
+  createHardSignedAccumulatorGrid,
+  createHardSignedAccumulatorHoldout,
+  hardSignedAccumulatorTotal,
+} from "./signed-accumulator-hard";
+import {
+  createTemporalStackGrid,
+  createTemporalStackHoldout,
+  executeTemporalStack,
+} from "./temporal-stack";
 import { createHardParityHoldout, hardParityMatrices, hardParityViolations } from "./parity-matrix-hard";
 import { createHardRouteTurnHoldout, hardCountRouteTurns } from "./route-turn-count-hard";
 import { countTargetTransitions, createTransitionCountGrid, createTransitionCountHoldout } from "./transition-count";
@@ -874,5 +884,12 @@ describe("adaptive multimodal discovery", () => {
       expect(longestHardTemporalRun(candidate.parameters.sequence)).toBe(candidate.parameters.maximumRun);
     for (const candidate of [...createSignedAccumulatorGrid(), ...createSignedAccumulatorHoldout()])
       expect(signedAccumulatorTotal(candidate.parameters.events)).toBe(candidate.parameters.finalBalance);
+    for (const candidate of [...createHardSignedAccumulatorGrid(), ...createHardSignedAccumulatorHoldout()])
+      expect(hardSignedAccumulatorTotal(candidate.parameters.events)).toBe(candidate.parameters.finalBalance);
+    for (const candidate of [...createTemporalStackGrid(), ...createTemporalStackHoldout()]) {
+      const finalStack = executeTemporalStack(candidate.parameters.events);
+      expect(finalStack).toEqual(candidate.parameters.finalStack);
+      expect(finalStack.at(-1)).toBe(candidate.parameters.targetColor);
+    }
   });
 });

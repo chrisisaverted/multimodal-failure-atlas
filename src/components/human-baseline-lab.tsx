@@ -22,12 +22,13 @@ interface BaselineResponse {
   recordedAt: string;
 }
 
-const storageKey = "failure-atlas-human-self-test-v1";
+const storageKey = "failure-atlas-human-self-test-v2";
 
 export function HumanBaselineLab({ cases, basePath }: { cases: BaselineCase[]; basePath: string }) {
   const [index, setIndex] = useState(0);
   const [responses, setResponses] = useState<BaselineResponse[]>([]);
   const [selected, setSelected] = useState<string>();
+  const [mediaComplete, setMediaComplete] = useState(false);
   const startedAt = useRef(0);
   const current = cases[index];
 
@@ -54,7 +55,7 @@ export function HumanBaselineLab({ cases, basePath }: { cases: BaselineCase[]; b
   );
 
   function answer(value: string, eventTimeStamp: number) {
-    if (!current || selected) return;
+    if (!current || selected || !mediaComplete) return;
     const response: BaselineResponse = {
       candidateId: current.candidateId,
       selectedAnswer: value,
@@ -73,16 +74,19 @@ export function HumanBaselineLab({ cases, basePath }: { cases: BaselineCase[]; b
     }
   }
 
-  function next(eventTimeStamp: number) {
+  function next() {
     setIndex((value) => value + 1);
     setSelected(undefined);
-    startedAt.current = eventTimeStamp;
+    setMediaComplete(false);
+    startedAt.current = 0;
   }
 
   function exportSession() {
     const payload = {
-      protocol: "human-self-test-v1",
+      protocol: "human-self-test-v2",
       disclaimer: "Local self-test; not an aggregated or research-grade human baseline.",
+      displayProtocol:
+        "Native browser media controls; video answers unlock only after the ended event; one response per specimen; truth revealed after response.",
       userAgent: navigator.userAgent,
       responses,
     };
@@ -130,6 +134,7 @@ export function HumanBaselineLab({ cases, basePath }: { cases: BaselineCase[]; b
           unoptimized
           onLoad={(event) => {
             startedAt.current = event.timeStamp;
+            setMediaComplete(true);
           }}
           alt={`Visual counting specimen ${index + 1}`}
         />
@@ -139,8 +144,11 @@ export function HumanBaselineLab({ cases, basePath }: { cases: BaselineCase[]; b
           controls
           playsInline
           preload="metadata"
-          onLoadedMetadata={(event) => {
-            startedAt.current = event.timeStamp;
+          onPlay={(event) => {
+            if (!startedAt.current) startedAt.current = event.timeStamp;
+          }}
+          onEnded={() => {
+            setMediaComplete(true);
           }}
           aria-label={`Counting specimen ${index + 1}`}
         >
@@ -154,7 +162,7 @@ export function HumanBaselineLab({ cases, basePath }: { cases: BaselineCase[]; b
             <button
               type="button"
               key={option}
-              disabled={Boolean(selected)}
+              disabled={Boolean(selected) || !mediaComplete}
               className={selected === option ? "selected" : ""}
               onClick={(event) => answer(option, event.timeStamp)}
             >
@@ -169,12 +177,18 @@ export function HumanBaselineLab({ cases, basePath }: { cases: BaselineCase[]; b
             <b>{answeredCorrectly ? "Correct." : `Incorrect. The constructed answer is ${current.count}.`}</b>
             <p>The answer is revealed only after the local response is recorded.</p>
           </div>
-          <button type="button" onClick={(event) => next(event.timeStamp)}>
+          <button type="button" onClick={next}>
             Next specimen
           </button>
         </div>
       ) : (
-        <small>Inspect the complete specimen, then choose once. Viewing time is recorded locally.</small>
+        <small>
+          {mediaComplete
+            ? "Choose once. Viewing time is recorded locally."
+            : current.mediaType === "video"
+              ? "Watch the complete video before answering."
+              : "Wait for the complete image before answering."}
+        </small>
       )}
     </div>
   );

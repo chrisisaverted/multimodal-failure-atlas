@@ -10,7 +10,7 @@ Wilson-qualified and human-validated are stricter, separately reported states.
 
 | Family                                    | State                     |               Gemini |                            Qwen | Kimi | Control             | Human      |
 | ----------------------------------------- | ------------------------- | -------------------: | ------------------------------: | ---: | ------------------- | ---------- |
-| Identity-conditioned exact crossing count | observed holdout pass     |                 7/16 |                            0/16 | 1/16 | 16/16, 16/16, 13/16 | unverified |
+| Identity-conditioned exact crossing count | observed holdout pass     |                 7/16 |                            0/16 | 1/16 | 16/16, 15/15, 13/16 | unverified |
 | Topological enclosure depth               | observed holdout pass     |                 6/16 |                            7/16 | 5/16 | 16/16, 16/16, 10/16 | unverified |
 | Rotation-invariant exact correspondence   | observed holdout pass     |                 6/16 |                            5/16 | 2/16 | 16/16, 16/16, 14/16 | unverified |
 | Global bilateral symmetry verification    | observed holdout pass     |                 6/16 |                            3/16 | 1/16 | 16/16 each          | unverified |
@@ -40,8 +40,9 @@ holdouts finish.
 | Temporal target-transition counting         | observed holdout pass       |        3/16 |             5/16 |        3/16 | 16/16 each                        | unverified |
 | Temporal set cardinality                    | observed holdout pass       |        5/16 |             4/16 |        4/16 | 16/16 each                        | unverified |
 | Dynamic route turn integration              | replicated holdout pass     |        2/16 |             2/16 |        3/16 | 16/16 each                        | unverified |
-| Dynamic conservation ledger                 | replication awaiting Kimi   |        7/16 |             5/16 |      running | 16/16 each on completed routes    | unverified |
+| Dynamic conservation ledger                 | replicated holdout pass     |        7/16 |             5/16 |        2/16 | 16/16 each                        | unverified |
 | Hidden-trail trajectory topology            | observed holdout pass       |        4/16 |             5/16 |        6/16 | 6/16, 5/16, 4/15                 | unverified |
+| Signed temporal state accumulation           | observed holdout pass       |        5/16 |             3/16 |        4/16 | 13/16, 14/16, 16/16             | unverified |
 
 ## Rejected or superseded searches
 
@@ -78,8 +79,14 @@ holdouts finish.
 | Irregular cube-net folding               | Gemini solved all 8 discovery cases.                                                                                                         |
 | Occurrence-indexed successor binding     | The harder discovery replacement left Kimi at 4/7 substantive answers correct, so it did not earn a frozen holdout.                         |
 | 48-event temporal run-length maximum     | Discovery did not replicate: Qwen already solved 10/15 substantive native cases on the frozen holdout; one pending output cannot change the decision. |
+| 80-event temporal run-length maximum     | The harder discovery replacement also failed to replicate: Gemini rose from 3/8 in discovery to 9/16 on its frozen native holdout.                    |
 | 41-event signed temporal accumulator     | Qwen finished the balanced discovery screen at exactly 4/8, so the cell did not satisfy the strict below-half promotion rule.                       |
+| 28-instruction visual stack program      | Gemini solved 5/8 discovery cases, so the LIFO family did not advance to a frozen holdout.                                                          |
 
 Discovery screens are cheap filters, not claims. A family moves above only after a precommitted,
 seed-disjoint holdout replicates across every route and non-substantive outcomes have been rerun or
 otherwise resolved without counting them as errors.
+
+The conservation Kimi denominator required nine prospective completion requests after nine
+length-exhausted outputs. Its reported 2/16 uses only the final substantive answers; the audit trail
+therefore contains 25 native requests and discloses all nine excluded outputs.

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { DatabaseZap } from "lucide-react";
 import { groupRunSummaries, runsForFailure } from "@/lib/published-results";
 import precisionSummary from "@/data/precision-wire-summary.json";
+import { admittedFamilyByCatalogueId, type AdmittedFamilyEvidence } from "@/lib/admitted-evidence";
 
 const percent = (value: number) => `${Math.round(value * 100)}%`;
 
@@ -17,10 +18,12 @@ function interval(correct: number, n: number) {
 
 function PrecisionResultMatrix({ affectedModels }: { affectedModels?: string }) {
   const rows = precisionSummary.models.flatMap((model) =>
-    ([
-      ["native image", model.native],
-      ["numbered oracle control", model.oracle],
-    ] as const).map(([condition, result]) => {
+    (
+      [
+        ["native image", model.native],
+        ["numbered oracle control", model.oracle],
+      ] as const
+    ).map(([condition, result]) => {
       const bounds = interval(result.adjudicatedCorrect, result.substantiveAnswers);
       return { model, condition, result, ...bounds };
     }),
@@ -58,6 +61,48 @@ function PrecisionResultMatrix({ affectedModels }: { affectedModels?: string }) 
   );
 }
 
+function AdmittedResultMatrix({ evidence }: { evidence: AdmittedFamilyEvidence }) {
+  const rows = evidence.models.flatMap((model) => [
+    { model, label: evidence.nativeCondition, result: model.native },
+    { model, label: evidence.controlCondition, result: model.control },
+  ]);
+  return (
+    <div className="result-matrix" aria-label="Frozen admitted result matrix">
+      <div className="result-matrix-head">
+        <span>Model snapshot</span>
+        <span>Input condition</span>
+        <span>Accuracy · 95% CI</span>
+        <span>Samples</span>
+      </div>
+      {rows.map(({ model, label, result }) => (
+        <div className="result-matrix-row" key={`${model.modelId}-${label}`}>
+          <span>
+            <b>{model.modelVersion}</b>
+            <small>openrouter · {model.upstreamProvider ?? "pinned upstream"}</small>
+          </span>
+          <span>{label.replaceAll("-", " ")}</span>
+          <span>
+            <b>{percent(result.solveRate ?? 0)}</b>
+            <small>
+              {result.lower95 === null ? "—" : `${percent(result.lower95)}–${percent(result.upper95 ?? 0)}`}
+            </small>
+          </span>
+          <span>
+            {result.substantiveAnswers}
+            {result.pendingReview ? <small>{result.pendingReview} excluded</small> : null}
+          </span>
+        </div>
+      ))}
+      <p className="affected-model-scope">
+        <span>Frozen evidence scope</span>
+        Observed below-half admission uses only substantive native answers. Controls diagnose the task but are
+        not required to recover, and 95% intervals are reported without converting the observation into a
+        population-level universal claim.
+      </p>
+    </div>
+  );
+}
+
 export function ResultMatrix({
   affectedModels,
   failureModeId,
@@ -65,6 +110,8 @@ export function ResultMatrix({
   affectedModels?: string;
   failureModeId: string;
 }) {
+  const admitted = admittedFamilyByCatalogueId.get(failureModeId);
+  if (admitted) return <AdmittedResultMatrix evidence={admitted} />;
   if (failureModeId === "identity-conditioned-exact-counting") {
     return <PrecisionResultMatrix affectedModels={affectedModels} />;
   }

@@ -119,7 +119,8 @@ choose among adjacent exact values 7, 8, 9, and 10.
 
 The untouched 16-case holdout confirmed the setting. Native accuracy was 7/16 for Gemini 3.7 Flash,
 1/16 for Kimi K3, and 0/16 for Qwen 3.8 Max. On paired images where the same target path was highlighted
-and every relevant crossing numbered, accuracy was 16/16, 13/16, and 16/16 after one documented review.
+and every relevant crossing numbered, accuracy was 16/16, 13/16, and 15/15 substantive answers;
+Qwen's remaining control response stayed pending and was excluded.
 This narrows the failure toward sustained identity-conditioned exact counting. It does not establish a
 specific hidden representation, and human solvability remains unverified pending a blinded baseline.
 

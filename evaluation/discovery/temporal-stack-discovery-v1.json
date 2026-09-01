@@ -1,0 +1,1042 @@
+{
+  "id": "temporal-stack-discovery-v1",
+  "generatorVersion": "temporal-visual-stack-v1",
+  "status": "discovery-only",
+  "hypothesis": "Models fail exact LIFO state manipulation over a visual instruction stream.",
+  "candidates": [
+    {
+      "id": "tst-95c91bc5a8a2733d",
+      "cellId": "cell-twenty-eight-event-visual-stack",
+      "split": "discovery",
+      "seed": 5700000,
+      "failureModeId": "temporal-stack-state-manipulation",
+      "question": "After executing every PUSH and POP in order, what color is on TOP of the stack?",
+      "answerOptions": [
+        "RED",
+        "BLUE",
+        "PURPLE",
+        "GREEN"
+      ],
+      "expectedAnswer": "BLUE",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetColor": 0,
+        "events": [
+          {
+            "op": "push",
+            "color": 3
+          },
+          {
+            "op": "push",
+            "color": 3
+          },
+          {
+            "op": "push",
+            "color": 1
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 2
+          },
+          {
+            "op": "push",
+            "color": 2
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 0
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 0
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 1
+          },
+          {
+            "op": "push",
+            "color": 3
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 3
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 2
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 2
+          },
+          {
+            "op": "push",
+            "color": 3
+          },
+          {
+            "op": "push",
+            "color": 0
+          },
+          {
+            "op": "push",
+            "color": 0
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 0
+          }
+        ],
+        "finalStack": [
+          2,
+          3,
+          0,
+          0
+        ],
+        "videoDurationMs": 13500,
+        "fps": 30,
+        "visualVariant": 0
+      }
+    },
+    {
+      "id": "tst-08cd571919296a26",
+      "cellId": "cell-twenty-eight-event-visual-stack",
+      "split": "discovery",
+      "seed": 5700001,
+      "failureModeId": "temporal-stack-state-manipulation",
+      "question": "After executing every PUSH and POP in order, what color is on TOP of the stack?",
+      "answerOptions": [
+        "BLUE",
+        "RED",
+        "PURPLE",
+        "GREEN"
+      ],
+      "expectedAnswer": "GREEN",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetColor": 1,
+        "events": [
+          {
+            "op": "push",
+            "color": 3
+          },
+          {
+            "op": "push",
+            "color": 0
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 1
+          },
+          {
+            "op": "push",
+            "color": 0
+          },
+          {
+            "op": "push",
+            "color": 1
+          },
+          {
+            "op": "push",
+            "color": 2
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 1
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 0
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 1
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 0
+          },
+          {
+            "op": "push",
+            "color": 2
+          },
+          {
+            "op": "push",
+            "color": 2
+          },
+          {
+            "op": "push",
+            "color": 2
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 1
+          },
+          {
+            "op": "push",
+            "color": 0
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 3
+          },
+          {
+            "op": "pop"
+          }
+        ],
+        "finalStack": [
+          0,
+          2,
+          2,
+          1
+        ],
+        "videoDurationMs": 13500,
+        "fps": 30,
+        "visualVariant": 1
+      }
+    },
+    {
+      "id": "tst-d70737e3c978e4a4",
+      "cellId": "cell-twenty-eight-event-visual-stack",
+      "split": "discovery",
+      "seed": 5700002,
+      "failureModeId": "temporal-stack-state-manipulation",
+      "question": "After executing every PUSH and POP in order, what color is on TOP of the stack?",
+      "answerOptions": [
+        "RED",
+        "BLUE",
+        "PURPLE",
+        "GREEN"
+      ],
+      "expectedAnswer": "RED",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetColor": 2,
+        "events": [
+          {
+            "op": "push",
+            "color": 1
+          },
+          {
+            "op": "push",
+            "color": 1
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 0
+          },
+          {
+            "op": "push",
+            "color": 2
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 2
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 1
+          },
+          {
+            "op": "push",
+            "color": 0
+          },
+          {
+            "op": "push",
+            "color": 1
+          },
+          {
+            "op": "push",
+            "color": 2
+          },
+          {
+            "op": "push",
+            "color": 2
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 2
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 0
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 1
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 2
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 3
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 1
+          },
+          {
+            "op": "pop"
+          }
+        ],
+        "finalStack": [
+          1,
+          0,
+          1,
+          2
+        ],
+        "videoDurationMs": 13500,
+        "fps": 30,
+        "visualVariant": 2
+      }
+    },
+    {
+      "id": "tst-721765b8e0b8e7f2",
+      "cellId": "cell-twenty-eight-event-visual-stack",
+      "split": "discovery",
+      "seed": 5700003,
+      "failureModeId": "temporal-stack-state-manipulation",
+      "question": "After executing every PUSH and POP in order, what color is on TOP of the stack?",
+      "answerOptions": [
+        "PURPLE",
+        "BLUE",
+        "RED",
+        "GREEN"
+      ],
+      "expectedAnswer": "PURPLE",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetColor": 3,
+        "events": [
+          {
+            "op": "push",
+            "color": 1
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 2
+          },
+          {
+            "op": "push",
+            "color": 2
+          },
+          {
+            "op": "push",
+            "color": 3
+          },
+          {
+            "op": "push",
+            "color": 0
+          },
+          {
+            "op": "push",
+            "color": 0
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 1
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 2
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 2
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 3
+          },
+          {
+            "op": "push",
+            "color": 1
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 3
+          },
+          {
+            "op": "push",
+            "color": 1
+          },
+          {
+            "op": "push",
+            "color": 3
+          },
+          {
+            "op": "push",
+            "color": 2
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "pop"
+          }
+        ],
+        "finalStack": [
+          2,
+          3
+        ],
+        "videoDurationMs": 13500,
+        "fps": 30,
+        "visualVariant": 3
+      }
+    },
+    {
+      "id": "tst-2fcde0a3512bb146",
+      "cellId": "cell-twenty-eight-event-visual-stack",
+      "split": "discovery",
+      "seed": 5700004,
+      "failureModeId": "temporal-stack-state-manipulation",
+      "question": "After executing every PUSH and POP in order, what color is on TOP of the stack?",
+      "answerOptions": [
+        "BLUE",
+        "PURPLE",
+        "RED",
+        "GREEN"
+      ],
+      "expectedAnswer": "BLUE",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetColor": 0,
+        "events": [
+          {
+            "op": "push",
+            "color": 0
+          },
+          {
+            "op": "push",
+            "color": 2
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 1
+          },
+          {
+            "op": "push",
+            "color": 0
+          },
+          {
+            "op": "push",
+            "color": 0
+          },
+          {
+            "op": "push",
+            "color": 2
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 2
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 1
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 1
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 1
+          },
+          {
+            "op": "push",
+            "color": 1
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 0
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 1
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 2
+          },
+          {
+            "op": "push",
+            "color": 2
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 0
+          }
+        ],
+        "finalStack": [
+          0,
+          1,
+          0,
+          0
+        ],
+        "videoDurationMs": 13500,
+        "fps": 30,
+        "visualVariant": 4
+      }
+    },
+    {
+      "id": "tst-0cf6dfb835e4dca0",
+      "cellId": "cell-twenty-eight-event-visual-stack",
+      "split": "discovery",
+      "seed": 5700005,
+      "failureModeId": "temporal-stack-state-manipulation",
+      "question": "After executing every PUSH and POP in order, what color is on TOP of the stack?",
+      "answerOptions": [
+        "PURPLE",
+        "BLUE",
+        "RED",
+        "GREEN"
+      ],
+      "expectedAnswer": "GREEN",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetColor": 1,
+        "events": [
+          {
+            "op": "push",
+            "color": 3
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 1
+          },
+          {
+            "op": "push",
+            "color": 2
+          },
+          {
+            "op": "push",
+            "color": 0
+          },
+          {
+            "op": "push",
+            "color": 0
+          },
+          {
+            "op": "push",
+            "color": 3
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 3
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 1
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 3
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 1
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 1
+          },
+          {
+            "op": "push",
+            "color": 0
+          },
+          {
+            "op": "push",
+            "color": 2
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 2
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 1
+          }
+        ],
+        "finalStack": [
+          1,
+          1
+        ],
+        "videoDurationMs": 13500,
+        "fps": 30,
+        "visualVariant": 5
+      }
+    },
+    {
+      "id": "tst-db3afaa4f1fdeb18",
+      "cellId": "cell-twenty-eight-event-visual-stack",
+      "split": "discovery",
+      "seed": 5700006,
+      "failureModeId": "temporal-stack-state-manipulation",
+      "question": "After executing every PUSH and POP in order, what color is on TOP of the stack?",
+      "answerOptions": [
+        "PURPLE",
+        "RED",
+        "BLUE",
+        "GREEN"
+      ],
+      "expectedAnswer": "RED",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetColor": 2,
+        "events": [
+          {
+            "op": "push",
+            "color": 1
+          },
+          {
+            "op": "push",
+            "color": 0
+          },
+          {
+            "op": "push",
+            "color": 2
+          },
+          {
+            "op": "push",
+            "color": 0
+          },
+          {
+            "op": "push",
+            "color": 0
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 1
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 1
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 3
+          },
+          {
+            "op": "push",
+            "color": 0
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 0
+          },
+          {
+            "op": "push",
+            "color": 3
+          },
+          {
+            "op": "push",
+            "color": 2
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 2
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 0
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 2
+          },
+          {
+            "op": "push",
+            "color": 0
+          },
+          {
+            "op": "pop"
+          }
+        ],
+        "finalStack": [
+          1,
+          0,
+          0,
+          2
+        ],
+        "videoDurationMs": 13500,
+        "fps": 30,
+        "visualVariant": 6
+      }
+    },
+    {
+      "id": "tst-f19bd067e274c6e6",
+      "cellId": "cell-twenty-eight-event-visual-stack",
+      "split": "discovery",
+      "seed": 5700007,
+      "failureModeId": "temporal-stack-state-manipulation",
+      "question": "After executing every PUSH and POP in order, what color is on TOP of the stack?",
+      "answerOptions": [
+        "RED",
+        "PURPLE",
+        "BLUE",
+        "GREEN"
+      ],
+      "expectedAnswer": "PURPLE",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetColor": 3,
+        "events": [
+          {
+            "op": "push",
+            "color": 0
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 0
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 1
+          },
+          {
+            "op": "push",
+            "color": 2
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 3
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 0
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 0
+          },
+          {
+            "op": "push",
+            "color": 3
+          },
+          {
+            "op": "push",
+            "color": 2
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 2
+          },
+          {
+            "op": "push",
+            "color": 2
+          },
+          {
+            "op": "push",
+            "color": 3
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 1
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 2
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 2
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "pop"
+          },
+          {
+            "op": "push",
+            "color": 3
+          }
+        ],
+        "finalStack": [
+          1,
+          0,
+          2,
+          3
+        ],
+        "videoDurationMs": 13500,
+        "fps": 30,
+        "visualVariant": 7
+      }
+    }
+  ]
+}

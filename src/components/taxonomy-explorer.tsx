@@ -7,7 +7,9 @@ import type { EvidenceLevel, Modality } from "@/lib/types";
 import { FailureCard } from "./failure-card";
 
 const evidenceOptions: EvidenceLevel[] = [
+  "reproduced-here",
   "literature-established",
+  "causal-intervention",
   "representation-evidence",
   "behavioral-evidence",
   "hypothesis",

@@ -6,16 +6,17 @@ The atlas treats every failure as a falsifiable family rather than a spectacular
 
 ## Current release
 
-- 32 mapped failure families across image, video, audiovisual, multi-image, and interleaved media
+- 52 mapped failure families across image, video, audiovisual, multi-image, and interleaved media
+- 20 strictly admitted frozen families: 10 image and 10 video
 - 8 deterministic interactive generators with construction-grounded answers
-- 37 primary or official technical sources with retrieval dates and scope notes
-- 45 statically prerendered routes
+- 38 primary or official technical sources with retrieval dates and scope notes
+- 68 statically prerendered routes
 - Evidence ladder separating behavior, interventions, representations, hypotheses, and speculation
 - Typed, provider-neutral evaluation contract
-- 912 genuine, provenance-complete responses: a 640-response frontier matrix plus 272 adaptive discovery and holdout evaluations
+- 2,880 unique genuine response records, including 1,936 requests in the admitted-family evidence set
 - $25 default campaign cap, $25 protected reserve, and a $200 prepaid evaluation ceiling
-- 201 explicit no-answer outcomes and 19 review-routed responses retained rather than discarded
-- A budgeted adaptive-discovery pipeline with disjoint confirmatory holdouts and paired native/slow-motion interventions
+- 24 non-substantive admitted-family requests retained and excluded rather than scored as model failures
+- A budgeted adaptive-discovery pipeline with disjoint 16-case confirmatory holdouts and paired native/control interventions
 
 ## Quick start
 
@@ -48,7 +49,7 @@ protocol, route, media hash, and cost ceiling pass validation.
 See [docs/architecture.md](docs/architecture.md), [docs/methods.md](docs/methods.md),
 [docs/adaptive-discovery.md](docs/adaptive-discovery.md), [docs/evaluation.md](docs/evaluation.md),
 [docs/bibliography.md](docs/bibliography.md), [docs/provider-landscape.md](docs/provider-landscape.md),
-and [docs/hosting.md](docs/hosting.md).
+[docs/verified-findings.md](docs/verified-findings.md), and [docs/hosting.md](docs/hosting.md).
 
 ## Evaluation smoke test
 
@@ -85,7 +86,7 @@ a protected $25 reserve, and a $25 default campaign cap. Current usage is record
 
 ## Status
 
-This is a research preview. The frozen pilot is diagnostic rather than a leaderboard: eight examples
-per family and one trial can reveal candidate failure patterns but cannot establish stable rankings.
-Public generator seeds are educational demonstrations; every scored pilot artifact and raw response
-is published with its provenance.
+This is a research preview, not a leaderboard. The admitted cohort requires 16 substantive native-media
+answers per route and a strictly below-half observed solve rate for every selected route. These finite
+holdouts reveal reproducible candidate boundaries but do not establish universal rankings; human
+solvability is still unverified. Every scored artifact and raw response is published with its provenance.
