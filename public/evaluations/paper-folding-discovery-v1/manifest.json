@@ -1,0 +1,241 @@
+{
+  "id": "paper-folding-discovery-v1",
+  "planSha256": "de58ef1a0b0db175829eae4a939cd113589d67f168412803d12379874fa06214",
+  "generatorVersion": "paper-folding-v1",
+  "renderer": "paper-folding-svg-v1",
+  "fps": 0,
+  "cases": [
+    {
+      "candidateId": "pf-d8bf3a04eaf6693a",
+      "cellId": "cell-three-fold-two-punch",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Three folds followed by two punches; four plausible exact unfolded grids.",
+      "failureModeId": "paper-folding-hole-propagation",
+      "generator": "paper-folding",
+      "seed": 2400000,
+      "difficulty": 74,
+      "variant": 0,
+      "artifact": "public/evaluations/paper-folding-discovery-v1/pf-d8bf3a04eaf6693a.png",
+      "mimeType": "image/png",
+      "question": "After unfolding the punched paper completely, which hole pattern appears?",
+      "answerOptions": [
+        "D",
+        "C",
+        "A",
+        "B"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "58e2105e275893ca9bec95a4066736aeb37e8419f85a22bcaab8af5e43962270",
+      "parameters": {
+        "correctPanel": 0,
+        "visualVariant": 0
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Mentally reverse the folds and propagate both holes. Return exactly one allowed panel letter without explanation."
+    },
+    {
+      "candidateId": "pf-eeb18feb435653c0",
+      "cellId": "cell-three-fold-two-punch",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Three folds followed by two punches; four plausible exact unfolded grids.",
+      "failureModeId": "paper-folding-hole-propagation",
+      "generator": "paper-folding",
+      "seed": 2400001,
+      "difficulty": 74,
+      "variant": 1,
+      "artifact": "public/evaluations/paper-folding-discovery-v1/pf-eeb18feb435653c0.png",
+      "mimeType": "image/png",
+      "question": "After unfolding the punched paper completely, which hole pattern appears?",
+      "answerOptions": [
+        "C",
+        "D",
+        "A",
+        "B"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "97d59d7fe186060c07ffef3978aa7c7fa7c4cf6d3b5d72d50589dc3e407c854e",
+      "parameters": {
+        "correctPanel": 1,
+        "visualVariant": 1
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Mentally reverse the folds and propagate both holes. Return exactly one allowed panel letter without explanation."
+    },
+    {
+      "candidateId": "pf-12e3049e2d899e16",
+      "cellId": "cell-three-fold-two-punch",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Three folds followed by two punches; four plausible exact unfolded grids.",
+      "failureModeId": "paper-folding-hole-propagation",
+      "generator": "paper-folding",
+      "seed": 2400002,
+      "difficulty": 74,
+      "variant": 2,
+      "artifact": "public/evaluations/paper-folding-discovery-v1/pf-12e3049e2d899e16.png",
+      "mimeType": "image/png",
+      "question": "After unfolding the punched paper completely, which hole pattern appears?",
+      "answerOptions": [
+        "C",
+        "A",
+        "D",
+        "B"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "8cca4b48d3ac6198897ea6b1681691a1c82958fdc447c2832be3c4a43b41300a",
+      "parameters": {
+        "correctPanel": 2,
+        "visualVariant": 2
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Mentally reverse the folds and propagate both holes. Return exactly one allowed panel letter without explanation."
+    },
+    {
+      "candidateId": "pf-1e30459718a34b51",
+      "cellId": "cell-three-fold-two-punch",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Three folds followed by two punches; four plausible exact unfolded grids.",
+      "failureModeId": "paper-folding-hole-propagation",
+      "generator": "paper-folding",
+      "seed": 2400003,
+      "difficulty": 74,
+      "variant": 3,
+      "artifact": "public/evaluations/paper-folding-discovery-v1/pf-1e30459718a34b51.png",
+      "mimeType": "image/png",
+      "question": "After unfolding the punched paper completely, which hole pattern appears?",
+      "answerOptions": [
+        "C",
+        "A",
+        "D",
+        "B"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "8d6754599940233798302433908156f67e1ea93ddffd538a1fb33bf7e02ab1a5",
+      "parameters": {
+        "correctPanel": 3,
+        "visualVariant": 3
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Mentally reverse the folds and propagate both holes. Return exactly one allowed panel letter without explanation."
+    },
+    {
+      "candidateId": "pf-14dac8ef0af0b2ec",
+      "cellId": "cell-three-fold-two-punch",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Three folds followed by two punches; four plausible exact unfolded grids.",
+      "failureModeId": "paper-folding-hole-propagation",
+      "generator": "paper-folding",
+      "seed": 2400004,
+      "difficulty": 74,
+      "variant": 4,
+      "artifact": "public/evaluations/paper-folding-discovery-v1/pf-14dac8ef0af0b2ec.png",
+      "mimeType": "image/png",
+      "question": "After unfolding the punched paper completely, which hole pattern appears?",
+      "answerOptions": [
+        "A",
+        "C",
+        "D",
+        "B"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "4d550f75fdf9acadfc204469aca5b984e270509a946ecce9e465eada6032ef5e",
+      "parameters": {
+        "correctPanel": 0,
+        "visualVariant": 4
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Mentally reverse the folds and propagate both holes. Return exactly one allowed panel letter without explanation."
+    },
+    {
+      "candidateId": "pf-3af61685f474c592",
+      "cellId": "cell-three-fold-two-punch",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Three folds followed by two punches; four plausible exact unfolded grids.",
+      "failureModeId": "paper-folding-hole-propagation",
+      "generator": "paper-folding",
+      "seed": 2400005,
+      "difficulty": 74,
+      "variant": 5,
+      "artifact": "public/evaluations/paper-folding-discovery-v1/pf-3af61685f474c592.png",
+      "mimeType": "image/png",
+      "question": "After unfolding the punched paper completely, which hole pattern appears?",
+      "answerOptions": [
+        "D",
+        "A",
+        "C",
+        "B"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "45b55c4f89351b45d50a9063b6c89d3b706174cca07c559130e417891968cd94",
+      "parameters": {
+        "correctPanel": 1,
+        "visualVariant": 5
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Mentally reverse the folds and propagate both holes. Return exactly one allowed panel letter without explanation."
+    },
+    {
+      "candidateId": "pf-4938b6df0aaa6162",
+      "cellId": "cell-three-fold-two-punch",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Three folds followed by two punches; four plausible exact unfolded grids.",
+      "failureModeId": "paper-folding-hole-propagation",
+      "generator": "paper-folding",
+      "seed": 2400006,
+      "difficulty": 74,
+      "variant": 6,
+      "artifact": "public/evaluations/paper-folding-discovery-v1/pf-4938b6df0aaa6162.png",
+      "mimeType": "image/png",
+      "question": "After unfolding the punched paper completely, which hole pattern appears?",
+      "answerOptions": [
+        "D",
+        "A",
+        "C",
+        "B"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "c4f3ce8f9e4e723bd2b535492338a9122c15952301ce9ddd3c253827ada1b026",
+      "parameters": {
+        "correctPanel": 2,
+        "visualVariant": 6
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Mentally reverse the folds and propagate both holes. Return exactly one allowed panel letter without explanation."
+    },
+    {
+      "candidateId": "pf-0fa6b7a79a23bd3e",
+      "cellId": "cell-three-fold-two-punch",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Three folds followed by two punches; four plausible exact unfolded grids.",
+      "failureModeId": "paper-folding-hole-propagation",
+      "generator": "paper-folding",
+      "seed": 2400007,
+      "difficulty": 74,
+      "variant": 7,
+      "artifact": "public/evaluations/paper-folding-discovery-v1/pf-0fa6b7a79a23bd3e.png",
+      "mimeType": "image/png",
+      "question": "After unfolding the punched paper completely, which hole pattern appears?",
+      "answerOptions": [
+        "A",
+        "D",
+        "C",
+        "B"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "7aa81e57658f94e3b87e5f9e8b00d14b0c20347ff3a5a09f0eeae9d6113652c1",
+      "parameters": {
+        "correctPanel": 3,
+        "visualVariant": 7
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Mentally reverse the folds and propagate both holes. Return exactly one allowed panel letter without explanation."
+    }
+  ]
+}

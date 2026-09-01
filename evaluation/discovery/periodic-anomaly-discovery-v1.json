@@ -1,0 +1,208 @@
+{
+  "id": "periodic-anomaly-discovery-v1",
+  "generatorVersion": "periodic-anomaly-v1",
+  "status": "discovery-only",
+  "hypothesis": "Video models fail to compare periodic temporal structure and localize a single omitted event.",
+  "candidates": [
+    {
+      "id": "pa-3b3361068c960f50",
+      "cellId": "cell-four-lane-missing-beat",
+      "split": "discovery",
+      "seed": 2500000,
+      "failureModeId": "periodic-rhythm-anomaly-detection",
+      "question": "Which labeled lane skips exactly one flash in its otherwise regular rhythm?",
+      "answerOptions": [
+        "B",
+        "D",
+        "C",
+        "A"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "anomalyLane": 0,
+        "missingBeat": 2,
+        "periodMs": 850,
+        "flashDurationMs": 260,
+        "videoDurationMs": 8500,
+        "fps": 30,
+        "visualVariant": 0
+      }
+    },
+    {
+      "id": "pa-7867b3fc880c77e1",
+      "cellId": "cell-four-lane-missing-beat",
+      "split": "discovery",
+      "seed": 2500001,
+      "failureModeId": "periodic-rhythm-anomaly-detection",
+      "question": "Which labeled lane skips exactly one flash in its otherwise regular rhythm?",
+      "answerOptions": [
+        "D",
+        "B",
+        "C",
+        "A"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "anomalyLane": 1,
+        "missingBeat": 2,
+        "periodMs": 850,
+        "flashDurationMs": 260,
+        "videoDurationMs": 8500,
+        "fps": 30,
+        "visualVariant": 1
+      }
+    },
+    {
+      "id": "pa-7fbdce1868362b11",
+      "cellId": "cell-four-lane-missing-beat",
+      "split": "discovery",
+      "seed": 2500002,
+      "failureModeId": "periodic-rhythm-anomaly-detection",
+      "question": "Which labeled lane skips exactly one flash in its otherwise regular rhythm?",
+      "answerOptions": [
+        "D",
+        "B",
+        "C",
+        "A"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "anomalyLane": 2,
+        "missingBeat": 2,
+        "periodMs": 850,
+        "flashDurationMs": 260,
+        "videoDurationMs": 8500,
+        "fps": 30,
+        "visualVariant": 2
+      }
+    },
+    {
+      "id": "pa-ff66473123805788",
+      "cellId": "cell-four-lane-missing-beat",
+      "split": "discovery",
+      "seed": 2500003,
+      "failureModeId": "periodic-rhythm-anomaly-detection",
+      "question": "Which labeled lane skips exactly one flash in its otherwise regular rhythm?",
+      "answerOptions": [
+        "B",
+        "C",
+        "D",
+        "A"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "anomalyLane": 3,
+        "missingBeat": 2,
+        "periodMs": 850,
+        "flashDurationMs": 260,
+        "videoDurationMs": 8500,
+        "fps": 30,
+        "visualVariant": 3
+      }
+    },
+    {
+      "id": "pa-f812b8f00816f515",
+      "cellId": "cell-four-lane-missing-beat",
+      "split": "discovery",
+      "seed": 2500004,
+      "failureModeId": "periodic-rhythm-anomaly-detection",
+      "question": "Which labeled lane skips exactly one flash in its otherwise regular rhythm?",
+      "answerOptions": [
+        "C",
+        "B",
+        "D",
+        "A"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "anomalyLane": 0,
+        "missingBeat": 2,
+        "periodMs": 850,
+        "flashDurationMs": 260,
+        "videoDurationMs": 8500,
+        "fps": 30,
+        "visualVariant": 4
+      }
+    },
+    {
+      "id": "pa-9d786e9fdb6775c2",
+      "cellId": "cell-four-lane-missing-beat",
+      "split": "discovery",
+      "seed": 2500005,
+      "failureModeId": "periodic-rhythm-anomaly-detection",
+      "question": "Which labeled lane skips exactly one flash in its otherwise regular rhythm?",
+      "answerOptions": [
+        "C",
+        "B",
+        "D",
+        "A"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "anomalyLane": 1,
+        "missingBeat": 2,
+        "periodMs": 850,
+        "flashDurationMs": 260,
+        "videoDurationMs": 8500,
+        "fps": 30,
+        "visualVariant": 5
+      }
+    },
+    {
+      "id": "pa-e9d3211ab93f52e4",
+      "cellId": "cell-four-lane-missing-beat",
+      "split": "discovery",
+      "seed": 2500006,
+      "failureModeId": "periodic-rhythm-anomaly-detection",
+      "question": "Which labeled lane skips exactly one flash in its otherwise regular rhythm?",
+      "answerOptions": [
+        "B",
+        "C",
+        "D",
+        "A"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "anomalyLane": 2,
+        "missingBeat": 2,
+        "periodMs": 850,
+        "flashDurationMs": 260,
+        "videoDurationMs": 8500,
+        "fps": 30,
+        "visualVariant": 6
+      }
+    },
+    {
+      "id": "pa-99f668f56fe07970",
+      "cellId": "cell-four-lane-missing-beat",
+      "split": "discovery",
+      "seed": 2500007,
+      "failureModeId": "periodic-rhythm-anomaly-detection",
+      "question": "Which labeled lane skips exactly one flash in its otherwise regular rhythm?",
+      "answerOptions": [
+        "C",
+        "D",
+        "B",
+        "A"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "anomalyLane": 3,
+        "missingBeat": 2,
+        "periodMs": 850,
+        "flashDurationMs": 260,
+        "videoDurationMs": 8500,
+        "fps": 30,
+        "visualVariant": 7
+      }
+    }
+  ]
+}

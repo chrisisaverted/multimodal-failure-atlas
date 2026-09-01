@@ -79,8 +79,30 @@ import {
 import { createOcclusionStackDiscoveryGrid, renderOcclusionStackSvg } from "./occlusion-stack";
 import { createMotDiscoveryGrid, motEndpointAssignment, renderMotSvg } from "./multiple-object-tracking";
 import { createDynamicStateDiscoveryGrid, dynamicFinalState, renderDynamicStateSvg } from "./dynamic-state";
+import { createPaperFoldingDiscoveryGrid, paperOptionPatterns, unfoldPunches } from "./paper-folding";
+import { createPeriodicAnomalyGrid, periodicLaneStarts } from "./periodic-anomaly";
 
 describe("adaptive multimodal discovery", () => {
+  it("balances exactly one omitted beat across periodic lanes", () => {
+    const candidates = createPeriodicAnomalyGrid();
+    expect(candidates).toHaveLength(8);
+    for (const candidate of candidates)
+      expect(Array.from({ length: 4 }, (_, lane) => periodicLaneStarts(candidate, lane).length)).toEqual(
+        Array.from({ length: 4 }, (_, lane) => (lane === candidate.parameters.anomalyLane ? 6 : 7)),
+      );
+  });
+
+  it("propagates paper punches through three exact reverse folds", () => {
+    expect(unfoldPunches([[0, 0]])).toHaveLength(8);
+    const candidates = createPaperFoldingDiscoveryGrid();
+    expect(candidates).toHaveLength(8);
+    for (const candidate of candidates) {
+      const options = paperOptionPatterns(candidate);
+      expect(new Set(options.map((option) => JSON.stringify(option)))).toHaveLength(4);
+      expect(options[candidate.parameters.correctPanel]).toEqual(unfoldPunches(candidate.parameters.punches));
+    }
+  });
+
   it("balances exact latent dynamic states after deterministic wall updates", () => {
     const candidates = createDynamicStateDiscoveryGrid();
     expect(candidates).toHaveLength(8);

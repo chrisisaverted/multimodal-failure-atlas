@@ -1,0 +1,248 @@
+{
+  "id": "paper-folding-discovery-v1",
+  "generatorVersion": "paper-folding-v1",
+  "status": "discovery-only",
+  "hypothesis": "Models fail exact multi-step spatial transformation and symmetry propagation in paper-folding tasks.",
+  "candidates": [
+    {
+      "id": "pf-d8bf3a04eaf6693a",
+      "cellId": "cell-three-fold-two-punch",
+      "split": "discovery",
+      "seed": 2400000,
+      "failureModeId": "paper-folding-hole-propagation",
+      "question": "After unfolding the punched paper completely, which hole pattern appears?",
+      "answerOptions": [
+        "D",
+        "C",
+        "A",
+        "B"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 0,
+        "punches": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "visualVariant": 0
+      }
+    },
+    {
+      "id": "pf-eeb18feb435653c0",
+      "cellId": "cell-three-fold-two-punch",
+      "split": "discovery",
+      "seed": 2400001,
+      "failureModeId": "paper-folding-hole-propagation",
+      "question": "After unfolding the punched paper completely, which hole pattern appears?",
+      "answerOptions": [
+        "C",
+        "D",
+        "A",
+        "B"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 1,
+        "punches": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "visualVariant": 1
+      }
+    },
+    {
+      "id": "pf-12e3049e2d899e16",
+      "cellId": "cell-three-fold-two-punch",
+      "split": "discovery",
+      "seed": 2400002,
+      "failureModeId": "paper-folding-hole-propagation",
+      "question": "After unfolding the punched paper completely, which hole pattern appears?",
+      "answerOptions": [
+        "C",
+        "A",
+        "D",
+        "B"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 2,
+        "punches": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "visualVariant": 2
+      }
+    },
+    {
+      "id": "pf-1e30459718a34b51",
+      "cellId": "cell-three-fold-two-punch",
+      "split": "discovery",
+      "seed": 2400003,
+      "failureModeId": "paper-folding-hole-propagation",
+      "question": "After unfolding the punched paper completely, which hole pattern appears?",
+      "answerOptions": [
+        "C",
+        "A",
+        "D",
+        "B"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 3,
+        "punches": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "visualVariant": 3
+      }
+    },
+    {
+      "id": "pf-14dac8ef0af0b2ec",
+      "cellId": "cell-three-fold-two-punch",
+      "split": "discovery",
+      "seed": 2400004,
+      "failureModeId": "paper-folding-hole-propagation",
+      "question": "After unfolding the punched paper completely, which hole pattern appears?",
+      "answerOptions": [
+        "A",
+        "C",
+        "D",
+        "B"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 0,
+        "punches": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "visualVariant": 4
+      }
+    },
+    {
+      "id": "pf-3af61685f474c592",
+      "cellId": "cell-three-fold-two-punch",
+      "split": "discovery",
+      "seed": 2400005,
+      "failureModeId": "paper-folding-hole-propagation",
+      "question": "After unfolding the punched paper completely, which hole pattern appears?",
+      "answerOptions": [
+        "D",
+        "A",
+        "C",
+        "B"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 1,
+        "punches": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "visualVariant": 5
+      }
+    },
+    {
+      "id": "pf-4938b6df0aaa6162",
+      "cellId": "cell-three-fold-two-punch",
+      "split": "discovery",
+      "seed": 2400006,
+      "failureModeId": "paper-folding-hole-propagation",
+      "question": "After unfolding the punched paper completely, which hole pattern appears?",
+      "answerOptions": [
+        "D",
+        "A",
+        "C",
+        "B"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 2,
+        "punches": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "visualVariant": 6
+      }
+    },
+    {
+      "id": "pf-0fa6b7a79a23bd3e",
+      "cellId": "cell-three-fold-two-punch",
+      "split": "discovery",
+      "seed": 2400007,
+      "failureModeId": "paper-folding-hole-propagation",
+      "question": "After unfolding the punched paper completely, which hole pattern appears?",
+      "answerOptions": [
+        "A",
+        "D",
+        "C",
+        "B"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 3,
+        "punches": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "visualVariant": 7
+      }
+    }
+  ]
+}
