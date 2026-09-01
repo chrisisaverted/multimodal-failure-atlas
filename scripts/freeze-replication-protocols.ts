@@ -20,6 +20,8 @@ const completionOutputDirectory = resolve("evaluation/plans/replication-v1-compl
 await mkdir(completionOutputDirectory, { recursive: true });
 const answerOutputDirectory = resolve("evaluation/plans/replication-v1-no-reasoning");
 await mkdir(answerOutputDirectory, { recursive: true });
+const replacementOutputDirectory = resolve("evaluation/plans/replication-v1-mimo-replacement");
+await mkdir(replacementOutputDirectory, { recursive: true });
 
 const cohort = [
   {
@@ -35,6 +37,12 @@ const cohort = [
     quantization: "fp8",
   },
 ] as const;
+const mimoReplacement = {
+  modelId: "xiaomi/mimo-v2.5",
+  modelRevision: "xiaomi/mimo-v2.5-20260422",
+  upstreamProvider: "Xiaomi",
+  quantization: "fp8",
+} as const;
 
 for (const family of evidence.families) {
   const common = {
@@ -80,6 +88,18 @@ for (const family of evidence.families) {
     reasoning: { effort: "none", exclude: true },
     campaignCostCeilingUsd: 2,
   };
+  const replacementProtocol = {
+    ...common,
+    id: `${family.planId}-external-replication-v1-mimo-replacement`,
+    cohortId: "external-replication-v1-mimo-replacement-2026-09-01",
+    frozenAt: "2026-09-01T11:34:00.000Z",
+    analysisRole:
+      "Untouched post-confirmatory replacement route. GLM was operationally unscorable after 4,096- and 16,384-token answer-exhaustion canaries and rejection of no-reasoning mode; no GLM outcome affected generator selection.",
+    maxOutputTokens: 4096,
+    reasoning: { effort: "none", exclude: true },
+    campaignCostCeilingUsd: 2,
+    models: [mimoReplacement],
+  };
   const protocolPath = resolve(outputDirectory, `${family.planId}.json`);
   try {
     await access(protocolPath);
@@ -89,6 +109,11 @@ for (const family of evidence.families) {
   await writeFile(
     resolve(completionOutputDirectory, `${family.planId}.json`),
     `${JSON.stringify(completionProtocol, null, 2)}\n`,
+    "utf8",
+  );
+  await writeFile(
+    resolve(replacementOutputDirectory, `${family.planId}.json`),
+    `${JSON.stringify(replacementProtocol, null, 2)}\n`,
     "utf8",
   );
   await writeFile(
@@ -103,6 +128,7 @@ console.log(
     protocols: evidence.families.length,
     completionProtocols: evidence.families.length,
     noReasoningProtocols: evidence.families.length,
+    replacementProtocols: evidence.families.length,
     cohort: cohort.map(({ modelId }) => modelId),
   }),
 );

@@ -16,9 +16,12 @@ const evidence = z
 const manifestSchema = z.object({
   cases: z.array(z.object({ seed: z.number().int(), condition: z.string() })),
 });
+const protocolVariant = process.env.ATLAS_REPLICATION_PROTOCOL_VARIANT ?? "replication-v1-no-reasoning";
 const resultDirectories = [
   "evaluation/results/replication-v1",
   "evaluation/results/replication-v1-completion",
+  "evaluation/results/replication-v1-no-reasoning",
+  "evaluation/results/replication-v1-mimo-replacement",
 ];
 
 function conditionOf(run: EvaluationRunRecord) {
@@ -80,8 +83,8 @@ function runRange(planId: string, offset: number, limit: number) {
           ...process.env,
           ATLAS_MODEL_ID: modelId,
           ATLAS_OPENROUTER_PROVIDER: provider,
-          ATLAS_EVALUATION_PROTOCOL_PATH: `evaluation/plans/replication-v1-completion/${planId}.json`,
-          ATLAS_DISCOVERY_RESULTS_PATH: `evaluation/results/replication-v1-completion/${planId}-${modelSlug}.jsonl`,
+          ATLAS_EVALUATION_PROTOCOL_PATH: `evaluation/plans/${protocolVariant}/${planId}.json`,
+          ATLAS_DISCOVERY_RESULTS_PATH: `evaluation/results/${protocolVariant}/${planId}-${modelSlug}.jsonl`,
           ATLAS_CASE_OFFSET: String(offset),
           ATLAS_CASE_LIMIT: String(limit),
           ATLAS_PROVIDER_TIMEOUT_MS: "600000",

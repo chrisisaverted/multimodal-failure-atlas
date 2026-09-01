@@ -1,0 +1,27 @@
+{
+  "cohortId": "external-replication-v1-mimo-replacement-2026-09-01",
+  "analysisRole": "Untouched post-confirmatory replacement route. GLM was operationally unscorable after 4,096- and 16,384-token answer-exhaustion canaries and rejection of no-reasoning mode; no GLM outcome affected generator selection.",
+  "evaluationPlanId": "grid-activation-confirmatory-v3",
+  "evaluationPlanSha256": "5f96ab8c9ceb36ad95012a93a3f5a01e87f84e94b030d49e155ce812ebca7a3e",
+  "temperature": 0,
+  "reasoning": {
+    "effort": "none",
+    "exclude": true
+  },
+  "scorer": "terminal-option-v3",
+  "allowProviderFallbacks": false,
+  "dataCollection": "deny",
+  "substantiveMinimumPerNativeCondition": 16,
+  "models": [
+    {
+      "modelId": "xiaomi/mimo-v2.5",
+      "modelRevision": "xiaomi/mimo-v2.5-20260422",
+      "upstreamProvider": "Xiaomi",
+      "quantization": "fp8"
+    }
+  ],
+  "id": "grid-activation-confirmatory-v3-external-replication-v1-mimo-replacement",
+  "frozenAt": "2026-09-01T11:34:00.000Z",
+  "maxOutputTokens": 4096,
+  "campaignCostCeilingUsd": 2
+}

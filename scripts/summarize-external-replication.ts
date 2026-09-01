@@ -3,7 +3,7 @@ import { dirname, resolve } from "node:path";
 import { z } from "zod";
 import { evaluationRunSchema, type EvaluationRunRecord } from "../src/lib/evaluation/schema";
 
-const cohort = ["z-ai/glm-5.3-flash", "bytedance-seed/seed-2-1-turbo"] as const;
+const cohort = ["bytedance-seed/seed-2-1-turbo", "xiaomi/mimo-v2.5"] as const;
 const requireComplete = process.argv.includes("--require-complete");
 const evidence = z
   .object({
@@ -32,6 +32,8 @@ async function resultFiles(directory: string) {
 const resultDirectories = [
   "evaluation/results/replication-v1",
   "evaluation/results/replication-v1-completion",
+  "evaluation/results/replication-v1-no-reasoning",
+  "evaluation/results/replication-v1-mimo-replacement",
 ];
 const resultPaths = (
   await Promise.all(
