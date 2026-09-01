@@ -1,0 +1,265 @@
+{
+  "id": "temporal-binding-discovery-v1",
+  "planSha256": "220d7f68cc8766f6d7f3232b08df3bd6e5019bd8428b9d3af60c8dc2151f4bf4",
+  "generatorVersion": "temporal-binding-v1",
+  "renderer": "temporal-binding-svg-raster-v1",
+  "fps": 30,
+  "cases": [
+    {
+      "candidateId": "tb-f0de430e50107511",
+      "cellId": "cell-four-object-six-feature-sequence",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four persistent object identities each emit six colors; one matches the queried ordered sequence.",
+      "failureModeId": "object-conditioned-temporal-feature-binding",
+      "generator": "temporal-binding",
+      "seed": 2700000,
+      "difficulty": 80,
+      "variant": 0,
+      "artifact": "public/evaluations/temporal-binding-discovery-v1/tb-f0de430e50107511.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 9000,
+      "question": "Which labeled disk flashes the sequence RED, GREEN, BLUE, PURPLE, RED, BLUE in that exact order?",
+      "answerOptions": [
+        "B",
+        "D",
+        "A",
+        "C"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "17b5c073d7e12b640a46ab9e70c6c8f8c86896407b5bf36d629b5cba7021be84",
+      "parameters": {
+        "targetLane": 0,
+        "videoDurationMs": 9000,
+        "fps": 30,
+        "visualVariant": 0
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Bind each flash color to its labeled disk across all six events. Return exactly one allowed letter."
+    },
+    {
+      "candidateId": "tb-b165f2fadbdf12b8",
+      "cellId": "cell-four-object-six-feature-sequence",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four persistent object identities each emit six colors; one matches the queried ordered sequence.",
+      "failureModeId": "object-conditioned-temporal-feature-binding",
+      "generator": "temporal-binding",
+      "seed": 2700001,
+      "difficulty": 80,
+      "variant": 1,
+      "artifact": "public/evaluations/temporal-binding-discovery-v1/tb-b165f2fadbdf12b8.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 9000,
+      "question": "Which labeled disk flashes the sequence RED, GREEN, BLUE, PURPLE, RED, BLUE in that exact order?",
+      "answerOptions": [
+        "D",
+        "B",
+        "A",
+        "C"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "ce6e8a18d8c895d66aa6552c0783ba74460cddf5c21182960720852a16e5d2f9",
+      "parameters": {
+        "targetLane": 1,
+        "videoDurationMs": 9000,
+        "fps": 30,
+        "visualVariant": 1
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Bind each flash color to its labeled disk across all six events. Return exactly one allowed letter."
+    },
+    {
+      "candidateId": "tb-4133f8e6017a7ac3",
+      "cellId": "cell-four-object-six-feature-sequence",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four persistent object identities each emit six colors; one matches the queried ordered sequence.",
+      "failureModeId": "object-conditioned-temporal-feature-binding",
+      "generator": "temporal-binding",
+      "seed": 2700002,
+      "difficulty": 80,
+      "variant": 2,
+      "artifact": "public/evaluations/temporal-binding-discovery-v1/tb-4133f8e6017a7ac3.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 9000,
+      "question": "Which labeled disk flashes the sequence RED, GREEN, BLUE, PURPLE, RED, BLUE in that exact order?",
+      "answerOptions": [
+        "B",
+        "D",
+        "A",
+        "C"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "8a5da77dc47277e38a06731b5501ac2dfb90a48b556c2081a00fa10c2a4dacaa",
+      "parameters": {
+        "targetLane": 2,
+        "videoDurationMs": 9000,
+        "fps": 30,
+        "visualVariant": 2
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Bind each flash color to its labeled disk across all six events. Return exactly one allowed letter."
+    },
+    {
+      "candidateId": "tb-5141c50e66997827",
+      "cellId": "cell-four-object-six-feature-sequence",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four persistent object identities each emit six colors; one matches the queried ordered sequence.",
+      "failureModeId": "object-conditioned-temporal-feature-binding",
+      "generator": "temporal-binding",
+      "seed": 2700003,
+      "difficulty": 80,
+      "variant": 3,
+      "artifact": "public/evaluations/temporal-binding-discovery-v1/tb-5141c50e66997827.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 9000,
+      "question": "Which labeled disk flashes the sequence RED, GREEN, BLUE, PURPLE, RED, BLUE in that exact order?",
+      "answerOptions": [
+        "D",
+        "A",
+        "B",
+        "C"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "e502d69bdbb8dc5729656b162b977709be61bae97ae4972f8e64aa2ad52c0e96",
+      "parameters": {
+        "targetLane": 3,
+        "videoDurationMs": 9000,
+        "fps": 30,
+        "visualVariant": 3
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Bind each flash color to its labeled disk across all six events. Return exactly one allowed letter."
+    },
+    {
+      "candidateId": "tb-aedc2246e2b31dea",
+      "cellId": "cell-four-object-six-feature-sequence",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four persistent object identities each emit six colors; one matches the queried ordered sequence.",
+      "failureModeId": "object-conditioned-temporal-feature-binding",
+      "generator": "temporal-binding",
+      "seed": 2700004,
+      "difficulty": 80,
+      "variant": 4,
+      "artifact": "public/evaluations/temporal-binding-discovery-v1/tb-aedc2246e2b31dea.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 9000,
+      "question": "Which labeled disk flashes the sequence RED, GREEN, BLUE, PURPLE, RED, BLUE in that exact order?",
+      "answerOptions": [
+        "A",
+        "D",
+        "B",
+        "C"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "70c92e601998557689f2121d39ee3e4468ede056e34e7de67ee0fee4c0fcf2d2",
+      "parameters": {
+        "targetLane": 0,
+        "videoDurationMs": 9000,
+        "fps": 30,
+        "visualVariant": 4
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Bind each flash color to its labeled disk across all six events. Return exactly one allowed letter."
+    },
+    {
+      "candidateId": "tb-a48c5134d379b7ec",
+      "cellId": "cell-four-object-six-feature-sequence",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four persistent object identities each emit six colors; one matches the queried ordered sequence.",
+      "failureModeId": "object-conditioned-temporal-feature-binding",
+      "generator": "temporal-binding",
+      "seed": 2700005,
+      "difficulty": 80,
+      "variant": 5,
+      "artifact": "public/evaluations/temporal-binding-discovery-v1/tb-a48c5134d379b7ec.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 9000,
+      "question": "Which labeled disk flashes the sequence RED, GREEN, BLUE, PURPLE, RED, BLUE in that exact order?",
+      "answerOptions": [
+        "D",
+        "A",
+        "B",
+        "C"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "55560d658a8d7364b1b4023c2ace27291516876d55018ada5c85d2ae161b9002",
+      "parameters": {
+        "targetLane": 1,
+        "videoDurationMs": 9000,
+        "fps": 30,
+        "visualVariant": 5
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Bind each flash color to its labeled disk across all six events. Return exactly one allowed letter."
+    },
+    {
+      "candidateId": "tb-3aa5cee48abc27a4",
+      "cellId": "cell-four-object-six-feature-sequence",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four persistent object identities each emit six colors; one matches the queried ordered sequence.",
+      "failureModeId": "object-conditioned-temporal-feature-binding",
+      "generator": "temporal-binding",
+      "seed": 2700006,
+      "difficulty": 80,
+      "variant": 6,
+      "artifact": "public/evaluations/temporal-binding-discovery-v1/tb-3aa5cee48abc27a4.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 9000,
+      "question": "Which labeled disk flashes the sequence RED, GREEN, BLUE, PURPLE, RED, BLUE in that exact order?",
+      "answerOptions": [
+        "D",
+        "A",
+        "B",
+        "C"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "9d17de67e1727be1ebaf598304773afc4b6e687479b875b55cc0cd51bec24c6f",
+      "parameters": {
+        "targetLane": 2,
+        "videoDurationMs": 9000,
+        "fps": 30,
+        "visualVariant": 6
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Bind each flash color to its labeled disk across all six events. Return exactly one allowed letter."
+    },
+    {
+      "candidateId": "tb-0f1b957921c05bcd",
+      "cellId": "cell-four-object-six-feature-sequence",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four persistent object identities each emit six colors; one matches the queried ordered sequence.",
+      "failureModeId": "object-conditioned-temporal-feature-binding",
+      "generator": "temporal-binding",
+      "seed": 2700007,
+      "difficulty": 80,
+      "variant": 7,
+      "artifact": "public/evaluations/temporal-binding-discovery-v1/tb-0f1b957921c05bcd.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 9000,
+      "question": "Which labeled disk flashes the sequence RED, GREEN, BLUE, PURPLE, RED, BLUE in that exact order?",
+      "answerOptions": [
+        "A",
+        "B",
+        "D",
+        "C"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "68339a68605a27353b9867b2e4d06bcdfa9e7ea09a69f693759fa219cfc247b5",
+      "parameters": {
+        "targetLane": 3,
+        "videoDurationMs": 9000,
+        "fps": 30,
+        "visualVariant": 7
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Bind each flash color to its labeled disk across all six events. Return exactly one allowed letter."
+    }
+  ]
+}

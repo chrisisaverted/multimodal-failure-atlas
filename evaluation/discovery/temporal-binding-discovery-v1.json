@@ -1,0 +1,184 @@
+{
+  "id": "temporal-binding-discovery-v1",
+  "generatorVersion": "temporal-binding-v1",
+  "status": "discovery-only",
+  "hypothesis": "Video models fail to bind multi-step feature sequences to persistent object identities.",
+  "candidates": [
+    {
+      "id": "tb-f0de430e50107511",
+      "cellId": "cell-four-object-six-feature-sequence",
+      "split": "discovery",
+      "seed": 2700000,
+      "failureModeId": "object-conditioned-temporal-feature-binding",
+      "question": "Which labeled disk flashes the sequence RED, GREEN, BLUE, PURPLE, RED, BLUE in that exact order?",
+      "answerOptions": [
+        "B",
+        "D",
+        "A",
+        "C"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetLane": 0,
+        "videoDurationMs": 9000,
+        "fps": 30,
+        "visualVariant": 0
+      }
+    },
+    {
+      "id": "tb-b165f2fadbdf12b8",
+      "cellId": "cell-four-object-six-feature-sequence",
+      "split": "discovery",
+      "seed": 2700001,
+      "failureModeId": "object-conditioned-temporal-feature-binding",
+      "question": "Which labeled disk flashes the sequence RED, GREEN, BLUE, PURPLE, RED, BLUE in that exact order?",
+      "answerOptions": [
+        "D",
+        "B",
+        "A",
+        "C"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetLane": 1,
+        "videoDurationMs": 9000,
+        "fps": 30,
+        "visualVariant": 1
+      }
+    },
+    {
+      "id": "tb-4133f8e6017a7ac3",
+      "cellId": "cell-four-object-six-feature-sequence",
+      "split": "discovery",
+      "seed": 2700002,
+      "failureModeId": "object-conditioned-temporal-feature-binding",
+      "question": "Which labeled disk flashes the sequence RED, GREEN, BLUE, PURPLE, RED, BLUE in that exact order?",
+      "answerOptions": [
+        "B",
+        "D",
+        "A",
+        "C"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetLane": 2,
+        "videoDurationMs": 9000,
+        "fps": 30,
+        "visualVariant": 2
+      }
+    },
+    {
+      "id": "tb-5141c50e66997827",
+      "cellId": "cell-four-object-six-feature-sequence",
+      "split": "discovery",
+      "seed": 2700003,
+      "failureModeId": "object-conditioned-temporal-feature-binding",
+      "question": "Which labeled disk flashes the sequence RED, GREEN, BLUE, PURPLE, RED, BLUE in that exact order?",
+      "answerOptions": [
+        "D",
+        "A",
+        "B",
+        "C"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetLane": 3,
+        "videoDurationMs": 9000,
+        "fps": 30,
+        "visualVariant": 3
+      }
+    },
+    {
+      "id": "tb-aedc2246e2b31dea",
+      "cellId": "cell-four-object-six-feature-sequence",
+      "split": "discovery",
+      "seed": 2700004,
+      "failureModeId": "object-conditioned-temporal-feature-binding",
+      "question": "Which labeled disk flashes the sequence RED, GREEN, BLUE, PURPLE, RED, BLUE in that exact order?",
+      "answerOptions": [
+        "A",
+        "D",
+        "B",
+        "C"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetLane": 0,
+        "videoDurationMs": 9000,
+        "fps": 30,
+        "visualVariant": 4
+      }
+    },
+    {
+      "id": "tb-a48c5134d379b7ec",
+      "cellId": "cell-four-object-six-feature-sequence",
+      "split": "discovery",
+      "seed": 2700005,
+      "failureModeId": "object-conditioned-temporal-feature-binding",
+      "question": "Which labeled disk flashes the sequence RED, GREEN, BLUE, PURPLE, RED, BLUE in that exact order?",
+      "answerOptions": [
+        "D",
+        "A",
+        "B",
+        "C"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetLane": 1,
+        "videoDurationMs": 9000,
+        "fps": 30,
+        "visualVariant": 5
+      }
+    },
+    {
+      "id": "tb-3aa5cee48abc27a4",
+      "cellId": "cell-four-object-six-feature-sequence",
+      "split": "discovery",
+      "seed": 2700006,
+      "failureModeId": "object-conditioned-temporal-feature-binding",
+      "question": "Which labeled disk flashes the sequence RED, GREEN, BLUE, PURPLE, RED, BLUE in that exact order?",
+      "answerOptions": [
+        "D",
+        "A",
+        "B",
+        "C"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetLane": 2,
+        "videoDurationMs": 9000,
+        "fps": 30,
+        "visualVariant": 6
+      }
+    },
+    {
+      "id": "tb-0f1b957921c05bcd",
+      "cellId": "cell-four-object-six-feature-sequence",
+      "split": "discovery",
+      "seed": 2700007,
+      "failureModeId": "object-conditioned-temporal-feature-binding",
+      "question": "Which labeled disk flashes the sequence RED, GREEN, BLUE, PURPLE, RED, BLUE in that exact order?",
+      "answerOptions": [
+        "A",
+        "B",
+        "D",
+        "C"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetLane": 3,
+        "videoDurationMs": 9000,
+        "fps": 30,
+        "visualVariant": 7
+      }
+    }
+  ]
+}

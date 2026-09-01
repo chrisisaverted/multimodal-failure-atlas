@@ -78,12 +78,20 @@ import {
 } from "./jigsaw-order";
 import { createOcclusionStackDiscoveryGrid, renderOcclusionStackSvg } from "./occlusion-stack";
 import { createMotDiscoveryGrid, motEndpointAssignment, renderMotSvg } from "./multiple-object-tracking";
-import { createDynamicStateDiscoveryGrid, dynamicFinalState, renderDynamicStateSvg } from "./dynamic-state";
+import { createDynamicStateDiscoveryGrid, createDynamicStateHoldout, dynamicFinalState, renderDynamicStateSvg } from "./dynamic-state";
 import { createPaperFoldingDiscoveryGrid, paperOptionPatterns, unfoldPunches } from "./paper-folding";
 import { createPeriodicAnomalyGrid, periodicLaneStarts } from "./periodic-anomaly";
 import { createCubeStackGrid, cubeHeights } from "./cube-stack";
+import { bindingSequences, createBindingGrid } from "./temporal-binding";
 
 describe("adaptive multimodal discovery", () => {
+  it("binds the queried six-color sequence to exactly one object", () => {
+    const candidates = createBindingGrid();
+    expect(candidates).toHaveLength(8);
+    for (const candidate of candidates)
+      expect(bindingSequences(candidate).filter((sequence) => sequence.join(",") === "0,1,2,3,0,2")).toHaveLength(1);
+  });
+
   it("constructs exact adjacent cube totals with one target panel", () => {
     const candidates = createCubeStackGrid();
     expect(candidates).toHaveLength(8);
@@ -123,6 +131,14 @@ describe("adaptive multimodal discovery", () => {
       expect(renderDynamicStateSvg(candidate, 500)).toContain("#fff");
       expect(renderDynamicStateSvg(candidate, 9000)).toContain("STATE HIDDEN");
     }
+  });
+
+  it("reserves balanced unseen dynamic-state holdout seeds", () => {
+    const holdout = createDynamicStateHoldout();
+    expect(holdout).toHaveLength(16);
+    expect(holdout.every((candidate) => candidate.seed >= 2_310_000)).toBe(true);
+    for (const answer of ["RED", "GREEN", "BLUE", "PURPLE"])
+      expect(holdout.filter((candidate) => candidate.expectedAnswer === answer)).toHaveLength(4);
   });
 
   it("balances MOT endpoints and binds target identity to the exact trajectory", () => {
