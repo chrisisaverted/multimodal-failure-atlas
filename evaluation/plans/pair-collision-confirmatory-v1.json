@@ -1,0 +1,29 @@
+{
+  "id": "pair-collision-confirmatory-v1-low-reasoning-2026-09-01",
+  "resolvedAt": "2026-09-01",
+  "gateway": "OpenRouter",
+  "evaluationPlanId": "pair-collision-confirmatory-v1",
+  "evaluationPlanSha256": "e7a0c377f0210aca0496c9c83261bd1ef00785cfc411419ca4cd35bbd6e7dd02",
+  "stage": "frozen-confirmatory-holdout-with-oracle-counter-control",
+  "casesPerModel": 32,
+  "trials": 1,
+  "temperature": 0,
+  "maxOutputTokens": 8192,
+  "reasoning": { "effort": "low", "exclude": true },
+  "scorer": "terminal-option-v3",
+  "allowProviderFallbacks": false,
+  "dataCollection": "deny",
+  "campaignCostCeilingUsd": 12,
+  "models": [
+    {
+      "modelId": "google/gemini-3.7-flash",
+      "modelRevision": "google/gemini-3.7-flash-20260813",
+      "upstreamProvider": "Google AI Studio"
+    },
+    {
+      "modelId": "qwen/qwen3.8-max",
+      "modelRevision": "qwen/qwen3.8-max-20260803",
+      "upstreamProvider": "Alibaba"
+    }
+  ]
+}
