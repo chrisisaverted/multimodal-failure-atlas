@@ -60,6 +60,7 @@ const protocolSchema = z.object({
     exclude: z.boolean(),
   }),
   scorer: z.enum(["terminal-option-v2", "terminal-option-v3"]),
+  systemMessage: z.string().min(20).optional(),
   allowProviderFallbacks: z.literal(false),
   dataCollection: z.literal("deny"),
   campaignCostCeilingUsd: z.number().positive(),
@@ -121,7 +122,7 @@ const jobs: EvaluationJob[] = await Promise.all(
         ? ("native-video" as const)
         : ("native-image" as const),
       estimatedCostUsd: estimatedCaseCostUsd,
-      systemMessage: entry.systemMessage ?? defaultSystemMessage,
+      systemMessage: entry.systemMessage ?? protocol.systemMessage ?? defaultSystemMessage,
       prompt: `${entry.question}\nAllowed answers: ${entry.answerOptions.join(", ")}.`,
       temperature: protocol.temperature,
       maxOutputTokens: protocol.maxOutputTokens,

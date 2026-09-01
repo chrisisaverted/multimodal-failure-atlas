@@ -22,6 +22,8 @@ const answerOutputDirectory = resolve("evaluation/plans/replication-v1-no-reason
 await mkdir(answerOutputDirectory, { recursive: true });
 const replacementOutputDirectory = resolve("evaluation/plans/replication-v1-mimo-replacement");
 await mkdir(replacementOutputDirectory, { recursive: true });
+const forcedChoiceOutputDirectory = resolve("evaluation/plans/replication-v1-mimo-forced-choice");
+await mkdir(forcedChoiceOutputDirectory, { recursive: true });
 
 const cohort = [
   {
@@ -100,6 +102,16 @@ for (const family of evidence.families) {
     campaignCostCeilingUsd: 2,
     models: [mimoReplacement],
   };
+  const forcedChoiceProtocol = {
+    ...replacementProtocol,
+    id: `${family.planId}-external-replication-v1-mimo-forced-choice`,
+    cohortId: "external-replication-v1-mimo-forced-choice-2026-09-01",
+    frozenAt: "2026-09-01T11:40:00.000Z",
+    amendmentReason:
+      "MiMo's native-video canary emitted an unambiguous answer outside the allowed set. That response remains pending and excluded. This prospective protocol repeats the existing forced-choice constraint without changing media, options, scorer, or model route.",
+    systemMessage:
+      "This is a forced-choice visual diagnostic. Inspect only the supplied media. Return exactly one answer copied verbatim from the allowed-answer list, even if uncertain. Do not explain and do not return any answer outside that list.",
+  };
   const protocolPath = resolve(outputDirectory, `${family.planId}.json`);
   try {
     await access(protocolPath);
@@ -109,6 +121,11 @@ for (const family of evidence.families) {
   await writeFile(
     resolve(completionOutputDirectory, `${family.planId}.json`),
     `${JSON.stringify(completionProtocol, null, 2)}\n`,
+    "utf8",
+  );
+  await writeFile(
+    resolve(forcedChoiceOutputDirectory, `${family.planId}.json`),
+    `${JSON.stringify(forcedChoiceProtocol, null, 2)}\n`,
     "utf8",
   );
   await writeFile(
@@ -129,6 +146,7 @@ console.log(
     completionProtocols: evidence.families.length,
     noReasoningProtocols: evidence.families.length,
     replacementProtocols: evidence.families.length,
+    forcedChoiceProtocols: evidence.families.length,
     cohort: cohort.map(({ modelId }) => modelId),
   }),
 );

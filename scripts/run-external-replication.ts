@@ -22,6 +22,7 @@ const resultDirectories = [
   "evaluation/results/replication-v1-completion",
   "evaluation/results/replication-v1-no-reasoning",
   "evaluation/results/replication-v1-mimo-replacement",
+  "evaluation/results/replication-v1-mimo-forced-choice",
 ];
 
 function conditionOf(run: EvaluationRunRecord) {
