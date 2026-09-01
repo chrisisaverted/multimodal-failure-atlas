@@ -2,7 +2,7 @@ export interface ScoreResult {
   parsedAnswer: string;
   correct: boolean;
   needsReview: boolean;
-  method: "exact-option-v1" | "terminal-option-v2";
+  method: "exact-option-v1" | "terminal-option-v2" | "terminal-option-v3";
 }
 
 const normalize = (value: string) =>
@@ -105,5 +105,54 @@ export function scoreTerminalOption(
     correct: false,
     needsReview: true,
     method: "terminal-option-v2",
+  };
+}
+
+/**
+ * Prospective scorer for protocols that permit a final answer sentence rather
+ * than requiring the last line to contain only the option. The scorer only
+ * accepts a terminal line/marked answer containing exactly one allowed option;
+ * mentions elsewhere in the rationale cannot override an ambiguous ending.
+ */
+export function scoreTerminalOptionV3(
+  rawResponse: string,
+  expectedAnswer: string,
+  options: string[],
+): ScoreResult {
+  const normalizedOptions = options.map((option) => ({ option, normalized: normalize(option) }));
+  const uniqueOptionIn = (value: string) => {
+    const normalizedValue = normalize(value);
+    const matches = normalizedOptions.filter(({ normalized }) => {
+      const escaped = normalized.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      return new RegExp(`(?:^|\\s)${escaped}(?:$|\\s)`, "u").test(normalizedValue);
+    });
+    return matches.length === 1 ? matches[0] : undefined;
+  };
+  const terminalMarkers = [
+    ...rawResponse.matchAll(
+      /(?:^|\n)\s*[*_]*(?:final\s+answer|correct\s+answer|answer)[*_]*\s*:\s*([^\n]+)/giu,
+    ),
+  ];
+  const marked = terminalMarkers.length
+    ? uniqueOptionIn(terminalMarkers[terminalMarkers.length - 1]![1]!)
+    : undefined;
+  const lines = rawResponse.split(/\r?\n/u).filter((line) => line.trim().length > 0);
+  const lastLine = lines.length ? uniqueOptionIn(lines[lines.length - 1]!) : undefined;
+  const exactWholeResponse =
+    normalizedOptions.find(({ normalized }) => normalized === normalize(rawResponse)) ?? undefined;
+  const selected = marked ?? lastLine ?? exactWholeResponse;
+  if (selected) {
+    return {
+      parsedAnswer: selected.option,
+      correct: normalize(selected.option) === normalize(expectedAnswer),
+      needsReview: false,
+      method: "terminal-option-v3",
+    };
+  }
+  return {
+    parsedAnswer: "",
+    correct: false,
+    needsReview: true,
+    method: "terminal-option-v3",
   };
 }

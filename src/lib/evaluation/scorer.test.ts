@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { scoreExactOption, scoreTerminalOption } from "./scorer";
+import { scoreExactOption, scoreTerminalOption, scoreTerminalOptionV3 } from "./scorer";
 
 describe("exact option scorer", () => {
   it("accepts an exact option independent of case and punctuation", () => {
@@ -58,5 +58,28 @@ describe("terminal option scorer v2", () => {
       needsReview: false,
       method: "terminal-option-v2",
     });
+  });
+});
+
+describe("terminal option scorer v3", () => {
+  it("accepts one allowed option in a terminal answer sentence", () => {
+    expect(
+      scoreTerminalOptionV3(
+        "I considered STAR and CIRCLE.\nThe symbol immediately after it is **DIAMOND**.",
+        "DIAMOND",
+        ["STAR", "CIRCLE", "DIAMOND", "SQUARE"],
+      ),
+    ).toEqual({
+      parsedAnswer: "DIAMOND",
+      correct: true,
+      needsReview: false,
+      method: "terminal-option-v3",
+    });
+  });
+
+  it("leaves an ambiguous terminal sentence pending", () => {
+    expect(
+      scoreTerminalOptionV3("The answer is either STAR or CIRCLE.", "STAR", ["STAR", "CIRCLE"]),
+    ).toMatchObject({ parsedAnswer: "", correct: false, needsReview: true });
   });
 });

@@ -5,7 +5,7 @@ import { openRouterAdapter } from "../src/lib/evaluation/adapters/openrouter";
 import { sha256 } from "../src/lib/evaluation/hash";
 import { runEvaluationBatch, type EvaluationJob } from "../src/lib/evaluation/runner";
 import { withTransientRetries } from "../src/lib/evaluation/retry";
-import { scoreTerminalOption } from "../src/lib/evaluation/scorer";
+import { scoreTerminalOption, scoreTerminalOptionV3 } from "../src/lib/evaluation/scorer";
 import { JsonlEvaluationStore } from "../src/lib/evaluation/store";
 
 async function loadLocalEnvironment() {
@@ -59,7 +59,7 @@ const protocolSchema = z.object({
     effort: z.enum(["none", "minimal", "low", "medium", "high"]),
     exclude: z.boolean(),
   }),
-  scorer: z.literal("terminal-option-v2"),
+  scorer: z.enum(["terminal-option-v2", "terminal-option-v3"]),
   allowProviderFallbacks: z.literal(false),
   dataCollection: z.literal("deny"),
   campaignCostCeilingUsd: z.number().positive(),
@@ -162,7 +162,7 @@ const records = await runEvaluationBatch(jobs, {
       process.stdout.write(`[retry ${attempt}] ${message.slice(0, 140)}; waiting ${delayMs}ms\n`),
   }),
   store: new JsonlEvaluationStore(output),
-  scorer: scoreTerminalOption,
+  scorer: protocol.scorer === "terminal-option-v3" ? scoreTerminalOptionV3 : scoreTerminalOption,
   minimumIntervalMs: Number(process.env.ATLAS_MINIMUM_INTERVAL_MS ?? 3300),
   onProgress: ({ completed, total, cached }) =>
     process.stdout.write(`[${completed}/${total}] ${cached ? "cached" : "recorded"}\n`),
