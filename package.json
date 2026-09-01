@@ -42,6 +42,8 @@
     "freeze:enclosure-depth": "tsx scripts/freeze-enclosure-depth.ts",
     "plan:enclosure-panels": "tsx scripts/plan-enclosure-panels.ts",
     "generate:enclosure-panels": "tsx scripts/materialize-enclosure-panels.ts",
+    "plan:visual-circuit": "tsx scripts/plan-visual-circuit.ts",
+    "generate:visual-circuit": "tsx scripts/materialize-visual-circuit.ts",
     "plan:rotation-correspondence": "tsx scripts/plan-rotation-correspondence.ts",
     "generate:rotation-correspondence": "tsx scripts/materialize-rotation-correspondence.ts",
     "freeze:rotation-correspondence": "tsx scripts/freeze-rotation-correspondence.ts",

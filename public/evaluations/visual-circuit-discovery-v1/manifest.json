@@ -1,0 +1,849 @@
+{
+  "id": "visual-circuit-discovery-v1",
+  "planSha256": "f2b56193d2c7004c9abfd573a3b178b9778fcc28b84a81e939de7be7f15350e0",
+  "generatorVersion": "visual-circuit-v1",
+  "renderer": "visual-circuit-svg-v1",
+  "fps": 0,
+  "cases": [
+    {
+      "candidateId": "vc-e5efdbdefb0fc376",
+      "cellId": "cell-70d5b3a3568478e6",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Only the input bits, gate types, wiring, and output labels are visible.",
+      "failureModeId": "visual-boolean-circuit-execution",
+      "generator": "visual-circuit",
+      "seed": 3000001,
+      "difficulty": 88,
+      "variant": 100,
+      "artifact": "public/evaluations/visual-circuit-discovery-v1/vc-e5efdbdefb0fc376.png",
+      "mimeType": "image/png",
+      "question": "Evaluate the circuit from left to right. What is the two-bit output O1O2?",
+      "answerOptions": [
+        "00",
+        "01",
+        "10",
+        "11"
+      ],
+      "expectedAnswer": "00",
+      "sha256": "b100f91afec3aed55b53128d2f55fdaa5125ee13719c28d3ceea0459ecae28d9",
+      "parameters": {
+        "inputs": [
+          0,
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        "gates": [
+          {
+            "id": "G1",
+            "type": "OR",
+            "left": "I1",
+            "right": "I2",
+            "value": 1
+          },
+          {
+            "id": "G2",
+            "type": "AND",
+            "left": "I3",
+            "right": "I4",
+            "value": 0
+          },
+          {
+            "id": "G3",
+            "type": "OR",
+            "left": "I5",
+            "right": "I6",
+            "value": 1
+          },
+          {
+            "id": "G4",
+            "type": "AND",
+            "left": "I1",
+            "right": "I6",
+            "value": 0
+          },
+          {
+            "id": "G5",
+            "type": "XOR",
+            "left": "G1",
+            "right": "G3",
+            "value": 0
+          },
+          {
+            "id": "G6",
+            "type": "AND",
+            "left": "G2",
+            "right": "G4",
+            "value": 0
+          },
+          {
+            "id": "G7",
+            "type": "XOR",
+            "left": "G3",
+            "right": "G1",
+            "value": 0
+          },
+          {
+            "id": "G8",
+            "type": "XOR",
+            "left": "G5",
+            "right": "G6",
+            "value": 0
+          },
+          {
+            "id": "G9",
+            "type": "OR",
+            "left": "G6",
+            "right": "G7",
+            "value": 0
+          }
+        ],
+        "outputGateIds": [
+          "G8",
+          "G9"
+        ],
+        "visualVariant": 100
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Follow the visible wires and evaluate every Boolean gate. Return exactly one allowed two-bit answer without explanation."
+    },
+    {
+      "candidateId": "vc-5f9cb88fed6db132",
+      "cellId": "cell-70d5b3a3568478e6",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Only the input bits, gate types, wiring, and output labels are visible.",
+      "failureModeId": "visual-boolean-circuit-execution",
+      "generator": "visual-circuit",
+      "seed": 3000032,
+      "difficulty": 88,
+      "variant": 101,
+      "artifact": "public/evaluations/visual-circuit-discovery-v1/vc-5f9cb88fed6db132.png",
+      "mimeType": "image/png",
+      "question": "Evaluate the circuit from left to right. What is the two-bit output O1O2?",
+      "answerOptions": [
+        "00",
+        "01",
+        "10",
+        "11"
+      ],
+      "expectedAnswer": "01",
+      "sha256": "bba2db348cb1a5b828cb68cb317fc68a0cacf0f976796125f3bdb19f48cea0dd",
+      "parameters": {
+        "inputs": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "gates": [
+          {
+            "id": "G1",
+            "type": "AND",
+            "left": "I1",
+            "right": "I2",
+            "value": 0
+          },
+          {
+            "id": "G2",
+            "type": "AND",
+            "left": "I3",
+            "right": "I4",
+            "value": 0
+          },
+          {
+            "id": "G3",
+            "type": "XOR",
+            "left": "I5",
+            "right": "I6",
+            "value": 1
+          },
+          {
+            "id": "G4",
+            "type": "OR",
+            "left": "I1",
+            "right": "I6",
+            "value": 1
+          },
+          {
+            "id": "G5",
+            "type": "AND",
+            "left": "G1",
+            "right": "G3",
+            "value": 0
+          },
+          {
+            "id": "G6",
+            "type": "AND",
+            "left": "G2",
+            "right": "G4",
+            "value": 0
+          },
+          {
+            "id": "G7",
+            "type": "XOR",
+            "left": "G3",
+            "right": "G1",
+            "value": 1
+          },
+          {
+            "id": "G8",
+            "type": "OR",
+            "left": "G5",
+            "right": "G6",
+            "value": 0
+          },
+          {
+            "id": "G9",
+            "type": "OR",
+            "left": "G6",
+            "right": "G7",
+            "value": 1
+          }
+        ],
+        "outputGateIds": [
+          "G8",
+          "G9"
+        ],
+        "visualVariant": 101
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Follow the visible wires and evaluate every Boolean gate. Return exactly one allowed two-bit answer without explanation."
+    },
+    {
+      "candidateId": "vc-e0e46c1cafa3614c",
+      "cellId": "cell-70d5b3a3568478e6",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Only the input bits, gate types, wiring, and output labels are visible.",
+      "failureModeId": "visual-boolean-circuit-execution",
+      "generator": "visual-circuit",
+      "seed": 3000043,
+      "difficulty": 88,
+      "variant": 102,
+      "artifact": "public/evaluations/visual-circuit-discovery-v1/vc-e0e46c1cafa3614c.png",
+      "mimeType": "image/png",
+      "question": "Evaluate the circuit from left to right. What is the two-bit output O1O2?",
+      "answerOptions": [
+        "00",
+        "01",
+        "10",
+        "11"
+      ],
+      "expectedAnswer": "10",
+      "sha256": "0fc818a9f28dabcb86d27e91d18e313aace4a44b4c631c80d36b3635caf119b5",
+      "parameters": {
+        "inputs": [
+          1,
+          0,
+          1,
+          1,
+          0,
+          1
+        ],
+        "gates": [
+          {
+            "id": "G1",
+            "type": "OR",
+            "left": "I1",
+            "right": "I2",
+            "value": 1
+          },
+          {
+            "id": "G2",
+            "type": "AND",
+            "left": "I3",
+            "right": "I4",
+            "value": 1
+          },
+          {
+            "id": "G3",
+            "type": "XOR",
+            "left": "I5",
+            "right": "I6",
+            "value": 1
+          },
+          {
+            "id": "G4",
+            "type": "AND",
+            "left": "I1",
+            "right": "I6",
+            "value": 1
+          },
+          {
+            "id": "G5",
+            "type": "OR",
+            "left": "G1",
+            "right": "G3",
+            "value": 1
+          },
+          {
+            "id": "G6",
+            "type": "XOR",
+            "left": "G2",
+            "right": "G4",
+            "value": 0
+          },
+          {
+            "id": "G7",
+            "type": "XOR",
+            "left": "G3",
+            "right": "G1",
+            "value": 0
+          },
+          {
+            "id": "G8",
+            "type": "XOR",
+            "left": "G5",
+            "right": "G6",
+            "value": 1
+          },
+          {
+            "id": "G9",
+            "type": "XOR",
+            "left": "G6",
+            "right": "G7",
+            "value": 0
+          }
+        ],
+        "outputGateIds": [
+          "G8",
+          "G9"
+        ],
+        "visualVariant": 102
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Follow the visible wires and evaluate every Boolean gate. Return exactly one allowed two-bit answer without explanation."
+    },
+    {
+      "candidateId": "vc-fa801f95be17f1cf",
+      "cellId": "cell-70d5b3a3568478e6",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Only the input bits, gate types, wiring, and output labels are visible.",
+      "failureModeId": "visual-boolean-circuit-execution",
+      "generator": "visual-circuit",
+      "seed": 3000055,
+      "difficulty": 88,
+      "variant": 103,
+      "artifact": "public/evaluations/visual-circuit-discovery-v1/vc-fa801f95be17f1cf.png",
+      "mimeType": "image/png",
+      "question": "Evaluate the circuit from left to right. What is the two-bit output O1O2?",
+      "answerOptions": [
+        "00",
+        "01",
+        "10",
+        "11"
+      ],
+      "expectedAnswer": "11",
+      "sha256": "e2cce86513ae2d568fd79883865127e1e8bad8428fd7ea18733ecdf250096a8e",
+      "parameters": {
+        "inputs": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        "gates": [
+          {
+            "id": "G1",
+            "type": "OR",
+            "left": "I1",
+            "right": "I2",
+            "value": 1
+          },
+          {
+            "id": "G2",
+            "type": "XOR",
+            "left": "I3",
+            "right": "I4",
+            "value": 1
+          },
+          {
+            "id": "G3",
+            "type": "OR",
+            "left": "I5",
+            "right": "I6",
+            "value": 1
+          },
+          {
+            "id": "G4",
+            "type": "XOR",
+            "left": "I1",
+            "right": "I6",
+            "value": 1
+          },
+          {
+            "id": "G5",
+            "type": "OR",
+            "left": "G1",
+            "right": "G3",
+            "value": 1
+          },
+          {
+            "id": "G6",
+            "type": "OR",
+            "left": "G2",
+            "right": "G4",
+            "value": 1
+          },
+          {
+            "id": "G7",
+            "type": "AND",
+            "left": "G3",
+            "right": "G1",
+            "value": 1
+          },
+          {
+            "id": "G8",
+            "type": "AND",
+            "left": "G5",
+            "right": "G6",
+            "value": 1
+          },
+          {
+            "id": "G9",
+            "type": "OR",
+            "left": "G6",
+            "right": "G7",
+            "value": 1
+          }
+        ],
+        "outputGateIds": [
+          "G8",
+          "G9"
+        ],
+        "visualVariant": 103
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Follow the visible wires and evaluate every Boolean gate. Return exactly one allowed two-bit answer without explanation."
+    },
+    {
+      "candidateId": "vc-067382d9df932cf6",
+      "cellId": "cell-70d5b3a3568478e6",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Only the input bits, gate types, wiring, and output labels are visible.",
+      "failureModeId": "visual-boolean-circuit-execution",
+      "generator": "visual-circuit",
+      "seed": 3000061,
+      "difficulty": 88,
+      "variant": 104,
+      "artifact": "public/evaluations/visual-circuit-discovery-v1/vc-067382d9df932cf6.png",
+      "mimeType": "image/png",
+      "question": "Evaluate the circuit from left to right. What is the two-bit output O1O2?",
+      "answerOptions": [
+        "00",
+        "01",
+        "10",
+        "11"
+      ],
+      "expectedAnswer": "00",
+      "sha256": "7e099904c8fb6dffa31d24fdca60df6a35a760fce5daf23991ea5ed9c746ff9e",
+      "parameters": {
+        "inputs": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "gates": [
+          {
+            "id": "G1",
+            "type": "AND",
+            "left": "I1",
+            "right": "I2",
+            "value": 0
+          },
+          {
+            "id": "G2",
+            "type": "XOR",
+            "left": "I3",
+            "right": "I4",
+            "value": 0
+          },
+          {
+            "id": "G3",
+            "type": "AND",
+            "left": "I5",
+            "right": "I6",
+            "value": 0
+          },
+          {
+            "id": "G4",
+            "type": "XOR",
+            "left": "I1",
+            "right": "I6",
+            "value": 1
+          },
+          {
+            "id": "G5",
+            "type": "XOR",
+            "left": "G1",
+            "right": "G3",
+            "value": 0
+          },
+          {
+            "id": "G6",
+            "type": "AND",
+            "left": "G2",
+            "right": "G4",
+            "value": 0
+          },
+          {
+            "id": "G7",
+            "type": "XOR",
+            "left": "G3",
+            "right": "G1",
+            "value": 0
+          },
+          {
+            "id": "G8",
+            "type": "OR",
+            "left": "G5",
+            "right": "G6",
+            "value": 0
+          },
+          {
+            "id": "G9",
+            "type": "AND",
+            "left": "G6",
+            "right": "G7",
+            "value": 0
+          }
+        ],
+        "outputGateIds": [
+          "G8",
+          "G9"
+        ],
+        "visualVariant": 104
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Follow the visible wires and evaluate every Boolean gate. Return exactly one allowed two-bit answer without explanation."
+    },
+    {
+      "candidateId": "vc-3f1c8389a3196868",
+      "cellId": "cell-70d5b3a3568478e6",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Only the input bits, gate types, wiring, and output labels are visible.",
+      "failureModeId": "visual-boolean-circuit-execution",
+      "generator": "visual-circuit",
+      "seed": 3000067,
+      "difficulty": 88,
+      "variant": 105,
+      "artifact": "public/evaluations/visual-circuit-discovery-v1/vc-3f1c8389a3196868.png",
+      "mimeType": "image/png",
+      "question": "Evaluate the circuit from left to right. What is the two-bit output O1O2?",
+      "answerOptions": [
+        "00",
+        "01",
+        "10",
+        "11"
+      ],
+      "expectedAnswer": "01",
+      "sha256": "1a9eabebaaf11f838429b6ef29176eb614f6cc7b44cc1610e88194d0f7755244",
+      "parameters": {
+        "inputs": [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        "gates": [
+          {
+            "id": "G1",
+            "type": "AND",
+            "left": "I1",
+            "right": "I2",
+            "value": 0
+          },
+          {
+            "id": "G2",
+            "type": "XOR",
+            "left": "I3",
+            "right": "I4",
+            "value": 0
+          },
+          {
+            "id": "G3",
+            "type": "XOR",
+            "left": "I5",
+            "right": "I6",
+            "value": 1
+          },
+          {
+            "id": "G4",
+            "type": "XOR",
+            "left": "I1",
+            "right": "I6",
+            "value": 0
+          },
+          {
+            "id": "G5",
+            "type": "AND",
+            "left": "G1",
+            "right": "G3",
+            "value": 0
+          },
+          {
+            "id": "G6",
+            "type": "XOR",
+            "left": "G2",
+            "right": "G4",
+            "value": 0
+          },
+          {
+            "id": "G7",
+            "type": "OR",
+            "left": "G3",
+            "right": "G1",
+            "value": 1
+          },
+          {
+            "id": "G8",
+            "type": "OR",
+            "left": "G5",
+            "right": "G6",
+            "value": 0
+          },
+          {
+            "id": "G9",
+            "type": "OR",
+            "left": "G6",
+            "right": "G7",
+            "value": 1
+          }
+        ],
+        "outputGateIds": [
+          "G8",
+          "G9"
+        ],
+        "visualVariant": 105
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Follow the visible wires and evaluate every Boolean gate. Return exactly one allowed two-bit answer without explanation."
+    },
+    {
+      "candidateId": "vc-aa97b97fbebcdbfb",
+      "cellId": "cell-70d5b3a3568478e6",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Only the input bits, gate types, wiring, and output labels are visible.",
+      "failureModeId": "visual-boolean-circuit-execution",
+      "generator": "visual-circuit",
+      "seed": 3000081,
+      "difficulty": 88,
+      "variant": 106,
+      "artifact": "public/evaluations/visual-circuit-discovery-v1/vc-aa97b97fbebcdbfb.png",
+      "mimeType": "image/png",
+      "question": "Evaluate the circuit from left to right. What is the two-bit output O1O2?",
+      "answerOptions": [
+        "00",
+        "01",
+        "10",
+        "11"
+      ],
+      "expectedAnswer": "10",
+      "sha256": "69c5b140ef53abe3ad892a6be9c5fe8e7570f2082f2e6ce9b6a4b5a9c075242c",
+      "parameters": {
+        "inputs": [
+          0,
+          0,
+          0,
+          1,
+          1,
+          0
+        ],
+        "gates": [
+          {
+            "id": "G1",
+            "type": "AND",
+            "left": "I1",
+            "right": "I2",
+            "value": 0
+          },
+          {
+            "id": "G2",
+            "type": "XOR",
+            "left": "I3",
+            "right": "I4",
+            "value": 1
+          },
+          {
+            "id": "G3",
+            "type": "XOR",
+            "left": "I5",
+            "right": "I6",
+            "value": 1
+          },
+          {
+            "id": "G4",
+            "type": "OR",
+            "left": "I1",
+            "right": "I6",
+            "value": 0
+          },
+          {
+            "id": "G5",
+            "type": "XOR",
+            "left": "G1",
+            "right": "G3",
+            "value": 1
+          },
+          {
+            "id": "G6",
+            "type": "AND",
+            "left": "G2",
+            "right": "G4",
+            "value": 0
+          },
+          {
+            "id": "G7",
+            "type": "AND",
+            "left": "G3",
+            "right": "G1",
+            "value": 0
+          },
+          {
+            "id": "G8",
+            "type": "XOR",
+            "left": "G5",
+            "right": "G6",
+            "value": 1
+          },
+          {
+            "id": "G9",
+            "type": "XOR",
+            "left": "G6",
+            "right": "G7",
+            "value": 0
+          }
+        ],
+        "outputGateIds": [
+          "G8",
+          "G9"
+        ],
+        "visualVariant": 106
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Follow the visible wires and evaluate every Boolean gate. Return exactly one allowed two-bit answer without explanation."
+    },
+    {
+      "candidateId": "vc-787e12308626998c",
+      "cellId": "cell-70d5b3a3568478e6",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Only the input bits, gate types, wiring, and output labels are visible.",
+      "failureModeId": "visual-boolean-circuit-execution",
+      "generator": "visual-circuit",
+      "seed": 3000086,
+      "difficulty": 88,
+      "variant": 107,
+      "artifact": "public/evaluations/visual-circuit-discovery-v1/vc-787e12308626998c.png",
+      "mimeType": "image/png",
+      "question": "Evaluate the circuit from left to right. What is the two-bit output O1O2?",
+      "answerOptions": [
+        "00",
+        "01",
+        "10",
+        "11"
+      ],
+      "expectedAnswer": "11",
+      "sha256": "41faa2786d3a25c2965bf70e2aa3ee8f2682d5cbffbdbe9e6c970cdd87ae69a1",
+      "parameters": {
+        "inputs": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "gates": [
+          {
+            "id": "G1",
+            "type": "XOR",
+            "left": "I1",
+            "right": "I2",
+            "value": 1
+          },
+          {
+            "id": "G2",
+            "type": "OR",
+            "left": "I3",
+            "right": "I4",
+            "value": 1
+          },
+          {
+            "id": "G3",
+            "type": "OR",
+            "left": "I5",
+            "right": "I6",
+            "value": 1
+          },
+          {
+            "id": "G4",
+            "type": "OR",
+            "left": "I1",
+            "right": "I6",
+            "value": 1
+          },
+          {
+            "id": "G5",
+            "type": "AND",
+            "left": "G1",
+            "right": "G3",
+            "value": 1
+          },
+          {
+            "id": "G6",
+            "type": "XOR",
+            "left": "G2",
+            "right": "G4",
+            "value": 0
+          },
+          {
+            "id": "G7",
+            "type": "AND",
+            "left": "G3",
+            "right": "G1",
+            "value": 1
+          },
+          {
+            "id": "G8",
+            "type": "OR",
+            "left": "G5",
+            "right": "G6",
+            "value": 1
+          },
+          {
+            "id": "G9",
+            "type": "XOR",
+            "left": "G6",
+            "right": "G7",
+            "value": 1
+          }
+        ],
+        "outputGateIds": [
+          "G8",
+          "G9"
+        ],
+        "visualVariant": 107
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Follow the visible wires and evaluate every Boolean gate. Return exactly one allowed two-bit answer without explanation."
+    }
+  ]
+}

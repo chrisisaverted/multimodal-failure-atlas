@@ -1,0 +1,779 @@
+{
+  "id": "visual-circuit-discovery-v1",
+  "generatorVersion": "visual-circuit-v1",
+  "status": "discovery-only",
+  "frozenAt": "2026-09-01T14:55:00.000Z",
+  "hypothesis": "A fixed-layout nine-gate Boolean circuit exposes failures of multi-step visual execution without scalar difficulty or answer-position confounds.",
+  "selectionRule": "Promote only if every core route supplies eight substantive answers and scores strictly below 4/8; the confirmatory set is generated from disjoint seeds before any discovery response.",
+  "difficultyContract": "Every native stimulus has exactly six displayed input bits, nine labeled gates, depth three after the input layer, two output gates, and displayed difficulty 88/100. Gate types vary, but all three types occur in every case and outputs are balanced.",
+  "candidates": [
+    {
+      "id": "vc-e5efdbdefb0fc376",
+      "cellId": "cell-70d5b3a3568478e6",
+      "split": "discovery",
+      "seed": 3000001,
+      "failureModeId": "visual-boolean-circuit-execution",
+      "question": "Evaluate the circuit from left to right. What is the two-bit output O1O2?",
+      "answerOptions": [
+        "00",
+        "01",
+        "10",
+        "11"
+      ],
+      "expectedAnswer": "00",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "inputs": [
+          0,
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        "gates": [
+          {
+            "id": "G1",
+            "type": "OR",
+            "left": "I1",
+            "right": "I2",
+            "value": 1
+          },
+          {
+            "id": "G2",
+            "type": "AND",
+            "left": "I3",
+            "right": "I4",
+            "value": 0
+          },
+          {
+            "id": "G3",
+            "type": "OR",
+            "left": "I5",
+            "right": "I6",
+            "value": 1
+          },
+          {
+            "id": "G4",
+            "type": "AND",
+            "left": "I1",
+            "right": "I6",
+            "value": 0
+          },
+          {
+            "id": "G5",
+            "type": "XOR",
+            "left": "G1",
+            "right": "G3",
+            "value": 0
+          },
+          {
+            "id": "G6",
+            "type": "AND",
+            "left": "G2",
+            "right": "G4",
+            "value": 0
+          },
+          {
+            "id": "G7",
+            "type": "XOR",
+            "left": "G3",
+            "right": "G1",
+            "value": 0
+          },
+          {
+            "id": "G8",
+            "type": "XOR",
+            "left": "G5",
+            "right": "G6",
+            "value": 0
+          },
+          {
+            "id": "G9",
+            "type": "OR",
+            "left": "G6",
+            "right": "G7",
+            "value": 0
+          }
+        ],
+        "outputGateIds": [
+          "G8",
+          "G9"
+        ],
+        "visualVariant": 100
+      }
+    },
+    {
+      "id": "vc-5f9cb88fed6db132",
+      "cellId": "cell-70d5b3a3568478e6",
+      "split": "discovery",
+      "seed": 3000032,
+      "failureModeId": "visual-boolean-circuit-execution",
+      "question": "Evaluate the circuit from left to right. What is the two-bit output O1O2?",
+      "answerOptions": [
+        "00",
+        "01",
+        "10",
+        "11"
+      ],
+      "expectedAnswer": "01",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "inputs": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "gates": [
+          {
+            "id": "G1",
+            "type": "AND",
+            "left": "I1",
+            "right": "I2",
+            "value": 0
+          },
+          {
+            "id": "G2",
+            "type": "AND",
+            "left": "I3",
+            "right": "I4",
+            "value": 0
+          },
+          {
+            "id": "G3",
+            "type": "XOR",
+            "left": "I5",
+            "right": "I6",
+            "value": 1
+          },
+          {
+            "id": "G4",
+            "type": "OR",
+            "left": "I1",
+            "right": "I6",
+            "value": 1
+          },
+          {
+            "id": "G5",
+            "type": "AND",
+            "left": "G1",
+            "right": "G3",
+            "value": 0
+          },
+          {
+            "id": "G6",
+            "type": "AND",
+            "left": "G2",
+            "right": "G4",
+            "value": 0
+          },
+          {
+            "id": "G7",
+            "type": "XOR",
+            "left": "G3",
+            "right": "G1",
+            "value": 1
+          },
+          {
+            "id": "G8",
+            "type": "OR",
+            "left": "G5",
+            "right": "G6",
+            "value": 0
+          },
+          {
+            "id": "G9",
+            "type": "OR",
+            "left": "G6",
+            "right": "G7",
+            "value": 1
+          }
+        ],
+        "outputGateIds": [
+          "G8",
+          "G9"
+        ],
+        "visualVariant": 101
+      }
+    },
+    {
+      "id": "vc-e0e46c1cafa3614c",
+      "cellId": "cell-70d5b3a3568478e6",
+      "split": "discovery",
+      "seed": 3000043,
+      "failureModeId": "visual-boolean-circuit-execution",
+      "question": "Evaluate the circuit from left to right. What is the two-bit output O1O2?",
+      "answerOptions": [
+        "00",
+        "01",
+        "10",
+        "11"
+      ],
+      "expectedAnswer": "10",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "inputs": [
+          1,
+          0,
+          1,
+          1,
+          0,
+          1
+        ],
+        "gates": [
+          {
+            "id": "G1",
+            "type": "OR",
+            "left": "I1",
+            "right": "I2",
+            "value": 1
+          },
+          {
+            "id": "G2",
+            "type": "AND",
+            "left": "I3",
+            "right": "I4",
+            "value": 1
+          },
+          {
+            "id": "G3",
+            "type": "XOR",
+            "left": "I5",
+            "right": "I6",
+            "value": 1
+          },
+          {
+            "id": "G4",
+            "type": "AND",
+            "left": "I1",
+            "right": "I6",
+            "value": 1
+          },
+          {
+            "id": "G5",
+            "type": "OR",
+            "left": "G1",
+            "right": "G3",
+            "value": 1
+          },
+          {
+            "id": "G6",
+            "type": "XOR",
+            "left": "G2",
+            "right": "G4",
+            "value": 0
+          },
+          {
+            "id": "G7",
+            "type": "XOR",
+            "left": "G3",
+            "right": "G1",
+            "value": 0
+          },
+          {
+            "id": "G8",
+            "type": "XOR",
+            "left": "G5",
+            "right": "G6",
+            "value": 1
+          },
+          {
+            "id": "G9",
+            "type": "XOR",
+            "left": "G6",
+            "right": "G7",
+            "value": 0
+          }
+        ],
+        "outputGateIds": [
+          "G8",
+          "G9"
+        ],
+        "visualVariant": 102
+      }
+    },
+    {
+      "id": "vc-fa801f95be17f1cf",
+      "cellId": "cell-70d5b3a3568478e6",
+      "split": "discovery",
+      "seed": 3000055,
+      "failureModeId": "visual-boolean-circuit-execution",
+      "question": "Evaluate the circuit from left to right. What is the two-bit output O1O2?",
+      "answerOptions": [
+        "00",
+        "01",
+        "10",
+        "11"
+      ],
+      "expectedAnswer": "11",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "inputs": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        "gates": [
+          {
+            "id": "G1",
+            "type": "OR",
+            "left": "I1",
+            "right": "I2",
+            "value": 1
+          },
+          {
+            "id": "G2",
+            "type": "XOR",
+            "left": "I3",
+            "right": "I4",
+            "value": 1
+          },
+          {
+            "id": "G3",
+            "type": "OR",
+            "left": "I5",
+            "right": "I6",
+            "value": 1
+          },
+          {
+            "id": "G4",
+            "type": "XOR",
+            "left": "I1",
+            "right": "I6",
+            "value": 1
+          },
+          {
+            "id": "G5",
+            "type": "OR",
+            "left": "G1",
+            "right": "G3",
+            "value": 1
+          },
+          {
+            "id": "G6",
+            "type": "OR",
+            "left": "G2",
+            "right": "G4",
+            "value": 1
+          },
+          {
+            "id": "G7",
+            "type": "AND",
+            "left": "G3",
+            "right": "G1",
+            "value": 1
+          },
+          {
+            "id": "G8",
+            "type": "AND",
+            "left": "G5",
+            "right": "G6",
+            "value": 1
+          },
+          {
+            "id": "G9",
+            "type": "OR",
+            "left": "G6",
+            "right": "G7",
+            "value": 1
+          }
+        ],
+        "outputGateIds": [
+          "G8",
+          "G9"
+        ],
+        "visualVariant": 103
+      }
+    },
+    {
+      "id": "vc-067382d9df932cf6",
+      "cellId": "cell-70d5b3a3568478e6",
+      "split": "discovery",
+      "seed": 3000061,
+      "failureModeId": "visual-boolean-circuit-execution",
+      "question": "Evaluate the circuit from left to right. What is the two-bit output O1O2?",
+      "answerOptions": [
+        "00",
+        "01",
+        "10",
+        "11"
+      ],
+      "expectedAnswer": "00",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "inputs": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "gates": [
+          {
+            "id": "G1",
+            "type": "AND",
+            "left": "I1",
+            "right": "I2",
+            "value": 0
+          },
+          {
+            "id": "G2",
+            "type": "XOR",
+            "left": "I3",
+            "right": "I4",
+            "value": 0
+          },
+          {
+            "id": "G3",
+            "type": "AND",
+            "left": "I5",
+            "right": "I6",
+            "value": 0
+          },
+          {
+            "id": "G4",
+            "type": "XOR",
+            "left": "I1",
+            "right": "I6",
+            "value": 1
+          },
+          {
+            "id": "G5",
+            "type": "XOR",
+            "left": "G1",
+            "right": "G3",
+            "value": 0
+          },
+          {
+            "id": "G6",
+            "type": "AND",
+            "left": "G2",
+            "right": "G4",
+            "value": 0
+          },
+          {
+            "id": "G7",
+            "type": "XOR",
+            "left": "G3",
+            "right": "G1",
+            "value": 0
+          },
+          {
+            "id": "G8",
+            "type": "OR",
+            "left": "G5",
+            "right": "G6",
+            "value": 0
+          },
+          {
+            "id": "G9",
+            "type": "AND",
+            "left": "G6",
+            "right": "G7",
+            "value": 0
+          }
+        ],
+        "outputGateIds": [
+          "G8",
+          "G9"
+        ],
+        "visualVariant": 104
+      }
+    },
+    {
+      "id": "vc-3f1c8389a3196868",
+      "cellId": "cell-70d5b3a3568478e6",
+      "split": "discovery",
+      "seed": 3000067,
+      "failureModeId": "visual-boolean-circuit-execution",
+      "question": "Evaluate the circuit from left to right. What is the two-bit output O1O2?",
+      "answerOptions": [
+        "00",
+        "01",
+        "10",
+        "11"
+      ],
+      "expectedAnswer": "01",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "inputs": [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        "gates": [
+          {
+            "id": "G1",
+            "type": "AND",
+            "left": "I1",
+            "right": "I2",
+            "value": 0
+          },
+          {
+            "id": "G2",
+            "type": "XOR",
+            "left": "I3",
+            "right": "I4",
+            "value": 0
+          },
+          {
+            "id": "G3",
+            "type": "XOR",
+            "left": "I5",
+            "right": "I6",
+            "value": 1
+          },
+          {
+            "id": "G4",
+            "type": "XOR",
+            "left": "I1",
+            "right": "I6",
+            "value": 0
+          },
+          {
+            "id": "G5",
+            "type": "AND",
+            "left": "G1",
+            "right": "G3",
+            "value": 0
+          },
+          {
+            "id": "G6",
+            "type": "XOR",
+            "left": "G2",
+            "right": "G4",
+            "value": 0
+          },
+          {
+            "id": "G7",
+            "type": "OR",
+            "left": "G3",
+            "right": "G1",
+            "value": 1
+          },
+          {
+            "id": "G8",
+            "type": "OR",
+            "left": "G5",
+            "right": "G6",
+            "value": 0
+          },
+          {
+            "id": "G9",
+            "type": "OR",
+            "left": "G6",
+            "right": "G7",
+            "value": 1
+          }
+        ],
+        "outputGateIds": [
+          "G8",
+          "G9"
+        ],
+        "visualVariant": 105
+      }
+    },
+    {
+      "id": "vc-aa97b97fbebcdbfb",
+      "cellId": "cell-70d5b3a3568478e6",
+      "split": "discovery",
+      "seed": 3000081,
+      "failureModeId": "visual-boolean-circuit-execution",
+      "question": "Evaluate the circuit from left to right. What is the two-bit output O1O2?",
+      "answerOptions": [
+        "00",
+        "01",
+        "10",
+        "11"
+      ],
+      "expectedAnswer": "10",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "inputs": [
+          0,
+          0,
+          0,
+          1,
+          1,
+          0
+        ],
+        "gates": [
+          {
+            "id": "G1",
+            "type": "AND",
+            "left": "I1",
+            "right": "I2",
+            "value": 0
+          },
+          {
+            "id": "G2",
+            "type": "XOR",
+            "left": "I3",
+            "right": "I4",
+            "value": 1
+          },
+          {
+            "id": "G3",
+            "type": "XOR",
+            "left": "I5",
+            "right": "I6",
+            "value": 1
+          },
+          {
+            "id": "G4",
+            "type": "OR",
+            "left": "I1",
+            "right": "I6",
+            "value": 0
+          },
+          {
+            "id": "G5",
+            "type": "XOR",
+            "left": "G1",
+            "right": "G3",
+            "value": 1
+          },
+          {
+            "id": "G6",
+            "type": "AND",
+            "left": "G2",
+            "right": "G4",
+            "value": 0
+          },
+          {
+            "id": "G7",
+            "type": "AND",
+            "left": "G3",
+            "right": "G1",
+            "value": 0
+          },
+          {
+            "id": "G8",
+            "type": "XOR",
+            "left": "G5",
+            "right": "G6",
+            "value": 1
+          },
+          {
+            "id": "G9",
+            "type": "XOR",
+            "left": "G6",
+            "right": "G7",
+            "value": 0
+          }
+        ],
+        "outputGateIds": [
+          "G8",
+          "G9"
+        ],
+        "visualVariant": 106
+      }
+    },
+    {
+      "id": "vc-787e12308626998c",
+      "cellId": "cell-70d5b3a3568478e6",
+      "split": "discovery",
+      "seed": 3000086,
+      "failureModeId": "visual-boolean-circuit-execution",
+      "question": "Evaluate the circuit from left to right. What is the two-bit output O1O2?",
+      "answerOptions": [
+        "00",
+        "01",
+        "10",
+        "11"
+      ],
+      "expectedAnswer": "11",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "inputs": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "gates": [
+          {
+            "id": "G1",
+            "type": "XOR",
+            "left": "I1",
+            "right": "I2",
+            "value": 1
+          },
+          {
+            "id": "G2",
+            "type": "OR",
+            "left": "I3",
+            "right": "I4",
+            "value": 1
+          },
+          {
+            "id": "G3",
+            "type": "OR",
+            "left": "I5",
+            "right": "I6",
+            "value": 1
+          },
+          {
+            "id": "G4",
+            "type": "OR",
+            "left": "I1",
+            "right": "I6",
+            "value": 1
+          },
+          {
+            "id": "G5",
+            "type": "AND",
+            "left": "G1",
+            "right": "G3",
+            "value": 1
+          },
+          {
+            "id": "G6",
+            "type": "XOR",
+            "left": "G2",
+            "right": "G4",
+            "value": 0
+          },
+          {
+            "id": "G7",
+            "type": "AND",
+            "left": "G3",
+            "right": "G1",
+            "value": 1
+          },
+          {
+            "id": "G8",
+            "type": "OR",
+            "left": "G5",
+            "right": "G6",
+            "value": 1
+          },
+          {
+            "id": "G9",
+            "type": "XOR",
+            "left": "G6",
+            "right": "G7",
+            "value": 1
+          }
+        ],
+        "outputGateIds": [
+          "G8",
+          "G9"
+        ],
+        "visualVariant": 107
+      }
+    }
+  ]
+}
