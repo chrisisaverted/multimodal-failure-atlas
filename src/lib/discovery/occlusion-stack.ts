@@ -1,0 +1,20 @@
+import { z } from "zod";
+import { sha256 } from "../evaluation/hash";
+
+export const occlusionStackVersion = "occlusion-stack-v1";
+export const stackOrders = [
+  "RED > BLUE > GREEN > GOLD",
+  "BLUE > GOLD > RED > GREEN",
+  "GREEN > RED > GOLD > BLUE",
+  "GOLD > GREEN > BLUE > RED",
+] as const;
+const colorNames = ["RED", "BLUE", "GREEN", "GOLD"] as const;
+export const occlusionStackCandidateSchema = z.object({id:z.string(),cellId:z.string(),split:z.enum(["discovery","confirmatory"]),seed:z.number().int().nonnegative(),failureModeId:z.literal("occlusion-layer-ordering"),question:z.string(),answerOptions:z.array(z.enum(stackOrders)).length(4),expectedAnswer:z.enum(stackOrders),humanSolvability:z.literal("unverified"),parameters:z.object({orderIndex:z.number().int().min(0).max(3),crossings:z.literal(6),visualVariant:z.number().int().nonnegative()})});
+export type OcclusionStackCandidate=z.infer<typeof occlusionStackCandidateSchema>;
+function rng(seed:number){let state=seed>>>0;return()=>((state=(Math.imul(state,1664525)+1013904223)>>>0)/0x1_0000_0000);}
+function shuffle<T>(values:readonly T[],random:()=>number){const r=[...values];for(let i=r.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[r[i],r[j]]=[r[j]!,r[i]!];}return r;}
+export function createOcclusionStackCandidate(input:{split:"discovery"|"confirmatory";seed:number;orderIndex:number;visualVariant?:number}){const visualVariant=input.visualVariant??input.seed%139;return occlusionStackCandidateSchema.parse({id:`os-${sha256(JSON.stringify({...input,visualVariant})).slice(0,16)}`,cellId:"cell-global-four-ribbon-stack",split:input.split,seed:input.seed,failureModeId:"occlusion-layer-ordering",question:"What is the global FRONT-to-BACK order of the four ribbons? The ribbon listed first is on top.",answerOptions:shuffle(stackOrders,rng(input.seed+13)),expectedAnswer:stackOrders[input.orderIndex],humanSolvability:"unverified",parameters:{orderIndex:input.orderIndex,crossings:6,visualVariant}});}
+export function createOcclusionStackDiscoveryGrid(){const result:OcclusionStackCandidate[]=[];let seed=2_100_000;for(let replicate=0;replicate<2;replicate++)for(let orderIndex=0;orderIndex<4;orderIndex++)result.push(createOcclusionStackCandidate({split:"discovery",seed:seed++,orderIndex,visualVariant:replicate*4+orderIndex}));return result;}
+const fills:Record<string,string>={RED:"#df3c30",BLUE:"#2466cc",GREEN:"#17945f",GOLD:"#e5a014"};
+function pathFor(candidate:OcclusionStackCandidate,name:string){const index=colorNames.indexOf(name as typeof colorNames[number]);const random=rng(candidate.seed+candidate.parameters.visualVariant*101+index*7919);const y1=210+index*180,y2=210+(3-index)*180;const bend1=150+(random()-.5)*110,bend2=-130+(random()-.5)*110;return `M130 ${y1} C520 ${y1+bend1}, 930 ${y2+bend2}, 1670 ${y2}`;}
+export function renderOcclusionStackSvg(candidate:OcclusionStackCandidate,oracle=false){const frontToBack=stackOrders[candidate.parameters.orderIndex].split(" > ");const backToFront=[...frontToBack].reverse();const ribbons=backToFront.map((name)=>{const d=pathFor(candidate,name);return `<path d="${d}" fill="none" stroke="#faf9f4" stroke-width="40" stroke-linecap="round"/><path d="${d}" fill="none" stroke="${fills[name]}" stroke-width="28" stroke-linecap="round"/>`;}).join("");const labels=colorNames.map((name,index)=>`<circle cx="86" cy="${210+index*180}" r="28" fill="${fills[name]}"/><text x="86" y="${216+index*180}" text-anchor="middle" font-family="Arial" font-size="15" font-weight="700" fill="#fff">${name}</text>`).join("");const answer=oracle?`<text x="900" y="920" text-anchor="middle" font-family="Arial" font-size="26" font-weight="700" fill="#e23e31">FRONT → BACK: ${candidate.expectedAnswer}</text>`:"";return `<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="980"><rect width="100%" height="100%" fill="#faf9f4"/><text x="60" y="60" font-family="Arial" font-size="34" font-weight="700">INFER THE GLOBAL RIBBON STACK</text><text x="60" y="103" font-family="Arial" font-size="21" fill="#59605d">At every crossing, an upper ribbon cleanly occludes a lower ribbon.</text>${ribbons}${labels}${answer}</svg>`;}

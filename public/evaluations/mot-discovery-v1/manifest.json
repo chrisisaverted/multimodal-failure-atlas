@@ -1,0 +1,273 @@
+{
+  "id": "mot-discovery-v1",
+  "planSha256": "76c0ced2a935905d54ee604e69745be25fc9013f69a5f93b592ff75159fed7af",
+  "generatorVersion": "multiple-object-tracking-v1",
+  "renderer": "mot-svg-raster-v1",
+  "fps": 30,
+  "cases": [
+    {
+      "candidateId": "mot-d0306e5560f2380d",
+      "cellId": "cell-four-object-crossing-tracks",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "The target marker disappears before four identical disks execute intersecting trajectories.",
+      "failureModeId": "multiple-object-identity-tracking",
+      "generator": "multiple-object-tracking",
+      "seed": 2200000,
+      "difficulty": 78,
+      "variant": 0,
+      "artifact": "public/evaluations/mot-discovery-v1/mot-d0306e5560f2380d.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 10000,
+      "question": "At the end, which labeled quadrant contains the disk that had the RED RING at the beginning?",
+      "answerOptions": [
+        "C",
+        "A",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "954d6e64896c08efebc56f40e874143eb9d7e72e430da0c5f7a7f5f96c076e69",
+      "parameters": {
+        "targetEnd": 0,
+        "objects": 4,
+        "videoDurationMs": 10000,
+        "fps": 30,
+        "visualVariant": 0
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the initially red-ringed disk continuously after its ring disappears. Return exactly one allowed final quadrant and do not explain."
+    },
+    {
+      "candidateId": "mot-e58f5a8090032388",
+      "cellId": "cell-four-object-crossing-tracks",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "The target marker disappears before four identical disks execute intersecting trajectories.",
+      "failureModeId": "multiple-object-identity-tracking",
+      "generator": "multiple-object-tracking",
+      "seed": 2200001,
+      "difficulty": 78,
+      "variant": 1,
+      "artifact": "public/evaluations/mot-discovery-v1/mot-e58f5a8090032388.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 10000,
+      "question": "At the end, which labeled quadrant contains the disk that had the RED RING at the beginning?",
+      "answerOptions": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "a172dbd414304925e19b32f2fe3cedb37e13ce7d43e5c1ee33412e2471036efb",
+      "parameters": {
+        "targetEnd": 1,
+        "objects": 4,
+        "videoDurationMs": 10000,
+        "fps": 30,
+        "visualVariant": 1
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the initially red-ringed disk continuously after its ring disappears. Return exactly one allowed final quadrant and do not explain."
+    },
+    {
+      "candidateId": "mot-319ecf7667c341d2",
+      "cellId": "cell-four-object-crossing-tracks",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "The target marker disappears before four identical disks execute intersecting trajectories.",
+      "failureModeId": "multiple-object-identity-tracking",
+      "generator": "multiple-object-tracking",
+      "seed": 2200002,
+      "difficulty": 78,
+      "variant": 2,
+      "artifact": "public/evaluations/mot-discovery-v1/mot-319ecf7667c341d2.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 10000,
+      "question": "At the end, which labeled quadrant contains the disk that had the RED RING at the beginning?",
+      "answerOptions": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "3ecb1d8c1829f13b272835ab3bec92200da88b23292503380a11c14fcceac2a2",
+      "parameters": {
+        "targetEnd": 2,
+        "objects": 4,
+        "videoDurationMs": 10000,
+        "fps": 30,
+        "visualVariant": 2
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the initially red-ringed disk continuously after its ring disappears. Return exactly one allowed final quadrant and do not explain."
+    },
+    {
+      "candidateId": "mot-2b5699c86937a018",
+      "cellId": "cell-four-object-crossing-tracks",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "The target marker disappears before four identical disks execute intersecting trajectories.",
+      "failureModeId": "multiple-object-identity-tracking",
+      "generator": "multiple-object-tracking",
+      "seed": 2200003,
+      "difficulty": 78,
+      "variant": 3,
+      "artifact": "public/evaluations/mot-discovery-v1/mot-2b5699c86937a018.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 10000,
+      "question": "At the end, which labeled quadrant contains the disk that had the RED RING at the beginning?",
+      "answerOptions": [
+        "C",
+        "A",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "d1cccaacc9f0a9ccf9725aa07346122f3679324be8dad3c25e70c6100fb80764",
+      "parameters": {
+        "targetEnd": 3,
+        "objects": 4,
+        "videoDurationMs": 10000,
+        "fps": 30,
+        "visualVariant": 3
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the initially red-ringed disk continuously after its ring disappears. Return exactly one allowed final quadrant and do not explain."
+    },
+    {
+      "candidateId": "mot-dc9b3b4c35aa16a7",
+      "cellId": "cell-four-object-crossing-tracks",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "The target marker disappears before four identical disks execute intersecting trajectories.",
+      "failureModeId": "multiple-object-identity-tracking",
+      "generator": "multiple-object-tracking",
+      "seed": 2200004,
+      "difficulty": 78,
+      "variant": 4,
+      "artifact": "public/evaluations/mot-discovery-v1/mot-dc9b3b4c35aa16a7.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 10000,
+      "question": "At the end, which labeled quadrant contains the disk that had the RED RING at the beginning?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "fb4ba2635f43fbefa5fdad1e5187c10cbd62e5d4832b227041d79da232cfc208",
+      "parameters": {
+        "targetEnd": 0,
+        "objects": 4,
+        "videoDurationMs": 10000,
+        "fps": 30,
+        "visualVariant": 4
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the initially red-ringed disk continuously after its ring disappears. Return exactly one allowed final quadrant and do not explain."
+    },
+    {
+      "candidateId": "mot-5d7ef2548f2ba438",
+      "cellId": "cell-four-object-crossing-tracks",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "The target marker disappears before four identical disks execute intersecting trajectories.",
+      "failureModeId": "multiple-object-identity-tracking",
+      "generator": "multiple-object-tracking",
+      "seed": 2200005,
+      "difficulty": 78,
+      "variant": 5,
+      "artifact": "public/evaluations/mot-discovery-v1/mot-5d7ef2548f2ba438.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 10000,
+      "question": "At the end, which labeled quadrant contains the disk that had the RED RING at the beginning?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "3822803568e6b6914cef06b0f3c2968fd1049eb112ca52d04d9c169aa3f99d0b",
+      "parameters": {
+        "targetEnd": 1,
+        "objects": 4,
+        "videoDurationMs": 10000,
+        "fps": 30,
+        "visualVariant": 5
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the initially red-ringed disk continuously after its ring disappears. Return exactly one allowed final quadrant and do not explain."
+    },
+    {
+      "candidateId": "mot-cffe58ed47b44592",
+      "cellId": "cell-four-object-crossing-tracks",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "The target marker disappears before four identical disks execute intersecting trajectories.",
+      "failureModeId": "multiple-object-identity-tracking",
+      "generator": "multiple-object-tracking",
+      "seed": 2200006,
+      "difficulty": 78,
+      "variant": 6,
+      "artifact": "public/evaluations/mot-discovery-v1/mot-cffe58ed47b44592.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 10000,
+      "question": "At the end, which labeled quadrant contains the disk that had the RED RING at the beginning?",
+      "answerOptions": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "99dab36dc57d6cea192131a344bc2fb294faeb984226c99a83254ea31251800f",
+      "parameters": {
+        "targetEnd": 2,
+        "objects": 4,
+        "videoDurationMs": 10000,
+        "fps": 30,
+        "visualVariant": 6
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the initially red-ringed disk continuously after its ring disappears. Return exactly one allowed final quadrant and do not explain."
+    },
+    {
+      "candidateId": "mot-5478e508747098df",
+      "cellId": "cell-four-object-crossing-tracks",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "The target marker disappears before four identical disks execute intersecting trajectories.",
+      "failureModeId": "multiple-object-identity-tracking",
+      "generator": "multiple-object-tracking",
+      "seed": 2200007,
+      "difficulty": 78,
+      "variant": 7,
+      "artifact": "public/evaluations/mot-discovery-v1/mot-5478e508747098df.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 10000,
+      "question": "At the end, which labeled quadrant contains the disk that had the RED RING at the beginning?",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "b8a8f5fe08a452c96696c0a9dc6ed71693632ae261a339b9fa3370d4660f4e93",
+      "parameters": {
+        "targetEnd": 3,
+        "objects": 4,
+        "videoDurationMs": 10000,
+        "fps": 30,
+        "visualVariant": 7
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the initially red-ringed disk continuously after its ring disappears. Return exactly one allowed final quadrant and do not explain."
+    }
+  ]
+}

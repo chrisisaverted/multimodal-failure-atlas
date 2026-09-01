@@ -1,0 +1,192 @@
+{
+  "id": "mot-discovery-v1",
+  "generatorVersion": "multiple-object-tracking-v1",
+  "status": "discovery-only",
+  "hypothesis": "Sparse video representations lose object identity through extended crossing motion once the explicit marker disappears.",
+  "candidates": [
+    {
+      "id": "mot-d0306e5560f2380d",
+      "cellId": "cell-four-object-crossing-tracks",
+      "split": "discovery",
+      "seed": 2200000,
+      "failureModeId": "multiple-object-identity-tracking",
+      "question": "At the end, which labeled quadrant contains the disk that had the RED RING at the beginning?",
+      "answerOptions": [
+        "C",
+        "A",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetEnd": 0,
+        "objects": 4,
+        "videoDurationMs": 10000,
+        "fps": 30,
+        "visualVariant": 0
+      }
+    },
+    {
+      "id": "mot-e58f5a8090032388",
+      "cellId": "cell-four-object-crossing-tracks",
+      "split": "discovery",
+      "seed": 2200001,
+      "failureModeId": "multiple-object-identity-tracking",
+      "question": "At the end, which labeled quadrant contains the disk that had the RED RING at the beginning?",
+      "answerOptions": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetEnd": 1,
+        "objects": 4,
+        "videoDurationMs": 10000,
+        "fps": 30,
+        "visualVariant": 1
+      }
+    },
+    {
+      "id": "mot-319ecf7667c341d2",
+      "cellId": "cell-four-object-crossing-tracks",
+      "split": "discovery",
+      "seed": 2200002,
+      "failureModeId": "multiple-object-identity-tracking",
+      "question": "At the end, which labeled quadrant contains the disk that had the RED RING at the beginning?",
+      "answerOptions": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetEnd": 2,
+        "objects": 4,
+        "videoDurationMs": 10000,
+        "fps": 30,
+        "visualVariant": 2
+      }
+    },
+    {
+      "id": "mot-2b5699c86937a018",
+      "cellId": "cell-four-object-crossing-tracks",
+      "split": "discovery",
+      "seed": 2200003,
+      "failureModeId": "multiple-object-identity-tracking",
+      "question": "At the end, which labeled quadrant contains the disk that had the RED RING at the beginning?",
+      "answerOptions": [
+        "C",
+        "A",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetEnd": 3,
+        "objects": 4,
+        "videoDurationMs": 10000,
+        "fps": 30,
+        "visualVariant": 3
+      }
+    },
+    {
+      "id": "mot-dc9b3b4c35aa16a7",
+      "cellId": "cell-four-object-crossing-tracks",
+      "split": "discovery",
+      "seed": 2200004,
+      "failureModeId": "multiple-object-identity-tracking",
+      "question": "At the end, which labeled quadrant contains the disk that had the RED RING at the beginning?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetEnd": 0,
+        "objects": 4,
+        "videoDurationMs": 10000,
+        "fps": 30,
+        "visualVariant": 4
+      }
+    },
+    {
+      "id": "mot-5d7ef2548f2ba438",
+      "cellId": "cell-four-object-crossing-tracks",
+      "split": "discovery",
+      "seed": 2200005,
+      "failureModeId": "multiple-object-identity-tracking",
+      "question": "At the end, which labeled quadrant contains the disk that had the RED RING at the beginning?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetEnd": 1,
+        "objects": 4,
+        "videoDurationMs": 10000,
+        "fps": 30,
+        "visualVariant": 5
+      }
+    },
+    {
+      "id": "mot-cffe58ed47b44592",
+      "cellId": "cell-four-object-crossing-tracks",
+      "split": "discovery",
+      "seed": 2200006,
+      "failureModeId": "multiple-object-identity-tracking",
+      "question": "At the end, which labeled quadrant contains the disk that had the RED RING at the beginning?",
+      "answerOptions": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetEnd": 2,
+        "objects": 4,
+        "videoDurationMs": 10000,
+        "fps": 30,
+        "visualVariant": 6
+      }
+    },
+    {
+      "id": "mot-5478e508747098df",
+      "cellId": "cell-four-object-crossing-tracks",
+      "split": "discovery",
+      "seed": 2200007,
+      "failureModeId": "multiple-object-identity-tracking",
+      "question": "At the end, which labeled quadrant contains the disk that had the RED RING at the beginning?",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetEnd": 3,
+        "objects": 4,
+        "videoDurationMs": 10000,
+        "fps": 30,
+        "visualVariant": 7
+      }
+    }
+  ]
+}

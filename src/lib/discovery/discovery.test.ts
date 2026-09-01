@@ -57,6 +57,7 @@ import {
 } from "./selective-flash-tracking";
 import {
   createMazeReachabilityDiscoveryGrid,
+  createMazeReachabilityHoldout,
   mazePanelEdges,
   renderMazeReachabilitySvg,
 } from "./maze-reachability";
@@ -75,8 +76,28 @@ import {
   jigsawRowOrders,
   renderJigsawOrderSvg,
 } from "./jigsaw-order";
+import { createOcclusionStackDiscoveryGrid, renderOcclusionStackSvg } from "./occlusion-stack";
+import { createMotDiscoveryGrid, motEndpointAssignment, renderMotSvg } from "./multiple-object-tracking";
 
 describe("adaptive multimodal discovery", () => {
+  it("balances MOT endpoints and binds target identity to the exact trajectory", () => {
+    const candidates = createMotDiscoveryGrid();
+    expect(candidates).toHaveLength(8);
+    for (const candidate of candidates) {
+      expect(motEndpointAssignment(candidate)[0]).toBe(candidate.parameters.targetEnd);
+      expect(renderMotSvg(candidate, 500)).toContain("#e23e31");
+      expect(renderMotSvg(candidate, 5000)).not.toContain('stroke="#e23e31" stroke-width="8"');
+    }
+  });
+
+  it("balances deterministic global occlusion stack orders", () => {
+    const candidates = createOcclusionStackDiscoveryGrid();
+    expect(candidates).toHaveLength(8);
+    expect(new Set(candidates.map((candidate) => candidate.expectedAnswer))).toHaveLength(4);
+    for (const candidate of candidates)
+      expect(renderOcclusionStackSvg(candidate)).toBe(renderOcclusionStackSvg(candidate));
+  });
+
   it("balances jigsaw rows and gives only one identity strip order", () => {
     const candidates = createJigsawOrderDiscoveryGrid();
     expect(candidates).toHaveLength(8);
@@ -131,6 +152,14 @@ describe("adaptive multimodal discovery", () => {
       expect(new Set(edgeCounts).size).toBe(1);
       expect(renderMazeReachabilitySvg(candidate)).toBe(renderMazeReachabilitySvg(candidate));
     }
+  });
+
+  it("reserves a balanced disjoint maze holdout", () => {
+    const holdout = createMazeReachabilityHoldout();
+    expect(holdout).toHaveLength(16);
+    expect(holdout.every((candidate) => candidate.seed >= 1_710_000)).toBe(true);
+    for (const answer of ["A", "B", "C", "D"])
+      expect(holdout.filter((candidate) => candidate.expectedAnswer === answer)).toHaveLength(4);
   });
 
   it("balances selective target-flash counts with exact non-overlapping schedules", () => {

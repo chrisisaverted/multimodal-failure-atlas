@@ -1,0 +1,176 @@
+{
+  "id": "occlusion-stack-discovery-v1",
+  "generatorVersion": "occlusion-stack-v1",
+  "status": "discovery-only",
+  "hypothesis": "Models fail to integrate local T-junction/occlusion cues into a consistent global depth order.",
+  "candidates": [
+    {
+      "id": "os-da8c53555d781b5b",
+      "cellId": "cell-global-four-ribbon-stack",
+      "split": "discovery",
+      "seed": 2100000,
+      "failureModeId": "occlusion-layer-ordering",
+      "question": "What is the global FRONT-to-BACK order of the four ribbons? The ribbon listed first is on top.",
+      "answerOptions": [
+        "GREEN > RED > GOLD > BLUE",
+        "GOLD > GREEN > BLUE > RED",
+        "BLUE > GOLD > RED > GREEN",
+        "RED > BLUE > GREEN > GOLD"
+      ],
+      "expectedAnswer": "RED > BLUE > GREEN > GOLD",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "orderIndex": 0,
+        "crossings": 6,
+        "visualVariant": 0
+      }
+    },
+    {
+      "id": "os-acf04a820cc4fe11",
+      "cellId": "cell-global-four-ribbon-stack",
+      "split": "discovery",
+      "seed": 2100001,
+      "failureModeId": "occlusion-layer-ordering",
+      "question": "What is the global FRONT-to-BACK order of the four ribbons? The ribbon listed first is on top.",
+      "answerOptions": [
+        "GOLD > GREEN > BLUE > RED",
+        "GREEN > RED > GOLD > BLUE",
+        "BLUE > GOLD > RED > GREEN",
+        "RED > BLUE > GREEN > GOLD"
+      ],
+      "expectedAnswer": "BLUE > GOLD > RED > GREEN",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "orderIndex": 1,
+        "crossings": 6,
+        "visualVariant": 1
+      }
+    },
+    {
+      "id": "os-b964eac8bb523292",
+      "cellId": "cell-global-four-ribbon-stack",
+      "split": "discovery",
+      "seed": 2100002,
+      "failureModeId": "occlusion-layer-ordering",
+      "question": "What is the global FRONT-to-BACK order of the four ribbons? The ribbon listed first is on top.",
+      "answerOptions": [
+        "GREEN > RED > GOLD > BLUE",
+        "GOLD > GREEN > BLUE > RED",
+        "BLUE > GOLD > RED > GREEN",
+        "RED > BLUE > GREEN > GOLD"
+      ],
+      "expectedAnswer": "GREEN > RED > GOLD > BLUE",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "orderIndex": 2,
+        "crossings": 6,
+        "visualVariant": 2
+      }
+    },
+    {
+      "id": "os-86d257be037c5eb0",
+      "cellId": "cell-global-four-ribbon-stack",
+      "split": "discovery",
+      "seed": 2100003,
+      "failureModeId": "occlusion-layer-ordering",
+      "question": "What is the global FRONT-to-BACK order of the four ribbons? The ribbon listed first is on top.",
+      "answerOptions": [
+        "GREEN > RED > GOLD > BLUE",
+        "GOLD > GREEN > BLUE > RED",
+        "BLUE > GOLD > RED > GREEN",
+        "RED > BLUE > GREEN > GOLD"
+      ],
+      "expectedAnswer": "GOLD > GREEN > BLUE > RED",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "orderIndex": 3,
+        "crossings": 6,
+        "visualVariant": 3
+      }
+    },
+    {
+      "id": "os-a670f61cbfec1238",
+      "cellId": "cell-global-four-ribbon-stack",
+      "split": "discovery",
+      "seed": 2100004,
+      "failureModeId": "occlusion-layer-ordering",
+      "question": "What is the global FRONT-to-BACK order of the four ribbons? The ribbon listed first is on top.",
+      "answerOptions": [
+        "GOLD > GREEN > BLUE > RED",
+        "BLUE > GOLD > RED > GREEN",
+        "GREEN > RED > GOLD > BLUE",
+        "RED > BLUE > GREEN > GOLD"
+      ],
+      "expectedAnswer": "RED > BLUE > GREEN > GOLD",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "orderIndex": 0,
+        "crossings": 6,
+        "visualVariant": 4
+      }
+    },
+    {
+      "id": "os-13a1be5cc09d074b",
+      "cellId": "cell-global-four-ribbon-stack",
+      "split": "discovery",
+      "seed": 2100005,
+      "failureModeId": "occlusion-layer-ordering",
+      "question": "What is the global FRONT-to-BACK order of the four ribbons? The ribbon listed first is on top.",
+      "answerOptions": [
+        "GOLD > GREEN > BLUE > RED",
+        "BLUE > GOLD > RED > GREEN",
+        "GREEN > RED > GOLD > BLUE",
+        "RED > BLUE > GREEN > GOLD"
+      ],
+      "expectedAnswer": "BLUE > GOLD > RED > GREEN",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "orderIndex": 1,
+        "crossings": 6,
+        "visualVariant": 5
+      }
+    },
+    {
+      "id": "os-177fddc3b7f32ae3",
+      "cellId": "cell-global-four-ribbon-stack",
+      "split": "discovery",
+      "seed": 2100006,
+      "failureModeId": "occlusion-layer-ordering",
+      "question": "What is the global FRONT-to-BACK order of the four ribbons? The ribbon listed first is on top.",
+      "answerOptions": [
+        "BLUE > GOLD > RED > GREEN",
+        "GOLD > GREEN > BLUE > RED",
+        "GREEN > RED > GOLD > BLUE",
+        "RED > BLUE > GREEN > GOLD"
+      ],
+      "expectedAnswer": "GREEN > RED > GOLD > BLUE",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "orderIndex": 2,
+        "crossings": 6,
+        "visualVariant": 6
+      }
+    },
+    {
+      "id": "os-b9142029b2332bd8",
+      "cellId": "cell-global-four-ribbon-stack",
+      "split": "discovery",
+      "seed": 2100007,
+      "failureModeId": "occlusion-layer-ordering",
+      "question": "What is the global FRONT-to-BACK order of the four ribbons? The ribbon listed first is on top.",
+      "answerOptions": [
+        "GOLD > GREEN > BLUE > RED",
+        "BLUE > GOLD > RED > GREEN",
+        "GREEN > RED > GOLD > BLUE",
+        "RED > BLUE > GREEN > GOLD"
+      ],
+      "expectedAnswer": "GOLD > GREEN > BLUE > RED",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "orderIndex": 3,
+        "crossings": 6,
+        "visualVariant": 7
+      }
+    }
+  ]
+}

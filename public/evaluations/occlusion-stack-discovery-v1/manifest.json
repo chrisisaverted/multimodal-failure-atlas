@@ -1,0 +1,249 @@
+{
+  "id": "occlusion-stack-discovery-v1",
+  "planSha256": "20b58ba1a1fbfbfd0c8e20eb9b9c4fce9ff72d9788a9715982f4a137dd40db4a",
+  "generatorVersion": "occlusion-stack-v1",
+  "renderer": "occlusion-stack-svg-v1",
+  "fps": 0,
+  "cases": [
+    {
+      "candidateId": "os-da8c53555d781b5b",
+      "cellId": "cell-global-four-ribbon-stack",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Six pairwise ribbon crossings encode one globally consistent stack order.",
+      "failureModeId": "occlusion-layer-ordering",
+      "generator": "occlusion-stack",
+      "seed": 2100000,
+      "difficulty": 68,
+      "variant": 0,
+      "artifact": "public/evaluations/occlusion-stack-discovery-v1/os-da8c53555d781b5b.png",
+      "mimeType": "image/png",
+      "question": "What is the global FRONT-to-BACK order of the four ribbons? The ribbon listed first is on top.",
+      "answerOptions": [
+        "GREEN > RED > GOLD > BLUE",
+        "GOLD > GREEN > BLUE > RED",
+        "BLUE > GOLD > RED > GREEN",
+        "RED > BLUE > GREEN > GOLD"
+      ],
+      "expectedAnswer": "RED > BLUE > GREEN > GOLD",
+      "sha256": "6c4cffd169ff6d89baf38db15d40ddad5a7913d2be412871b28853cd3baf364e",
+      "parameters": {
+        "orderIndex": 0,
+        "crossings": 6,
+        "visualVariant": 0
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Use local occlusion at the crossings to infer the global front-to-back stack. Return exactly one allowed ordering without explanation."
+    },
+    {
+      "candidateId": "os-acf04a820cc4fe11",
+      "cellId": "cell-global-four-ribbon-stack",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Six pairwise ribbon crossings encode one globally consistent stack order.",
+      "failureModeId": "occlusion-layer-ordering",
+      "generator": "occlusion-stack",
+      "seed": 2100001,
+      "difficulty": 68,
+      "variant": 1,
+      "artifact": "public/evaluations/occlusion-stack-discovery-v1/os-acf04a820cc4fe11.png",
+      "mimeType": "image/png",
+      "question": "What is the global FRONT-to-BACK order of the four ribbons? The ribbon listed first is on top.",
+      "answerOptions": [
+        "GOLD > GREEN > BLUE > RED",
+        "GREEN > RED > GOLD > BLUE",
+        "BLUE > GOLD > RED > GREEN",
+        "RED > BLUE > GREEN > GOLD"
+      ],
+      "expectedAnswer": "BLUE > GOLD > RED > GREEN",
+      "sha256": "52f0968d97d8e07fc00c5a73b8441f493e500d728bcab656101b339be72ca0be",
+      "parameters": {
+        "orderIndex": 1,
+        "crossings": 6,
+        "visualVariant": 1
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Use local occlusion at the crossings to infer the global front-to-back stack. Return exactly one allowed ordering without explanation."
+    },
+    {
+      "candidateId": "os-b964eac8bb523292",
+      "cellId": "cell-global-four-ribbon-stack",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Six pairwise ribbon crossings encode one globally consistent stack order.",
+      "failureModeId": "occlusion-layer-ordering",
+      "generator": "occlusion-stack",
+      "seed": 2100002,
+      "difficulty": 68,
+      "variant": 2,
+      "artifact": "public/evaluations/occlusion-stack-discovery-v1/os-b964eac8bb523292.png",
+      "mimeType": "image/png",
+      "question": "What is the global FRONT-to-BACK order of the four ribbons? The ribbon listed first is on top.",
+      "answerOptions": [
+        "GREEN > RED > GOLD > BLUE",
+        "GOLD > GREEN > BLUE > RED",
+        "BLUE > GOLD > RED > GREEN",
+        "RED > BLUE > GREEN > GOLD"
+      ],
+      "expectedAnswer": "GREEN > RED > GOLD > BLUE",
+      "sha256": "057a7e279dc0ddaf1a7199c8c8ba836c6182934456f606154ef22033914be090",
+      "parameters": {
+        "orderIndex": 2,
+        "crossings": 6,
+        "visualVariant": 2
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Use local occlusion at the crossings to infer the global front-to-back stack. Return exactly one allowed ordering without explanation."
+    },
+    {
+      "candidateId": "os-86d257be037c5eb0",
+      "cellId": "cell-global-four-ribbon-stack",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Six pairwise ribbon crossings encode one globally consistent stack order.",
+      "failureModeId": "occlusion-layer-ordering",
+      "generator": "occlusion-stack",
+      "seed": 2100003,
+      "difficulty": 68,
+      "variant": 3,
+      "artifact": "public/evaluations/occlusion-stack-discovery-v1/os-86d257be037c5eb0.png",
+      "mimeType": "image/png",
+      "question": "What is the global FRONT-to-BACK order of the four ribbons? The ribbon listed first is on top.",
+      "answerOptions": [
+        "GREEN > RED > GOLD > BLUE",
+        "GOLD > GREEN > BLUE > RED",
+        "BLUE > GOLD > RED > GREEN",
+        "RED > BLUE > GREEN > GOLD"
+      ],
+      "expectedAnswer": "GOLD > GREEN > BLUE > RED",
+      "sha256": "0952901b7f0cc85d57000b01ca4d9c3eea6c6a62889f82e3141cae7caa5cf086",
+      "parameters": {
+        "orderIndex": 3,
+        "crossings": 6,
+        "visualVariant": 3
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Use local occlusion at the crossings to infer the global front-to-back stack. Return exactly one allowed ordering without explanation."
+    },
+    {
+      "candidateId": "os-a670f61cbfec1238",
+      "cellId": "cell-global-four-ribbon-stack",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Six pairwise ribbon crossings encode one globally consistent stack order.",
+      "failureModeId": "occlusion-layer-ordering",
+      "generator": "occlusion-stack",
+      "seed": 2100004,
+      "difficulty": 68,
+      "variant": 4,
+      "artifact": "public/evaluations/occlusion-stack-discovery-v1/os-a670f61cbfec1238.png",
+      "mimeType": "image/png",
+      "question": "What is the global FRONT-to-BACK order of the four ribbons? The ribbon listed first is on top.",
+      "answerOptions": [
+        "GOLD > GREEN > BLUE > RED",
+        "BLUE > GOLD > RED > GREEN",
+        "GREEN > RED > GOLD > BLUE",
+        "RED > BLUE > GREEN > GOLD"
+      ],
+      "expectedAnswer": "RED > BLUE > GREEN > GOLD",
+      "sha256": "771df78ffc863ee12a842d7f42d1f4e2ca164f2f08a2a44b2d0ad3de04f47787",
+      "parameters": {
+        "orderIndex": 0,
+        "crossings": 6,
+        "visualVariant": 4
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Use local occlusion at the crossings to infer the global front-to-back stack. Return exactly one allowed ordering without explanation."
+    },
+    {
+      "candidateId": "os-13a1be5cc09d074b",
+      "cellId": "cell-global-four-ribbon-stack",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Six pairwise ribbon crossings encode one globally consistent stack order.",
+      "failureModeId": "occlusion-layer-ordering",
+      "generator": "occlusion-stack",
+      "seed": 2100005,
+      "difficulty": 68,
+      "variant": 5,
+      "artifact": "public/evaluations/occlusion-stack-discovery-v1/os-13a1be5cc09d074b.png",
+      "mimeType": "image/png",
+      "question": "What is the global FRONT-to-BACK order of the four ribbons? The ribbon listed first is on top.",
+      "answerOptions": [
+        "GOLD > GREEN > BLUE > RED",
+        "BLUE > GOLD > RED > GREEN",
+        "GREEN > RED > GOLD > BLUE",
+        "RED > BLUE > GREEN > GOLD"
+      ],
+      "expectedAnswer": "BLUE > GOLD > RED > GREEN",
+      "sha256": "71709d92ee8802603ae33e0e62f3ac3ac510efcb250cd4e8575f246f4ad8000e",
+      "parameters": {
+        "orderIndex": 1,
+        "crossings": 6,
+        "visualVariant": 5
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Use local occlusion at the crossings to infer the global front-to-back stack. Return exactly one allowed ordering without explanation."
+    },
+    {
+      "candidateId": "os-177fddc3b7f32ae3",
+      "cellId": "cell-global-four-ribbon-stack",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Six pairwise ribbon crossings encode one globally consistent stack order.",
+      "failureModeId": "occlusion-layer-ordering",
+      "generator": "occlusion-stack",
+      "seed": 2100006,
+      "difficulty": 68,
+      "variant": 6,
+      "artifact": "public/evaluations/occlusion-stack-discovery-v1/os-177fddc3b7f32ae3.png",
+      "mimeType": "image/png",
+      "question": "What is the global FRONT-to-BACK order of the four ribbons? The ribbon listed first is on top.",
+      "answerOptions": [
+        "BLUE > GOLD > RED > GREEN",
+        "GOLD > GREEN > BLUE > RED",
+        "GREEN > RED > GOLD > BLUE",
+        "RED > BLUE > GREEN > GOLD"
+      ],
+      "expectedAnswer": "GREEN > RED > GOLD > BLUE",
+      "sha256": "cfd0859b985f9274802bf11ad12e1e11aafcff2b48b73e0d7045abe939f9d9ab",
+      "parameters": {
+        "orderIndex": 2,
+        "crossings": 6,
+        "visualVariant": 6
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Use local occlusion at the crossings to infer the global front-to-back stack. Return exactly one allowed ordering without explanation."
+    },
+    {
+      "candidateId": "os-b9142029b2332bd8",
+      "cellId": "cell-global-four-ribbon-stack",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Six pairwise ribbon crossings encode one globally consistent stack order.",
+      "failureModeId": "occlusion-layer-ordering",
+      "generator": "occlusion-stack",
+      "seed": 2100007,
+      "difficulty": 68,
+      "variant": 7,
+      "artifact": "public/evaluations/occlusion-stack-discovery-v1/os-b9142029b2332bd8.png",
+      "mimeType": "image/png",
+      "question": "What is the global FRONT-to-BACK order of the four ribbons? The ribbon listed first is on top.",
+      "answerOptions": [
+        "GOLD > GREEN > BLUE > RED",
+        "BLUE > GOLD > RED > GREEN",
+        "GREEN > RED > GOLD > BLUE",
+        "RED > BLUE > GREEN > GOLD"
+      ],
+      "expectedAnswer": "GOLD > GREEN > BLUE > RED",
+      "sha256": "53d6a1d6971a2819d65d88f58094560918252d05c49cae5a02bd3202f150c2ca",
+      "parameters": {
+        "orderIndex": 3,
+        "crossings": 6,
+        "visualVariant": 7
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Use local occlusion at the crossings to infer the global front-to-back stack. Return exactly one allowed ordering without explanation."
+    }
+  ]
+}
