@@ -1,0 +1,24 @@
+{
+  "id": "pair-collision-gated-screen-kimi-v1-no-reasoning-2026-09-01",
+  "resolvedAt": "2026-09-01",
+  "gateway": "OpenRouter",
+  "evaluationPlanId": "pair-collision-gated-discovery-v1",
+  "evaluationPlanSha256": "c4767b019b2c2a71e44b74216be5402a2b01b896b23435bcd2ef6052494cee27",
+  "stage": "five-route-gated-target-pair-screen",
+  "casesPerModel": 8,
+  "trials": 1,
+  "temperature": 0,
+  "maxOutputTokens": 512,
+  "reasoning": { "effort": "none", "exclude": true },
+  "scorer": "terminal-option-v3",
+  "allowProviderFallbacks": false,
+  "dataCollection": "deny",
+  "campaignCostCeilingUsd": 5,
+  "models": [
+    {
+      "modelId": "moonshotai/kimi-k3",
+      "modelRevision": "moonshotai/kimi-k3-20260715",
+      "upstreamProvider": "Moonshot AI"
+    }
+  ]
+}

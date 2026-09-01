@@ -1,0 +1,29 @@
+{
+  "id": "pair-collision-gated-screen-core-v1-low-reasoning-2026-09-01",
+  "resolvedAt": "2026-09-01",
+  "gateway": "OpenRouter",
+  "evaluationPlanId": "pair-collision-gated-discovery-v1",
+  "evaluationPlanSha256": "c4767b019b2c2a71e44b74216be5402a2b01b896b23435bcd2ef6052494cee27",
+  "stage": "five-route-gated-target-pair-screen",
+  "casesPerModel": 8,
+  "trials": 1,
+  "temperature": 0,
+  "maxOutputTokens": 8192,
+  "reasoning": { "effort": "low", "exclude": true },
+  "scorer": "terminal-option-v3",
+  "allowProviderFallbacks": false,
+  "dataCollection": "deny",
+  "campaignCostCeilingUsd": 5,
+  "models": [
+    {
+      "modelId": "google/gemini-3.7-flash",
+      "modelRevision": "google/gemini-3.7-flash-20260813",
+      "upstreamProvider": "Google AI Studio"
+    },
+    {
+      "modelId": "qwen/qwen3.8-max",
+      "modelRevision": "qwen/qwen3.8-max-20260803",
+      "upstreamProvider": "Alibaba"
+    }
+  ]
+}
