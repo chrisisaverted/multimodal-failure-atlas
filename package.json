@@ -91,6 +91,8 @@
     "generate:coflash": "tsx scripts/materialize-coflash.ts",
     "plan:xor-composition": "tsx scripts/plan-xor-composition.ts",
     "generate:xor-composition": "tsx scripts/materialize-xor-composition.ts",
+    "plan:infection-spread": "tsx scripts/plan-infection-spread.ts",
+    "generate:infection-spread": "tsx scripts/materialize-infection-spread.ts",
     "publish:adaptive": "tsx scripts/publish-adaptive-results.ts",
     "publish:precision-wire": "tsx scripts/publish-precision-wire-results.ts",
     "evaluate": "tsx scripts/evaluate.ts",

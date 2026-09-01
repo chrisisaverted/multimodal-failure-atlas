@@ -1,0 +1,609 @@
+{
+  "id": "infection-spread-discovery-v1",
+  "planSha256": "00788e6380e03b2e367f4fb0713186caf8bc93d219aa2a7325c15b6189233e0d",
+  "generatorVersion": "hidden-collision-infection-v1",
+  "renderer": "infection-spread-svg-raster-v1",
+  "fps": 30,
+  "cases": [
+    {
+      "candidateId": "is-3e5edd6fb0801a10",
+      "cellId": "cell-ten-hidden-infection-collisions",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "One initial infection and ten pairwise contacts define a hidden monotonic set process.",
+      "failureModeId": "latent-causal-set-propagation",
+      "generator": "infection-spread",
+      "seed": 3400000,
+      "difficulty": 89,
+      "variant": 0,
+      "artifact": "public/evaluations/infection-spread-discovery-v1/is-3e5edd6fb0801a10.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 11200,
+      "question": "How many nodes are infected at the end? Initially only the red-ringed node is infected. Every shown connection infects both endpoints if either endpoint was already infected; otherwise nothing changes.",
+      "answerOptions": [
+        "1",
+        "3",
+        "2",
+        "4"
+      ],
+      "expectedAnswer": "1",
+      "sha256": "227b0776b726a62aa0061a86842952fa73c0f8d012f16d83a538192db2d66f8a",
+      "parameters": {
+        "initialInfected": 0,
+        "targetCount": 1,
+        "events": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "videoDurationMs": 11200,
+        "fps": 30,
+        "visualVariant": 0
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the infected set after every connection. Return exactly one allowed count and do not explain."
+    },
+    {
+      "candidateId": "is-8827331751efeeea",
+      "cellId": "cell-ten-hidden-infection-collisions",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "One initial infection and ten pairwise contacts define a hidden monotonic set process.",
+      "failureModeId": "latent-causal-set-propagation",
+      "generator": "infection-spread",
+      "seed": 3400001,
+      "difficulty": 89,
+      "variant": 1,
+      "artifact": "public/evaluations/infection-spread-discovery-v1/is-8827331751efeeea.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 11200,
+      "question": "How many nodes are infected at the end? Initially only the red-ringed node is infected. Every shown connection infects both endpoints if either endpoint was already infected; otherwise nothing changes.",
+      "answerOptions": [
+        "2",
+        "1",
+        "3",
+        "4"
+      ],
+      "expectedAnswer": "2",
+      "sha256": "f47ba243ed2991f9628e89fffc9247e114673221fd275aefa2cc7b68c4e8eb39",
+      "parameters": {
+        "initialInfected": 1,
+        "targetCount": 2,
+        "events": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "videoDurationMs": 11200,
+        "fps": 30,
+        "visualVariant": 1
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the infected set after every connection. Return exactly one allowed count and do not explain."
+    },
+    {
+      "candidateId": "is-64464abc1d894185",
+      "cellId": "cell-ten-hidden-infection-collisions",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "One initial infection and ten pairwise contacts define a hidden monotonic set process.",
+      "failureModeId": "latent-causal-set-propagation",
+      "generator": "infection-spread",
+      "seed": 3400002,
+      "difficulty": 89,
+      "variant": 2,
+      "artifact": "public/evaluations/infection-spread-discovery-v1/is-64464abc1d894185.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 11200,
+      "question": "How many nodes are infected at the end? Initially only the red-ringed node is infected. Every shown connection infects both endpoints if either endpoint was already infected; otherwise nothing changes.",
+      "answerOptions": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "expectedAnswer": "3",
+      "sha256": "4ad7a7f5f3135c1ed56ab5493afa5845716395e87755da3cf96ce0ab65f9f0a5",
+      "parameters": {
+        "initialInfected": 2,
+        "targetCount": 3,
+        "events": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "videoDurationMs": 11200,
+        "fps": 30,
+        "visualVariant": 2
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the infected set after every connection. Return exactly one allowed count and do not explain."
+    },
+    {
+      "candidateId": "is-17a740ce0a6be631",
+      "cellId": "cell-ten-hidden-infection-collisions",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "One initial infection and ten pairwise contacts define a hidden monotonic set process.",
+      "failureModeId": "latent-causal-set-propagation",
+      "generator": "infection-spread",
+      "seed": 3400003,
+      "difficulty": 89,
+      "variant": 3,
+      "artifact": "public/evaluations/infection-spread-discovery-v1/is-17a740ce0a6be631.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 11200,
+      "question": "How many nodes are infected at the end? Initially only the red-ringed node is infected. Every shown connection infects both endpoints if either endpoint was already infected; otherwise nothing changes.",
+      "answerOptions": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "expectedAnswer": "4",
+      "sha256": "c5e9d47df01744911c98e7a1493ffc112a011256217806d040f1fd73f66280e3",
+      "parameters": {
+        "initialInfected": 3,
+        "targetCount": 4,
+        "events": [
+          [
+            3,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "videoDurationMs": 11200,
+        "fps": 30,
+        "visualVariant": 3
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the infected set after every connection. Return exactly one allowed count and do not explain."
+    },
+    {
+      "candidateId": "is-f9ec25552f158468",
+      "cellId": "cell-ten-hidden-infection-collisions",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "One initial infection and ten pairwise contacts define a hidden monotonic set process.",
+      "failureModeId": "latent-causal-set-propagation",
+      "generator": "infection-spread",
+      "seed": 3400004,
+      "difficulty": 89,
+      "variant": 4,
+      "artifact": "public/evaluations/infection-spread-discovery-v1/is-f9ec25552f158468.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 11200,
+      "question": "How many nodes are infected at the end? Initially only the red-ringed node is infected. Every shown connection infects both endpoints if either endpoint was already infected; otherwise nothing changes.",
+      "answerOptions": [
+        "2",
+        "1",
+        "3",
+        "4"
+      ],
+      "expectedAnswer": "1",
+      "sha256": "477a56167a18ec115fdb24852741e3efa93bf4dc54c42f9e0c6457d8501f901f",
+      "parameters": {
+        "initialInfected": 0,
+        "targetCount": 1,
+        "events": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "videoDurationMs": 11200,
+        "fps": 30,
+        "visualVariant": 4
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the infected set after every connection. Return exactly one allowed count and do not explain."
+    },
+    {
+      "candidateId": "is-9ad7f85c4fbf7093",
+      "cellId": "cell-ten-hidden-infection-collisions",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "One initial infection and ten pairwise contacts define a hidden monotonic set process.",
+      "failureModeId": "latent-causal-set-propagation",
+      "generator": "infection-spread",
+      "seed": 3400005,
+      "difficulty": 89,
+      "variant": 5,
+      "artifact": "public/evaluations/infection-spread-discovery-v1/is-9ad7f85c4fbf7093.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 11200,
+      "question": "How many nodes are infected at the end? Initially only the red-ringed node is infected. Every shown connection infects both endpoints if either endpoint was already infected; otherwise nothing changes.",
+      "answerOptions": [
+        "2",
+        "3",
+        "1",
+        "4"
+      ],
+      "expectedAnswer": "2",
+      "sha256": "9ed001f96865d688a0c0c3bb15bba6e439e20a0f27818b18d207867cb06547e5",
+      "parameters": {
+        "initialInfected": 1,
+        "targetCount": 2,
+        "events": [
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "videoDurationMs": 11200,
+        "fps": 30,
+        "visualVariant": 5
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the infected set after every connection. Return exactly one allowed count and do not explain."
+    },
+    {
+      "candidateId": "is-e953df20c8b1db38",
+      "cellId": "cell-ten-hidden-infection-collisions",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "One initial infection and ten pairwise contacts define a hidden monotonic set process.",
+      "failureModeId": "latent-causal-set-propagation",
+      "generator": "infection-spread",
+      "seed": 3400006,
+      "difficulty": 89,
+      "variant": 6,
+      "artifact": "public/evaluations/infection-spread-discovery-v1/is-e953df20c8b1db38.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 11200,
+      "question": "How many nodes are infected at the end? Initially only the red-ringed node is infected. Every shown connection infects both endpoints if either endpoint was already infected; otherwise nothing changes.",
+      "answerOptions": [
+        "3",
+        "2",
+        "1",
+        "4"
+      ],
+      "expectedAnswer": "3",
+      "sha256": "454d7855d561fb7f64f45ff559b82f8aace0742f133dcda269d6e2dc6e342181",
+      "parameters": {
+        "initialInfected": 2,
+        "targetCount": 3,
+        "events": [
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "videoDurationMs": 11200,
+        "fps": 30,
+        "visualVariant": 6
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the infected set after every connection. Return exactly one allowed count and do not explain."
+    },
+    {
+      "candidateId": "is-ae1f071a494ffefb",
+      "cellId": "cell-ten-hidden-infection-collisions",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "One initial infection and ten pairwise contacts define a hidden monotonic set process.",
+      "failureModeId": "latent-causal-set-propagation",
+      "generator": "infection-spread",
+      "seed": 3400007,
+      "difficulty": 89,
+      "variant": 7,
+      "artifact": "public/evaluations/infection-spread-discovery-v1/is-ae1f071a494ffefb.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 11200,
+      "question": "How many nodes are infected at the end? Initially only the red-ringed node is infected. Every shown connection infects both endpoints if either endpoint was already infected; otherwise nothing changes.",
+      "answerOptions": [
+        "2",
+        "3",
+        "1",
+        "4"
+      ],
+      "expectedAnswer": "4",
+      "sha256": "00e19a78ba55e09ff90bdbdc16f7a07f0688ac145010dbde115d09c00ddfc33b",
+      "parameters": {
+        "initialInfected": 3,
+        "targetCount": 4,
+        "events": [
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "videoDurationMs": 11200,
+        "fps": 30,
+        "visualVariant": 7
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the infected set after every connection. Return exactly one allowed count and do not explain."
+    }
+  ]
+}

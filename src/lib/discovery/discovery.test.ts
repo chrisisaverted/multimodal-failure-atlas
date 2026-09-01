@@ -91,8 +91,15 @@ import { createSymmetryGrid, symmetryMatrix } from "./symmetry-search";
 import { applySwaps, createSwapTrackingGrid } from "./swap-tracking";
 import { coflashPairCounts, createCoflashGrid } from "./coflash-counting";
 import { createXorGrid, xorMatrices } from "./xor-composition";
+import { applyInfection, createInfectionGrid } from "./infection-spread";
 
 describe("adaptive multimodal discovery", () => {
+  it("binds hidden infection videos to all four final set sizes", () => {
+    const candidates = createInfectionGrid();
+    expect(candidates).toHaveLength(8);
+    for (const candidate of candidates) expect(applyInfection(candidate.parameters.initialInfected, candidate.parameters.events).size).toBe(candidate.parameters.targetCount);
+  });
+
   it("creates one exact XOR panel and three four-bit distractors", () => {
     for (const candidate of createXorGrid()) {
       const { truth, panels } = xorMatrices(candidate);
