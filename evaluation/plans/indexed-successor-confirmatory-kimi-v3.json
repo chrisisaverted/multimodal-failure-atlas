@@ -1,0 +1,4 @@
+{
+  "id": "indexed-successor-confirmatory-v3-kimi-no-reasoning-2026-09-01", "resolvedAt": "2026-09-01", "gateway": "OpenRouter", "evaluationPlanId": "indexed-successor-confirmatory-v3", "evaluationPlanSha256": "5ff57a7dbb7a76617d6ea12c9e67c34e6fe1dcbb8da0c5dd502d6f1c83027a2c", "stage": "frozen-confirmatory-holdout-with-indexed-marker-control", "casesPerModel": 32, "trials": 1, "temperature": 0, "maxOutputTokens": 1024, "reasoning": { "effort": "none", "exclude": true }, "scorer": "terminal-option-v3", "allowProviderFallbacks": false, "dataCollection": "deny", "campaignCostCeilingUsd": 12,
+  "models": [{ "modelId": "moonshotai/kimi-k3", "modelRevision": "moonshotai/kimi-k3-20260715", "upstreamProvider": "Moonshot AI" }]
+}

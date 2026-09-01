@@ -1,0 +1,4 @@
+{
+  "id": "grid-activation-confirmatory-v3-kimi-no-reasoning-2026-09-01", "resolvedAt": "2026-09-01", "gateway": "OpenRouter", "evaluationPlanId": "grid-activation-confirmatory-v3", "evaluationPlanSha256": "5f96ab8c9ceb36ad95012a93a3f5a01e87f84e94b030d49e155ce812ebca7a3e", "stage": "frozen-confirmatory-holdout-with-persistent-set-control", "casesPerModel": 32, "trials": 1, "temperature": 0, "maxOutputTokens": 1024, "reasoning": { "effort": "none", "exclude": true }, "scorer": "terminal-option-v3", "allowProviderFallbacks": false, "dataCollection": "deny", "campaignCostCeilingUsd": 12,
+  "models": [{ "modelId": "moonshotai/kimi-k3", "modelRevision": "moonshotai/kimi-k3-20260715", "upstreamProvider": "Moonshot AI" }]
+}

@@ -38,11 +38,12 @@ holdouts finish.
 | Identity-conditioned selective flash count | observed holdout pass       |        2/16 |             4/16 |        2/16 | 16/16 each                        | unverified |
 | Temporal set cardinality                   | harder holdout queued       |         3/8 |              4/8 | 4/7 + pending | persistent-set control generated  | unverified |
 | Dynamic route turn integration             | observed holdout pass       |        3/16 |             4/16 |        3/16 | 16/16, 16/16, 15/15               | unverified |
-| Dynamic conservation ledger                | holdout running             |        4/16 |             2/16 |      pending | visible-ledger control running     | unverified |
+| Dynamic conservation ledger                | observed holdout pass       |        4/16 |             2/16 | 4/11 substantive | 16/16 each                    | unverified |
 | Latent dynamic-state accumulation           | replacement holdout running |        5/16 |     5/13 so far |      pending | state-visible control running      | unverified |
 | Temporal target-transition counting         | frozen holdout running      |         2/8 |              3/8 | 1/7 + pending | running-counter control generated  | unverified |
 | Temporal set cardinality (60-event cell)    | replacement screen running  |         1/8 |          pending |         2/8 | confirmatory control pending       | unverified |
 | Occurrence-indexed successor binding        | screen running              |     pending |          pending |     pending | indexed-marker control planned     | unverified |
+| Hidden-trail trajectory topology            | screen running              |         2/8 |          pending |     pending | visible-trail control planned      | unverified |
 
 ## Rejected or superseded searches
 

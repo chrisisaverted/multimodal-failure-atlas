@@ -89,9 +89,10 @@ import { applyTransfers, createCausalTransferGrid } from "./causal-transfer";
 import { applyConservation, createConservationGrid } from "./conservation-ledger";
 import { applyHardConservation, createHardConservationHoldout } from "./conservation-ledger-hard";
 import { createHardDynamicStateHoldout, hardDynamicFinalState } from "./dynamic-state-hard";
-import { createExtremeGrid } from "./grid-activation-memory-extreme";
+import { createExtremeGrid, createExtremeGridHoldout } from "./grid-activation-memory-extreme";
 import { createHardGridActivationHoldout, hardUniqueActivationCount } from "./grid-activation-memory-hard";
-import { createIndexedSuccessorGrid, indexedSuccessor } from "./indexed-successor-hard";
+import { createIndexedSuccessorGrid, createIndexedSuccessorHoldout, indexedSuccessor } from "./indexed-successor-hard";
+import { countHiddenTrailIntersections, createHiddenTrailGrid } from "./hidden-trail-intersections";
 import { createHardParityHoldout, hardParityMatrices, hardParityViolations } from "./parity-matrix-hard";
 import { createHardRouteTurnHoldout, hardCountRouteTurns } from "./route-turn-count-hard";
 import { countTargetTransitions, createTransitionCountGrid, createTransitionCountHoldout } from "./transition-count";
@@ -836,9 +837,11 @@ describe("adaptive multimodal discovery", () => {
     expect(holdout.some((candidate) => discoverySeeds.has(candidate.seed))).toBe(false);
     for (const candidate of [...discovery, ...holdout])
       expect(countTargetTransitions(candidate.parameters.sequence)).toBe(candidate.parameters.targetCount);
-    for (const candidate of createIndexedSuccessorGrid())
+    for (const candidate of [...createIndexedSuccessorGrid(), ...createIndexedSuccessorHoldout()])
       expect(indexedSuccessor(candidate.parameters.sequence)).toBe(candidate.parameters.answerIndex);
-    for (const candidate of createExtremeGrid())
+    for (const candidate of [...createExtremeGrid(), ...createExtremeGridHoldout()])
       expect(new Set(candidate.parameters.activations).size).toBe(candidate.parameters.uniqueCount);
+    for (const candidate of createHiddenTrailGrid())
+      expect(countHiddenTrailIntersections(candidate.parameters.path)).toBe(candidate.parameters.intersectionCount);
   });
 });

@@ -1,0 +1,249 @@
+{
+  "id": "hidden-trail-intersections-discovery-v1",
+  "planSha256": "af4585445ff53640b3afbe012bb5b3510e202fc43cfb23ac26ccb730b1a90d3e",
+  "generatorVersion": "hidden-trail-self-intersection-v1",
+  "renderer": "hidden-trail-intersections-svg-raster-v1",
+  "fps": 30,
+  "cases": [
+    {
+      "candidateId": "hti-a097cf249b2f4af7",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "A twenty-segment orthogonal route must be integrated without a visible trail to count self-crossings.",
+      "failureModeId": "dynamic-trajectory-topology",
+      "generator": "hidden-trail-intersections",
+      "seed": 5400000,
+      "difficulty": 94,
+      "variant": 0,
+      "artifact": "public/evaluations/hidden-trail-intersections-discovery-v1/hti-a097cf249b2f4af7.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "6",
+        "5",
+        "4",
+        "3"
+      ],
+      "expectedAnswer": "3",
+      "sha256": "663ffcd32168c500be6ca2db01c542f06dad3eeeedfae1d0604b0c3ec2d2e752",
+      "parameters": {
+        "intersectionCount": 3,
+        "visualVariant": 0
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Integrate the complete route and return exactly one allowed crossing count."
+    },
+    {
+      "candidateId": "hti-559c1a96be898c9e",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "A twenty-segment orthogonal route must be integrated without a visible trail to count self-crossings.",
+      "failureModeId": "dynamic-trajectory-topology",
+      "generator": "hidden-trail-intersections",
+      "seed": 5400001,
+      "difficulty": 94,
+      "variant": 1,
+      "artifact": "public/evaluations/hidden-trail-intersections-discovery-v1/hti-559c1a96be898c9e.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "5",
+        "6",
+        "4",
+        "3"
+      ],
+      "expectedAnswer": "4",
+      "sha256": "139efd02068124a23a371cbea5871677ef063321faf441a93eb3b10d733c0709",
+      "parameters": {
+        "intersectionCount": 4,
+        "visualVariant": 1
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Integrate the complete route and return exactly one allowed crossing count."
+    },
+    {
+      "candidateId": "hti-7b983cf1de08827a",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "A twenty-segment orthogonal route must be integrated without a visible trail to count self-crossings.",
+      "failureModeId": "dynamic-trajectory-topology",
+      "generator": "hidden-trail-intersections",
+      "seed": 5400002,
+      "difficulty": 94,
+      "variant": 2,
+      "artifact": "public/evaluations/hidden-trail-intersections-discovery-v1/hti-7b983cf1de08827a.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "5",
+        "6",
+        "4",
+        "3"
+      ],
+      "expectedAnswer": "5",
+      "sha256": "21c03401bb6bab20f1ba3ac4ce5bdcfd724362d504fa870b2f45727b78df1222",
+      "parameters": {
+        "intersectionCount": 5,
+        "visualVariant": 2
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Integrate the complete route and return exactly one allowed crossing count."
+    },
+    {
+      "candidateId": "hti-b3125ab767ad7975",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "A twenty-segment orthogonal route must be integrated without a visible trail to count self-crossings.",
+      "failureModeId": "dynamic-trajectory-topology",
+      "generator": "hidden-trail-intersections",
+      "seed": 5400003,
+      "difficulty": 94,
+      "variant": 3,
+      "artifact": "public/evaluations/hidden-trail-intersections-discovery-v1/hti-b3125ab767ad7975.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "6",
+        "4",
+        "5",
+        "3"
+      ],
+      "expectedAnswer": "6",
+      "sha256": "7254159250f7ba561dd680e0f08b04ce5feea35ee35d89c84f5cbd473b730900",
+      "parameters": {
+        "intersectionCount": 6,
+        "visualVariant": 3
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Integrate the complete route and return exactly one allowed crossing count."
+    },
+    {
+      "candidateId": "hti-57c97c9e4f0dd3fe",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "A twenty-segment orthogonal route must be integrated without a visible trail to count self-crossings.",
+      "failureModeId": "dynamic-trajectory-topology",
+      "generator": "hidden-trail-intersections",
+      "seed": 5400004,
+      "difficulty": 94,
+      "variant": 4,
+      "artifact": "public/evaluations/hidden-trail-intersections-discovery-v1/hti-57c97c9e4f0dd3fe.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "6",
+        "4",
+        "5",
+        "3"
+      ],
+      "expectedAnswer": "3",
+      "sha256": "f29befd70b8ea1ce2140f973688f58d850fb82c106f03eaf5645d935722febbc",
+      "parameters": {
+        "intersectionCount": 3,
+        "visualVariant": 4
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Integrate the complete route and return exactly one allowed crossing count."
+    },
+    {
+      "candidateId": "hti-20a7840f729105e9",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "A twenty-segment orthogonal route must be integrated without a visible trail to count self-crossings.",
+      "failureModeId": "dynamic-trajectory-topology",
+      "generator": "hidden-trail-intersections",
+      "seed": 5400005,
+      "difficulty": 94,
+      "variant": 5,
+      "artifact": "public/evaluations/hidden-trail-intersections-discovery-v1/hti-20a7840f729105e9.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "4",
+        "6",
+        "5",
+        "3"
+      ],
+      "expectedAnswer": "4",
+      "sha256": "afa9688415d8729db71e976672e146cb8bcb22124a9a701b174ea8abf7d700f8",
+      "parameters": {
+        "intersectionCount": 4,
+        "visualVariant": 5
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Integrate the complete route and return exactly one allowed crossing count."
+    },
+    {
+      "candidateId": "hti-09f1c3ead0d00c1f",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "A twenty-segment orthogonal route must be integrated without a visible trail to count self-crossings.",
+      "failureModeId": "dynamic-trajectory-topology",
+      "generator": "hidden-trail-intersections",
+      "seed": 5400006,
+      "difficulty": 94,
+      "variant": 6,
+      "artifact": "public/evaluations/hidden-trail-intersections-discovery-v1/hti-09f1c3ead0d00c1f.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "6",
+        "4",
+        "5",
+        "3"
+      ],
+      "expectedAnswer": "5",
+      "sha256": "57d5e18013b432b1f9db6811f7780fe1d9615f4db32ca95427ae73a38d98dd90",
+      "parameters": {
+        "intersectionCount": 5,
+        "visualVariant": 6
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Integrate the complete route and return exactly one allowed crossing count."
+    },
+    {
+      "candidateId": "hti-21ae513f4c875275",
+      "cellId": "cell-twenty-segment-hidden-trail-intersections",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "A twenty-segment orthogonal route must be integrated without a visible trail to count self-crossings.",
+      "failureModeId": "dynamic-trajectory-topology",
+      "generator": "hidden-trail-intersections",
+      "seed": 5400007,
+      "difficulty": 94,
+      "variant": 7,
+      "artifact": "public/evaluations/hidden-trail-intersections-discovery-v1/hti-21ae513f4c875275.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13500,
+      "question": "How many times does the complete route CROSS ITSELF? Count only true crossings, not turns or revisited endpoints.",
+      "answerOptions": [
+        "5",
+        "4",
+        "6",
+        "3"
+      ],
+      "expectedAnswer": "6",
+      "sha256": "f82fa50e0821bb22c57bea0daa65c755ab7ba9e474f3942816694bdd4932bf1c",
+      "parameters": {
+        "intersectionCount": 6,
+        "visualVariant": 7
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Integrate the complete route and return exactly one allowed crossing count."
+    }
+  ]
+}

@@ -1,0 +1,969 @@
+{
+  "id": "grid-activation-confirmatory-v3",
+  "planSha256": "5f96ab8c9ceb36ad95012a93a3f5a01e87f84e94b030d49e155ce812ebca7a3e",
+  "generatorVersion": "unique-grid-activation-memory-v3",
+  "renderer": "grid-activation-svg-raster-v4",
+  "fps": 30,
+  "cases": [
+    {
+      "candidateId": "gax-f1cce6d6d9fb0073-native-1x",
+      "cellId": "cell-sixty-activations-eight-by-eight",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "Sixty brief activations contain repeats over an eight-by-eight grid.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory-extreme",
+      "seed": 4830000,
+      "difficulty": 98,
+      "variant": 0,
+      "artifact": "public/evaluations/grid-activation-confirmatory-v3/gax-f1cce6d6d9fb0073-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 22500,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeats count only once.",
+      "answerOptions": [
+        "24",
+        "22",
+        "23",
+        "21"
+      ],
+      "expectedAnswer": "21",
+      "sha256": "477f7174d9437cf3fdd3e36f00556a9f37ad3282edcc87cda937b15f5a378034",
+      "parameters": {
+        "uniqueCount": 21,
+        "visualVariant": 100
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions and return exactly one allowed count."
+    },
+    {
+      "candidateId": "gax-f1cce6d6d9fb0073-persistent-set-control",
+      "cellId": "cell-sixty-activations-eight-by-eight",
+      "split": "confirmatory",
+      "condition": "persistent-set-control",
+      "interventionDescription": "Diagnostic control persists every activated cell and displays the exact running set size.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory-extreme",
+      "seed": 4830000,
+      "difficulty": 8,
+      "variant": 0,
+      "artifact": "public/evaluations/grid-activation-confirmatory-v3/gax-f1cce6d6d9fb0073-persistent-set-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 22500,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeats count only once.",
+      "answerOptions": [
+        "24",
+        "22",
+        "23",
+        "21"
+      ],
+      "expectedAnswer": "21",
+      "sha256": "1b062a897585a93f4ea74c67e39a53029ca5a7a080d47238cc74f69de2aaf1b5",
+      "parameters": {
+        "uniqueCount": 21,
+        "visualVariant": 100
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions and return exactly one allowed count."
+    },
+    {
+      "candidateId": "gax-e94fc036fab0739a-native-1x",
+      "cellId": "cell-sixty-activations-eight-by-eight",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "Sixty brief activations contain repeats over an eight-by-eight grid.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory-extreme",
+      "seed": 4830001,
+      "difficulty": 98,
+      "variant": 1,
+      "artifact": "public/evaluations/grid-activation-confirmatory-v3/gax-e94fc036fab0739a-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 22500,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeats count only once.",
+      "answerOptions": [
+        "22",
+        "23",
+        "24",
+        "21"
+      ],
+      "expectedAnswer": "22",
+      "sha256": "693521b2f10f10a80e82821f9256e951a46e3e39f7aca99823a02f69f20179f2",
+      "parameters": {
+        "uniqueCount": 22,
+        "visualVariant": 101
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions and return exactly one allowed count."
+    },
+    {
+      "candidateId": "gax-e94fc036fab0739a-persistent-set-control",
+      "cellId": "cell-sixty-activations-eight-by-eight",
+      "split": "confirmatory",
+      "condition": "persistent-set-control",
+      "interventionDescription": "Diagnostic control persists every activated cell and displays the exact running set size.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory-extreme",
+      "seed": 4830001,
+      "difficulty": 8,
+      "variant": 1,
+      "artifact": "public/evaluations/grid-activation-confirmatory-v3/gax-e94fc036fab0739a-persistent-set-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 22500,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeats count only once.",
+      "answerOptions": [
+        "22",
+        "23",
+        "24",
+        "21"
+      ],
+      "expectedAnswer": "22",
+      "sha256": "33260f540ee8cb642256d0e2c58d0e610eac61d323715587beb26dba1b72b289",
+      "parameters": {
+        "uniqueCount": 22,
+        "visualVariant": 101
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions and return exactly one allowed count."
+    },
+    {
+      "candidateId": "gax-1d3dbce1c06d0da0-native-1x",
+      "cellId": "cell-sixty-activations-eight-by-eight",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "Sixty brief activations contain repeats over an eight-by-eight grid.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory-extreme",
+      "seed": 4830002,
+      "difficulty": 98,
+      "variant": 2,
+      "artifact": "public/evaluations/grid-activation-confirmatory-v3/gax-1d3dbce1c06d0da0-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 22500,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeats count only once.",
+      "answerOptions": [
+        "23",
+        "22",
+        "24",
+        "21"
+      ],
+      "expectedAnswer": "23",
+      "sha256": "4d4f88edddc3de4918050af283efe1709054d96ac565523ee9afe2478ac66db5",
+      "parameters": {
+        "uniqueCount": 23,
+        "visualVariant": 102
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions and return exactly one allowed count."
+    },
+    {
+      "candidateId": "gax-1d3dbce1c06d0da0-persistent-set-control",
+      "cellId": "cell-sixty-activations-eight-by-eight",
+      "split": "confirmatory",
+      "condition": "persistent-set-control",
+      "interventionDescription": "Diagnostic control persists every activated cell and displays the exact running set size.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory-extreme",
+      "seed": 4830002,
+      "difficulty": 8,
+      "variant": 2,
+      "artifact": "public/evaluations/grid-activation-confirmatory-v3/gax-1d3dbce1c06d0da0-persistent-set-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 22500,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeats count only once.",
+      "answerOptions": [
+        "23",
+        "22",
+        "24",
+        "21"
+      ],
+      "expectedAnswer": "23",
+      "sha256": "b4f0ea46fc5c3581e86c35a72b6b93ca0d3d7f0ba91aa3afce0e2344b43dd0ab",
+      "parameters": {
+        "uniqueCount": 23,
+        "visualVariant": 102
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions and return exactly one allowed count."
+    },
+    {
+      "candidateId": "gax-3d473b247788ca0c-native-1x",
+      "cellId": "cell-sixty-activations-eight-by-eight",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "Sixty brief activations contain repeats over an eight-by-eight grid.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory-extreme",
+      "seed": 4830003,
+      "difficulty": 98,
+      "variant": 3,
+      "artifact": "public/evaluations/grid-activation-confirmatory-v3/gax-3d473b247788ca0c-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 22500,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeats count only once.",
+      "answerOptions": [
+        "23",
+        "22",
+        "24",
+        "21"
+      ],
+      "expectedAnswer": "24",
+      "sha256": "085da50424d89a0b32ef7cb64f4838018cb967fe718d4add84e67eebdbe6b9c7",
+      "parameters": {
+        "uniqueCount": 24,
+        "visualVariant": 103
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions and return exactly one allowed count."
+    },
+    {
+      "candidateId": "gax-3d473b247788ca0c-persistent-set-control",
+      "cellId": "cell-sixty-activations-eight-by-eight",
+      "split": "confirmatory",
+      "condition": "persistent-set-control",
+      "interventionDescription": "Diagnostic control persists every activated cell and displays the exact running set size.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory-extreme",
+      "seed": 4830003,
+      "difficulty": 8,
+      "variant": 3,
+      "artifact": "public/evaluations/grid-activation-confirmatory-v3/gax-3d473b247788ca0c-persistent-set-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 22500,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeats count only once.",
+      "answerOptions": [
+        "23",
+        "22",
+        "24",
+        "21"
+      ],
+      "expectedAnswer": "24",
+      "sha256": "d5589ae8360f7ff8ba3a2eda9a8eb19bcaa68f3bf24c106692dca1b24bc8041d",
+      "parameters": {
+        "uniqueCount": 24,
+        "visualVariant": 103
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions and return exactly one allowed count."
+    },
+    {
+      "candidateId": "gax-6572c3edd398fed3-native-1x",
+      "cellId": "cell-sixty-activations-eight-by-eight",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "Sixty brief activations contain repeats over an eight-by-eight grid.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory-extreme",
+      "seed": 4830004,
+      "difficulty": 98,
+      "variant": 4,
+      "artifact": "public/evaluations/grid-activation-confirmatory-v3/gax-6572c3edd398fed3-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 22500,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeats count only once.",
+      "answerOptions": [
+        "23",
+        "24",
+        "22",
+        "21"
+      ],
+      "expectedAnswer": "21",
+      "sha256": "d231d827fbe20fcb88c04f278f56fdadd1d3cbd6249662866202eb85bc4cf6e0",
+      "parameters": {
+        "uniqueCount": 21,
+        "visualVariant": 104
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions and return exactly one allowed count."
+    },
+    {
+      "candidateId": "gax-6572c3edd398fed3-persistent-set-control",
+      "cellId": "cell-sixty-activations-eight-by-eight",
+      "split": "confirmatory",
+      "condition": "persistent-set-control",
+      "interventionDescription": "Diagnostic control persists every activated cell and displays the exact running set size.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory-extreme",
+      "seed": 4830004,
+      "difficulty": 8,
+      "variant": 4,
+      "artifact": "public/evaluations/grid-activation-confirmatory-v3/gax-6572c3edd398fed3-persistent-set-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 22500,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeats count only once.",
+      "answerOptions": [
+        "23",
+        "24",
+        "22",
+        "21"
+      ],
+      "expectedAnswer": "21",
+      "sha256": "275778e1eb7e843631be1cdcd2417a2e8a2a7efa019f99c34d600feb402a18be",
+      "parameters": {
+        "uniqueCount": 21,
+        "visualVariant": 104
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions and return exactly one allowed count."
+    },
+    {
+      "candidateId": "gax-91ef97e02196a629-native-1x",
+      "cellId": "cell-sixty-activations-eight-by-eight",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "Sixty brief activations contain repeats over an eight-by-eight grid.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory-extreme",
+      "seed": 4830005,
+      "difficulty": 98,
+      "variant": 5,
+      "artifact": "public/evaluations/grid-activation-confirmatory-v3/gax-91ef97e02196a629-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 22500,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeats count only once.",
+      "answerOptions": [
+        "24",
+        "23",
+        "22",
+        "21"
+      ],
+      "expectedAnswer": "22",
+      "sha256": "decea4bd37af37510695be53eef2610a8281c16eb8d0692cdb1c45c9b06ffe1f",
+      "parameters": {
+        "uniqueCount": 22,
+        "visualVariant": 105
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions and return exactly one allowed count."
+    },
+    {
+      "candidateId": "gax-91ef97e02196a629-persistent-set-control",
+      "cellId": "cell-sixty-activations-eight-by-eight",
+      "split": "confirmatory",
+      "condition": "persistent-set-control",
+      "interventionDescription": "Diagnostic control persists every activated cell and displays the exact running set size.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory-extreme",
+      "seed": 4830005,
+      "difficulty": 8,
+      "variant": 5,
+      "artifact": "public/evaluations/grid-activation-confirmatory-v3/gax-91ef97e02196a629-persistent-set-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 22500,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeats count only once.",
+      "answerOptions": [
+        "24",
+        "23",
+        "22",
+        "21"
+      ],
+      "expectedAnswer": "22",
+      "sha256": "d43c0f15ee7eb7626d214cf13bbcff891d0d78cb5b54e0122c86504d2c8fc195",
+      "parameters": {
+        "uniqueCount": 22,
+        "visualVariant": 105
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions and return exactly one allowed count."
+    },
+    {
+      "candidateId": "gax-fe1c34ffa2910ea7-native-1x",
+      "cellId": "cell-sixty-activations-eight-by-eight",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "Sixty brief activations contain repeats over an eight-by-eight grid.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory-extreme",
+      "seed": 4830006,
+      "difficulty": 98,
+      "variant": 6,
+      "artifact": "public/evaluations/grid-activation-confirmatory-v3/gax-fe1c34ffa2910ea7-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 22500,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeats count only once.",
+      "answerOptions": [
+        "24",
+        "23",
+        "22",
+        "21"
+      ],
+      "expectedAnswer": "23",
+      "sha256": "8051dee64f11045d2af36ae1cdcc41d1d9ac697af400d03e4186a109dd3fdf59",
+      "parameters": {
+        "uniqueCount": 23,
+        "visualVariant": 106
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions and return exactly one allowed count."
+    },
+    {
+      "candidateId": "gax-fe1c34ffa2910ea7-persistent-set-control",
+      "cellId": "cell-sixty-activations-eight-by-eight",
+      "split": "confirmatory",
+      "condition": "persistent-set-control",
+      "interventionDescription": "Diagnostic control persists every activated cell and displays the exact running set size.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory-extreme",
+      "seed": 4830006,
+      "difficulty": 8,
+      "variant": 6,
+      "artifact": "public/evaluations/grid-activation-confirmatory-v3/gax-fe1c34ffa2910ea7-persistent-set-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 22500,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeats count only once.",
+      "answerOptions": [
+        "24",
+        "23",
+        "22",
+        "21"
+      ],
+      "expectedAnswer": "23",
+      "sha256": "e45e74c7a4b42ca739491e3d4b6ce7c22249b66c72267d10bf4a4b215cda0a8b",
+      "parameters": {
+        "uniqueCount": 23,
+        "visualVariant": 106
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions and return exactly one allowed count."
+    },
+    {
+      "candidateId": "gax-2b9619b96fcee2c6-native-1x",
+      "cellId": "cell-sixty-activations-eight-by-eight",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "Sixty brief activations contain repeats over an eight-by-eight grid.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory-extreme",
+      "seed": 4830007,
+      "difficulty": 98,
+      "variant": 7,
+      "artifact": "public/evaluations/grid-activation-confirmatory-v3/gax-2b9619b96fcee2c6-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 22500,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeats count only once.",
+      "answerOptions": [
+        "23",
+        "24",
+        "22",
+        "21"
+      ],
+      "expectedAnswer": "24",
+      "sha256": "53b1b232c546f563144dc24f3701a7f43c3c5373723b9bca0f4587309337a4a5",
+      "parameters": {
+        "uniqueCount": 24,
+        "visualVariant": 107
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions and return exactly one allowed count."
+    },
+    {
+      "candidateId": "gax-2b9619b96fcee2c6-persistent-set-control",
+      "cellId": "cell-sixty-activations-eight-by-eight",
+      "split": "confirmatory",
+      "condition": "persistent-set-control",
+      "interventionDescription": "Diagnostic control persists every activated cell and displays the exact running set size.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory-extreme",
+      "seed": 4830007,
+      "difficulty": 8,
+      "variant": 7,
+      "artifact": "public/evaluations/grid-activation-confirmatory-v3/gax-2b9619b96fcee2c6-persistent-set-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 22500,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeats count only once.",
+      "answerOptions": [
+        "23",
+        "24",
+        "22",
+        "21"
+      ],
+      "expectedAnswer": "24",
+      "sha256": "f6b7375466b7cccfd40e7261259bf9cf26522644b3cd404c485db882ad5d8b76",
+      "parameters": {
+        "uniqueCount": 24,
+        "visualVariant": 107
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions and return exactly one allowed count."
+    },
+    {
+      "candidateId": "gax-31bc4b20b2c69603-native-1x",
+      "cellId": "cell-sixty-activations-eight-by-eight",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "Sixty brief activations contain repeats over an eight-by-eight grid.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory-extreme",
+      "seed": 4830008,
+      "difficulty": 98,
+      "variant": 8,
+      "artifact": "public/evaluations/grid-activation-confirmatory-v3/gax-31bc4b20b2c69603-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 22500,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeats count only once.",
+      "answerOptions": [
+        "22",
+        "24",
+        "23",
+        "21"
+      ],
+      "expectedAnswer": "21",
+      "sha256": "8d3a7971efae74d95ce3e469151f9235124bd2427279ab21bb6a8f966d9022f9",
+      "parameters": {
+        "uniqueCount": 21,
+        "visualVariant": 108
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions and return exactly one allowed count."
+    },
+    {
+      "candidateId": "gax-31bc4b20b2c69603-persistent-set-control",
+      "cellId": "cell-sixty-activations-eight-by-eight",
+      "split": "confirmatory",
+      "condition": "persistent-set-control",
+      "interventionDescription": "Diagnostic control persists every activated cell and displays the exact running set size.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory-extreme",
+      "seed": 4830008,
+      "difficulty": 8,
+      "variant": 8,
+      "artifact": "public/evaluations/grid-activation-confirmatory-v3/gax-31bc4b20b2c69603-persistent-set-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 22500,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeats count only once.",
+      "answerOptions": [
+        "22",
+        "24",
+        "23",
+        "21"
+      ],
+      "expectedAnswer": "21",
+      "sha256": "edf6064c25999e6909d102939c4ec332e2a6007fcefcdda41a4031020919aa15",
+      "parameters": {
+        "uniqueCount": 21,
+        "visualVariant": 108
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions and return exactly one allowed count."
+    },
+    {
+      "candidateId": "gax-051c17013d449e18-native-1x",
+      "cellId": "cell-sixty-activations-eight-by-eight",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "Sixty brief activations contain repeats over an eight-by-eight grid.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory-extreme",
+      "seed": 4830009,
+      "difficulty": 98,
+      "variant": 9,
+      "artifact": "public/evaluations/grid-activation-confirmatory-v3/gax-051c17013d449e18-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 22500,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeats count only once.",
+      "answerOptions": [
+        "24",
+        "22",
+        "23",
+        "21"
+      ],
+      "expectedAnswer": "22",
+      "sha256": "2345175750bab73991dc5061d935c8727e1efe9115cf2cf8dd0acc9cbf073ab7",
+      "parameters": {
+        "uniqueCount": 22,
+        "visualVariant": 109
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions and return exactly one allowed count."
+    },
+    {
+      "candidateId": "gax-051c17013d449e18-persistent-set-control",
+      "cellId": "cell-sixty-activations-eight-by-eight",
+      "split": "confirmatory",
+      "condition": "persistent-set-control",
+      "interventionDescription": "Diagnostic control persists every activated cell and displays the exact running set size.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory-extreme",
+      "seed": 4830009,
+      "difficulty": 8,
+      "variant": 9,
+      "artifact": "public/evaluations/grid-activation-confirmatory-v3/gax-051c17013d449e18-persistent-set-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 22500,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeats count only once.",
+      "answerOptions": [
+        "24",
+        "22",
+        "23",
+        "21"
+      ],
+      "expectedAnswer": "22",
+      "sha256": "e146a4bb24679f0549d7c01db8e64aedafa4035718002a7e30ade70cd6d4f8a5",
+      "parameters": {
+        "uniqueCount": 22,
+        "visualVariant": 109
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions and return exactly one allowed count."
+    },
+    {
+      "candidateId": "gax-db37021050adad78-native-1x",
+      "cellId": "cell-sixty-activations-eight-by-eight",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "Sixty brief activations contain repeats over an eight-by-eight grid.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory-extreme",
+      "seed": 4830010,
+      "difficulty": 98,
+      "variant": 10,
+      "artifact": "public/evaluations/grid-activation-confirmatory-v3/gax-db37021050adad78-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 22500,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeats count only once.",
+      "answerOptions": [
+        "22",
+        "24",
+        "23",
+        "21"
+      ],
+      "expectedAnswer": "23",
+      "sha256": "a7da70eca99ddcf65510661bddd335ed758d8b4be022f10261456142ffe66e06",
+      "parameters": {
+        "uniqueCount": 23,
+        "visualVariant": 110
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions and return exactly one allowed count."
+    },
+    {
+      "candidateId": "gax-db37021050adad78-persistent-set-control",
+      "cellId": "cell-sixty-activations-eight-by-eight",
+      "split": "confirmatory",
+      "condition": "persistent-set-control",
+      "interventionDescription": "Diagnostic control persists every activated cell and displays the exact running set size.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory-extreme",
+      "seed": 4830010,
+      "difficulty": 8,
+      "variant": 10,
+      "artifact": "public/evaluations/grid-activation-confirmatory-v3/gax-db37021050adad78-persistent-set-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 22500,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeats count only once.",
+      "answerOptions": [
+        "22",
+        "24",
+        "23",
+        "21"
+      ],
+      "expectedAnswer": "23",
+      "sha256": "34b1be64ecf8d95f9aee8988ee4b0c5c40c18c346bf92089b08aeb6bf18870b9",
+      "parameters": {
+        "uniqueCount": 23,
+        "visualVariant": 110
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions and return exactly one allowed count."
+    },
+    {
+      "candidateId": "gax-c212f144fb4773bb-native-1x",
+      "cellId": "cell-sixty-activations-eight-by-eight",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "Sixty brief activations contain repeats over an eight-by-eight grid.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory-extreme",
+      "seed": 4830011,
+      "difficulty": 98,
+      "variant": 11,
+      "artifact": "public/evaluations/grid-activation-confirmatory-v3/gax-c212f144fb4773bb-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 22500,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeats count only once.",
+      "answerOptions": [
+        "22",
+        "24",
+        "23",
+        "21"
+      ],
+      "expectedAnswer": "24",
+      "sha256": "e3ae3674cf29a8fc99aa253471a865fc081aee48d5575e8ff68ca6ea876cc880",
+      "parameters": {
+        "uniqueCount": 24,
+        "visualVariant": 111
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions and return exactly one allowed count."
+    },
+    {
+      "candidateId": "gax-c212f144fb4773bb-persistent-set-control",
+      "cellId": "cell-sixty-activations-eight-by-eight",
+      "split": "confirmatory",
+      "condition": "persistent-set-control",
+      "interventionDescription": "Diagnostic control persists every activated cell and displays the exact running set size.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory-extreme",
+      "seed": 4830011,
+      "difficulty": 8,
+      "variant": 11,
+      "artifact": "public/evaluations/grid-activation-confirmatory-v3/gax-c212f144fb4773bb-persistent-set-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 22500,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeats count only once.",
+      "answerOptions": [
+        "22",
+        "24",
+        "23",
+        "21"
+      ],
+      "expectedAnswer": "24",
+      "sha256": "0f51afe41571753671c693bc8f7099cc39c1cb7d0342f7aff7a322d4f14d44c9",
+      "parameters": {
+        "uniqueCount": 24,
+        "visualVariant": 111
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions and return exactly one allowed count."
+    },
+    {
+      "candidateId": "gax-ec038a0496861bd5-native-1x",
+      "cellId": "cell-sixty-activations-eight-by-eight",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "Sixty brief activations contain repeats over an eight-by-eight grid.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory-extreme",
+      "seed": 4830012,
+      "difficulty": 98,
+      "variant": 12,
+      "artifact": "public/evaluations/grid-activation-confirmatory-v3/gax-ec038a0496861bd5-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 22500,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeats count only once.",
+      "answerOptions": [
+        "23",
+        "22",
+        "24",
+        "21"
+      ],
+      "expectedAnswer": "21",
+      "sha256": "e35a586e537e1c3a295258ec0f17eb64a5a84327bee81966f63ef62952e3e936",
+      "parameters": {
+        "uniqueCount": 21,
+        "visualVariant": 112
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions and return exactly one allowed count."
+    },
+    {
+      "candidateId": "gax-ec038a0496861bd5-persistent-set-control",
+      "cellId": "cell-sixty-activations-eight-by-eight",
+      "split": "confirmatory",
+      "condition": "persistent-set-control",
+      "interventionDescription": "Diagnostic control persists every activated cell and displays the exact running set size.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory-extreme",
+      "seed": 4830012,
+      "difficulty": 8,
+      "variant": 12,
+      "artifact": "public/evaluations/grid-activation-confirmatory-v3/gax-ec038a0496861bd5-persistent-set-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 22500,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeats count only once.",
+      "answerOptions": [
+        "23",
+        "22",
+        "24",
+        "21"
+      ],
+      "expectedAnswer": "21",
+      "sha256": "763bc77d6d616a605ad79e57033ba366654816744be4bcffb6f4b0d6d3d428c3",
+      "parameters": {
+        "uniqueCount": 21,
+        "visualVariant": 112
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions and return exactly one allowed count."
+    },
+    {
+      "candidateId": "gax-4989159d9c3fc6ac-native-1x",
+      "cellId": "cell-sixty-activations-eight-by-eight",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "Sixty brief activations contain repeats over an eight-by-eight grid.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory-extreme",
+      "seed": 4830013,
+      "difficulty": 98,
+      "variant": 13,
+      "artifact": "public/evaluations/grid-activation-confirmatory-v3/gax-4989159d9c3fc6ac-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 22500,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeats count only once.",
+      "answerOptions": [
+        "22",
+        "23",
+        "24",
+        "21"
+      ],
+      "expectedAnswer": "22",
+      "sha256": "3885542b34495e53641350f446dc03fcc7ea83cf616b369f1f0557f2fc89ba67",
+      "parameters": {
+        "uniqueCount": 22,
+        "visualVariant": 113
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions and return exactly one allowed count."
+    },
+    {
+      "candidateId": "gax-4989159d9c3fc6ac-persistent-set-control",
+      "cellId": "cell-sixty-activations-eight-by-eight",
+      "split": "confirmatory",
+      "condition": "persistent-set-control",
+      "interventionDescription": "Diagnostic control persists every activated cell and displays the exact running set size.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory-extreme",
+      "seed": 4830013,
+      "difficulty": 8,
+      "variant": 13,
+      "artifact": "public/evaluations/grid-activation-confirmatory-v3/gax-4989159d9c3fc6ac-persistent-set-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 22500,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeats count only once.",
+      "answerOptions": [
+        "22",
+        "23",
+        "24",
+        "21"
+      ],
+      "expectedAnswer": "22",
+      "sha256": "1f4a676d465854eb128e97503b0a2faabc01ac79eccc22777c8b359394b397ad",
+      "parameters": {
+        "uniqueCount": 22,
+        "visualVariant": 113
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions and return exactly one allowed count."
+    },
+    {
+      "candidateId": "gax-c51089fca604e1bf-native-1x",
+      "cellId": "cell-sixty-activations-eight-by-eight",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "Sixty brief activations contain repeats over an eight-by-eight grid.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory-extreme",
+      "seed": 4830014,
+      "difficulty": 98,
+      "variant": 14,
+      "artifact": "public/evaluations/grid-activation-confirmatory-v3/gax-c51089fca604e1bf-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 22500,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeats count only once.",
+      "answerOptions": [
+        "22",
+        "23",
+        "24",
+        "21"
+      ],
+      "expectedAnswer": "23",
+      "sha256": "93484176e3be169f605c92352b6e514cff1db67eefc6370f922025ce16eb4996",
+      "parameters": {
+        "uniqueCount": 23,
+        "visualVariant": 114
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions and return exactly one allowed count."
+    },
+    {
+      "candidateId": "gax-c51089fca604e1bf-persistent-set-control",
+      "cellId": "cell-sixty-activations-eight-by-eight",
+      "split": "confirmatory",
+      "condition": "persistent-set-control",
+      "interventionDescription": "Diagnostic control persists every activated cell and displays the exact running set size.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory-extreme",
+      "seed": 4830014,
+      "difficulty": 8,
+      "variant": 14,
+      "artifact": "public/evaluations/grid-activation-confirmatory-v3/gax-c51089fca604e1bf-persistent-set-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 22500,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeats count only once.",
+      "answerOptions": [
+        "22",
+        "23",
+        "24",
+        "21"
+      ],
+      "expectedAnswer": "23",
+      "sha256": "41d49db0f5b45d65b210e53b0226b277bf5b04e114b26773659d57f2f3ed04d0",
+      "parameters": {
+        "uniqueCount": 23,
+        "visualVariant": 114
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions and return exactly one allowed count."
+    },
+    {
+      "candidateId": "gax-eab2b6dc6601663f-native-1x",
+      "cellId": "cell-sixty-activations-eight-by-eight",
+      "split": "confirmatory",
+      "condition": "native-1x",
+      "interventionDescription": "Sixty brief activations contain repeats over an eight-by-eight grid.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory-extreme",
+      "seed": 4830015,
+      "difficulty": 98,
+      "variant": 15,
+      "artifact": "public/evaluations/grid-activation-confirmatory-v3/gax-eab2b6dc6601663f-native-1x.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 22500,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeats count only once.",
+      "answerOptions": [
+        "24",
+        "23",
+        "22",
+        "21"
+      ],
+      "expectedAnswer": "24",
+      "sha256": "338910acdcd7d8ef360c675583e9121d78a6789eea12018d88bde79c86217999",
+      "parameters": {
+        "uniqueCount": 24,
+        "visualVariant": 115
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions and return exactly one allowed count."
+    },
+    {
+      "candidateId": "gax-eab2b6dc6601663f-persistent-set-control",
+      "cellId": "cell-sixty-activations-eight-by-eight",
+      "split": "confirmatory",
+      "condition": "persistent-set-control",
+      "interventionDescription": "Diagnostic control persists every activated cell and displays the exact running set size.",
+      "failureModeId": "temporal-set-cardinality",
+      "generator": "grid-activation-memory-extreme",
+      "seed": 4830015,
+      "difficulty": 8,
+      "variant": 15,
+      "artifact": "public/evaluations/grid-activation-confirmatory-v3/gax-eab2b6dc6601663f-persistent-set-control.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 22500,
+      "question": "How many DIFFERENT grid cells lit up at least once? Repeats count only once.",
+      "answerOptions": [
+        "24",
+        "23",
+        "22",
+        "21"
+      ],
+      "expectedAnswer": "24",
+      "sha256": "a6fdcd2184e9244a8a9b94caa3ae4f75937cdd8935c47116919a023da33f4ca8",
+      "parameters": {
+        "uniqueCount": 24,
+        "visualVariant": 115
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the set of grid positions and return exactly one allowed count."
+    }
+  ]
+}
