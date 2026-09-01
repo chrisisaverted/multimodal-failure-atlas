@@ -94,6 +94,30 @@ describe("evaluation batch runner", () => {
     ).rejects.toThrow(/ATLAS_EVALUATION_ENABLED/);
   });
 
+  it("never scores a length-exhausted generation as a substantive answer", async () => {
+    const adapter: EvaluationAdapter = {
+      provider: "gemini",
+      supports: ["native-video"],
+      availability: () => ({ available: true }),
+      estimate: async () => 0,
+      evaluate: async () => ({
+        rawResponse: "yes",
+        modelVersion: "x",
+        latencyMs: 1,
+        finishReason: "length",
+      }),
+    };
+    const [record] = await runEvaluationBatch(
+      [{ ...job, request: { ...request, provider: "gemini" as const } }],
+      {
+        adapter,
+        store: new MemoryEvaluationStore(),
+        env: { ATLAS_EVALUATION_ENABLED: "true" },
+      },
+    );
+    expect(record).toMatchObject({ parsedAnswer: "yes", correct: true, status: "pending-review" });
+  });
+
   it("rejects a declared batch ceiling above the per-run guard", async () => {
     const adapter: EvaluationAdapter = {
       provider: "fixture",

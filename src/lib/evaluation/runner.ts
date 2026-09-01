@@ -83,6 +83,8 @@ function runId(job: EvaluationJob, digest: string) {
 }
 
 const wait = (milliseconds: number) => new Promise((resolve) => setTimeout(resolve, milliseconds));
+const exhaustedGeneration = (finishReason?: string) =>
+  finishReason !== undefined && /^(?:length|max[_ -]?tokens?)$/iu.test(finishReason.trim());
 
 export async function runEvaluationBatch(jobs: EvaluationJob[], options: BatchOptions) {
   if (jobs.length === 0) return [];
@@ -200,7 +202,7 @@ export async function runEvaluationBatch(jobs: EvaluationJob[], options: BatchOp
       status:
         item.request.provider === "fixture"
           ? "fixture"
-          : response.emptyResponse || !score.needsReview
+          : response.emptyResponse || (!score.needsReview && !exhaustedGeneration(response.finishReason))
             ? "verified"
             : "pending-review",
     });
