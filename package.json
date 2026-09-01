@@ -98,6 +98,7 @@
     "plan:euler-graph": "tsx scripts/plan-euler-graph.ts",
     "generate:euler-graph": "tsx scripts/materialize-euler-graph.ts",
     "plan:ordinal-successor": "tsx scripts/plan-ordinal-successor.ts",
+    "plan:ordinal-successor:hard": "tsx scripts/plan-ordinal-successor-hard.ts",
     "generate:ordinal-successor": "tsx scripts/materialize-ordinal-successor.ts",
     "plan:collision-timing": "tsx scripts/plan-collision-timing.ts",
     "generate:collision-timing": "tsx scripts/materialize-collision-timing.ts",

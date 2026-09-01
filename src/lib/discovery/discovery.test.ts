@@ -93,7 +93,7 @@ import { coflashPairCounts, createCoflashGrid, createCoflashHardGrid } from "./c
 import { createXorGrid, xorMatrices } from "./xor-composition";
 import { applyInfection, createInfectionGrid } from "./infection-spread";
 import { createEulerGrid, graphDegrees } from "./euler-graph";
-import { createOrdinalGrid, ordinalSuccessor } from "./ordinal-successor";
+import { createOrdinalGrid, createOrdinalHardGrid, ordinalNthSuccessor, ordinalSuccessor } from "./ordinal-successor";
 import { createCollisionGrid } from "./collision-timing";
 import { containmentCounts, createIntervalGrid } from "./interval-containment";
 import { createTrajectoryGrid } from "./occluded-trajectory";
@@ -103,6 +103,13 @@ import { createParityGrid, parityMatrices, parityViolations } from "./parity-mat
 import { createZoneEntryGrid } from "./zone-entry-count";
 
 describe("adaptive multimodal discovery", () => {
+  it("binds fifth-target successors in the denser ordinal stream", () => {
+    for (const candidate of createOrdinalHardGrid()) {
+      expect(candidate.parameters.sequence).toHaveLength(32);
+      expect(ordinalNthSuccessor(candidate.parameters.sequence, 5)).toBe(candidate.expectedAnswer);
+    }
+  });
+
   it("raises coflash density while preserving a unique seven-count target", () => {
     for (const candidate of createCoflashHardGrid()) {
       const counts = coflashPairCounts(candidate.parameters.beats);

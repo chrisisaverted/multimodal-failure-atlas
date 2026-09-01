@@ -1,10 +1,183 @@
-import { z } from "zod"; import { sha256 } from "../evaluation/hash";
-export const ordinalSuccessorVersion = "ordinal-event-successor-v1"; export const ordinalAnswers = ["CIRCLE", "SQUARE", "DIAMOND", "STAR"] as const; export const streamSymbols = ["TRIANGLE", ...ordinalAnswers] as const;
-export const ordinalCandidateSchema = z.object({ id: z.string(), cellId: z.string(), split: z.enum(["discovery", "confirmatory"]), seed: z.number().int().nonnegative(), failureModeId: z.literal("ordinal-temporal-successor-binding"), question: z.string(), answerOptions: z.array(z.enum(ordinalAnswers)).length(4), expectedAnswer: z.enum(ordinalAnswers), humanSolvability: z.literal("unverified"), parameters: z.object({ targetSuccessor: z.number().int().min(0).max(3), sequence: z.array(z.enum(streamSymbols)).length(20), thirdTargetIndex: z.number().int().min(2).max(18), videoDurationMs: z.literal(14600), fps: z.literal(30), visualVariant: z.number().int().nonnegative() }) }); export type OrdinalCandidate = z.infer<typeof ordinalCandidateSchema>;
-function rng(seed: number) { let state = seed >>> 0; return () => ((state = (Math.imul(state, 1664525) + 1013904223) >>> 0) / 0x1_0000_0000); } function shuffled<T>(values: readonly T[], random: () => number) { const out = [...values]; for (let i = out.length - 1; i > 0; i--) { const j = Math.floor(random() * (i + 1)); [out[i], out[j]] = [out[j]!, out[i]!]; } return out; }
-function makeSequence(seed: number, successor: typeof ordinalAnswers[number]) { const random = rng(seed), sequence = Array.from({ length: 20 }, () => ordinalAnswers[Math.floor(random() * ordinalAnswers.length)]!) as (typeof streamSymbols[number])[], positions = shuffled(Array.from({ length: 15 }, (_, i) => i + 1), random).slice(0, 4).sort((a, b) => a - b); for (const position of positions) sequence[position] = "TRIANGLE"; const third = positions[2]!; sequence[third + 1] = successor; return { sequence, third }; }
-export function ordinalSuccessor(sequence: readonly (typeof streamSymbols[number])[]) { let seen = 0; for (let i = 0; i < sequence.length - 1; i++) if (sequence[i] === "TRIANGLE" && ++seen === 3) return sequence[i + 1]; throw new Error("Third target missing"); }
-export function createOrdinalCandidate(input: { split: "discovery" | "confirmatory"; seed: number; targetSuccessor: number; visualVariant?: number }) { const expectedAnswer = ordinalAnswers[input.targetSuccessor], { sequence, third } = makeSequence(input.seed + 101, expectedAnswer), visualVariant = input.visualVariant ?? input.seed % 227; if (ordinalSuccessor(sequence) !== expectedAnswer) throw new Error("Ordinal binding failed"); return ordinalCandidateSchema.parse({ id: `os-${sha256(JSON.stringify({ ...input, sequence, visualVariant })).slice(0, 16)}`, cellId: "cell-third-triangle-successor-twenty-events", split: input.split, seed: input.seed, failureModeId: "ordinal-temporal-successor-binding", question: "Which symbol appears immediately AFTER the THIRD occurrence of TRIANGLE in the complete sequence?", answerOptions: shuffled(ordinalAnswers, rng(input.seed + 37)), expectedAnswer, humanSolvability: "unverified", parameters: { targetSuccessor: input.targetSuccessor, sequence, thirdTargetIndex: third, videoDurationMs: 14600, fps: 30, visualVariant } }); }
-export function createOrdinalGrid() { const out: OrdinalCandidate[] = []; let seed = 3_600_000; for (let rep = 0; rep < 2; rep++) for (let targetSuccessor = 0; targetSuccessor < 4; targetSuccessor++) out.push(createOrdinalCandidate({ split: "discovery", seed: seed++, targetSuccessor, visualVariant: rep * 4 + targetSuccessor })); return out; }
-function shape(symbol: typeof streamSymbols[number]) { if (symbol === "CIRCLE") return `<circle cx="360" cy="350" r="100" fill="#2466cc"/>`; if (symbol === "SQUARE") return `<rect x="260" y="250" width="200" height="200" rx="10" fill="#df3c30"/>`; if (symbol === "DIAMOND") return `<path d="M360 230L480 350L360 470L240 350Z" fill="#1d9b5f"/>`; if (symbol === "STAR") return `<path d="M360 225L390 310L480 312L408 366L432 455L360 405L288 455L312 366L240 312L330 310Z" fill="#9146c7"/>`; return `<path d="M360 225L485 455H235Z" fill="#e0a600"/>`; }
-export function renderOrdinalSvg(candidate: OrdinalCandidate, timestampMs: number) { const start = 700, eventMs = 660, activeMs = 510, index = Math.floor((timestampMs - start) / eventMs), phase = ((timestampMs - start) % eventMs + eventMs) % eventMs, symbol = index >= 0 && index < 20 && phase < activeMs ? candidate.parameters.sequence[index] : null, status = index < 0 ? "GET READY" : index < 20 ? `EVENT ${index + 1} OF 20` : "SEQUENCE COMPLETE"; return `<svg xmlns="http://www.w3.org/2000/svg" width="720" height="650"><rect width="100%" height="100%" fill="#eeeae0"/><text x="360" y="48" text-anchor="middle" font-family="Arial" font-size="25" font-weight="700">FIND THE THIRD TRIANGLE</text><text x="360" y="84" text-anchor="middle" font-family="Arial" font-size="18" fill="#59605d">Remember the symbol immediately after it</text><text x="360" y="130" text-anchor="middle" font-family="Arial" font-size="22" font-weight="700">${status}</text><rect x="155" y="175" width="410" height="350" rx="28" fill="#fffef9" stroke="#202322" stroke-width="6"/>${symbol ? shape(symbol) : ""}<text x="360" y="585" text-anchor="middle" font-family="Arial" font-size="18" fill="#59605d">Target: TRIANGLE · Query: immediate successor of occurrence #3</text></svg>`; }
+import { z } from "zod";
+import { sha256 } from "../evaluation/hash";
+export const ordinalSuccessorVersion = "ordinal-event-successor-v1";
+export const ordinalSuccessorHardVersion = "ordinal-event-successor-v2";
+export const ordinalAnswers = ["CIRCLE", "SQUARE", "DIAMOND", "STAR"] as const;
+export const streamSymbols = ["TRIANGLE", ...ordinalAnswers] as const;
+export const ordinalCandidateSchema = z.object({
+  id: z.string(),
+  cellId: z.string(),
+  split: z.enum(["discovery", "confirmatory"]),
+  seed: z.number().int().nonnegative(),
+  failureModeId: z.literal("ordinal-temporal-successor-binding"),
+  question: z.string(),
+  answerOptions: z.array(z.enum(ordinalAnswers)).length(4),
+  expectedAnswer: z.enum(ordinalAnswers),
+  humanSolvability: z.literal("unverified"),
+  parameters: z.object({
+    targetSuccessor: z.number().int().min(0).max(3),
+    sequence: z.array(z.enum(streamSymbols)).min(20).max(32),
+    thirdTargetIndex: z.number().int().min(2).max(30),
+    targetOrdinal: z.number().int().min(3).max(5).optional(),
+    videoDurationMs: z.union([z.literal(14600), z.literal(15200)]),
+    fps: z.literal(30),
+    visualVariant: z.number().int().nonnegative(),
+  }),
+});
+export type OrdinalCandidate = z.infer<typeof ordinalCandidateSchema>;
+function rng(seed: number) {
+  let state = seed >>> 0;
+  return () => (state = (Math.imul(state, 1664525) + 1013904223) >>> 0) / 0x1_0000_0000;
+}
+function shuffled<T>(values: readonly T[], random: () => number) {
+  const out = [...values];
+  for (let i = out.length - 1; i > 0; i--) {
+    const j = Math.floor(random() * (i + 1));
+    [out[i], out[j]] = [out[j]!, out[i]!];
+  }
+  return out;
+}
+function makeSequence(seed: number, successor: (typeof ordinalAnswers)[number]) {
+  const random = rng(seed),
+    sequence = Array.from(
+      { length: 20 },
+      () => ordinalAnswers[Math.floor(random() * ordinalAnswers.length)]!,
+    ) as (typeof streamSymbols)[number][],
+    positions = shuffled(
+      Array.from({ length: 15 }, (_, i) => i + 1),
+      random,
+    )
+      .slice(0, 4)
+      .sort((a, b) => a - b);
+  for (const position of positions) sequence[position] = "TRIANGLE";
+  const third = positions[2]!;
+  sequence[third + 1] = successor;
+  return { sequence, third };
+}
+export function ordinalSuccessor(sequence: readonly (typeof streamSymbols)[number][]) {
+  return ordinalNthSuccessor(sequence, 3);
+}
+export function ordinalNthSuccessor(
+  sequence: readonly (typeof streamSymbols)[number][],
+  targetOrdinal: number,
+) {
+  let seen = 0;
+  for (let i = 0; i < sequence.length - 1; i++)
+    if (sequence[i] === "TRIANGLE" && ++seen === targetOrdinal) return sequence[i + 1];
+  throw new Error("Ordinal target missing");
+}
+export function createOrdinalCandidate(input: {
+  split: "discovery" | "confirmatory";
+  seed: number;
+  targetSuccessor: number;
+  visualVariant?: number;
+}) {
+  const expectedAnswer = ordinalAnswers[input.targetSuccessor],
+    { sequence, third } = makeSequence(input.seed + 101, expectedAnswer),
+    visualVariant = input.visualVariant ?? input.seed % 227;
+  if (ordinalSuccessor(sequence) !== expectedAnswer) throw new Error("Ordinal binding failed");
+  return ordinalCandidateSchema.parse({
+    id: `os-${sha256(JSON.stringify({ ...input, sequence, visualVariant })).slice(0, 16)}`,
+    cellId: "cell-third-triangle-successor-twenty-events",
+    split: input.split,
+    seed: input.seed,
+    failureModeId: "ordinal-temporal-successor-binding",
+    question:
+      "Which symbol appears immediately AFTER the THIRD occurrence of TRIANGLE in the complete sequence?",
+    answerOptions: shuffled(ordinalAnswers, rng(input.seed + 37)),
+    expectedAnswer,
+    humanSolvability: "unverified",
+    parameters: {
+      targetSuccessor: input.targetSuccessor,
+      sequence,
+      thirdTargetIndex: third,
+      videoDurationMs: 14600,
+      fps: 30,
+      visualVariant,
+    },
+  });
+}
+export function createOrdinalGrid() {
+  const out: OrdinalCandidate[] = [];
+  let seed = 3_600_000;
+  for (let rep = 0; rep < 2; rep++)
+    for (let targetSuccessor = 0; targetSuccessor < 4; targetSuccessor++)
+      out.push(
+        createOrdinalCandidate({
+          split: "discovery",
+          seed: seed++,
+          targetSuccessor,
+          visualVariant: rep * 4 + targetSuccessor,
+        }),
+      );
+  return out;
+}
+function makeHardSequence(seed: number, successor: (typeof ordinalAnswers)[number]) {
+  const random = rng(seed),
+    sequence = Array.from(
+      { length: 32 },
+      () => ordinalAnswers[Math.floor(random() * ordinalAnswers.length)]!,
+    ) as (typeof streamSymbols)[number][],
+    positions = shuffled(
+      Array.from({ length: 27 }, (_, i) => i + 1),
+      random,
+    )
+      .slice(0, 7)
+      .sort((a, b) => a - b);
+  for (const position of positions) sequence[position] = "TRIANGLE";
+  const fifth = positions[4]!;
+  sequence[fifth + 1] = successor;
+  return { sequence, fifth };
+}
+export function createOrdinalHardCandidate(input: {
+  split: "discovery" | "confirmatory";
+  seed: number;
+  targetSuccessor: number;
+  visualVariant?: number;
+}) {
+  const expectedAnswer = ordinalAnswers[input.targetSuccessor],
+    { sequence, fifth } = makeHardSequence(input.seed + 131, expectedAnswer),
+    visualVariant = input.visualVariant ?? input.seed % 271;
+  if (ordinalNthSuccessor(sequence, 5) !== expectedAnswer) throw new Error("Hard ordinal binding failed");
+  return ordinalCandidateSchema.parse({
+    id: `osh-${sha256(JSON.stringify({ ...input, sequence, visualVariant })).slice(0, 16)}`,
+    cellId: "cell-fifth-triangle-successor-thirty-two-events",
+    split: input.split,
+    seed: input.seed,
+    failureModeId: "ordinal-temporal-successor-binding",
+    question:
+      "Which symbol appears immediately AFTER the FIFTH occurrence of TRIANGLE in the complete sequence?",
+    answerOptions: shuffled(ordinalAnswers, rng(input.seed + 37)),
+    expectedAnswer,
+    humanSolvability: "unverified",
+    parameters: { targetSuccessor: input.targetSuccessor, sequence, thirdTargetIndex: fifth, targetOrdinal: 5, videoDurationMs: 15200, fps: 30, visualVariant },
+  });
+}
+export function createOrdinalHardGrid() {
+  const out: OrdinalCandidate[] = [];
+  let seed = 4_500_000;
+  for (let rep = 0; rep < 2; rep++)
+    for (let targetSuccessor = 0; targetSuccessor < 4; targetSuccessor++)
+      out.push(createOrdinalHardCandidate({ split: "discovery", seed: seed++, targetSuccessor, visualVariant: rep * 4 + targetSuccessor }));
+  return out;
+}
+function shape(symbol: (typeof streamSymbols)[number]) {
+  if (symbol === "CIRCLE") return `<circle cx="360" cy="350" r="100" fill="#2466cc"/>`;
+  if (symbol === "SQUARE") return `<rect x="260" y="250" width="200" height="200" rx="10" fill="#df3c30"/>`;
+  if (symbol === "DIAMOND") return `<path d="M360 230L480 350L360 470L240 350Z" fill="#1d9b5f"/>`;
+  if (symbol === "STAR")
+    return `<path d="M360 225L390 310L480 312L408 366L432 455L360 405L288 455L312 366L240 312L330 310Z" fill="#9146c7"/>`;
+  return `<path d="M360 225L485 455H235Z" fill="#e0a600"/>`;
+}
+export function renderOrdinalSvg(candidate: OrdinalCandidate, timestampMs: number) {
+  const hard = candidate.parameters.sequence.length === 32,
+    ordinal = candidate.parameters.targetOrdinal ?? 3,
+    start = hard ? 500 : 700,
+    eventMs = hard ? 430 : 660,
+    activeMs = hard ? 300 : 510,
+    index = Math.floor((timestampMs - start) / eventMs),
+    phase = (((timestampMs - start) % eventMs) + eventMs) % eventMs,
+    symbol = index >= 0 && index < candidate.parameters.sequence.length && phase < activeMs ? candidate.parameters.sequence[index] : null,
+    status = index < 0 ? "GET READY" : index < candidate.parameters.sequence.length ? `EVENT ${index + 1} OF ${candidate.parameters.sequence.length}` : "SEQUENCE COMPLETE";
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="720" height="650"><rect width="100%" height="100%" fill="#eeeae0"/><text x="360" y="48" text-anchor="middle" font-family="Arial" font-size="25" font-weight="700">FIND TRIANGLE OCCURRENCE #${ordinal}</text><text x="360" y="84" text-anchor="middle" font-family="Arial" font-size="18" fill="#59605d">Remember the symbol immediately after it</text><text x="360" y="130" text-anchor="middle" font-family="Arial" font-size="22" font-weight="700">${status}</text><rect x="155" y="175" width="410" height="350" rx="28" fill="#fffef9" stroke="#202322" stroke-width="6"/>${symbol ? shape(symbol) : ""}<text x="360" y="585" text-anchor="middle" font-family="Arial" font-size="18" fill="#59605d">Target: TRIANGLE · Query: immediate successor of occurrence #${ordinal}</text></svg>`;
+}
