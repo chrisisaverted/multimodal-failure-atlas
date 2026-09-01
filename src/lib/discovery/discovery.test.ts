@@ -84,8 +84,18 @@ import { createPeriodicAnomalyGrid, periodicLaneStarts } from "./periodic-anomal
 import { createCubeStackGrid, cubeHeights } from "./cube-stack";
 import { bindingSequences, createBindingGrid } from "./temporal-binding";
 import { createMirrorRayGrid, traceMirrorRay } from "./mirror-ray";
+import { applyTransfers, createCausalTransferGrid } from "./causal-transfer";
 
 describe("adaptive multimodal discovery", () => {
+  it("balances exact final nodes under causally gated hidden transfers", () => {
+    const candidates = createCausalTransferGrid();
+    expect(candidates).toHaveLength(8);
+    for (const candidate of candidates)
+      expect(applyTransfers(candidate.parameters.initialActive, candidate.parameters.events)).toBe(
+        candidate.parameters.targetFinal,
+      );
+  });
+
   it("balances exact mirror-ray exits after six or more reflections", () => {
     const candidates = createMirrorRayGrid();
     expect(candidates).toHaveLength(8);

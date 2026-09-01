@@ -1,0 +1,464 @@
+{
+  "id": "causal-transfer-discovery-v1",
+  "generatorVersion": "causal-transfer-v1",
+  "status": "discovery-only",
+  "hypothesis": "Video models fail counterfactual causal gating: only pulses incident to the current hidden state cause a transfer.",
+  "candidates": [
+    {
+      "id": "ct-bf54fd0c993bc57f",
+      "cellId": "cell-eight-hidden-activation-transfers",
+      "split": "discovery",
+      "seed": 2900000,
+      "failureModeId": "causal-state-transfer-tracking",
+      "question": "Which node holds the hidden activation at the end? A pulse transfers activation only when it connects to the currently active node; otherwise it is a distractor.",
+      "answerOptions": [
+        "D",
+        "C",
+        "B",
+        "A"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetFinal": 0,
+        "initialActive": 3,
+        "events": [
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "videoDurationMs": 10000,
+        "fps": 30,
+        "visualVariant": 0
+      }
+    },
+    {
+      "id": "ct-3234ead5b034a934",
+      "cellId": "cell-eight-hidden-activation-transfers",
+      "split": "discovery",
+      "seed": 2900001,
+      "failureModeId": "causal-state-transfer-tracking",
+      "question": "Which node holds the hidden activation at the end? A pulse transfers activation only when it connects to the currently active node; otherwise it is a distractor.",
+      "answerOptions": [
+        "D",
+        "C",
+        "B",
+        "A"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetFinal": 1,
+        "initialActive": 2,
+        "events": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "videoDurationMs": 10000,
+        "fps": 30,
+        "visualVariant": 1
+      }
+    },
+    {
+      "id": "ct-d889909a6471c0cd",
+      "cellId": "cell-eight-hidden-activation-transfers",
+      "split": "discovery",
+      "seed": 2900002,
+      "failureModeId": "causal-state-transfer-tracking",
+      "question": "Which node holds the hidden activation at the end? A pulse transfers activation only when it connects to the currently active node; otherwise it is a distractor.",
+      "answerOptions": [
+        "C",
+        "D",
+        "B",
+        "A"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetFinal": 2,
+        "initialActive": 0,
+        "events": [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "videoDurationMs": 10000,
+        "fps": 30,
+        "visualVariant": 2
+      }
+    },
+    {
+      "id": "ct-4e4f89f57a0b78f1",
+      "cellId": "cell-eight-hidden-activation-transfers",
+      "split": "discovery",
+      "seed": 2900003,
+      "failureModeId": "causal-state-transfer-tracking",
+      "question": "Which node holds the hidden activation at the end? A pulse transfers activation only when it connects to the currently active node; otherwise it is a distractor.",
+      "answerOptions": [
+        "B",
+        "D",
+        "C",
+        "A"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetFinal": 3,
+        "initialActive": 0,
+        "events": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "videoDurationMs": 10000,
+        "fps": 30,
+        "visualVariant": 3
+      }
+    },
+    {
+      "id": "ct-448cbc5223140b6d",
+      "cellId": "cell-eight-hidden-activation-transfers",
+      "split": "discovery",
+      "seed": 2900004,
+      "failureModeId": "causal-state-transfer-tracking",
+      "question": "Which node holds the hidden activation at the end? A pulse transfers activation only when it connects to the currently active node; otherwise it is a distractor.",
+      "answerOptions": [
+        "D",
+        "B",
+        "C",
+        "A"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetFinal": 0,
+        "initialActive": 0,
+        "events": [
+          [
+            3,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "videoDurationMs": 10000,
+        "fps": 30,
+        "visualVariant": 4
+      }
+    },
+    {
+      "id": "ct-f263c9e518e3a05b",
+      "cellId": "cell-eight-hidden-activation-transfers",
+      "split": "discovery",
+      "seed": 2900005,
+      "failureModeId": "causal-state-transfer-tracking",
+      "question": "Which node holds the hidden activation at the end? A pulse transfers activation only when it connects to the currently active node; otherwise it is a distractor.",
+      "answerOptions": [
+        "B",
+        "D",
+        "C",
+        "A"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetFinal": 1,
+        "initialActive": 2,
+        "events": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "videoDurationMs": 10000,
+        "fps": 30,
+        "visualVariant": 5
+      }
+    },
+    {
+      "id": "ct-206afdad53dbdb21",
+      "cellId": "cell-eight-hidden-activation-transfers",
+      "split": "discovery",
+      "seed": 2900006,
+      "failureModeId": "causal-state-transfer-tracking",
+      "question": "Which node holds the hidden activation at the end? A pulse transfers activation only when it connects to the currently active node; otherwise it is a distractor.",
+      "answerOptions": [
+        "B",
+        "C",
+        "D",
+        "A"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetFinal": 2,
+        "initialActive": 1,
+        "events": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "videoDurationMs": 10000,
+        "fps": 30,
+        "visualVariant": 6
+      }
+    },
+    {
+      "id": "ct-a3272895b46382e5",
+      "cellId": "cell-eight-hidden-activation-transfers",
+      "split": "discovery",
+      "seed": 2900007,
+      "failureModeId": "causal-state-transfer-tracking",
+      "question": "Which node holds the hidden activation at the end? A pulse transfers activation only when it connects to the currently active node; otherwise it is a distractor.",
+      "answerOptions": [
+        "C",
+        "B",
+        "D",
+        "A"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetFinal": 3,
+        "initialActive": 1,
+        "events": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "videoDurationMs": 10000,
+        "fps": 30,
+        "visualVariant": 7
+      }
+    }
+  ]
+}

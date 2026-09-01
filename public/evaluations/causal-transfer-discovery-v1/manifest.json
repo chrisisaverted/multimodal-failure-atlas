@@ -1,0 +1,257 @@
+{
+  "id": "causal-transfer-discovery-v1",
+  "planSha256": "e0a27535b8e2f320ab5d9db6ec6e5398f953a7db50c069bbfec3a613ffa743cb",
+  "generatorVersion": "causal-transfer-v1",
+  "renderer": "causal-transfer-svg-raster-v1",
+  "fps": 30,
+  "cases": [
+    {
+      "candidateId": "ct-bf54fd0c993bc57f",
+      "cellId": "cell-eight-hidden-activation-transfers",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Eight visible pairwise pulses update one hidden active-node state only when causally incident.",
+      "failureModeId": "causal-state-transfer-tracking",
+      "generator": "causal-transfer",
+      "seed": 2900000,
+      "difficulty": 86,
+      "variant": 0,
+      "artifact": "public/evaluations/causal-transfer-discovery-v1/ct-bf54fd0c993bc57f.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 10000,
+      "question": "Which node holds the hidden activation at the end? A pulse transfers activation only when it connects to the currently active node; otherwise it is a distractor.",
+      "answerOptions": [
+        "D",
+        "C",
+        "B",
+        "A"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "a46301feb807efa1b4bd0bc514f7af106c5c01c222c46ef9d05f8a9bfce3835a",
+      "parameters": {
+        "targetFinal": 0,
+        "initialActive": 3,
+        "visualVariant": 0
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain the hidden active node and apply only causally valid transfers. Return exactly one allowed node letter."
+    },
+    {
+      "candidateId": "ct-3234ead5b034a934",
+      "cellId": "cell-eight-hidden-activation-transfers",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Eight visible pairwise pulses update one hidden active-node state only when causally incident.",
+      "failureModeId": "causal-state-transfer-tracking",
+      "generator": "causal-transfer",
+      "seed": 2900001,
+      "difficulty": 86,
+      "variant": 1,
+      "artifact": "public/evaluations/causal-transfer-discovery-v1/ct-3234ead5b034a934.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 10000,
+      "question": "Which node holds the hidden activation at the end? A pulse transfers activation only when it connects to the currently active node; otherwise it is a distractor.",
+      "answerOptions": [
+        "D",
+        "C",
+        "B",
+        "A"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "4205acb3aab400eee0d4b6a5367a632b2b4741a210a6f8e13bafcbcdb6185eeb",
+      "parameters": {
+        "targetFinal": 1,
+        "initialActive": 2,
+        "visualVariant": 1
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain the hidden active node and apply only causally valid transfers. Return exactly one allowed node letter."
+    },
+    {
+      "candidateId": "ct-d889909a6471c0cd",
+      "cellId": "cell-eight-hidden-activation-transfers",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Eight visible pairwise pulses update one hidden active-node state only when causally incident.",
+      "failureModeId": "causal-state-transfer-tracking",
+      "generator": "causal-transfer",
+      "seed": 2900002,
+      "difficulty": 86,
+      "variant": 2,
+      "artifact": "public/evaluations/causal-transfer-discovery-v1/ct-d889909a6471c0cd.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 10000,
+      "question": "Which node holds the hidden activation at the end? A pulse transfers activation only when it connects to the currently active node; otherwise it is a distractor.",
+      "answerOptions": [
+        "C",
+        "D",
+        "B",
+        "A"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "a750677e853a05df87e1d26ba607414507bba7944a0aac673ae6bd310c4e93ed",
+      "parameters": {
+        "targetFinal": 2,
+        "initialActive": 0,
+        "visualVariant": 2
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain the hidden active node and apply only causally valid transfers. Return exactly one allowed node letter."
+    },
+    {
+      "candidateId": "ct-4e4f89f57a0b78f1",
+      "cellId": "cell-eight-hidden-activation-transfers",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Eight visible pairwise pulses update one hidden active-node state only when causally incident.",
+      "failureModeId": "causal-state-transfer-tracking",
+      "generator": "causal-transfer",
+      "seed": 2900003,
+      "difficulty": 86,
+      "variant": 3,
+      "artifact": "public/evaluations/causal-transfer-discovery-v1/ct-4e4f89f57a0b78f1.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 10000,
+      "question": "Which node holds the hidden activation at the end? A pulse transfers activation only when it connects to the currently active node; otherwise it is a distractor.",
+      "answerOptions": [
+        "B",
+        "D",
+        "C",
+        "A"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "3893bbec5678602703e6acaf27da427f8643d9835fbef62a4e51376048d336e3",
+      "parameters": {
+        "targetFinal": 3,
+        "initialActive": 0,
+        "visualVariant": 3
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain the hidden active node and apply only causally valid transfers. Return exactly one allowed node letter."
+    },
+    {
+      "candidateId": "ct-448cbc5223140b6d",
+      "cellId": "cell-eight-hidden-activation-transfers",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Eight visible pairwise pulses update one hidden active-node state only when causally incident.",
+      "failureModeId": "causal-state-transfer-tracking",
+      "generator": "causal-transfer",
+      "seed": 2900004,
+      "difficulty": 86,
+      "variant": 4,
+      "artifact": "public/evaluations/causal-transfer-discovery-v1/ct-448cbc5223140b6d.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 10000,
+      "question": "Which node holds the hidden activation at the end? A pulse transfers activation only when it connects to the currently active node; otherwise it is a distractor.",
+      "answerOptions": [
+        "D",
+        "B",
+        "C",
+        "A"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "8520c6cc141ff5ffff8294defe0cd03358c84223f9472e5d67e6d746449be809",
+      "parameters": {
+        "targetFinal": 0,
+        "initialActive": 0,
+        "visualVariant": 4
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain the hidden active node and apply only causally valid transfers. Return exactly one allowed node letter."
+    },
+    {
+      "candidateId": "ct-f263c9e518e3a05b",
+      "cellId": "cell-eight-hidden-activation-transfers",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Eight visible pairwise pulses update one hidden active-node state only when causally incident.",
+      "failureModeId": "causal-state-transfer-tracking",
+      "generator": "causal-transfer",
+      "seed": 2900005,
+      "difficulty": 86,
+      "variant": 5,
+      "artifact": "public/evaluations/causal-transfer-discovery-v1/ct-f263c9e518e3a05b.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 10000,
+      "question": "Which node holds the hidden activation at the end? A pulse transfers activation only when it connects to the currently active node; otherwise it is a distractor.",
+      "answerOptions": [
+        "B",
+        "D",
+        "C",
+        "A"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "b6b6d288c95b112cd13afb942a54c2f32fdaf06ebdb770067cd8c9ad639a749a",
+      "parameters": {
+        "targetFinal": 1,
+        "initialActive": 2,
+        "visualVariant": 5
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain the hidden active node and apply only causally valid transfers. Return exactly one allowed node letter."
+    },
+    {
+      "candidateId": "ct-206afdad53dbdb21",
+      "cellId": "cell-eight-hidden-activation-transfers",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Eight visible pairwise pulses update one hidden active-node state only when causally incident.",
+      "failureModeId": "causal-state-transfer-tracking",
+      "generator": "causal-transfer",
+      "seed": 2900006,
+      "difficulty": 86,
+      "variant": 6,
+      "artifact": "public/evaluations/causal-transfer-discovery-v1/ct-206afdad53dbdb21.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 10000,
+      "question": "Which node holds the hidden activation at the end? A pulse transfers activation only when it connects to the currently active node; otherwise it is a distractor.",
+      "answerOptions": [
+        "B",
+        "C",
+        "D",
+        "A"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "aa92703971c9f69a77b2906623ee0e3de28d04990895d33a16fc6955ffb48275",
+      "parameters": {
+        "targetFinal": 2,
+        "initialActive": 1,
+        "visualVariant": 6
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain the hidden active node and apply only causally valid transfers. Return exactly one allowed node letter."
+    },
+    {
+      "candidateId": "ct-a3272895b46382e5",
+      "cellId": "cell-eight-hidden-activation-transfers",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Eight visible pairwise pulses update one hidden active-node state only when causally incident.",
+      "failureModeId": "causal-state-transfer-tracking",
+      "generator": "causal-transfer",
+      "seed": 2900007,
+      "difficulty": 86,
+      "variant": 7,
+      "artifact": "public/evaluations/causal-transfer-discovery-v1/ct-a3272895b46382e5.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 10000,
+      "question": "Which node holds the hidden activation at the end? A pulse transfers activation only when it connects to the currently active node; otherwise it is a distractor.",
+      "answerOptions": [
+        "C",
+        "B",
+        "D",
+        "A"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "3ce76ece25d797ab5c311f92139ce51c33e12f7f9c0d46e9d02aa108549a4566",
+      "parameters": {
+        "targetFinal": 3,
+        "initialActive": 1,
+        "visualVariant": 7
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain the hidden active node and apply only causally valid transfers. Return exactly one allowed node letter."
+    }
+  ]
+}
