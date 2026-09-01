@@ -41,6 +41,14 @@ Primary sources reviewed for the first release. Metadata was checked against the
 - [Qwen2-VL](https://arxiv.org/abs/2409.12191) — Wang et al., 2024; dynamic resolution and multimodal rotary position encoding.
 - [DivPrune](https://arxiv.org/abs/2503.02175) — Ranjbar Alvar et al., CVPR 2025; diversity-based visual-token pruning.
 - [ATP-LLaVA](https://openaccess.thecvf.com/content/CVPR2025/html/Ye_ATP-LLaVA_Adaptive_Token_Pruning_for_Large_Vision_Language_Models_CVPR_2025_paper.html) — Ye et al., CVPR 2025; layer-adaptive token pruning.
+- [Why and When Visual Token Pruning Fails?](https://arxiv.org/abs/2604.12358) — Kim et al., 2026; relevant visual information can shift during multi-step decoding after static pruning decisions have already been made.
+- [UniPruneBench](https://arxiv.org/abs/2511.02650) — Jiang et al., 2025; systematic visual-token compression evaluation across tasks and budgets.
+
+## Evidence-seeking video inference
+
+- [Query-Conditioned Evidential Keyframe Sampling](https://arxiv.org/abs/2604.01002) — Wang et al., 2026; keyframe selection optimized for answer evidence.
+- [Efficient Frame Selection with Attention-Based MLLM Selectors](https://arxiv.org/abs/2607.15689) — Wang et al., 2026; query-conditioned frame evidence without autoregressive selection.
+- [TimeLogic Challenge](https://arxiv.org/abs/2606.01631) — Xu et al., 2026; active multi-granular inspection with explicit timestamps.
 
 ## Scope note
 

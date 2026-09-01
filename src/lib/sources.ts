@@ -347,6 +347,53 @@ export const citations: Citation[] = [
     note: "Adapts pruning rates to layerwise visual-token redundancy instead of imposing one fixed compression ratio.",
     retrieved: "2026-08-30",
   },
+  {
+    id: "rvis-pruning",
+    title:
+      "Why and When Visual Token Pruning Fails? A Study on Relevant Visual Information Shift in MLLMs Decoding",
+    authors: "Kim et al.",
+    year: 2026,
+    url: "https://arxiv.org/abs/2604.12358",
+    note: "Finds that tokens relevant to complex visual reasoning shift during decoding and tests a method that restores previously pruned evidence when that shift occurs.",
+    retrieved: "2026-09-01",
+  },
+  {
+    id: "uniprunebench",
+    title: "Can Visual Input Be Compressed? A Visual Token Compression Benchmark for Large Multimodal Models",
+    authors: "Jiang et al.",
+    year: 2025,
+    url: "https://arxiv.org/abs/2511.02650",
+    note: "Introduces UniPruneBench to compare visual-token compression methods across models, tasks, token budgets, and retained spatial information.",
+    retrieved: "2026-09-01",
+  },
+  {
+    id: "evidential-keyframes",
+    title: "Query-Conditioned Evidential Keyframe Sampling for MLLM-Based Long-Form Video Understanding",
+    authors: "Wang et al.",
+    year: 2026,
+    url: "https://arxiv.org/abs/2604.01002",
+    note: "Frames keyframe selection as retaining answer-relevant evidence under a strict video token budget rather than generic semantic similarity.",
+    retrieved: "2026-09-01",
+  },
+  {
+    id: "dafs",
+    title: "Efficient Frame Selection for Long Videos at Test Time with Attention-Based MLLM Selectors",
+    authors: "Wang et al.",
+    year: 2026,
+    url: "https://arxiv.org/abs/2607.15689",
+    note: "Uses query-conditioned cross-modal attention for budgeted frame selection and reports improvements over uniform sampling under matched frame budgets.",
+    retrieved: "2026-09-01",
+  },
+  {
+    id: "timelogic-agent",
+    title:
+      "TimeLogic Challenge @ CVPR 2026: Strong MLLMs Meet Evidence-Seeking Agents for Temporal-Logic Video Question Answering",
+    authors: "Xu et al.",
+    year: 2026,
+    url: "https://arxiv.org/abs/2606.01631",
+    note: "Shows that active multi-granular video inspection with explicit timestamps can substantially improve temporal-logic QA over one-pass uniform sampling.",
+    retrieved: "2026-09-01",
+  },
 ];
 
 export const citationsById = new Map(citations.map((citation) => [citation.id, citation]));

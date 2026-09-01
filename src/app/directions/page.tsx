@@ -100,9 +100,15 @@ export default function DirectionsPage() {
         <Link className="button-primary" href="/verified">
           Inspect the motivating evidence <ArrowRight size={17} />
         </Link>
-        <Link className="text-link" href="/discovery">
-          Try the blinded self-test
+        <Link className="text-link" href="/human-study">
+          Open the balanced human instrument
         </Link>
+        <a
+          className="text-link"
+          href="https://github.com/chrisisaverted/multimodal-failure-atlas/blob/main/docs/mechanism-hypotheses.md"
+        >
+          Read the causal mechanism map
+        </a>
       </div>
     </section>
   );
