@@ -17,14 +17,7 @@ const manifestSchema = z.object({
   cases: z.array(z.object({ seed: z.number().int(), condition: z.string() })),
 });
 const protocolVariant = process.env.ATLAS_REPLICATION_PROTOCOL_VARIANT ?? "replication-v1-no-reasoning";
-const resultDirectories = [
-  "evaluation/results/replication-v1",
-  "evaluation/results/replication-v1-completion",
-  "evaluation/results/replication-v1-no-reasoning",
-  "evaluation/results/replication-v1-mimo-replacement",
-  "evaluation/results/replication-v1-mimo-forced-choice",
-  "evaluation/results/replication-v1-mimo-declared-answer",
-];
+const resultDirectories = [`evaluation/results/${protocolVariant}`];
 
 function conditionOf(run: EvaluationRunRecord) {
   return (

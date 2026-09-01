@@ -57,6 +57,10 @@ const runs = (
 const uniqueRuns = [...new Map(runs.map((run) => [run.id, run])).values()].sort(
   (left, right) => left.evaluatedAt.localeCompare(right.evaluatedAt) || left.id.localeCompare(right.id),
 );
+const canonicalProtocolSuffix = new Map([
+  ["bytedance-seed/seed-2-1-turbo", "external-replication-v1-no-reasoning"],
+  ["xiaomi/mimo-v2.5", "external-replication-v1-mimo-declared-answer"],
+]);
 
 const families = [];
 for (const family of evidence.families) {
@@ -69,7 +73,10 @@ for (const family of evidence.families) {
   if (!nativeCondition || !controlCondition) throw new Error(`${family.planId} has invalid conditions`);
   const models = cohort.map((modelId) => {
     const modelRuns = uniqueRuns.filter(
-      (run) => run.evaluationPlanId === family.planId && run.modelId === modelId,
+      (run) =>
+        run.evaluationPlanId === family.planId &&
+        run.modelId === modelId &&
+        run.evaluationProtocolId?.endsWith(canonicalProtocolSuffix.get(modelId)!) === true,
     );
     const summarize = (condition: string) => {
       const cases = manifest.cases.filter((candidate) => candidate.condition === condition);
