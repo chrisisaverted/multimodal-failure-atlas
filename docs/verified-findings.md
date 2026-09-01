@@ -98,6 +98,22 @@ previous direction, a signed counter, a gated per-location histogram, or a multi
 externalize that state in a matched control. This attacks the gap between recognizing local frames and
 retaining a task-relevant sufficient statistic over the complete clip.
 
+## Response shape, not just accuracy
+
+The five-route matrix also reports a descriptive concentration diagnostic. A route is called
+“concentrated” when at least 75% of its 16 substantive native answers select one option despite balanced
+ground truth. Dense change localization, spatial zone entry counting, and hidden-trail topology each have
+three concentrated routes. By contrast, exact wire counting, enclosure depth, cube enumeration, and the
+conservation ledger have zero: their errors remain spread across alternatives even though every route is
+below half. Individual extremes include Kimi selecting `+3` on all 16 signed-accumulator cases and Seed
+selecting one answer on all 16 transition-count cases.
+
+This distinction prevents an overly simple story. Some failures include a strong stereotyped-output
+component; others remain hard without one. Concentration is computed only after verifying that the output
+distribution covers every substantive answer. It is not evidence of a shared heuristic, representation, or
+internal mechanism, and it does not change the admission rule. The machine-readable endpoint exposes modal
+answer, modal share, observed support, and normalized four-option entropy for independent analysis.
+
 ## Cross-family lessons
 
 1. **Composition is more reliable than degradation.** Making a primitive smaller, faster, or denser

@@ -1,5 +1,6 @@
 import { admittedEvidence, type AdmittedFamilyEvidence } from "@/lib/admitted-evidence";
 import { routeExpansionModels } from "@/lib/external-replication";
+import { familyResponseShape, responseConcentration } from "@/lib/admitted-analysis";
 
 export type RouteEvidenceStage =
   "core-confirmatory" | "route-expansion-confirmatory" | "replacement-confirmatory";
@@ -13,8 +14,16 @@ export function buildFiveRouteEvidence(families: AdmittedFamilyEvidence[] = admi
       ? "replacement-confirmatory"
       : "route-expansion-confirmatory";
     const routes = [
-      ...family.models.map((model) => ({ ...model, evidenceStage: "core-confirmatory" as const })),
-      ...expanded.map((model) => ({ ...model, evidenceStage: expansionStage })),
+      ...family.models.map((model) => ({
+        ...model,
+        evidenceStage: "core-confirmatory" as const,
+        responseShape: responseConcentration(model.native),
+      })),
+      ...expanded.map((model) => ({
+        ...model,
+        evidenceStage: expansionStage,
+        responseShape: responseConcentration(model.native),
+      })),
     ];
     if (routes.length !== 5 || new Set(routes.map((route) => route.modelId)).size !== 5)
       throw new Error(`${family.planId} does not resolve to five unique routes`);
@@ -34,11 +43,12 @@ export function buildFiveRouteEvidence(families: AdmittedFamilyEvidence[] = admi
       difficultySetting: family.difficultySetting,
       nativeCondition: family.nativeCondition,
       controlCondition: family.controlCondition,
+      responseShape: familyResponseShape(family),
       routes,
     };
   });
   return {
-    schemaVersion: 1 as const,
+    schemaVersion: 2 as const,
     generatedAt: admittedEvidence.generatedAt,
     analysisRole:
       "Machine-readable current-family matrix; route results remain fixed observations of named hosted systems.",

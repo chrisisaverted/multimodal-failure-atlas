@@ -4,6 +4,7 @@ import { ArrowUpRight, CheckCircle2, ImageIcon, Video } from "lucide-react";
 import { admittedEvidence } from "@/lib/admitted-evidence";
 import {
   easiestRouteRate,
+  familyResponseShape,
   currentFamilyRoutes,
   orderByUniversalHardness,
   pooledNativeRate,
@@ -71,6 +72,7 @@ export default function VerifiedPage() {
         {ordered.map((family, index) => {
           const mode = failureModesById.get(family.catalogueId);
           const controlFloor = weakestControlRate(family);
+          const responseShape = familyResponseShape(family);
           return (
             <article className="verified-family" key={family.planId}>
               <div className="verified-rank">{String(index + 1).padStart(2, "0")}</div>
@@ -85,6 +87,9 @@ export default function VerifiedPage() {
                   Frozen family-local difficulty {family.difficultySetting.label} · easiest native route{" "}
                   {percent(easiestRouteRate(family))} · pooled descriptive solve rate{" "}
                   {percent(pooledNativeRate(family))} · weakest control route {percent(controlFloor)}
+                  <br />
+                  Response shape: {responseShape.concentratedRoutes}/5 routes place at least 75% of answers on
+                  one option · mean modal share {percent(responseShape.meanModalShare)}
                 </small>
               </div>
               <div className="verified-route-grid">
@@ -115,7 +120,9 @@ export default function VerifiedPage() {
           tie-breaker, so weaker routes cannot hide a stronger route. It is not a calibrated psychometric
           scale, and the five routes are not independent samples from “all models.” The displayed difficulty
           values parameterize different generators and are not comparable between families. Controls diagnose
-          whether a simpler presentation recovers performance; weak controls limit causal claims.
+          whether a simpler presentation recovers performance; weak controls limit causal claims. “Response
+          shape” is descriptive output concentration, not evidence that a shared heuristic or internal
+          mechanism caused the errors.
         </p>
         <Link href="/methods">Read the evidence standard</Link>
         <Link href="/human-study">Open the human study instrument</Link>

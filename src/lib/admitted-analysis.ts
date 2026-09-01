@@ -40,6 +40,49 @@ export function controlRecoveryInterpretation(family: AdmittedFamilyEvidence) {
   return { rate, level: "inconclusive" as const };
 }
 
+export function responseConcentration(
+  condition: { substantiveAnswers: number; answerDistribution?: Record<string, number> },
+  optionCount = 4,
+) {
+  const entries = Object.entries(condition.answerDistribution ?? {});
+  if (!entries.length || condition.substantiveAnswers <= 0) return null;
+  const distributedAnswers = entries.reduce((sum, [, count]) => sum + count, 0);
+  if (distributedAnswers !== condition.substantiveAnswers)
+    throw new Error(
+      `Answer distribution covers ${distributedAnswers}/${condition.substantiveAnswers} substantive answers`,
+    );
+  const [modalAnswer, modalCount] = [...entries].sort(
+    ([leftAnswer, leftCount], [rightAnswer, rightCount]) =>
+      rightCount - leftCount || leftAnswer.localeCompare(rightAnswer),
+  )[0]!;
+  const entropy = entries.reduce((sum, [, count]) => {
+    const probability = count / distributedAnswers;
+    return sum - probability * Math.log2(probability);
+  }, 0);
+  return {
+    modalAnswer,
+    modalCount,
+    modalShare: modalCount / distributedAnswers,
+    observedSupport: entries.length,
+    normalizedEntropy: optionCount > 1 ? entropy / Math.log2(optionCount) : 0,
+  };
+}
+
+export function familyResponseShape(family: AdmittedFamilyEvidence) {
+  const routes = currentFamilyRoutes(family).map((route) => {
+    const concentration = responseConcentration(route.native);
+    if (!concentration)
+      throw new Error(`${family.planId}:${route.modelId} has no native answer distribution`);
+    return { modelId: route.modelId, ...concentration };
+  });
+  return {
+    routes,
+    concentratedRoutes: routes.filter((route) => route.modalShare >= 0.75).length,
+    meanModalShare: routes.reduce((sum, route) => sum + route.modalShare, 0) / routes.length,
+    meanNormalizedEntropy: routes.reduce((sum, route) => sum + route.normalizedEntropy, 0) / routes.length,
+  };
+}
+
 export function orderByUniversalHardness(families: AdmittedFamilyEvidence[]) {
   return [...families].sort((left, right) => {
     const easiestDifference = (easiestRouteRate(left) ?? 1) - (easiestRouteRate(right) ?? 1);

@@ -3,8 +3,10 @@ import { admittedEvidence } from "./admitted-evidence";
 import {
   easiestRouteRate,
   controlRecoveryInterpretation,
+  familyResponseShape,
   orderByUniversalHardness,
   pooledNativeRate,
+  responseConcentration,
   weakestControlRate,
 } from "./admitted-analysis";
 
@@ -42,5 +44,25 @@ describe("conservative admitted-family analysis", () => {
       rate: 6 / 16,
       level: "inconclusive",
     });
+  });
+
+  it("measures output concentration without changing the hardness gate", () => {
+    expect(
+      responseConcentration({ substantiveAnswers: 16, answerDistribution: { A: 12, B: 2, C: 1, D: 1 } }),
+    ).toMatchObject({ modalAnswer: "A", modalCount: 12, modalShare: 0.75, observedSupport: 4 });
+    const conservation = admittedEvidence.families.find(
+      (family) => family.catalogueId === "dynamic-conservation-ledger",
+    )!;
+    const trail = admittedEvidence.families.find(
+      (family) => family.catalogueId === "dynamic-trajectory-topology",
+    )!;
+    expect(familyResponseShape(conservation).concentratedRoutes).toBe(0);
+    expect(familyResponseShape(trail).concentratedRoutes).toBe(3);
+  });
+
+  it("rejects partial distributions instead of silently measuring them", () => {
+    expect(() =>
+      responseConcentration({ substantiveAnswers: 16, answerDistribution: { A: 12, B: 3 } }),
+    ).toThrow("15/16");
   });
 });

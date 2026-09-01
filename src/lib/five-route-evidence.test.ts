@@ -2,6 +2,19 @@ import { describe, expect, it } from "vitest";
 import { fiveRouteEvidence } from "@/lib/five-route-evidence";
 
 describe("machine-readable five-route evidence", () => {
+  it("publishes response-shape diagnostics under an explicit wire-version bump", () => {
+    expect(fiveRouteEvidence.schemaVersion).toBe(2);
+    for (const family of fiveRouteEvidence.families) {
+      expect(family.responseShape.routes).toHaveLength(5);
+      expect(family.responseShape.concentratedRoutes).toBeGreaterThanOrEqual(0);
+      expect(family.responseShape.concentratedRoutes).toBeLessThanOrEqual(5);
+      for (const route of family.routes) {
+        expect(route.responseShape?.modalShare).toBeGreaterThanOrEqual(0.25);
+        expect(route.responseShape?.modalShare).toBeLessThanOrEqual(1);
+      }
+    }
+  });
+
   it("exports ten image and ten video families with five unique routes each", () => {
     expect(fiveRouteEvidence.families).toHaveLength(20);
     expect(fiveRouteEvidence.families.filter((family) => family.modality === "image")).toHaveLength(10);
