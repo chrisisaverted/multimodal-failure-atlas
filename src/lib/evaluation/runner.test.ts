@@ -3,6 +3,7 @@ import type { EvaluationAdapter } from "./adapters/types";
 import { BudgetError } from "./cost";
 import { sha256 } from "./hash";
 import { runEvaluationBatch, type EvaluationJob } from "./runner";
+import { evaluationRequestSchema } from "./schema";
 import { MemoryEvaluationStore } from "./store";
 
 const request = {
@@ -31,6 +32,11 @@ const job: EvaluationJob = {
 };
 
 describe("evaluation batch runner", () => {
+  it("accepts bounded reasoning budgets above the legacy ceiling", () => {
+    expect(evaluationRequestSchema.parse({ ...request, maxOutputTokens: 8192 }).maxOutputTokens).toBe(8192);
+    expect(() => evaluationRequestSchema.parse({ ...request, maxOutputTokens: 16385 })).toThrow();
+  });
+
   it("records immutable provenance and resumes from cache", async () => {
     const evaluate = vi.fn(async () => ({
       rawResponse: "yes",

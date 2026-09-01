@@ -22,7 +22,7 @@ export const evaluationRequestSchema = z.object({
   systemMessage: z.string().min(1).max(4000),
   prompt: z.string().min(1).max(12000),
   temperature: z.number().min(0).max(2).default(0),
-  maxOutputTokens: z.number().int().min(1).max(4096).default(64),
+  maxOutputTokens: z.number().int().min(1).max(16384).default(64),
   trial: z.number().int().positive().default(1),
   reasoningEffort: z.enum(["none", "minimal", "low", "medium", "high"]).optional(),
   excludeReasoning: z.boolean().optional(),
