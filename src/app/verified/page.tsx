@@ -87,8 +87,8 @@ export default function VerifiedPage() {
                 <h2>{mode?.title ?? family.catalogueId}</h2>
                 <p>{mode?.subtitle}</p>
                 <small>
-                  Pooled descriptive solve rate {percent(pooledRate(family))} · weakest control route{" "}
-                  {percent(controlFloor)}
+                  Frozen family-local difficulty {family.sample.difficulty}/100 · pooled descriptive solve
+                  rate {percent(pooledRate(family))} · weakest control route {percent(controlFloor)}
                 </small>
               </div>
               <div className="verified-route-grid">
@@ -117,11 +117,15 @@ export default function VerifiedPage() {
         <p>
           Ordering uses pooled observed accuracy only as a descriptive difficulty index. It is not a
           calibrated psychometric scale, and the three routes are not independent samples from “all models.”
-          Controls diagnose whether a simpler presentation recovers performance; weak controls limit causal
-          claims.
+          The displayed difficulty values parameterize different generators and are not comparable between
+          families. Controls diagnose whether a simpler presentation recovers performance; weak controls limit
+          causal claims.
         </p>
         <Link href="/methods">Read the evidence standard</Link>
         <Link href="/human-study">Open the human study instrument</Link>
+        <a href="https://github.com/chrisisaverted/multimodal-failure-atlas/blob/main/docs/difficulty-contract.md">
+          Read the difficulty-setting contract
+        </a>
         <Link href="/runs">Open the response ledger</Link>
       </div>
     </section>

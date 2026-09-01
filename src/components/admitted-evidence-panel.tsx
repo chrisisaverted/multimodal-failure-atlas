@@ -11,7 +11,9 @@ export function AdmittedEvidencePanel({ evidence }: { evidence: AdmittedFamilyEv
   return (
     <section className="section-shell admitted-evidence" aria-labelledby="admitted-evidence-title">
       <div className="admitted-evidence-copy">
-        <p className="eyebrow">Frozen atlas holdout · exact public artifact</p>
+        <p className="eyebrow">
+          Frozen atlas holdout · family difficulty {evidence.sample.difficulty}/100 · exact public artifact
+        </p>
         <h2 id="admitted-evidence-title">Try the case before revealing the construction.</h2>
         <p>{evidence.sample.question}</p>
         <div className="admitted-answer-options" aria-label="Allowed answers">

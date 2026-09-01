@@ -20,20 +20,25 @@ and it should not be generalized to all multimodal models.
 Human solvability remains unverified. The construction oracle proves the answer, not that an unaided
 human can recover it under the same display conditions.
 
+Every admitted page publishes the exact family-local difficulty setting used for its frozen holdout.
+These 0–100 values control different generator parameters and are not a shared psychometric scale: 96
+on route-turn integration is not intrinsically harder than 57 on enclosure depth. The admission claim is
+that at least one disclosed setting per family clears the below-half gate, not that every setting does.
+
 ## Image results
 
-| Descriptive rank | Family | Gemini | Qwen | Kimi | Pooled | Weakest control |
-| ---: | --- | ---: | ---: | ---: | ---: | ---: |
-| 1 | Identity-conditioned exact crossing count | 7/16 | 0/16 | 1/16 | 8/48 | 13/16 |
-| 2 | Global bilateral symmetry verification | 6/16 | 3/16 | 1/16 | 10/48 | 16/16 |
-| 3= | Dense cross-image change localization | 4/16 | 2/16 | 5/16 | 11/48 | 9/16 |
-| 3= | Visual graph-degree topology | 4/16 | 5/16 | 2/16 | 11/48 | 16/16 |
-| 5= | Rotation-invariant exact correspondence | 6/16 | 5/16 | 2/16 | 13/48 | 14/16 |
-| 5= | Dense visual XOR composition | 4/16 | 2/16 | 7/16 | 13/48 | 15/15 |
-| 5= | Maze reachability | 6/16 | 3/16 | 4/16 | 13/48 | 9/9 |
-| 5= | 2D parity-matrix verification | 5/16 | 4/16 | 4/16 | 13/48 | 16/16 |
-| 9 | Occluded cube-stack enumeration | 3/16 | 6/16 | 6/16 | 15/48 | 16/16 |
-| 10 | Topological enclosure depth | 6/16 | 7/16 | 5/16 | 18/48 | 10/16 |
+| Descriptive rank | Family                                    | Gemini | Qwen | Kimi | Pooled | Weakest control |
+| ---------------: | ----------------------------------------- | -----: | ---: | ---: | -----: | --------------: |
+|                1 | Identity-conditioned exact crossing count |   7/16 | 0/16 | 1/16 |   8/48 |           13/16 |
+|                2 | Global bilateral symmetry verification    |   6/16 | 3/16 | 1/16 |  10/48 |           16/16 |
+|               3= | Dense cross-image change localization     |   4/16 | 2/16 | 5/16 |  11/48 |            9/16 |
+|               3= | Visual graph-degree topology              |   4/16 | 5/16 | 2/16 |  11/48 |           16/16 |
+|               5= | Rotation-invariant exact correspondence   |   6/16 | 5/16 | 2/16 |  13/48 |           14/16 |
+|               5= | Dense visual XOR composition              |   4/16 | 2/16 | 7/16 |  13/48 |           15/15 |
+|               5= | Maze reachability                         |   6/16 | 3/16 | 4/16 |  13/48 |             9/9 |
+|               5= | 2D parity-matrix verification             |   5/16 | 4/16 | 4/16 |  13/48 |           16/16 |
+|                9 | Occluded cube-stack enumeration           |   3/16 | 6/16 | 6/16 |  15/48 |           16/16 |
+|               10 | Topological enclosure depth               |   6/16 | 7/16 | 5/16 |  18/48 |           10/16 |
 
 The cleanest image localizations are bilateral symmetry, graph topology, parity, cube enumeration,
 and the fully answered maze controls: a simpler evidence-preserving presentation recovers strongly
@@ -50,18 +55,18 @@ this useful generator shape.
 
 ## Video results
 
-| Descriptive rank | Family | Gemini | Qwen | Kimi | Pooled | Weakest control |
-| ---: | --- | ---: | ---: | ---: | ---: | ---: |
-| 1 | Dynamic route-turn integration | 2/16 | 2/16 | 3/16 | 7/48 | 16/16 |
-| 2= | Identity-conditioned selective flash count | 2/16 | 4/16 | 2/16 | 8/48 | 16/16 |
-| 2= | Sequential identity permutation | 2/16 | 1/16 | 5/16 | 8/48 | 13/16 |
-| 4 | Identity-pair collision counting | 4/16 | 3/16 | 3/16 | 10/48 | 12/16 |
-| 5 | Temporal target-transition counting | 3/16 | 5/16 | 3/16 | 11/48 | 16/16 |
-| 6 | Signed temporal state accumulation | 5/16 | 3/16 | 4/16 | 12/48 | 13/16 |
-| 7 | Temporal set cardinality | 5/16 | 4/16 | 4/16 | 13/48 | 16/16 |
-| 8 | Dynamic conservation ledger | 7/16 | 5/16 | 2/16 | 14/48 | 16/16 |
-| 9= | Identity-conditioned spatial zone entries | 4/16 | 7/16 | 4/16 | 15/48 | 16/16 |
-| 9= | Hidden-trail trajectory topology | 4/16 | 5/16 | 6/16 | 15/48 | 4/15 |
+| Descriptive rank | Family                                     | Gemini | Qwen | Kimi | Pooled | Weakest control |
+| ---------------: | ------------------------------------------ | -----: | ---: | ---: | -----: | --------------: |
+|                1 | Dynamic route-turn integration             |   2/16 | 2/16 | 3/16 |   7/48 |           16/16 |
+|               2= | Identity-conditioned selective flash count |   2/16 | 4/16 | 2/16 |   8/48 |           16/16 |
+|               2= | Sequential identity permutation            |   2/16 | 1/16 | 5/16 |   8/48 |           13/16 |
+|                4 | Identity-pair collision counting           |   4/16 | 3/16 | 3/16 |  10/48 |           12/16 |
+|                5 | Temporal target-transition counting        |   3/16 | 5/16 | 3/16 |  11/48 |           16/16 |
+|                6 | Signed temporal state accumulation         |   5/16 | 3/16 | 4/16 |  12/48 |           13/16 |
+|                7 | Temporal set cardinality                   |   5/16 | 4/16 | 4/16 |  13/48 |           16/16 |
+|                8 | Dynamic conservation ledger                |   7/16 | 5/16 | 2/16 |  14/48 |           16/16 |
+|               9= | Identity-conditioned spatial zone entries  |   4/16 | 7/16 | 4/16 |  15/48 |           16/16 |
+|               9= | Hidden-trail trajectory topology           |   4/16 | 5/16 | 6/16 |  15/48 |            4/15 |
 
 Route-turn integration is the strongest current result: all three routes are at or below 3/16 and the
 explicit running-counter control is 16/16 throughout. Selective flash counting and transition counting
