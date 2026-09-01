@@ -36,6 +36,7 @@
     "freeze:precision-wire-count": "tsx scripts/freeze-precision-wire-count.ts",
     "plan:enclosure-depth": "tsx scripts/plan-enclosure-depth.ts",
     "generate:enclosure-depth": "tsx scripts/materialize-enclosure-depth.ts",
+    "freeze:enclosure-depth": "tsx scripts/freeze-enclosure-depth.ts",
     "plan:rotation-correspondence": "tsx scripts/plan-rotation-correspondence.ts",
     "generate:rotation-correspondence": "tsx scripts/materialize-rotation-correspondence.ts",
     "plan:change-localization": "tsx scripts/plan-change-localization.ts",
