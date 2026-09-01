@@ -102,6 +102,26 @@ export function createChangeLocalizationDiscoveryGrid() {
   return candidates;
 }
 
+export function createChangeLocalizationHardGrid() {
+  const candidates: ChangeLocalizationCandidate[] = [];
+  let seed = 1_410_000;
+  for (let replicate = 0; replicate < 2; replicate += 1) {
+    for (let changedQuadrant = 0; changedQuadrant < 4; changedQuadrant += 1) {
+      candidates.push(
+        createChangeLocalizationCandidate({
+          split: "discovery",
+          seed,
+          gridSize: 34,
+          changedQuadrant,
+          visualVariant: 200 + replicate * 4 + changedQuadrant,
+        }),
+      );
+      seed += 1;
+    }
+  }
+  return candidates;
+}
+
 function orientationGrid(candidate: ChangeLocalizationCandidate) {
   const random = rng(candidate.seed + candidate.parameters.visualVariant * 6151);
   return Array.from({ length: candidate.parameters.gridSize }, () =>

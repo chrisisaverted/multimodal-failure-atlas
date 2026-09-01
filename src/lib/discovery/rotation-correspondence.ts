@@ -102,6 +102,27 @@ export function createRotationCorrespondenceDiscoveryGrid() {
   return candidates;
 }
 
+export function createRotationCorrespondenceHoldout(representative: RotationCorrespondenceCandidate) {
+  const candidates: RotationCorrespondenceCandidate[] = [];
+  let seed = 1_500_000;
+  for (let replicate = 0; replicate < 4; replicate += 1) {
+    for (let correctSlot = 0; correctSlot < 4; correctSlot += 1) {
+      candidates.push(
+        createRotationCorrespondenceCandidate({
+          split: "confirmatory",
+          seed,
+          vertices: representative.parameters.vertices,
+          perturbation: representative.parameters.perturbation,
+          correctSlot,
+          visualVariant: 300 + replicate * 4 + correctSlot,
+        }),
+      );
+      seed += 1;
+    }
+  }
+  return candidates;
+}
+
 type Point = { x: number; y: number };
 
 function referencePoints(candidate: RotationCorrespondenceCandidate) {
