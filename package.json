@@ -30,6 +30,7 @@
     "generate:wires": "tsx scripts/materialize-wire-tracing.ts",
     "rank:wires": "tsx scripts/rank-wire-tracing.ts",
     "freeze:wires": "tsx scripts/freeze-wire-tracing-holdout.ts",
+    "freeze:wires:hard": "tsx scripts/freeze-wire-tracing-hard.ts",
     "plan:wire-count": "tsx scripts/plan-wire-crossing-count.ts",
     "generate:wire-count": "tsx scripts/materialize-wire-crossing-count.ts",
     "plan:precision-wire-count": "tsx scripts/plan-precision-wire-count.ts",
