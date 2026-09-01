@@ -32,6 +32,14 @@ export function weakestControlRate(family: AdmittedFamilyEvidence) {
   return rates.length ? Math.min(...rates) : null;
 }
 
+export function controlRecoveryInterpretation(family: AdmittedFamilyEvidence) {
+  const rate = weakestControlRate(family);
+  if (rate === null) return { rate, level: "unmeasured" as const };
+  if (rate >= 0.75) return { rate, level: "strong" as const };
+  if (rate >= 0.5) return { rate, level: "partial" as const };
+  return { rate, level: "inconclusive" as const };
+}
+
 export function orderByUniversalHardness(families: AdmittedFamilyEvidence[]) {
   return [...families].sort((left, right) => {
     const easiestDifference = (easiestRouteRate(left) ?? 1) - (easiestRouteRate(right) ?? 1);

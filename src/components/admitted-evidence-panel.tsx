@@ -3,6 +3,7 @@ import Link from "next/link";
 import { CheckCircle2, Download, FlaskConical, UsersRound } from "lucide-react";
 import type { AdmittedFamilyEvidence } from "@/lib/admitted-evidence";
 import { routeExpansionModels } from "@/lib/external-replication";
+import { controlRecoveryInterpretation } from "@/lib/admitted-analysis";
 
 const percent = (value: number | null) => (value === null ? "—" : `${Math.round(value * 100)}%`);
 const modelName = (id: string) => id.split("/").at(-1)?.replaceAll("-", " ") ?? id;
@@ -15,6 +16,15 @@ const outputDistribution = (summary: { answerDistribution?: Record<string, numbe
 export function AdmittedEvidencePanel({ evidence }: { evidence: AdmittedFamilyEvidence }) {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
   const expandedModels = routeExpansionModels(evidence);
+  const controlRecovery = controlRecoveryInterpretation(evidence);
+  const controlCopy =
+    controlRecovery.level === "strong"
+      ? "Every route reaches at least 75% on the matched control; recovery is strong."
+      : controlRecovery.level === "partial"
+        ? "The matched control recovers only partially on at least one route; localization remains limited."
+        : controlRecovery.level === "inconclusive"
+          ? "At least one route remains below 50% on the matched control; this control does not localize the native failure."
+          : "Matched control recovery has not been measured.";
   return (
     <section className="section-shell admitted-evidence" aria-labelledby="admitted-evidence-title">
       <div className="admitted-evidence-copy">
@@ -126,6 +136,9 @@ export function AdmittedEvidencePanel({ evidence }: { evidence: AdmittedFamilyEv
           <p>
             <UsersRound size={17} /> Human solvability: {evidence.humanSolvability}. Construction truth is not
             a human baseline.
+          </p>
+          <p>
+            <FlaskConical size={17} /> Control floor: {percent(controlRecovery.rate)}. {controlCopy}
           </p>
         </div>
         <div className="admitted-evidence-links">

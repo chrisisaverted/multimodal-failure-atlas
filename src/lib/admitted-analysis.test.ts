@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { admittedEvidence } from "./admitted-evidence";
 import {
   easiestRouteRate,
+  controlRecoveryInterpretation,
   orderByUniversalHardness,
   pooledNativeRate,
   weakestControlRate,
@@ -27,5 +28,19 @@ describe("conservative admitted-family analysis", () => {
     expect(easiestRouteRate(wire)).toBe(7 / 16);
     expect(pooledNativeRate(wire)).toBe(14 / 80);
     expect(weakestControlRate(wire)).toBe(13 / 16);
+  });
+
+  it("separates behavioral hardness from control-based localization", () => {
+    const routeTurn = admittedEvidence.families.find(
+      (family) => family.catalogueId === "dynamic-route-turn-integration",
+    )!;
+    const selectiveFlash = admittedEvidence.families.find(
+      (family) => family.catalogueId === "identity-conditioned-temporal-event-counting",
+    )!;
+    expect(controlRecoveryInterpretation(routeTurn)).toEqual({ rate: 1, level: "strong" });
+    expect(controlRecoveryInterpretation(selectiveFlash)).toEqual({
+      rate: 6 / 16,
+      level: "inconclusive",
+    });
   });
 });
