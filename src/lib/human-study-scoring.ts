@@ -51,6 +51,7 @@ export function humanPacketSchema(protocolId: string) {
       protocolId: z.literal(protocolId),
       sessionId: z.string().uuid(),
       blockId: z.string(),
+      assignmentMode: z.enum(["quota-link", "random-demo"]).optional(),
       startedAt: z.string().datetime(),
       responses: z.array(humanResponseSchema),
     }),
@@ -164,12 +165,18 @@ export function scoreHumanStudy({
   });
 
   const totalCorrect = scored.filter((response) => response.correct).length;
+  const assignmentModes = {
+    quotaLink: packets.filter(({ packet }) => packet.session.assignmentMode === "quota-link").length,
+    randomDemo: packets.filter(({ packet }) => packet.session.assignmentMode === "random-demo").length,
+    legacyUnrecorded: packets.filter(({ packet }) => packet.session.assignmentMode === undefined).length,
+  };
   return {
     schemaVersion: 1 as const,
     protocolId: study.protocolId,
     generatedAt,
     packetFiles: packets.length,
     participants: packets.length,
+    assignmentModes,
     responses: scored.length,
     correct: totalCorrect,
     accuracy: scored.length ? totalCorrect / scored.length : null,

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useMemo, useRef, useState } from "react";
+import { assignHumanStudyBlock, type StudyAssignmentMode } from "@/lib/human-study-assignment";
 
 interface StudyCase {
   studyCaseId: string;
@@ -41,6 +42,7 @@ interface SessionState {
   protocolId: string;
   sessionId: string;
   blockId: string;
+  assignmentMode?: StudyAssignmentMode;
   startedAt: string;
   responses: StudyResponse[];
 }
@@ -64,6 +66,8 @@ export function HumanStudyLab({ manifest, basePath }: { manifest: StudyManifest;
   const [videoStarted, setVideoStarted] = useState(false);
   const [recorded, setRecorded] = useState(false);
   const [hydrated, setHydrated] = useState(false);
+  const [requestedBlockId, setRequestedBlockId] = useState<string | null>(null);
+  const [invalidRecruitmentLink, setInvalidRecruitmentLink] = useState<string>();
   const displayedAt = useRef(0);
   const answerReadyAt = useRef(0);
   const visibilityInterruptions = useRef(0);
@@ -71,6 +75,11 @@ export function HumanStudyLab({ manifest, basePath }: { manifest: StudyManifest;
 
   useEffect(() => {
     const timeout = window.setTimeout(() => {
+      const requested = new URLSearchParams(window.location.search).get("block");
+      if (requested) {
+        if (manifest.blocks.some((block) => block.blockId === requested)) setRequestedBlockId(requested);
+        else setInvalidRecruitmentLink(requested);
+      }
       try {
         const raw = localStorage.getItem(storageKey);
         if (raw) {
@@ -113,11 +122,16 @@ export function HumanStudyLab({ manifest, basePath }: { manifest: StudyManifest;
   function begin() {
     const random = new Uint32Array(1);
     crypto.getRandomValues(random);
-    const blockIndex = random[0]! % manifest.blocks.length;
+    const assignment = assignHumanStudyBlock(
+      manifest.blocks.map((block) => block.blockId),
+      requestedBlockId,
+      random[0]!,
+    );
     const next: SessionState = {
       protocolId: manifest.protocolId,
       sessionId: crypto.randomUUID(),
-      blockId: manifest.blocks[blockIndex]!.blockId,
+      blockId: assignment.blockId,
+      assignmentMode: assignment.assignmentMode,
       startedAt: new Date().toISOString(),
       responses: [],
     };
@@ -198,9 +212,23 @@ export function HumanStudyLab({ manifest, basePath }: { manifest: StudyManifest;
           This demonstration does not transmit data and is not a consent form for a research study. Only begin
           if you want to test the answer-free instrument for yourself.
         </p>
-        <button className="button-primary" type="button" onClick={begin}>
-          Assign my block
-        </button>
+        {invalidRecruitmentLink ? (
+          <p role="alert">
+            This recruitment link requests unknown block <strong>{invalidRecruitmentLink}</strong>. Ask the
+            study coordinator for a corrected link; no fallback assignment has been made.
+          </p>
+        ) : (
+          <>
+            <p>
+              {requestedBlockId
+                ? `This recruitment link is quota-assigned to ${requestedBlockId}.`
+                : "This unparameterized demonstration will choose a block uniformly at random."}
+            </p>
+            <button className="button-primary" type="button" onClick={begin}>
+              {requestedBlockId ? "Begin assigned block" : "Assign my demo block"}
+            </button>
+          </>
+        )}
       </div>
     );
   }

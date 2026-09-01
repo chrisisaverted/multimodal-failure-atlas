@@ -103,7 +103,8 @@ const output = {
     uniqueNativeCases: 320,
     feedback: "none",
     videoPresentation: "one uninterrupted playback at 1x",
-    assignment: "one locally persisted block chosen uniformly in the participant browser",
+    assignment:
+      "quota-pinned recruitment link when supplied; otherwise one locally persisted block chosen uniformly for demonstration",
   },
   warning:
     "This is an answer-free participant instrument, not evidence that a human study has been conducted.",

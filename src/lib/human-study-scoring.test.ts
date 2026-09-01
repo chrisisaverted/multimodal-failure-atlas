@@ -60,6 +60,7 @@ function fixtures() {
       protocolId,
       sessionId,
       blockId: "block-01",
+      assignmentMode: "quota-link",
       startedAt: "2026-09-01T00:00:00.000Z",
       responses: [
         {
@@ -109,6 +110,7 @@ describe("sealed human-study scoring", () => {
       protocolId,
       packetFiles: 1,
       participants: 1,
+      assignmentModes: { quotaLink: 1, randomDemo: 0, legacyUnrecorded: 0 },
       responses: 2,
       correct: 1,
       accuracy: 0.5,
