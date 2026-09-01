@@ -26,6 +26,7 @@
     "plan:compositional": "tsx scripts/plan-compositional-counting.ts",
     "generate:compositional": "tsx scripts/materialize-compositional-counting.ts",
     "plan:wires": "tsx scripts/plan-wire-tracing.ts",
+    "plan:wires:hard": "tsx scripts/plan-wire-tracing-hard.ts",
     "generate:wires": "tsx scripts/materialize-wire-tracing.ts",
     "rank:wires": "tsx scripts/rank-wire-tracing.ts",
     "freeze:wires": "tsx scripts/freeze-wire-tracing-holdout.ts",
