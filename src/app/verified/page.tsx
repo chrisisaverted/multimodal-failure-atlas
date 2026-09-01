@@ -1,27 +1,21 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight, CheckCircle2, ImageIcon, Video } from "lucide-react";
-import { admittedEvidence, type AdmittedFamilyEvidence } from "@/lib/admitted-evidence";
+import { admittedEvidence } from "@/lib/admitted-evidence";
+import {
+  easiestRouteRate,
+  orderByUniversalHardness,
+  pooledNativeRate,
+  weakestControlRate,
+} from "@/lib/admitted-analysis";
 import { failureModesById } from "@/lib/catalogue";
 
 export const metadata: Metadata = { title: "Verified failures" };
 
 const percent = (value: number | null) => (value === null ? "—" : `${Math.round(value * 100)}%`);
 const modelName = (id: string) => id.split("/").at(-1)?.replaceAll("-", " ") ?? id;
-const pooledRate = (family: AdmittedFamilyEvidence) => {
-  const correct = family.models.reduce((sum, model) => sum + model.native.correct, 0);
-  const total = family.models.reduce((sum, model) => sum + model.native.substantiveAnswers, 0);
-  return total ? correct / total : 0;
-};
-const weakestControlRate = (family: AdmittedFamilyEvidence) =>
-  Math.min(
-    ...family.models.map((model) =>
-      model.control.substantiveAnswers ? model.control.correct / model.control.substantiveAnswers : 0,
-    ),
-  );
-
 export default function VerifiedPage() {
-  const ordered = [...admittedEvidence.families].sort((left, right) => pooledRate(left) - pooledRate(right));
+  const ordered = orderByUniversalHardness(admittedEvidence.families);
   const imageCount = ordered.filter((family) => family.modality === "image").length;
   const videoCount = ordered.filter((family) => family.modality === "video").length;
   const nativeAnswers = ordered.reduce(
@@ -87,8 +81,9 @@ export default function VerifiedPage() {
                 <h2>{mode?.title ?? family.catalogueId}</h2>
                 <p>{mode?.subtitle}</p>
                 <small>
-                  Frozen family-local difficulty {family.sample.difficulty}/100 · pooled descriptive solve
-                  rate {percent(pooledRate(family))} · weakest control route {percent(controlFloor)}
+                  Frozen family-local difficulty {family.sample.difficulty}/100 · easiest native route{" "}
+                  {percent(easiestRouteRate(family))} · pooled descriptive solve rate{" "}
+                  {percent(pooledNativeRate(family))} · weakest control route {percent(controlFloor)}
                 </small>
               </div>
               <div className="verified-route-grid">
@@ -115,11 +110,11 @@ export default function VerifiedPage() {
 
       <div className="verified-caveat">
         <p>
-          Ordering uses pooled observed accuracy only as a descriptive difficulty index. It is not a
-          calibrated psychometric scale, and the three routes are not independent samples from “all models.”
-          The displayed difficulty values parameterize different generators and are not comparable between
-          families. Controls diagnose whether a simpler presentation recovers performance; weak controls limit
-          causal claims.
+          Ordering uses the easiest route&apos;s observed accuracy, with pooled accuracy only as a
+          tie-breaker, so weaker routes cannot hide a stronger route. It is not a calibrated psychometric
+          scale, and the three routes are not independent samples from “all models.” The displayed difficulty
+          values parameterize different generators and are not comparable between families. Controls diagnose
+          whether a simpler presentation recovers performance; weak controls limit causal claims.
         </p>
         <Link href="/methods">Read the evidence standard</Link>
         <Link href="/human-study">Open the human study instrument</Link>
