@@ -1,0 +1,249 @@
+{
+  "id": "conservation-discovery-v1",
+  "planSha256": "ff3ec6e0117cdc76a0d64662c33554e04505aec401246e57c2b12b3704fd371b",
+  "generatorVersion": "conservation-ledger-v1",
+  "renderer": "conservation-ledger-svg-raster-v1",
+  "fps": 30,
+  "cases": [
+    {
+      "candidateId": "cv-b5669c533dedbdb3",
+      "cellId": "cell-four-bin-eight-transfer-ledger",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four hidden token ledgers undergo eight visible one-token transfers with exact conservation.",
+      "failureModeId": "dynamic-conservation-ledger",
+      "generator": "conservation-ledger",
+      "seed": 3000000,
+      "difficulty": 87,
+      "variant": 0,
+      "artifact": "public/evaluations/conservation-discovery-v1/cv-b5669c533dedbdb3.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 10000,
+      "question": "Which labeled box contains the MOST tokens after all eight one-token transfers? The initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "89ad9e29bdd893da49f91f91a1210298d94873e7ab8aa7f04308e70426f6f37e",
+      "parameters": {
+        "targetBox": 0,
+        "visualVariant": 0
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain each hidden token count through all eight conserved transfers. Return exactly one allowed box letter."
+    },
+    {
+      "candidateId": "cv-0e60798d40c6b134",
+      "cellId": "cell-four-bin-eight-transfer-ledger",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four hidden token ledgers undergo eight visible one-token transfers with exact conservation.",
+      "failureModeId": "dynamic-conservation-ledger",
+      "generator": "conservation-ledger",
+      "seed": 3000001,
+      "difficulty": 87,
+      "variant": 1,
+      "artifact": "public/evaluations/conservation-discovery-v1/cv-0e60798d40c6b134.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 10000,
+      "question": "Which labeled box contains the MOST tokens after all eight one-token transfers? The initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "ee672ffee63205aa3444f08ca04fd47ddafe9c3f163db4e29cac0b8ad781e7f4",
+      "parameters": {
+        "targetBox": 1,
+        "visualVariant": 1
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain each hidden token count through all eight conserved transfers. Return exactly one allowed box letter."
+    },
+    {
+      "candidateId": "cv-5d050d0b5a90aff3",
+      "cellId": "cell-four-bin-eight-transfer-ledger",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four hidden token ledgers undergo eight visible one-token transfers with exact conservation.",
+      "failureModeId": "dynamic-conservation-ledger",
+      "generator": "conservation-ledger",
+      "seed": 3000002,
+      "difficulty": 87,
+      "variant": 2,
+      "artifact": "public/evaluations/conservation-discovery-v1/cv-5d050d0b5a90aff3.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 10000,
+      "question": "Which labeled box contains the MOST tokens after all eight one-token transfers? The initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "C",
+        "B",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "7ef3189aba883b457b1c37412f4450ce1a0fd4e9d381165b618904271455ccdf",
+      "parameters": {
+        "targetBox": 2,
+        "visualVariant": 2
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain each hidden token count through all eight conserved transfers. Return exactly one allowed box letter."
+    },
+    {
+      "candidateId": "cv-c450c8705c48506a",
+      "cellId": "cell-four-bin-eight-transfer-ledger",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four hidden token ledgers undergo eight visible one-token transfers with exact conservation.",
+      "failureModeId": "dynamic-conservation-ledger",
+      "generator": "conservation-ledger",
+      "seed": 3000003,
+      "difficulty": 87,
+      "variant": 3,
+      "artifact": "public/evaluations/conservation-discovery-v1/cv-c450c8705c48506a.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 10000,
+      "question": "Which labeled box contains the MOST tokens after all eight one-token transfers? The initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "C",
+        "A",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "de6320703b79896d3c47a3233b2e319c1f39595f59f3ceb9289344d41150541d",
+      "parameters": {
+        "targetBox": 3,
+        "visualVariant": 3
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain each hidden token count through all eight conserved transfers. Return exactly one allowed box letter."
+    },
+    {
+      "candidateId": "cv-994cb007a0b60c06",
+      "cellId": "cell-four-bin-eight-transfer-ledger",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four hidden token ledgers undergo eight visible one-token transfers with exact conservation.",
+      "failureModeId": "dynamic-conservation-ledger",
+      "generator": "conservation-ledger",
+      "seed": 3000004,
+      "difficulty": 87,
+      "variant": 4,
+      "artifact": "public/evaluations/conservation-discovery-v1/cv-994cb007a0b60c06.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 10000,
+      "question": "Which labeled box contains the MOST tokens after all eight one-token transfers? The initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "C",
+        "A",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "3fbdf8d5db97e219230de38c0d41bfa82cef0112b25b4b5c0faa4ff390c2f9b6",
+      "parameters": {
+        "targetBox": 0,
+        "visualVariant": 4
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain each hidden token count through all eight conserved transfers. Return exactly one allowed box letter."
+    },
+    {
+      "candidateId": "cv-99a15436b93a60f4",
+      "cellId": "cell-four-bin-eight-transfer-ledger",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four hidden token ledgers undergo eight visible one-token transfers with exact conservation.",
+      "failureModeId": "dynamic-conservation-ledger",
+      "generator": "conservation-ledger",
+      "seed": 3000005,
+      "difficulty": 87,
+      "variant": 5,
+      "artifact": "public/evaluations/conservation-discovery-v1/cv-99a15436b93a60f4.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 10000,
+      "question": "Which labeled box contains the MOST tokens after all eight one-token transfers? The initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "1c6b3b73800d62b42d920fc7078f5333ce14d7ddb4ea24c63a28e136cb300adf",
+      "parameters": {
+        "targetBox": 1,
+        "visualVariant": 5
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain each hidden token count through all eight conserved transfers. Return exactly one allowed box letter."
+    },
+    {
+      "candidateId": "cv-314940352fe251b8",
+      "cellId": "cell-four-bin-eight-transfer-ledger",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four hidden token ledgers undergo eight visible one-token transfers with exact conservation.",
+      "failureModeId": "dynamic-conservation-ledger",
+      "generator": "conservation-ledger",
+      "seed": 3000006,
+      "difficulty": 87,
+      "variant": 6,
+      "artifact": "public/evaluations/conservation-discovery-v1/cv-314940352fe251b8.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 10000,
+      "question": "Which labeled box contains the MOST tokens after all eight one-token transfers? The initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "9266620d5a93f1a1fcca1ea00474e66fe9ad5fa087ef394e4cc4f6f70c390e40",
+      "parameters": {
+        "targetBox": 2,
+        "visualVariant": 6
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain each hidden token count through all eight conserved transfers. Return exactly one allowed box letter."
+    },
+    {
+      "candidateId": "cv-b455c6f01e270d72",
+      "cellId": "cell-four-bin-eight-transfer-ledger",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four hidden token ledgers undergo eight visible one-token transfers with exact conservation.",
+      "failureModeId": "dynamic-conservation-ledger",
+      "generator": "conservation-ledger",
+      "seed": 3000007,
+      "difficulty": 87,
+      "variant": 7,
+      "artifact": "public/evaluations/conservation-discovery-v1/cv-b455c6f01e270d72.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 10000,
+      "question": "Which labeled box contains the MOST tokens after all eight one-token transfers? The initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "26612351f065e27896cedcf65ec80d5dbec92a9d819ea57d9efbe74b6d45082d",
+      "parameters": {
+        "targetBox": 3,
+        "visualVariant": 7
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Maintain each hidden token count through all eight conserved transfers. Return exactly one allowed box letter."
+    }
+  ]
+}

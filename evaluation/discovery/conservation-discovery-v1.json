@@ -1,0 +1,504 @@
+{
+  "id": "conservation-discovery-v1",
+  "generatorVersion": "conservation-ledger-v1",
+  "status": "discovery-only",
+  "hypothesis": "Video models fail multi-entity quantitative object permanence under conserved transfers.",
+  "candidates": [
+    {
+      "id": "cv-b5669c533dedbdb3",
+      "cellId": "cell-four-bin-eight-transfer-ledger",
+      "split": "discovery",
+      "seed": 3000000,
+      "failureModeId": "dynamic-conservation-ledger",
+      "question": "Which labeled box contains the MOST tokens after all eight one-token transfers? The initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetBox": 0,
+        "initialCounts": [
+          4,
+          2,
+          3,
+          5
+        ],
+        "transfers": [
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "videoDurationMs": 10000,
+        "fps": 30,
+        "visualVariant": 0
+      }
+    },
+    {
+      "id": "cv-0e60798d40c6b134",
+      "cellId": "cell-four-bin-eight-transfer-ledger",
+      "split": "discovery",
+      "seed": 3000001,
+      "failureModeId": "dynamic-conservation-ledger",
+      "question": "Which labeled box contains the MOST tokens after all eight one-token transfers? The initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetBox": 1,
+        "initialCounts": [
+          3,
+          4,
+          5,
+          2
+        ],
+        "transfers": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "videoDurationMs": 10000,
+        "fps": 30,
+        "visualVariant": 1
+      }
+    },
+    {
+      "id": "cv-5d050d0b5a90aff3",
+      "cellId": "cell-four-bin-eight-transfer-ledger",
+      "split": "discovery",
+      "seed": 3000002,
+      "failureModeId": "dynamic-conservation-ledger",
+      "question": "Which labeled box contains the MOST tokens after all eight one-token transfers? The initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "C",
+        "B",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetBox": 2,
+        "initialCounts": [
+          4,
+          3,
+          5,
+          2
+        ],
+        "transfers": [
+          [
+            0,
+            3
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "videoDurationMs": 10000,
+        "fps": 30,
+        "visualVariant": 2
+      }
+    },
+    {
+      "id": "cv-c450c8705c48506a",
+      "cellId": "cell-four-bin-eight-transfer-ledger",
+      "split": "discovery",
+      "seed": 3000003,
+      "failureModeId": "dynamic-conservation-ledger",
+      "question": "Which labeled box contains the MOST tokens after all eight one-token transfers? The initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "C",
+        "A",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetBox": 3,
+        "initialCounts": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "transfers": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "videoDurationMs": 10000,
+        "fps": 30,
+        "visualVariant": 3
+      }
+    },
+    {
+      "id": "cv-994cb007a0b60c06",
+      "cellId": "cell-four-bin-eight-transfer-ledger",
+      "split": "discovery",
+      "seed": 3000004,
+      "failureModeId": "dynamic-conservation-ledger",
+      "question": "Which labeled box contains the MOST tokens after all eight one-token transfers? The initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "C",
+        "A",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetBox": 0,
+        "initialCounts": [
+          5,
+          3,
+          4,
+          2
+        ],
+        "transfers": [
+          [
+            3,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "videoDurationMs": 10000,
+        "fps": 30,
+        "visualVariant": 4
+      }
+    },
+    {
+      "id": "cv-99a15436b93a60f4",
+      "cellId": "cell-four-bin-eight-transfer-ledger",
+      "split": "discovery",
+      "seed": 3000005,
+      "failureModeId": "dynamic-conservation-ledger",
+      "question": "Which labeled box contains the MOST tokens after all eight one-token transfers? The initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetBox": 1,
+        "initialCounts": [
+          3,
+          4,
+          5,
+          2
+        ],
+        "transfers": [
+          [
+            3,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "videoDurationMs": 10000,
+        "fps": 30,
+        "visualVariant": 5
+      }
+    },
+    {
+      "id": "cv-314940352fe251b8",
+      "cellId": "cell-four-bin-eight-transfer-ledger",
+      "split": "discovery",
+      "seed": 3000006,
+      "failureModeId": "dynamic-conservation-ledger",
+      "question": "Which labeled box contains the MOST tokens after all eight one-token transfers? The initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetBox": 2,
+        "initialCounts": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "transfers": [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "videoDurationMs": 10000,
+        "fps": 30,
+        "visualVariant": 6
+      }
+    },
+    {
+      "id": "cv-b455c6f01e270d72",
+      "cellId": "cell-four-bin-eight-transfer-ledger",
+      "split": "discovery",
+      "seed": 3000007,
+      "failureModeId": "dynamic-conservation-ledger",
+      "question": "Which labeled box contains the MOST tokens after all eight one-token transfers? The initial counts are shown only at the beginning.",
+      "answerOptions": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetBox": 3,
+        "initialCounts": [
+          2,
+          4,
+          3,
+          5
+        ],
+        "transfers": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "videoDurationMs": 10000,
+        "fps": 30,
+        "visualVariant": 7
+      }
+    }
+  ]
+}
