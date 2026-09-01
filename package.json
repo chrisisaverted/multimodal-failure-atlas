@@ -114,6 +114,8 @@
     "generate:parity-matrix": "tsx scripts/materialize-parity-matrix.ts",
     "plan:zone-entry": "tsx scripts/plan-zone-entry.ts",
     "generate:zone-entry": "tsx scripts/materialize-zone-entry.ts",
+    "plan:pair-collision": "tsx scripts/plan-pair-collision.ts",
+    "generate:pair-collision": "tsx scripts/materialize-pair-collision.ts",
     "publish:adaptive": "tsx scripts/publish-adaptive-results.ts",
     "publish:precision-wire": "tsx scripts/publish-precision-wire-results.ts",
     "evaluate": "tsx scripts/evaluate.ts",

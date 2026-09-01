@@ -1,0 +1,1049 @@
+{
+  "id": "pair-collision-discovery-v1",
+  "planSha256": "3e4bcb9eccf57f030c21241b72d9fd143e59cc066288e8db3a195a4bbc234203",
+  "generatorVersion": "identity-pair-collision-count-v1",
+  "renderer": "pair-collision-svg-raster-v1",
+  "fps": 30,
+  "cases": [
+    {
+      "candidateId": "pc-5bf73b3615f98cdb",
+      "cellId": "cell-twenty-four-pair-collisions",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Twenty-four explicit pairwise collisions include target-pair and identity-pair distractor events.",
+      "failureModeId": "identity-pair-interaction-counting",
+      "generator": "pair-collision",
+      "seed": 4600000,
+      "difficulty": 91,
+      "variant": 0,
+      "artifact": "public/evaluations/pair-collision-discovery-v1/pc-5bf73b3615f98cdb.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 14200,
+      "question": "How many collision events involve the specific pair A AND B together? Ignore collisions involving any other pairing.",
+      "answerOptions": [
+        "6",
+        "7",
+        "8",
+        "5"
+      ],
+      "expectedAnswer": "5",
+      "sha256": "1912033a09a97990b45cce9905ef67525870d3af12353b2858b55d8faf1c6d33",
+      "parameters": {
+        "targetCount": 5,
+        "events": [
+          [
+            5,
+            3
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "videoDurationMs": 14200,
+        "fps": 30,
+        "visualVariant": 0
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count only collision events where the two visible identities are A and B. Return exactly one allowed count."
+    },
+    {
+      "candidateId": "pc-663bbe644f6b2619",
+      "cellId": "cell-twenty-four-pair-collisions",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Twenty-four explicit pairwise collisions include target-pair and identity-pair distractor events.",
+      "failureModeId": "identity-pair-interaction-counting",
+      "generator": "pair-collision",
+      "seed": 4600001,
+      "difficulty": 91,
+      "variant": 1,
+      "artifact": "public/evaluations/pair-collision-discovery-v1/pc-663bbe644f6b2619.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 14200,
+      "question": "How many collision events involve the specific pair A AND B together? Ignore collisions involving any other pairing.",
+      "answerOptions": [
+        "6",
+        "7",
+        "8",
+        "5"
+      ],
+      "expectedAnswer": "6",
+      "sha256": "bc69c0d136e0a7400bf9b98e3b192a34190cab4bd34e16cb8f7332e39f7e5dd9",
+      "parameters": {
+        "targetCount": 6,
+        "events": [
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            5
+          ]
+        ],
+        "videoDurationMs": 14200,
+        "fps": 30,
+        "visualVariant": 1
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count only collision events where the two visible identities are A and B. Return exactly one allowed count."
+    },
+    {
+      "candidateId": "pc-666f901525b1670e",
+      "cellId": "cell-twenty-four-pair-collisions",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Twenty-four explicit pairwise collisions include target-pair and identity-pair distractor events.",
+      "failureModeId": "identity-pair-interaction-counting",
+      "generator": "pair-collision",
+      "seed": 4600002,
+      "difficulty": 91,
+      "variant": 2,
+      "artifact": "public/evaluations/pair-collision-discovery-v1/pc-666f901525b1670e.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 14200,
+      "question": "How many collision events involve the specific pair A AND B together? Ignore collisions involving any other pairing.",
+      "answerOptions": [
+        "7",
+        "6",
+        "8",
+        "5"
+      ],
+      "expectedAnswer": "7",
+      "sha256": "a1646678d007818289bc3fd39fe1e7e407b1a0dbcfcced1a521523eb92377a8f",
+      "parameters": {
+        "targetCount": 7,
+        "events": [
+          [
+            5,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "videoDurationMs": 14200,
+        "fps": 30,
+        "visualVariant": 2
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count only collision events where the two visible identities are A and B. Return exactly one allowed count."
+    },
+    {
+      "candidateId": "pc-68f0892380b695c6",
+      "cellId": "cell-twenty-four-pair-collisions",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Twenty-four explicit pairwise collisions include target-pair and identity-pair distractor events.",
+      "failureModeId": "identity-pair-interaction-counting",
+      "generator": "pair-collision",
+      "seed": 4600003,
+      "difficulty": 91,
+      "variant": 3,
+      "artifact": "public/evaluations/pair-collision-discovery-v1/pc-68f0892380b695c6.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 14200,
+      "question": "How many collision events involve the specific pair A AND B together? Ignore collisions involving any other pairing.",
+      "answerOptions": [
+        "7",
+        "6",
+        "8",
+        "5"
+      ],
+      "expectedAnswer": "8",
+      "sha256": "adcadf5ea13cc85feda47b5fdc7e70c396ef78fe27854a93fcd35c67778d8be3",
+      "parameters": {
+        "targetCount": 8,
+        "events": [
+          [
+            4,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "videoDurationMs": 14200,
+        "fps": 30,
+        "visualVariant": 3
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count only collision events where the two visible identities are A and B. Return exactly one allowed count."
+    },
+    {
+      "candidateId": "pc-5011d99a85dd72d1",
+      "cellId": "cell-twenty-four-pair-collisions",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Twenty-four explicit pairwise collisions include target-pair and identity-pair distractor events.",
+      "failureModeId": "identity-pair-interaction-counting",
+      "generator": "pair-collision",
+      "seed": 4600004,
+      "difficulty": 91,
+      "variant": 4,
+      "artifact": "public/evaluations/pair-collision-discovery-v1/pc-5011d99a85dd72d1.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 14200,
+      "question": "How many collision events involve the specific pair A AND B together? Ignore collisions involving any other pairing.",
+      "answerOptions": [
+        "7",
+        "8",
+        "6",
+        "5"
+      ],
+      "expectedAnswer": "5",
+      "sha256": "49b17d067041aeb15e728bbd7485282ffa04dff14630a0fcfd1d22bb8fa6dde8",
+      "parameters": {
+        "targetCount": 5,
+        "events": [
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            5,
+            3
+          ]
+        ],
+        "videoDurationMs": 14200,
+        "fps": 30,
+        "visualVariant": 4
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count only collision events where the two visible identities are A and B. Return exactly one allowed count."
+    },
+    {
+      "candidateId": "pc-a5ad4f6b410490cc",
+      "cellId": "cell-twenty-four-pair-collisions",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Twenty-four explicit pairwise collisions include target-pair and identity-pair distractor events.",
+      "failureModeId": "identity-pair-interaction-counting",
+      "generator": "pair-collision",
+      "seed": 4600005,
+      "difficulty": 91,
+      "variant": 5,
+      "artifact": "public/evaluations/pair-collision-discovery-v1/pc-a5ad4f6b410490cc.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 14200,
+      "question": "How many collision events involve the specific pair A AND B together? Ignore collisions involving any other pairing.",
+      "answerOptions": [
+        "8",
+        "7",
+        "6",
+        "5"
+      ],
+      "expectedAnswer": "6",
+      "sha256": "00265013c5b5721d289248058f4f2f7c47fb1a6ad277c047744045ec69972d1c",
+      "parameters": {
+        "targetCount": 6,
+        "events": [
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "videoDurationMs": 14200,
+        "fps": 30,
+        "visualVariant": 5
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count only collision events where the two visible identities are A and B. Return exactly one allowed count."
+    },
+    {
+      "candidateId": "pc-a391b54fcfd5d226",
+      "cellId": "cell-twenty-four-pair-collisions",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Twenty-four explicit pairwise collisions include target-pair and identity-pair distractor events.",
+      "failureModeId": "identity-pair-interaction-counting",
+      "generator": "pair-collision",
+      "seed": 4600006,
+      "difficulty": 91,
+      "variant": 6,
+      "artifact": "public/evaluations/pair-collision-discovery-v1/pc-a391b54fcfd5d226.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 14200,
+      "question": "How many collision events involve the specific pair A AND B together? Ignore collisions involving any other pairing.",
+      "answerOptions": [
+        "8",
+        "7",
+        "6",
+        "5"
+      ],
+      "expectedAnswer": "7",
+      "sha256": "15c1f700deccea534ea3ade4b13a76de9e4bf51e05f494fbb61f43c2fc9d1a31",
+      "parameters": {
+        "targetCount": 7,
+        "events": [
+          [
+            5,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            5,
+            4
+          ]
+        ],
+        "videoDurationMs": 14200,
+        "fps": 30,
+        "visualVariant": 6
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count only collision events where the two visible identities are A and B. Return exactly one allowed count."
+    },
+    {
+      "candidateId": "pc-b84a8a5a88418c17",
+      "cellId": "cell-twenty-four-pair-collisions",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Twenty-four explicit pairwise collisions include target-pair and identity-pair distractor events.",
+      "failureModeId": "identity-pair-interaction-counting",
+      "generator": "pair-collision",
+      "seed": 4600007,
+      "difficulty": 91,
+      "variant": 7,
+      "artifact": "public/evaluations/pair-collision-discovery-v1/pc-b84a8a5a88418c17.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 14200,
+      "question": "How many collision events involve the specific pair A AND B together? Ignore collisions involving any other pairing.",
+      "answerOptions": [
+        "6",
+        "8",
+        "7",
+        "5"
+      ],
+      "expectedAnswer": "8",
+      "sha256": "01eb37f69fe19e7009956c8e3902ce07d0c0784cb5832b10dea80b7b69672527",
+      "parameters": {
+        "targetCount": 8,
+        "events": [
+          [
+            5,
+            0
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            5
+          ]
+        ],
+        "videoDurationMs": 14200,
+        "fps": 30,
+        "visualVariant": 7
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count only collision events where the two visible identities are A and B. Return exactly one allowed count."
+    }
+  ]
+}

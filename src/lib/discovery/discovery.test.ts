@@ -101,8 +101,13 @@ import { createCubeNetGrid, cubeFaceAnswers, foldNet } from "./cube-net";
 import { applyArrowPath, createArrowPathGrid } from "./arrow-path";
 import { createParityGrid, parityMatrices, parityViolations } from "./parity-matrix";
 import { createZoneEntryGrid } from "./zone-entry-count";
+import { countTargetPair, createPairCollisionGrid } from "./pair-collision-count";
 
 describe("adaptive multimodal discovery", () => {
+  it("binds relational collision streams to balanced target-pair counts", () => {
+    for (const candidate of createPairCollisionGrid()) expect(countTargetPair(candidate.parameters.events)).toBe(candidate.parameters.targetCount);
+  });
+
   it("binds fifth-target successors in the denser ordinal stream", () => {
     for (const candidate of createOrdinalHardGrid()) {
       expect(candidate.parameters.sequence).toHaveLength(32);
