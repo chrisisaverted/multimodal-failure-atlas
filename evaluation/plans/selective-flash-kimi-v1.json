@@ -1,0 +1,24 @@
+{
+  "id": "selective-flash-screen-v1-kimi-no-reasoning-2026-09-01",
+  "resolvedAt": "2026-09-01",
+  "gateway": "OpenRouter",
+  "evaluationPlanId": "selective-flash-discovery-v1",
+  "evaluationPlanSha256": "69406e7d63312d04fdd7c20da2eb05a3788c7b21142955518cc149aafee81b7f",
+  "stage": "balanced-selective-event-counting-screen",
+  "casesPerModel": 8,
+  "trials": 1,
+  "temperature": 0,
+  "maxOutputTokens": 512,
+  "reasoning": { "effort": "none", "exclude": true },
+  "scorer": "terminal-option-v2",
+  "allowProviderFallbacks": false,
+  "dataCollection": "deny",
+  "campaignCostCeilingUsd": 4,
+  "models": [
+    {
+      "modelId": "moonshotai/kimi-k3",
+      "modelRevision": "moonshotai/kimi-k3-20260715",
+      "upstreamProvider": "Moonshot AI"
+    }
+  ]
+}

@@ -48,8 +48,31 @@ import {
   createChangeLocalizationDiscoveryGrid,
   renderChangeLocalizationSvg,
 } from "./change-localization";
+import {
+  createSelectiveFlashDiscoveryGrid,
+  renderSelectiveFlashSvg,
+  targetFlashStarts,
+} from "./selective-flash-tracking";
 
 describe("adaptive multimodal discovery", () => {
+  it("balances selective target-flash counts with exact non-overlapping schedules", () => {
+    const candidates = createSelectiveFlashDiscoveryGrid();
+    expect(candidates).toHaveLength(8);
+    expect(candidates.map((candidate) => candidate.expectedAnswer).sort()).toEqual(
+      ["8", "8", "9", "9", "10", "10", "11", "11"].sort(),
+    );
+    for (const candidate of candidates) {
+      const starts = targetFlashStarts(candidate);
+      expect(starts).toHaveLength(candidate.parameters.targetCount);
+      for (let index = 1; index < starts.length; index += 1)
+        expect(starts[index]! - starts[index - 1]!).toBeGreaterThan(
+          candidate.parameters.flashDurationMs,
+        );
+      expect(renderSelectiveFlashSvg(candidate, 0)).toBe(renderSelectiveFlashSvg(candidate, 0));
+      expect(renderSelectiveFlashSvg(candidate, starts[0]!)).toContain("#f4d934");
+    }
+  });
+
   it("balances dense change locations across all four quadrants", () => {
     const candidates = createChangeLocalizationDiscoveryGrid();
     expect(candidates).toHaveLength(16);

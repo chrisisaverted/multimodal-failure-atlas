@@ -44,6 +44,8 @@
     "plan:change-localization": "tsx scripts/plan-change-localization.ts",
     "plan:change-localization:v2": "tsx scripts/plan-change-localization-v2.ts",
     "generate:change-localization": "tsx scripts/materialize-change-localization.ts",
+    "plan:selective-flash": "tsx scripts/plan-selective-flash.ts",
+    "generate:selective-flash": "tsx scripts/materialize-selective-flash.ts",
     "publish:adaptive": "tsx scripts/publish-adaptive-results.ts",
     "publish:precision-wire": "tsx scripts/publish-precision-wire-results.ts",
     "evaluate": "tsx scripts/evaluate.ts",
