@@ -58,8 +58,27 @@ import {
   mazePanelEdges,
   renderMazeReachabilitySvg,
 } from "./maze-reachability";
+import {
+  createTemporalOrderDiscoveryGrid,
+  renderTemporalOrderSvg,
+  temporalOrderSchedule,
+} from "./temporal-order";
 
 describe("adaptive multimodal discovery", () => {
+  it("balances temporal orders with exact non-overlapping visible flashes", () => {
+    const candidates = createTemporalOrderDiscoveryGrid();
+    expect(candidates).toHaveLength(8);
+    for (const candidate of candidates) {
+      const schedule = temporalOrderSchedule(candidate);
+      expect(schedule.map((event) => event.label).join("-")).toBe(candidate.expectedAnswer);
+      for (let index = 1; index < schedule.length; index += 1)
+        expect(schedule[index]!.startMs - schedule[index - 1]!.startMs).toBeGreaterThan(
+          candidate.parameters.flashDurationMs,
+        );
+      expect(renderTemporalOrderSvg(candidate, schedule[0]!.startMs)).toContain("#f4d934");
+    }
+  });
+
   it("constructs balanced edge-count-matched maze reachability panels", () => {
     const candidates = createMazeReachabilityDiscoveryGrid();
     expect(candidates).toHaveLength(16);

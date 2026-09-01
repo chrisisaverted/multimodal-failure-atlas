@@ -1,0 +1,200 @@
+{
+  "id": "temporal-order-discovery-v1",
+  "generatorVersion": "temporal-order-v1",
+  "status": "discovery-only",
+  "hypothesis": "Video routes fail to preserve the ordering of short, plainly visible events across a clip.",
+  "candidates": [
+    {
+      "id": "to-57eb888b0487d6b5",
+      "cellId": "cell-ee7327084c9d6df7",
+      "split": "discovery",
+      "seed": 1800000,
+      "failureModeId": "brief-event-temporal-ordering",
+      "question": "In what order do the four labeled disks flash yellow?",
+      "answerOptions": [
+        "A-B-C-D",
+        "B-D-A-C",
+        "C-A-D-B",
+        "D-C-B-A"
+      ],
+      "expectedAnswer": "A-B-C-D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "orderIndex": 0,
+        "flashDurationMs": 200,
+        "gapMs": 700,
+        "videoDurationMs": 7000,
+        "fps": 30,
+        "visualVariant": 0
+      }
+    },
+    {
+      "id": "to-7834ac3400ac7b30",
+      "cellId": "cell-ee7327084c9d6df7",
+      "split": "discovery",
+      "seed": 1800001,
+      "failureModeId": "brief-event-temporal-ordering",
+      "question": "In what order do the four labeled disks flash yellow?",
+      "answerOptions": [
+        "B-D-A-C",
+        "A-B-C-D",
+        "C-A-D-B",
+        "D-C-B-A"
+      ],
+      "expectedAnswer": "B-D-A-C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "orderIndex": 1,
+        "flashDurationMs": 200,
+        "gapMs": 700,
+        "videoDurationMs": 7000,
+        "fps": 30,
+        "visualVariant": 1
+      }
+    },
+    {
+      "id": "to-0d6c0bd7a96c04b5",
+      "cellId": "cell-ee7327084c9d6df7",
+      "split": "discovery",
+      "seed": 1800002,
+      "failureModeId": "brief-event-temporal-ordering",
+      "question": "In what order do the four labeled disks flash yellow?",
+      "answerOptions": [
+        "A-B-C-D",
+        "B-D-A-C",
+        "C-A-D-B",
+        "D-C-B-A"
+      ],
+      "expectedAnswer": "C-A-D-B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "orderIndex": 2,
+        "flashDurationMs": 200,
+        "gapMs": 700,
+        "videoDurationMs": 7000,
+        "fps": 30,
+        "visualVariant": 2
+      }
+    },
+    {
+      "id": "to-3c584b2e8b38ad61",
+      "cellId": "cell-ee7327084c9d6df7",
+      "split": "discovery",
+      "seed": 1800003,
+      "failureModeId": "brief-event-temporal-ordering",
+      "question": "In what order do the four labeled disks flash yellow?",
+      "answerOptions": [
+        "A-B-C-D",
+        "B-D-A-C",
+        "C-A-D-B",
+        "D-C-B-A"
+      ],
+      "expectedAnswer": "D-C-B-A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "orderIndex": 3,
+        "flashDurationMs": 200,
+        "gapMs": 700,
+        "videoDurationMs": 7000,
+        "fps": 30,
+        "visualVariant": 3
+      }
+    },
+    {
+      "id": "to-5447879c3240c5e1",
+      "cellId": "cell-ee7327084c9d6df7",
+      "split": "discovery",
+      "seed": 1800004,
+      "failureModeId": "brief-event-temporal-ordering",
+      "question": "In what order do the four labeled disks flash yellow?",
+      "answerOptions": [
+        "B-D-A-C",
+        "C-A-D-B",
+        "A-B-C-D",
+        "D-C-B-A"
+      ],
+      "expectedAnswer": "A-B-C-D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "orderIndex": 0,
+        "flashDurationMs": 200,
+        "gapMs": 700,
+        "videoDurationMs": 7000,
+        "fps": 30,
+        "visualVariant": 4
+      }
+    },
+    {
+      "id": "to-4a76e08afcce648b",
+      "cellId": "cell-ee7327084c9d6df7",
+      "split": "discovery",
+      "seed": 1800005,
+      "failureModeId": "brief-event-temporal-ordering",
+      "question": "In what order do the four labeled disks flash yellow?",
+      "answerOptions": [
+        "C-A-D-B",
+        "B-D-A-C",
+        "A-B-C-D",
+        "D-C-B-A"
+      ],
+      "expectedAnswer": "B-D-A-C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "orderIndex": 1,
+        "flashDurationMs": 200,
+        "gapMs": 700,
+        "videoDurationMs": 7000,
+        "fps": 30,
+        "visualVariant": 5
+      }
+    },
+    {
+      "id": "to-8eef1a3a47d8d22d",
+      "cellId": "cell-ee7327084c9d6df7",
+      "split": "discovery",
+      "seed": 1800006,
+      "failureModeId": "brief-event-temporal-ordering",
+      "question": "In what order do the four labeled disks flash yellow?",
+      "answerOptions": [
+        "C-A-D-B",
+        "B-D-A-C",
+        "A-B-C-D",
+        "D-C-B-A"
+      ],
+      "expectedAnswer": "C-A-D-B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "orderIndex": 2,
+        "flashDurationMs": 200,
+        "gapMs": 700,
+        "videoDurationMs": 7000,
+        "fps": 30,
+        "visualVariant": 6
+      }
+    },
+    {
+      "id": "to-2c563d89e702f6c2",
+      "cellId": "cell-ee7327084c9d6df7",
+      "split": "discovery",
+      "seed": 1800007,
+      "failureModeId": "brief-event-temporal-ordering",
+      "question": "In what order do the four labeled disks flash yellow?",
+      "answerOptions": [
+        "B-D-A-C",
+        "C-A-D-B",
+        "A-B-C-D",
+        "D-C-B-A"
+      ],
+      "expectedAnswer": "D-C-B-A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "orderIndex": 3,
+        "flashDurationMs": 200,
+        "gapMs": 700,
+        "videoDurationMs": 7000,
+        "fps": 30,
+        "visualVariant": 7
+      }
+    }
+  ]
+}
