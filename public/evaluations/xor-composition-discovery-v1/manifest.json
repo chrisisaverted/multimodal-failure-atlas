@@ -3,6 +3,7 @@
   "planSha256": "446d95b2748b8b11e259baab20ad62d4edf266190433e6a6ae75bd7f854d9146",
   "generatorVersion": "visual-xor-composition-v1",
   "renderer": "xor-composition-svg-raster-v1",
+  "fps": 0,
   "cases": [
     {
       "candidateId": "xc-44d8e18dce62d63a",
