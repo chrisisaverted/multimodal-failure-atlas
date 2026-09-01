@@ -1,0 +1,409 @@
+{
+  "id": "interval-containment-discovery-v1",
+  "planSha256": "a57b581484d0d908e13cd5135c2ba1e34a9c62bdaca11807c12bdb48dc5d3339",
+  "generatorVersion": "temporal-interval-containment-v1",
+  "renderer": "interval-containment-svg-raster-v1",
+  "fps": 30,
+  "cases": [
+    {
+      "candidateId": "ic-ca65ef60a21e8d0e",
+      "cellId": "cell-four-intervals-eighteen-beats",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four labeled binary streams each expose one interval through separate onset and offset times.",
+      "failureModeId": "temporal-interval-containment",
+      "generator": "interval-containment",
+      "seed": 3800000,
+      "difficulty": 81,
+      "variant": 0,
+      "artifact": "public/evaluations/interval-containment-discovery-v1/ic-ca65ef60a21e8d0e.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 12800,
+      "question": "Which lane's complete ON interval strictly contains the complete ON intervals of exactly TWO other lanes?",
+      "answerOptions": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "a71a93e2454060beaa60ab56abd1d252a1c177fb404609fff6334e8e708fdb1d",
+      "parameters": {
+        "targetLane": 0,
+        "intervals": [
+          [
+            2,
+            17
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            0,
+            6
+          ]
+        ],
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 0
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track every lane's ON and OFF boundaries and compare complete interval containment. Return exactly one lane letter."
+    },
+    {
+      "candidateId": "ic-2a04779e3cc6daa1",
+      "cellId": "cell-four-intervals-eighteen-beats",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four labeled binary streams each expose one interval through separate onset and offset times.",
+      "failureModeId": "temporal-interval-containment",
+      "generator": "interval-containment",
+      "seed": 3800001,
+      "difficulty": 81,
+      "variant": 1,
+      "artifact": "public/evaluations/interval-containment-discovery-v1/ic-2a04779e3cc6daa1.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 12800,
+      "question": "Which lane's complete ON interval strictly contains the complete ON intervals of exactly TWO other lanes?",
+      "answerOptions": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "635ef513b1ccb02a4448dd828703d85456481f6a6e3671b10cc69e1d7e5a1ed0",
+      "parameters": {
+        "targetLane": 1,
+        "intervals": [
+          [
+            5,
+            8
+          ],
+          [
+            2,
+            17
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            0,
+            6
+          ]
+        ],
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 1
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track every lane's ON and OFF boundaries and compare complete interval containment. Return exactly one lane letter."
+    },
+    {
+      "candidateId": "ic-e55070e952a6269e",
+      "cellId": "cell-four-intervals-eighteen-beats",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four labeled binary streams each expose one interval through separate onset and offset times.",
+      "failureModeId": "temporal-interval-containment",
+      "generator": "interval-containment",
+      "seed": 3800002,
+      "difficulty": 81,
+      "variant": 2,
+      "artifact": "public/evaluations/interval-containment-discovery-v1/ic-e55070e952a6269e.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 12800,
+      "question": "Which lane's complete ON interval strictly contains the complete ON intervals of exactly TWO other lanes?",
+      "answerOptions": [
+        "C",
+        "B",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "bd108b04cd0f712c144e60e3cd365969feb79c42c1dd96c1ab72e006d5e246ad",
+      "parameters": {
+        "targetLane": 2,
+        "intervals": [
+          [
+            5,
+            8
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            2,
+            17
+          ],
+          [
+            0,
+            6
+          ]
+        ],
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 2
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track every lane's ON and OFF boundaries and compare complete interval containment. Return exactly one lane letter."
+    },
+    {
+      "candidateId": "ic-fb260f424a9afc33",
+      "cellId": "cell-four-intervals-eighteen-beats",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four labeled binary streams each expose one interval through separate onset and offset times.",
+      "failureModeId": "temporal-interval-containment",
+      "generator": "interval-containment",
+      "seed": 3800003,
+      "difficulty": 81,
+      "variant": 3,
+      "artifact": "public/evaluations/interval-containment-discovery-v1/ic-fb260f424a9afc33.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 12800,
+      "question": "Which lane's complete ON interval strictly contains the complete ON intervals of exactly TWO other lanes?",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "2d83cf9924057e90d6af5471ed3bd107ffa7c7c3d8ca41b33fc46b23d7e7fea8",
+      "parameters": {
+        "targetLane": 3,
+        "intervals": [
+          [
+            5,
+            8
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            2,
+            17
+          ]
+        ],
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 3
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track every lane's ON and OFF boundaries and compare complete interval containment. Return exactly one lane letter."
+    },
+    {
+      "candidateId": "ic-21424772574c2422",
+      "cellId": "cell-four-intervals-eighteen-beats",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four labeled binary streams each expose one interval through separate onset and offset times.",
+      "failureModeId": "temporal-interval-containment",
+      "generator": "interval-containment",
+      "seed": 3800004,
+      "difficulty": 81,
+      "variant": 4,
+      "artifact": "public/evaluations/interval-containment-discovery-v1/ic-21424772574c2422.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 12800,
+      "question": "Which lane's complete ON interval strictly contains the complete ON intervals of exactly TWO other lanes?",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "a71a93e2454060beaa60ab56abd1d252a1c177fb404609fff6334e8e708fdb1d",
+      "parameters": {
+        "targetLane": 0,
+        "intervals": [
+          [
+            2,
+            17
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            0,
+            6
+          ]
+        ],
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 4
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track every lane's ON and OFF boundaries and compare complete interval containment. Return exactly one lane letter."
+    },
+    {
+      "candidateId": "ic-cbc09628d8c861d4",
+      "cellId": "cell-four-intervals-eighteen-beats",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four labeled binary streams each expose one interval through separate onset and offset times.",
+      "failureModeId": "temporal-interval-containment",
+      "generator": "interval-containment",
+      "seed": 3800005,
+      "difficulty": 81,
+      "variant": 5,
+      "artifact": "public/evaluations/interval-containment-discovery-v1/ic-cbc09628d8c861d4.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 12800,
+      "question": "Which lane's complete ON interval strictly contains the complete ON intervals of exactly TWO other lanes?",
+      "answerOptions": [
+        "C",
+        "B",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "635ef513b1ccb02a4448dd828703d85456481f6a6e3671b10cc69e1d7e5a1ed0",
+      "parameters": {
+        "targetLane": 1,
+        "intervals": [
+          [
+            5,
+            8
+          ],
+          [
+            2,
+            17
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            0,
+            6
+          ]
+        ],
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 5
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track every lane's ON and OFF boundaries and compare complete interval containment. Return exactly one lane letter."
+    },
+    {
+      "candidateId": "ic-0aca4cab2c3327f6",
+      "cellId": "cell-four-intervals-eighteen-beats",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four labeled binary streams each expose one interval through separate onset and offset times.",
+      "failureModeId": "temporal-interval-containment",
+      "generator": "interval-containment",
+      "seed": 3800006,
+      "difficulty": 81,
+      "variant": 6,
+      "artifact": "public/evaluations/interval-containment-discovery-v1/ic-0aca4cab2c3327f6.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 12800,
+      "question": "Which lane's complete ON interval strictly contains the complete ON intervals of exactly TWO other lanes?",
+      "answerOptions": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "bd108b04cd0f712c144e60e3cd365969feb79c42c1dd96c1ab72e006d5e246ad",
+      "parameters": {
+        "targetLane": 2,
+        "intervals": [
+          [
+            5,
+            8
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            2,
+            17
+          ],
+          [
+            0,
+            6
+          ]
+        ],
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 6
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track every lane's ON and OFF boundaries and compare complete interval containment. Return exactly one lane letter."
+    },
+    {
+      "candidateId": "ic-6931b0281917b0a1",
+      "cellId": "cell-four-intervals-eighteen-beats",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four labeled binary streams each expose one interval through separate onset and offset times.",
+      "failureModeId": "temporal-interval-containment",
+      "generator": "interval-containment",
+      "seed": 3800007,
+      "difficulty": 81,
+      "variant": 7,
+      "artifact": "public/evaluations/interval-containment-discovery-v1/ic-6931b0281917b0a1.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 12800,
+      "question": "Which lane's complete ON interval strictly contains the complete ON intervals of exactly TWO other lanes?",
+      "answerOptions": [
+        "C",
+        "A",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "2d83cf9924057e90d6af5471ed3bd107ffa7c7c3d8ca41b33fc46b23d7e7fea8",
+      "parameters": {
+        "targetLane": 3,
+        "intervals": [
+          [
+            5,
+            8
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            2,
+            17
+          ]
+        ],
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 7
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track every lane's ON and OFF boundaries and compare complete interval containment. Return exactly one lane letter."
+    }
+  ]
+}

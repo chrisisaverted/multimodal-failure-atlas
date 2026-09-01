@@ -1,0 +1,328 @@
+{
+  "id": "interval-containment-discovery-v1",
+  "generatorVersion": "temporal-interval-containment-v1",
+  "status": "discovery-only",
+  "hypothesis": "Video models fail to recover Allen-style interval relations from distributed state changes over time.",
+  "candidates": [
+    {
+      "id": "ic-ca65ef60a21e8d0e",
+      "cellId": "cell-four-intervals-eighteen-beats",
+      "split": "discovery",
+      "seed": 3800000,
+      "failureModeId": "temporal-interval-containment",
+      "question": "Which lane's complete ON interval strictly contains the complete ON intervals of exactly TWO other lanes?",
+      "answerOptions": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetLane": 0,
+        "intervals": [
+          [
+            2,
+            17
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            0,
+            6
+          ]
+        ],
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 0
+      }
+    },
+    {
+      "id": "ic-2a04779e3cc6daa1",
+      "cellId": "cell-four-intervals-eighteen-beats",
+      "split": "discovery",
+      "seed": 3800001,
+      "failureModeId": "temporal-interval-containment",
+      "question": "Which lane's complete ON interval strictly contains the complete ON intervals of exactly TWO other lanes?",
+      "answerOptions": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetLane": 1,
+        "intervals": [
+          [
+            5,
+            8
+          ],
+          [
+            2,
+            17
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            0,
+            6
+          ]
+        ],
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 1
+      }
+    },
+    {
+      "id": "ic-e55070e952a6269e",
+      "cellId": "cell-four-intervals-eighteen-beats",
+      "split": "discovery",
+      "seed": 3800002,
+      "failureModeId": "temporal-interval-containment",
+      "question": "Which lane's complete ON interval strictly contains the complete ON intervals of exactly TWO other lanes?",
+      "answerOptions": [
+        "C",
+        "B",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetLane": 2,
+        "intervals": [
+          [
+            5,
+            8
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            2,
+            17
+          ],
+          [
+            0,
+            6
+          ]
+        ],
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 2
+      }
+    },
+    {
+      "id": "ic-fb260f424a9afc33",
+      "cellId": "cell-four-intervals-eighteen-beats",
+      "split": "discovery",
+      "seed": 3800003,
+      "failureModeId": "temporal-interval-containment",
+      "question": "Which lane's complete ON interval strictly contains the complete ON intervals of exactly TWO other lanes?",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetLane": 3,
+        "intervals": [
+          [
+            5,
+            8
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            2,
+            17
+          ]
+        ],
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 3
+      }
+    },
+    {
+      "id": "ic-21424772574c2422",
+      "cellId": "cell-four-intervals-eighteen-beats",
+      "split": "discovery",
+      "seed": 3800004,
+      "failureModeId": "temporal-interval-containment",
+      "question": "Which lane's complete ON interval strictly contains the complete ON intervals of exactly TWO other lanes?",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetLane": 0,
+        "intervals": [
+          [
+            2,
+            17
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            0,
+            6
+          ]
+        ],
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 4
+      }
+    },
+    {
+      "id": "ic-cbc09628d8c861d4",
+      "cellId": "cell-four-intervals-eighteen-beats",
+      "split": "discovery",
+      "seed": 3800005,
+      "failureModeId": "temporal-interval-containment",
+      "question": "Which lane's complete ON interval strictly contains the complete ON intervals of exactly TWO other lanes?",
+      "answerOptions": [
+        "C",
+        "B",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetLane": 1,
+        "intervals": [
+          [
+            5,
+            8
+          ],
+          [
+            2,
+            17
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            0,
+            6
+          ]
+        ],
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 5
+      }
+    },
+    {
+      "id": "ic-0aca4cab2c3327f6",
+      "cellId": "cell-four-intervals-eighteen-beats",
+      "split": "discovery",
+      "seed": 3800006,
+      "failureModeId": "temporal-interval-containment",
+      "question": "Which lane's complete ON interval strictly contains the complete ON intervals of exactly TWO other lanes?",
+      "answerOptions": [
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetLane": 2,
+        "intervals": [
+          [
+            5,
+            8
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            2,
+            17
+          ],
+          [
+            0,
+            6
+          ]
+        ],
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 6
+      }
+    },
+    {
+      "id": "ic-6931b0281917b0a1",
+      "cellId": "cell-four-intervals-eighteen-beats",
+      "split": "discovery",
+      "seed": 3800007,
+      "failureModeId": "temporal-interval-containment",
+      "question": "Which lane's complete ON interval strictly contains the complete ON intervals of exactly TWO other lanes?",
+      "answerOptions": [
+        "C",
+        "A",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetLane": 3,
+        "intervals": [
+          [
+            5,
+            8
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            2,
+            17
+          ]
+        ],
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 7
+      }
+    }
+  ]
+}
