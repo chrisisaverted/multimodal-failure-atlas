@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Clock3, Database, ShieldCheck } from "lucide-react";
-import { groupRunSummaries, publishedRuns } from "@/lib/published-results";
+import { publishedRuns } from "@/lib/published-results";
+import { admittedEvidence } from "@/lib/admitted-evidence";
 import protocol from "../../../evaluation/plans/openrouter-frontier-matrix-v2.json";
 
 export const metadata: Metadata = { title: "Models" };
@@ -9,7 +10,28 @@ export const metadata: Metadata = { title: "Models" };
 const percent = (value: number) => `${Math.round(value * 100)}%`;
 
 export default function ModelsPage() {
-  const summaries = groupRunSummaries(publishedRuns);
+  const strictRoutes = admittedEvidence.families[0]!.models.map((route) => {
+    const familyRoutes = admittedEvidence.families.map((family) =>
+      family.models.find((model) => model.modelId === route.modelId)!,
+    );
+    const nativeCorrect = familyRoutes.reduce((sum, model) => sum + model.native.correct, 0);
+    const nativeN = familyRoutes.reduce((sum, model) => sum + model.native.substantiveAnswers, 0);
+    const controlCorrect = familyRoutes.reduce((sum, model) => sum + model.control.correct, 0);
+    const controlN = familyRoutes.reduce((sum, model) => sum + model.control.substantiveAnswers, 0);
+    const pending = familyRoutes.reduce(
+      (sum, model) => sum + model.native.pendingReview + model.control.pendingReview,
+      0,
+    );
+    return {
+      modelId: route.modelId,
+      upstreamProvider: route.upstreamProvider,
+      nativeCorrect,
+      nativeN,
+      controlCorrect,
+      controlN,
+      pending,
+    };
+  });
   const totalCost = publishedRuns.reduce((sum, run) => sum + run.costUsd, 0);
   return (
     <section className="section-shell page-section">
@@ -26,37 +48,43 @@ export default function ModelsPage() {
         </p>
       </header>
 
-      {summaries.length ? (
+      {strictRoutes.length ? (
         <>
           <div className="integrity-banner verified-banner">
             <ShieldCheck size={24} />
             <div>
               <b>
-                {publishedRuns.length} genuine responses across {protocol.models.length} model families are
-                published.
+                {admittedEvidence.families.length} strict families recur across three frontier routes; a
+                broader frozen pilot covers {protocol.models.length} model families.
               </b>
               <p>
-                Frozen protocol {protocol.id}. These are diagnostic observations, not a leaderboard; every
-                summary includes its denominator and Wilson uncertainty.
+                The strict cohort uses 16 substantive native answers per family and route. The broader
+                protocol is {protocol.id}; the two evidence levels are not pooled into a leaderboard.
               </p>
             </div>
           </div>
           <div className="observatory-summary">
-            {summaries.map((summary) => (
-              <article key={`${summary.modelVersion}-${summary.inputCondition}`}>
-                <p>{summary.inputCondition.replaceAll("-", " ")}</p>
-                <h2>{summary.modelVersion}</h2>
-                <strong>{percent(summary.accuracy)}</strong>
+            {strictRoutes.map((route) => (
+              <article key={route.modelId}>
+                <p>20-family strict native cohort</p>
+                <h2>{route.modelId}</h2>
+                <strong>{percent(route.nativeCorrect / route.nativeN)}</strong>
                 <span>
-                  95% CI {percent(summary.lower95)}–{percent(summary.upper95)} · n={summary.n}
+                  {route.nativeCorrect}/{route.nativeN} descriptive native responses · controls{" "}
+                  {route.controlCorrect}/{route.controlN}
                 </span>
+                {route.pending ? <small>{route.pending} non-substantive request(s) excluded</small> : null}
               </article>
             ))}
           </div>
           <p className="observatory-cost">
-            Provider-reported final-run API cost: <b>${totalCost.toFixed(4)}</b>. Individual family results,
-            no-answer outcomes, and sample counts appear in the response ledger.
+            Recorded provider API cost across published requests: <b>${totalCost.toFixed(4)}</b>. Aggregate
+            route rates are descriptive because families differ; individual family results, exclusions, and
+            uncertainty appear in the verified view and response ledger.
           </p>
+          <Link className="text-link" href="/verified">
+            Compare the 20 strict family results
+          </Link>
           <Link className="text-link" href="/runs">
             Inspect every response and provenance record
           </Link>

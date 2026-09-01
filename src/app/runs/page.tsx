@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight, Database, ShieldCheck } from "lucide-react";
 import { failureModesById } from "@/lib/catalogue";
-import { catalogueIdForRun, groupRunSummaries, publishedRuns } from "@/lib/published-results";
+import { catalogueIdForRun, publishedRuns } from "@/lib/published-results";
+import { admittedEvidence, admittedRunCount } from "@/lib/admitted-evidence";
 
 export const metadata: Metadata = { title: "Run ledger" };
 
@@ -11,7 +12,18 @@ const shortHash = (value: string) => `${value.slice(0, 12)}…${value.slice(-8)}
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export default function RunsPage() {
-  const summaries = groupRunSummaries(publishedRuns);
+  const strictRoutes = admittedEvidence.families[0]!.models.map((route) => {
+    const familyRoutes = admittedEvidence.families.map((family) =>
+      family.models.find((model) => model.modelId === route.modelId)!,
+    );
+    const correct = familyRoutes.reduce((sum, model) => sum + model.native.correct, 0);
+    const n = familyRoutes.reduce((sum, model) => sum + model.native.substantiveAnswers, 0);
+    const pending = familyRoutes.reduce(
+      (sum, model) => sum + model.native.pendingReview + model.control.pendingReview,
+      0,
+    );
+    return { modelId: route.modelId, correct, n, pending };
+  });
   const visibleRuns = [...publishedRuns].reverse().slice(0, 200);
 
   return (
@@ -44,8 +56,9 @@ export default function RunsPage() {
             <div>
               <b>{publishedRuns.length} genuine responses with frozen provenance.</b>
               <p>
-                Showing the latest {visibleRuns.length} below. The complete append-only JSON ledger remains
-                downloadable and is not reduced to the visible table.
+                Showing the latest {visibleRuns.length} records from all published campaigns below. The
+                downloadable strict-family ledger contains all {admittedRunCount} requests—including
+                non-substantive attempts—and is not reduced to the visible table.
               </p>
               <a className="ledger-download" href={`${basePath}/evidence/admitted-runs.json`}>
                 Download all admitted run records
@@ -54,17 +67,16 @@ export default function RunsPage() {
           </div>
 
           <div className="ledger-summary-grid">
-            {summaries.map((summary) => (
-              <article key={`${summary.provider}-${summary.modelVersion}-${summary.inputCondition}`}>
-                <span>{summary.inputCondition.replaceAll("-", " ")}</span>
-                <h2>{summary.modelVersion}</h2>
-                <strong>{percent(summary.accuracy)}</strong>
+            {strictRoutes.map((route) => (
+              <article key={route.modelId}>
+                <span>strict native cohort · 20 families</span>
+                <h2>{route.modelId}</h2>
+                <strong>{percent(route.correct / route.n)}</strong>
                 <p>
-                  {summary.correct}/{summary.n} verified · 95% Wilson {percent(summary.lower95)}–
-                  {percent(summary.upper95)}
+                  {route.correct}/{route.n} descriptive aggregate · each family remains below 50%
                 </p>
-                {summary.parseFailures > 0 ? (
-                  <small>{summary.parseFailures} responses need review</small>
+                {route.pending > 0 ? (
+                  <small>{route.pending} non-substantive request(s) excluded</small>
                 ) : null}
               </article>
             ))}

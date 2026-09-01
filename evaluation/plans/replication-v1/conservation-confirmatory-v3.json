@@ -1,0 +1,40 @@
+{
+  "id": "conservation-confirmatory-v3-external-replication-v1",
+  "cohortId": "external-replication-v1-2026-09-01",
+  "frozenAt": "2026-09-01T11:12:00.000Z",
+  "analysisRole": "Untouched post-confirmatory route replication; never used for generator selection.",
+  "evaluationPlanId": "conservation-confirmatory-v3",
+  "evaluationPlanSha256": "3d6c784fbc8de5a878fc55b0786adc121d3172fccf7081dbfe07b4155705548c",
+  "temperature": 0,
+  "maxOutputTokens": 4096,
+  "reasoning": {
+    "effort": "minimal",
+    "exclude": true
+  },
+  "scorer": "terminal-option-v3",
+  "allowProviderFallbacks": false,
+  "dataCollection": "deny",
+  "campaignCostCeilingUsd": 2,
+  "substantiveMinimumPerNativeCondition": 16,
+  "canaryPolicy": {
+    "cases": [
+      0,
+      1
+    ],
+    "requireNativeAndControlSubstantiveBeforeFullRun": true
+  },
+  "models": [
+    {
+      "modelId": "z-ai/glm-5.3-flash",
+      "modelRevision": "z-ai/glm-5.3-flash-20260826",
+      "upstreamProvider": "Z.AI",
+      "quantization": "fp8"
+    },
+    {
+      "modelId": "bytedance-seed/seed-2-1-turbo",
+      "modelRevision": "bytedance-seed/seed-2-1-turbo-20260810",
+      "upstreamProvider": "Seed",
+      "quantization": "fp8"
+    }
+  ]
+}

@@ -35,6 +35,8 @@ jobs:
         run: npm run build
         env:
           NEXT_PUBLIC_BASE_PATH: /multimodal-failure-atlas
+      - name: Audit internal links and media
+        run: npm run audit:export
       - name: Disable Jekyll processing
         run: touch out/.nojekyll
       - name: Upload Pages artifact

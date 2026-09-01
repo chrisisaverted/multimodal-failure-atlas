@@ -187,6 +187,8 @@
     "publish:adaptive": "tsx scripts/publish-adaptive-results.ts",
     "publish:admitted": "tsx scripts/publish-admitted-evidence.ts",
     "audit:coverage": "tsx scripts/audit-substantive-coverage.ts",
+    "audit:export": "tsx scripts/audit-static-export.ts",
+    "freeze:replication": "tsx scripts/freeze-replication-protocols.ts",
     "publish:precision-wire": "tsx scripts/publish-precision-wire-results.ts",
     "evaluate": "tsx scripts/evaluate.ts",
     "evaluate:fixture": "tsx scripts/evaluate.ts evaluation/plans/fixture-smoke.json",
