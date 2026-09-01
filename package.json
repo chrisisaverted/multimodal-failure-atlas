@@ -85,6 +85,8 @@
     "generate:conservation": "tsx scripts/materialize-conservation.ts",
     "plan:symmetry": "tsx scripts/plan-symmetry.ts",
     "generate:symmetry": "tsx scripts/materialize-symmetry.ts",
+    "plan:swap-tracking": "tsx scripts/plan-swap-tracking.ts",
+    "generate:swap-tracking": "tsx scripts/materialize-swap-tracking.ts",
     "publish:adaptive": "tsx scripts/publish-adaptive-results.ts",
     "publish:precision-wire": "tsx scripts/publish-precision-wire-results.ts",
     "evaluate": "tsx scripts/evaluate.ts",

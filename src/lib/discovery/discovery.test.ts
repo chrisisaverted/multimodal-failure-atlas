@@ -88,8 +88,22 @@ import { createMirrorRayGrid, createMirrorRayHardGrid, traceMirrorRay } from "./
 import { applyTransfers, createCausalTransferGrid } from "./causal-transfer";
 import { applyConservation, createConservationGrid } from "./conservation-ledger";
 import { createSymmetryGrid, symmetryMatrix } from "./symmetry-search";
+import { applySwaps, createSwapTrackingGrid } from "./swap-tracking";
 
 describe("adaptive multimodal discovery", () => {
+  it("binds every sequential swap case to its balanced target slot", () => {
+    const candidates = createSwapTrackingGrid();
+    expect(candidates).toHaveLength(8);
+    expect(candidates.map((candidate) => candidate.expectedAnswer).sort()).toEqual([
+      "1", "1", "2", "2", "3", "3", "4", "4",
+    ]);
+    for (const candidate of candidates) {
+      expect(applySwaps(candidate.parameters.initialTarget, candidate.parameters.swaps)).toBe(
+        candidate.parameters.targetFinal,
+      );
+    }
+  });
+
   it("places exactly one perfectly bilateral field in each symmetry case", () => {
     for (const candidate of createSymmetryGrid()) {
       const symmetric = Array.from({ length: 4 }, (_, panel) =>

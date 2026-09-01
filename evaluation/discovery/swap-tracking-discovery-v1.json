@@ -1,0 +1,592 @@
+{
+  "id": "swap-tracking-discovery-v1",
+  "generatorVersion": "sequential-identity-permutation-v1",
+  "status": "discovery-only",
+  "hypothesis": "Video models fail to preserve a target identity through a long sequence of explicitly visible permutations.",
+  "candidates": [
+    {
+      "id": "st-5bc5d9bdf5716387",
+      "cellId": "cell-twelve-sequential-swaps",
+      "split": "discovery",
+      "seed": 3100000,
+      "failureModeId": "sequential-identity-permutation",
+      "question": "The gold token is shown at the start, then all tokens become identical. After the 12 shown swaps, which numbered slot contains the original gold token?",
+      "answerOptions": [
+        "2",
+        "4",
+        "1",
+        "3"
+      ],
+      "expectedAnswer": "1",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "initialTarget": 1,
+        "targetFinal": 0,
+        "swaps": [
+          [
+            3,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            2
+          ]
+        ],
+        "videoDurationMs": 13200,
+        "fps": 30,
+        "visualVariant": 0
+      }
+    },
+    {
+      "id": "st-40b29a1faab86213",
+      "cellId": "cell-twelve-sequential-swaps",
+      "split": "discovery",
+      "seed": 3100001,
+      "failureModeId": "sequential-identity-permutation",
+      "question": "The gold token is shown at the start, then all tokens become identical. After the 12 shown swaps, which numbered slot contains the original gold token?",
+      "answerOptions": [
+        "2",
+        "4",
+        "1",
+        "3"
+      ],
+      "expectedAnswer": "2",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "initialTarget": 1,
+        "targetFinal": 1,
+        "swaps": [
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "videoDurationMs": 13200,
+        "fps": 30,
+        "visualVariant": 1
+      }
+    },
+    {
+      "id": "st-f1b8395e397d245f",
+      "cellId": "cell-twelve-sequential-swaps",
+      "split": "discovery",
+      "seed": 3100002,
+      "failureModeId": "sequential-identity-permutation",
+      "question": "The gold token is shown at the start, then all tokens become identical. After the 12 shown swaps, which numbered slot contains the original gold token?",
+      "answerOptions": [
+        "4",
+        "2",
+        "1",
+        "3"
+      ],
+      "expectedAnswer": "3",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "initialTarget": 2,
+        "targetFinal": 2,
+        "swaps": [
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "videoDurationMs": 13200,
+        "fps": 30,
+        "visualVariant": 2
+      }
+    },
+    {
+      "id": "st-494a472c7f3ddecf",
+      "cellId": "cell-twelve-sequential-swaps",
+      "split": "discovery",
+      "seed": 3100003,
+      "failureModeId": "sequential-identity-permutation",
+      "question": "The gold token is shown at the start, then all tokens become identical. After the 12 shown swaps, which numbered slot contains the original gold token?",
+      "answerOptions": [
+        "4",
+        "1",
+        "2",
+        "3"
+      ],
+      "expectedAnswer": "4",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "initialTarget": 3,
+        "targetFinal": 3,
+        "swaps": [
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        "videoDurationMs": 13200,
+        "fps": 30,
+        "visualVariant": 3
+      }
+    },
+    {
+      "id": "st-7ee201fbfe77b012",
+      "cellId": "cell-twelve-sequential-swaps",
+      "split": "discovery",
+      "seed": 3100004,
+      "failureModeId": "sequential-identity-permutation",
+      "question": "The gold token is shown at the start, then all tokens become identical. After the 12 shown swaps, which numbered slot contains the original gold token?",
+      "answerOptions": [
+        "4",
+        "1",
+        "2",
+        "3"
+      ],
+      "expectedAnswer": "1",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "initialTarget": 0,
+        "targetFinal": 0,
+        "swaps": [
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "videoDurationMs": 13200,
+        "fps": 30,
+        "visualVariant": 4
+      }
+    },
+    {
+      "id": "st-888fcf67e1f647c0",
+      "cellId": "cell-twelve-sequential-swaps",
+      "split": "discovery",
+      "seed": 3100005,
+      "failureModeId": "sequential-identity-permutation",
+      "question": "The gold token is shown at the start, then all tokens become identical. After the 12 shown swaps, which numbered slot contains the original gold token?",
+      "answerOptions": [
+        "1",
+        "4",
+        "2",
+        "3"
+      ],
+      "expectedAnswer": "2",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "initialTarget": 1,
+        "targetFinal": 1,
+        "swaps": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "videoDurationMs": 13200,
+        "fps": 30,
+        "visualVariant": 5
+      }
+    },
+    {
+      "id": "st-a1eb1b70c076f735",
+      "cellId": "cell-twelve-sequential-swaps",
+      "split": "discovery",
+      "seed": 3100006,
+      "failureModeId": "sequential-identity-permutation",
+      "question": "The gold token is shown at the start, then all tokens become identical. After the 12 shown swaps, which numbered slot contains the original gold token?",
+      "answerOptions": [
+        "2",
+        "1",
+        "4",
+        "3"
+      ],
+      "expectedAnswer": "3",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "initialTarget": 2,
+        "targetFinal": 2,
+        "swaps": [
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            3,
+            2
+          ]
+        ],
+        "videoDurationMs": 13200,
+        "fps": 30,
+        "visualVariant": 6
+      }
+    },
+    {
+      "id": "st-f7710b37c28ab691",
+      "cellId": "cell-twelve-sequential-swaps",
+      "split": "discovery",
+      "seed": 3100007,
+      "failureModeId": "sequential-identity-permutation",
+      "question": "The gold token is shown at the start, then all tokens become identical. After the 12 shown swaps, which numbered slot contains the original gold token?",
+      "answerOptions": [
+        "2",
+        "1",
+        "4",
+        "3"
+      ],
+      "expectedAnswer": "4",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "initialTarget": 2,
+        "targetFinal": 3,
+        "swaps": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        "videoDurationMs": 13200,
+        "fps": 30,
+        "visualVariant": 7
+      }
+    }
+  ]
+}

@@ -1,0 +1,673 @@
+{
+  "id": "swap-tracking-discovery-v1",
+  "planSha256": "4745bae8862092495ba7fec60a7e759335462dfddb7467a73a4c8d8625d0371a",
+  "generatorVersion": "sequential-identity-permutation-v1",
+  "renderer": "swap-tracking-svg-raster-v1",
+  "fps": 30,
+  "cases": [
+    {
+      "candidateId": "st-5bc5d9bdf5716387",
+      "cellId": "cell-twelve-sequential-swaps",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "The target is identified once, then becomes visually identical while twelve swaps occur.",
+      "failureModeId": "sequential-identity-permutation",
+      "generator": "swap-tracking",
+      "seed": 3100000,
+      "difficulty": 88,
+      "variant": 0,
+      "artifact": "public/evaluations/swap-tracking-discovery-v1/st-5bc5d9bdf5716387.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13200,
+      "question": "The gold token is shown at the start, then all tokens become identical. After the 12 shown swaps, which numbered slot contains the original gold token?",
+      "answerOptions": [
+        "2",
+        "4",
+        "1",
+        "3"
+      ],
+      "expectedAnswer": "1",
+      "sha256": "6a4a452d47e23a10f5d7705ed28731d07619340dadb3bdbb5bb6b9b0daf059ed",
+      "parameters": {
+        "initialTarget": 1,
+        "targetFinal": 0,
+        "swaps": [
+          [
+            3,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            2
+          ]
+        ],
+        "videoDurationMs": 13200,
+        "fps": 30,
+        "visualVariant": 0
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the originally gold token through every visible swap. Return exactly one slot number and do not explain."
+    },
+    {
+      "candidateId": "st-40b29a1faab86213",
+      "cellId": "cell-twelve-sequential-swaps",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "The target is identified once, then becomes visually identical while twelve swaps occur.",
+      "failureModeId": "sequential-identity-permutation",
+      "generator": "swap-tracking",
+      "seed": 3100001,
+      "difficulty": 88,
+      "variant": 1,
+      "artifact": "public/evaluations/swap-tracking-discovery-v1/st-40b29a1faab86213.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13200,
+      "question": "The gold token is shown at the start, then all tokens become identical. After the 12 shown swaps, which numbered slot contains the original gold token?",
+      "answerOptions": [
+        "2",
+        "4",
+        "1",
+        "3"
+      ],
+      "expectedAnswer": "2",
+      "sha256": "1457dd8aa8cf489c047230a58e6340737b1ae0536b2fe22d04d633e70eeba5e1",
+      "parameters": {
+        "initialTarget": 1,
+        "targetFinal": 1,
+        "swaps": [
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "videoDurationMs": 13200,
+        "fps": 30,
+        "visualVariant": 1
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the originally gold token through every visible swap. Return exactly one slot number and do not explain."
+    },
+    {
+      "candidateId": "st-f1b8395e397d245f",
+      "cellId": "cell-twelve-sequential-swaps",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "The target is identified once, then becomes visually identical while twelve swaps occur.",
+      "failureModeId": "sequential-identity-permutation",
+      "generator": "swap-tracking",
+      "seed": 3100002,
+      "difficulty": 88,
+      "variant": 2,
+      "artifact": "public/evaluations/swap-tracking-discovery-v1/st-f1b8395e397d245f.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13200,
+      "question": "The gold token is shown at the start, then all tokens become identical. After the 12 shown swaps, which numbered slot contains the original gold token?",
+      "answerOptions": [
+        "4",
+        "2",
+        "1",
+        "3"
+      ],
+      "expectedAnswer": "3",
+      "sha256": "cab7c7d89cc8260bda17b20dc4524ac0c60bb91f28bdf41fd740d3c9a2ceb5b5",
+      "parameters": {
+        "initialTarget": 2,
+        "targetFinal": 2,
+        "swaps": [
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "videoDurationMs": 13200,
+        "fps": 30,
+        "visualVariant": 2
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the originally gold token through every visible swap. Return exactly one slot number and do not explain."
+    },
+    {
+      "candidateId": "st-494a472c7f3ddecf",
+      "cellId": "cell-twelve-sequential-swaps",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "The target is identified once, then becomes visually identical while twelve swaps occur.",
+      "failureModeId": "sequential-identity-permutation",
+      "generator": "swap-tracking",
+      "seed": 3100003,
+      "difficulty": 88,
+      "variant": 3,
+      "artifact": "public/evaluations/swap-tracking-discovery-v1/st-494a472c7f3ddecf.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13200,
+      "question": "The gold token is shown at the start, then all tokens become identical. After the 12 shown swaps, which numbered slot contains the original gold token?",
+      "answerOptions": [
+        "4",
+        "1",
+        "2",
+        "3"
+      ],
+      "expectedAnswer": "4",
+      "sha256": "71e7cc285d1de349c018622e2978d2443162b1f0fa3cb47a9834a23512039a24",
+      "parameters": {
+        "initialTarget": 3,
+        "targetFinal": 3,
+        "swaps": [
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        "videoDurationMs": 13200,
+        "fps": 30,
+        "visualVariant": 3
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the originally gold token through every visible swap. Return exactly one slot number and do not explain."
+    },
+    {
+      "candidateId": "st-7ee201fbfe77b012",
+      "cellId": "cell-twelve-sequential-swaps",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "The target is identified once, then becomes visually identical while twelve swaps occur.",
+      "failureModeId": "sequential-identity-permutation",
+      "generator": "swap-tracking",
+      "seed": 3100004,
+      "difficulty": 88,
+      "variant": 4,
+      "artifact": "public/evaluations/swap-tracking-discovery-v1/st-7ee201fbfe77b012.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13200,
+      "question": "The gold token is shown at the start, then all tokens become identical. After the 12 shown swaps, which numbered slot contains the original gold token?",
+      "answerOptions": [
+        "4",
+        "1",
+        "2",
+        "3"
+      ],
+      "expectedAnswer": "1",
+      "sha256": "41d7f07dac71597c8d1156e813b8ad391e138968569c41806e5f8005841f5119",
+      "parameters": {
+        "initialTarget": 0,
+        "targetFinal": 0,
+        "swaps": [
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "videoDurationMs": 13200,
+        "fps": 30,
+        "visualVariant": 4
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the originally gold token through every visible swap. Return exactly one slot number and do not explain."
+    },
+    {
+      "candidateId": "st-888fcf67e1f647c0",
+      "cellId": "cell-twelve-sequential-swaps",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "The target is identified once, then becomes visually identical while twelve swaps occur.",
+      "failureModeId": "sequential-identity-permutation",
+      "generator": "swap-tracking",
+      "seed": 3100005,
+      "difficulty": 88,
+      "variant": 5,
+      "artifact": "public/evaluations/swap-tracking-discovery-v1/st-888fcf67e1f647c0.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13200,
+      "question": "The gold token is shown at the start, then all tokens become identical. After the 12 shown swaps, which numbered slot contains the original gold token?",
+      "answerOptions": [
+        "1",
+        "4",
+        "2",
+        "3"
+      ],
+      "expectedAnswer": "2",
+      "sha256": "71a4f1167e364974e5823ed9985080a14bd019f054831548198c5b1208b9c1fa",
+      "parameters": {
+        "initialTarget": 1,
+        "targetFinal": 1,
+        "swaps": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "videoDurationMs": 13200,
+        "fps": 30,
+        "visualVariant": 5
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the originally gold token through every visible swap. Return exactly one slot number and do not explain."
+    },
+    {
+      "candidateId": "st-a1eb1b70c076f735",
+      "cellId": "cell-twelve-sequential-swaps",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "The target is identified once, then becomes visually identical while twelve swaps occur.",
+      "failureModeId": "sequential-identity-permutation",
+      "generator": "swap-tracking",
+      "seed": 3100006,
+      "difficulty": 88,
+      "variant": 6,
+      "artifact": "public/evaluations/swap-tracking-discovery-v1/st-a1eb1b70c076f735.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13200,
+      "question": "The gold token is shown at the start, then all tokens become identical. After the 12 shown swaps, which numbered slot contains the original gold token?",
+      "answerOptions": [
+        "2",
+        "1",
+        "4",
+        "3"
+      ],
+      "expectedAnswer": "3",
+      "sha256": "bfa7b3c70abc54164fa0e5ec5798adb7c6b87ef9bb6e4be5f5948d8dad1509c3",
+      "parameters": {
+        "initialTarget": 2,
+        "targetFinal": 2,
+        "swaps": [
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            3,
+            2
+          ]
+        ],
+        "videoDurationMs": 13200,
+        "fps": 30,
+        "visualVariant": 6
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the originally gold token through every visible swap. Return exactly one slot number and do not explain."
+    },
+    {
+      "candidateId": "st-f7710b37c28ab691",
+      "cellId": "cell-twelve-sequential-swaps",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "The target is identified once, then becomes visually identical while twelve swaps occur.",
+      "failureModeId": "sequential-identity-permutation",
+      "generator": "swap-tracking",
+      "seed": 3100007,
+      "difficulty": 88,
+      "variant": 7,
+      "artifact": "public/evaluations/swap-tracking-discovery-v1/st-f7710b37c28ab691.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13200,
+      "question": "The gold token is shown at the start, then all tokens become identical. After the 12 shown swaps, which numbered slot contains the original gold token?",
+      "answerOptions": [
+        "2",
+        "1",
+        "4",
+        "3"
+      ],
+      "expectedAnswer": "4",
+      "sha256": "f4ae60580cdae1df1ede8391a3a33a1eb9654971a9a9e9b832f4f3298f208415",
+      "parameters": {
+        "initialTarget": 2,
+        "targetFinal": 3,
+        "swaps": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        "videoDurationMs": 13200,
+        "fps": 30,
+        "visualVariant": 7
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Track the originally gold token through every visible swap. Return exactly one slot number and do not explain."
+    }
+  ]
+}
