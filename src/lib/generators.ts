@@ -1,6 +1,6 @@
 import type { DiagnosticInstance, DiagnosticParams, GeneratorKey } from "./types";
 
-export const generatorVersion = "1.6.0";
+export const generatorVersion = "2.0.0";
 
 function mulberry32(seed: number) {
   let state = seed >>> 0;
@@ -135,6 +135,76 @@ function rotateGridPoint(index: number, side: number, quarterTurns: number) {
   let y = Math.floor(index / side);
   for (let turn = 0; turn < quarterTurns; turn += 1) [x, y] = [side - 1 - y, x];
   return y * side + x;
+}
+
+function adjustHeights(input: number[], delta: number, maximum: number) {
+  const heights = [...input];
+  const direction = Math.sign(delta);
+  for (let remaining = Math.abs(delta), cursor = 0; remaining > 0; cursor += 1) {
+    const index = cursor % heights.length;
+    if ((direction > 0 && heights[index]! < maximum) || (direction < 0 && heights[index]! > 1)) {
+      heights[index]! += direction;
+      remaining -= 1;
+    }
+  }
+  return heights;
+}
+
+function properSegmentIntersection(
+  a: readonly [number, number],
+  b: readonly [number, number],
+  c: readonly [number, number],
+  d: readonly [number, number],
+) {
+  const firstVertical = a[0] === b[0];
+  const secondVertical = c[0] === d[0];
+  if (firstVertical === secondVertical) return false;
+  const [verticalA, verticalB] = firstVertical ? [a, b] : [c, d];
+  const [horizontalA, horizontalB] = firstVertical ? [c, d] : [a, b];
+  const x = verticalA[0];
+  const y = horizontalA[1];
+  return (
+    x > Math.min(horizontalA[0], horizontalB[0]) &&
+    x < Math.max(horizontalA[0], horizontalB[0]) &&
+    y > Math.min(verticalA[1], verticalB[1]) &&
+    y < Math.max(verticalA[1], verticalB[1])
+  );
+}
+
+function countPathIntersections(flatPath: readonly number[]) {
+  const points = Array.from(
+    { length: flatPath.length / 2 },
+    (_, index) => [flatPath[index * 2]!, flatPath[index * 2 + 1]!] as [number, number],
+  );
+  let count = 0;
+  for (let first = 0; first < points.length - 1; first += 1)
+    for (let second = first + 2; second < points.length - 1; second += 1)
+      if (properSegmentIntersection(points[first]!, points[first + 1]!, points[second]!, points[second + 1]!))
+        count += 1;
+  return count;
+}
+
+function makeIntersectionPath(random: () => number, segmentCount: number) {
+  const targetMinimum = segmentCount >= 17 ? 3 : 1;
+  const targetMaximum = segmentCount >= 17 ? 6 : 4;
+  let fallback: number[] = [];
+  for (let attempt = 0; attempt < 5_000; attempt += 1) {
+    const points: number[] = [3 + Math.floor(random() * 6), 3 + Math.floor(random() * 6)];
+    let vertical = random() < 0.5;
+    for (let segment = 0; segment < segmentCount; segment += 1) {
+      const x = points[points.length - 2]!;
+      const y = points[points.length - 1]!;
+      let coordinate = 1 + Math.floor(random() * 11);
+      const previous = vertical ? y : x;
+      if (coordinate === previous) coordinate = (coordinate % 11) + 1;
+      points.push(vertical ? x : coordinate, vertical ? coordinate : y);
+      vertical = !vertical;
+    }
+    fallback = points;
+    const count = countPathIntersections(points);
+    if (count >= targetMinimum && count <= targetMaximum) return points;
+  }
+  return fallback;
 }
 
 export function generateInstance(generator: GeneratorKey, params: DiagnosticParams): DiagnosticInstance {
@@ -750,6 +820,229 @@ export function generateInstance(generator: GeneratorKey, params: DiagnosticPara
         },
         minimalPairDescription:
           "Difficulty adds points and reduces each wrong candidate toward a one-point near miss; the exact rotation oracle is discrete and exhaustive.",
+      };
+    }
+    case "wire-crossing-count": {
+      const baseCount = 16 + Math.floor(difficulty * 0.21);
+      const crossingCount = baseCount + ((params.seed + params.variant) % 4);
+      const crossingX = Array.from(
+        { length: crossingCount },
+        (_, index) => 9 + ((index + 1) * 122) / (crossingCount + 1),
+      );
+      const crossingY = crossingX.map(
+        (x, index) => 50 + Math.sin(x * 0.16 + params.seed * 0.07) * 22 + Math.sin(index * 1.7) * 4,
+      );
+      const targetPath = [
+        4,
+        crossingY[0]!,
+        ...crossingX.flatMap((x, index) => [x, crossingY[index]!]),
+        136,
+        crossingY.at(-1)!,
+      ];
+      const distractorCount = 8 + Math.floor(difficulty / 5);
+      const distractors = Array.from({ length: distractorCount }, () => [
+        4 + random() * 132,
+        8 + random() * 84,
+        4 + random() * 132,
+        8 + random() * 84,
+      ]).flat();
+      return {
+        ...base(generator, params),
+        question: "How many marked crossings lie on the path that starts at the blue T?",
+        answer: String(crossingCount),
+        answerOptions: shuffled(
+          Array.from({ length: 4 }, (_, index) => String(baseCount + index)),
+          random,
+        ),
+        latent: { crossingCount, crossingX, crossingY, targetPath, distractorCount, distractors },
+        minimalPairDescription:
+          "Difficulty increases both exact target-path crossings and irrelevant line clutter; every counted crossing is placed from the target path itself.",
+      };
+    }
+    case "enclosure-depth": {
+      const targetDepth = 6 + Math.floor(difficulty / 12);
+      const correctPanel = (params.seed + params.variant) % 4;
+      const alternatives = [targetDepth - 1, targetDepth + 1, targetDepth + 2];
+      const panelDepths = Array.from({ length: 4 }, (_, panel) =>
+        panel === correctPanel ? targetDepth : alternatives[panel < correctPanel ? panel : panel - 1]!,
+      );
+      const clutterCount = 2 + Math.floor(difficulty / 12);
+      return {
+        ...base(generator, params),
+        question: `In which panel is the red point enclosed by exactly ${targetDepth} closed boundaries?`,
+        answer: ["A", "B", "C", "D"][correctPanel]!,
+        answerOptions: shuffled(["A", "B", "C", "D"], random),
+        latent: { targetDepth, correctPanel, panelDepths, clutterCount },
+        minimalPairDescription:
+          "Difficulty increases nested depth and irrelevant closed contours while each panel's enclosure count is explicit in the construction.",
+      };
+    }
+    case "cube-stack-count": {
+      const maximumHeight = 3 + Math.floor(difficulty / 17);
+      const correctPanel = (params.seed + params.variant) % 4;
+      const baseHeights = Array.from(
+        { length: 9 },
+        () => 1 + Math.floor(random() * Math.max(1, maximumHeight - 1)),
+      );
+      baseHeights[0] = Math.max(2, baseHeights[0]!);
+      const targetTotal = baseHeights.reduce((sum, height) => sum + height, 0);
+      const deltas = [-1, 1, 2];
+      const panels = Array.from({ length: 4 }, (_, panel) =>
+        panel === correctPanel
+          ? baseHeights
+          : adjustHeights(baseHeights, deltas[panel < correctPanel ? panel : panel - 1]!, maximumHeight),
+      );
+      const panelTotals = panels.map((heights) => heights.reduce((sum, height) => sum + height, 0));
+      return {
+        ...base(generator, params),
+        question: `Which stack contains exactly ${targetTotal} unit cubes, including hidden supporting cubes?`,
+        answer: ["A", "B", "C", "D"][correctPanel]!,
+        answerOptions: shuffled(["A", "B", "C", "D"], random),
+        latent: { maximumHeight, correctPanel, targetTotal, panelHeights: panels.flat(), panelTotals },
+        minimalPairDescription:
+          "Difficulty raises possible hidden column heights; distractor stacks differ from the target by only one or two total cubes.",
+      };
+    }
+    case "graph-degree-topology": {
+      const nodeCount = 8 + Math.floor(difficulty / 17);
+      const correctPanel = (params.seed + params.variant) % 4;
+      const distractorOddCounts = [0, 4, 6];
+      const panelOddCounts = Array.from({ length: 4 }, (_, panel) =>
+        panel === correctPanel ? 2 : distractorOddCounts[panel < correctPanel ? panel : panel - 1]!,
+      );
+      const edgeFrom: number[] = [];
+      const edgeTo: number[] = [];
+      const edgeOffsets = [0];
+      const chords = [
+        [0, 2],
+        [1, 3],
+        [4, 6],
+      ];
+      for (const oddCount of panelOddCounts) {
+        for (let node = 0; node < nodeCount; node += 1) {
+          edgeFrom.push(node);
+          edgeTo.push((node + 1) % nodeCount);
+        }
+        for (const [left, right] of chords.slice(0, oddCount / 2)) {
+          edgeFrom.push(left!);
+          edgeTo.push(right!);
+        }
+        edgeOffsets.push(edgeFrom.length);
+      }
+      return {
+        ...base(generator, params),
+        question:
+          "Which drawn graph has EXACTLY TWO vertices of odd degree (edge crossings are not vertices)?",
+        answer: ["A", "B", "C", "D"][correctPanel]!,
+        answerOptions: shuffled(["A", "B", "C", "D"], random),
+        latent: { nodeCount, correctPanel, panelOddCounts, edgeFrom, edgeTo, edgeOffsets },
+        minimalPairDescription:
+          "Difficulty increases graph size while the discrete degree parity is derived from explicit edge endpoints, never drawing crossings.",
+      };
+    }
+    case "zone-entry-count": {
+      const cycles = 4 + ((params.seed + params.variant) % 4);
+      const entryCount = cycles * 2;
+      const distractorCount = 2 + Math.floor(difficulty / 20);
+      const activeDurationMs = 15_000 - Math.floor(difficulty * 50);
+      return {
+        ...base(generator, params),
+        question: "How many times does the RED-RINGED disk ENTER the gold zone from outside?",
+        answer: String(entryCount),
+        answerOptions: shuffled(["8", "10", "12", "14"], random),
+        latent: {
+          cycles,
+          entryCount,
+          distractorCount,
+          activeStartMs: 800,
+          activeDurationMs,
+          videoDurationMs: activeDurationMs + 1_600,
+        },
+        minimalPairDescription:
+          "Difficulty adds distractors and compresses time while the target follows a continuous cycle with exactly two zone entries per cycle.",
+      };
+    }
+    case "selective-flash-count": {
+      const targetCount = 8 + ((params.seed + params.variant) % 4);
+      const distractorCount = 1 + Math.floor(difficulty / 17);
+      const flashDurationMs = Math.round(500 - difficulty * 4);
+      const videoDurationMs = 12_000;
+      const flashObjects: number[] = [];
+      const flashStarts: number[] = [];
+      for (let object = 0; object <= distractorCount; object += 1) {
+        const count = object === 0 ? targetCount : 7 + ((params.seed + object) % 6);
+        for (let index = 0; index < count; index += 1) {
+          flashObjects.push(object);
+          flashStarts.push(Math.round(1_000 + ((index + 0.5) * 9_800) / count + (random() - 0.5) * 180));
+        }
+      }
+      return {
+        ...base(generator, params),
+        question: "How many times does the RED-RINGED target disk flash yellow, ignoring every other disk?",
+        answer: String(targetCount),
+        answerOptions: shuffled(["8", "9", "10", "11"], random),
+        latent: { targetCount, distractorCount, flashDurationMs, flashObjects, flashStarts, videoDurationMs },
+        minimalPairDescription:
+          "Difficulty shortens flashes and adds independently flashing distractors while target-event count is construction-grounded.",
+      };
+    }
+    case "conservation-ledger": {
+      const transferCount = 8 + Math.floor(difficulty / 9);
+      const targetBox = (params.seed + params.variant) % 4;
+      const finalCounts = [8, 9, 10, 11];
+      finalCounts[targetBox] = 15;
+      const reverseState = [...finalCounts];
+      const reverseFrom: number[] = [];
+      const reverseTo: number[] = [];
+      for (let event = 0; event < transferCount; event += 1) {
+        const eligibleDestinations = [0, 1, 2, 3].filter((box) => reverseState[box]! > 2);
+        const to = pick(eligibleDestinations, random);
+        const from = pick(
+          [0, 1, 2, 3].filter((box) => box !== to),
+          random,
+        );
+        reverseState[from]! += 1;
+        reverseState[to]! -= 1;
+        reverseFrom.push(from);
+        reverseTo.push(to);
+      }
+      const transferFrom = reverseFrom.reverse();
+      const transferTo = reverseTo.reverse();
+      return {
+        ...base(generator, params),
+        question: `Which box contains the MOST tokens after all ${transferCount} one-token transfers?`,
+        answer: ["A", "B", "C", "D"][targetBox]!,
+        answerOptions: shuffled(["A", "B", "C", "D"], random),
+        latent: {
+          targetBox,
+          transferCount,
+          initialCounts: reverseState,
+          finalCounts,
+          transferFrom,
+          transferTo,
+          videoDurationMs: transferCount * 650 + 1_800,
+        },
+        minimalPairDescription:
+          "Difficulty lengthens a conserved four-register update program; initial counts and every directed transfer exactly determine the unique largest box.",
+      };
+    }
+    case "trajectory-intersections": {
+      const segmentCount = 10 + Math.floor(difficulty / 10);
+      const path = makeIntersectionPath(random, segmentCount);
+      const intersectionCount = countPathIntersections(path);
+      const optionStart = Math.max(0, intersectionCount - 1);
+      return {
+        ...base(generator, params),
+        question:
+          "How many times does the complete route CROSS ITSELF, excluding turns and revisited endpoints?",
+        answer: String(intersectionCount),
+        answerOptions: shuffled(
+          Array.from({ length: 4 }, (_, index) => String(optionStart + index)),
+          random,
+        ),
+        latent: { segmentCount, intersectionCount, path, videoDurationMs: segmentCount * 520 + 1_600 },
+        minimalPairDescription:
+          "Difficulty lengthens the invisible orthogonal route; the oracle exhaustively tests every nonadjacent horizontal–vertical segment pair.",
       };
     }
   }

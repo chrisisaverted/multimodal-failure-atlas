@@ -640,6 +640,7 @@ entries.push({
     "Explicit object files",
     "External visual tracing and counting tools",
   ],
+  generator: "wire-crossing-count",
   affectedModels:
     "Confirmed on the frozen 2026-09-01 routes for Gemini 3.7 Flash, Kimi K3, and Qwen 3.8 Max at 40 crossings; Kimi used its separately declared no-reasoning forced-choice condition.",
   severity: "foundational",
@@ -695,6 +696,7 @@ const reproducedExtensions: ReproducedExtension[] = [
       "Iterative contour tracing",
       "External geometry tools",
     ],
+    generator: "enclosure-depth",
     severity: "foundational",
   },
   {
@@ -775,6 +777,7 @@ const reproducedExtensions: ReproducedExtension[] = [
     disconfirmingTest:
       "Compare exploded views, transparent stacks, height maps, and annotated column totals for the same occupancy grid.",
     mitigations: ["Explicit 3D scene graphs", "Depth-aware object completion", "Programmatic counting tools"],
+    generator: "cube-stack-count",
     severity: "foundational",
   },
   {
@@ -878,6 +881,7 @@ const reproducedExtensions: ReproducedExtension[] = [
     disconfirmingTest:
       "Compare identical abstract graphs under different layouts, explicit node-edge lists, and marked edge endpoints.",
     mitigations: ["Graph extraction", "Topology-aware encoders", "Symbolic degree verification"],
+    generator: "graph-degree-topology",
     severity: "foundational",
   },
   {
@@ -928,6 +932,7 @@ const reproducedExtensions: ReproducedExtension[] = [
     disconfirmingTest:
       "Independently expose target identity, entry events, and the cumulative count while preserving trajectories.",
     mitigations: ["Object-centric trackers", "Event counters", "Persistent identity labels"],
+    generator: "zone-entry-count",
     severity: "foundational",
   },
   {
@@ -998,6 +1003,7 @@ const reproducedExtensions: ReproducedExtension[] = [
     disconfirmingTest:
       "Cross event duration with source isolation, persistent event markers, and a final explicit count.",
     mitigations: ["Adaptive frame sampling", "Event-source tracks", "Persistent counters"],
+    generator: "selective-flash-count",
     severity: "foundational",
   },
   {
@@ -1109,6 +1115,7 @@ const reproducedExtensions: ReproducedExtension[] = [
     disconfirmingTest:
       "Expose arrows, transfer magnitudes, individual register values, and the complete running ledger in successive interventions.",
     mitigations: ["Explicit state tables", "Tool-assisted arithmetic", "Structured recurrent memory"],
+    generator: "conservation-ledger",
     severity: "foundational",
   },
   {
@@ -1134,6 +1141,7 @@ const reproducedExtensions: ReproducedExtension[] = [
     disconfirmingTest:
       "Compare no trail, persistent trail, marked crossing points, and a final static path using identical geometry.",
     mitigations: ["Persistent trajectory maps", "Segment-intersection tools", "Geometry-aware memory"],
+    generator: "trajectory-intersections",
     severity: "foundational",
   },
   {

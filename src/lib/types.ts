@@ -69,7 +69,15 @@ export type GeneratorKey =
   | "parity-verification"
   | "change-localization"
   | "maze-reachability"
-  | "rotation-correspondence";
+  | "rotation-correspondence"
+  | "wire-crossing-count"
+  | "enclosure-depth"
+  | "cube-stack-count"
+  | "graph-degree-topology"
+  | "zone-entry-count"
+  | "selective-flash-count"
+  | "conservation-ledger"
+  | "trajectory-intersections";
 
 export interface Citation {
   id: string;

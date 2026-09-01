@@ -254,6 +254,89 @@ export function renderDiagnosticSvg(instance: DiagnosticInstance, playhead = 0) 
         .join("")}`;
       break;
     }
+    case "wire-crossing-count": {
+      const targetPath = latent.targetPath as number[],
+        distractors = latent.distractors as number[],
+        crossingX = latent.crossingX as number[],
+        crossingY = latent.crossingY as number[];
+      const clutter = Array.from(
+        { length: distractors.length / 4 },
+        (_, index) =>
+          `<line x1="${distractors[index * 4]}" y1="${distractors[index * 4 + 1]}" x2="${distractors[index * 4 + 2]}" y2="${distractors[index * 4 + 3]}" stroke="#9a9b93" stroke-width=".7" opacity=".55"/>`,
+      ).join("");
+      const points = Array.from(
+        { length: targetPath.length / 2 },
+        (_, index) => `${targetPath[index * 2]},${targetPath[index * 2 + 1]}`,
+      ).join(" ");
+      body = `<rect width="140" height="100" fill="${palette.cream}"/>${clutter}<polyline points="${points}" fill="none" stroke="#2356c7" stroke-width="1.8" stroke-linejoin="round"/>${crossingX.map((x, index) => `<line x1="${x}" x2="${x}" y1="${crossingY[index]! - 3.2}" y2="${crossingY[index]! + 3.2}" stroke="#f04b32" stroke-width="1.1"/>`).join("")}<circle cx="4" cy="${crossingY[0]}" r="3" fill="#2356c7"/><text x="4" y="${crossingY[0]! + 1.8}" text-anchor="middle" font-size="4" font-weight="800" fill="#fff">T</text>`;
+      break;
+    }
+    case "enclosure-depth": {
+      const depths = latent.panelDepths as number[],
+        clutterCount = number(latent.clutterCount);
+      body = `<rect width="140" height="100" fill="${palette.cream}"/>${depths
+        .map((depth, panel) => {
+          const x = panel % 2 === 0 ? 38 : 103,
+            y = panel < 2 ? 26 : 73;
+          return `<text x="${x - 24}" y="${y + 2}" font-size="7" font-weight="800">${["A", "B", "C", "D"][panel]}</text>${Array.from({ length: depth }, (_, ring) => `<ellipse cx="${x}" cy="${y}" rx="${3.2 + ring * 1.35}" ry="${2.8 + ring * 1.05}" fill="none" stroke="#252821" stroke-width=".48" transform="rotate(${((ring % 3) - 1) * 4} ${x} ${y})"/>`).join("")}${Array.from({ length: clutterCount }, (_, ring) => `<circle cx="${x + 18 + (ring % 2) * 3}" cy="${y - 13 + ring * 2.4}" r="${1.8 + (ring % 3)}" fill="none" stroke="#9a9b93" stroke-width=".4"/>`).join("")}<circle cx="${x}" cy="${y}" r="1.7" fill="#f04b32"/>`;
+        })
+        .join("")}`;
+      break;
+    }
+    case "cube-stack-count": {
+      const heights = latent.panelHeights as number[];
+      const cube = (x: number, y: number) =>
+        `<polygon points="${x},${y - 2} ${x + 3},${y - 0.5} ${x},${y + 1} ${x - 3},${y - 0.5}" fill="#f6dc55" stroke="#252821" stroke-width=".35"/><polygon points="${x - 3},${y - 0.5} ${x},${y + 1} ${x},${y + 4} ${x - 3},${y + 2.5}" fill="#d0a91f" stroke="#252821" stroke-width=".35"/><polygon points="${x + 3},${y - 0.5} ${x},${y + 1} ${x},${y + 4} ${x + 3},${y + 2.5}" fill="#e8c43c" stroke="#252821" stroke-width=".35"/>`;
+      body = `<rect width="140" height="100" fill="${palette.cream}"/>${["A", "B", "C", "D"]
+        .map((label, panel) => {
+          const originX = panel % 2 === 0 ? 35 : 100,
+            originY = panel < 2 ? 42 : 88,
+            panelHeights = heights.slice(panel * 9, (panel + 1) * 9);
+          const cubes = [...panelHeights.keys()]
+            .sort((a, b) => Math.floor(a / 3) + (a % 3) - Math.floor(b / 3) - (b % 3))
+            .flatMap((index) => {
+              const row = Math.floor(index / 3),
+                column = index % 3;
+              return Array.from({ length: panelHeights[index]! }, (_, level) =>
+                cube(originX + (column - row) * 6, originY - 8 + (column + row) * 3 - level * 3),
+              );
+            })
+            .join("");
+          return `<text x="${originX - 27}" y="${originY - 18}" font-size="7" font-weight="800">${label}</text>${cubes}`;
+        })
+        .join("")}`;
+      break;
+    }
+    case "graph-degree-topology": {
+      const nodeCount = number(latent.nodeCount),
+        edgeFrom = latent.edgeFrom as number[],
+        edgeTo = latent.edgeTo as number[],
+        offsets = latent.edgeOffsets as number[];
+      body = `<rect width="140" height="100" fill="${palette.cream}"/>${["A", "B", "C", "D"]
+        .map((label, panel) => {
+          const centerX = panel % 2 === 0 ? 38 : 103,
+            centerY = panel < 2 ? 25 : 74,
+            positions = Array.from({ length: nodeCount }, (_, node) => [
+              centerX + Math.cos((node / nodeCount) * Math.PI * 2 + panel * 0.2) * 20,
+              centerY + Math.sin((node / nodeCount) * Math.PI * 2 + panel * 0.2) * 16,
+            ]);
+          const edges = Array.from({ length: offsets[panel + 1]! - offsets[panel]! }, (_, index) => {
+            const edge = offsets[panel]! + index,
+              from = positions[edgeFrom[edge]!]!,
+              to = positions[edgeTo[edge]!]!;
+            return `<line x1="${from[0]}" y1="${from[1]}" x2="${to[0]}" y2="${to[1]}" stroke="#59605d" stroke-width=".65"/>`;
+          }).join("");
+          const nodes = positions
+            .map(
+              ([x, y]) =>
+                `<circle cx="${x}" cy="${y}" r="1.7" fill="#2356c7" stroke="#fffdf7" stroke-width=".4"/>`,
+            )
+            .join("");
+          return `<text x="${centerX - 27}" y="${centerY + 2}" font-size="7" font-weight="800">${label}</text>${edges}${nodes}`;
+        })
+        .join("")}`;
+      break;
+    }
     case "brief-event": {
       const duration = number(latent.videoDurationMs);
       const time = playhead * duration;
@@ -429,6 +512,92 @@ export function renderDiagnosticSvg(instance: DiagnosticInstance, playhead = 0) 
       const active = eventIndex >= 0 && eventIndex < events.length && localTime % 260 < 210;
       const value = active ? events[eventIndex] : 0;
       body = `<rect width="140" height="100" fill="#e8e5da"/><text x="70" y="10" text-anchor="middle" font-size="5" font-weight="700">START AT ZERO · UPDATE EVERY EVENT</text><text x="70" y="63" text-anchor="middle" font-size="32" font-weight="800" fill="${value > 0 ? "#1d9b5f" : "#df3c30"}">${value > 0 ? "+1" : value < 0 ? "−1" : ""}</text><text x="70" y="90" text-anchor="middle" font-size="4.5" font-weight="700">${eventIndex < 0 ? "START AT 0" : eventIndex < events.length ? `EVENT ${eventIndex + 1} / ${events.length}` : "SEQUENCE COMPLETE"}</text>`;
+      break;
+    }
+    case "zone-entry-count": {
+      const duration = number(latent.videoDurationMs),
+        time = playhead * duration,
+        u = Math.max(0, Math.min(1, (time - number(latent.activeStartMs)) / number(latent.activeDurationMs))),
+        targetX = 70 + 50 * Math.cos(Math.PI * 2 * number(latent.cycles) * u),
+        distractorCount = number(latent.distractorCount);
+      const distractors = Array.from(
+        { length: distractorCount },
+        (_, index) =>
+          `<circle cx="${70 + Math.sin(playhead * Math.PI * (3 + index) + index) * 51}" cy="${28 + index * 9}" r="3.8" fill="${["#2356c7", "#168e88", "#8062d6", "#f04b32", "#59605d", "#d0a91f"][index]}" stroke="#252821" stroke-width=".5"/>`,
+      ).join("");
+      body = `<rect width="140" height="100" fill="#e8e5da"/><text x="70" y="9" text-anchor="middle" font-size="5" font-weight="700">COUNT RED-RINGED ENTRIES</text><rect x="8" y="15" width="124" height="72" rx="4" fill="#fffdf7" stroke="#252821" stroke-width="1"/><rect x="55" y="18" width="30" height="66" fill="#f4d934" opacity=".55" stroke="#d0a91f" stroke-width=".7"/>${distractors}<circle cx="${targetX}" cy="69" r="4.5" fill="${targetX >= 55 && targetX <= 85 ? "#e0a600" : "#59605d"}" stroke="#df3c30" stroke-width="2.2"/>`;
+      break;
+    }
+    case "selective-flash-count": {
+      const time = playhead * number(latent.videoDurationMs),
+        flashObjects = latent.flashObjects as number[],
+        flashStarts = latent.flashStarts as number[],
+        objectCount = number(latent.distractorCount) + 1;
+      const flashing = new Set(
+        flashObjects.filter(
+          (_, index) =>
+            time >= flashStarts[index]! && time < flashStarts[index]! + number(latent.flashDurationMs),
+        ),
+      );
+      body = `<rect width="140" height="100" fill="#e8e5da"/><text x="70" y="9" text-anchor="middle" font-size="5" font-weight="700">COUNT TARGET FLASHES ONLY</text>${Array.from(
+        { length: objectCount },
+        (_, object) => {
+          const x = 16 + (0.5 - 0.5 * Math.cos((playhead * 2.5 + object / objectCount) * Math.PI * 2)) * 108,
+            y =
+              30 +
+              object * (52 / Math.max(1, objectCount - 1)) +
+              Math.sin(playhead * Math.PI * (3 + object)) * 7;
+          return `<circle cx="${x}" cy="${y}" r="5" fill="${flashing.has(object) ? "#f4d934" : "#59605d"}" stroke="${object === 0 ? "#df3c30" : "#fffdf7"}" stroke-width="${object === 0 ? 2.5 : 0.7}"/>`;
+        },
+      ).join("")}`;
+      break;
+    }
+    case "conservation-ledger": {
+      const time = playhead * number(latent.videoDurationMs),
+        from = latent.transferFrom as number[],
+        to = latent.transferTo as number[],
+        localTime = time - 1100,
+        eventIndex = Math.floor(localTime / 650),
+        phase = Math.max(0, Math.min(1, (localTime - eventIndex * 650) / 520)),
+        positions = [
+          [38, 36],
+          [102, 36],
+          [38, 72],
+          [102, 72],
+        ],
+        active = eventIndex >= 0 && eventIndex < from.length,
+        source = active ? positions[from[eventIndex]!]! : positions[0]!,
+        destination = active ? positions[to[eventIndex]!]! : positions[0]!;
+      const boxes = positions
+        .map(
+          ([x, y], box) =>
+            `<rect x="${x - 17}" y="${y - 11}" width="34" height="22" rx="3" fill="#59605d" stroke="#252821" stroke-width=".8"/><text x="${x}" y="${y - 14}" text-anchor="middle" font-size="6" font-weight="800">${["A", "B", "C", "D"][box]}</text>${time < 1100 ? `<text x="${x}" y="${y + 3}" text-anchor="middle" font-size="9" font-weight="800" fill="#f4d934">${(latent.initialCounts as number[])[box]}</text>` : ""}`,
+        )
+        .join("");
+      const transfer = active
+        ? `<line x1="${source[0]}" y1="${source[1]}" x2="${destination[0]}" y2="${destination[1]}" stroke="#d0a91f" stroke-width="1.2" stroke-dasharray="2 2"/><circle cx="${source[0]! + (destination[0]! - source[0]!) * phase}" cy="${source[1]! + (destination[1]! - source[1]!) * phase}" r="3" fill="#f4d934" stroke="#252821" stroke-width=".6"/>`
+        : "";
+      body = `<rect width="140" height="100" fill="#e8e5da"/><text x="70" y="8" text-anchor="middle" font-size="5" font-weight="700">TRACK CONSERVED TOKENS</text>${boxes}${transfer}`;
+      break;
+    }
+    case "trajectory-intersections": {
+      const time = playhead * number(latent.videoDurationMs),
+        path = latent.path as number[],
+        segmentCount = number(latent.segmentCount),
+        localTime = time - 800,
+        segment = Math.floor(localTime / 520),
+        bounded = Math.max(0, Math.min(segmentCount - 1, segment)),
+        progress = Math.max(0, Math.min(1, (localTime - segment * 520) / 430)),
+        x = 20 + (path[bounded * 2]! + (path[(bounded + 1) * 2]! - path[bounded * 2]!) * progress) * 8.5,
+        y =
+          12 +
+          (path[bounded * 2 + 1]! + (path[(bounded + 1) * 2 + 1]! - path[bounded * 2 + 1]!) * progress) * 6.5;
+      const grid = Array.from(
+        { length: 12 },
+        (_, index) =>
+          `<line x1="${20 + index * 8.5}" x2="${20 + index * 8.5}" y1="12" y2="84" stroke="#252821" opacity=".13"/><line x1="20" x2="113.5" y1="${12 + index * 6.5}" y2="${12 + index * 6.5}" stroke="#252821" opacity=".13"/>`,
+      ).join("");
+      body = `<rect width="140" height="100" fill="#e8e5da"/><text x="70" y="8" text-anchor="middle" font-size="5" font-weight="700">COUNT TRUE SELF-CROSSINGS</text><rect x="17" y="10" width="106" height="80" fill="#fffdf7" stroke="#252821" stroke-width="1"/>${grid}<circle cx="${x}" cy="${y}" r="3.8" fill="#f4d934" stroke="#252821" stroke-width="1"/>`;
       break;
     }
   }

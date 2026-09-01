@@ -17,6 +17,10 @@ const videoKeys = new Set<GeneratorKey>([
   "target-transition-count",
   "sequential-swap-tracking",
   "signed-state-accumulation",
+  "zone-entry-count",
+  "selective-flash-count",
+  "conservation-ledger",
+  "trajectory-intersections",
 ]);
 
 export function DiagnosticLab({ generator, roomy = false }: { generator: GeneratorKey; roomy?: boolean }) {

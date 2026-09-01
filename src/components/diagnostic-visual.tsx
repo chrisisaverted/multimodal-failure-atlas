@@ -567,6 +567,228 @@ export function DiagnosticVisual({
         </svg>
       );
     }
+    case "wire-crossing-count": {
+      const targetPath = latent.targetPath as number[];
+      const distractors = latent.distractors as number[];
+      const crossingX = latent.crossingX as number[];
+      const crossingY = latent.crossingY as number[];
+      return (
+        <svg
+          className="diagnostic-svg"
+          viewBox="0 0 140 100"
+          role="img"
+          aria-label="One labeled path crosses many short wires amid line clutter"
+        >
+          <rect width="140" height="100" fill={palette.cream} />
+          {Array.from({ length: distractors.length / 4 }, (_, index) => (
+            <line
+              key={index}
+              x1={distractors[index * 4]}
+              y1={distractors[index * 4 + 1]}
+              x2={distractors[index * 4 + 2]}
+              y2={distractors[index * 4 + 3]}
+              stroke="#9a9b93"
+              strokeWidth=".7"
+              opacity=".55"
+            />
+          ))}
+          <polyline
+            points={Array.from(
+              { length: targetPath.length / 2 },
+              (_, index) => `${targetPath[index * 2]},${targetPath[index * 2 + 1]}`,
+            ).join(" ")}
+            fill="none"
+            stroke="#2356c7"
+            strokeWidth="1.8"
+            strokeLinejoin="round"
+          />
+          {crossingX.map((x, index) => (
+            <line
+              key={x}
+              x1={x}
+              x2={x}
+              y1={crossingY[index]! - 3.2}
+              y2={crossingY[index]! + 3.2}
+              stroke="#f04b32"
+              strokeWidth="1.1"
+            />
+          ))}
+          <circle cx="4" cy={crossingY[0]} r="3" fill="#2356c7" />
+          <text x="4" y={crossingY[0]! + 1.8} textAnchor="middle" fontSize="4" fontWeight="800" fill="#fff">
+            T
+          </text>
+        </svg>
+      );
+    }
+    case "enclosure-depth": {
+      const depths = latent.panelDepths as number[];
+      const clutterCount = number(latent.clutterCount);
+      return (
+        <svg
+          className="diagnostic-svg"
+          viewBox="0 0 140 100"
+          role="img"
+          aria-label="Four panels of nested closed contours around marked points"
+        >
+          <rect width="140" height="100" fill={palette.cream} />
+          {depths.map((depth, panel) => {
+            const centerX = panel % 2 === 0 ? 38 : 103;
+            const centerY = panel < 2 ? 26 : 73;
+            return (
+              <g key={panel}>
+                <text x={centerX - 24} y={centerY + 2} fontSize="7" fontWeight="800">
+                  {["A", "B", "C", "D"][panel]}
+                </text>
+                {Array.from({ length: depth }, (_, ring) => (
+                  <ellipse
+                    key={ring}
+                    cx={centerX}
+                    cy={centerY}
+                    rx={3.2 + ring * 1.35}
+                    ry={2.8 + ring * 1.05}
+                    fill="none"
+                    stroke="#252821"
+                    strokeWidth=".48"
+                    transform={`rotate(${((ring % 3) - 1) * 4} ${centerX} ${centerY})`}
+                  />
+                ))}
+                {Array.from({ length: clutterCount }, (_, ring) => (
+                  <circle
+                    key={`c${ring}`}
+                    cx={centerX + 18 + (ring % 2) * 3}
+                    cy={centerY - 13 + ring * 2.4}
+                    r={1.8 + (ring % 3)}
+                    fill="none"
+                    stroke="#9a9b93"
+                    strokeWidth=".4"
+                  />
+                ))}
+                <circle cx={centerX} cy={centerY} r="1.7" fill="#f04b32" />
+              </g>
+            );
+          })}
+        </svg>
+      );
+    }
+    case "cube-stack-count": {
+      const maximumHeight = number(latent.maximumHeight);
+      const heights = latent.panelHeights as number[];
+      const renderCube = (x: number, y: number, key: string) => (
+        <g key={key}>
+          <polygon
+            points={`${x},${y - 2} ${x + 3},${y - 0.5} ${x},${y + 1} ${x - 3},${y - 0.5}`}
+            fill="#f6dc55"
+            stroke="#252821"
+            strokeWidth=".35"
+          />
+          <polygon
+            points={`${x - 3},${y - 0.5} ${x},${y + 1} ${x},${y + 4} ${x - 3},${y + 2.5}`}
+            fill="#d0a91f"
+            stroke="#252821"
+            strokeWidth=".35"
+          />
+          <polygon
+            points={`${x + 3},${y - 0.5} ${x},${y + 1} ${x},${y + 4} ${x + 3},${y + 2.5}`}
+            fill="#e8c43c"
+            stroke="#252821"
+            strokeWidth=".35"
+          />
+        </g>
+      );
+      return (
+        <svg
+          className="diagnostic-svg"
+          viewBox="0 0 140 100"
+          role="img"
+          aria-label={`Four isometric cube stacks with column heights up to ${maximumHeight}`}
+        >
+          <rect width="140" height="100" fill={palette.cream} />
+          {["A", "B", "C", "D"].map((label, panel) => {
+            const originX = panel % 2 === 0 ? 35 : 100;
+            const originY = panel < 2 ? 42 : 88;
+            const panelHeights = heights.slice(panel * 9, (panel + 1) * 9);
+            return (
+              <g key={label}>
+                <text x={originX - 27} y={originY - 18} fontSize="7" fontWeight="800">
+                  {label}
+                </text>
+                {[...panelHeights.keys()]
+                  .sort((a, b) => Math.floor(a / 3) + (a % 3) - (Math.floor(b / 3) + (b % 3)))
+                  .flatMap((index) => {
+                    const row = Math.floor(index / 3),
+                      column = index % 3;
+                    return Array.from({ length: panelHeights[index]! }, (_, level) =>
+                      renderCube(
+                        originX + (column - row) * 6,
+                        originY - 8 + (column + row) * 3 - level * 3,
+                        `${index}-${level}`,
+                      ),
+                    );
+                  })}
+              </g>
+            );
+          })}
+        </svg>
+      );
+    }
+    case "graph-degree-topology": {
+      const nodeCount = number(latent.nodeCount);
+      const edgeFrom = latent.edgeFrom as number[];
+      const edgeTo = latent.edgeTo as number[];
+      const offsets = latent.edgeOffsets as number[];
+      return (
+        <svg
+          className="diagnostic-svg"
+          viewBox="0 0 140 100"
+          role="img"
+          aria-label="Four node-link graphs with crossings that are not vertices"
+        >
+          <rect width="140" height="100" fill={palette.cream} />
+          {["A", "B", "C", "D"].map((label, panel) => {
+            const centerX = panel % 2 === 0 ? 38 : 103;
+            const centerY = panel < 2 ? 25 : 74;
+            const positions = Array.from({ length: nodeCount }, (_, node) => ({
+              x: centerX + Math.cos((node / nodeCount) * Math.PI * 2 + panel * 0.2) * 20,
+              y: centerY + Math.sin((node / nodeCount) * Math.PI * 2 + panel * 0.2) * 16,
+            }));
+            return (
+              <g key={label}>
+                <text x={centerX - 27} y={centerY + 2} fontSize="7" fontWeight="800">
+                  {label}
+                </text>
+                {Array.from({ length: offsets[panel + 1]! - offsets[panel]! }, (_, index) => {
+                  const edge = offsets[panel]! + index,
+                    from = positions[edgeFrom[edge]!]!,
+                    to = positions[edgeTo[edge]!]!;
+                  return (
+                    <line
+                      key={index}
+                      x1={from.x}
+                      y1={from.y}
+                      x2={to.x}
+                      y2={to.y}
+                      stroke="#59605d"
+                      strokeWidth=".65"
+                    />
+                  );
+                })}
+                {positions.map((position, node) => (
+                  <circle
+                    key={node}
+                    cx={position.x}
+                    cy={position.y}
+                    r="1.7"
+                    fill="#2356c7"
+                    stroke="#fffdf7"
+                    strokeWidth=".4"
+                  />
+                ))}
+              </g>
+            );
+          })}
+        </svg>
+      );
+    }
     case "brief-event": {
       const duration = number(latent.videoDurationMs);
       const time = playhead * duration;
@@ -1017,6 +1239,252 @@ export function DiagnosticVisual({
                 : eventIndex < events.length
                   ? `EVENT ${eventIndex + 1} / ${events.length}`
                   : "SEQUENCE COMPLETE"}
+            </text>
+          </svg>
+          <div className="video-progress">
+            <span style={{ "--progress": `${playhead * 100}%` } as CSSProperties} />
+          </div>
+        </div>
+      );
+    }
+    case "zone-entry-count": {
+      const duration = number(latent.videoDurationMs);
+      const time = playhead * duration;
+      const u = Math.max(
+        0,
+        Math.min(1, (time - number(latent.activeStartMs)) / number(latent.activeDurationMs)),
+      );
+      const targetX = 70 + 50 * Math.cos(Math.PI * 2 * number(latent.cycles) * u);
+      const distractorCount = number(latent.distractorCount);
+      return (
+        <div
+          className="video-stage"
+          role="img"
+          aria-label="A red-ringed target repeatedly enters a gold zone among distractors"
+        >
+          <svg className="diagnostic-svg" viewBox="0 0 140 100">
+            <rect width="140" height="100" fill="#e8e5da" />
+            <text x="70" y="9" textAnchor="middle" fontSize="5" fontWeight="700">
+              COUNT RED-RINGED ENTRIES
+            </text>
+            <rect
+              x="8"
+              y="15"
+              width="124"
+              height="72"
+              rx="4"
+              fill="#fffdf7"
+              stroke="#252821"
+              strokeWidth="1"
+            />
+            <rect
+              x="55"
+              y="18"
+              width="30"
+              height="66"
+              fill="#f4d934"
+              opacity=".55"
+              stroke="#d0a91f"
+              strokeWidth=".7"
+            />
+            {Array.from({ length: distractorCount }, (_, index) => (
+              <circle
+                key={index}
+                cx={70 + Math.sin(playhead * Math.PI * (3 + index) + index) * 51}
+                cy={28 + index * 9}
+                r="3.8"
+                fill={["#2356c7", "#168e88", "#8062d6", "#f04b32", "#59605d", "#d0a91f"][index]}
+                stroke="#252821"
+                strokeWidth=".5"
+              />
+            ))}
+            <circle
+              cx={targetX}
+              cy="69"
+              r="4.5"
+              fill={targetX >= 55 && targetX <= 85 ? "#e0a600" : "#59605d"}
+              stroke="#df3c30"
+              strokeWidth="2.2"
+            />
+            <text x="70" y="95" textAnchor="middle" fontSize="4" fontWeight="700">
+              {time < number(latent.activeStartMs)
+                ? "GET READY"
+                : u < 1
+                  ? "COUNT OUTSIDE → INSIDE"
+                  : "SEQUENCE COMPLETE"}
+            </text>
+          </svg>
+          <div className="video-progress">
+            <span style={{ "--progress": `${playhead * 100}%` } as CSSProperties} />
+          </div>
+        </div>
+      );
+    }
+    case "selective-flash-count": {
+      const time = playhead * number(latent.videoDurationMs);
+      const flashObjects = latent.flashObjects as number[];
+      const flashStarts = latent.flashStarts as number[];
+      const objectCount = number(latent.distractorCount) + 1;
+      const flashing = new Set(
+        flashObjects.filter(
+          (_, index) =>
+            time >= flashStarts[index]! && time < flashStarts[index]! + number(latent.flashDurationMs),
+        ),
+      );
+      return (
+        <div
+          className="video-stage"
+          role="img"
+          aria-label="Several disks move and flash while one target is red-ringed"
+        >
+          <svg className="diagnostic-svg" viewBox="0 0 140 100">
+            <rect width="140" height="100" fill="#e8e5da" />
+            <text x="70" y="9" textAnchor="middle" fontSize="5" fontWeight="700">
+              COUNT TARGET FLASHES ONLY
+            </text>
+            {Array.from({ length: objectCount }, (_, object) => {
+              const x =
+                16 + (0.5 - 0.5 * Math.cos((playhead * 2.5 + object / objectCount) * Math.PI * 2)) * 108;
+              const y =
+                30 +
+                object * (52 / Math.max(1, objectCount - 1)) +
+                Math.sin(playhead * Math.PI * (3 + object)) * 7;
+              return (
+                <circle
+                  key={object}
+                  cx={x}
+                  cy={y}
+                  r="5"
+                  fill={flashing.has(object) ? "#f4d934" : "#59605d"}
+                  stroke={object === 0 ? "#df3c30" : "#fffdf7"}
+                  strokeWidth={object === 0 ? "2.5" : ".7"}
+                />
+              );
+            })}
+          </svg>
+          <div className="video-progress">
+            <span style={{ "--progress": `${playhead * 100}%` } as CSSProperties} />
+          </div>
+        </div>
+      );
+    }
+    case "conservation-ledger": {
+      const time = playhead * number(latent.videoDurationMs);
+      const from = latent.transferFrom as number[];
+      const to = latent.transferTo as number[];
+      const localTime = time - 1_100;
+      const eventIndex = Math.floor(localTime / 650);
+      const phase = Math.max(0, Math.min(1, (localTime - eventIndex * 650) / 520));
+      const positions = [
+        [38, 36],
+        [102, 36],
+        [38, 72],
+        [102, 72],
+      ] as const;
+      const active = eventIndex >= 0 && eventIndex < from.length;
+      const source = active ? positions[from[eventIndex]!]! : positions[0];
+      const destination = active ? positions[to[eventIndex]!]! : positions[0];
+      return (
+        <div className="video-stage" role="img" aria-label="Tokens transfer between four labeled boxes">
+          <svg className="diagnostic-svg" viewBox="0 0 140 100">
+            <rect width="140" height="100" fill="#e8e5da" />
+            <text x="70" y="8" textAnchor="middle" fontSize="5" fontWeight="700">
+              TRACK CONSERVED TOKENS
+            </text>
+            {positions.map(([x, y], box) => (
+              <g key={box}>
+                <rect
+                  x={x - 17}
+                  y={y - 11}
+                  width="34"
+                  height="22"
+                  rx="3"
+                  fill="#59605d"
+                  stroke="#252821"
+                  strokeWidth=".8"
+                />
+                <text x={x} y={y - 14} textAnchor="middle" fontSize="6" fontWeight="800">
+                  {["A", "B", "C", "D"][box]}
+                </text>
+                {time < 1_100 ? (
+                  <text x={x} y={y + 3} textAnchor="middle" fontSize="9" fontWeight="800" fill="#f4d934">
+                    {(latent.initialCounts as number[])[box]}
+                  </text>
+                ) : null}
+              </g>
+            ))}
+            {active ? (
+              <>
+                <line
+                  x1={source[0]}
+                  y1={source[1]}
+                  x2={destination[0]}
+                  y2={destination[1]}
+                  stroke="#d0a91f"
+                  strokeWidth="1.2"
+                  strokeDasharray="2 2"
+                />
+                <circle
+                  cx={source[0] + (destination[0] - source[0]) * phase}
+                  cy={source[1] + (destination[1] - source[1]) * phase}
+                  r="3"
+                  fill="#f4d934"
+                  stroke="#252821"
+                  strokeWidth=".6"
+                />
+              </>
+            ) : null}
+            <text x="70" y="96" textAnchor="middle" fontSize="4.2" fontWeight="700">
+              {time < 1_100
+                ? "MEMORIZE INITIAL COUNTS"
+                : eventIndex < from.length
+                  ? `TRANSFER ${Math.max(1, eventIndex + 1)} / ${from.length}`
+                  : "WHICH BOX HAS MOST?"}
+            </text>
+          </svg>
+          <div className="video-progress">
+            <span style={{ "--progress": `${playhead * 100}%` } as CSSProperties} />
+          </div>
+        </div>
+      );
+    }
+    case "trajectory-intersections": {
+      const time = playhead * number(latent.videoDurationMs);
+      const path = latent.path as number[];
+      const segmentCount = number(latent.segmentCount);
+      const localTime = time - 800;
+      const segment = Math.floor(localTime / 520);
+      const bounded = Math.max(0, Math.min(segmentCount - 1, segment));
+      const progress = Math.max(0, Math.min(1, (localTime - segment * 520) / 430));
+      const x = 20 + (path[bounded * 2]! + (path[(bounded + 1) * 2]! - path[bounded * 2]!) * progress) * 8.5;
+      const y =
+        12 +
+        (path[bounded * 2 + 1]! + (path[(bounded + 1) * 2 + 1]! - path[bounded * 2 + 1]!) * progress) * 6.5;
+      return (
+        <div
+          className="video-stage"
+          role="img"
+          aria-label="A gold marker follows an invisible orthogonal trajectory"
+        >
+          <svg className="diagnostic-svg" viewBox="0 0 140 100">
+            <rect width="140" height="100" fill="#e8e5da" />
+            <text x="70" y="8" textAnchor="middle" fontSize="5" fontWeight="700">
+              COUNT TRUE SELF-CROSSINGS
+            </text>
+            <rect x="17" y="10" width="106" height="80" fill="#fffdf7" stroke="#252821" strokeWidth="1" />
+            {Array.from({ length: 12 }, (_, index) => (
+              <g key={index} opacity=".13">
+                <line x1={20 + index * 8.5} x2={20 + index * 8.5} y1="12" y2="84" stroke="#252821" />
+                <line x1="20" x2="113.5" y1={12 + index * 6.5} y2={12 + index * 6.5} stroke="#252821" />
+              </g>
+            ))}
+            <circle cx={x} cy={y} r="3.8" fill="#f4d934" stroke="#252821" strokeWidth="1" />
+            <text x="70" y="96" textAnchor="middle" fontSize="4" fontWeight="700">
+              {segment < 0
+                ? "GET READY"
+                : segment < segmentCount
+                  ? `SEGMENT ${segment + 1} / ${segmentCount}`
+                  : "ROUTE COMPLETE"}
             </text>
           </svg>
           <div className="video-progress">

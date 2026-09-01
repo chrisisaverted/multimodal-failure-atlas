@@ -24,6 +24,14 @@ const keys: GeneratorKey[] = [
   "change-localization",
   "maze-reachability",
   "rotation-correspondence",
+  "wire-crossing-count",
+  "enclosure-depth",
+  "cube-stack-count",
+  "graph-degree-topology",
+  "zone-entry-count",
+  "selective-flash-count",
+  "conservation-ledger",
+  "trajectory-intersections",
 ];
 
 function countDirectionChanges(path: number[]) {
@@ -92,6 +100,31 @@ function rotatePoint(index: number, side: number, quarterTurns: number) {
   let y = Math.floor(index / side);
   for (let turn = 0; turn < quarterTurns; turn += 1) [x, y] = [side - 1 - y, x];
   return y * side + x;
+}
+
+function countIntersections(path: number[]) {
+  const points = Array.from(
+    { length: path.length / 2 },
+    (_, index) => [path[index * 2]!, path[index * 2 + 1]!] as const,
+  );
+  let count = 0;
+  for (let first = 0; first < points.length - 1; first += 1)
+    for (let second = first + 2; second < points.length - 1; second += 1) {
+      const [a, b, c, d] = [points[first]!, points[first + 1]!, points[second]!, points[second + 1]!];
+      const firstVertical = a[0] === b[0],
+        secondVertical = c[0] === d[0];
+      if (firstVertical === secondVertical) continue;
+      const [va, vb] = firstVertical ? [a, b] : [c, d];
+      const [ha, hb] = firstVertical ? [c, d] : [a, b];
+      if (
+        va[0] > Math.min(ha[0], hb[0]) &&
+        va[0] < Math.max(ha[0], hb[0]) &&
+        ha[1] > Math.min(va[1], vb[1]) &&
+        ha[1] < Math.max(va[1], vb[1])
+      )
+        count += 1;
+    }
+  return count;
 }
 
 describe("diagnostic generators", () => {
@@ -356,6 +389,97 @@ describe("diagnostic generators", () => {
       ["change-localization", "gridSize"],
       ["maze-reachability", "gridSize"],
       ["rotation-correspondence", "pointCount"],
+    ] as const;
+    for (const [key, measure] of measurements) {
+      const easy = generateInstance(key, { seed: 8, difficulty: 0, variant: 0 });
+      const hard = generateInstance(key, { seed: 8, difficulty: 100, variant: 0 });
+      expect(Number(hard.latent[measure])).toBeGreaterThan(Number(easy.latent[measure]));
+    }
+  });
+
+  it("constructs the final live image family oracles exactly", () => {
+    for (let seed = 0; seed < 24; seed += 1)
+      for (const difficulty of [0, 50, 100]) {
+        const wire = generateInstance("wire-crossing-count", { seed, difficulty, variant: 0 });
+        expect((wire.latent.crossingX as number[]).length).toBe(Number(wire.answer));
+        expect((wire.latent.crossingY as number[]).length).toBe(Number(wire.answer));
+
+        const enclosure = generateInstance("enclosure-depth", { seed, difficulty, variant: 0 });
+        const matchingDepths = (enclosure.latent.panelDepths as number[]).flatMap((depth, index) =>
+          depth === Number(enclosure.latent.targetDepth) ? [["A", "B", "C", "D"][index]!] : [],
+        );
+        expect(matchingDepths).toEqual([enclosure.answer]);
+
+        const cubes = generateInstance("cube-stack-count", { seed, difficulty, variant: 0 });
+        const heights = cubes.latent.panelHeights as number[];
+        const totals = [0, 1, 2, 3].map((panel) =>
+          heights.slice(panel * 9, (panel + 1) * 9).reduce((sum, value) => sum + value, 0),
+        );
+        expect(totals).toEqual(cubes.latent.panelTotals);
+        expect(
+          totals.flatMap((total, index) =>
+            total === Number(cubes.latent.targetTotal) ? [["A", "B", "C", "D"][index]!] : [],
+          ),
+        ).toEqual([cubes.answer]);
+
+        const graph = generateInstance("graph-degree-topology", { seed, difficulty, variant: 0 });
+        const edgeFrom = graph.latent.edgeFrom as number[],
+          edgeTo = graph.latent.edgeTo as number[],
+          offsets = graph.latent.edgeOffsets as number[],
+          nodeCount = Number(graph.latent.nodeCount);
+        const oddCounts = [0, 1, 2, 3].map((panel) => {
+          const degrees = Array.from({ length: nodeCount }, () => 0);
+          for (let edge = offsets[panel]!; edge < offsets[panel + 1]!; edge += 1) {
+            degrees[edgeFrom[edge]!]! += 1;
+            degrees[edgeTo[edge]!]! += 1;
+          }
+          return degrees.filter((degree) => degree % 2 === 1).length;
+        });
+        expect(oddCounts).toEqual(graph.latent.panelOddCounts);
+        expect(
+          oddCounts.flatMap((count, index) => (count === 2 ? [["A", "B", "C", "D"][index]!] : [])),
+        ).toEqual([graph.answer]);
+      }
+  });
+
+  it("constructs the final live video family oracles exactly", () => {
+    for (let seed = 0; seed < 24; seed += 1)
+      for (const difficulty of [0, 50, 100]) {
+        const zone = generateInstance("zone-entry-count", { seed, difficulty, variant: 0 });
+        expect(Number(zone.answer)).toBe(Number(zone.latent.cycles) * 2);
+
+        const flash = generateInstance("selective-flash-count", { seed, difficulty, variant: 0 });
+        expect((flash.latent.flashObjects as number[]).filter((object) => object === 0)).toHaveLength(
+          Number(flash.answer),
+        );
+
+        const conservation = generateInstance("conservation-ledger", { seed, difficulty, variant: 0 });
+        const counts = [...(conservation.latent.initialCounts as number[])];
+        const from = conservation.latent.transferFrom as number[],
+          to = conservation.latent.transferTo as number[];
+        for (let event = 0; event < from.length; event += 1) {
+          counts[from[event]!]! -= 1;
+          counts[to[event]!]! += 1;
+        }
+        expect(counts).toEqual(conservation.latent.finalCounts);
+        expect(["A", "B", "C", "D"][counts.indexOf(Math.max(...counts))]).toBe(conservation.answer);
+
+        const trail = generateInstance("trajectory-intersections", { seed, difficulty, variant: 0 });
+        expect(countIntersections(trail.latent.path as number[])).toBe(Number(trail.answer));
+        if (difficulty === 100) expect(Number(trail.answer)).toBeGreaterThanOrEqual(3);
+      }
+  });
+
+  it("increases the final family burdens with difficulty", () => {
+    const measurements = [
+      ["wire-crossing-count", "crossingCount"],
+      ["enclosure-depth", "targetDepth"],
+      ["cube-stack-count", "maximumHeight"],
+      ["graph-degree-topology", "nodeCount"],
+      ["zone-entry-count", "distractorCount"],
+      ["selective-flash-count", "distractorCount"],
+      ["conservation-ledger", "transferCount"],
+      ["trajectory-intersections", "segmentCount"],
     ] as const;
     for (const [key, measure] of measurements) {
       const easy = generateInstance(key, { seed: 8, difficulty: 0, variant: 0 });

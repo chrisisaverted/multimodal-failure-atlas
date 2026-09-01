@@ -10,7 +10,7 @@ Release audit updated 1 September 2026.
 - 20 strictly admitted synthetic families: 10 image and 10 video
 - Three frozen admission routes: Gemini 3.7 Flash, Qwen 3.8 Max, and Kimi K3
 - Two frozen route-expansion routes: Seed 2.1 Turbo and MiMo 2.5
-- 20 deterministic browser generators with exact construction answers and family-local difficulty controls, including 12 current admitted families
+- 28 deterministic browser generators with exact construction answers and family-local difficulty controls, including all 20 current admitted families (10 image and 10 video)
 - 640 native/control artifacts in the admitted manifests, totaling 106,125,005 bytes
 - An answer-free human instrument with eight blocks, 40 trials per block, and all 320 native cases
 - A static response ledger, exact manifests, raw external-replication evidence, and rejected-search ledger
