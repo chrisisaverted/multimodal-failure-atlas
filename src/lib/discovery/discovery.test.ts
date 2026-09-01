@@ -87,6 +87,14 @@ import { bindingSequences, createBindingGrid } from "./temporal-binding";
 import { createMirrorRayGrid, createMirrorRayHardGrid, traceMirrorRay } from "./mirror-ray";
 import { applyTransfers, createCausalTransferGrid } from "./causal-transfer";
 import { applyConservation, createConservationGrid } from "./conservation-ledger";
+import { applyHardConservation, createHardConservationHoldout } from "./conservation-ledger-hard";
+import { createHardDynamicStateHoldout, hardDynamicFinalState } from "./dynamic-state-hard";
+import { createExtremeGrid } from "./grid-activation-memory-extreme";
+import { createHardGridActivationHoldout, hardUniqueActivationCount } from "./grid-activation-memory-hard";
+import { createIndexedSuccessorGrid, indexedSuccessor } from "./indexed-successor-hard";
+import { createHardParityHoldout, hardParityMatrices, hardParityViolations } from "./parity-matrix-hard";
+import { createHardRouteTurnHoldout, hardCountRouteTurns } from "./route-turn-count-hard";
+import { countTargetTransitions, createTransitionCountGrid, createTransitionCountHoldout } from "./transition-count";
 import { createSymmetryGrid, createSymmetryHoldout, symmetryMatrix } from "./symmetry-search";
 import { applySwaps, createSwapTrackingGrid } from "./swap-tracking";
 import { coflashPairCounts, createCoflashGrid, createCoflashHardGrid } from "./coflash-counting";
@@ -789,5 +797,48 @@ describe("adaptive multimodal discovery", () => {
     expect(isMomentaryEventActive(candidate!, start)).toBe(true);
     expect(renderMomentarySymbolSvg(candidate!, start)).toContain("#f4dc36");
     expect(isMomentaryEventActive(candidate!, start + candidate!.parameters.eventDurationMs)).toBe(false);
+  });
+
+  it("freezes balanced dense parity matrices with exactly one valid panel", () => {
+    const candidates = createHardParityHoldout();
+    expect(candidates).toHaveLength(16);
+    for (const answer of ["A", "B", "C", "D"])
+      expect(candidates.filter((candidate) => candidate.expectedAnswer === answer)).toHaveLength(4);
+    for (const candidate of candidates) {
+      const valid = hardParityMatrices(candidate).map((matrix) => {
+        const violations = hardParityViolations(matrix);
+        return violations.oddRows.length === 0 && violations.oddColumns.length === 0;
+      });
+      expect(valid.filter(Boolean)).toHaveLength(1);
+      expect(valid[candidate.parameters.correctPanel]).toBe(true);
+    }
+  });
+
+  it("validates exact latent answers for every hard temporal holdout", () => {
+    for (const candidate of createHardGridActivationHoldout())
+      expect(hardUniqueActivationCount(candidate.parameters.activations)).toBe(candidate.parameters.uniqueCount);
+    for (const candidate of createHardRouteTurnHoldout())
+      expect(hardCountRouteTurns(candidate.parameters.path)).toBe(candidate.parameters.turnCount);
+    for (const candidate of createHardConservationHoldout()) {
+      const final = applyHardConservation(candidate.parameters.initialCounts, candidate.parameters.transfers);
+      expect(final.indexOf(Math.max(...final))).toBe(candidate.parameters.targetBox);
+    }
+    for (const candidate of createHardDynamicStateHoldout())
+      expect(hardDynamicFinalState(candidate)).toBe(candidate.parameters.targetState);
+  });
+
+  it("balances rapid-stream tasks and computes answers from hidden sequences", () => {
+    const discovery = createTransitionCountGrid();
+    const holdout = createTransitionCountHoldout();
+    expect(discovery).toHaveLength(8);
+    expect(holdout).toHaveLength(16);
+    const discoverySeeds = new Set(discovery.map((candidate) => candidate.seed));
+    expect(holdout.some((candidate) => discoverySeeds.has(candidate.seed))).toBe(false);
+    for (const candidate of [...discovery, ...holdout])
+      expect(countTargetTransitions(candidate.parameters.sequence)).toBe(candidate.parameters.targetCount);
+    for (const candidate of createIndexedSuccessorGrid())
+      expect(indexedSuccessor(candidate.parameters.sequence)).toBe(candidate.parameters.answerIndex);
+    for (const candidate of createExtremeGrid())
+      expect(new Set(candidate.parameters.activations).size).toBe(candidate.parameters.uniqueCount);
   });
 });
