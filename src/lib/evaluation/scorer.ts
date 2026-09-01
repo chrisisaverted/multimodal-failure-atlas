@@ -2,7 +2,7 @@ export interface ScoreResult {
   parsedAnswer: string;
   correct: boolean;
   needsReview: boolean;
-  method: "exact-option-v1" | "terminal-option-v2" | "terminal-option-v3";
+  method: "exact-option-v1" | "terminal-option-v2" | "terminal-option-v3" | "declared-answer-v4";
 }
 
 const normalize = (value: string) =>
@@ -154,5 +154,41 @@ export function scoreTerminalOptionV3(
     correct: false,
     needsReview: true,
     method: "terminal-option-v3",
+  };
+}
+
+/**
+ * Prospective forced-choice scorer that distinguishes an unambiguous declared
+ * answer outside the allowed set from a parser failure. An outside-set claim
+ * is a substantive incorrect answer; genuinely ambiguous or undeclared text
+ * still goes to review and receives no hardness credit.
+ */
+export function scoreDeclaredAnswerV4(
+  rawResponse: string,
+  expectedAnswer: string,
+  options: string[],
+): ScoreResult {
+  const terminal = scoreTerminalOptionV3(rawResponse, expectedAnswer, options);
+  if (!terminal.needsReview) return { ...terminal, method: "declared-answer-v4" };
+
+  const declarations = [
+    ...rawResponse.matchAll(
+      /(?:total(?:\s+number)?\s+(?:is|of)|correct\s+(?:answer|number)\s+(?:is|:)|final\s+answer\s*(?:is|:)|answer\s*(?:is|:))\s*[*_]*([\p{L}\p{N}'-]+)/giu,
+    ),
+  ];
+  const claim = declarations.at(-1)?.[1];
+  const normalizedClaim = claim ? normalize(claim) : "";
+  if (
+    !normalizedClaim ||
+    ["either", "maybe", "approximately", "about", "unclear", "unknown"].includes(normalizedClaim)
+  ) {
+    return { parsedAnswer: "", correct: false, needsReview: true, method: "declared-answer-v4" };
+  }
+  const selected = options.find((option) => normalize(option) === normalizedClaim);
+  return {
+    parsedAnswer: selected ?? `[outside options: ${claim}]`,
+    correct: Boolean(selected && normalize(selected) === normalize(expectedAnswer)),
+    needsReview: false,
+    method: "declared-answer-v4",
   };
 }

@@ -1,5 +1,10 @@
 import { describe, expect, it } from "vitest";
-import { scoreExactOption, scoreTerminalOption, scoreTerminalOptionV3 } from "./scorer";
+import {
+  scoreDeclaredAnswerV4,
+  scoreExactOption,
+  scoreTerminalOption,
+  scoreTerminalOptionV3,
+} from "./scorer";
 
 describe("exact option scorer", () => {
   it("accepts an exact option independent of case and punctuation", () => {
@@ -81,5 +86,29 @@ describe("terminal option scorer v3", () => {
     expect(
       scoreTerminalOptionV3("The answer is either STAR or CIRCLE.", "STAR", ["STAR", "CIRCLE"]),
     ).toMatchObject({ parsedAnswer: "", correct: false, needsReview: true });
+  });
+});
+
+describe("declared answer scorer v4", () => {
+  it("counts a clear outside-option declaration as a substantive incorrect answer", () => {
+    expect(
+      scoreDeclaredAnswerV4(
+        "I counted each turn. The disk makes a total of **19** direction changes.",
+        "20",
+        ["20", "21", "22", "23"],
+      ),
+    ).toEqual({
+      parsedAnswer: "[outside options: 19]",
+      correct: false,
+      needsReview: false,
+      method: "declared-answer-v4",
+    });
+  });
+
+  it("preserves review for ambiguous or undeclared output", () => {
+    expect(scoreDeclaredAnswerV4("The answer is either 20 or 21.", "20", ["20", "21"]).needsReview).toBe(
+      true,
+    );
+    expect(scoreDeclaredAnswerV4("I cannot determine it.", "20", ["20", "21"]).needsReview).toBe(true);
   });
 });

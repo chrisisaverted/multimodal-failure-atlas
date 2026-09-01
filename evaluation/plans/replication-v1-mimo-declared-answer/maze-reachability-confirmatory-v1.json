@@ -1,0 +1,29 @@
+{
+  "cohortId": "external-replication-v1-mimo-declared-answer-2026-09-01",
+  "analysisRole": "Untouched post-confirmatory replacement route. GLM was operationally unscorable after 4,096- and 16,384-token answer-exhaustion canaries and rejection of no-reasoning mode; no GLM outcome affected generator selection.",
+  "evaluationPlanId": "maze-reachability-confirmatory-v1",
+  "evaluationPlanSha256": "aa0aba155a0747567964b3151a1518af3b4890664d10aaf7bf6997f1a7521a75",
+  "temperature": 0,
+  "reasoning": {
+    "effort": "none",
+    "exclude": true
+  },
+  "scorer": "declared-answer-v4",
+  "allowProviderFallbacks": false,
+  "dataCollection": "deny",
+  "substantiveMinimumPerNativeCondition": 16,
+  "models": [
+    {
+      "modelId": "xiaomi/mimo-v2.5",
+      "modelRevision": "xiaomi/mimo-v2.5-20260422",
+      "upstreamProvider": "Xiaomi",
+      "quantization": "fp8"
+    }
+  ],
+  "id": "maze-reachability-confirmatory-v1-external-replication-v1-mimo-declared-answer",
+  "frozenAt": "2026-09-01T11:46:00.000Z",
+  "maxOutputTokens": 4096,
+  "campaignCostCeilingUsd": 2,
+  "amendmentReason": "MiMo repeated an explicit outside-option final count despite the forced-choice instruction. The prospective declared-answer-v4 scorer treats only an unambiguous declared outside-set answer as substantive incorrect; ambiguity and parser failure still receive no hardness credit.",
+  "systemMessage": "This is a forced-choice visual diagnostic. Inspect only the supplied media. Return exactly one answer copied verbatim from the allowed-answer list, even if uncertain. Do not explain and do not return any answer outside that list."
+}
