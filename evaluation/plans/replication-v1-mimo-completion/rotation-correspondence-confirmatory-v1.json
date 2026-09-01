@@ -1,0 +1,29 @@
+{
+  "cohortId": "external-replication-v1-mimo-completion-2026-09-01",
+  "analysisRole": "Untouched post-confirmatory replacement route. GLM was operationally unscorable after 4,096- and 16,384-token answer-exhaustion canaries and rejection of no-reasoning mode; no GLM outcome affected generator selection.",
+  "evaluationPlanId": "rotation-correspondence-confirmatory-v1",
+  "evaluationPlanSha256": "e65351d21fe8b76a4af90aa992b99d777dc07b9b4125b60926ebc7ac8d5653eb",
+  "temperature": 0,
+  "reasoning": {
+    "effort": "none",
+    "exclude": true
+  },
+  "scorer": "declared-answer-v4",
+  "allowProviderFallbacks": false,
+  "dataCollection": "deny",
+  "substantiveMinimumPerNativeCondition": 16,
+  "models": [
+    {
+      "modelId": "xiaomi/mimo-v2.5",
+      "modelRevision": "xiaomi/mimo-v2.5-20260422",
+      "upstreamProvider": "Xiaomi",
+      "quantization": "fp8"
+    }
+  ],
+  "id": "rotation-correspondence-confirmatory-v1-external-replication-v1-mimo-completion",
+  "frozenAt": "2026-09-01T12:38:00.000Z",
+  "maxOutputTokens": 4096,
+  "campaignCostCeilingUsd": 2,
+  "amendmentReason": "Some original scorer-pending responses remained genuinely ambiguous under the frozen answer-key-blind adjudicator. This append-only completion protocol is used only for those unresolved cases and gives the protocol-level exact-answer instruction precedence over the family default.",
+  "systemMessage": "Return exactly one answer copied verbatim from the allowed-answer list. Output only that answer, with no prose, punctuation, markdown, reasoning, or alternative."
+}

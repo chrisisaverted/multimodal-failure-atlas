@@ -57,6 +57,7 @@ const resultDirectories = [
   "evaluation/results/replication-v1-mimo-replacement",
   "evaluation/results/replication-v1-mimo-forced-choice",
   "evaluation/results/replication-v1-mimo-declared-answer",
+  "evaluation/results/replication-v1-mimo-completion",
 ];
 const resultPaths = (
   await Promise.all(
@@ -78,13 +79,17 @@ const runs = (
 const uniqueRuns = [...new Map(runs.map((run) => [run.id, run])).values()].sort(
   (left, right) => left.evaluatedAt.localeCompare(right.evaluatedAt) || left.id.localeCompare(right.id),
 );
-const canonicalProtocolSuffix = new Map<string, string>([
-  ["bytedance-seed/seed-2-1-turbo", "external-replication-v1-no-reasoning"],
-  ["xiaomi/mimo-v2.5", "external-replication-v1-mimo-declared-answer"],
+const canonicalProtocolSuffixes = new Map<string, string[]>([
+  ["bytedance-seed/seed-2-1-turbo", ["external-replication-v1-no-reasoning"]],
+  [
+    "xiaomi/mimo-v2.5",
+    ["external-replication-v1-mimo-declared-answer", "external-replication-v1-mimo-completion"],
+  ],
 ]);
 const isCanonical = (run: EvaluationRunRecord) =>
   cohort.includes(run.modelId as (typeof cohort)[number]) &&
-  run.evaluationProtocolId?.endsWith(canonicalProtocolSuffix.get(run.modelId) ?? "never") === true;
+  canonicalProtocolSuffixes.get(run.modelId)?.some((suffix) => run.evaluationProtocolId?.endsWith(suffix)) ===
+    true;
 const canonicalRuns = uniqueRuns.filter(isCanonical);
 
 const families = [];
@@ -101,7 +106,9 @@ for (const family of evidence.families) {
       (run) =>
         run.evaluationPlanId === family.planId &&
         run.modelId === modelId &&
-        run.evaluationProtocolId?.endsWith(canonicalProtocolSuffix.get(modelId)!) === true,
+        canonicalProtocolSuffixes
+          .get(modelId)
+          ?.some((suffix) => run.evaluationProtocolId?.endsWith(suffix)) === true,
     );
     const summarize = (condition: string) => {
       const cases = manifest.cases.filter((candidate) => candidate.condition === condition);
@@ -196,7 +203,7 @@ const output = {
     "A family externally replicates only when both untouched routes provide 16 substantive native answers and each observed native solve rate is strictly below 50%. Frozen scorer-pending responses are included only when the answer-key-blind explicit-declaration adjudicator recovers one unambiguous claim; ambiguous responses remain excluded.",
   canonicalCohort: cohort.map((modelId) => ({
     modelId,
-    protocolSuffix: canonicalProtocolSuffix.get(modelId),
+    protocolSuffixes: canonicalProtocolSuffixes.get(modelId),
     canonicalRequests: canonicalRuns.filter((run) => run.modelId === modelId).length,
     substantiveAnswers: canonicalRuns.filter(
       (run) => run.modelId === modelId && run.status === "verified" && !run.emptyResponse,

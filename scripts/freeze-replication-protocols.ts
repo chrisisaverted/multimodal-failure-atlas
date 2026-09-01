@@ -26,6 +26,8 @@ const forcedChoiceOutputDirectory = resolve("evaluation/plans/replication-v1-mim
 await mkdir(forcedChoiceOutputDirectory, { recursive: true });
 const declaredAnswerOutputDirectory = resolve("evaluation/plans/replication-v1-mimo-declared-answer");
 await mkdir(declaredAnswerOutputDirectory, { recursive: true });
+const mimoCompletionOutputDirectory = resolve("evaluation/plans/replication-v1-mimo-completion");
+await mkdir(mimoCompletionOutputDirectory, { recursive: true });
 
 const cohort = [
   {
@@ -123,6 +125,16 @@ for (const family of evidence.families) {
       "MiMo repeated an explicit outside-option final count despite the forced-choice instruction. The prospective declared-answer-v4 scorer treats only an unambiguous declared outside-set answer as substantive incorrect; ambiguity and parser failure still receive no hardness credit.",
     scorer: "declared-answer-v4",
   };
+  const mimoCompletionProtocol = {
+    ...declaredAnswerProtocol,
+    id: `${family.planId}-external-replication-v1-mimo-completion`,
+    cohortId: "external-replication-v1-mimo-completion-2026-09-01",
+    frozenAt: "2026-09-01T12:38:00.000Z",
+    amendmentReason:
+      "Some original scorer-pending responses remained genuinely ambiguous under the frozen answer-key-blind adjudicator. This append-only completion protocol is used only for those unresolved cases and gives the protocol-level exact-answer instruction precedence over the family default.",
+    systemMessage:
+      "Return exactly one answer copied verbatim from the allowed-answer list. Output only that answer, with no prose, punctuation, markdown, reasoning, or alternative.",
+  };
   const protocolPath = resolve(outputDirectory, `${family.planId}.json`);
   try {
     await access(protocolPath);
@@ -154,6 +166,11 @@ for (const family of evidence.families) {
     `${JSON.stringify(answerProtocol, null, 2)}\n`,
     "utf8",
   );
+  await writeFile(
+    resolve(mimoCompletionOutputDirectory, `${family.planId}.json`),
+    `${JSON.stringify(mimoCompletionProtocol, null, 2)}\n`,
+    "utf8",
+  );
 }
 
 console.log(
@@ -164,6 +181,7 @@ console.log(
     replacementProtocols: evidence.families.length,
     forcedChoiceProtocols: evidence.families.length,
     declaredAnswerProtocols: evidence.families.length,
+    mimoCompletionProtocols: evidence.families.length,
     cohort: cohort.map(({ modelId }) => modelId),
   }),
 );

@@ -126,7 +126,7 @@ const jobs: EvaluationJob[] = await Promise.all(
         ? ("native-video" as const)
         : ("native-image" as const),
       estimatedCostUsd: estimatedCaseCostUsd,
-      systemMessage: entry.systemMessage ?? protocol.systemMessage ?? defaultSystemMessage,
+      systemMessage: protocol.systemMessage ?? entry.systemMessage ?? defaultSystemMessage,
       prompt: `${entry.question}\nAllowed answers: ${entry.answerOptions.join(", ")}.`,
       temperature: protocol.temperature,
       maxOutputTokens: protocol.maxOutputTokens,

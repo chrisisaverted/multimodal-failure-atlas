@@ -2,6 +2,7 @@ import { spawn } from "node:child_process";
 import { readdir, readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { z } from "zod";
+import { adjudicateExplicitDeclaration } from "../src/lib/evaluation/adjudication";
 import { evaluationRunSchema, type EvaluationRunRecord } from "../src/lib/evaluation/schema";
 
 const execute = process.argv.includes("--execute");
@@ -14,10 +15,18 @@ const evidence = z
   .object({ families: z.array(z.object({ planId: z.string() })) })
   .parse(JSON.parse(await readFile(resolve("src/data/admitted-families.json"), "utf8")));
 const manifestSchema = z.object({
-  cases: z.array(z.object({ seed: z.number().int(), condition: z.string() })),
+  cases: z.array(
+    z.object({ seed: z.number().int(), condition: z.string(), answerOptions: z.array(z.string()) }),
+  ),
 });
 const protocolVariant = process.env.ATLAS_REPLICATION_PROTOCOL_VARIANT ?? "replication-v1-no-reasoning";
-const resultDirectories = [`evaluation/results/${protocolVariant}`];
+const priorVariants = (process.env.ATLAS_REPLICATION_PRIOR_VARIANTS ?? "")
+  .split(",")
+  .map((value) => value.trim())
+  .filter(Boolean);
+const resultDirectories = [protocolVariant, ...priorVariants].map(
+  (variant) => `evaluation/results/${variant}`,
+);
 
 function conditionOf(run: EvaluationRunRecord) {
   return (
@@ -102,12 +111,15 @@ for (const [familyIndex, { planId }] of evidence.families.entries()) {
     (run) => run.modelId === modelId && run.evaluationPlanId === planId,
   );
   const missing = manifest.cases.flatMap((candidate, index) => {
-    const answered = runs.some(
+    const attempts = runs.filter(
+      (run) => run.seed === candidate.seed && conditionOf(run) === candidate.condition,
+    );
+    const answered = attempts.some(
       (run) =>
-        run.seed === candidate.seed &&
-        conditionOf(run) === candidate.condition &&
-        run.status === "verified" &&
-        !run.emptyResponse,
+        (run.status === "verified" && !run.emptyResponse) ||
+        (run.status === "pending-review" &&
+          !run.emptyResponse &&
+          Boolean(adjudicateExplicitDeclaration(run.rawResponse, candidate.answerOptions))),
     );
     return answered ? [] : [index];
   });
