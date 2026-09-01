@@ -1,6 +1,7 @@
 import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { z } from "zod";
+import { adjudicateExplicitDeclaration } from "../src/lib/evaluation/adjudication";
 import { evaluationRunSchema, type EvaluationRunRecord } from "../src/lib/evaluation/schema";
 
 const cohort = ["bytedance-seed/seed-2-1-turbo", "xiaomi/mimo-v2.5"] as const;
@@ -11,7 +12,15 @@ const evidence = z
   })
   .parse(JSON.parse(await readFile(resolve("src/data/admitted-families.json"), "utf8")));
 const manifestSchema = z.object({
-  cases: z.array(z.object({ candidateId: z.string(), seed: z.number().int(), condition: z.string() })),
+  cases: z.array(
+    z.object({
+      candidateId: z.string(),
+      seed: z.number().int(),
+      condition: z.string(),
+      expectedAnswer: z.string(),
+      answerOptions: z.array(z.string()),
+    }),
+  ),
 });
 
 function conditionOf(run: EvaluationRunRecord) {
@@ -100,14 +109,34 @@ for (const family of evidence.families) {
         const attempts = modelRuns.filter(
           (run) => run.seed === candidate.seed && conditionOf(run) === condition,
         );
-        const substantive = attempts.filter((run) => run.status === "verified" && !run.emptyResponse);
-        if (substantive.length > 1) {
+        const verified = attempts.filter((run) => run.status === "verified" && !run.emptyResponse);
+        if (verified.length > 1) {
           throw new Error(`${family.planId}: duplicate substantive ${modelId} ${candidate.candidateId}`);
         }
-        return { candidate, attempts, substantive: substantive[0] };
+        const adjudicated = verified.length
+          ? undefined
+          : attempts
+              .filter((run) => run.status === "pending-review" && !run.emptyResponse)
+              .map((run) => ({
+                run,
+                decision: adjudicateExplicitDeclaration(run.rawResponse, candidate.answerOptions),
+              }))
+              .find((entry) => entry.decision);
+        const selected = verified[0]
+          ? { run: verified[0], correct: verified[0].correct, adjudicated: false }
+          : adjudicated?.decision
+            ? {
+                run: adjudicated.run,
+                correct:
+                  adjudicated.decision.withinOptions &&
+                  adjudicated.decision.claimedAnswer === candidate.expectedAnswer,
+                adjudicated: true,
+              }
+            : undefined;
+        return { candidate, attempts, selected };
       });
-      const answered = perCase.flatMap((entry) => entry.substantive ?? []);
-      const correct = answered.filter((run) => run.correct).length;
+      const answered = perCase.flatMap((entry) => entry.selected ?? []);
+      const correct = answered.filter((entry) => entry.correct).length;
       return {
         condition,
         plannedCases: cases.length,
@@ -117,10 +146,11 @@ for (const family of evidence.families) {
         solveRate: answered.length ? correct / answered.length : null,
         ...wilson(correct, answered.length),
         missingCandidateIds: perCase
-          .filter((entry) => !entry.substantive)
+          .filter((entry) => !entry.selected)
           .map((entry) => entry.candidate.candidateId),
+        adjudicatedAnswers: answered.filter((entry) => entry.adjudicated).length,
         excludedRequests: perCase.reduce(
-          (sum, entry) => sum + entry.attempts.length - Number(Boolean(entry.substantive)),
+          (sum, entry) => sum + entry.attempts.length - Number(Boolean(entry.selected)),
           0,
         ),
         costUsd: perCase.reduce(
@@ -163,7 +193,7 @@ const output = {
   generatedAt: uniqueRuns.at(-1)?.evaluatedAt ?? null,
   analysisRole: "Untouched post-confirmatory route replication; never used for generator selection.",
   analysisRule:
-    "A family externally replicates only when both untouched routes provide 16 substantive native answers and each observed native solve rate is strictly below 50%.",
+    "A family externally replicates only when both untouched routes provide 16 substantive native answers and each observed native solve rate is strictly below 50%. Frozen scorer-pending responses are included only when the answer-key-blind explicit-declaration adjudicator recovers one unambiguous claim; ambiguous responses remain excluded.",
   canonicalCohort: cohort.map((modelId) => ({
     modelId,
     protocolSuffix: canonicalProtocolSuffix.get(modelId),
@@ -198,6 +228,8 @@ const output = {
 for (const [path, value] of [
   ["src/data/external-replication.json", output],
   ["src/data/external-replication-runs.json", uniqueRuns],
+  ["public/evidence/external-replication.json", output],
+  ["public/evidence/external-replication-runs.json", uniqueRuns],
 ] as const) {
   const target = resolve(path);
   await mkdir(dirname(target), { recursive: true });
