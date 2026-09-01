@@ -23,6 +23,8 @@
     "generate:momentary": "tsx scripts/materialize-momentary.ts",
     "rank:momentary": "tsx scripts/rank-momentary.ts",
     "freeze:momentary": "tsx scripts/freeze-momentary-holdout.ts",
+    "plan:compositional": "tsx scripts/plan-compositional-counting.ts",
+    "generate:compositional": "tsx scripts/materialize-compositional-counting.ts",
     "publish:adaptive": "tsx scripts/publish-adaptive-results.ts",
     "evaluate": "tsx scripts/evaluate.ts",
     "evaluate:fixture": "tsx scripts/evaluate.ts evaluation/plans/fixture-smoke.json",

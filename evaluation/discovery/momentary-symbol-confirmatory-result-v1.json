@@ -1,0 +1,44 @@
+{
+  "evaluationPlanId": "momentary-symbol-confirmatory-v1",
+  "evaluationPlanSha256": "205e9e7d71bcfb0bc61a15524eaf161555a93447fe95ad75d672dbff770fd61b",
+  "frozenAtCommit": "16a3a9e",
+  "status": "rejected-universal-admission",
+  "reason": "Kimi K3 solved all native-video holdout cases, so this setting does not satisfy the per-model below-50-percent rule.",
+  "primaryCondition": "native-1x",
+  "controlCondition": "oracle-critical-frame",
+  "models": [
+    {
+      "modelId": "google/gemini-3.7-flash",
+      "nativeCorrect": 7,
+      "nativeSubstantive": 16,
+      "nativeSolveRate": 0.4375,
+      "nativeWilson95": [0.230984, 0.668209],
+      "oracleCorrect": 16,
+      "oracleSubstantive": 16,
+      "costUsd": 0.05312925
+    },
+    {
+      "modelId": "moonshotai/kimi-k3",
+      "nativeCorrect": 16,
+      "nativeSubstantive": 16,
+      "nativeSolveRate": 1,
+      "nativeWilson95": [0.806386, 1],
+      "oracleCorrect": 16,
+      "oracleSubstantive": 16,
+      "costUsd": 0.982233
+    },
+    {
+      "modelId": "qwen/qwen3.8-max",
+      "nativeCorrect": 4,
+      "nativeSubstantive": 16,
+      "nativeSolveRate": 0.25,
+      "nativeWilson95": [0.101821, 0.494983],
+      "oracleCorrect": 16,
+      "oracleSubstantive": 16,
+      "costUsd": 0.28251
+    }
+  ],
+  "totalCostUsd": 1.31787225,
+  "humanSolvability": "unverified",
+  "interpretation": "The critical evidence was visibly answerable in every still-image control. The hosted Kimi route acquired all 67 ms events, contradicting the sampler-derived prediction and motivating a modality-independent compositional search."
+}

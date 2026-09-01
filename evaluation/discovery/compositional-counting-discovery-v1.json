@@ -1,0 +1,608 @@
+{
+  "id": "compositional-counting-discovery-v1",
+  "generatorVersion": "compositional-counting-v1",
+  "status": "discovery-only",
+  "hypothesis": "Exact counts of three-attribute conjunctions fail under dense one-attribute-away distractors.",
+  "candidates": [
+    {
+      "id": "cc-e9831a8aa6f2e776",
+      "cellId": "cell-53afee9200107a22",
+      "split": "discovery",
+      "seed": 610000,
+      "failureModeId": "counting-density-confound",
+      "question": "How many blue striped triangles are in the grid?",
+      "answerOptions": [
+        "4",
+        "6",
+        "8",
+        "10"
+      ],
+      "expectedAnswer": "4",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "gridSize": 10,
+        "hardNegativeRate": 0.55,
+        "targetCount": 4,
+        "targetColor": "blue",
+        "targetShape": "triangle",
+        "targetFill": "striped",
+        "visualVariant": 6
+      }
+    },
+    {
+      "id": "cc-57e8803254ecbe95",
+      "cellId": "cell-53afee9200107a22",
+      "split": "discovery",
+      "seed": 610001,
+      "failureModeId": "counting-density-confound",
+      "question": "How many red solid diamonds are in the grid?",
+      "answerOptions": [
+        "6",
+        "8",
+        "10",
+        "4"
+      ],
+      "expectedAnswer": "6",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "gridSize": 10,
+        "hardNegativeRate": 0.55,
+        "targetCount": 6,
+        "targetColor": "red",
+        "targetShape": "diamond",
+        "targetFill": "solid",
+        "visualVariant": 7
+      }
+    },
+    {
+      "id": "cc-525b5bc5e9365945",
+      "cellId": "cell-53afee9200107a22",
+      "split": "discovery",
+      "seed": 610002,
+      "failureModeId": "counting-density-confound",
+      "question": "How many green striped circles are in the grid?",
+      "answerOptions": [
+        "8",
+        "10",
+        "4",
+        "6"
+      ],
+      "expectedAnswer": "8",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "gridSize": 10,
+        "hardNegativeRate": 0.55,
+        "targetCount": 8,
+        "targetColor": "green",
+        "targetShape": "circle",
+        "targetFill": "striped",
+        "visualVariant": 8
+      }
+    },
+    {
+      "id": "cc-50ab4e141cfd8da8",
+      "cellId": "cell-53afee9200107a22",
+      "split": "discovery",
+      "seed": 610003,
+      "failureModeId": "counting-density-confound",
+      "question": "How many orange solid squares are in the grid?",
+      "answerOptions": [
+        "10",
+        "4",
+        "6",
+        "8"
+      ],
+      "expectedAnswer": "10",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "gridSize": 10,
+        "hardNegativeRate": 0.55,
+        "targetCount": 10,
+        "targetColor": "orange",
+        "targetShape": "square",
+        "targetFill": "solid",
+        "visualVariant": 9
+      }
+    },
+    {
+      "id": "cc-07a664cc860169a7",
+      "cellId": "cell-efb53aef831fa587",
+      "split": "discovery",
+      "seed": 610004,
+      "failureModeId": "counting-density-confound",
+      "question": "How many red solid diamonds are in the grid?",
+      "answerOptions": [
+        "4",
+        "6",
+        "8",
+        "10"
+      ],
+      "expectedAnswer": "4",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "gridSize": 10,
+        "hardNegativeRate": 0.9,
+        "targetCount": 4,
+        "targetColor": "red",
+        "targetShape": "diamond",
+        "targetFill": "solid",
+        "visualVariant": 10
+      }
+    },
+    {
+      "id": "cc-ef75ef6f4c610565",
+      "cellId": "cell-efb53aef831fa587",
+      "split": "discovery",
+      "seed": 610005,
+      "failureModeId": "counting-density-confound",
+      "question": "How many green striped circles are in the grid?",
+      "answerOptions": [
+        "6",
+        "8",
+        "10",
+        "4"
+      ],
+      "expectedAnswer": "6",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "gridSize": 10,
+        "hardNegativeRate": 0.9,
+        "targetCount": 6,
+        "targetColor": "green",
+        "targetShape": "circle",
+        "targetFill": "striped",
+        "visualVariant": 11
+      }
+    },
+    {
+      "id": "cc-51e30b999dec084a",
+      "cellId": "cell-efb53aef831fa587",
+      "split": "discovery",
+      "seed": 610006,
+      "failureModeId": "counting-density-confound",
+      "question": "How many orange solid squares are in the grid?",
+      "answerOptions": [
+        "8",
+        "10",
+        "4",
+        "6"
+      ],
+      "expectedAnswer": "8",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "gridSize": 10,
+        "hardNegativeRate": 0.9,
+        "targetCount": 8,
+        "targetColor": "orange",
+        "targetShape": "square",
+        "targetFill": "solid",
+        "visualVariant": 12
+      }
+    },
+    {
+      "id": "cc-2d982c9fa7077ecb",
+      "cellId": "cell-efb53aef831fa587",
+      "split": "discovery",
+      "seed": 610007,
+      "failureModeId": "counting-density-confound",
+      "question": "How many blue striped triangles are in the grid?",
+      "answerOptions": [
+        "10",
+        "4",
+        "6",
+        "8"
+      ],
+      "expectedAnswer": "10",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "gridSize": 10,
+        "hardNegativeRate": 0.9,
+        "targetCount": 10,
+        "targetColor": "blue",
+        "targetShape": "triangle",
+        "targetFill": "striped",
+        "visualVariant": 13
+      }
+    },
+    {
+      "id": "cc-57265c1fcf55d71a",
+      "cellId": "cell-2f946d2fb71b5262",
+      "split": "discovery",
+      "seed": 610008,
+      "failureModeId": "counting-density-confound",
+      "question": "How many green striped circles are in the grid?",
+      "answerOptions": [
+        "4",
+        "6",
+        "8",
+        "10"
+      ],
+      "expectedAnswer": "4",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "gridSize": 14,
+        "hardNegativeRate": 0.55,
+        "targetCount": 4,
+        "targetColor": "green",
+        "targetShape": "circle",
+        "targetFill": "striped",
+        "visualVariant": 14
+      }
+    },
+    {
+      "id": "cc-56427cfc5be8151c",
+      "cellId": "cell-2f946d2fb71b5262",
+      "split": "discovery",
+      "seed": 610009,
+      "failureModeId": "counting-density-confound",
+      "question": "How many orange solid squares are in the grid?",
+      "answerOptions": [
+        "6",
+        "8",
+        "10",
+        "4"
+      ],
+      "expectedAnswer": "6",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "gridSize": 14,
+        "hardNegativeRate": 0.55,
+        "targetCount": 6,
+        "targetColor": "orange",
+        "targetShape": "square",
+        "targetFill": "solid",
+        "visualVariant": 15
+      }
+    },
+    {
+      "id": "cc-73b5cdadbfe6cb37",
+      "cellId": "cell-2f946d2fb71b5262",
+      "split": "discovery",
+      "seed": 610010,
+      "failureModeId": "counting-density-confound",
+      "question": "How many blue striped triangles are in the grid?",
+      "answerOptions": [
+        "8",
+        "10",
+        "4",
+        "6"
+      ],
+      "expectedAnswer": "8",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "gridSize": 14,
+        "hardNegativeRate": 0.55,
+        "targetCount": 8,
+        "targetColor": "blue",
+        "targetShape": "triangle",
+        "targetFill": "striped",
+        "visualVariant": 16
+      }
+    },
+    {
+      "id": "cc-dd316b4b5922404e",
+      "cellId": "cell-2f946d2fb71b5262",
+      "split": "discovery",
+      "seed": 610011,
+      "failureModeId": "counting-density-confound",
+      "question": "How many red solid diamonds are in the grid?",
+      "answerOptions": [
+        "10",
+        "4",
+        "6",
+        "8"
+      ],
+      "expectedAnswer": "10",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "gridSize": 14,
+        "hardNegativeRate": 0.55,
+        "targetCount": 10,
+        "targetColor": "red",
+        "targetShape": "diamond",
+        "targetFill": "solid",
+        "visualVariant": 0
+      }
+    },
+    {
+      "id": "cc-741f070e3e1bfbd5",
+      "cellId": "cell-23f7aff87c35e81e",
+      "split": "discovery",
+      "seed": 610012,
+      "failureModeId": "counting-density-confound",
+      "question": "How many orange solid squares are in the grid?",
+      "answerOptions": [
+        "4",
+        "6",
+        "8",
+        "10"
+      ],
+      "expectedAnswer": "4",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "gridSize": 14,
+        "hardNegativeRate": 0.9,
+        "targetCount": 4,
+        "targetColor": "orange",
+        "targetShape": "square",
+        "targetFill": "solid",
+        "visualVariant": 1
+      }
+    },
+    {
+      "id": "cc-0c2882d5e9840042",
+      "cellId": "cell-23f7aff87c35e81e",
+      "split": "discovery",
+      "seed": 610013,
+      "failureModeId": "counting-density-confound",
+      "question": "How many blue striped triangles are in the grid?",
+      "answerOptions": [
+        "6",
+        "8",
+        "10",
+        "4"
+      ],
+      "expectedAnswer": "6",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "gridSize": 14,
+        "hardNegativeRate": 0.9,
+        "targetCount": 6,
+        "targetColor": "blue",
+        "targetShape": "triangle",
+        "targetFill": "striped",
+        "visualVariant": 2
+      }
+    },
+    {
+      "id": "cc-45cb2d56a7e05cf4",
+      "cellId": "cell-23f7aff87c35e81e",
+      "split": "discovery",
+      "seed": 610014,
+      "failureModeId": "counting-density-confound",
+      "question": "How many red solid diamonds are in the grid?",
+      "answerOptions": [
+        "8",
+        "10",
+        "4",
+        "6"
+      ],
+      "expectedAnswer": "8",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "gridSize": 14,
+        "hardNegativeRate": 0.9,
+        "targetCount": 8,
+        "targetColor": "red",
+        "targetShape": "diamond",
+        "targetFill": "solid",
+        "visualVariant": 3
+      }
+    },
+    {
+      "id": "cc-e69a61a6117f24a3",
+      "cellId": "cell-23f7aff87c35e81e",
+      "split": "discovery",
+      "seed": 610015,
+      "failureModeId": "counting-density-confound",
+      "question": "How many green striped circles are in the grid?",
+      "answerOptions": [
+        "10",
+        "4",
+        "6",
+        "8"
+      ],
+      "expectedAnswer": "10",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "gridSize": 14,
+        "hardNegativeRate": 0.9,
+        "targetCount": 10,
+        "targetColor": "green",
+        "targetShape": "circle",
+        "targetFill": "striped",
+        "visualVariant": 4
+      }
+    },
+    {
+      "id": "cc-f69c5cb2257dbc41",
+      "cellId": "cell-046f4cf71b5e4575",
+      "split": "discovery",
+      "seed": 610016,
+      "failureModeId": "counting-density-confound",
+      "question": "How many blue striped triangles are in the grid?",
+      "answerOptions": [
+        "4",
+        "6",
+        "8",
+        "10"
+      ],
+      "expectedAnswer": "4",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "gridSize": 18,
+        "hardNegativeRate": 0.55,
+        "targetCount": 4,
+        "targetColor": "blue",
+        "targetShape": "triangle",
+        "targetFill": "striped",
+        "visualVariant": 5
+      }
+    },
+    {
+      "id": "cc-ef57ab2c36bfe640",
+      "cellId": "cell-046f4cf71b5e4575",
+      "split": "discovery",
+      "seed": 610017,
+      "failureModeId": "counting-density-confound",
+      "question": "How many red solid diamonds are in the grid?",
+      "answerOptions": [
+        "6",
+        "8",
+        "10",
+        "4"
+      ],
+      "expectedAnswer": "6",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "gridSize": 18,
+        "hardNegativeRate": 0.55,
+        "targetCount": 6,
+        "targetColor": "red",
+        "targetShape": "diamond",
+        "targetFill": "solid",
+        "visualVariant": 6
+      }
+    },
+    {
+      "id": "cc-0a1faae9b4042f9b",
+      "cellId": "cell-046f4cf71b5e4575",
+      "split": "discovery",
+      "seed": 610018,
+      "failureModeId": "counting-density-confound",
+      "question": "How many green striped circles are in the grid?",
+      "answerOptions": [
+        "8",
+        "10",
+        "4",
+        "6"
+      ],
+      "expectedAnswer": "8",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "gridSize": 18,
+        "hardNegativeRate": 0.55,
+        "targetCount": 8,
+        "targetColor": "green",
+        "targetShape": "circle",
+        "targetFill": "striped",
+        "visualVariant": 7
+      }
+    },
+    {
+      "id": "cc-b05d7818a49857a4",
+      "cellId": "cell-046f4cf71b5e4575",
+      "split": "discovery",
+      "seed": 610019,
+      "failureModeId": "counting-density-confound",
+      "question": "How many orange solid squares are in the grid?",
+      "answerOptions": [
+        "10",
+        "4",
+        "6",
+        "8"
+      ],
+      "expectedAnswer": "10",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "gridSize": 18,
+        "hardNegativeRate": 0.55,
+        "targetCount": 10,
+        "targetColor": "orange",
+        "targetShape": "square",
+        "targetFill": "solid",
+        "visualVariant": 8
+      }
+    },
+    {
+      "id": "cc-02cd8708de0b883b",
+      "cellId": "cell-ae07fee2f6fa6d8f",
+      "split": "discovery",
+      "seed": 610020,
+      "failureModeId": "counting-density-confound",
+      "question": "How many red solid diamonds are in the grid?",
+      "answerOptions": [
+        "4",
+        "6",
+        "8",
+        "10"
+      ],
+      "expectedAnswer": "4",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "gridSize": 18,
+        "hardNegativeRate": 0.9,
+        "targetCount": 4,
+        "targetColor": "red",
+        "targetShape": "diamond",
+        "targetFill": "solid",
+        "visualVariant": 9
+      }
+    },
+    {
+      "id": "cc-30b0f042d8835a66",
+      "cellId": "cell-ae07fee2f6fa6d8f",
+      "split": "discovery",
+      "seed": 610021,
+      "failureModeId": "counting-density-confound",
+      "question": "How many green striped circles are in the grid?",
+      "answerOptions": [
+        "6",
+        "8",
+        "10",
+        "4"
+      ],
+      "expectedAnswer": "6",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "gridSize": 18,
+        "hardNegativeRate": 0.9,
+        "targetCount": 6,
+        "targetColor": "green",
+        "targetShape": "circle",
+        "targetFill": "striped",
+        "visualVariant": 10
+      }
+    },
+    {
+      "id": "cc-b12cdc4dd8ae1990",
+      "cellId": "cell-ae07fee2f6fa6d8f",
+      "split": "discovery",
+      "seed": 610022,
+      "failureModeId": "counting-density-confound",
+      "question": "How many orange solid squares are in the grid?",
+      "answerOptions": [
+        "8",
+        "10",
+        "4",
+        "6"
+      ],
+      "expectedAnswer": "8",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "gridSize": 18,
+        "hardNegativeRate": 0.9,
+        "targetCount": 8,
+        "targetColor": "orange",
+        "targetShape": "square",
+        "targetFill": "solid",
+        "visualVariant": 11
+      }
+    },
+    {
+      "id": "cc-348f9ae75c2812ce",
+      "cellId": "cell-ae07fee2f6fa6d8f",
+      "split": "discovery",
+      "seed": 610023,
+      "failureModeId": "counting-density-confound",
+      "question": "How many blue striped triangles are in the grid?",
+      "answerOptions": [
+        "10",
+        "4",
+        "6",
+        "8"
+      ],
+      "expectedAnswer": "10",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "gridSize": 18,
+        "hardNegativeRate": 0.9,
+        "targetCount": 10,
+        "targetColor": "blue",
+        "targetShape": "triangle",
+        "targetFill": "striped",
+        "visualVariant": 12
+      }
+    }
+  ]
+}

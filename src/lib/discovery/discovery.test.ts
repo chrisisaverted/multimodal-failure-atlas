@@ -15,8 +15,32 @@ import {
 } from "./momentary-symbol";
 import { scoreCells } from "./objective";
 import { scheduleBudgetedRound } from "./scheduler";
+import {
+  compositionalAnswers,
+  createCompositionalCountingDiscoveryGrid,
+  generateGlyphs,
+  renderCompositionalCountingSvg,
+} from "./compositional-counting";
 
 describe("adaptive multimodal discovery", () => {
+  it("builds balanced compositional-counting cells with exact deterministic ground truth", () => {
+    const candidates = createCompositionalCountingDiscoveryGrid();
+    expect(candidates).toHaveLength(24);
+    expect(new Set(candidates.map((candidate) => candidate.cellId))).toHaveLength(6);
+    for (const cellId of new Set(candidates.map((candidate) => candidate.cellId))) {
+      expect(candidates.filter((candidate) => candidate.cellId === cellId).map((candidate) => candidate.expectedAnswer).sort()).toEqual([...compositionalAnswers].sort());
+    }
+    for (const candidate of candidates) {
+      const p = candidate.parameters;
+      const matches = generateGlyphs(candidate).filter(
+        (glyph) => glyph.color === p.targetColor && glyph.shape === p.targetShape && glyph.fill === p.targetFill,
+      );
+      expect(matches).toHaveLength(p.targetCount);
+      expect(generateGlyphs(candidate)).toEqual(generateGlyphs(candidate));
+      expect(renderCompositionalCountingSvg(candidate)).toContain(p.targetShape.toUpperCase());
+    }
+  });
+
   it("creates a deterministic, balanced discovery grid", () => {
     const first = createDiscoveryGrid();
     const second = createDiscoveryGrid();
