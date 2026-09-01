@@ -78,8 +78,19 @@ import {
 } from "./jigsaw-order";
 import { createOcclusionStackDiscoveryGrid, renderOcclusionStackSvg } from "./occlusion-stack";
 import { createMotDiscoveryGrid, motEndpointAssignment, renderMotSvg } from "./multiple-object-tracking";
+import { createDynamicStateDiscoveryGrid, dynamicFinalState, renderDynamicStateSvg } from "./dynamic-state";
 
 describe("adaptive multimodal discovery", () => {
+  it("balances exact latent dynamic states after deterministic wall updates", () => {
+    const candidates = createDynamicStateDiscoveryGrid();
+    expect(candidates).toHaveLength(8);
+    for (const candidate of candidates) {
+      expect(dynamicFinalState(candidate)).toBe(candidate.parameters.targetState);
+      expect(renderDynamicStateSvg(candidate, 500)).toContain("#fff");
+      expect(renderDynamicStateSvg(candidate, 9000)).toContain("STATE HIDDEN");
+    }
+  });
+
   it("balances MOT endpoints and binds target identity to the exact trajectory", () => {
     const candidates = createMotDiscoveryGrid();
     expect(candidates).toHaveLength(8);

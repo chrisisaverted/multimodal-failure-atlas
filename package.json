@@ -61,6 +61,8 @@
     "generate:occlusion-stack": "tsx scripts/materialize-occlusion-stack.ts",
     "plan:mot": "tsx scripts/plan-mot.ts",
     "generate:mot": "tsx scripts/materialize-mot.ts",
+    "plan:dynamic-state": "tsx scripts/plan-dynamic-state.ts",
+    "generate:dynamic-state": "tsx scripts/materialize-dynamic-state.ts",
     "publish:adaptive": "tsx scripts/publish-adaptive-results.ts",
     "publish:precision-wire": "tsx scripts/publish-precision-wire-results.ts",
     "evaluate": "tsx scripts/evaluate.ts",
