@@ -99,8 +99,17 @@ import { containmentCounts, createIntervalGrid } from "./interval-containment";
 import { createTrajectoryGrid } from "./occluded-trajectory";
 import { createCubeNetGrid, cubeFaceAnswers, foldNet } from "./cube-net";
 import { applyArrowPath, createArrowPathGrid } from "./arrow-path";
+import { createParityGrid, parityMatrices, parityViolations } from "./parity-matrix";
 
 describe("adaptive multimodal discovery", () => {
+  it("places one all-even 2D parity matrix among single-bit corruptions", () => {
+    for (const candidate of createParityGrid()) {
+      const violations = parityMatrices(candidate).map(parityViolations);
+      expect(violations[candidate.parameters.correctPanel]).toEqual({ oddRows: 0, oddColumns: 0 });
+      expect(violations.filter(value => value.oddRows === 1 && value.oddColumns === 1)).toHaveLength(3);
+    }
+  });
+
   it("binds twelve-arrow video paths to balanced corner endpoints", () => {
     for (const candidate of createArrowPathGrid()) expect(applyArrowPath(candidate.parameters.moves).label).toBe(candidate.expectedAnswer);
   });

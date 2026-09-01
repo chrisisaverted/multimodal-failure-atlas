@@ -1,0 +1,249 @@
+{
+  "id": "parity-matrix-discovery-v1",
+  "planSha256": "d21f44d270c2b4962da639803b4e5850ab932960ca3ad0c35235a8d14cf352f2",
+  "generatorVersion": "two-dimensional-parity-matrix-v1",
+  "renderer": "parity-matrix-svg-raster-v1",
+  "fps": 0,
+  "cases": [
+    {
+      "candidateId": "pm-4259de6a10ee91bd",
+      "cellId": "cell-four-16x16-two-dimensional-parity",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four dense 16×16 dot matrices differ by exact row-column parity constraints.",
+      "failureModeId": "global-visual-parity-verification",
+      "generator": "parity-matrix",
+      "seed": 4200000,
+      "difficulty": 92,
+      "variant": 0,
+      "artifact": "public/evaluations/parity-matrix-discovery-v1/pm-4259de6a10ee91bd.png",
+      "mimeType": "image/png",
+      "question": "Which panel has an EVEN number of black cells in EVERY row AND EVERY column? Each other panel violates the rule in one row-column crossing.",
+      "answerOptions": [
+        "C",
+        "A",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "53bfb48bac3f88e74784d98b2a546dac462b3dc7afc9cd35e329965946c41d59",
+      "parameters": {
+        "correctPanel": 0,
+        "gridSize": 16,
+        "visualVariant": 0
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count dots modulo two in all rows and columns. Return exactly one panel letter."
+    },
+    {
+      "candidateId": "pm-4d5f3bbe72cae777",
+      "cellId": "cell-four-16x16-two-dimensional-parity",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four dense 16×16 dot matrices differ by exact row-column parity constraints.",
+      "failureModeId": "global-visual-parity-verification",
+      "generator": "parity-matrix",
+      "seed": 4200001,
+      "difficulty": 92,
+      "variant": 1,
+      "artifact": "public/evaluations/parity-matrix-discovery-v1/pm-4d5f3bbe72cae777.png",
+      "mimeType": "image/png",
+      "question": "Which panel has an EVEN number of black cells in EVERY row AND EVERY column? Each other panel violates the rule in one row-column crossing.",
+      "answerOptions": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "a5738feff491a2f37423ffd2332147404facf996149a220700a114eeb474648e",
+      "parameters": {
+        "correctPanel": 1,
+        "gridSize": 16,
+        "visualVariant": 1
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count dots modulo two in all rows and columns. Return exactly one panel letter."
+    },
+    {
+      "candidateId": "pm-8c7915bf5f9ba662",
+      "cellId": "cell-four-16x16-two-dimensional-parity",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four dense 16×16 dot matrices differ by exact row-column parity constraints.",
+      "failureModeId": "global-visual-parity-verification",
+      "generator": "parity-matrix",
+      "seed": 4200002,
+      "difficulty": 92,
+      "variant": 2,
+      "artifact": "public/evaluations/parity-matrix-discovery-v1/pm-8c7915bf5f9ba662.png",
+      "mimeType": "image/png",
+      "question": "Which panel has an EVEN number of black cells in EVERY row AND EVERY column? Each other panel violates the rule in one row-column crossing.",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "cbebbce00a4779e5f72d22012fa026dfb8e82260fbbf59055aa1d35feede5df7",
+      "parameters": {
+        "correctPanel": 2,
+        "gridSize": 16,
+        "visualVariant": 2
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count dots modulo two in all rows and columns. Return exactly one panel letter."
+    },
+    {
+      "candidateId": "pm-63e70b55085ce57c",
+      "cellId": "cell-four-16x16-two-dimensional-parity",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four dense 16×16 dot matrices differ by exact row-column parity constraints.",
+      "failureModeId": "global-visual-parity-verification",
+      "generator": "parity-matrix",
+      "seed": 4200003,
+      "difficulty": 92,
+      "variant": 3,
+      "artifact": "public/evaluations/parity-matrix-discovery-v1/pm-63e70b55085ce57c.png",
+      "mimeType": "image/png",
+      "question": "Which panel has an EVEN number of black cells in EVERY row AND EVERY column? Each other panel violates the rule in one row-column crossing.",
+      "answerOptions": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "2f4300d2468aa106d26355cac5fd17ade1945106a8d20b1b554425bdeb5ed7d7",
+      "parameters": {
+        "correctPanel": 3,
+        "gridSize": 16,
+        "visualVariant": 3
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count dots modulo two in all rows and columns. Return exactly one panel letter."
+    },
+    {
+      "candidateId": "pm-e3132ca78a2efdeb",
+      "cellId": "cell-four-16x16-two-dimensional-parity",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four dense 16×16 dot matrices differ by exact row-column parity constraints.",
+      "failureModeId": "global-visual-parity-verification",
+      "generator": "parity-matrix",
+      "seed": 4200004,
+      "difficulty": 92,
+      "variant": 4,
+      "artifact": "public/evaluations/parity-matrix-discovery-v1/pm-e3132ca78a2efdeb.png",
+      "mimeType": "image/png",
+      "question": "Which panel has an EVEN number of black cells in EVERY row AND EVERY column? Each other panel violates the rule in one row-column crossing.",
+      "answerOptions": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "9a429a8ed1b7bf27ca0c20e5bf72e707e3658eef9ac34d16f40fb2cc24559dff",
+      "parameters": {
+        "correctPanel": 0,
+        "gridSize": 16,
+        "visualVariant": 4
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count dots modulo two in all rows and columns. Return exactly one panel letter."
+    },
+    {
+      "candidateId": "pm-f62e0a1f0c2a357f",
+      "cellId": "cell-four-16x16-two-dimensional-parity",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four dense 16×16 dot matrices differ by exact row-column parity constraints.",
+      "failureModeId": "global-visual-parity-verification",
+      "generator": "parity-matrix",
+      "seed": 4200005,
+      "difficulty": 92,
+      "variant": 5,
+      "artifact": "public/evaluations/parity-matrix-discovery-v1/pm-f62e0a1f0c2a357f.png",
+      "mimeType": "image/png",
+      "question": "Which panel has an EVEN number of black cells in EVERY row AND EVERY column? Each other panel violates the rule in one row-column crossing.",
+      "answerOptions": [
+        "C",
+        "B",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "e2e9717057fdd0d1f1c0ab092537f6bcfed4c214fabae54dc67434cced416e21",
+      "parameters": {
+        "correctPanel": 1,
+        "gridSize": 16,
+        "visualVariant": 5
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count dots modulo two in all rows and columns. Return exactly one panel letter."
+    },
+    {
+      "candidateId": "pm-aa8dd222e997a024",
+      "cellId": "cell-four-16x16-two-dimensional-parity",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four dense 16×16 dot matrices differ by exact row-column parity constraints.",
+      "failureModeId": "global-visual-parity-verification",
+      "generator": "parity-matrix",
+      "seed": 4200006,
+      "difficulty": 92,
+      "variant": 6,
+      "artifact": "public/evaluations/parity-matrix-discovery-v1/pm-aa8dd222e997a024.png",
+      "mimeType": "image/png",
+      "question": "Which panel has an EVEN number of black cells in EVERY row AND EVERY column? Each other panel violates the rule in one row-column crossing.",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "5ea83b3f711ca300e6b5435ff7e3c1f2e72849a89a624a5d1f0505726b9fa8a1",
+      "parameters": {
+        "correctPanel": 2,
+        "gridSize": 16,
+        "visualVariant": 6
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count dots modulo two in all rows and columns. Return exactly one panel letter."
+    },
+    {
+      "candidateId": "pm-7211a8ea6dc2a6f1",
+      "cellId": "cell-four-16x16-two-dimensional-parity",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four dense 16×16 dot matrices differ by exact row-column parity constraints.",
+      "failureModeId": "global-visual-parity-verification",
+      "generator": "parity-matrix",
+      "seed": 4200007,
+      "difficulty": 92,
+      "variant": 7,
+      "artifact": "public/evaluations/parity-matrix-discovery-v1/pm-7211a8ea6dc2a6f1.png",
+      "mimeType": "image/png",
+      "question": "Which panel has an EVEN number of black cells in EVERY row AND EVERY column? Each other panel violates the rule in one row-column crossing.",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "3c2f13c4ee1d96e60406ab94ecdd0e32d41d863d3ad23d3f92758007b81956d2",
+      "parameters": {
+        "correctPanel": 3,
+        "gridSize": 16,
+        "visualVariant": 7
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Count dots modulo two in all rows and columns. Return exactly one panel letter."
+    }
+  ]
+}

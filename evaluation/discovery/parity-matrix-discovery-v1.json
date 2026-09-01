@@ -1,0 +1,176 @@
+{
+  "id": "parity-matrix-discovery-v1",
+  "generatorVersion": "two-dimensional-parity-matrix-v1",
+  "status": "discovery-only",
+  "hypothesis": "Models fail exact global parity verification over dense visual arrays.",
+  "candidates": [
+    {
+      "id": "pm-4259de6a10ee91bd",
+      "cellId": "cell-four-16x16-two-dimensional-parity",
+      "split": "discovery",
+      "seed": 4200000,
+      "failureModeId": "global-visual-parity-verification",
+      "question": "Which panel has an EVEN number of black cells in EVERY row AND EVERY column? Each other panel violates the rule in one row-column crossing.",
+      "answerOptions": [
+        "C",
+        "A",
+        "B",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 0,
+        "gridSize": 16,
+        "visualVariant": 0
+      }
+    },
+    {
+      "id": "pm-4d5f3bbe72cae777",
+      "cellId": "cell-four-16x16-two-dimensional-parity",
+      "split": "discovery",
+      "seed": 4200001,
+      "failureModeId": "global-visual-parity-verification",
+      "question": "Which panel has an EVEN number of black cells in EVERY row AND EVERY column? Each other panel violates the rule in one row-column crossing.",
+      "answerOptions": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 1,
+        "gridSize": 16,
+        "visualVariant": 1
+      }
+    },
+    {
+      "id": "pm-8c7915bf5f9ba662",
+      "cellId": "cell-four-16x16-two-dimensional-parity",
+      "split": "discovery",
+      "seed": 4200002,
+      "failureModeId": "global-visual-parity-verification",
+      "question": "Which panel has an EVEN number of black cells in EVERY row AND EVERY column? Each other panel violates the rule in one row-column crossing.",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 2,
+        "gridSize": 16,
+        "visualVariant": 2
+      }
+    },
+    {
+      "id": "pm-63e70b55085ce57c",
+      "cellId": "cell-four-16x16-two-dimensional-parity",
+      "split": "discovery",
+      "seed": 4200003,
+      "failureModeId": "global-visual-parity-verification",
+      "question": "Which panel has an EVEN number of black cells in EVERY row AND EVERY column? Each other panel violates the rule in one row-column crossing.",
+      "answerOptions": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 3,
+        "gridSize": 16,
+        "visualVariant": 3
+      }
+    },
+    {
+      "id": "pm-e3132ca78a2efdeb",
+      "cellId": "cell-four-16x16-two-dimensional-parity",
+      "split": "discovery",
+      "seed": 4200004,
+      "failureModeId": "global-visual-parity-verification",
+      "question": "Which panel has an EVEN number of black cells in EVERY row AND EVERY column? Each other panel violates the rule in one row-column crossing.",
+      "answerOptions": [
+        "B",
+        "A",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 0,
+        "gridSize": 16,
+        "visualVariant": 4
+      }
+    },
+    {
+      "id": "pm-f62e0a1f0c2a357f",
+      "cellId": "cell-four-16x16-two-dimensional-parity",
+      "split": "discovery",
+      "seed": 4200005,
+      "failureModeId": "global-visual-parity-verification",
+      "question": "Which panel has an EVEN number of black cells in EVERY row AND EVERY column? Each other panel violates the rule in one row-column crossing.",
+      "answerOptions": [
+        "C",
+        "B",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 1,
+        "gridSize": 16,
+        "visualVariant": 5
+      }
+    },
+    {
+      "id": "pm-aa8dd222e997a024",
+      "cellId": "cell-four-16x16-two-dimensional-parity",
+      "split": "discovery",
+      "seed": 4200006,
+      "failureModeId": "global-visual-parity-verification",
+      "question": "Which panel has an EVEN number of black cells in EVERY row AND EVERY column? Each other panel violates the rule in one row-column crossing.",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 2,
+        "gridSize": 16,
+        "visualVariant": 6
+      }
+    },
+    {
+      "id": "pm-7211a8ea6dc2a6f1",
+      "cellId": "cell-four-16x16-two-dimensional-parity",
+      "split": "discovery",
+      "seed": 4200007,
+      "failureModeId": "global-visual-parity-verification",
+      "question": "Which panel has an EVEN number of black cells in EVERY row AND EVERY column? Each other panel violates the rule in one row-column crossing.",
+      "answerOptions": [
+        "B",
+        "C",
+        "A",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 3,
+        "gridSize": 16,
+        "visualVariant": 7
+      }
+    }
+  ]
+}
