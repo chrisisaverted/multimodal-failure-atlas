@@ -119,6 +119,8 @@
     "generate:pair-collision": "tsx scripts/materialize-pair-collision.ts",
     "plan:reversal-count": "tsx scripts/plan-reversal-count.ts",
     "generate:reversal-count": "tsx scripts/materialize-reversal-count.ts",
+    "plan:paper-folding:hard": "tsx scripts/plan-paper-folding-hard.ts",
+    "generate:paper-folding:hard": "tsx scripts/materialize-paper-folding-hard.ts",
     "publish:adaptive": "tsx scripts/publish-adaptive-results.ts",
     "publish:precision-wire": "tsx scripts/publish-precision-wire-results.ts",
     "evaluate": "tsx scripts/evaluate.ts",

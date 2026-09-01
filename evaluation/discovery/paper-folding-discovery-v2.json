@@ -1,0 +1,281 @@
+{
+  "id": "paper-folding-discovery-v2",
+  "generatorVersion": "paper-folding-four-fold-v2",
+  "status": "discovery-only",
+  "supersedes": "paper-folding-discovery-v1",
+  "hypothesis": "A fourth fold and three punches expose exact spatial propagation failures while preserving an elementary mirror rule.",
+  "candidates": [
+    {
+      "id": "pfh-d6d5b7b95f6a6832",
+      "cellId": "cell-four-fold-three-punch-16x16",
+      "split": "discovery",
+      "seed": 4900000,
+      "failureModeId": "paper-folding-hole-propagation",
+      "question": "After reversing all FOUR folds, which 16×16 hole pattern appears?",
+      "answerOptions": [
+        "D",
+        "A",
+        "C",
+        "B"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 0,
+        "punches": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "visualVariant": 0
+      }
+    },
+    {
+      "id": "pfh-351d5f4633d5aef3",
+      "cellId": "cell-four-fold-three-punch-16x16",
+      "split": "discovery",
+      "seed": 4900001,
+      "failureModeId": "paper-folding-hole-propagation",
+      "question": "After reversing all FOUR folds, which 16×16 hole pattern appears?",
+      "answerOptions": [
+        "D",
+        "A",
+        "C",
+        "B"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 1,
+        "punches": [
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "visualVariant": 1
+      }
+    },
+    {
+      "id": "pfh-ec5291d197e56ef6",
+      "cellId": "cell-four-fold-three-punch-16x16",
+      "split": "discovery",
+      "seed": 4900002,
+      "failureModeId": "paper-folding-hole-propagation",
+      "question": "After reversing all FOUR folds, which 16×16 hole pattern appears?",
+      "answerOptions": [
+        "C",
+        "D",
+        "A",
+        "B"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 2,
+        "punches": [
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "visualVariant": 2
+      }
+    },
+    {
+      "id": "pfh-adb5a9d9af95a318",
+      "cellId": "cell-four-fold-three-punch-16x16",
+      "split": "discovery",
+      "seed": 4900003,
+      "failureModeId": "paper-folding-hole-propagation",
+      "question": "After reversing all FOUR folds, which 16×16 hole pattern appears?",
+      "answerOptions": [
+        "C",
+        "D",
+        "A",
+        "B"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 3,
+        "punches": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "visualVariant": 3
+      }
+    },
+    {
+      "id": "pfh-eccedf632155f6d3",
+      "cellId": "cell-four-fold-three-punch-16x16",
+      "split": "discovery",
+      "seed": 4900004,
+      "failureModeId": "paper-folding-hole-propagation",
+      "question": "After reversing all FOUR folds, which 16×16 hole pattern appears?",
+      "answerOptions": [
+        "D",
+        "C",
+        "A",
+        "B"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 0,
+        "punches": [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "visualVariant": 4
+      }
+    },
+    {
+      "id": "pfh-6bfe325441fd5451",
+      "cellId": "cell-four-fold-three-punch-16x16",
+      "split": "discovery",
+      "seed": 4900005,
+      "failureModeId": "paper-folding-hole-propagation",
+      "question": "After reversing all FOUR folds, which 16×16 hole pattern appears?",
+      "answerOptions": [
+        "A",
+        "C",
+        "D",
+        "B"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 1,
+        "punches": [
+          [
+            0,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "visualVariant": 5
+      }
+    },
+    {
+      "id": "pfh-ba17fbebb096a5e4",
+      "cellId": "cell-four-fold-three-punch-16x16",
+      "split": "discovery",
+      "seed": 4900006,
+      "failureModeId": "paper-folding-hole-propagation",
+      "question": "After reversing all FOUR folds, which 16×16 hole pattern appears?",
+      "answerOptions": [
+        "A",
+        "C",
+        "D",
+        "B"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 2,
+        "punches": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "visualVariant": 6
+      }
+    },
+    {
+      "id": "pfh-062f72b5e1e6e6da",
+      "cellId": "cell-four-fold-three-punch-16x16",
+      "split": "discovery",
+      "seed": 4900007,
+      "failureModeId": "paper-folding-hole-propagation",
+      "question": "After reversing all FOUR folds, which 16×16 hole pattern appears?",
+      "answerOptions": [
+        "C",
+        "A",
+        "D",
+        "B"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctPanel": 3,
+        "punches": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "visualVariant": 7
+      }
+    }
+  ]
+}

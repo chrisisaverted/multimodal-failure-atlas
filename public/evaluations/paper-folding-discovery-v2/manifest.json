@@ -1,0 +1,353 @@
+{
+  "id": "paper-folding-discovery-v2",
+  "planSha256": "a9f19e5b64be1f134e0394a668801dccc4c4fb5faeb6dff8cf8b84e1bf316a5d",
+  "generatorVersion": "paper-folding-four-fold-v2",
+  "renderer": "paper-folding-four-fold-svg-v2",
+  "fps": 0,
+  "cases": [
+    {
+      "candidateId": "pfh-d6d5b7b95f6a6832",
+      "cellId": "cell-four-fold-three-punch-16x16",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four orthogonal folds and three punches expand to a 16×16 exact mirror pattern.",
+      "failureModeId": "paper-folding-hole-propagation",
+      "generator": "paper-folding-hard",
+      "seed": 4900000,
+      "difficulty": 92,
+      "variant": 0,
+      "artifact": "public/evaluations/paper-folding-discovery-v2/pfh-d6d5b7b95f6a6832.png",
+      "mimeType": "image/png",
+      "question": "After reversing all FOUR folds, which 16×16 hole pattern appears?",
+      "answerOptions": [
+        "D",
+        "A",
+        "C",
+        "B"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "ef3be0fffafe9f06e87ee8858cfc42d0cc8567436a1ac608d13753043c84ffc8",
+      "parameters": {
+        "correctPanel": 0,
+        "punches": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "visualVariant": 0
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Reverse all four folds and mirror every punch at each unfolding. Return exactly one panel letter."
+    },
+    {
+      "candidateId": "pfh-351d5f4633d5aef3",
+      "cellId": "cell-four-fold-three-punch-16x16",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four orthogonal folds and three punches expand to a 16×16 exact mirror pattern.",
+      "failureModeId": "paper-folding-hole-propagation",
+      "generator": "paper-folding-hard",
+      "seed": 4900001,
+      "difficulty": 92,
+      "variant": 1,
+      "artifact": "public/evaluations/paper-folding-discovery-v2/pfh-351d5f4633d5aef3.png",
+      "mimeType": "image/png",
+      "question": "After reversing all FOUR folds, which 16×16 hole pattern appears?",
+      "answerOptions": [
+        "D",
+        "A",
+        "C",
+        "B"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "b4bb88cdcf0646a5dafaf4ceb6887c9117e4312d09a66f2a52f6af77e84a5b70",
+      "parameters": {
+        "correctPanel": 1,
+        "punches": [
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "visualVariant": 1
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Reverse all four folds and mirror every punch at each unfolding. Return exactly one panel letter."
+    },
+    {
+      "candidateId": "pfh-ec5291d197e56ef6",
+      "cellId": "cell-four-fold-three-punch-16x16",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four orthogonal folds and three punches expand to a 16×16 exact mirror pattern.",
+      "failureModeId": "paper-folding-hole-propagation",
+      "generator": "paper-folding-hard",
+      "seed": 4900002,
+      "difficulty": 92,
+      "variant": 2,
+      "artifact": "public/evaluations/paper-folding-discovery-v2/pfh-ec5291d197e56ef6.png",
+      "mimeType": "image/png",
+      "question": "After reversing all FOUR folds, which 16×16 hole pattern appears?",
+      "answerOptions": [
+        "C",
+        "D",
+        "A",
+        "B"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "1e5affcec1d9e4be3ce832fb54bc0d3d76060db78a20b189fff625002df51ac7",
+      "parameters": {
+        "correctPanel": 2,
+        "punches": [
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "visualVariant": 2
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Reverse all four folds and mirror every punch at each unfolding. Return exactly one panel letter."
+    },
+    {
+      "candidateId": "pfh-adb5a9d9af95a318",
+      "cellId": "cell-four-fold-three-punch-16x16",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four orthogonal folds and three punches expand to a 16×16 exact mirror pattern.",
+      "failureModeId": "paper-folding-hole-propagation",
+      "generator": "paper-folding-hard",
+      "seed": 4900003,
+      "difficulty": 92,
+      "variant": 3,
+      "artifact": "public/evaluations/paper-folding-discovery-v2/pfh-adb5a9d9af95a318.png",
+      "mimeType": "image/png",
+      "question": "After reversing all FOUR folds, which 16×16 hole pattern appears?",
+      "answerOptions": [
+        "C",
+        "D",
+        "A",
+        "B"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "0b711ef5db1f66d558843a41d1a297d17f6197cca805b9a37a625d509c18beb9",
+      "parameters": {
+        "correctPanel": 3,
+        "punches": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "visualVariant": 3
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Reverse all four folds and mirror every punch at each unfolding. Return exactly one panel letter."
+    },
+    {
+      "candidateId": "pfh-eccedf632155f6d3",
+      "cellId": "cell-four-fold-three-punch-16x16",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four orthogonal folds and three punches expand to a 16×16 exact mirror pattern.",
+      "failureModeId": "paper-folding-hole-propagation",
+      "generator": "paper-folding-hard",
+      "seed": 4900004,
+      "difficulty": 92,
+      "variant": 4,
+      "artifact": "public/evaluations/paper-folding-discovery-v2/pfh-eccedf632155f6d3.png",
+      "mimeType": "image/png",
+      "question": "After reversing all FOUR folds, which 16×16 hole pattern appears?",
+      "answerOptions": [
+        "D",
+        "C",
+        "A",
+        "B"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "d4dbc8f4919d85b9d93f06aa00bfac93c3fafc97726561cd00f08577274337a4",
+      "parameters": {
+        "correctPanel": 0,
+        "punches": [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "visualVariant": 4
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Reverse all four folds and mirror every punch at each unfolding. Return exactly one panel letter."
+    },
+    {
+      "candidateId": "pfh-6bfe325441fd5451",
+      "cellId": "cell-four-fold-three-punch-16x16",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four orthogonal folds and three punches expand to a 16×16 exact mirror pattern.",
+      "failureModeId": "paper-folding-hole-propagation",
+      "generator": "paper-folding-hard",
+      "seed": 4900005,
+      "difficulty": 92,
+      "variant": 5,
+      "artifact": "public/evaluations/paper-folding-discovery-v2/pfh-6bfe325441fd5451.png",
+      "mimeType": "image/png",
+      "question": "After reversing all FOUR folds, which 16×16 hole pattern appears?",
+      "answerOptions": [
+        "A",
+        "C",
+        "D",
+        "B"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "07d9c09c053543efa9a79233199591facdc589c7a00e6b0f949f1315b35f62bf",
+      "parameters": {
+        "correctPanel": 1,
+        "punches": [
+          [
+            0,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "visualVariant": 5
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Reverse all four folds and mirror every punch at each unfolding. Return exactly one panel letter."
+    },
+    {
+      "candidateId": "pfh-ba17fbebb096a5e4",
+      "cellId": "cell-four-fold-three-punch-16x16",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four orthogonal folds and three punches expand to a 16×16 exact mirror pattern.",
+      "failureModeId": "paper-folding-hole-propagation",
+      "generator": "paper-folding-hard",
+      "seed": 4900006,
+      "difficulty": 92,
+      "variant": 6,
+      "artifact": "public/evaluations/paper-folding-discovery-v2/pfh-ba17fbebb096a5e4.png",
+      "mimeType": "image/png",
+      "question": "After reversing all FOUR folds, which 16×16 hole pattern appears?",
+      "answerOptions": [
+        "A",
+        "C",
+        "D",
+        "B"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "46f05507598a7c6eae51485b98e71259e28fcaffeb119866ed2c281e210049cd",
+      "parameters": {
+        "correctPanel": 2,
+        "punches": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "visualVariant": 6
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Reverse all four folds and mirror every punch at each unfolding. Return exactly one panel letter."
+    },
+    {
+      "candidateId": "pfh-062f72b5e1e6e6da",
+      "cellId": "cell-four-fold-three-punch-16x16",
+      "split": "discovery",
+      "condition": "native-image",
+      "interventionDescription": "Four orthogonal folds and three punches expand to a 16×16 exact mirror pattern.",
+      "failureModeId": "paper-folding-hole-propagation",
+      "generator": "paper-folding-hard",
+      "seed": 4900007,
+      "difficulty": 92,
+      "variant": 7,
+      "artifact": "public/evaluations/paper-folding-discovery-v2/pfh-062f72b5e1e6e6da.png",
+      "mimeType": "image/png",
+      "question": "After reversing all FOUR folds, which 16×16 hole pattern appears?",
+      "answerOptions": [
+        "C",
+        "A",
+        "D",
+        "B"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "73404dbd16c65fbffa69f97ee8b379bd1b6167aa2a583ec959bc87126271645d",
+      "parameters": {
+        "correctPanel": 3,
+        "punches": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "visualVariant": 7
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Reverse all four folds and mirror every punch at each unfolding. Return exactly one panel letter."
+    }
+  ]
+}

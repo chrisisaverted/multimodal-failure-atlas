@@ -103,8 +103,17 @@ import { createParityGrid, parityMatrices, parityViolations } from "./parity-mat
 import { createZoneEntryGrid } from "./zone-entry-count";
 import { countTargetPair, createPairCollisionGrid } from "./pair-collision-count";
 import { createReversalGrid } from "./reversal-count";
+import { createPaperHardGrid, paperHardPatterns, unfoldHardPunches } from "./paper-folding-hard";
 
 describe("adaptive multimodal discovery", () => {
+  it("propagates three punches through four folds into unique 16x16 patterns", () => {
+    for (const candidate of createPaperHardGrid()) {
+      expect(unfoldHardPunches(candidate.parameters.punches)).toHaveLength(48);
+      const patterns = paperHardPatterns(candidate);
+      expect(new Set(patterns.map(value => JSON.stringify(value))).size).toBe(4);
+    }
+  });
+
   it("binds target trajectories to balanced direction-reversal counts", () => {
     for (const candidate of createReversalGrid()) expect(candidate.expectedAnswer).toBe(String(candidate.parameters.reversalCount));
   });
