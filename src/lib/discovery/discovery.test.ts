@@ -45,6 +45,7 @@ import {
 } from "./rotation-correspondence";
 import {
   changeQuadrants,
+  createChangeLocalizationHoldout,
   createChangeLocalizationDiscoveryGrid,
   renderChangeLocalizationSvg,
 } from "./change-localization";
@@ -63,8 +64,27 @@ import {
   renderTemporalOrderSvg,
   temporalOrderSchedule,
 } from "./temporal-order";
+import {
+  createTemporalRelationGrid,
+  renderTemporalRelationSvg,
+  temporalRelationEvents,
+} from "./temporal-relations";
 
 describe("adaptive multimodal discovery", () => {
+  it("balances duration and synchrony diagnostics with exact event oracles", () => {
+    for (const task of ["duration-comparison", "synchrony-detection"] as const) {
+      const candidates = createTemporalRelationGrid(task);
+      expect(candidates).toHaveLength(8);
+      expect(candidates.map((candidate) => candidate.expectedAnswer).sort()).toEqual(
+        ["A", "A", "B", "B", "C", "C", "D", "D"],
+      );
+      for (const candidate of candidates) {
+        expect(temporalRelationEvents(candidate)).toHaveLength(task === "duration-comparison" ? 4 : 8);
+        expect(renderTemporalRelationSvg(candidate, 0)).toContain("<svg");
+      }
+    }
+  });
+
   it("balances temporal orders with exact non-overlapping visible flashes", () => {
     const candidates = createTemporalOrderDiscoveryGrid();
     expect(candidates).toHaveLength(8);
@@ -127,6 +147,14 @@ describe("adaptive multimodal discovery", () => {
     }
     expect(renderChangeLocalizationSvg(candidates[0]!)).toBe(renderChangeLocalizationSvg(candidates[0]!));
     expect(renderChangeLocalizationSvg(candidates[0]!, true)).toContain('stroke="#e23e31"');
+  });
+
+  it("reserves a balanced disjoint dense-change holdout", () => {
+    const holdout = createChangeLocalizationHoldout();
+    expect(holdout).toHaveLength(16);
+    expect(holdout.every((candidate) => candidate.seed >= 1_420_000)).toBe(true);
+    for (const answer of changeQuadrants)
+      expect(holdout.filter((candidate) => candidate.expectedAnswer === answer)).toHaveLength(4);
   });
 
   it("balances exact rotation correspondence across candidate locations", () => {

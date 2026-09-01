@@ -1,0 +1,192 @@
+{
+  "id": "synchrony-detection-discovery-v1",
+  "generatorVersion": "temporal-relations-v1",
+  "status": "discovery-only",
+  "hypothesis": "Video models fail fine temporal alignment despite repeated redundant flashes.",
+  "candidates": [
+    {
+      "id": "tr-d6056743ba6f363a",
+      "cellId": "cell-7b9362d81a9c13c0",
+      "split": "discovery",
+      "seed": 1910000,
+      "failureModeId": "temporal-synchrony-detection",
+      "task": "synchrony-detection",
+      "question": "Which labeled pair flashes yellow at exactly the same times?",
+      "answerOptions": [
+        "C",
+        "D",
+        "A",
+        "B"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctIndex": 0,
+        "videoDurationMs": 8000,
+        "fps": 30,
+        "visualVariant": 0
+      }
+    },
+    {
+      "id": "tr-5f4e03aa5cd67fda",
+      "cellId": "cell-7b9362d81a9c13c0",
+      "split": "discovery",
+      "seed": 1910001,
+      "failureModeId": "temporal-synchrony-detection",
+      "task": "synchrony-detection",
+      "question": "Which labeled pair flashes yellow at exactly the same times?",
+      "answerOptions": [
+        "C",
+        "A",
+        "D",
+        "B"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctIndex": 1,
+        "videoDurationMs": 8000,
+        "fps": 30,
+        "visualVariant": 1
+      }
+    },
+    {
+      "id": "tr-0429ddf12cdd40cf",
+      "cellId": "cell-7b9362d81a9c13c0",
+      "split": "discovery",
+      "seed": 1910002,
+      "failureModeId": "temporal-synchrony-detection",
+      "task": "synchrony-detection",
+      "question": "Which labeled pair flashes yellow at exactly the same times?",
+      "answerOptions": [
+        "C",
+        "A",
+        "D",
+        "B"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctIndex": 2,
+        "videoDurationMs": 8000,
+        "fps": 30,
+        "visualVariant": 2
+      }
+    },
+    {
+      "id": "tr-1fe3c269c2c0027c",
+      "cellId": "cell-7b9362d81a9c13c0",
+      "split": "discovery",
+      "seed": 1910003,
+      "failureModeId": "temporal-synchrony-detection",
+      "task": "synchrony-detection",
+      "question": "Which labeled pair flashes yellow at exactly the same times?",
+      "answerOptions": [
+        "A",
+        "C",
+        "D",
+        "B"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctIndex": 3,
+        "videoDurationMs": 8000,
+        "fps": 30,
+        "visualVariant": 3
+      }
+    },
+    {
+      "id": "tr-2c4e839794020f87",
+      "cellId": "cell-7b9362d81a9c13c0",
+      "split": "discovery",
+      "seed": 1910004,
+      "failureModeId": "temporal-synchrony-detection",
+      "task": "synchrony-detection",
+      "question": "Which labeled pair flashes yellow at exactly the same times?",
+      "answerOptions": [
+        "A",
+        "C",
+        "D",
+        "B"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctIndex": 0,
+        "videoDurationMs": 8000,
+        "fps": 30,
+        "visualVariant": 4
+      }
+    },
+    {
+      "id": "tr-1e57e738ff5be973",
+      "cellId": "cell-7b9362d81a9c13c0",
+      "split": "discovery",
+      "seed": 1910005,
+      "failureModeId": "temporal-synchrony-detection",
+      "task": "synchrony-detection",
+      "question": "Which labeled pair flashes yellow at exactly the same times?",
+      "answerOptions": [
+        "D",
+        "A",
+        "C",
+        "B"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctIndex": 1,
+        "videoDurationMs": 8000,
+        "fps": 30,
+        "visualVariant": 5
+      }
+    },
+    {
+      "id": "tr-b3427d14e232fa69",
+      "cellId": "cell-7b9362d81a9c13c0",
+      "split": "discovery",
+      "seed": 1910006,
+      "failureModeId": "temporal-synchrony-detection",
+      "task": "synchrony-detection",
+      "question": "Which labeled pair flashes yellow at exactly the same times?",
+      "answerOptions": [
+        "A",
+        "D",
+        "C",
+        "B"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctIndex": 2,
+        "videoDurationMs": 8000,
+        "fps": 30,
+        "visualVariant": 6
+      }
+    },
+    {
+      "id": "tr-fc363effc9bfe829",
+      "cellId": "cell-7b9362d81a9c13c0",
+      "split": "discovery",
+      "seed": 1910007,
+      "failureModeId": "temporal-synchrony-detection",
+      "task": "synchrony-detection",
+      "question": "Which labeled pair flashes yellow at exactly the same times?",
+      "answerOptions": [
+        "A",
+        "D",
+        "C",
+        "B"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctIndex": 3,
+        "videoDurationMs": 8000,
+        "fps": 30,
+        "visualVariant": 7
+      }
+    }
+  ]
+}

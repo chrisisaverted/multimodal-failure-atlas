@@ -1,0 +1,265 @@
+{
+  "id": "synchrony-detection-discovery-v1",
+  "planSha256": "478f7fe6df2b9c299a3d267cef483f7dd639f816095577ae4f796ca39e3a605b",
+  "generatorVersion": "temporal-relations-v1",
+  "renderer": "temporal-relations-svg-raster-v1",
+  "fps": 30,
+  "cases": [
+    {
+      "candidateId": "tr-d6056743ba6f363a",
+      "cellId": "cell-7b9362d81a9c13c0",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four labeled pairs repeat three flashes; one pair has zero offset and decoys have at least 265 ms offset.",
+      "failureModeId": "temporal-synchrony-detection",
+      "generator": "temporal-relations",
+      "seed": 1910000,
+      "difficulty": 70,
+      "variant": 0,
+      "artifact": "public/evaluations/synchrony-detection-discovery-v1/tr-d6056743ba6f363a.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 8000,
+      "question": "Which labeled pair flashes yellow at exactly the same times?",
+      "answerOptions": [
+        "C",
+        "D",
+        "A",
+        "B"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "490c1d6d1eddb13d9fd8c2c078b06b32f87f1aafa98208c5e31e0243153cb2fb",
+      "parameters": {
+        "correctIndex": 0,
+        "videoDurationMs": 8000,
+        "fps": 30,
+        "visualVariant": 0
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Watch the complete controlled video and compare the labeled events. Return exactly one allowed letter and do not explain."
+    },
+    {
+      "candidateId": "tr-5f4e03aa5cd67fda",
+      "cellId": "cell-7b9362d81a9c13c0",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four labeled pairs repeat three flashes; one pair has zero offset and decoys have at least 265 ms offset.",
+      "failureModeId": "temporal-synchrony-detection",
+      "generator": "temporal-relations",
+      "seed": 1910001,
+      "difficulty": 70,
+      "variant": 1,
+      "artifact": "public/evaluations/synchrony-detection-discovery-v1/tr-5f4e03aa5cd67fda.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 8000,
+      "question": "Which labeled pair flashes yellow at exactly the same times?",
+      "answerOptions": [
+        "C",
+        "A",
+        "D",
+        "B"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "4711ab135e36acfa2bde8e27d7094e5622f3bbc5c896cd9e6111cb51f2ff6649",
+      "parameters": {
+        "correctIndex": 1,
+        "videoDurationMs": 8000,
+        "fps": 30,
+        "visualVariant": 1
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Watch the complete controlled video and compare the labeled events. Return exactly one allowed letter and do not explain."
+    },
+    {
+      "candidateId": "tr-0429ddf12cdd40cf",
+      "cellId": "cell-7b9362d81a9c13c0",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four labeled pairs repeat three flashes; one pair has zero offset and decoys have at least 265 ms offset.",
+      "failureModeId": "temporal-synchrony-detection",
+      "generator": "temporal-relations",
+      "seed": 1910002,
+      "difficulty": 70,
+      "variant": 2,
+      "artifact": "public/evaluations/synchrony-detection-discovery-v1/tr-0429ddf12cdd40cf.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 8000,
+      "question": "Which labeled pair flashes yellow at exactly the same times?",
+      "answerOptions": [
+        "C",
+        "A",
+        "D",
+        "B"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "a1570724dd6f21422a5dae36f3ff7380d6513511c7650d84b8456c370d3d4f74",
+      "parameters": {
+        "correctIndex": 2,
+        "videoDurationMs": 8000,
+        "fps": 30,
+        "visualVariant": 2
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Watch the complete controlled video and compare the labeled events. Return exactly one allowed letter and do not explain."
+    },
+    {
+      "candidateId": "tr-1fe3c269c2c0027c",
+      "cellId": "cell-7b9362d81a9c13c0",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four labeled pairs repeat three flashes; one pair has zero offset and decoys have at least 265 ms offset.",
+      "failureModeId": "temporal-synchrony-detection",
+      "generator": "temporal-relations",
+      "seed": 1910003,
+      "difficulty": 70,
+      "variant": 3,
+      "artifact": "public/evaluations/synchrony-detection-discovery-v1/tr-1fe3c269c2c0027c.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 8000,
+      "question": "Which labeled pair flashes yellow at exactly the same times?",
+      "answerOptions": [
+        "A",
+        "C",
+        "D",
+        "B"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "f4490aaa7c20b5fed99c99757624a3c2fad6f7ab70f01ec6e1bb3415d3d9a39f",
+      "parameters": {
+        "correctIndex": 3,
+        "videoDurationMs": 8000,
+        "fps": 30,
+        "visualVariant": 3
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Watch the complete controlled video and compare the labeled events. Return exactly one allowed letter and do not explain."
+    },
+    {
+      "candidateId": "tr-2c4e839794020f87",
+      "cellId": "cell-7b9362d81a9c13c0",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four labeled pairs repeat three flashes; one pair has zero offset and decoys have at least 265 ms offset.",
+      "failureModeId": "temporal-synchrony-detection",
+      "generator": "temporal-relations",
+      "seed": 1910004,
+      "difficulty": 70,
+      "variant": 4,
+      "artifact": "public/evaluations/synchrony-detection-discovery-v1/tr-2c4e839794020f87.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 8000,
+      "question": "Which labeled pair flashes yellow at exactly the same times?",
+      "answerOptions": [
+        "A",
+        "C",
+        "D",
+        "B"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "490c1d6d1eddb13d9fd8c2c078b06b32f87f1aafa98208c5e31e0243153cb2fb",
+      "parameters": {
+        "correctIndex": 0,
+        "videoDurationMs": 8000,
+        "fps": 30,
+        "visualVariant": 4
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Watch the complete controlled video and compare the labeled events. Return exactly one allowed letter and do not explain."
+    },
+    {
+      "candidateId": "tr-1e57e738ff5be973",
+      "cellId": "cell-7b9362d81a9c13c0",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four labeled pairs repeat three flashes; one pair has zero offset and decoys have at least 265 ms offset.",
+      "failureModeId": "temporal-synchrony-detection",
+      "generator": "temporal-relations",
+      "seed": 1910005,
+      "difficulty": 70,
+      "variant": 5,
+      "artifact": "public/evaluations/synchrony-detection-discovery-v1/tr-1e57e738ff5be973.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 8000,
+      "question": "Which labeled pair flashes yellow at exactly the same times?",
+      "answerOptions": [
+        "D",
+        "A",
+        "C",
+        "B"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "4711ab135e36acfa2bde8e27d7094e5622f3bbc5c896cd9e6111cb51f2ff6649",
+      "parameters": {
+        "correctIndex": 1,
+        "videoDurationMs": 8000,
+        "fps": 30,
+        "visualVariant": 5
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Watch the complete controlled video and compare the labeled events. Return exactly one allowed letter and do not explain."
+    },
+    {
+      "candidateId": "tr-b3427d14e232fa69",
+      "cellId": "cell-7b9362d81a9c13c0",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four labeled pairs repeat three flashes; one pair has zero offset and decoys have at least 265 ms offset.",
+      "failureModeId": "temporal-synchrony-detection",
+      "generator": "temporal-relations",
+      "seed": 1910006,
+      "difficulty": 70,
+      "variant": 6,
+      "artifact": "public/evaluations/synchrony-detection-discovery-v1/tr-b3427d14e232fa69.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 8000,
+      "question": "Which labeled pair flashes yellow at exactly the same times?",
+      "answerOptions": [
+        "A",
+        "D",
+        "C",
+        "B"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "a1570724dd6f21422a5dae36f3ff7380d6513511c7650d84b8456c370d3d4f74",
+      "parameters": {
+        "correctIndex": 2,
+        "videoDurationMs": 8000,
+        "fps": 30,
+        "visualVariant": 6
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Watch the complete controlled video and compare the labeled events. Return exactly one allowed letter and do not explain."
+    },
+    {
+      "candidateId": "tr-fc363effc9bfe829",
+      "cellId": "cell-7b9362d81a9c13c0",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four labeled pairs repeat three flashes; one pair has zero offset and decoys have at least 265 ms offset.",
+      "failureModeId": "temporal-synchrony-detection",
+      "generator": "temporal-relations",
+      "seed": 1910007,
+      "difficulty": 70,
+      "variant": 7,
+      "artifact": "public/evaluations/synchrony-detection-discovery-v1/tr-fc363effc9bfe829.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 8000,
+      "question": "Which labeled pair flashes yellow at exactly the same times?",
+      "answerOptions": [
+        "A",
+        "D",
+        "C",
+        "B"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "f4490aaa7c20b5fed99c99757624a3c2fad6f7ab70f01ec6e1bb3415d3d9a39f",
+      "parameters": {
+        "correctIndex": 3,
+        "videoDurationMs": 8000,
+        "fps": 30,
+        "visualVariant": 7
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Watch the complete controlled video and compare the labeled events. Return exactly one allowed letter and do not explain."
+    }
+  ]
+}

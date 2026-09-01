@@ -1,0 +1,192 @@
+{
+  "id": "duration-comparison-discovery-v1",
+  "generatorVersion": "temporal-relations-v1",
+  "status": "discovery-only",
+  "hypothesis": "Video models fail direct duration comparison across visible intervals.",
+  "candidates": [
+    {
+      "id": "tr-fdb81a498b896eb9",
+      "cellId": "cell-a1ad98d838916766",
+      "split": "discovery",
+      "seed": 1900000,
+      "failureModeId": "visual-duration-comparison",
+      "task": "duration-comparison",
+      "question": "Which labeled disk stays yellow for the longest single interval?",
+      "answerOptions": [
+        "D",
+        "B",
+        "A",
+        "C"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctIndex": 0,
+        "videoDurationMs": 8000,
+        "fps": 30,
+        "visualVariant": 0
+      }
+    },
+    {
+      "id": "tr-f8fa8c212c86f13e",
+      "cellId": "cell-a1ad98d838916766",
+      "split": "discovery",
+      "seed": 1900001,
+      "failureModeId": "visual-duration-comparison",
+      "task": "duration-comparison",
+      "question": "Which labeled disk stays yellow for the longest single interval?",
+      "answerOptions": [
+        "D",
+        "A",
+        "B",
+        "C"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctIndex": 1,
+        "videoDurationMs": 8000,
+        "fps": 30,
+        "visualVariant": 1
+      }
+    },
+    {
+      "id": "tr-2ceeba32088593c6",
+      "cellId": "cell-a1ad98d838916766",
+      "split": "discovery",
+      "seed": 1900002,
+      "failureModeId": "visual-duration-comparison",
+      "task": "duration-comparison",
+      "question": "Which labeled disk stays yellow for the longest single interval?",
+      "answerOptions": [
+        "D",
+        "A",
+        "B",
+        "C"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctIndex": 2,
+        "videoDurationMs": 8000,
+        "fps": 30,
+        "visualVariant": 2
+      }
+    },
+    {
+      "id": "tr-7d2b10be6a02a2f7",
+      "cellId": "cell-a1ad98d838916766",
+      "split": "discovery",
+      "seed": 1900003,
+      "failureModeId": "visual-duration-comparison",
+      "task": "duration-comparison",
+      "question": "Which labeled disk stays yellow for the longest single interval?",
+      "answerOptions": [
+        "A",
+        "D",
+        "B",
+        "C"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctIndex": 3,
+        "videoDurationMs": 8000,
+        "fps": 30,
+        "visualVariant": 3
+      }
+    },
+    {
+      "id": "tr-f70339470cf54e92",
+      "cellId": "cell-a1ad98d838916766",
+      "split": "discovery",
+      "seed": 1900004,
+      "failureModeId": "visual-duration-comparison",
+      "task": "duration-comparison",
+      "question": "Which labeled disk stays yellow for the longest single interval?",
+      "answerOptions": [
+        "D",
+        "A",
+        "B",
+        "C"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctIndex": 0,
+        "videoDurationMs": 8000,
+        "fps": 30,
+        "visualVariant": 4
+      }
+    },
+    {
+      "id": "tr-81307f6908da1cf5",
+      "cellId": "cell-a1ad98d838916766",
+      "split": "discovery",
+      "seed": 1900005,
+      "failureModeId": "visual-duration-comparison",
+      "task": "duration-comparison",
+      "question": "Which labeled disk stays yellow for the longest single interval?",
+      "answerOptions": [
+        "B",
+        "A",
+        "D",
+        "C"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctIndex": 1,
+        "videoDurationMs": 8000,
+        "fps": 30,
+        "visualVariant": 5
+      }
+    },
+    {
+      "id": "tr-54ea026820e1799a",
+      "cellId": "cell-a1ad98d838916766",
+      "split": "discovery",
+      "seed": 1900006,
+      "failureModeId": "visual-duration-comparison",
+      "task": "duration-comparison",
+      "question": "Which labeled disk stays yellow for the longest single interval?",
+      "answerOptions": [
+        "A",
+        "B",
+        "D",
+        "C"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctIndex": 2,
+        "videoDurationMs": 8000,
+        "fps": 30,
+        "visualVariant": 6
+      }
+    },
+    {
+      "id": "tr-512eb797f37d63b7",
+      "cellId": "cell-a1ad98d838916766",
+      "split": "discovery",
+      "seed": 1900007,
+      "failureModeId": "visual-duration-comparison",
+      "task": "duration-comparison",
+      "question": "Which labeled disk stays yellow for the longest single interval?",
+      "answerOptions": [
+        "B",
+        "A",
+        "D",
+        "C"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "correctIndex": 3,
+        "videoDurationMs": 8000,
+        "fps": 30,
+        "visualVariant": 7
+      }
+    }
+  ]
+}

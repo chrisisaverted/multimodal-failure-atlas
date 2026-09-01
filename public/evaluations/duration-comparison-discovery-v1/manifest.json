@@ -1,0 +1,265 @@
+{
+  "id": "duration-comparison-discovery-v1",
+  "planSha256": "d3a4140bac48f57837c011863ba6eaaa9a485cdf1b2ca3da8ba9a2d72a9b022f",
+  "generatorVersion": "temporal-relations-v1",
+  "renderer": "temporal-relations-svg-raster-v1",
+  "fps": 30,
+  "cases": [
+    {
+      "candidateId": "tr-fdb81a498b896eb9",
+      "cellId": "cell-a1ad98d838916766",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four clearly separated intervals with a 500 ms minimum duration margin.",
+      "failureModeId": "visual-duration-comparison",
+      "generator": "temporal-relations",
+      "seed": 1900000,
+      "difficulty": 70,
+      "variant": 0,
+      "artifact": "public/evaluations/duration-comparison-discovery-v1/tr-fdb81a498b896eb9.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 8000,
+      "question": "Which labeled disk stays yellow for the longest single interval?",
+      "answerOptions": [
+        "D",
+        "B",
+        "A",
+        "C"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "5b0cfab9a7d060a59ffe1c2060b622b603422c85df0910062cbe5de4207a3aa4",
+      "parameters": {
+        "correctIndex": 0,
+        "videoDurationMs": 8000,
+        "fps": 30,
+        "visualVariant": 0
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Watch the complete controlled video and compare the labeled events. Return exactly one allowed letter and do not explain."
+    },
+    {
+      "candidateId": "tr-f8fa8c212c86f13e",
+      "cellId": "cell-a1ad98d838916766",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four clearly separated intervals with a 500 ms minimum duration margin.",
+      "failureModeId": "visual-duration-comparison",
+      "generator": "temporal-relations",
+      "seed": 1900001,
+      "difficulty": 70,
+      "variant": 1,
+      "artifact": "public/evaluations/duration-comparison-discovery-v1/tr-f8fa8c212c86f13e.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 8000,
+      "question": "Which labeled disk stays yellow for the longest single interval?",
+      "answerOptions": [
+        "D",
+        "A",
+        "B",
+        "C"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "8dbad7f7e0ea9928db04233862b35e4ef0d65a5201a68ad92a32297fdd3f4d19",
+      "parameters": {
+        "correctIndex": 1,
+        "videoDurationMs": 8000,
+        "fps": 30,
+        "visualVariant": 1
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Watch the complete controlled video and compare the labeled events. Return exactly one allowed letter and do not explain."
+    },
+    {
+      "candidateId": "tr-2ceeba32088593c6",
+      "cellId": "cell-a1ad98d838916766",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four clearly separated intervals with a 500 ms minimum duration margin.",
+      "failureModeId": "visual-duration-comparison",
+      "generator": "temporal-relations",
+      "seed": 1900002,
+      "difficulty": 70,
+      "variant": 2,
+      "artifact": "public/evaluations/duration-comparison-discovery-v1/tr-2ceeba32088593c6.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 8000,
+      "question": "Which labeled disk stays yellow for the longest single interval?",
+      "answerOptions": [
+        "D",
+        "A",
+        "B",
+        "C"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "0b5883d847f518d689fdb2fb3e4c3b2c827b135c062e7a7ecd17950a61cb5af1",
+      "parameters": {
+        "correctIndex": 2,
+        "videoDurationMs": 8000,
+        "fps": 30,
+        "visualVariant": 2
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Watch the complete controlled video and compare the labeled events. Return exactly one allowed letter and do not explain."
+    },
+    {
+      "candidateId": "tr-7d2b10be6a02a2f7",
+      "cellId": "cell-a1ad98d838916766",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four clearly separated intervals with a 500 ms minimum duration margin.",
+      "failureModeId": "visual-duration-comparison",
+      "generator": "temporal-relations",
+      "seed": 1900003,
+      "difficulty": 70,
+      "variant": 3,
+      "artifact": "public/evaluations/duration-comparison-discovery-v1/tr-7d2b10be6a02a2f7.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 8000,
+      "question": "Which labeled disk stays yellow for the longest single interval?",
+      "answerOptions": [
+        "A",
+        "D",
+        "B",
+        "C"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "fe1bda18685130065480e325f344274e19508cc4f0ed133fb93edd29e14cbea7",
+      "parameters": {
+        "correctIndex": 3,
+        "videoDurationMs": 8000,
+        "fps": 30,
+        "visualVariant": 3
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Watch the complete controlled video and compare the labeled events. Return exactly one allowed letter and do not explain."
+    },
+    {
+      "candidateId": "tr-f70339470cf54e92",
+      "cellId": "cell-a1ad98d838916766",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four clearly separated intervals with a 500 ms minimum duration margin.",
+      "failureModeId": "visual-duration-comparison",
+      "generator": "temporal-relations",
+      "seed": 1900004,
+      "difficulty": 70,
+      "variant": 4,
+      "artifact": "public/evaluations/duration-comparison-discovery-v1/tr-f70339470cf54e92.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 8000,
+      "question": "Which labeled disk stays yellow for the longest single interval?",
+      "answerOptions": [
+        "D",
+        "A",
+        "B",
+        "C"
+      ],
+      "expectedAnswer": "A",
+      "sha256": "0dc829352bd9939b62327d91d2886d09fcb63cbc50d58cd4a89a0ef84474f0c2",
+      "parameters": {
+        "correctIndex": 0,
+        "videoDurationMs": 8000,
+        "fps": 30,
+        "visualVariant": 4
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Watch the complete controlled video and compare the labeled events. Return exactly one allowed letter and do not explain."
+    },
+    {
+      "candidateId": "tr-81307f6908da1cf5",
+      "cellId": "cell-a1ad98d838916766",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four clearly separated intervals with a 500 ms minimum duration margin.",
+      "failureModeId": "visual-duration-comparison",
+      "generator": "temporal-relations",
+      "seed": 1900005,
+      "difficulty": 70,
+      "variant": 5,
+      "artifact": "public/evaluations/duration-comparison-discovery-v1/tr-81307f6908da1cf5.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 8000,
+      "question": "Which labeled disk stays yellow for the longest single interval?",
+      "answerOptions": [
+        "B",
+        "A",
+        "D",
+        "C"
+      ],
+      "expectedAnswer": "B",
+      "sha256": "1430e5e0fcf587bb21828006d8e1be045ef5509df5ccfaaccbda07bdf21ff374",
+      "parameters": {
+        "correctIndex": 1,
+        "videoDurationMs": 8000,
+        "fps": 30,
+        "visualVariant": 5
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Watch the complete controlled video and compare the labeled events. Return exactly one allowed letter and do not explain."
+    },
+    {
+      "candidateId": "tr-54ea026820e1799a",
+      "cellId": "cell-a1ad98d838916766",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four clearly separated intervals with a 500 ms minimum duration margin.",
+      "failureModeId": "visual-duration-comparison",
+      "generator": "temporal-relations",
+      "seed": 1900006,
+      "difficulty": 70,
+      "variant": 6,
+      "artifact": "public/evaluations/duration-comparison-discovery-v1/tr-54ea026820e1799a.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 8000,
+      "question": "Which labeled disk stays yellow for the longest single interval?",
+      "answerOptions": [
+        "A",
+        "B",
+        "D",
+        "C"
+      ],
+      "expectedAnswer": "C",
+      "sha256": "9606ff9a22f598654240d718b74c094198aa5f606390f4efc4611a353fec0ce0",
+      "parameters": {
+        "correctIndex": 2,
+        "videoDurationMs": 8000,
+        "fps": 30,
+        "visualVariant": 6
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Watch the complete controlled video and compare the labeled events. Return exactly one allowed letter and do not explain."
+    },
+    {
+      "candidateId": "tr-512eb797f37d63b7",
+      "cellId": "cell-a1ad98d838916766",
+      "split": "discovery",
+      "condition": "native-1x",
+      "interventionDescription": "Four clearly separated intervals with a 500 ms minimum duration margin.",
+      "failureModeId": "visual-duration-comparison",
+      "generator": "temporal-relations",
+      "seed": 1900007,
+      "difficulty": 70,
+      "variant": 7,
+      "artifact": "public/evaluations/duration-comparison-discovery-v1/tr-512eb797f37d63b7.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 8000,
+      "question": "Which labeled disk stays yellow for the longest single interval?",
+      "answerOptions": [
+        "B",
+        "A",
+        "D",
+        "C"
+      ],
+      "expectedAnswer": "D",
+      "sha256": "cb46e603de334f7240552004f1edf6c95f2ba995d096674b0c42b0c110e9597a",
+      "parameters": {
+        "correctIndex": 3,
+        "videoDurationMs": 8000,
+        "fps": 30,
+        "visualVariant": 7
+      },
+      "humanSolvability": "unverified",
+      "systemMessage": "Watch the complete controlled video and compare the labeled events. Return exactly one allowed letter and do not explain."
+    }
+  ]
+}
