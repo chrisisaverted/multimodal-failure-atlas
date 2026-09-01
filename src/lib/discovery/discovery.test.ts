@@ -100,8 +100,16 @@ import { createTrajectoryGrid } from "./occluded-trajectory";
 import { createCubeNetGrid, cubeFaceAnswers, foldNet } from "./cube-net";
 import { applyArrowPath, createArrowPathGrid } from "./arrow-path";
 import { createParityGrid, parityMatrices, parityViolations } from "./parity-matrix";
+import { createZoneEntryGrid } from "./zone-entry-count";
 
 describe("adaptive multimodal discovery", () => {
+  it("binds periodic target motion to balanced exact zone-entry counts", () => {
+    for (const candidate of createZoneEntryGrid()) {
+      expect(candidate.parameters.entryCount).toBe(candidate.parameters.cycles * 2);
+      expect(candidate.expectedAnswer).toBe(String(candidate.parameters.entryCount));
+    }
+  });
+
   it("places one all-even 2D parity matrix among single-bit corruptions", () => {
     for (const candidate of createParityGrid()) {
       const violations = parityMatrices(candidate).map(parityViolations);

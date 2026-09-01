@@ -1,0 +1,208 @@
+{
+  "id": "zone-entry-discovery-v1",
+  "generatorVersion": "identity-conditioned-zone-entry-count-v1",
+  "status": "discovery-only",
+  "hypothesis": "Video models fail exact identity-conditioned counting of continuous spatial state transitions.",
+  "candidates": [
+    {
+      "id": "ze-536eef4b5cb26839",
+      "cellId": "cell-ringed-target-central-zone-entries",
+      "split": "discovery",
+      "seed": 4300000,
+      "failureModeId": "identity-conditioned-spatial-transition-counting",
+      "question": "How many times does the RED-RINGED target disk ENTER the gold zone? Count each outside→inside transition and ignore every other disk.",
+      "answerOptions": [
+        "14",
+        "8",
+        "10",
+        "12"
+      ],
+      "expectedAnswer": "8",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "cycles": 4,
+        "entryCount": 8,
+        "activeStartMs": 900,
+        "activeEndMs": 11400,
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 0
+      }
+    },
+    {
+      "id": "ze-8bb13df9282ef74c",
+      "cellId": "cell-ringed-target-central-zone-entries",
+      "split": "discovery",
+      "seed": 4300001,
+      "failureModeId": "identity-conditioned-spatial-transition-counting",
+      "question": "How many times does the RED-RINGED target disk ENTER the gold zone? Count each outside→inside transition and ignore every other disk.",
+      "answerOptions": [
+        "8",
+        "14",
+        "10",
+        "12"
+      ],
+      "expectedAnswer": "10",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "cycles": 5,
+        "entryCount": 10,
+        "activeStartMs": 900,
+        "activeEndMs": 11400,
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 1
+      }
+    },
+    {
+      "id": "ze-84829c6f0ed19211",
+      "cellId": "cell-ringed-target-central-zone-entries",
+      "split": "discovery",
+      "seed": 4300002,
+      "failureModeId": "identity-conditioned-spatial-transition-counting",
+      "question": "How many times does the RED-RINGED target disk ENTER the gold zone? Count each outside→inside transition and ignore every other disk.",
+      "answerOptions": [
+        "8",
+        "10",
+        "14",
+        "12"
+      ],
+      "expectedAnswer": "12",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "cycles": 6,
+        "entryCount": 12,
+        "activeStartMs": 900,
+        "activeEndMs": 11400,
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 2
+      }
+    },
+    {
+      "id": "ze-b6f97b7b0a445bbc",
+      "cellId": "cell-ringed-target-central-zone-entries",
+      "split": "discovery",
+      "seed": 4300003,
+      "failureModeId": "identity-conditioned-spatial-transition-counting",
+      "question": "How many times does the RED-RINGED target disk ENTER the gold zone? Count each outside→inside transition and ignore every other disk.",
+      "answerOptions": [
+        "10",
+        "8",
+        "14",
+        "12"
+      ],
+      "expectedAnswer": "14",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "cycles": 7,
+        "entryCount": 14,
+        "activeStartMs": 900,
+        "activeEndMs": 11400,
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 3
+      }
+    },
+    {
+      "id": "ze-0cfd2b26cc31e7e8",
+      "cellId": "cell-ringed-target-central-zone-entries",
+      "split": "discovery",
+      "seed": 4300004,
+      "failureModeId": "identity-conditioned-spatial-transition-counting",
+      "question": "How many times does the RED-RINGED target disk ENTER the gold zone? Count each outside→inside transition and ignore every other disk.",
+      "answerOptions": [
+        "10",
+        "8",
+        "14",
+        "12"
+      ],
+      "expectedAnswer": "8",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "cycles": 4,
+        "entryCount": 8,
+        "activeStartMs": 900,
+        "activeEndMs": 11400,
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 4
+      }
+    },
+    {
+      "id": "ze-923677b47fb38add",
+      "cellId": "cell-ringed-target-central-zone-entries",
+      "split": "discovery",
+      "seed": 4300005,
+      "failureModeId": "identity-conditioned-spatial-transition-counting",
+      "question": "How many times does the RED-RINGED target disk ENTER the gold zone? Count each outside→inside transition and ignore every other disk.",
+      "answerOptions": [
+        "8",
+        "10",
+        "14",
+        "12"
+      ],
+      "expectedAnswer": "10",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "cycles": 5,
+        "entryCount": 10,
+        "activeStartMs": 900,
+        "activeEndMs": 11400,
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 5
+      }
+    },
+    {
+      "id": "ze-2bb12cba748d63cf",
+      "cellId": "cell-ringed-target-central-zone-entries",
+      "split": "discovery",
+      "seed": 4300006,
+      "failureModeId": "identity-conditioned-spatial-transition-counting",
+      "question": "How many times does the RED-RINGED target disk ENTER the gold zone? Count each outside→inside transition and ignore every other disk.",
+      "answerOptions": [
+        "10",
+        "14",
+        "8",
+        "12"
+      ],
+      "expectedAnswer": "12",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "cycles": 6,
+        "entryCount": 12,
+        "activeStartMs": 900,
+        "activeEndMs": 11400,
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 6
+      }
+    },
+    {
+      "id": "ze-54ef12b73377c231",
+      "cellId": "cell-ringed-target-central-zone-entries",
+      "split": "discovery",
+      "seed": 4300007,
+      "failureModeId": "identity-conditioned-spatial-transition-counting",
+      "question": "How many times does the RED-RINGED target disk ENTER the gold zone? Count each outside→inside transition and ignore every other disk.",
+      "answerOptions": [
+        "10",
+        "14",
+        "8",
+        "12"
+      ],
+      "expectedAnswer": "14",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "cycles": 7,
+        "entryCount": 14,
+        "activeStartMs": 900,
+        "activeEndMs": 11400,
+        "videoDurationMs": 12800,
+        "fps": 30,
+        "visualVariant": 7
+      }
+    }
+  ]
+}

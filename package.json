@@ -110,6 +110,8 @@
     "generate:arrow-path": "tsx scripts/materialize-arrow-path.ts",
     "plan:parity-matrix": "tsx scripts/plan-parity-matrix.ts",
     "generate:parity-matrix": "tsx scripts/materialize-parity-matrix.ts",
+    "plan:zone-entry": "tsx scripts/plan-zone-entry.ts",
+    "generate:zone-entry": "tsx scripts/materialize-zone-entry.ts",
     "publish:adaptive": "tsx scripts/publish-adaptive-results.ts",
     "publish:precision-wire": "tsx scripts/publish-precision-wire-results.ts",
     "evaluate": "tsx scripts/evaluate.ts",
