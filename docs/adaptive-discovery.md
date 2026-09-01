@@ -87,6 +87,30 @@ new temporal locations whose answer-bearing windows do not intersect the documen
 FPS reference indices. This is a predeclared mechanism probe, not a guarantee that OpenRouter's pinned
 upstream uses the reference processor unchanged.
 
+The frozen momentary-symbol holdout rejected that route-level prediction. Gemini solved 7/16 and Qwen
+4/16 native videos, with both at 16/16 on critical-frame controls, but Kimi solved 16/16 in both
+conditions. The family is therefore not universally admitted. The result is retained because it shows
+that released preprocessing code is not sufficient evidence about a hosted route.
+
+## Search families 3–4: compositional counting and wire tracing
+
+Compositional counting uses orderly grids of colored, filled shapes. Every distractor differs from the
+target conjunction in at least one attribute and the target count is exact by construction. The screen
+was stopped after Gemini solved 22/24 and its hardest cell remained exactly 2/4: further calls could not
+make any cell strictly below 50% for every target model.
+
+Wire tracing instead requires preserving one line's identity through 8, 16, 28, or 40 explicit
+non-joining crossings. Four endpoints are balanced within each cell, and an independent symbolic trace
+verifies the rendered answer. This directly follows TraversalBench's finding that self-intersections are
+the dominant localized source of path-traversal errors. An oracle holdout highlights the target wire
+without changing its endpoint.
+
+The first wire protocol exposed an evaluation confound: mandatory hidden reasoning consumed the entire
+2,048-token allowance for many Kimi and Qwen cases. Those length-truncated records are non-answers and
+receive no hardness credit. Current OpenRouter model metadata is now checked before a campaign; the
+corrected protocol uses the lowest effort supported by all three routes and enough output budget to
+obtain a substantive answer.
+
 ## Objective and promotion
 
 For each cell, let a substantive answer be a verified, non-empty answer. The primary quantity is the
@@ -137,3 +161,5 @@ Paid evaluation remains fail-closed without explicit environment configuration a
 - [Frame Sampling Strategies Matter](https://arxiv.org/abs/2509.14769)
 - [Discovering Failure Modes in VLMs using RL](https://arxiv.org/abs/2604.04733)
 - [Revealing Interpretable Failure Modes of VLMs](https://arxiv.org/abs/2605.12674)
+- [TraversalBench](https://arxiv.org/abs/2604.10999)
+- [MazeBench](https://arxiv.org/abs/2603.26839)

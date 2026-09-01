@@ -1,0 +1,21 @@
+{
+  "id": "wire-tracing-kimi-forced-choice-v1-2026-09-01",
+  "resolvedAt": "2026-09-01",
+  "gateway": "OpenRouter",
+  "evaluationPlanId": "wire-tracing-discovery-v1",
+  "evaluationPlanSha256": "a5fb901bd3501644f4e88ad650778a5a552b67a8ec5bebea4d7a7397351f531c",
+  "stage": "model-native-forced-choice-diagnostic",
+  "reasonForDistinctCondition": "Kimi K3 advertises optional reasoning but exhausted 8,192 reasoning tokens without a final answer on the first 16-crossing case. Non-answers are inadmissible, so this protocol tests its direct forced-choice path separately.",
+  "casesPerModel": 16,
+  "trials": 1,
+  "temperature": 0,
+  "maxOutputTokens": 512,
+  "reasoning": { "effort": "none", "exclude": true },
+  "scorer": "terminal-option-v2",
+  "allowProviderFallbacks": false,
+  "dataCollection": "deny",
+  "campaignCostCeilingUsd": 2,
+  "models": [
+    { "modelId": "moonshotai/kimi-k3", "modelRevision": "moonshotai/kimi-k3-20260715", "upstreamProvider": "Moonshot AI" }
+  ]
+}

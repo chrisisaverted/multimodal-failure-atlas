@@ -19,7 +19,9 @@ screen or holdout.
 4. Screen the strongest practical independently trained model families. Rank each cell by its easiest
    target model; never let weaker models hide a strong model's success.
 5. Give no hardness reward to silence, refusals, errors, or ambiguous outputs. Require substantive
-   coverage from every target model.
+   coverage from every target model. Query current route metadata before freezing reasoning controls;
+   an unsupported effort value or a reasoning trace that exhausts the output allowance is a protocol
+   failure, not a model failure.
 6. Freeze one or more winning cells, the exact scorer, routes, provider policy, prompt, and budget.
 7. Evaluate the holdout once. Use a critical-frame, crop, dense-frame, or other evidence-preserving
    oracle when it can distinguish acquisition loss from downstream reasoning.
