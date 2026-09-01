@@ -84,7 +84,7 @@ export default function VerifiedPage() {
                 <h2>{mode?.title ?? family.catalogueId}</h2>
                 <p>{mode?.subtitle}</p>
                 <small>
-                  Frozen family-local difficulty {family.sample.difficulty}/100 · easiest native route{" "}
+                  Frozen family-local difficulty {family.difficultySetting.label} · easiest native route{" "}
                   {percent(easiestRouteRate(family))} · pooled descriptive solve rate{" "}
                   {percent(pooledNativeRate(family))} · weakest control route {percent(controlFloor)}
                 </small>

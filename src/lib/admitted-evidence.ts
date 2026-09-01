@@ -25,6 +25,11 @@ export interface AdmittedFamilyEvidence {
   controlCondition: string;
   admitted: boolean;
   humanSolvability: string;
+  difficultySetting: {
+    values: number[];
+    label: string;
+    nativeCases: number;
+  };
   sample: {
     candidateId: string;
     seed: number;

@@ -151,6 +151,9 @@ for (const [catalogueId, planId] of specs) {
   );
   if (!admitted) throw new Error(`${planId} does not satisfy the 16-case below-half admission gate`);
   const sample = nativeCases[0]!;
+  const difficultyValues = [...new Set(nativeCases.map((candidate) => candidate.difficulty))].sort(
+    (left, right) => left - right,
+  );
   families.push({
     catalogueId,
     planId,
@@ -162,6 +165,14 @@ for (const [catalogueId, planId] of specs) {
     controlCondition,
     admitted,
     humanSolvability: sample.humanSolvability ?? "unverified",
+    difficultySetting: {
+      values: difficultyValues,
+      label:
+        difficultyValues.length === 1
+          ? `${difficultyValues[0]}/100`
+          : `${difficultyValues[0]}–${difficultyValues.at(-1)}/100 answer-balanced stratum`,
+      nativeCases: nativeCases.length,
+    },
     sample: {
       candidateId: sample.candidateId,
       seed: sample.seed,

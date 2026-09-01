@@ -14,6 +14,13 @@
       "controlCondition": "oracle-highlighted-numbered-path",
       "admitted": true,
       "humanSolvability": "unverified",
+      "difficultySetting": {
+        "values": [
+          100
+        ],
+        "label": "100/100",
+        "nativeCases": 16
+      },
       "sample": {
         "candidateId": "wc-bff0df82b40bdde3",
         "seed": 950000,
@@ -130,6 +137,16 @@
       "controlCondition": "numbered-closed-boundaries",
       "admitted": true,
       "humanSolvability": "unverified",
+      "difficultySetting": {
+        "values": [
+          57,
+          62,
+          67,
+          72
+        ],
+        "label": "57–72/100 answer-balanced stratum",
+        "nativeCases": 16
+      },
       "sample": {
         "candidateId": "ed-1eaa4c4f80172ce6",
         "seed": 1200000,
@@ -246,6 +263,13 @@
       "controlCondition": "correct-candidate-highlighted",
       "admitted": true,
       "humanSolvability": "unverified",
+      "difficultySetting": {
+        "values": [
+          46
+        ],
+        "label": "46/100",
+        "nativeCases": 16
+      },
       "sample": {
         "candidateId": "rc-76531a0518827ee7",
         "seed": 1500000,
@@ -362,6 +386,13 @@
       "controlCondition": "oracle-marked-control",
       "admitted": true,
       "humanSolvability": "unverified",
+      "difficultySetting": {
+        "values": [
+          82
+        ],
+        "label": "82/100",
+        "nativeCases": 16
+      },
       "sample": {
         "candidateId": "sy-b19331d64a952848",
         "seed": 3110000,
@@ -478,6 +509,13 @@
       "controlCondition": "panel-totals-annotated",
       "admitted": true,
       "humanSolvability": "unverified",
+      "difficultySetting": {
+        "values": [
+          77
+        ],
+        "label": "77/100",
+        "nativeCases": 16
+      },
       "sample": {
         "candidateId": "cs-ac34f4c0fce73230",
         "seed": 2610000,
@@ -594,6 +632,13 @@
       "controlCondition": "oracle-boxed-control",
       "admitted": true,
       "humanSolvability": "unverified",
+      "difficultySetting": {
+        "values": [
+          98
+        ],
+        "label": "98/100",
+        "nativeCases": 16
+      },
       "sample": {
         "candidateId": "xch-3ee36d1d9d79acc8",
         "seed": 5100000,
@@ -710,6 +755,13 @@
       "controlCondition": "changed-glyph-circled",
       "admitted": true,
       "humanSolvability": "unverified",
+      "difficultySetting": {
+        "values": [
+          100
+        ],
+        "label": "100/100",
+        "nativeCases": 16
+      },
       "sample": {
         "candidateId": "cl-ec30b9a7ecedcc86",
         "seed": 1440000,
@@ -826,6 +878,13 @@
       "controlCondition": "solution-path-highlighted",
       "admitted": true,
       "humanSolvability": "unverified",
+      "difficultySetting": {
+        "values": [
+          55
+        ],
+        "label": "55/100",
+        "nativeCases": 16
+      },
       "sample": {
         "candidateId": "mr-2073131fc5f526e3",
         "seed": 1710000,
@@ -942,6 +1001,13 @@
       "controlCondition": "correct-graph-ringed",
       "admitted": true,
       "humanSolvability": "unverified",
+      "difficultySetting": {
+        "values": [
+          87
+        ],
+        "label": "87/100",
+        "nativeCases": 16
+      },
       "sample": {
         "candidateId": "eg-4792dc1ee3e274d0",
         "seed": 3510000,
@@ -1058,6 +1124,13 @@
       "controlCondition": "parity-audit-control",
       "admitted": true,
       "humanSolvability": "unverified",
+      "difficultySetting": {
+        "values": [
+          96
+        ],
+        "label": "96/100",
+        "nativeCases": 16
+      },
       "sample": {
         "candidateId": "pmh-85e0a3c8999677a4-native-image",
         "seed": 4220000,
@@ -1174,6 +1247,13 @@
       "controlCondition": "oracle-counter-control",
       "admitted": true,
       "humanSolvability": "unverified",
+      "difficultySetting": {
+        "values": [
+          86
+        ],
+        "label": "86/100",
+        "nativeCases": 16
+      },
       "sample": {
         "candidateId": "ze-8d3249230c4181fc",
         "seed": 4310000,
@@ -1290,6 +1370,13 @@
       "controlCondition": "oracle-counter-control",
       "admitted": true,
       "humanSolvability": "unverified",
+      "difficultySetting": {
+        "values": [
+          91
+        ],
+        "label": "91/100",
+        "nativeCases": 16
+      },
       "sample": {
         "candidateId": "pc-90189c05e3035355",
         "seed": 4610000,
@@ -1406,6 +1493,13 @@
       "controlCondition": "visible-identity-control",
       "admitted": true,
       "humanSolvability": "unverified",
+      "difficultySetting": {
+        "values": [
+          88
+        ],
+        "label": "88/100",
+        "nativeCases": 16
+      },
       "sample": {
         "candidateId": "st-829590aeca0bdadd",
         "seed": 3110000,
@@ -1522,6 +1616,13 @@
       "controlCondition": "persistent-answer-control",
       "admitted": true,
       "humanSolvability": "unverified",
+      "difficultySetting": {
+        "values": [
+          86
+        ],
+        "label": "86/100",
+        "nativeCases": 16
+      },
       "sample": {
         "candidateId": "sf-ec142abacbb28088",
         "seed": 1630000,
@@ -1638,6 +1739,13 @@
       "controlCondition": "running-transition-counter-control",
       "admitted": true,
       "humanSolvability": "unverified",
+      "difficultySetting": {
+        "values": [
+          94
+        ],
+        "label": "94/100",
+        "nativeCases": 16
+      },
       "sample": {
         "candidateId": "tc-3137769a9ecfbeb2-native-1x",
         "seed": 5110000,
@@ -1754,6 +1862,13 @@
       "controlCondition": "persistent-set-control",
       "admitted": true,
       "humanSolvability": "unverified",
+      "difficultySetting": {
+        "values": [
+          98
+        ],
+        "label": "98/100",
+        "nativeCases": 16
+      },
       "sample": {
         "candidateId": "gax-f1cce6d6d9fb0073-native-1x",
         "seed": 4830000,
@@ -1870,6 +1985,13 @@
       "controlCondition": "running-turn-counter-control",
       "admitted": true,
       "humanSolvability": "unverified",
+      "difficultySetting": {
+        "values": [
+          96
+        ],
+        "label": "96/100",
+        "nativeCases": 16
+      },
       "sample": {
         "candidateId": "rth-8d934be85c62ee08-native-1x",
         "seed": 4920000,
@@ -1986,6 +2108,13 @@
       "controlCondition": "visible-ledger-control",
       "admitted": true,
       "humanSolvability": "unverified",
+      "difficultySetting": {
+        "values": [
+          96
+        ],
+        "label": "96/100",
+        "nativeCases": 16
+      },
       "sample": {
         "candidateId": "cvh-765e344babc69acc-native-1x",
         "seed": 3020000,
@@ -2102,6 +2231,13 @@
       "controlCondition": "visible-trail-control",
       "admitted": true,
       "humanSolvability": "unverified",
+      "difficultySetting": {
+        "values": [
+          94
+        ],
+        "label": "94/100",
+        "nativeCases": 16
+      },
       "sample": {
         "candidateId": "hti-64d2222b83d7ae18-native-1x",
         "seed": 5410000,
@@ -2218,6 +2354,13 @@
       "controlCondition": "running-total-control",
       "admitted": true,
       "humanSolvability": "unverified",
+      "difficultySetting": {
+        "values": [
+          97
+        ],
+        "label": "97/100",
+        "nativeCases": 16
+      },
       "sample": {
         "candidateId": "sta2-3455cb887466ef6a-native-1x",
         "seed": 5630000,

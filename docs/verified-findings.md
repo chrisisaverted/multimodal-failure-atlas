@@ -22,9 +22,11 @@ Human solvability remains unverified. The construction oracle proves the answer,
 human can recover it under the same display conditions.
 
 Every admitted page publishes the exact family-local difficulty setting used for its frozen holdout.
-These 0–100 values control different generator parameters and are not a shared psychometric scale: 96
-on route-turn integration is not intrinsically harder than 57 on enclosure depth. The admission claim is
-that at least one disclosed setting per family clears the below-half gate, not that every setting does.
+Nineteen are scalar points; enclosure depth is disclosed as a 57–72 answer-balanced stratum because the
+answer itself changes loop count. These values control different generator parameters and are not a shared
+psychometric scale: 96 on route-turn integration is not intrinsically harder than 57 on enclosure depth.
+The admission claim is that at least one disclosed setting or predeclared stratum per family clears the
+below-half gate, not that every possible setting does.
 
 ## Image results
 
