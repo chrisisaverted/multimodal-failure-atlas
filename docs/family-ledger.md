@@ -8,18 +8,18 @@ Wilson-qualified and human-validated are stricter, separately reported states.
 
 ## Image families
 
-| Family                                    | State                     |               Gemini |                            Qwen |       Kimi | Control                   | Human      |
-| ----------------------------------------- | ------------------------- | -------------------: | ------------------------------: | ---------: | ------------------------- | ---------- |
-| Identity-conditioned exact crossing count | observed holdout pass     |                 7/16 |                            0/16 |       1/16 | 16/16, 16/16, 13/16       | unverified |
-| Topological enclosure depth               | observed holdout pass     |                 6/16 |                            7/16 |       5/16 | 16/16, 16/16, 10/16       | unverified |
-| Rotation-invariant exact correspondence   | observed holdout pass     |                 6/16 |                4/14 substantive |       2/16 | 16/16, 16/16, 14/16       | unverified |
-| Global bilateral symmetry verification    | observed holdout pass     |                 6/16 |                            3/16 |       1/16 | 16/16 each                | unverified |
-| Occluded cube-stack enumeration           | observed holdout pass     |                 3/16 |                            6/16 |       6/16 | 16/16 each                | unverified |
-| Maze reachability                         | frozen holdout incomplete | incomplete after 429 | 3/16 native; control incomplete |       4/16 | 16/16 Kimi                | unverified |
-| Dense cross-image change localization     | harder replacement screen |                  1/8 |                         pending |        0/8 | pending                   | unverified |
-| Dense visual XOR composition              | frozen v2 holdout running |           3/8 screen |                      3/8 screen | 1/8 screen | oracle-box control queued | unverified |
-| Visual graph-degree topology              | screen incomplete         |      1/4 substantive |                         pending |        1/8 | pending                   | unverified |
-| 2D parity-matrix verification             | screen incomplete         |                  4/8 |                         pending |        0/8 | pending                   | unverified |
+| Family                                    | State                     |               Gemini |                            Qwen | Kimi | Control             | Human      |
+| ----------------------------------------- | ------------------------- | -------------------: | ------------------------------: | ---: | ------------------- | ---------- |
+| Identity-conditioned exact crossing count | observed holdout pass     |                 7/16 |                            0/16 | 1/16 | 16/16, 16/16, 13/16 | unverified |
+| Topological enclosure depth               | observed holdout pass     |                 6/16 |                            7/16 | 5/16 | 16/16, 16/16, 10/16 | unverified |
+| Rotation-invariant exact correspondence   | observed holdout pass     |                 6/16 |                4/14 substantive | 2/16 | 16/16, 16/16, 14/16 | unverified |
+| Global bilateral symmetry verification    | observed holdout pass     |                 6/16 |                            3/16 | 1/16 | 16/16 each          | unverified |
+| Occluded cube-stack enumeration           | observed holdout pass     |                 3/16 |                            6/16 | 6/16 | 16/16 each          | unverified |
+| Dense visual XOR composition              | observed holdout pass     |                 4/16 |                            2/16 | 7/16 | 16/16, 15/15, 16/16 | unverified |
+| Maze reachability                         | frozen holdout incomplete | incomplete after 429 | 3/16 native; control incomplete | 4/16 | 16/16 Kimi          | unverified |
+| Dense cross-image change localization     | harder replacement screen |                  1/8 |                         pending |  0/8 | pending             | unverified |
+| Visual graph-degree topology              | screen incomplete         |      1/4 substantive |                         pending |  1/8 | pending             | unverified |
+| 2D parity-matrix verification             | screen incomplete         |                  4/8 |                         pending |  0/8 | pending             | unverified |
 
 The enclosure control only partially recovers Kimi, so it confirms behavioral difficulty but does not
 fully localize the mechanism. The rotation Qwen denominator excludes two non-substantive outputs.
@@ -30,17 +30,15 @@ No video family is admitted yet. Gemini 3.7 Flash, Qwen 3.8 Max, and Kimi K3 are
 all three routes have accepted the generated MP4 inputs. Several promising screens remain intentionally
 uncounted until their frozen holdouts finish.
 
-| Family                                     | State                        |      Gemini |        Qwen |            Kimi | Control                                    | Human      |
-| ------------------------------------------ | ---------------------------- | ----------: | ----------: | --------------: | ------------------------------------------ | ---------- |
-| Identity-conditioned selective flash count | frozen holdout incomplete    | 4/14 native | 2/14 native |     2/16 native | current isolation control does not recover | unverified |
-| Identity-conditioned spatial zone entries  | frozen holdout materializing |         2/8 |         2/8 |             3/8 | oracle counter queued                      | unverified |
-| Identity-pair collision counting           | screen running               |         3/8 |     pending |             3/8 | pending                                    | unverified |
-| Hidden causal activation transfer          | screen incomplete            |         0/8 |     pending | 3/7 substantive | pending                                    | unverified |
-| Sequential identity permutation            | screen queued                |     pending |     pending |         pending | pending                                    | unverified |
-| Latent causal set propagation              | screen queued                |     pending |     pending |         pending | pending                                    | unverified |
-| Spatiotemporal collision disambiguation    | screen queued                |     pending |     pending |         pending | pending                                    | unverified |
-| Temporal interval containment              | screen queued                |     pending |     pending |         pending | pending                                    | unverified |
-| Occluded straight-trajectory continuity    | screen queued                |     pending |     pending |         pending | pending                                    | unverified |
+| Family                                     | State                     |      Gemini |        Qwen |        Kimi | Control                                    | Human      |
+| ------------------------------------------ | ------------------------- | ----------: | ----------: | ----------: | ------------------------------------------ | ---------- |
+| Identity-conditioned selective flash count | frozen holdout incomplete | 4/14 native | 2/14 native | 2/16 native | current isolation control does not recover | unverified |
+| Identity-conditioned spatial zone entries  | frozen holdout running    | 4/16 native |         2/8 |         3/8 | Gemini counter 16/16                       | unverified |
+| Identity-pair collision counting           | frozen holdout running    |         3/8 |         2/8 |         3/8 | oracle counter queued                      | unverified |
+| Sequential identity permutation            | screen passed             |         3/8 |         2/8 |         2/8 | holdout not yet frozen                     | unverified |
+| Spatiotemporal collision disambiguation    | screen queued             |     pending |     pending |     pending | pending                                    | unverified |
+| Temporal interval containment              | screen queued             |     pending |     pending |     pending | pending                                    | unverified |
+| Occluded straight-trajectory continuity    | screen queued             |     pending |     pending |     pending | pending                                    | unverified |
 
 ## Rejected or superseded searches
 
@@ -62,6 +60,8 @@ uncounted until their frozen holdouts finish.
 | Periodic anomaly detection               | Kimi solved 5/8.                                                                                                                             |
 | Synchrony detection                      | Qwen solved 8/8.                                                                                                                             |
 | Latent dynamic-state accumulation        | Discovery failed to replicate: Qwen solved 12/16 native holdout cases.                                                                       |
+| Latent causal set propagation            | Gemini solved 8/8 and Kimi solved 7/8 discovery cases.                                                                                       |
+| Hidden causal activation transfer        | Qwen solved 6/8 discovery cases.                                                                                                             |
 | 18-beat coflash counting                 | Gemini reached 4/8; the 30-beat replacement also left Kimi at exactly 4/8.                                                                   |
 | 20-event ordinal successor               | Kimi answered 4/6 substantive cases correctly; replaced by the 32-event cell.                                                                |
 | 32-event ordinal successor               | Kimi answered 5/6 substantive cases correctly after conservative terminal-sentence adjudication; two length-truncated outputs were excluded. |
