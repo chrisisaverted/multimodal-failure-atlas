@@ -1,0 +1,251 @@
+{
+  "id": "enclosure-panels-dense-discovery-v1",
+  "generatorVersion": "enclosure-panels-dense-v1",
+  "status": "discovery-only",
+  "frozenAt": "2026-09-01T15:05:00.000Z",
+  "hypothesis": "A fixed query of exactly 18 boundaries with distractors on both sides removes answer-bearing difficulty and ordinal shortcuts while increasing topological density.",
+  "selectionRule": "Promote only if every core route supplies eight substantive answers and scores strictly below 4/8; the confirmatory set is generated from disjoint seeds before any discovery response.",
+  "difficultyContract": "Every case asks for depth 18, uses four panels in a 2x2 layout, eight lighter open decoys per panel, irregularity 0.35, and a rank-two or rank-three target. Only answer position, distractor template, path geometry, and visual phase vary.",
+  "candidates": [
+    {
+      "id": "epd-b6bdf3324831bfd0",
+      "cellId": "cell-debef8e174639214",
+      "split": "discovery",
+      "seed": 3100000,
+      "failureModeId": "topological-enclosure-depth",
+      "question": "Which panel contains exactly 18 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetDepth": 18,
+        "panelDepths": [
+          18,
+          16,
+          17,
+          19
+        ],
+        "targetSlot": 0,
+        "templateVariant": 0,
+        "openDecoysPerPanel": 8,
+        "irregularity": 0.35,
+        "visualVariant": 900
+      }
+    },
+    {
+      "id": "epd-d91d427e867b69d1",
+      "cellId": "cell-debef8e174639214",
+      "split": "discovery",
+      "seed": 3100001,
+      "failureModeId": "topological-enclosure-depth",
+      "question": "Which panel contains exactly 18 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetDepth": 18,
+        "panelDepths": [
+          17,
+          18,
+          16,
+          19
+        ],
+        "targetSlot": 1,
+        "templateVariant": 0,
+        "openDecoysPerPanel": 8,
+        "irregularity": 0.35,
+        "visualVariant": 901
+      }
+    },
+    {
+      "id": "epd-610ac8ed3207819f",
+      "cellId": "cell-debef8e174639214",
+      "split": "discovery",
+      "seed": 3100002,
+      "failureModeId": "topological-enclosure-depth",
+      "question": "Which panel contains exactly 18 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetDepth": 18,
+        "panelDepths": [
+          16,
+          17,
+          18,
+          19
+        ],
+        "targetSlot": 2,
+        "templateVariant": 0,
+        "openDecoysPerPanel": 8,
+        "irregularity": 0.35,
+        "visualVariant": 902
+      }
+    },
+    {
+      "id": "epd-8d4c6e948d6a7948",
+      "cellId": "cell-debef8e174639214",
+      "split": "discovery",
+      "seed": 3100003,
+      "failureModeId": "topological-enclosure-depth",
+      "question": "Which panel contains exactly 18 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetDepth": 18,
+        "panelDepths": [
+          16,
+          17,
+          19,
+          18
+        ],
+        "targetSlot": 3,
+        "templateVariant": 0,
+        "openDecoysPerPanel": 8,
+        "irregularity": 0.35,
+        "visualVariant": 903
+      }
+    },
+    {
+      "id": "epd-58fdd11a5f6fd997",
+      "cellId": "cell-debef8e174639214",
+      "split": "discovery",
+      "seed": 3100004,
+      "failureModeId": "topological-enclosure-depth",
+      "question": "Which panel contains exactly 18 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "A",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetDepth": 18,
+        "panelDepths": [
+          18,
+          19,
+          20,
+          17
+        ],
+        "targetSlot": 0,
+        "templateVariant": 1,
+        "openDecoysPerPanel": 8,
+        "irregularity": 0.35,
+        "visualVariant": 904
+      }
+    },
+    {
+      "id": "epd-a232ce8874a566cb",
+      "cellId": "cell-debef8e174639214",
+      "split": "discovery",
+      "seed": 3100005,
+      "failureModeId": "topological-enclosure-depth",
+      "question": "Which panel contains exactly 18 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "B",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetDepth": 18,
+        "panelDepths": [
+          20,
+          18,
+          19,
+          17
+        ],
+        "targetSlot": 1,
+        "templateVariant": 1,
+        "openDecoysPerPanel": 8,
+        "irregularity": 0.35,
+        "visualVariant": 905
+      }
+    },
+    {
+      "id": "epd-34ae11a888f16704",
+      "cellId": "cell-debef8e174639214",
+      "split": "discovery",
+      "seed": 3100006,
+      "failureModeId": "topological-enclosure-depth",
+      "question": "Which panel contains exactly 18 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "C",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetDepth": 18,
+        "panelDepths": [
+          20,
+          19,
+          18,
+          17
+        ],
+        "targetSlot": 2,
+        "templateVariant": 1,
+        "openDecoysPerPanel": 8,
+        "irregularity": 0.35,
+        "visualVariant": 906
+      }
+    },
+    {
+      "id": "epd-c7603418925ddf1b",
+      "cellId": "cell-debef8e174639214",
+      "split": "discovery",
+      "seed": 3100007,
+      "failureModeId": "topological-enclosure-depth",
+      "question": "Which panel contains exactly 18 CLOSED boundaries around its red dot?",
+      "answerOptions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "expectedAnswer": "D",
+      "humanSolvability": "unverified",
+      "parameters": {
+        "targetDepth": 18,
+        "panelDepths": [
+          19,
+          20,
+          17,
+          18
+        ],
+        "targetSlot": 3,
+        "templateVariant": 1,
+        "openDecoysPerPanel": 8,
+        "irregularity": 0.35,
+        "visualVariant": 907
+      }
+    }
+  ]
+}
