@@ -1,0 +1,24 @@
+{
+  "id": "rotation-correspondence-confirmatory-kimi-v1-no-reasoning-2026-09-01",
+  "resolvedAt": "2026-09-01",
+  "gateway": "OpenRouter",
+  "evaluationPlanId": "rotation-correspondence-confirmatory-v1",
+  "evaluationPlanSha256": "e65351d21fe8b76a4af90aa992b99d777dc07b9b4125b60926ebc7ac8d5653eb",
+  "stage": "frozen-balanced-native-and-highlight-control",
+  "casesPerModel": 32,
+  "trials": 1,
+  "temperature": 0,
+  "maxOutputTokens": 512,
+  "reasoning": { "effort": "none", "exclude": true },
+  "scorer": "terminal-option-v2",
+  "allowProviderFallbacks": false,
+  "dataCollection": "deny",
+  "campaignCostCeilingUsd": 8,
+  "models": [
+    {
+      "modelId": "moonshotai/kimi-k3",
+      "modelRevision": "moonshotai/kimi-k3-20260715",
+      "upstreamProvider": "Moonshot AI"
+    }
+  ]
+}
