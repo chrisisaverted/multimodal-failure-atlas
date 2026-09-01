@@ -39,4 +39,6 @@ Obtain the applicable institutional review or exemption determination before rec
 
 Run `npm run build:human-study` to regenerate the answer-free block manifest. The generator fails unless it finds exactly 20 families, 16 unique native cases per family, 40 trials per block, and two trials from every family in every block. Media hashes bind every presented artifact to the frozen evaluation stimulus.
 
+After placing downloaded packets in a private local directory, run `npm run score:human-study -- --input <packet-directory>`. The scorer rejects duplicate sessions, incomplete blocks, unassigned cases, duplicate responses, altered media hashes, and protocol mismatches. It emits aggregate family statistics without copying selected answers or session-level rows into the summary. Add `--allow-partial` only for a separately declared attrition analysis.
+
 The original evaluation manifests contain constructed answers and remain available to researchers for scoring after collection. Participants should use only the answer-free study page and exported response packet. This is procedural blinding, not cryptographic secrecy: the project and its evidence are public.
