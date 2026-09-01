@@ -27,6 +27,8 @@
     "generate:compositional": "tsx scripts/materialize-compositional-counting.ts",
     "plan:wires": "tsx scripts/plan-wire-tracing.ts",
     "generate:wires": "tsx scripts/materialize-wire-tracing.ts",
+    "rank:wires": "tsx scripts/rank-wire-tracing.ts",
+    "freeze:wires": "tsx scripts/freeze-wire-tracing-holdout.ts",
     "publish:adaptive": "tsx scripts/publish-adaptive-results.ts",
     "evaluate": "tsx scripts/evaluate.ts",
     "evaluate:fixture": "tsx scripts/evaluate.ts evaluation/plans/fixture-smoke.json",

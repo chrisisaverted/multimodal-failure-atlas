@@ -22,6 +22,7 @@ import {
   renderCompositionalCountingSvg,
 } from "./compositional-counting";
 import {
+  createWireTracingHoldout,
   createWireTracingDiscoveryGrid,
   renderWireTracingSvg,
   traceWireEndpoints,
@@ -40,6 +41,15 @@ describe("adaptive multimodal discovery", () => {
       expect(wireAnswers[endpoint]).toBe(candidate.expectedAnswer);
       expect(renderWireTracingSvg(candidate)).toContain("they never join");
     }
+  });
+
+  it("keeps wire holdout seeds and images disjoint while balancing endpoints", () => {
+    const representative = createWireTracingDiscoveryGrid()[8]!;
+    const holdout = createWireTracingHoldout(representative);
+    expect(holdout).toHaveLength(16);
+    expect(holdout.every((candidate) => candidate.seed >= 930_000)).toBe(true);
+    expect(holdout.every((candidate) => candidate.parameters.crossings === representative.parameters.crossings)).toBe(true);
+    for (const answer of wireAnswers) expect(holdout.filter((candidate) => candidate.expectedAnswer === answer)).toHaveLength(4);
   });
 
   it("builds balanced compositional-counting cells with exact deterministic ground truth", () => {

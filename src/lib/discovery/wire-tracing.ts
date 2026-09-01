@@ -103,6 +103,27 @@ export function createWireTracingDiscoveryGrid() {
   return candidates;
 }
 
+export function createWireTracingHoldout(representative: WireTracingCandidate) {
+  const candidates: WireTracingCandidate[] = [];
+  let seed = 930_000;
+  for (let replicate = 0; replicate < 4; replicate += 1) {
+    for (let endpoint = 0; endpoint < 4; endpoint += 1) {
+      candidates.push(
+        createWireTracingCandidate({
+          split: "confirmatory",
+          seed,
+          crossings: representative.parameters.crossings,
+          sourceWire: (replicate + endpoint) % 4,
+          targetEndpoint: endpoint,
+          visualVariant: 30 + replicate * 4 + endpoint,
+        }),
+      );
+      seed += 1;
+    }
+  }
+  return candidates;
+}
+
 function symbolMarkup(symbol: (typeof wireAnswers)[number], x: number, y: number) {
   if (symbol === "circle") return `<circle cx="${x}" cy="${y}" r="23" fill="#f4ce35" stroke="#151817" stroke-width="4"/>`;
   if (symbol === "triangle") return `<path d="M${x} ${y - 27}L${x + 27} ${y + 23}H${x - 27}Z" fill="#f4ce35" stroke="#151817" stroke-width="4"/>`;
